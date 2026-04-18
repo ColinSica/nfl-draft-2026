@@ -39,6 +39,7 @@ TEAM_AGENTS_JSON = ROOT / "data" / "features" / "team_agents_2026.json"
 ANALYST_AGG_JSON = ROOT / "data" / "features" / "analyst_aggregate_2026.json"
 TRADE_EMPIRICAL_JSON = ROOT / "data" / "features" / "trade_empirical_2021_2025.json"
 ANALYST_CONSENSUS_JSON = ROOT / "data" / "features" / "analyst_consensus_2026.json"
+TRADE_SCENARIOS_JSON = ROOT / "data" / "features" / "trade_scenarios_expanded_2026.json"
 OUT_MC = ROOT / "data" / "processed" / "monte_carlo_2026_v12.csv"
 OUT_TRADES = ROOT / "data" / "processed" / "monte_carlo_trades_2026.json"
 GM_ALLOC_CSV = ROOT / "data" / "processed" / "gm_positional_allocation.csv"
@@ -1053,29 +1054,98 @@ def get_override_distribution(pick_num: int, history: dict, trades: dict,
     return blend_with_analyst(None)
 
 
+_TRADE_SCENARIOS_CACHE: list[dict] | None = None
+
+
+def _load_trade_scenarios() -> list[dict]:
+    """Read the expanded trade scenarios JSON (59 scenarios from 20+ April
+    2026 analyst mocks + GM historical patterns). Cached on first call."""
+    global _TRADE_SCENARIOS_CACHE
+    if _TRADE_SCENARIOS_CACHE is not None:
+        return _TRADE_SCENARIOS_CACHE
+    if not TRADE_SCENARIOS_JSON.exists():
+        _TRADE_SCENARIOS_CACHE = []
+        return _TRADE_SCENARIOS_CACHE
+    with open(TRADE_SCENARIOS_JSON, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    _TRADE_SCENARIOS_CACHE = list(data.get("scenarios", []))
+    return _TRADE_SCENARIOS_CACHE
+
+
 def determine_trades(rng: np.random.Generator) -> dict:
-    """Pre-determine trade ownership for this simulation."""
+    """Pre-determine trade ownership for this simulation.
+
+    Primary source: trade_scenarios_expanded_2026.json (59 scenarios from
+    April 2026 analyst mocks + GM historical patterns, each with its own
+    empirical_rate). Each scenario fires independently at its rate, with
+    per-pick first-writer-wins so conflicting scenarios don't double-swap.
+
+    The hardcoded special-case trades (DAL A/B, ARI-30, LAR/SEA down,
+    etc.) remain below as fallbacks / meta-scenario encoders for the
+    "team trades down to unknown partner" case the JSON doesn't cover.
+    """
     trades: dict = {}
 
-    # Cowboys trade-up — calibrated against April 2026 analyst consensus
-    # (20 mocks, 6 tier-1) AND historical R1 trade rate (avg ~5 trades/R1
-    # in 2021-2025). Analysts undercount trades because they mock a static
-    # board; real drafts average 5 R1 trades.
-    #   A) 35%: DAL -> CLE (pick 6). Slight bump from 30% to hit history.
-    #   B) 10%: DAL -> TEN (pick 4). Slight bump for same reason.
-    #   C) 55%: no DAL trade.
-    r = rng.random()
-    if r < 0.35:
-        trades[6] = "DAL"
-        trades[12] = "CLE"
-        trades[20] = "CLE"
+    # -------- Pass 1: roll every bilateral scenario from the JSON -------
+    scenarios = _load_trade_scenarios()
+    for sc in scenarios:
+        pick = sc.get("pick")
+        up = sc.get("up_team")
+        down = sc.get("down_team")
+        rate = float(sc.get("empirical_rate") or 0)
+        if not pick or not up or not down or rate <= 0:
+            continue
+        # Skip "meta" down-scenarios (down_team is a generic word like
+        # "any/unknown") — those are handled by the legacy hardcoded logic
+        # below which tracks the trade-down WITHOUT assigning a partner.
+        if down.lower() in ("any", "unknown", "tbd", ""):
+            continue
+        if rate > 1:       # some entries came in as percentages; normalise
+            rate /= 100.0
+        if pick in trades:
+            continue       # first-writer-wins per pick
+        if rng.random() < rate:
+            trades[int(pick)] = up
+            trades[f"scenario_pick_{pick}"] = {
+                "target_player": sc.get("target_player", ""),
+                "target_position": sc.get("target_position", ""),
+                "trade_reason": sc.get("trade_reason", ""),
+                "up_team": up,
+                "down_team": down,
+                "times_mocked": sc.get("times_mocked", 0),
+                "tier1_credible": sc.get("tier1_credible", False),
+            }
+
+    # Cowboys trade-up — legacy hardcoded path now gated by whether the
+    # JSON pass above already fired pick 6 or pick 4. This prevents
+    # scenario-stacking (both passes firing in the same sim). If the JSON
+    # already moved pick 6 to DAL, the chained 12/20 swaps still need to
+    # propagate, so we re-tag them without re-rolling.
+    if 6 in trades and trades[6] == "DAL":
+        # JSON already fired DAL scenario A — propagate chained picks.
+        trades[12] = trades.get(12, "CLE")
+        trades[20] = trades.get(20, "CLE")
         trades["DAL_traded"] = True
         trades["DAL_trade_scenario"] = "A"
-    elif r < 0.45:
-        trades[4] = "DAL"
-        trades[12] = "TEN"
+    elif 4 in trades and trades[4] == "DAL":
+        trades[12] = trades.get(12, "TEN")
         trades["DAL_traded"] = True
         trades["DAL_trade_scenario"] = "B"
+    elif 4 not in trades and 6 not in trades:
+        # No JSON scenario fired for these picks → roll legacy backup.
+        # Lowered rates since the JSON already handles the main DAL scenarios.
+        r = rng.random()
+        if r < 0.08:
+            trades[6] = "DAL"
+            trades[12] = "CLE"
+            trades[20] = "CLE"
+            trades["DAL_traded"] = True
+            trades["DAL_trade_scenario"] = "A"
+        elif r < 0.11:
+            trades[4] = "DAL"
+            trades[12] = "TEN"
+            trades["DAL_traded"] = True
+            trades["DAL_trade_scenario"] = "B"
 
     # CIN trade up to 5: REMOVED. Analyst consensus data (20 mocks from
     # 2026 Mock Draft Data.xlsx) shows ZERO mocks for this scenario. The
@@ -1743,6 +1813,11 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
         "ARI_traded_to_30": "ARI up from R2 for developmental QB (4 tier-1 mocks)",
     }
     def _reason_for_pick(pn: int) -> str:
+        # First check if this pick has a scenario-JSON-driven reason.
+        sc_meta = trades.get(f"scenario_pick_{pn}")
+        if sc_meta and sc_meta.get("trade_reason"):
+            return sc_meta["trade_reason"]
+        # Legacy hardcoded scenarios (DAL/CLE/ARI scripted cases below).
         dal_sc = trades.get("DAL_trade_scenario")
         if dal_sc and pn in (4, 6, 12, 20):
             return _scripted_reasons.get(dal_sc, "DAL trade-up")
@@ -1752,14 +1827,15 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
         return "scripted trade scenario"
     for pick_num, pick_obj in [(p["pick_number"], p) for p in picks]:
         if pick_num in _orig_team_by_pick and pick_obj["team"] != _orig_team_by_pick[pick_num]:
+            sc_meta = trades.get(f"scenario_pick_{pick_num}") or {}
             _scripted_trade_log.append({
                 "pick_number":      pick_num,
                 "from_team":        _orig_team_by_pick[pick_num],
                 "to_team":          pick_obj["team"],
                 "reason":           _reason_for_pick(pick_num),
                 "trade_type":       "scripted",
-                "target_player":    "",        # unknown at pre-sim time
-                "target_position":  "",
+                "target_player":    sc_meta.get("target_player", ""),
+                "target_position":  sc_meta.get("target_position", ""),
                 "scripted":         True,
             })
     # BUG 2 FIX: base noise + a second noise draw we switch to for late picks

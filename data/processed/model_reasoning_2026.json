@@ -70,13 +70,13 @@
       "player": "Arvell Reese",
       "position": "LB",
       "components": {
-        "bpa": 0.535,
+        "bpa": 0.537,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 0.6,
         "gm_affinity": 0.8,
-        "score_final": 0.496
+        "score_final": 0.497
       },
       "top_factors": [
         {
@@ -101,50 +101,16 @@
     },
     "4": {
       "team": "TEN",
-      "player": "Sonny Styles",
-      "position": "LB",
+      "player": "Jeremiyah Love",
+      "position": "RB",
       "components": {
         "bpa": 0.531,
         "need": 0.45,
         "visit": 0.0,
-        "intel": 0.0,
-        "pv_mult": 0.6,
-        "gm_affinity": 1.0,
-        "score_final": 0.699
-      },
-      "top_factors": [
-        {
-          "key": "team_need",
-          "magnitude": 0.45,
-          "label": "LB is a top roster need",
-          "detail": "Need score contributed 0.45 to the total"
-        },
-        {
-          "key": "non_premium_discount",
-          "magnitude": 0.4,
-          "label": "LB is a non-premium position",
-          "detail": "Discounted 40% but still outscored alternatives"
-        },
-        {
-          "key": "post_combine_boost",
-          "magnitude": 0.19999999999999996,
-          "label": "Post-combine riser",
-          "detail": "Stage-1 under-rated; boosted 20% to reflect current mocks"
-        }
-      ]
-    },
-    "5": {
-      "team": "NYG",
-      "player": "Jeremiyah Love",
-      "position": "RB",
-      "components": {
-        "bpa": 0.53,
-        "need": 0.45,
-        "visit": 0.0,
-        "intel": 0.0,
+        "intel": 0.3,
         "pv_mult": 1.15,
-        "gm_affinity": 0.8,
-        "score_final": 1.125
+        "gm_affinity": 1.0,
+        "score_final": 1.741
       },
       "top_factors": [
         {
@@ -154,10 +120,10 @@
           "detail": "Need score contributed 0.45 to the total"
         },
         {
-          "key": "gm_aversion",
-          "magnitude": 0.19999999999999996,
-          "label": "GM rarely drafts RB",
-          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
+          "key": "intel",
+          "magnitude": 0.30000000000000004,
+          "label": "Analyst intel scripted this pick",
+          "detail": "Tier-1 analyst consensus pushed prob 0.30"
         },
         {
           "key": "positional_value",
@@ -167,43 +133,77 @@
         }
       ]
     },
+    "5": {
+      "team": "NYG",
+      "player": "Sonny Styles",
+      "position": "LB",
+      "components": {
+        "bpa": 0.537,
+        "need": 0.562,
+        "visit": 0.0,
+        "intel": 0.0,
+        "pv_mult": 0.6,
+        "gm_affinity": 0.8,
+        "score_final": 0.653
+      },
+      "top_factors": [
+        {
+          "key": "team_need",
+          "magnitude": 0.5625,
+          "label": "LB is a top roster need",
+          "detail": "Need score contributed 0.56 to the total"
+        },
+        {
+          "key": "non_premium_discount",
+          "magnitude": 0.4,
+          "label": "LB is a non-premium position",
+          "detail": "Discounted 40% but still outscored alternatives"
+        },
+        {
+          "key": "gm_aversion",
+          "magnitude": 0.19999999999999996,
+          "label": "GM rarely drafts LB",
+          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
+        },
+        {
+          "key": "post_combine_boost",
+          "magnitude": 0.19999999999999996,
+          "label": "Post-combine riser",
+          "detail": "Stage-1 under-rated; boosted 20% to reflect current mocks"
+        }
+      ]
+    },
     "6": {
       "team": "CLE",
-      "player": "Monroe Freeling",
-      "position": "OT",
+      "player": "Rueben Bain",
+      "position": "EDGE",
       "components": {
-        "bpa": 0.53,
+        "bpa": 0.537,
         "need": 0.45,
-        "visit": 0.15,
-        "intel": 0.3,
-        "pv_mult": 1.2,
-        "gm_affinity": 1.25,
-        "score_final": 2.3
+        "visit": 0.0,
+        "intel": 0.0,
+        "pv_mult": 1.3,
+        "gm_affinity": 0.8,
+        "score_final": 1.051
       },
       "top_factors": [
         {
           "key": "team_need",
           "magnitude": 0.45,
-          "label": "OT is a top roster need",
+          "label": "EDGE is a top roster need",
           "detail": "Need score contributed 0.45 to the total"
         },
         {
-          "key": "intel",
-          "magnitude": 0.30000000000000004,
-          "label": "Analyst intel scripted this pick",
-          "detail": "Tier-1 analyst consensus pushed prob 0.30"
-        },
-        {
-          "key": "gm_affinity",
-          "magnitude": 0.25,
-          "label": "GM historically favors OT",
-          "detail": "Positional-affinity multiplier 1.25x"
-        },
-        {
           "key": "positional_value",
+          "magnitude": 0.30000000000000004,
+          "label": "EDGE position premium",
+          "detail": "Position-value multiplier 1.30x (premium slot)"
+        },
+        {
+          "key": "gm_aversion",
           "magnitude": 0.19999999999999996,
-          "label": "OT position premium",
-          "detail": "Position-value multiplier 1.20x (premium slot)"
+          "label": "GM rarely drafts EDGE",
+          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
         }
       ]
     },
@@ -212,13 +212,13 @@
       "player": "Carnell Tate",
       "position": "WR",
       "components": {
-        "bpa": 0.525,
+        "bpa": 0.526,
         "need": 0.702,
         "visit": 0.0,
         "intel": 0.2,
         "pv_mult": 1.0,
         "gm_affinity": 0.8,
-        "score_final": 1.179
+        "score_final": 1.18
       },
       "top_factors": [
         {
@@ -237,29 +237,29 @@
     },
     "8": {
       "team": "NO",
-      "player": "Rueben Bain",
-      "position": "EDGE",
+      "player": "Francis Mauigoa",
+      "position": "OT",
       "components": {
-        "bpa": 0.537,
-        "need": 0.562,
+        "bpa": 0.531,
+        "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.3,
+        "pv_mult": 1.2,
         "gm_affinity": 1.0,
-        "score_final": 1.466
+        "score_final": 1.298
       },
       "top_factors": [
         {
           "key": "team_need",
-          "magnitude": 0.5625,
-          "label": "EDGE is a top roster need",
-          "detail": "Need score contributed 0.56 to the total"
+          "magnitude": 0.45,
+          "label": "OT is a top roster need",
+          "detail": "Need score contributed 0.45 to the total"
         },
         {
           "key": "positional_value",
-          "magnitude": 0.30000000000000004,
-          "label": "EDGE position premium",
-          "detail": "Position-value multiplier 1.30x (premium slot)"
+          "magnitude": 0.19999999999999996,
+          "label": "OT position premium",
+          "detail": "Position-value multiplier 1.20x (premium slot)"
         }
       ]
     },
@@ -290,13 +290,13 @@
       "player": "Mansoor Delane",
       "position": "CB",
       "components": {
-        "bpa": 0.526,
+        "bpa": 0.528,
         "need": 0.45,
         "visit": 0.15,
         "intel": 0.0,
         "pv_mult": 1.2,
         "gm_affinity": 1.063,
-        "score_final": 1.482
+        "score_final": 1.483
       },
       "top_factors": [
         {
@@ -315,29 +315,29 @@
     },
     "11": {
       "team": "MIA",
-      "player": "Francis Mauigoa",
-      "position": "OT",
+      "player": "Caleb Downs",
+      "position": "S",
       "components": {
-        "bpa": 0.53,
-        "need": 0.45,
+        "bpa": 0.532,
+        "need": 0.562,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.2,
+        "pv_mult": 0.82,
         "gm_affinity": 1.0,
-        "score_final": 1.505
+        "score_final": 1.173
       },
       "top_factors": [
         {
           "key": "team_need",
-          "magnitude": 0.45,
-          "label": "OT is a top roster need",
-          "detail": "Need score contributed 0.45 to the total"
+          "magnitude": 0.5625,
+          "label": "S is a top roster need",
+          "detail": "Need score contributed 0.56 to the total"
         },
         {
-          "key": "positional_value",
-          "magnitude": 0.19999999999999996,
-          "label": "OT position premium",
-          "detail": "Position-value multiplier 1.20x (premium slot)"
+          "key": "non_premium_discount",
+          "magnitude": 0.18000000000000005,
+          "label": "S is a non-premium position",
+          "detail": "Discounted 18% but still outscored alternatives"
         }
       ]
     },
@@ -346,13 +346,13 @@
       "player": "Keldric Faulk",
       "position": "EDGE",
       "components": {
-        "bpa": 0.526,
+        "bpa": 0.525,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.3,
         "gm_affinity": 1.25,
-        "score_final": 1.624
+        "score_final": 1.622
       },
       "top_factors": [
         {
@@ -380,13 +380,13 @@
       "player": "Makai Lemon",
       "position": "WR",
       "components": {
-        "bpa": 0.527,
+        "bpa": 0.528,
         "need": 0.731,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.0,
         "gm_affinity": 1.227,
-        "score_final": 1.689
+        "score_final": 1.69
       },
       "top_factors": [
         {
@@ -408,13 +408,13 @@
       "player": "Kenyon Sadiq",
       "position": "TE",
       "components": {
-        "bpa": 0.522,
+        "bpa": 0.523,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 0.95,
         "gm_affinity": 0.83,
-        "score_final": 0.872
+        "score_final": 0.873
       },
       "top_factors": [
         {
@@ -470,13 +470,13 @@
       "player": "Omar Cooper Jr.",
       "position": "WR",
       "components": {
-        "bpa": 0.518,
+        "bpa": 0.519,
         "need": 0.585,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.0,
         "gm_affinity": 1.0,
-        "score_final": 1.131
+        "score_final": 1.132
       },
       "top_factors": [
         {
@@ -489,18 +489,24 @@
     },
     "17": {
       "team": "DET",
-      "player": "Blake Miller",
+      "player": "Kadyn Proctor",
       "position": "OT",
       "components": {
-        "bpa": 0.516,
-        "need": 0.0,
+        "bpa": 0.525,
+        "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.2,
         "gm_affinity": 0.84,
-        "score_final": 0.505
+        "score_final": 0.967
       },
       "top_factors": [
+        {
+          "key": "team_need",
+          "magnitude": 0.45,
+          "label": "OT is a top roster need",
+          "detail": "Need score contributed 0.45 to the total"
+        },
         {
           "key": "positional_value",
           "magnitude": 0.19999999999999996,
@@ -545,23 +551,35 @@
     },
     "19": {
       "team": "CAR",
-      "player": "Emmanuel McNeil-Warren",
-      "position": "S",
+      "player": "Spencer Fano",
+      "position": "OT",
       "components": {
-        "bpa": 0.516,
-        "need": 0.0,
+        "bpa": 0.534,
+        "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.0,
-        "gm_affinity": 0.85,
-        "score_final": 0.43
+        "pv_mult": 1.2,
+        "gm_affinity": 0.84,
+        "score_final": 1.476
       },
       "top_factors": [
         {
+          "key": "team_need",
+          "magnitude": 0.45,
+          "label": "OT is a top roster need",
+          "detail": "Need score contributed 0.45 to the total"
+        },
+        {
+          "key": "positional_value",
+          "magnitude": 0.19999999999999996,
+          "label": "OT position premium",
+          "detail": "Position-value multiplier 1.20x (premium slot)"
+        },
+        {
           "key": "gm_aversion",
-          "magnitude": 0.15000000000000002,
-          "label": "GM rarely drafts S",
-          "detail": "Positional-affinity penalty 0.85x (model picked anyway)"
+          "magnitude": 0.15999999999999992,
+          "label": "GM rarely drafts OT",
+          "detail": "Positional-affinity penalty 0.84x (model picked anyway)"
         }
       ]
     },
@@ -570,13 +588,13 @@
       "player": "T.J. Parker",
       "position": "EDGE",
       "components": {
-        "bpa": 0.519,
+        "bpa": 0.518,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.3,
         "gm_affinity": 1.25,
-        "score_final": 1.612
+        "score_final": 1.611
       },
       "top_factors": [
         {
@@ -604,13 +622,13 @@
       "player": "Jermod McCoy",
       "position": "CB",
       "components": {
-        "bpa": 0.524,
+        "bpa": 0.523,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.2,
         "gm_affinity": 1.25,
-        "score_final": 1.539
+        "score_final": 1.538
       },
       "top_factors": [
         {
@@ -635,57 +653,85 @@
     },
     "22": {
       "team": "LAC",
-      "player": "Spencer Fano",
-      "position": "OT",
-      "components": {
-        "bpa": 0.534,
-        "need": 0.45,
-        "visit": 0.0,
-        "intel": 0.0,
-        "pv_mult": 1.2,
-        "gm_affinity": 0.84,
-        "score_final": 1.546
-      },
-      "top_factors": [
-        {
-          "key": "team_need",
-          "magnitude": 0.45,
-          "label": "OT is a top roster need",
-          "detail": "Need score contributed 0.45 to the total"
-        },
-        {
-          "key": "positional_value",
-          "magnitude": 0.19999999999999996,
-          "label": "OT position premium",
-          "detail": "Position-value multiplier 1.20x (premium slot)"
-        },
-        {
-          "key": "gm_aversion",
-          "magnitude": 0.15999999999999992,
-          "label": "GM rarely drafts OT",
-          "detail": "Positional-affinity penalty 0.84x (model picked anyway)"
-        }
-      ]
-    },
-    "23": {
-      "team": "PHI",
-      "player": "Kadyn Proctor",
-      "position": "OT",
+      "player": "Akheem Mesidor",
+      "position": "EDGE",
       "components": {
         "bpa": 0.525,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.2,
-        "gm_affinity": 0.84,
-        "score_final": 0.967
+        "pv_mult": 1.3,
+        "gm_affinity": 0.8,
+        "score_final": 1.049
       },
       "top_factors": [
         {
           "key": "team_need",
           "magnitude": 0.45,
-          "label": "OT is a top roster need",
+          "label": "EDGE is a top roster need",
           "detail": "Need score contributed 0.45 to the total"
+        },
+        {
+          "key": "positional_value",
+          "magnitude": 0.30000000000000004,
+          "label": "EDGE position premium",
+          "detail": "Position-value multiplier 1.30x (premium slot)"
+        },
+        {
+          "key": "gm_aversion",
+          "magnitude": 0.19999999999999996,
+          "label": "GM rarely drafts EDGE",
+          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
+        }
+      ]
+    },
+    "23": {
+      "team": "PHI",
+      "player": "Emmanuel McNeil-Warren",
+      "position": "S",
+      "components": {
+        "bpa": 0.516,
+        "need": 0.562,
+        "visit": 0.0,
+        "intel": 0.0,
+        "pv_mult": 1.0,
+        "gm_affinity": 1.183,
+        "score_final": 1.264
+      },
+      "top_factors": [
+        {
+          "key": "team_need",
+          "magnitude": 0.5625,
+          "label": "S is a top roster need",
+          "detail": "Need score contributed 0.56 to the total"
+        },
+        {
+          "key": "gm_affinity",
+          "magnitude": 0.18333333333333335,
+          "label": "GM historically favors S",
+          "detail": "Positional-affinity multiplier 1.18x"
+        }
+      ]
+    },
+    "24": {
+      "team": "CHI",
+      "player": "Caleb Lomu",
+      "position": "OT",
+      "components": {
+        "bpa": 0.525,
+        "need": 0.558,
+        "visit": 0.0,
+        "intel": 0.0,
+        "pv_mult": 1.2,
+        "gm_affinity": 0.84,
+        "score_final": 1.081
+      },
+      "top_factors": [
+        {
+          "key": "team_need",
+          "magnitude": 0.558,
+          "label": "OT is a top roster need",
+          "detail": "Need score contributed 0.56 to the total"
         },
         {
           "key": "positional_value",
@@ -701,59 +747,31 @@
         }
       ]
     },
-    "24": {
-      "team": "CLE",
-      "player": "Kevin Concepcion",
-      "position": "WR",
+    "25": {
+      "team": "CHI",
+      "player": "Zion Young",
+      "position": "EDGE",
       "components": {
-        "bpa": 0.509,
-        "need": 0.848,
-        "visit": 0.0,
+        "bpa": 0.517,
+        "need": 0.45,
+        "visit": 0.15,
         "intel": 0.0,
-        "pv_mult": 1.0,
-        "gm_affinity": 0.8,
-        "score_final": 1.129
+        "pv_mult": 1.3,
+        "gm_affinity": 0.97,
+        "score_final": 0.573
       },
       "top_factors": [
         {
           "key": "team_need",
-          "magnitude": 0.84825,
-          "label": "WR is a top roster need",
-          "detail": "Need score contributed 0.85 to the total"
-        },
-        {
-          "key": "gm_aversion",
-          "magnitude": 0.19999999999999996,
-          "label": "GM rarely drafts WR",
-          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
-        }
-      ]
-    },
-    "25": {
-      "team": "CHI",
-      "player": "Chris Johnson",
-      "position": "CB",
-      "components": {
-        "bpa": 0.505,
-        "need": 0.0,
-        "visit": 0.0,
-        "intel": 0.0,
-        "pv_mult": 1.2,
-        "gm_affinity": 1.25,
-        "score_final": 0.276
-      },
-      "top_factors": [
-        {
-          "key": "gm_affinity",
-          "magnitude": 0.25,
-          "label": "GM historically favors CB",
-          "detail": "Positional-affinity multiplier 1.25x"
+          "magnitude": 0.45,
+          "label": "EDGE is a top roster need",
+          "detail": "Need score contributed 0.45 to the total"
         },
         {
           "key": "positional_value",
-          "magnitude": 0.19999999999999996,
-          "label": "CB position premium",
-          "detail": "Position-value multiplier 1.20x (premium slot)"
+          "magnitude": 0.30000000000000004,
+          "label": "EDGE position premium",
+          "detail": "Position-value multiplier 1.30x (premium slot)"
         }
       ]
     },
@@ -781,16 +799,16 @@
     },
     "27": {
       "team": "SF",
-      "player": "Caleb Lomu",
+      "player": "Max Iheanachor",
       "position": "OT",
       "components": {
-        "bpa": 0.525,
+        "bpa": 0.502,
         "need": 0.0,
-        "visit": 0.15,
+        "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.2,
         "gm_affinity": 1.0,
-        "score_final": 0.798
+        "score_final": 0.584
       },
       "top_factors": [
         {
@@ -853,23 +871,29 @@
     },
     "30": {
       "team": "MIA",
-      "player": "Ty Simpson",
-      "position": "QB",
+      "player": "Chris Johnson",
+      "position": "CB",
       "components": {
-        "bpa": 0.525,
-        "need": 0.0,
+        "bpa": 0.505,
+        "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.4,
+        "pv_mult": 1.2,
         "gm_affinity": 1.0,
-        "score_final": 0.505
+        "score_final": 1.174
       },
       "top_factors": [
         {
+          "key": "team_need",
+          "magnitude": 0.45,
+          "label": "CB is a top roster need",
+          "detail": "Need score contributed 0.45 to the total"
+        },
+        {
           "key": "positional_value",
-          "magnitude": 0.3999999999999999,
-          "label": "QB position premium",
-          "detail": "Position-value multiplier 1.40x (premium slot)"
+          "magnitude": 0.19999999999999996,
+          "label": "CB position premium",
+          "detail": "Position-value multiplier 1.20x (premium slot)"
         }
       ]
     },
@@ -878,7 +902,7 @@
       "player": "Eli Stowers",
       "position": "TE",
       "components": {
-        "bpa": 0.482,
+        "bpa": 0.484,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
@@ -900,13 +924,13 @@
       "player": "Jadarian Price",
       "position": "RB",
       "components": {
-        "bpa": 0.483,
+        "bpa": 0.484,
         "need": 0.45,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 0.55,
         "gm_affinity": 1.0,
-        "score_final": 0.215
+        "score_final": 0.216
       },
       "top_factors": [
         {
