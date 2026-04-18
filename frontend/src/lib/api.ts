@@ -49,7 +49,7 @@ export type Candidate = {
   probability: number;
   team: string | null;
   consensus_rank: number | null;
-  variance_landing_pick: number;
+  variance_landing_pick?: number;
 };
 
 export type PickRow = {
@@ -59,6 +59,9 @@ export type PickRow = {
   most_likely_team?: string | null;
   candidates: Candidate[];
 };
+
+// Variance is optional because /api/simulate/replay (mock-draft rebuild)
+// doesn't compute per-slot variance — only /api/simulations/latest does.
 
 // Prospect-centric row — aggregated landing distribution for one player
 // across all simulated slots. Computed client-side from latestSim picks.

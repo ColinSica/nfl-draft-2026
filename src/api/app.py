@@ -659,10 +659,15 @@ def simulate_replay(req: ReplayRequest) -> dict:
                                     if not prow.empty and pd.notna(prow["rank"].iloc[0]) else None),
                 "probability":    count / n_sims,
                 "team":           team,
+                # Keep shape parity with /api/simulations/latest so the
+                # frontend Candidate type holds across both endpoints.
+                "variance_landing_pick": 0,
             })
         out_picks.append({
             "pick_number": pn,
             "team":        candidates[0]["team"] if candidates else None,
+            "original_team": candidates[0]["team"] if candidates else None,
+            "most_likely_team": candidates[0]["team"] if candidates else None,
             "candidates":  candidates,
         })
 
