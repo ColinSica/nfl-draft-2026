@@ -966,18 +966,20 @@ def determine_trades(rng: np.random.Generator) -> dict:
     """Pre-determine trade ownership for this simulation."""
     trades: dict = {}
 
-    # Cowboys trade-up is PRIMARY scenario per Kiper+Brugler+McShay:
-    #   A) 40%: DAL -> CLE (pick 6). CLE gets picks 12 + 20.
-    #   B) 15%: DAL -> TEN (pick 4). TEN gets DAL's pick 12.
-    #   C) 45%: no DAL trade.
+    # Cowboys trade-up — calibrated against April 2026 analyst consensus
+    # (20 mocks, 6 tier-1):
+    #   A) 30%: DAL -> CLE (pick 6). Matches 6/20 mocks (tier-1 credible).
+    #   B)  8%: DAL -> TEN (pick 4). Speculative; no direct mock support
+    #            but plausible alt scenario if CLE demands too much.
+    #   C) 62%: no DAL trade.
     r = rng.random()
-    if r < 0.40:
+    if r < 0.30:
         trades[6] = "DAL"
         trades[12] = "CLE"
         trades[20] = "CLE"
         trades["DAL_traded"] = True
         trades["DAL_trade_scenario"] = "A"
-    elif r < 0.55:
+    elif r < 0.38:
         trades[4] = "DAL"
         trades[12] = "TEN"
         trades["DAL_traded"] = True
@@ -1000,11 +1002,11 @@ def determine_trades(rng: np.random.Generator) -> dict:
         trades["PHI_traded_up"] = True
         trades[18] = "PHI"
 
-    # NEW: CLE trades up from pick 24 to 20 for Concepcion.
-    # Tier-1 credible (Brugler x2), 2 mocks. Conditional: only fires when
-    # CLE still owns 24 (i.e., didn't swap it in DAL scenario A).
+    # CLE trades up from pick 24 to 20 for Concepcion. Tier-1 credible
+    # (Brugler x2), 2/20 mocks (~10%). Conditional: only fires when CLE
+    # still owns 24 (i.e., didn't swap it in DAL scenario A).
     if (not trades.get("DAL_traded") or trades.get("DAL_trade_scenario") == "B") \
-            and rng.random() < 0.12:
+            and rng.random() < 0.10:
         trades[20] = "CLE"
         trades["CLE_traded_up_to_20"] = True
 
@@ -1016,23 +1018,30 @@ def determine_trades(rng: np.random.Generator) -> dict:
         trades[12] = "CLE"
         trades["CLE_traded_up_to_12"] = True
 
-    # LAR trade down from 13
-    if rng.random() < 0.55:
+    # LAR trade-down from 13. Analyst mocks undercount Snead's behaviour
+    # (only 2/20 mocks include a LAR trade) but historical empirical rate
+    # under Snead is 50-60% in R1. Calibrate at 40% — a compromise between
+    # consensus sparsity and historical pattern.
+    if rng.random() < 0.40:
         trades["LAR_traded_down"] = True
         trades[13] = "unknown"
 
-    # SEA trade down from 32
-    if rng.random() < 0.65:
+    # SEA trade-down from 32. Schneider has traded out of end-of-R1 in 4 of
+    # last 5 drafts. Consensus undercounts (analysts typically pick top-32
+    # without modeling the trade). Historical: ~55%.
+    if rng.random() < 0.45:
         trades["SEA_traded_down"] = True
         trades[32] = "unknown"
 
-    # MIA trade down from 11 (Sullivan preference)
-    if rng.random() < 0.20:
+    # MIA trade-down from 11 (Sullivan accumulation preference). Lowered
+    # from 20% to 12% — analyst consensus shows minimal mock support.
+    if rng.random() < 0.12:
         trades["MIA_traded_down"] = True
         trades[11] = "unknown"
 
-    # ARI trades up from R2 (34) to pick 30 for Simpson (Kiper explicit).
-    if rng.random() < 0.25:
+    # ARI trades up from R2 (34) to pick 30 for Simpson. 4/20 mocks = 20%,
+    # tier-1 credible (Kiper, McShay, Draft Labs, Solak).
+    if rng.random() < 0.20:
         trades[30] = "ARI"
         trades["ARI_traded_to_30"] = True
 
