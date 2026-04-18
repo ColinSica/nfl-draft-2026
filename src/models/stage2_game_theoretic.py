@@ -1099,8 +1099,26 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
                         trades: Optional[dict] = None):
     team = pick["team"]
     pick_num = int(pick["pick_number"])
-    bpa_w = float(pick["bpa_weight"])
-    need_w = float(pick["need_weight"])
+    round_num = int(pick.get("round", 1))
+
+    # Round-scaled BPA/need weighting. Analyst-consensus-inspired pattern:
+    # at the top of R1 teams draft mostly BPA; by R4+ picks are nearly all
+    # need-driven (fills roster holes with whoever's available there).
+    # Default CSV weights are ~0.5/0.5 across all rounds which under-models
+    # this shift. Override here rather than edit the CSV so the change is
+    # reversible and auditable in one place.
+    _ROUND_BPA_NEED = {
+        1: (0.55, 0.45),   # R1: slight BPA lean but teams DO fill needs
+        2: (0.45, 0.55),   # R2: need starts to dominate
+        3: (0.35, 0.65),   # R3: clear need-driven
+        4: (0.30, 0.70),   # R4: need + scheme fit
+        5: (0.25, 0.75),   # R5-7: pure need + specialty
+        6: (0.25, 0.75),
+        7: (0.20, 0.80),
+    }
+    bpa_w, need_w = _ROUND_BPA_NEED.get(
+        round_num, (float(pick["bpa_weight"]), float(pick["need_weight"]))
+    )
 
     final_sc = prospects[final_score_col].clip(lower=0, upper=728).fillna(728)
     bpa_term = (1 - final_sc / 728.0) * bpa_w
@@ -1302,6 +1320,27 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
     intel_term = intel_flag * prospects["intel_link_max"].fillna(0) * 0.10
 
     score = bpa_term + need_term + visit_term + intel_term
+
+    # Round-scaled medical penalty. Analyst logic: R1 teams live with minor
+    # injury flags for talent; by R3-4, a medical flag drops a guy 30+
+    # picks. Use has_injury_flag (40% of board has one) as the boolean and
+    # scale by round. NOTE: R1 = -0.02, R2 = -0.08, R3 = -0.15, R4+ = -0.20.
+    if "has_injury_flag" in prospects.columns:
+        injury = prospects["has_injury_flag"].fillna(0).astype(float)
+        round_penalty = {1: 0.02, 2: 0.08, 3: 0.15, 4: 0.20,
+                         5: 0.20, 6: 0.25, 7: 0.25}.get(round_num, 0.05)
+        score = score - (injury * round_penalty)
+
+    # Visit-count boost — scales harder in later rounds. A Day-3 prospect
+    # with 4+ top-30 visits is a strong team-interest signal (teams don't
+    # waste late visits on players they don't want). Separate from the
+    # team-specific visit_term above which only fires when THIS team
+    # visited.
+    if "visit_count" in prospects.columns:
+        vcount = prospects["visit_count"].fillna(0).clip(upper=10)
+        round_visit_wt = {1: 0.005, 2: 0.010, 3: 0.015, 4: 0.020,
+                          5: 0.025, 6: 0.030, 7: 0.030}.get(round_num, 0.010)
+        score = score + vcount * round_visit_wt
 
     # FIX 9: positional value multiplier on the whole score (premium positions
     # go higher; non-premium positions get discounted except for top-1

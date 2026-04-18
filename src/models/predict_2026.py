@@ -95,10 +95,29 @@ def main():
         preds = predict_group(pros.loc[idx], g)
         pros.loc[idx, "model_pred"] = preds
 
-    # Blend model prediction with consensus rank
+    # Blend model prediction with consensus rank, with a COVERAGE-AWARE
+    # weight. Tier-1 analyst agreement is very strong for ranks 1-30 (a
+    # Caleb Downs at #8 is cross-validated across every board) but
+    # deteriorates past rank 60 and collapses past 100. Weight matches
+    # this:
+    #   rank <= 30:  W_consensus = 0.85  (strong cross-analyst agreement)
+    #   rank 31-60:  W_consensus = 0.70
+    #   rank 61-100: W_consensus = 0.50
+    #   rank 101-150: W_consensus = 0.35
+    #   rank > 150:  W_consensus = 0.20  (model dominates)
+    # This stops the model from being a consensus remix in deep rounds —
+    # we want the stage-1 ML reasoning (PFF, RAS, visits, conference,
+    # age, production) to drive late-round projections — while still
+    # trusting dense consensus for the top of the board.
     pros["consensus_rank"] = pros["rank"]
-    pros["final_score"] = (W_MODEL * pros["model_pred"]
-                           + W_CONSENSUS * pros["consensus_rank"])
+    cr = pros["consensus_rank"]
+    w_c = pd.Series(0.20, index=pros.index)
+    w_c = w_c.where(~(cr <= 150), 0.35)
+    w_c = w_c.where(~(cr <= 100), 0.50)
+    w_c = w_c.where(~(cr <= 60),  0.70)
+    w_c = w_c.where(~(cr <= 30),  0.85)
+    w_m = 1.0 - w_c
+    pros["final_score"] = w_m * pros["model_pred"] + w_c * pros["consensus_rank"]
 
     # PFF re-rank where available
     has_pff = pros["pff_rank"].notna() & pros["consensus_rank"].notna()
@@ -106,6 +125,74 @@ def main():
         adj = (pros.loc[has_pff, "pff_rank"]
                - pros.loc[has_pff, "consensus_rank"]) * W_PFF
         pros.loc[has_pff, "final_score"] += adj
+
+    # -------- Reasoning bonuses -----------------------------------------
+    # These encode the qualitative factors analysts use to bump players
+    # up/down (NOT a rank blend — concrete rationale). Added as final_score
+    # deltas so a prospect's projection reflects the same signals an
+    # analyst looks at, rather than just riding the consensus.
+    #
+    # Sign convention: final_score is projected pick slot (lower = better),
+    # so bonuses SUBTRACT (moving player earlier) and penalties ADD
+    # (pushing later). Magnitudes are calibrated so no single factor
+    # exceeds ~3-4 picks of influence on a Day-2 prospect, and half that
+    # on a top-30 prospect (where consensus already captures most signal).
+    #
+    # dampen = amplitude scaler that's 0.4 for top-30, scaling up to 1.0
+    # for rank-150+. This lets reasoning drive late-round rankings (the
+    # user's goal: extend to R2-R4) without sabotaging the top-30 where
+    # cross-analyst agreement is strong.
+    dampen = (pros["consensus_rank"].fillna(250) / 100).clip(0.4, 1.0)
+
+    # Visit count — top-30 visits are a lagging indicator of team interest.
+    # A Day-2 prospect with 5+ documented visits rarely falls past R3.
+    if "visit_count" in pros.columns:
+        v = pros["visit_count"].fillna(0).clip(upper=10)
+        pros["final_score"] -= v * 0.30 * dampen
+
+    # Senior Bowl / combine invite — pre-draft exposure boost. Analysts
+    # routinely cite Senior Bowl week performance as a riser trigger.
+    if "senior_bowl_standout" in pros.columns:
+        pros["final_score"] -= pros["senior_bowl_standout"].fillna(0) * 1.5 * dampen
+    if "senior_bowl_invite" in pros.columns:
+        pros["final_score"] -= pros["senior_bowl_invite"].fillna(0) * 0.5 * dampen
+    if "combine_invite" in pros.columns:
+        pros["final_score"] -= pros["combine_invite"].fillna(0) * 0.8 * dampen
+
+    # RAS — elite athleticism is a late-round riser driver. Effect already
+    # grows with depth via the dampen factor, so no separate scaling here.
+    if "ras_score" in pros.columns and "ras_reliable" in pros.columns:
+        ras = pros["ras_score"].fillna(0)
+        reliable = pros["ras_reliable"].fillna(0)
+        pros["final_score"] -= (ras - 5).clip(lower=0) * reliable * 0.25 * dampen
+
+    # Injury flags — push players LATER. Scale by consensus rank: R1 locks
+    # with minor flags still go R1, but Day-2 guys with flags fall harder.
+    if "has_injury_flag" in pros.columns:
+        inj = pros["has_injury_flag"].fillna(0)
+        pros["final_score"] += inj * 2.0 * dampen
+    if "acl_flag" in pros.columns:
+        pros["final_score"] += pros["acl_flag"].fillna(0) * 4.0 * dampen
+
+    # Conference tier — SEC/B1G/ACC/Big-12 pipeline boost vs G5. Analysts
+    # explicitly cite "level of competition" as a downgrade signal.
+    if "conference_tier" in pros.columns:
+        ct = pros["conference_tier"].fillna(3)
+        pros["final_score"] += (ct - 1) * 0.8 * dampen
+
+    # Age — older prospects (5th/6th years) lose ceiling. Analysts weight
+    # age heavily for late-round projection.
+    if "age" in pros.columns:
+        age = pros["age"].fillna(22)
+        age_penalty = (age - 22).clip(lower=0) * 0.6 * dampen
+        pros["final_score"] += age_penalty
+
+    # Position scarcity in class — a mid-tier QB in a weak QB class goes
+    # earlier than his raw grade. Uses the PFF-derived class scarcity
+    # signal if present.
+    if "position_scarcity_vs_historical" in pros.columns:
+        scarcity = pros["position_scarcity_vs_historical"].fillna(0)
+        pros["final_score"] -= scarcity * 1.0 * dampen
 
     pros = pros.sort_values("final_score").reset_index(drop=True)
     pros["final_rank"] = np.arange(1, len(pros) + 1)
