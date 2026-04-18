@@ -61,6 +61,7 @@ type ModelReasoning = {
 type TradeEvent = {
   from_team: string; to_team: string; prob: number; count: number;
   reason?: string; trade_type?: string;
+  compensation?: string; slots_moved?: number;
   top_targets: Array<{ player: string; count: number }>;
 };
 
@@ -380,45 +381,79 @@ function PickCard({
                 </span>
               </div>
               <div className="space-y-2">
-                {trades.map((t, i) => (
-                  <div
-                    key={`${t.from_team}-${t.to_team}-${i}`}
-                    className="text-xs bg-bg-card border border-border rounded-md p-3 space-y-1.5"
-                  >
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                      <span className="font-mono font-semibold text-sm">
-                        {t.from_team} → {t.to_team}
-                      </span>
-                      <span className="text-accent font-semibold">
-                        {(t.prob * 100).toFixed(0)}%
-                      </span>
-                      <span className="text-text-subtle">
-                        ({t.count}{nSims ? ` / ${nSims} sims` : ''})
-                      </span>
-                      {t.trade_type && (
-                        <span className={cn(
-                          'badge text-[9px]',
-                          t.trade_type === 'scripted'
-                            ? 'border-tier-high/40 bg-tier-high/10 text-tier-high'
-                            : 'border-accent/40 bg-accent/10 text-accent'
-                        )}>
-                          {t.trade_type}
+                {trades.map((t, i) => {
+                  const topTarget = t.top_targets?.[0]?.player;
+                  // Build the "plain English" trade description
+                  // e.g., "DAL traded #12 + 2026 2nd to CLE for #6, selecting Sonny Styles"
+                  const compSent = t.compensation?.match(/sends\s+(.+?)\s+for/)?.[1];
+                  const received = t.compensation?.match(/for\s+(#\d+)/)?.[1];
+                  return (
+                    <div
+                      key={`${t.from_team}-${t.to_team}-${i}`}
+                      className="text-xs bg-bg-card border border-border rounded-md p-3 space-y-2"
+                    >
+                      {/* Headline: plain-English trade summary */}
+                      <div className="text-[13px] font-medium text-text leading-snug">
+                        <span className="font-mono font-semibold">{t.to_team}</span>
+                        {compSent ? (
+                          <>
+                            {' '}traded{' '}
+                            <span className="font-mono text-accent">{compSent}</span>
+                            {' '}to{' '}
+                            <span className="font-mono font-semibold">{t.from_team}</span>
+                            {' '}for{' '}
+                            <span className="font-mono text-accent">{received ?? `#${'?'}`}</span>
+                          </>
+                        ) : (
+                          <>{' '}acquired pick from{' '}
+                            <span className="font-mono font-semibold">{t.from_team}</span>
+                          </>
+                        )}
+                        {topTarget && (
+                          <> — likely select{' '}
+                            <span className="font-semibold">{topTarget}</span>
+                          </>
+                        )}
+                      </div>
+
+                      {/* Metadata row */}
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-subtle">
+                        <span className="text-accent font-semibold">
+                          {(t.prob * 100).toFixed(0)}% of sims
                         </span>
+                        <span>({t.count}{nSims ? ` / ${nSims}` : ''})</span>
+                        {t.slots_moved != null && t.slots_moved > 0 && (
+                          <span>{t.slots_moved}-slot move</span>
+                        )}
+                        {t.trade_type && (
+                          <span className={cn(
+                            'badge text-[9px]',
+                            t.trade_type === 'scripted'
+                              ? 'border-tier-high/40 bg-tier-high/10 text-tier-high'
+                              : 'border-accent/40 bg-accent/10 text-accent'
+                          )}>
+                            {t.trade_type}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Reason */}
+                      {t.reason && (
+                        <div className="text-[11px] text-text-muted leading-snug">
+                          <span className="text-text-subtle font-medium">Why:</span> {t.reason}
+                        </div>
+                      )}
+
+                      {/* Alt targets if multiple */}
+                      {t.top_targets.length > 1 && (
+                        <div className="text-[11px] text-text-muted">
+                          <span className="text-text-subtle">Alternates:</span>{' '}
+                          {t.top_targets.slice(1).map((p) => p.player).join(', ')}
+                        </div>
                       )}
                     </div>
-                    {t.reason && (
-                      <div className="text-[11px] text-text-muted leading-snug">
-                        <span className="text-text-subtle font-medium">Why:</span> {t.reason}
-                      </div>
-                    )}
-                    {t.top_targets.length > 0 && (
-                      <div className="text-[11px] text-text-muted">
-                        <span className="text-text-subtle font-medium">Target:</span>{' '}
-                        {t.top_targets.map((p) => p.player).join(', ')}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}

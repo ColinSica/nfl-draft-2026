@@ -141,6 +141,8 @@ export const api = {
         count: number;
         reason?: string;
         trade_type?: string;
+        compensation?: string;
+        slots_moved?: number;
         top_targets: Array<{ player: string; count: number }>;
       }>>;
     }>('/api/simulations/trades'),

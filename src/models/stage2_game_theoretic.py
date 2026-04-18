@@ -715,6 +715,58 @@ FITZ_VALUES = {
     17: 600, 18: 550, 19: 525, 20: 500, 21: 475, 22: 450, 23: 425, 24: 400,
     25: 375, 26: 350, 27: 325, 28: 300, 29: 275, 30: 250, 31: 225, 32: 200,
 }
+# Approximate Fitzgerald values for late Day 2 / Day 3 rounds used to
+# estimate trade compensation packages. Rounds beyond R1 don't have exact
+# slot values in FITZ_VALUES, so we use round-midpoint approximations.
+FITZ_ROUND_APPROX = {
+    2: 250,   # R2 pick ≈ mid-R2
+    3: 110,
+    4: 55,
+    5: 30,
+    6: 16,
+    7: 7,
+}
+
+
+def derive_trade_compensation(up_pick: int, down_pick: int,
+                              up_team_picks: list[int] | None = None) -> dict:
+    """Given two R1 slots (up_pick = the pick being acquired,
+    down_pick = the pick being sent in return), estimate the pick package
+    the trading-up team owes. Uses Fitzgerald + 18% premium (academic
+    studies of 2006-2022 R1 trade-ups show ~15-25% over chart value).
+
+    Returns {sent: ['#X', '2026 2nd', ...], received: ['#Y'], value_up, value_down}.
+    """
+    value_up = FITZ_VALUES.get(int(up_pick), 150)
+    value_down = FITZ_VALUES.get(int(down_pick), 100)
+    # Target total value: up_pick * 1.18 (premium)
+    needed = value_up * 1.18
+    sent = [f"#{int(down_pick)}"]
+    remaining = needed - value_down
+    # Pack with next-year picks (approximated as current-year late picks).
+    # Typical real-world packages: small move = 2026 3rd or 4th; medium
+    # move (5-10 slots) = 2026 2nd + 4th; big move (15+ slots) = 2026 1st
+    # next year or multiple top-60 picks.
+    for rd, val in sorted(FITZ_ROUND_APPROX.items(), key=lambda x: -x[1]):
+        while remaining > val * 0.5 and len(sent) < 4:
+            sent.append(f"2026 {_ordinal(rd)}")
+            remaining -= val
+            if remaining <= 0:
+                break
+        if remaining <= 0:
+            break
+    return {
+        "sent": sent,
+        "received": [f"#{int(up_pick)}"],
+        "value_up": value_up,
+        "value_down": value_down,
+        "slots_moved": abs(int(up_pick) - int(down_pick)),
+    }
+
+
+def _ordinal(n: int) -> str:
+    suf = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "5th", 6: "6th", 7: "7th"}
+    return suf.get(n, f"{n}th")
 
 # 2026 class scarcity narrative (user-specified)
 DEEP_CLASS = {"EDGE", "OT", "CB"}
@@ -1733,10 +1785,9 @@ def try_bilateral_trade(current_idx: int, picks: list[dict],
     best_partner = None
     best_rate = -1.0
     best_idx = None
+    target_cons = float(prospects.loc[top_idx, "rank"]) if pd.notna(prospects.loc[top_idx, "rank"]) else 999
     for j in range(current_idx + 1, len(picks)):
         p2 = picks[j]
-        # Prefer empirical 2021-2025 trade-up rate for this partner team;
-        # fall back to whatever the CSV set on the pick (legacy).
         emp_up, _, emp_has_signal = empirical_team_rates(p2["team"])
         csv_up = p2.get("trade_up_rate") or 0
         tur = emp_up if emp_has_signal else csv_up
@@ -1744,11 +1795,18 @@ def try_bilateral_trade(current_idx: int, picks: list[dict],
             continue
         if top_pos not in top3_needs.get(p2["team"], []):
             continue
-        # Fitzgerald offer: their pick value + 18% premium (academic studies
-        # of 2006-2022 R1 trade-ups show ~15-25% over chart value).
         offer = FITZ_VALUES.get(p2["pick_number"], 50) * 1.18
-        if offer < value_now * 0.85:   # allow a slightly larger gap with premium
+        if offer < value_now * 0.85:
             continue
+        # NEW: don't trade up for a player who will LIKELY FALL to your
+        # current pick. Analyst logic: "why pay a premium when he might
+        # be there at 24?" Require target ADP at least 3 slots earlier
+        # than the trade-up team's original pick — otherwise they'd just
+        # wait. Exception: QB (always scarcity-driven) and top-10 picks
+        # (elite prospect insurance).
+        if p2.get("round", 1) == 1 and target_cons > (p2["pick_number"] + 3):
+            if top_pos != "QB" and pick_now["pick_number"] > 10:
+                continue
         if tur > best_rate:
             best_rate = tur
             best_partner = p2["team"]
@@ -1759,6 +1817,10 @@ def try_bilateral_trade(current_idx: int, picks: list[dict],
     old_team = pick_now["team"]
     picks[current_idx]["team"] = best_partner
     picks[best_idx]["team"] = old_team
+    # Derive compensation text for the UI
+    partner_pick = picks[best_idx]["pick_number"]
+    comp = derive_trade_compensation(pick_now["pick_number"], partner_pick)
+    comp_text = f"{best_partner} sends {' + '.join(comp['sent'])} for #{pick_now['pick_number']}"
     trade_log.append({
         "pick_number":     pick_now["pick_number"],
         "from_team":       old_team,
@@ -1767,6 +1829,8 @@ def try_bilateral_trade(current_idx: int, picks: list[dict],
         "target_position": prospects.loc[top_idx, "position"],
         "reason":          "; ".join(reasons or []) or "BPA fit + value premium",
         "trade_type":      "dynamic",
+        "compensation":    comp_text,
+        "slots_moved":     comp.get("slots_moved", 0),
     })
     return best_partner
 
@@ -1828,15 +1892,31 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
     for pick_num, pick_obj in [(p["pick_number"], p) for p in picks]:
         if pick_num in _orig_team_by_pick and pick_obj["team"] != _orig_team_by_pick[pick_num]:
             sc_meta = trades.get(f"scenario_pick_{pick_num}") or {}
+            up_team = pick_obj["team"]    # the team acquiring the slot
+            down_team = _orig_team_by_pick[pick_num]
+            # Find the up_team's ORIGINAL R1 pick (what they gave up)
+            up_team_orig_pick = next(
+                (pn for pn, t in _orig_team_by_pick.items() if t == up_team),
+                None,
+            )
+            if up_team_orig_pick and up_team_orig_pick != pick_num:
+                comp = derive_trade_compensation(pick_num, up_team_orig_pick)
+                comp_text = f"{up_team} sends {' + '.join(comp['sent'])} for #{pick_num}"
+            else:
+                comp = {"sent": [], "received": [f"#{pick_num}"],
+                        "slots_moved": 0}
+                comp_text = f"{up_team} acquires #{pick_num}"
             _scripted_trade_log.append({
                 "pick_number":      pick_num,
-                "from_team":        _orig_team_by_pick[pick_num],
-                "to_team":          pick_obj["team"],
+                "from_team":        down_team,
+                "to_team":          up_team,
                 "reason":           _reason_for_pick(pick_num),
                 "trade_type":       "scripted",
                 "target_player":    sc_meta.get("target_player", ""),
                 "target_position":  sc_meta.get("target_position", ""),
                 "scripted":         True,
+                "compensation":     comp_text,
+                "slots_moved":      comp.get("slots_moved", 0),
             })
     # BUG 2 FIX: base noise + a second noise draw we switch to for late picks
     local["final_score_noised_early"] = (
@@ -2312,6 +2392,15 @@ def main():
                 type_col = grp["trade_type"] if "trade_type" in grp.columns else None
                 trade_type = (str(type_col.mode().iloc[0])
                               if type_col is not None and len(type_col.mode()) else "")
+                # Most common compensation text + slots_moved from this pair.
+                comp_col = grp["compensation"] if "compensation" in grp.columns else None
+                comp_text = ""
+                if comp_col is not None:
+                    comp_counts = comp_col.fillna("").replace("", pd.NA).dropna().value_counts()
+                    if len(comp_counts) > 0:
+                        comp_text = str(comp_counts.index[0])
+                slots_col = grp["slots_moved"] if "slots_moved" in grp.columns else None
+                slots_moved = int(slots_col.median()) if slots_col is not None and len(slots_col) else 0
                 pairs.append({
                     "from_team":   ft,
                     "to_team":     tt,
@@ -2319,6 +2408,8 @@ def main():
                     "prob":        round(len(grp) / N_SIMULATIONS, 3),
                     "reason":      top_reason,
                     "trade_type":  trade_type,
+                    "compensation": comp_text,
+                    "slots_moved":  slots_moved,
                     "top_targets": [
                         {"player": str(r.target_player), "count": int(r.n)}
                         for r in targets.itertuples(index=False)
