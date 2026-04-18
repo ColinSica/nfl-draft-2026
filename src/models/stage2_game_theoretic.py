@@ -803,9 +803,10 @@ DEEP_EDGE_PROTECTION_THRESHOLD = 15   # top-15 EDGE keep full need_match
 MEDICAL_PENALTIES: dict[str, float] = {
     # Jermod McCoy — degenerative knee flag (Pauline 4/14, confirmed by
     # PFR, SI, Sportsnaut, Yardbarker 4/15-16). "Could take him off some
-    # boards entirely; others drop grade a half or full round." Dropped
-    # 0.75 -> 0.50 after news sweep confirmed the degenerative
-    # characterization (not just a clean ACL rehab).
+    # boards entirely; others drop grade a half or full round."
+    # Combined with rank bump 14->28, lands R1 in ~59% of sims (down
+    # from 92%) — matches the "bifurcated market" reporting (some teams
+    # off, others keep with half/full-round drop).
     "Jermod McCoy": 0.50,
 }
 
