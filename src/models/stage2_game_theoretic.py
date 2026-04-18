@@ -408,6 +408,26 @@ def compute_dynamic_trade_boost(
                 f"{current_team} {'new GM' if new_gm else 'new HC'} — job-stability urgency"
             )
 
+        # DRIVER 7: Draft capital. Teams with abundant picks (11+ total)
+        # can afford to package multiple picks to trade UP; capital-poor
+        # teams (4-5 picks) are unlikely to trade up further. This boosts
+        # the CURRENT team's likelihood of trading DOWN (more picks = they
+        # can absorb the cost of moving back) when a later-pick team has
+        # capital to spend.
+        abundance = (prof.get("draft_capital") or {}).get("capital_abundance", "medium")
+        total_picks = int(prof.get("total_picks") or 7)
+        if abundance in ("low",) or total_picks <= 5:
+            # Capital-poor team: less likely to trade up, more likely to
+            # stand pat. Slightly suppress trade boost.
+            boost *= 0.85
+            reasons.append(f"{current_team} capital-poor ({total_picks} picks) — stand pat")
+        elif abundance in ("very_high",) or total_picks >= 11:
+            # Capital-rich team: more likely to trade UP aggressively AND
+            # be willing trade-back targets (they can pay the premium).
+            if any(n in PREMIUM_TRADE_POSITIONS for n in current_needs):
+                boost *= 1.10
+                reasons.append(f"{current_team} draft-capital rich ({total_picks} picks)")
+
     if return_reasons:
         return boost, reasons
     return boost
