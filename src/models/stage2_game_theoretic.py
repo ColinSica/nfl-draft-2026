@@ -801,7 +801,12 @@ DEEP_EDGE_PROTECTION_THRESHOLD = 15   # top-15 EDGE keep full need_match
 # and override sampling so the penalty works whether the pick is governed
 # by an intel override or the base agent model.
 MEDICAL_PENALTIES: dict[str, float] = {
-    "Jermod McCoy": 0.75,   # missed all of 2025 with torn ACL
+    # Jermod McCoy — degenerative knee flag (Pauline 4/14, confirmed by
+    # PFR, SI, Sportsnaut, Yardbarker 4/15-16). "Could take him off some
+    # boards entirely; others drop grade a half or full round." Dropped
+    # 0.75 -> 0.50 after news sweep confirmed the degenerative
+    # characterization (not just a clean ACL rehab).
+    "Jermod McCoy": 0.50,
 }
 
 # Post-combine risers — players whose stage-1 final_score / first_round_mock

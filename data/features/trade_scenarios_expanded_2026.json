@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-04-18",
-  "n_scenarios": 59,
+  "n_scenarios": 62,
   "notes": "Scenarios compiled from April 2026 mock-draft universe (Kiper, Brugler, McShay, Jeremiah, Barnwell, PFF, Reuter, CBS/Trapasso/Wilson, OutKick, Walter, B/R, Draft Labs) plus GM historical patterns. empirical_rate is a calibrated probability the specific mocked deal (or any close variant) actually occurs on draft night, derived from (a) times_mocked across the tracked mock universe weighted by analyst tier and (b) GM-pattern base rates. Rates calibrated so top-of-list cluster (CLE->DAL top-10 swap; ARI jump for Simpson) sit at the empirical ceiling ~0.25 given Round-1 trade-night base rate ~0.30-0.35.",
   "scenarios": [
     {
@@ -828,6 +828,48 @@
       "notes": "Runs opposite to the dominant DAL-trades-UP-to-6 narrative; only one applies.",
       "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
       "archetype": "generic"
+    },
+    {
+      "pick": 14,
+      "up_team": "CAR",
+      "down_team": "BAL",
+      "target_player": "Dillon Thieneman",
+      "target_position": "S",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "empirical_rate": 0.08,
+      "trade_reason": "CBS 4/16: BAL trades down from #14 to CAR for extra 2nd; CAR gets S1 to pair with Horn. BAL falls to #19 for Ioane (parallel: 2021 MIN->NYJ #23 for Darrisaw \u2014 OL/DB trade-downs are BAL's recurring Eric DeCosta move).",
+      "notes": "CBS five-trade mock 4/16. Secondary partner chain (BAL gets CAR's #19).",
+      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/",
+      "archetype": "trade_down_volume"
+    },
+    {
+      "pick": 9,
+      "up_team": "KC",
+      "down_team": "NO",
+      "target_player": "David Bailey",
+      "target_position": "EDGE",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "empirical_rate": 0.06,
+      "trade_reason": "Barnwell ESPN 4/15: KC bundles #29 + 2026 2nd + 2027 1st to jump to #9 for premium EDGE (Bailey if he slides); Veach has history of aggressive EDGE trade-ups (parallel: 2024 KC->BUF #28 for Worthy \u2014 contender converts future picks into immediate impact).",
+      "notes": "Barnwell trade piece 4/15. KC has history of moving up for premium positions.",
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "win_now_contender"
+    },
+    {
+      "pick": 16,
+      "up_team": "CHI",
+      "down_team": "NYJ",
+      "target_player": "Anthony Hill Jr.",
+      "target_position": "LB",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "empirical_rate": 0.05,
+      "trade_reason": "Barnwell ESPN 4/15: CHI bundles #25 + 2026 3rd to jump up to #16 for premium defender (Hill Jr. is consensus #32 but CHI has him tier-1 per Poles' board); pair with Edmonds on defense (parallel: 2024 MIN->JAX #17 for Dallas Turner \u2014 teams reach for scheme-specific defenders).",
+      "notes": "Barnwell trade piece 4/15.",
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "leapfrog_LB"
     }
   ]
 }
