@@ -1536,6 +1536,23 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
     forced_picks = forced_picks or {}
 
     local = pros.copy()
+
+    # Log scripted team swaps so they appear in the trades JSON alongside
+    # dynamic bilateral trades. Without this, a scenario like DAL→6 (40%)
+    # would silently change ownership but never show up in the 'Trade X%'
+    # badge on the UI.
+    _scripted_trade_log: list = []
+    _orig_team_by_pick = {p["pick_number"]: p["team"] for p in picks_template}
+    for pick_num, pick_obj in [(p["pick_number"], p) for p in picks]:
+        if pick_num in _orig_team_by_pick and pick_obj["team"] != _orig_team_by_pick[pick_num]:
+            _scripted_trade_log.append({
+                "pick_number":      pick_num,
+                "from_team":        _orig_team_by_pick[pick_num],
+                "to_team":          pick_obj["team"],
+                "target_player":    "",        # unknown at pre-sim time
+                "target_position":  "",
+                "scripted":         True,
+            })
     # BUG 2 FIX: base noise + a second noise draw we switch to for late picks
     local["final_score_noised_early"] = (
         local["final_score"].fillna(500)
@@ -1547,7 +1564,7 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
     taken: set[int] = set()
     taken_names: set[str] = set()
     history: dict = {}
-    trade_log: list = []
+    trade_log: list = list(_scripted_trade_log)
     recent_positions: list[str] = []
 
     for i, pick in enumerate(picks):
@@ -1682,6 +1699,16 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
         taken_names.add(winner_name)
         history[pn] = winner_name
         recent_positions.append(local.loc[winner_idx, "_needs_pos"])
+
+    # Backfill target_player on scripted trades now that picks are resolved.
+    for t in trade_log:
+        if t.get("scripted") and not t.get("target_player"):
+            player = history.get(t["pick_number"])
+            if player:
+                t["target_player"] = player
+                row = local[local["player"] == player]
+                if not row.empty:
+                    t["target_position"] = str(row["position"].iloc[0])
 
     return history, trade_log, picks
 

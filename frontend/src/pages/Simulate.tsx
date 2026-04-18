@@ -65,7 +65,7 @@ type TradeEvent = {
 
 function PickCard({
   row, expanded, onToggle, analyst, reasoning, modelReasoning, nAnalysts, nTier1,
-  trades, nSims,
+  trades, nSims, modelRankMap,
 }: {
   row: PickRow;
   expanded: boolean;
@@ -77,6 +77,7 @@ function PickCard({
   nTier1: number;
   trades?: TradeEvent[];
   nSims?: number;
+  modelRankMap?: Map<string, number>;
 }) {
   const tradeProb = (trades ?? []).reduce((a, t) => a + t.prob, 0);
   const topTrade = (trades && trades.length > 0) ? trades[0] : undefined;
@@ -193,12 +194,22 @@ function PickCard({
               </span>
             )}
           </div>
-          <div className="text-xs text-text-muted truncate mt-1 flex items-center gap-2">
+          <div className="text-xs text-text-muted truncate mt-1 flex items-center gap-2 flex-wrap">
             <span className="truncate">{top?.college ?? '—'}</span>
             {top?.consensus_rank != null && (
               <>
                 <span className="text-text-subtle">·</span>
-                <span>Board rank #{top.consensus_rank}</span>
+                <span title="Consensus analyst rank">
+                  Cons <span className="font-mono text-text">#{top.consensus_rank}</span>
+                </span>
+              </>
+            )}
+            {top?.player && modelRankMap?.get(top.player) != null && (
+              <>
+                <span className="text-text-subtle">·</span>
+                <span title="Model rank (stage-1 score)">
+                  Model <span className="font-mono text-text">#{modelRankMap.get(top.player)}</span>
+                </span>
               </>
             )}
           </div>
@@ -272,7 +283,8 @@ function PickCard({
                           <div className="font-medium text-text">{c.player}</div>
                           <div className="text-xs text-text-subtle">
                             {c.college}
-                            {c.consensus_rank != null && ` · #${c.consensus_rank}`}
+                            {c.consensus_rank != null && ` · Cons #${c.consensus_rank}`}
+                            {modelRankMap?.get(c.player) != null && ` · Model #${modelRankMap.get(c.player)}`}
                           </div>
                         </td>
                         <td className="py-2 pl-2 w-28">
@@ -847,6 +859,9 @@ export function Simulate() {
     top_targets: Array<{ player: string; count: number }>;
   }>>>({});
   const [tradesN, setTradesN] = useState<number>(0);
+  // player -> model rank (1 = best stage-1 predicted pick). Built from the
+  // prospects endpoint's final_score so the sim tab can show both ranks.
+  const [modelRankMap, setModelRankMap] = useState<Map<string, number>>(new Map());
   const [token, setToken] = useState(() => tokenStore.get());
   const [err, setErr] = useState<string | null>(null);
   const [expanded, setExpanded] = useState<Set<number>>(new Set());
@@ -857,11 +872,12 @@ export function Simulate() {
 
   const loadLatest = async () => {
     try {
-      const [r, p, mr, tr] = await Promise.all([
+      const [r, p, mr, tr, ps] = await Promise.all([
         api.latestSim(),
         api.prospectLandings(),
         api.simulationReasoning().catch(() => ({ picks: {} })),
         api.simulationTrades().catch(() => ({ per_pick: {} as any })),
+        api.prospects(250).catch(() => ({ prospects: [] as any[] })),
       ]);
       setPicks(r.picks);
       setMeta(r.meta);
@@ -869,6 +885,13 @@ export function Simulate() {
       setModelReasoning(mr.picks as Record<string, ModelReasoning>);
       setTrades((tr as any).per_pick ?? {});
       setTradesN((tr as any).n_simulations ?? 0);
+      // Build player -> model rank map (lower final_score = earlier pick).
+      const scored = ((ps as any).prospects ?? [])
+        .filter((x: any) => x.final_score != null)
+        .sort((a: any, b: any) => a.final_score - b.final_score);
+      const m = new Map<string, number>();
+      scored.forEach((x: any, i: number) => m.set(x.player, i + 1));
+      setModelRankMap(m);
     } catch (e) {
       setErr(String(e));
     }
@@ -1300,6 +1323,7 @@ export function Simulate() {
                         nTier1={nTier1}
                         trades={trades[String(r.pick_number)]}
                         nSims={tradesN}
+                        modelRankMap={modelRankMap}
                       />
                     </div>
                   );
