@@ -12,9 +12,10 @@
       "times_mocked": 6,
       "tier1_credible": true,
       "empirical_rate": 0.28,
-      "trade_reason": "DAL defense allowed league-high points; CLE has 2x firsts and wants volume — the cleanest fit on the board",
+      "trade_reason": "DAL defense allowed league-high points; CLE has 2x firsts and wants volume \u2014 the cleanest fit on the board (parallel: 2021 DAL\u2192SF #12 for Micah Parsons \u2014 board-value pick below consensus grade)",
       "notes": "MOST COMMON TRADE in April mocks. Brugler 7rd, Brugler 1st, Kiper Final, McShay 4.0, Draft Labs, Mock DB all have it; DAL sends #12 + #20 + 2027 late pick for #6 + #39",
-      "source": "analyst_consensus_2026.json; https://nationaltoday.com/us/pa/pittsburgh/news/2026/04/15/2026-nfl-draft-dane-brugler-unveils-7-round-mock-with-massive-trade-in-top-10/; https://www.espn.com/nfl/draft2026/story/_/id/48478995/"
+      "source": "analyst_consensus_2026.json; https://nationaltoday.com/us/pa/pittsburgh/news/2026/04/15/2026-nfl-draft-dane-brugler-unveils-7-round-mock-with-massive-trade-in-top-10/; https://www.espn.com/nfl/draft2026/story/_/id/48478995/",
+      "archetype": "elite_slide_LB"
     },
     {
       "pick": 30,
@@ -25,9 +26,10 @@
       "times_mocked": 5,
       "tier1_credible": true,
       "empirical_rate": 0.26,
-      "trade_reason": "QB jump for 5YO control; Ossenfort has publicly signaled willingness to hop back into Rd1 for a developmental QB",
+      "trade_reason": "QB jump for 5YO control; Ossenfort has publicly signaled willingness to hop back into Rd1 for a developmental QB (parallel: 2025 NYG\u2192HOU #25 for Jaxson Dart \u2014 traded back into R1 for 5th-year option on a developmental QB)",
       "notes": "Kiper, McShay, Brugler variants all target this zone. McShay specifically: ARI sends #34 + #143 + #183 for MIA's #30. Multiple analysts agree late-Rd1 QB trade-up most likely involves ARI.",
-      "source": "analyst_consensus_2026.json; https://arizonasports.com/nfl/arizona-cardinals/trade-down-option/3617337/; https://www.espn.com/nfl/draft2026/story/_/id/48478995/"
+      "source": "analyst_consensus_2026.json; https://arizonasports.com/nfl/arizona-cardinals/trade-down-option/3617337/; https://www.espn.com/nfl/draft2026/story/_/id/48478995/",
+      "archetype": "QB_urgency_5YO"
     },
     {
       "pick": 7,
@@ -38,9 +40,10 @@
       "times_mocked": 3,
       "tier1_credible": true,
       "empirical_rate": 0.14,
-      "trade_reason": "WR run in top-10 pushes NYJ to jump ahead of MIA/LAR for Tate; pair with Garrett Wilson",
-      "notes": "Daniel Jeremiah Mock 4 and McShay 4.0 both have it — WAS gets #16 + 2nd + 4th for #7. First analyst to mock WAS trading back.",
-      "source": "analyst_consensus_2026.json; https://atozsports.com/nfl/washington-commanders-news/commanders-make-blockbuster-trade-with-jets-first-round-package-in-daniel-jeremiah-latest-nfl-mock-draft/"
+      "trade_reason": "WR run in top-10 pushes NYJ to jump ahead of MIA/LAR for Tate; pair with Garrett Wilson (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
+      "notes": "Daniel Jeremiah Mock 4 and McShay 4.0 both have it \u2014 WAS gets #16 + 2nd + 4th for #7. First analyst to mock WAS trading back.",
+      "source": "analyst_consensus_2026.json; https://atozsports.com/nfl/washington-commanders-news/commanders-make-blockbuster-trade-with-jets-first-round-package-in-daniel-jeremiah-latest-nfl-mock-draft/",
+      "archetype": "WR_run"
     },
     {
       "pick": 12,
@@ -51,9 +54,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.12,
-      "trade_reason": "Alt version of the big CLE-DAL swap: if CLE stays at 6 and uses #24 to jump up from #23 for OT1",
+      "trade_reason": "Alt version of the big CLE-DAL swap: if CLE stays at 6 and uses #24 to jump up from #23 for OT1 (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Kiper alt, McShay alt. Tier-exhaustion at OT after Fano/Mauigoa go top-10.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 4,
@@ -64,9 +68,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.08,
-      "trade_reason": "DAL vaults ahead of NYG/NO if CLE refuses; TEN wants volume for rebuild",
+      "trade_reason": "DAL vaults ahead of NYG/NO if CLE refuses; TEN wants volume for rebuild (parallel: 2021 DAL\u2192SF #12 for Micah Parsons \u2014 board-value pick below consensus grade)",
       "notes": "NFL.com 'six trades' + Barnwell pushed this route; Styles comp to Urlacher.",
-      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1; https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1; https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "elite_slide_LB"
     },
     {
       "pick": 13,
@@ -78,8 +83,9 @@
       "tier1_credible": true,
       "empirical_rate": 0.22,
       "trade_reason": "Snead GM pattern: 25 trade-downs since 2012 and publicly stated LAR wants to trade down from #13; offers from CAR/PIT/PHI/CLE on table",
-      "notes": "Not one specific deal but a cluster — LAR almost certainly moves back in some form. Treat as a meta-scenario; trade partner likely PIT #21 or PHI #23.",
-      "source": "https://atozsports.com/nfl/los-angeles-rams-news/los-angeles-rams-trade-down-2026-nfl-draft-offers-make-most-sense/; GM historical pattern"
+      "notes": "Not one specific deal but a cluster \u2014 LAR almost certainly moves back in some form. Treat as a meta-scenario; trade partner likely PIT #21 or PHI #23.",
+      "source": "https://atozsports.com/nfl/los-angeles-rams-news/los-angeles-rams-trade-down-2026-nfl-draft-offers-make-most-sense/; GM historical pattern",
+      "archetype": "generic"
     },
     {
       "pick": 32,
@@ -89,10 +95,11 @@
       "target_position": "any",
       "times_mocked": 3,
       "tier1_credible": true,
-      "empirical_rate": 0.20,
-      "trade_reason": "Schneider GM pattern: SEA attempted trade-back in every Rd1 since 2019; currently only 4 picks in draft with none after Rd3",
+      "empirical_rate": 0.2,
+      "trade_reason": "Schneider GM pattern: SEA attempted trade-back in every Rd1 since 2019; currently only 4 picks in draft with none after Rd3 (parallel: Schneider SEA (24 R1 trade-downs since 2012); SEA has stacked trade-back history)",
       "notes": "Barnwell flagged explicitly; Seahawks.com Mock 8 acknowledged. Likely partner is a QB-needy team (ARI, PIT, CLE) or WR-needy team (NE).",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/; https://www.seahawks.com/news/2026-mock-draft-tracker-8-0-what-will-the-seahawks-do-with-pick-no-32; GM historical pattern"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/; https://www.seahawks.com/news/2026-mock-draft-tracker-8-0-what-will-the-seahawks-do-with-pick-no-32; GM historical pattern",
+      "archetype": "trade_down_volume"
     },
     {
       "pick": 20,
@@ -103,9 +110,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.09,
-      "trade_reason": "CLE uses #24 to move up 4 spots for Brugler's preferred WR target",
+      "trade_reason": "CLE uses #24 to move up 4 spots for Brugler's preferred WR target (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
       "notes": "Brugler 7rd + Brugler 1st; alternate to Kiper's #20 CLE->DAL where target is Boston.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "WR_run"
     },
     {
       "pick": 20,
@@ -116,9 +124,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.07,
-      "trade_reason": "Same trade structure as above but Kiper's final mock targets Boston over Concepcion",
-      "notes": "Kiper Final — same #24 + 4th for #20.",
-      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48478995/"
+      "trade_reason": "Same trade structure as above but Kiper's final mock targets Boston over Concepcion (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
+      "notes": "Kiper Final \u2014 same #24 + 4th for #20.",
+      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48478995/",
+      "archetype": "WR_run"
     },
     {
       "pick": 22,
@@ -129,9 +138,10 @@
       "times_mocked": 3,
       "tier1_credible": true,
       "empirical_rate": 0.11,
-      "trade_reason": "CHI hops up 3 for safety to solidify back end; Barnwell also endorsed CHI-trade-up concept",
+      "trade_reason": "CHI hops up 3 for safety to solidify back end; Barnwell also endorsed CHI-trade-up concept (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs \u2014 explicitly to block NE/NYJ who shared the need)",
       "notes": "McShay 4.0 + Reuter 7rd + Reuter 5rd; LAC gets #25 + 4th.",
-      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "leapfrog_S"
     },
     {
       "pick": 17,
@@ -142,9 +152,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.06,
-      "trade_reason": "LAR up for WR — pre-built chemistry option behind McVay's system",
+      "trade_reason": "LAR up for WR \u2014 pre-built chemistry option behind McVay's system (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
       "notes": "Reuter 7rd + Reuter 5rd. Conflicts with the stronger LAR-trade-DOWN narrative, so counterweighted.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "WR_run"
     },
     {
       "pick": 20,
@@ -155,9 +166,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.07,
-      "trade_reason": "KC back into Rd1 for OT to protect Mahomes after tier thins",
+      "trade_reason": "KC back into Rd1 for OT to protect Mahomes after tier thins (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Reuter 7rd + Reuter 5rd; KC sends #29 + 3rd + 2027 3rd. Reich has favored interior/OT early in mid-Rd1 range.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 22,
@@ -168,9 +180,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.06,
-      "trade_reason": "CLE uses extra 1st to jump up for CB1",
+      "trade_reason": "CLE uses extra 1st to jump up for CB1 (parallel: 2022 KC\u2192NE #21 for Trent McDuffie \u2014 Chiefs leapt CB-needy teams for scheme fit)",
       "notes": "Reuter 7rd + Reuter 5rd; #24 + 5th for #22.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "elite_slide_CB"
     },
     {
       "pick": 22,
@@ -181,9 +194,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.05,
-      "trade_reason": "CLE alt: uses #24 to grab remaining WR1 alternative",
+      "trade_reason": "CLE alt: uses #24 to grab remaining WR1 alternative (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
       "notes": "Reuter 7rd. WR run variant of CLE-LAC trade.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "WR_run"
     },
     {
       "pick": 25,
@@ -194,9 +208,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.05,
-      "trade_reason": "BUF up 1 for WR target to pair with Josh Allen",
+      "trade_reason": "BUF up 1 for WR target to pair with Josh Allen (parallel: 2024 KC\u2192BUF #28 for Xavier Worthy \u2014 jumped AFC rival for the last elite speed WR)",
       "notes": "Reuter 7rd + Reuter 5rd.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "WR_run_late"
     },
     {
       "pick": 26,
@@ -207,9 +222,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.05,
-      "trade_reason": "Alt CHI jump if BUF takes WR at 25",
+      "trade_reason": "Alt CHI jump if BUF takes WR at 25 (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs \u2014 explicitly to block NE/NYJ who shared the need)",
       "notes": "Reuter 7rd + Reuter 5rd micro-swap.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "leapfrog_S"
     },
     {
       "pick": 29,
@@ -220,9 +236,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.05,
-      "trade_reason": "DAL hunts CB late if they missed on Styles/edge earlier",
+      "trade_reason": "DAL hunts CB late if they missed on Styles/edge earlier (parallel: Schneider SEA (24 R1 trade-downs since 2012); LAR has stacked trade-back history)",
       "notes": "Reuter 7rd + Reuter 5rd.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "trade_down_volume"
     },
     {
       "pick": 29,
@@ -233,9 +250,10 @@
       "times_mocked": 2,
       "tier1_credible": false,
       "empirical_rate": 0.04,
-      "trade_reason": "ARI mini-swap up 1 for CB (if not chasing Simpson)",
+      "trade_reason": "ARI mini-swap up 1 for CB (if not chasing Simpson) (parallel: Schneider SEA (24 R1 trade-downs since 2012); LAR has stacked trade-back history)",
       "notes": "Locker PFF + Carragher PFF micro-trade.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "trade_down_volume"
     },
     {
       "pick": 3,
@@ -246,9 +264,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "NO vaults for pass rusher — ARI is consensus top trade-down target",
+      "trade_reason": "NO vaults for pass rusher \u2014 ARI is consensus top trade-down target (parallel: 2023 HOU Caserio/Ryans double-up for Stroud+Anderson \u2014 new staff stamping identity)",
       "notes": "McShay 4.0; NO sends #9 + 2nd + 2027 2nd. Runs counter to Barnwell's NO-trade-down thesis.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "new_staff_mandate"
     },
     {
       "pick": 3,
@@ -259,9 +278,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.04,
-      "trade_reason": "DAL mega-jump for EDGE (alternate to LB target)",
+      "trade_reason": "DAL mega-jump for EDGE (alternate to LB target) (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 pounce on slid elite defensive prospect)",
       "notes": "Walter WF; DAL sends #12 + 2nd + 2027 1st.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 3,
@@ -272,9 +292,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "CLE uses both first-rounders to package for OT1",
+      "trade_reason": "CLE uses both first-rounders to package for OT1 (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Campbell WF alt; CLE sends #6 + 2nd.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 3,
@@ -285,9 +306,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "TEN short-swap up 1 for Love",
+      "trade_reason": "TEN short-swap up 1 for Love (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs (RB1) \u2014 Holmes leapt to beat rivals at the position)",
       "notes": "Locker PFF; #4 + 5th for #3.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "RB_elite_jump"
     },
     {
       "pick": 5,
@@ -298,9 +320,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.05,
-      "trade_reason": "BAL packaged up for elite defender (PFF sim accepted this offer): #14, #45, 2027 2nd for #5",
+      "trade_reason": "BAL packaged up for elite defender (PFF sim accepted this offer): #14, #45, 2027 2nd for #5 (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 pounce on slid elite defensive prospect)",
       "notes": "Giants reportedly want to move back per ESPN intel; PFF simulator took this. Giants already hold no Rd3 pick post Dart trade.",
-      "source": "https://www.bigblueview.com/new-york-giants-draft/159140/finding-the-perfect-trade-scenario-at-no-5; https://www.espn.com/nfl/story/_/id/48429757/"
+      "source": "https://www.bigblueview.com/new-york-giants-draft/159140/finding-the-perfect-trade-scenario-at-no-5; https://www.espn.com/nfl/story/_/id/48429757/",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 5,
@@ -311,9 +334,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "CHI blockbuster for generational safety",
+      "trade_reason": "CHI blockbuster for generational safety (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs \u2014 explicitly to block NE/NYJ who shared the need)",
       "notes": "Draft Labs Aggregator mega-package: #25 + #26 + 2027 1st for #5. High cost but Downs is consensus top-5 talent.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "leapfrog_S"
     },
     {
       "pick": 5,
@@ -324,9 +348,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.04,
-      "trade_reason": "MIA moves up for top pass-catcher/RB if new regime wants a splash",
+      "trade_reason": "MIA moves up for top pass-catcher/RB if new regime wants a splash (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs (RB1) \u2014 Holmes leapt to beat rivals at the position)",
       "notes": "SI/Giants media variant; MIA sends #11 + two 3rds.",
-      "source": "https://www.si.com/nfl/giants/onsi/draft/giants-make-bold-trade-in-wild-new-mock-draft-scenario-01kn2hhy0r15"
+      "source": "https://www.si.com/nfl/giants/onsi/draft/giants-make-bold-trade-in-wild-new-mock-draft-scenario-01kn2hhy0r15",
+      "archetype": "RB_elite_jump"
     },
     {
       "pick": 6,
@@ -337,9 +362,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "Alt CLE trade — KC instead of DAL packages for OT1",
+      "trade_reason": "Alt CLE trade \u2014 KC instead of DAL packages for OT1 (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Locker PFF.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 9,
@@ -350,9 +376,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.07,
-      "trade_reason": "KC up for premium EDGE — Barnwell endorses as top trade-up candidate using #9 + #29",
+      "trade_reason": "KC up for premium EDGE \u2014 Barnwell endorses as top trade-up candidate using #9 + #29 (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 Roseman pounced on a slid elite prospect)",
       "notes": "Locker PFF + Barnwell; KC has aggressive history at premium positions.",
-      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 9,
@@ -363,9 +390,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "MIN trades Greenard + #18 + 3rd for #9 — package deal Barnwell floated",
+      "trade_reason": "MIN trades Greenard + #18 + 3rd for #9 \u2014 package deal Barnwell floated",
       "notes": "Creative cap-relief-plus-pick-up concept. Tier1 speculative.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48373315/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48373315/",
+      "archetype": "generic"
     },
     {
       "pick": 8,
@@ -376,9 +404,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "Daisy-chain: ARI slides back one round, NO uses #3 — ARI picks at #8 for OT",
+      "trade_reason": "Daisy-chain: ARI slides back one round, NO uses #3 \u2014 ARI picks at #8 for OT (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "McShay 4.0.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 11,
@@ -389,9 +418,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "ARI Rd1 double-dip — trade down from 3 to 8, trade BACK up to 11 for OT",
+      "trade_reason": "ARI Rd1 double-dip \u2014 trade down from 3 to 8, trade BACK up to 11 for OT (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Podell CBS.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 11,
@@ -402,9 +432,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "ATL back into Rd1 for WR",
+      "trade_reason": "ATL back into Rd1 for WR (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
       "notes": "Carragher PFF speculative.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "WR_run"
     },
     {
       "pick": 13,
@@ -415,9 +446,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.07,
-      "trade_reason": "DET up 4 for OT1 — Campbell loves the Fano attitude profile, NFL.com explicitly endorsed",
+      "trade_reason": "DET up 4 for OT1 \u2014 Campbell loves the Fano attitude profile, NFL.com explicitly endorsed (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Reuter 7rd + NFL.com 'six trades'.",
-      "source": "analyst_consensus_2026.json; https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1"
+      "source": "analyst_consensus_2026.json; https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 13,
@@ -428,9 +460,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "LAR moves 1 spot for USC WR1",
+      "trade_reason": "LAR moves 1 spot for USC WR1 (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
       "notes": "CBS 'five trades' mock; conflicts somewhat with LAR-trade-down narrative.",
-      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/"
+      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/",
+      "archetype": "WR_run"
     },
     {
       "pick": 14,
@@ -441,9 +474,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "CLE moves back from 6 variant — uses #24 to move up for Georgia OT",
+      "trade_reason": "CLE moves back from 6 variant \u2014 uses #24 to move up for Georgia OT (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "CBS 'five trades' mock.",
-      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/"
+      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 15,
@@ -454,9 +488,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "TB jumps for elite CB",
+      "trade_reason": "TB jumps for elite CB (parallel: 2024 DET\u2192DAL #24 for Terrion Arnold \u2014 Holmes jumped when a top-15 CB slid)",
       "notes": "CBS 'five trades' mock.",
-      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/"
+      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/",
+      "archetype": "elite_slide_CB"
     },
     {
       "pick": 15,
@@ -467,9 +502,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "BAL up 1 for TE1 if Andrews declines",
+      "trade_reason": "BAL up 1 for TE1 if Andrews declines (parallel: 2023 DET\u2192ARI #6 moved up tier (TE-specific jumps are rare \u2014 TE trade-ups typically late R1 when TE1 slides))",
       "notes": "Podell CBS.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "TE_tier_jump"
     },
     {
       "pick": 16,
@@ -480,9 +516,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.06,
-      "trade_reason": "NYJ move up for QB — one of the core Simpson landing spots",
+      "trade_reason": "NYJ move up for QB \u2014 one of the core Simpson landing spots (parallel: 2024 MIN\u2192NYJ #10 for J.J. McCarthy \u2014 team refused to wait another year at QB)",
       "notes": "Reuter 7rd + OutKick alt.",
-      "source": "analyst_consensus_2026.json; https://www.outkick.com/sports/mock-draft-2026-first-round-predictions-trades"
+      "source": "analyst_consensus_2026.json; https://www.outkick.com/sports/mock-draft-2026-first-round-predictions-trades",
+      "archetype": "QB_urgency"
     },
     {
       "pick": 16,
@@ -493,9 +530,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.08,
-      "trade_reason": "Steelers love Simpson per Ryan Wilson CBS; PIT hosting draft and QB need is acute",
+      "trade_reason": "Steelers love Simpson per Ryan Wilson CBS; PIT hosting draft and QB need is acute (parallel: 2024 MIN\u2192NYJ #10 for J.J. McCarthy \u2014 team refused to wait another year at QB)",
       "notes": "CBS 3-round mock + Steelers Now report + OutKick place him 16 to PIT.",
-      "source": "https://steelersnow.com/report-steelers-could-trade-back-into-first-round-for-qb/; https://www.cbssports.com/nfl/draft/news/nfl-three-round-mock-draft-2026-steelers-ty-simpson/"
+      "source": "https://steelersnow.com/report-steelers-could-trade-back-into-first-round-for-qb/; https://www.cbssports.com/nfl/draft/news/nfl-three-round-mock-draft-2026-steelers-ty-simpson/",
+      "archetype": "QB_urgency"
     },
     {
       "pick": 17,
@@ -506,9 +544,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.04,
-      "trade_reason": "PHI up for safety if Blankenship/McKinney options fade",
+      "trade_reason": "PHI up for safety if Blankenship/McKinney options fade (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs \u2014 explicitly to block NE/NYJ who shared the need)",
       "notes": "Locker PFF.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "leapfrog_S"
     },
     {
       "pick": 17,
@@ -519,9 +558,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "Barnwell all-trades mock: DET up for EDGE using #17 + 2-50",
+      "trade_reason": "Barnwell all-trades mock: DET up for EDGE using #17 + 2-50 (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 Roseman pounced on a slid elite prospect)",
       "notes": "Barnwell all-trades; DET's defensive line need is acute.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48373315/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48373315/",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 19,
@@ -532,9 +572,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.07,
-      "trade_reason": "PHI up for Lane Johnson succession plan — Barnwell explicitly endorses as one of 4 top trade-up candidates",
+      "trade_reason": "PHI up for Lane Johnson succession plan \u2014 Barnwell explicitly endorses as one of 4 top trade-up candidates (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Renner CBS + Barnwell. #23 + 3rd for #19.",
-      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "analyst_consensus_2026.json; https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 22,
@@ -545,9 +586,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.03,
-      "trade_reason": "Pick-for-player: LAC acquires disgruntled Lawrence with #22 + Quentin Johnston",
-      "notes": "NFL.com 'six trades'. Pick-for-veteran scenario — tricky to model but credible.",
-      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1"
+      "trade_reason": "Pick-for-player: LAC acquires disgruntled Lawrence with #22 + Quentin Johnston (parallel: 2020 MIN #22 from Diggs vet-for-picks trade \u2014 classic pick-changed-hands-via-vet-deal pattern)",
+      "notes": "NFL.com 'six trades'. Pick-for-veteran scenario \u2014 tricky to model but credible.",
+      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1",
+      "archetype": "veteran_swap"
     },
     {
       "pick": 22,
@@ -558,9 +600,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "MIA up for TE1 to replace aging Smith",
+      "trade_reason": "MIA up for TE1 to replace aging Smith (parallel: 2023 DET\u2192ARI #6 moved up tier (TE-specific jumps are rare \u2014 TE trade-ups typically late R1 when TE1 slides))",
       "notes": "CBS 'five trades' mock.",
-      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/"
+      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-cowboys-one-of-five-first-round-trades/",
+      "archetype": "TE_tier_jump"
     },
     {
       "pick": 24,
@@ -571,9 +614,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "LAC swap up for WR (CLE moving CLE-to-JAX derived 24)",
+      "trade_reason": "LAC swap up for WR (CLE moving CLE-to-JAX derived 24) (parallel: 2022 NYJ\u2192SEA #10 for Garrett Wilson \u2014 classic WR-run trade-up in the Wilson/Olave/Williams cluster)",
       "notes": "Reuter 7rd.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "WR_run"
     },
     {
       "pick": 25,
@@ -584,9 +628,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "LAC up for interior DL",
+      "trade_reason": "LAC up for interior DL (parallel: 2022 HOU\u2192PHI #13 for Jordan Davis \u2014 scheme-specific DL target justified the move)",
       "notes": "McShay 4.0.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "IDL_scheme_jump"
     },
     {
       "pick": 26,
@@ -599,7 +644,8 @@
       "empirical_rate": 0.03,
       "trade_reason": "CAR back into late Rd1 for CB",
       "notes": "Locker PFF.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "generic"
     },
     {
       "pick": 27,
@@ -610,9 +656,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.06,
-      "trade_reason": "NE up 4 for OT; Vrabel publicly said 'maybe we trade up' and OT/TE/WR are all paths",
+      "trade_reason": "NE up 4 for OT; Vrabel publicly said 'maybe we trade up' and OT/TE/WR are all paths (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Davenport B/R + Vrabel public comments.",
-      "source": "analyst_consensus_2026.json; https://nesn.com/new-england-patriots/news/mike-vrabel-patriots-trading-1st-round-pick-nfl-draft/"
+      "source": "analyst_consensus_2026.json; https://nesn.com/new-england-patriots/news/mike-vrabel-patriots-trading-1st-round-pick-nfl-draft/",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 28,
@@ -623,9 +670,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "GB back into Rd1 — they don't have a 2026 1st (Parsons trade); would have to package heavily",
+      "trade_reason": "GB back into Rd1 \u2014 they don't have a 2026 1st (Parsons trade); would have to package heavily (parallel: 2023 PIT\u2192NE #14 for Broderick Jones \u2014 OT tier exhaustion drove the move)",
       "notes": "Band NFL.com. Gutekunst's history does include aggressive Rd1 moves though package cost is steep.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "OL_tier_jump"
     },
     {
       "pick": 20,
@@ -636,9 +684,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.06,
-      "trade_reason": "KC back up for CB1 — alternate to Proctor",
+      "trade_reason": "KC back up for CB1 \u2014 alternate to Proctor (parallel: 2024 DET\u2192DAL #24 for Terrion Arnold \u2014 Holmes jumped when a top-15 CB slid)",
       "notes": "Barnwell all-trades + PFF mock.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48373315/; https://www.pff.com/news/2026-nfl-mock-draft-cowboys-trade-up-for-david-bailey-chiefs-nab-avieon-terrell"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48373315/; https://www.pff.com/news/2026-nfl-mock-draft-cowboys-trade-up-for-david-bailey-chiefs-nab-avieon-terrell",
+      "archetype": "elite_slide_CB"
     },
     {
       "pick": 31,
@@ -649,9 +698,10 @@
       "times_mocked": 1,
       "tier1_credible": false,
       "empirical_rate": 0.03,
-      "trade_reason": "SEA up 1 for RB (contrary to Schneider-trade-down base rate)",
+      "trade_reason": "SEA up 1 for RB (contrary to Schneider-trade-down base rate) (parallel: 2023 DET\u2192CLE #12 for Jahmyr Gibbs (RB1) \u2014 Holmes leapt to beat rivals at the position)",
       "notes": "Iyer SN; lower probability because fights SEA's trade-back tendency.",
-      "source": "analyst_consensus_2026.json"
+      "source": "analyst_consensus_2026.json",
+      "archetype": "RB_elite_jump"
     },
     {
       "pick": 6,
@@ -662,9 +712,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "Bengals 'leap into top 5' per NFL.com — Burrow publicly frustrated with defense",
+      "trade_reason": "Bengals 'leap into top 5' per NFL.com \u2014 Burrow publicly frustrated with defense (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 pounce on slid elite defensive prospect)",
       "notes": "NFL.com 'six trades'. In-state Ohio State prospects add appeal.",
-      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1"
+      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 8,
@@ -674,10 +725,11 @@
       "target_position": "any",
       "times_mocked": 2,
       "tier1_credible": true,
-      "empirical_rate": 0.10,
-      "trade_reason": "Barnwell + multiple analysts flag NO as ideal trade-down — 28th in DVOA, multiple holes",
+      "empirical_rate": 0.1,
+      "trade_reason": "Barnwell + multiple analysts flag NO as ideal trade-down \u2014 28th in DVOA, multiple holes",
       "notes": "Loomis historically doesn't trade down but Kellen Moore publicly said team has 'flexibility'; QB already resolved with Shough.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/; https://www.foxsports.com/articles/nfl/saints-coach-kellen-moore-says-his-club-has-flexibility-in-his-second-nfl-draft-with-new-orleans"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/; https://www.foxsports.com/articles/nfl/saints-coach-kellen-moore-says-his-club-has-flexibility-in-his-second-nfl-draft-with-new-orleans",
+      "archetype": "generic"
     },
     {
       "pick": 4,
@@ -688,9 +740,10 @@
       "times_mocked": 2,
       "tier1_credible": true,
       "empirical_rate": 0.09,
-      "trade_reason": "Barnwell: 'rebuilding Titans team doesn't have much to show for years of neglect' — ideal trade-down partner",
+      "trade_reason": "Barnwell: 'rebuilding Titans team doesn't have much to show for years of neglect' \u2014 ideal trade-down partner",
       "notes": "Meta-scenario: TEN trades down several spots for additional 2nd. Trade partner likely DAL (for Styles) or CIN.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "generic"
     },
     {
       "pick": 11,
@@ -703,7 +756,8 @@
       "empirical_rate": 0.05,
       "trade_reason": "Barnwell suggests new MIA regime defer capital to 2027 when their evaluation is established + 2027 QB class",
       "notes": "Would be rare for current-Rd1 to become future picks but strategically endorsed.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "generic"
     },
     {
       "pick": 25,
@@ -714,9 +768,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.04,
-      "trade_reason": "CHI package #25 + #60 to jump to #16 for EDGE ahead of divisional rival per Barnwell",
+      "trade_reason": "CHI package #25 + #60 to jump to #16 for EDGE ahead of divisional rival per Barnwell (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 pounce on slid elite defensive prospect)",
       "notes": "Barnwell trade-up rec #4.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 23,
@@ -727,9 +782,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.03,
-      "trade_reason": "LV buys Mendoza's Indiana teammate for chemistry — picks-for-veteran with Nolan Smith Jr. going back",
-      "notes": "NFL.com 'six trades' — technically edges into Rd2 at #36 but starts at PHI #23.",
-      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1"
+      "trade_reason": "LV buys Mendoza's Indiana teammate for chemistry \u2014 picks-for-veteran with Nolan Smith Jr. going back (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 pounce on slid elite defensive prospect)",
+      "notes": "NFL.com 'six trades' \u2014 technically edges into Rd2 at #36 but starts at PHI #23.",
+      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1",
+      "archetype": "elite_slide_DE"
     },
     {
       "pick": 29,
@@ -741,8 +797,9 @@
       "tier1_credible": false,
       "empirical_rate": 0.05,
       "trade_reason": "KC GM pattern: Veach moves around the board frequently; if a QB team jumps back in for Simpson, KC is natural partner at #29",
-      "notes": "GM historical pattern — Veach trades in Rd1 in roughly half his drafts.",
-      "source": "GM historical pattern"
+      "notes": "GM historical pattern \u2014 Veach trades in Rd1 in roughly half his drafts.",
+      "source": "GM historical pattern",
+      "archetype": "generic"
     },
     {
       "pick": 17,
@@ -753,9 +810,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.06,
-      "trade_reason": "Barnwell: DET cap pressure from Gibbs/LaPorta/Campbell extensions — moving back a few spots for 3rd-round capital",
+      "trade_reason": "Barnwell: DET cap pressure from Gibbs/LaPorta/Campbell extensions \u2014 moving back a few spots for 3rd-round capital",
       "notes": "Supplements the DET-trade-UP Fano narrative (only one can be true).",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "generic"
     },
     {
       "pick": 20,
@@ -766,9 +824,10 @@
       "times_mocked": 1,
       "tier1_credible": true,
       "empirical_rate": 0.06,
-      "trade_reason": "Barnwell: DAL limited draft capital through 2027, Prescott/Lamb contracts demand cheaper rookies — trade down from #20",
+      "trade_reason": "Barnwell: DAL limited draft capital through 2027, Prescott/Lamb contracts demand cheaper rookies \u2014 trade down from #20",
       "notes": "Runs opposite to the dominant DAL-trades-UP-to-6 narrative; only one applies.",
-      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/"
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48470863/",
+      "archetype": "generic"
     }
   ]
 }
