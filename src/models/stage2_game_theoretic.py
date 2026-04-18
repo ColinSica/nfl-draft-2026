@@ -1350,6 +1350,37 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
     is_top1_at_position = prospects.index.isin(top1_idx.values)
     non_premium_top1 = is_top1_at_position & raw_pos.isin(NON_PREMIUM_RAW)
     pv_mult = pv_mult.where(~non_premium_top1, 0.95)
+
+    # RB bimodal pattern (2021-2025 data): R1 RBs are either elite top-10
+    # picks or don't go R1 at all. The flat 0.90 multiplier under-captured
+    # this. Apply RB: 1.15 when cons_rank<=10, 0.55 otherwise. The middle-
+    # tier RB (cons 20-60) gets heavily discounted, matching historical
+    # behavior where RB1 went pick 8-24 or waited to R2.
+    rb_mask = raw_pos.isin({"RB", "HB", "FB"})
+    elite_rb = rb_mask & (cons <= 10)
+    mid_rb = rb_mask & (cons > 10)
+    pv_mult = pv_mult.where(~elite_rb, 1.15)
+    pv_mult = pv_mult.where(~mid_rb, 0.55)
+
+    # Off-ball LB floor (2021-2025): R1 LBs land pick 17-32 in 4 of 5 years
+    # (excluding EDGE hybrids). Apply a heavy discount to pure LB at picks
+    # 1-16 to prevent model from reaching on them early.
+    lb_mask = raw_pos == "LB"
+    early_lb = lb_mask & (pick_num <= 16)
+    pv_mult = pv_mult.where(~early_lb, pv_mult * 0.60)
+
+    # Safety slide (2021-2025): 4 of 5 years the top-ranked S landed R2+
+    # despite being R1-mocked. Apply a -0.15 multiplier to the top S if
+    # they're being considered early (before their typical landing zone).
+    s_mask = raw_pos == "S"
+    if s_mask.any():
+        top_s_cons = prospects[s_mask]["rank"].min()
+        is_top_s = s_mask & (prospects["rank"] == top_s_cons)
+        # Only penalize if the current pick is earlier than the typical
+        # top-S landing slot (pick 20 historical median).
+        if pick_num < 20:
+            pv_mult = pv_mult.where(~is_top_s, pv_mult * 0.82)
+
     score = score * pv_mult
 
     # Proximity constraint (general)

@@ -20,7 +20,7 @@ services:
     plan: free
     envVars:
       - key: DRAFT_MAX_SIMS
-        value: "200"         # cap per-run sim count; free tier is slow & memory-tight
+        value: "1000"        # cap per-run sim count; 1000 sims takes ~25-35 min on free tier
       - key: PYTHONUNBUFFERED
         value: "1"
     healthCheckPath: /api/meta

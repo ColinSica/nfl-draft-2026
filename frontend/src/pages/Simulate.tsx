@@ -199,15 +199,15 @@ function PickCard({
             {top?.consensus_rank != null && (
               <>
                 <span className="text-text-subtle">·</span>
-                <span title="Consensus analyst rank">
-                  Cons <span className="font-mono text-text">#{top.consensus_rank}</span>
+                <span title="ADP — Average Draft Position across 20+ analyst mocks">
+                  ADP <span className="font-mono text-text">#{top.consensus_rank}</span>
                 </span>
               </>
             )}
             {top?.player && modelRankMap?.get(top.player) != null && (
               <>
                 <span className="text-text-subtle">·</span>
-                <span title="Model rank (stage-1 score)">
+                <span title="Model rank — projected slot from stage-1 ML + reasoning features">
                   Model <span className="font-mono text-text">#{modelRankMap.get(top.player)}</span>
                 </span>
               </>
@@ -283,7 +283,7 @@ function PickCard({
                           <div className="font-medium text-text">{c.player}</div>
                           <div className="text-xs text-text-subtle">
                             {c.college}
-                            {c.consensus_rank != null && ` · Cons #${c.consensus_rank}`}
+                            {c.consensus_rank != null && ` · ADP #${c.consensus_rank}`}
                             {modelRankMap?.get(c.player) != null && ` · Model #${modelRankMap.get(c.player)}`}
                           </div>
                         </td>
@@ -1056,7 +1056,7 @@ export function Simulate() {
                 title={`Estimated time: ${formatDuration(estimateSeconds(n))} · Range 1-${appMeta?.share_mode?.max_sims ?? 5000}`}
               />
               <div className="flex gap-1 text-[10px] text-text-subtle">
-                {[1, 10, 50, 100, 200].map((preset) => (
+                {[10, 50, 100, 200, 500, 1000].map((preset) => (
                   <button
                     key={preset}
                     type="button"
@@ -1505,7 +1505,7 @@ function TeamPickDetail({ pick, team }: { pick: PickRow; team: any }) {
             <th className="text-left font-medium py-2 pr-2 w-8">#</th>
             <th className="text-left font-medium py-2 pr-2">Player</th>
             <th className="text-left font-medium py-2 pr-2 hidden sm:table-cell">College</th>
-            <th className="text-right font-medium py-2 w-16 sm:w-20" title="Consensus analyst rank">Cons rank</th>
+            <th className="text-right font-medium py-2 w-14 sm:w-16" title="Average Draft Position — consensus rank across 20+ analyst mocks">ADP</th>
             <th className="text-right font-medium py-2 pl-2 w-28 sm:w-40">Probability</th>
           </tr>
         </thead>

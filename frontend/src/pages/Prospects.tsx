@@ -140,11 +140,11 @@ export function Prospects() {
           <thead>
             <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border bg-bg-raised/60">
               <SortHeader
-                label="Cons rank"
-                title="Consensus analyst rank (blended across 20+ mock drafts) — click to sort best-first"
+                label="ADP"
+                title="Average Draft Position — consensus across 20+ analyst mock drafts. Click to sort best-first."
                 active={sortKey === 'rank'}
                 onClick={() => setSortKey('rank')}
-                className="text-left pl-4 pr-2 w-20"
+                className="text-left pl-4 pr-2 w-16"
               />
               <SortHeader
                 label="Model rank"
