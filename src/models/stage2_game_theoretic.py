@@ -252,6 +252,95 @@ RNG_SEED = 42
 NOISE_STD_FINAL_SCORE = 15.0          # picks 1-16
 NOISE_STD_LATE_PICKS = 25.0           # picks 17-32 — bump variance (BUG 2)
 
+# ---------------------------------------------------------------------------
+# Dynamic trade generator — model-derived trade scenarios based on current
+# board state (not hardcoded analyst consensus). Triggers:
+#
+#   1. QB cascade: count available-QBs vs QB-needy teams in next N picks.
+#      If supply < demand, the earliest QB-needy team has elevated trade-up
+#      probability for that slot.
+#   2. Tier exhaustion: for premium positions (EDGE, OT, CB, WR), define
+#      "elite tier" size. When last of tier is at risk and multiple teams
+#      downstream need that position, trade-up probability rises.
+#   3. Leapfrog: current pick holder sees a team right behind with same
+#      positional need → the TRAILING team has elevated trade-up prob
+#      (jump the team in front).
+# ---------------------------------------------------------------------------
+QB_CASCADE_WINDOW = 5   # look at next 5 picks for QB-needy teams
+TIER_SIZES = {"EDGE": 5, "OT": 5, "CB": 5, "WR": 6, "QB": 2, "IDL": 4}
+LEAPFROG_WINDOW = 2     # immediate next 2 picks define "leapfrog" range
+
+def compute_dynamic_trade_boost(
+    current_pick: dict,
+    remaining_picks: list[dict],
+    history: dict,
+    taken_names: set,
+    pros: pd.DataFrame,
+    top3_needs: dict,
+) -> float:
+    """Return a multiplicative boost on the current pick's trade-down
+    probability based on board state. >1.0 means the current pick is more
+    likely to be traded than baseline. Returns 1.0 when no driver fires."""
+    boost = 1.0
+
+    # Driver 1: QB cascade. If QB-needy teams pick in the next N slots
+    # AND there are fewer quality QBs than demand, current pick (if owned
+    # by a non-QB-needy team) becomes a trade-down target for a QB-needy
+    # team leapfrogging up.
+    current_team = current_pick.get("team")
+    current_needs = top3_needs.get(current_team, [])
+    if "QB" not in current_needs:
+        # Count QB-needy teams in next QB_CASCADE_WINDOW picks
+        qb_needy_count = sum(
+            1 for p in remaining_picks[:QB_CASCADE_WINDOW]
+            if "QB" in top3_needs.get(p.get("team", ""), [])
+        )
+        if qb_needy_count >= 1:
+            # Count available QBs with reasonable consensus rank
+            avail_qbs = int(((pros["position"] == "QB") & (pros["rank"] <= 50)
+                             & (~pros["player"].isin(taken_names))).sum())
+            if qb_needy_count > avail_qbs:
+                # Supply < demand → strong trade-up pressure on downstream QB teams
+                boost *= 1.8
+
+    # Driver 2: tier exhaustion at premium positions. If the "last of a
+    # tier" is still on board, and multiple downstream teams need that
+    # position, current pick becomes valuable trade-back real estate.
+    for pos, tier_n in TIER_SIZES.items():
+        # How many at this position have been taken so far?
+        taken_at_pos = sum(
+            1 for name in taken_names
+            if (pros.loc[pros["player"] == name, "position"].iloc[0]
+                if not pros[pros["player"] == name].empty else "") == pos
+        )
+        if taken_at_pos >= tier_n - 1:
+            # Tier nearly exhausted. Count downstream need.
+            pos_needy_behind = sum(
+                1 for p in remaining_picks[:LEAPFROG_WINDOW + 2]
+                if pos in top3_needs.get(p.get("team", ""), [])
+            )
+            if pos_needy_behind >= 2 and pos not in current_needs:
+                boost *= 1.35
+                break   # one tier-boost at a time
+
+    # Driver 3: leapfrog. If current team's top-available position matches
+    # the VERY NEXT pick holder's need, there's pressure (for a different
+    # partner further downstream) to leapfrog. This elevates the overall
+    # trade-rate at the current slot.
+    if remaining_picks:
+        next_pick = remaining_picks[0]
+        next_needs = top3_needs.get(next_pick.get("team", ""), [])
+        # Pick what the CURRENT team would take — use their top unfilled need
+        for need_pos in current_needs:
+            if need_pos in next_needs:
+                # Both teams want same position → incentive for team further
+                # down to jump BOTH. Mild boost.
+                boost *= 1.15
+                break
+
+    return boost
+
+
 # Phase 1 (#3): per-team multiplicative noise on scoring, driven by the PDF's
 # predictability tier. LOW-predictability teams (regime-change, trade-heavy)
 # have wider output distributions. HIGH-predictability (LV Mendoza lock, TB
@@ -1525,12 +1614,30 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
             tier_rate = TRADE_TIER_RATE.get(
                 pdf_trade_tier.get("trade_down_tier", ""), 0.0)
             effective_trade_rate = max(blended, tier_rate)
+
+            # DYNAMIC TRADE BOOST — QB cascade, tier exhaustion, leapfrog.
+            # Model reasons about the current board state to decide whether
+            # this pick is a juicy trade-down target. Multiplier applied
+            # BEFORE hard-constraint caps.
+            remaining = picks[i + 1:]
+            dynamic_boost = compute_dynamic_trade_boost(
+                current_pick=pick,
+                remaining_picks=remaining,
+                history=history,
+                taken_names=taken_names,
+                pros=local,
+                top3_needs=top3_needs,
+            )
+            effective_trade_rate *= dynamic_boost
+
             if "no_trade_down" in constraints:
                 effective_trade_rate = 0.0
             elif "rarely_trades" in constraints or "no_r1_movement_streak" in constraints:
                 effective_trade_rate = min(effective_trade_rate, 0.05)
             elif "stay_put_stated" in constraints:
                 effective_trade_rate = min(effective_trade_rate, 0.10)
+            # Cap at 0.95 so no pick is a 100% trade-certainty
+            effective_trade_rate = min(effective_trade_rate, 0.95)
 
         if effective_trade_rate > 0 and rng.random() < effective_trade_rate:
             # Trade dice rolled — now we need scores for partner selection.

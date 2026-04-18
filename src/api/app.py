@@ -206,6 +206,35 @@ def prospects_summary(limit: int = 64) -> dict:
     }
 
 
+@app.get("/api/settings/defaults")
+def settings_defaults() -> dict:
+    """Return the model's default tunable parameters. Single source of
+    truth: pulled directly from stage2 module constants, so whenever the
+    code changes these, the 'Reset to defaults' button in the UI picks up
+    the new values.
+
+    Only exposes knobs safe for non-expert users to tweak without blowing
+    up the model. Trade and scoring internals remain code-configured."""
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).resolve().parents[2]))
+    from src.models import stage2_game_theoretic as s
+    return {
+        "reach_gap_threshold":          s.REACH_GAP_THRESHOLD,
+        "late_pick_reach_threshold":    s.LATE_PICK_REACH_THRESHOLD,
+        "elite_cons_rank_threshold":    s.ELITE_CONS_RANK_THRESHOLD,
+        "slider_boost_threshold":       s.SLIDER_BOOST_THRESHOLD,
+        "position_scarcity_gap":        s.POSITION_SCARCITY_GAP_THRESHOLD,
+        "position_scarcity_boost":      s.POSITION_SCARCITY_BOOST,
+        "predictability_score_sigma":   s.PREDICTABILITY_SCORE_SIGMA,
+        "post_combine_boosts":          dict(s.POST_COMBINE_BOOSTS),
+        "qb_cascade_window":            s.QB_CASCADE_WINDOW,
+        "tier_sizes":                   dict(s.TIER_SIZES),
+        # Position-value multipliers — the spine of positional scarcity
+        "pos_value_mult":               dict(s.POS_VALUE_MULT),
+    }
+
+
 @app.get("/api/analyst-consensus")
 def analyst_consensus() -> dict:
     """Return the full analyst consensus dataset (20 mocks + trades + per-pick

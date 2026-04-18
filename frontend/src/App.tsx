@@ -2,7 +2,7 @@ import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import {
   Activity, LayoutDashboard, PlayCircle, RefreshCw, Info,
-  UserCircle, ArrowRightLeft, Globe, ClipboardList,
+  UserCircle, ArrowRightLeft, Globe, ClipboardList, Sliders,
 } from 'lucide-react';
 import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
@@ -11,6 +11,7 @@ import { Prospects } from './pages/Prospects';
 import { Trades } from './pages/Trades';
 import { League } from './pages/League';
 import { BuildMock } from './pages/BuildMock';
+import { Settings } from './pages/Settings';
 import { AboutModal } from './components/AboutModal';
 import { api, type MetaInfo } from './lib/api';
 import { cn, fmtDate } from './lib/format';
@@ -23,6 +24,7 @@ function Nav() {
     { to: '/prospects', label: 'Prospects',  Icon: UserCircle,      end: true },
     { to: '/trades',    label: 'Trades',     Icon: ArrowRightLeft,  end: true },
     { to: '/league',    label: 'League',     Icon: Globe,           end: true },
+    { to: '/settings',  label: 'Settings',   Icon: Sliders,         end: true },
   ];
   return (
     <nav className="flex items-center gap-1">
@@ -114,6 +116,7 @@ function Header({ meta, onAbout }: {
            : location.pathname === '/trades'      ? 'Analyst-mocked trade scenarios · tier-1 credibility'
            : location.pathname === '/league'      ? 'League-wide patterns · cascades · known unknowns'
            : location.pathname === '/build'       ? 'Build your own mock · re-cascade model after each pick'
+           : location.pathname === '/settings'    ? 'Model configuration · tunable weights'
            : location.pathname.startsWith('/team/') ? 'Team profile'
            : ''}
         </span>
@@ -145,6 +148,7 @@ export default function App() {
           <Route path="/trades" element={<Trades />} />
           <Route path="/league" element={<League />} />
           <Route path="/build" element={<BuildMock />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </main>
       <footer className="max-w-[1400px] w-full mx-auto px-6 py-6 text-xs text-text-subtle border-t border-border flex flex-wrap items-center justify-between gap-3">
