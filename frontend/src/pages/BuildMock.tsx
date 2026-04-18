@@ -324,6 +324,33 @@ export function BuildMock() {
   const [tradeOpen, setTradeOpen] = useState(false);
   const [replaying, setReplaying] = useState(false);
   const [replayError, setReplayError] = useState<string | null>(null);
+  const [mobilePickerOpen, setMobilePickerOpen] = useState(false);
+
+  // Cache per-team roster needs so we can display "what this team needs"
+  // when they're on the clock. Fetched on demand for each team touched.
+  type TeamNeeds = {
+    top_needs: Array<{ pos: string; score: number; latent: boolean }>;
+    gm: string | null;
+    predictability: string | null;
+  };
+  const [teamNeedsCache, setTeamNeedsCache] = useState<Record<string, TeamNeeds>>({});
+
+  useEffect(() => {
+    const abbr = state.picks.find((p) => p.pick_number === state.currentPick)?.team;
+    if (!abbr || abbr === 'TBD' || teamNeedsCache[abbr]) return;
+    api.team(abbr).then((d: any) => {
+      const rn: Record<string, number> = d?.roster_needs ?? {};
+      const ln: Record<string, number> = d?.latent_needs ?? {};
+      const merged: Array<{ pos: string; score: number; latent: boolean }> = [
+        ...Object.entries(rn).map(([pos, score]) => ({ pos, score: Number(score), latent: false })),
+        ...Object.entries(ln).map(([pos, score]) => ({ pos, score: Number(score), latent: true })),
+      ].sort((a, b) => b.score - a.score).slice(0, 5);
+      setTeamNeedsCache((prev) => ({
+        ...prev,
+        [abbr]: { top_needs: merged, gm: d?.gm ?? null, predictability: d?.predictability ?? null },
+      }));
+    }).catch(() => { /* non-fatal */ });
+  }, [state.currentPick, state.picks, teamNeedsCache]);
 
   // Re-cascade: call /api/simulate/replay with all user-picked forced picks
   // and refresh the unfilled slots with new model predictions.
@@ -607,101 +634,113 @@ export function BuildMock() {
           ))}
         </div>
 
-        {/* AVAILABLE PLAYERS */}
-        <aside className="lg:col-span-2 space-y-3 lg:sticky lg:top-28 lg:self-start">
-          <div className="card p-4">
-            {/* Who's on the clock */}
-            <div className="flex items-center gap-2 mb-3">
-              <div
-                className="w-1 h-8 rounded-full flex-none"
-                style={{ backgroundColor: currentTeam?.primary ?? '#303648' }}
-              />
-              <div className="flex-1 min-w-0">
-                <div className="text-[10px] uppercase tracking-wider text-text-muted">
-                  {pickSelectableNow ? 'On the clock' : 'Model auto-picking'}
-                </div>
-                <div className="font-semibold text-sm truncate">
-                  Pick #{state.currentPick} · {currentTeam?.full ?? currentPickObj?.team}
-                </div>
-              </div>
-              {state.mode === 'team' && currentPickObj?.team === state.selectedTeam && (
-                <span className="badge border-accent/40 bg-accent/10 text-accent">
-                  <PencilLine size={10} /> your pick
-                </span>
-              )}
-            </div>
-
-            {pickSelectableNow ? (
-              <>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-bg-raised border border-border rounded-md mb-2">
-                  <Search size={13} className="text-text-subtle" />
-                  <input
-                    placeholder="Search player / college"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="bg-transparent outline-none flex-1 text-sm"
-                  />
-                </div>
-                <select
-                  value={posFilter}
-                  onChange={(e) => setPosFilter(e.target.value)}
-                  className="w-full bg-bg-raised border border-border rounded-md px-3 py-1.5 text-sm outline-none focus:border-accent mb-2"
-                >
-                  <option value="ALL">All positions</option>
-                  {positions.map((p) => <option key={p} value={p}>{p}</option>)}
-                </select>
-
-                <div className="max-h-[520px] overflow-y-auto space-y-1 pr-1">
-                  {available.length === 0 ? (
-                    <div className="text-xs text-text-subtle p-3">No matches.</div>
-                  ) : (
-                    available.map((p) => (
-                      <button
-                        key={p.player}
-                        onClick={() => dispatch({
-                          type: 'draft',
-                          pick_number: state.currentPick,
-                          prospect: p,
-                          source: 'user',
-                        })}
-                        className="w-full text-left px-3 py-2 rounded-md border border-border hover:border-accent/60 hover:bg-bg-hover/60 transition"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span className="font-mono text-xs text-text-subtle w-8 text-right tabular-nums">
-                            {p.rank != null ? `#${p.rank}` : '—'}
-                          </span>
-                          {p.position && (
-                            <span
-                              className="badge flex-none"
-                              style={{
-                                color: positionColor(p.position),
-                                borderColor: `${positionColor(p.position)}4D`,
-                                backgroundColor: `${positionColor(p.position)}1A`,
-                              }}
-                            >
-                              {p.position}
-                            </span>
-                          )}
-                          <span className="flex-1 text-sm text-text font-medium truncate">
-                            {p.player}
-                          </span>
-                          <span className="text-[11px] text-text-muted truncate max-w-[90px]">
-                            {p.college ?? ''}
-                          </span>
-                        </div>
-                      </button>
-                    ))
-                  )}
-                </div>
-              </>
-            ) : (
-              <div className="text-xs text-text-muted italic py-4 text-center">
-                Waiting for non-user teams to pick (using model predictions)…
-              </div>
-            )}
-          </div>
+        {/* AVAILABLE PLAYERS — desktop side panel */}
+        <aside className="hidden lg:block lg:col-span-2 space-y-3 lg:sticky lg:top-28 lg:self-start">
+          <PickerPanel
+            pickSelectableNow={pickSelectableNow}
+            currentTeam={currentTeam}
+            currentPickObj={currentPickObj}
+            currentPickNumber={state.currentPick}
+            mode={state.mode}
+            selectedTeam={state.selectedTeam}
+            teamNeeds={currentPickObj?.team ? teamNeedsCache[currentPickObj.team] : undefined}
+            search={search}
+            onSearch={setSearch}
+            posFilter={posFilter}
+            onPosFilter={setPosFilter}
+            positions={positions}
+            available={available}
+            onPick={(p) => dispatch({
+              type: 'draft',
+              pick_number: state.currentPick,
+              prospect: p,
+              source: 'user',
+            })}
+          />
         </aside>
       </div>
+
+      {/* Mobile sticky "Pick now" bar — always visible so user can open the
+          picker without scrolling to the bottom of the board. */}
+      {!isDone && (
+        <div className="lg:hidden sticky bottom-0 -mx-3 sm:-mx-6 px-3 sm:px-6 py-3 bg-bg/95 backdrop-blur border-t border-border z-20">
+          <button
+            onClick={() => setMobilePickerOpen(true)}
+            disabled={!pickSelectableNow}
+            className={cn(
+              'w-full py-3 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 transition',
+              pickSelectableNow
+                ? 'bg-accent text-white hover:bg-accent-hover'
+                : 'bg-bg-raised text-text-muted',
+            )}
+          >
+            {pickSelectableNow ? (
+              <>
+                <PencilLine size={15} />
+                Pick for {currentTeam?.abbr ?? currentPickObj?.team} (#{state.currentPick})
+              </>
+            ) : (
+              <>
+                <Loader2 size={14} className="animate-spin" />
+                Model picking for {currentTeam?.abbr ?? currentPickObj?.team}…
+              </>
+            )}
+          </button>
+        </div>
+      )}
+
+      {/* Mobile picker modal */}
+      {mobilePickerOpen && (
+        <div
+          className="lg:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center"
+          onClick={() => setMobilePickerOpen(false)}
+        >
+          <div
+            className="bg-bg-card border-t sm:border border-border-strong w-full sm:max-w-lg sm:rounded-xl max-h-[90vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between p-3 border-b border-border">
+              <div className="font-semibold text-sm">
+                Pick #{state.currentPick} · {currentTeam?.full ?? currentPickObj?.team}
+              </div>
+              <button
+                onClick={() => setMobilePickerOpen(false)}
+                className="p-1 text-text-muted hover:text-text"
+                aria-label="Close"
+              >
+                <X size={18} />
+              </button>
+            </div>
+            <div className="p-3 overflow-y-auto">
+              <PickerPanel
+                pickSelectableNow={pickSelectableNow}
+                currentTeam={currentTeam}
+                currentPickObj={currentPickObj}
+                currentPickNumber={state.currentPick}
+                mode={state.mode}
+                selectedTeam={state.selectedTeam}
+                teamNeeds={currentPickObj?.team ? teamNeedsCache[currentPickObj.team] : undefined}
+                search={search}
+                onSearch={setSearch}
+                posFilter={posFilter}
+                onPosFilter={setPosFilter}
+                positions={positions}
+                available={available}
+                onPick={(p) => {
+                  dispatch({
+                    type: 'draft',
+                    pick_number: state.currentPick,
+                    prospect: p,
+                    source: 'user',
+                  });
+                  setMobilePickerOpen(false);
+                }}
+                bare
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {tradeOpen && (
         <TradeModal
@@ -714,6 +753,166 @@ export function BuildMock() {
         />
       )}
     </div>
+  );
+}
+
+// -----------------------------------------------------------------------------
+// Picker panel — shared by desktop sidebar + mobile modal
+// -----------------------------------------------------------------------------
+function PickerPanel({
+  pickSelectableNow, currentTeam, currentPickObj, currentPickNumber,
+  mode, selectedTeam, teamNeeds,
+  search, onSearch, posFilter, onPosFilter, positions, available,
+  onPick, bare,
+}: {
+  pickSelectableNow: boolean;
+  currentTeam: ReturnType<typeof teamMeta>;
+  currentPickObj: DraftPick | undefined;
+  currentPickNumber: number;
+  mode: 'full' | 'team';
+  selectedTeam: string | null;
+  teamNeeds?: { top_needs: Array<{ pos: string; score: number; latent: boolean }>;
+                gm: string | null; predictability: string | null };
+  search: string;
+  onSearch: (v: string) => void;
+  posFilter: string;
+  onPosFilter: (v: string) => void;
+  positions: string[];
+  available: Prospect[];
+  onPick: (p: Prospect) => void;
+  bare?: boolean;
+}) {
+  const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) =>
+    bare ? <>{children}</> : <div className="card p-4">{children}</div>;
+
+  return (
+    <Wrapper>
+      {/* Who's on the clock */}
+      {!bare && (
+        <div className="flex items-center gap-2 mb-3">
+          <div
+            className="w-1 h-8 rounded-full flex-none"
+            style={{ backgroundColor: currentTeam?.primary ?? '#303648' }}
+          />
+          <div className="flex-1 min-w-0">
+            <div className="text-[10px] uppercase tracking-wider text-text-muted">
+              {pickSelectableNow ? 'On the clock' : 'Model auto-picking'}
+            </div>
+            <div className="font-semibold text-sm truncate">
+              Pick #{currentPickNumber} · {currentTeam?.full ?? currentPickObj?.team}
+            </div>
+          </div>
+          {mode === 'team' && currentPickObj?.team === selectedTeam && (
+            <span className="badge border-accent/40 bg-accent/10 text-accent">
+              <PencilLine size={10} /> your pick
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* Team needs */}
+      {teamNeeds && teamNeeds.top_needs.length > 0 && (
+        <div className="mb-3 p-2.5 rounded-md bg-bg-raised/60 border border-border">
+          <div className="text-[10px] uppercase tracking-wider text-text-muted mb-1.5 flex items-center gap-1.5">
+            Team needs
+            {teamNeeds.gm && (
+              <span className="text-text-subtle normal-case ml-auto font-normal">
+                GM {teamNeeds.gm}
+                {teamNeeds.predictability && ` · ${teamNeeds.predictability} pred.`}
+              </span>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {teamNeeds.top_needs.map((n) => (
+              <span
+                key={`${n.pos}-${n.latent ? 'l' : 'r'}`}
+                className="badge"
+                style={{
+                  color: positionColor(n.pos),
+                  borderColor: `${positionColor(n.pos)}4D`,
+                  backgroundColor: `${positionColor(n.pos)}1A`,
+                }}
+                title={n.latent
+                  ? `Latent need (${n.score.toFixed(1)}) — emerging/secondary`
+                  : `Roster need score ${n.score.toFixed(1)}`}
+              >
+                {n.pos}
+                <span className="text-[9px] font-mono opacity-70 ml-1">
+                  {n.latent ? `~${n.score.toFixed(1)}` : n.score.toFixed(1)}
+                </span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {pickSelectableNow ? (
+        <>
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-bg-raised border border-border rounded-md mb-2">
+            <Search size={13} className="text-text-subtle" />
+            <input
+              placeholder="Search player / college"
+              value={search}
+              onChange={(e) => onSearch(e.target.value)}
+              className="bg-transparent outline-none flex-1 text-sm min-w-0"
+            />
+          </div>
+          <select
+            value={posFilter}
+            onChange={(e) => onPosFilter(e.target.value)}
+            className="w-full bg-bg-raised border border-border rounded-md px-3 py-1.5 text-sm outline-none focus:border-accent mb-2"
+          >
+            <option value="ALL">All positions</option>
+            {positions.map((p) => <option key={p} value={p}>{p}</option>)}
+          </select>
+
+          <div className={cn(
+            'overflow-y-auto space-y-1 pr-1',
+            bare ? 'max-h-[55vh]' : 'max-h-[520px]',
+          )}>
+            {available.length === 0 ? (
+              <div className="text-xs text-text-subtle p-3">No matches.</div>
+            ) : (
+              available.map((p) => (
+                <button
+                  key={p.player}
+                  onClick={() => onPick(p)}
+                  className="w-full text-left px-3 py-2 rounded-md border border-border hover:border-accent/60 hover:bg-bg-hover/60 transition"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-xs text-text-subtle w-9 text-right tabular-nums flex-none">
+                      {p.rank != null ? `#${p.rank}` : '—'}
+                    </span>
+                    {p.position && (
+                      <span
+                        className="badge flex-none"
+                        style={{
+                          color: positionColor(p.position),
+                          borderColor: `${positionColor(p.position)}4D`,
+                          backgroundColor: `${positionColor(p.position)}1A`,
+                        }}
+                      >
+                        {p.position}
+                      </span>
+                    )}
+                    <span className="flex-1 text-sm text-text font-medium truncate min-w-0">
+                      {p.player}
+                    </span>
+                    <span className="text-[11px] text-text-muted truncate max-w-[80px] hidden sm:inline">
+                      {p.college ?? ''}
+                    </span>
+                  </div>
+                </button>
+              ))
+            )}
+          </div>
+        </>
+      ) : (
+        <div className="text-xs text-text-muted italic py-4 text-center">
+          Waiting for non-user teams to pick (using model predictions)…
+        </div>
+      )}
+    </Wrapper>
   );
 }
 
