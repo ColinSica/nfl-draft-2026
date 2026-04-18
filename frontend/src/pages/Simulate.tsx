@@ -94,30 +94,30 @@ function PickCard({
       {/* Clickable header */}
       <button
         onClick={onToggle}
-        className="w-full px-4 py-3.5 flex items-center gap-3 md:gap-4 text-left hover:bg-bg-hover/60 focus:bg-bg-hover/60 focus:outline-none transition-colors"
+        className="w-full px-3 sm:px-4 py-3 sm:py-3.5 flex items-center gap-2 sm:gap-3 md:gap-4 text-left hover:bg-bg-hover/60 focus:bg-bg-hover/60 focus:outline-none transition-colors"
         aria-expanded={expanded}
       >
         {/* Pick number */}
-        <div className="flex-none w-12 md:w-14 text-center">
-          <div className="font-mono text-2xl md:text-3xl font-semibold leading-none tabular-nums">
+        <div className="flex-none w-9 sm:w-12 md:w-14 text-center">
+          <div className="font-mono text-xl sm:text-2xl md:text-3xl font-semibold leading-none tabular-nums">
             {row.pick_number}
           </div>
-          <div className="text-[10px] text-text-subtle uppercase tracking-wider mt-1">
+          <div className="hidden sm:block text-[10px] text-text-subtle uppercase tracking-wider mt-1">
             pick
           </div>
         </div>
 
         {/* Team identity */}
-        <div className="flex-none flex items-center gap-2.5 w-36 md:w-40">
+        <div className="flex-none flex items-center gap-2 sm:gap-2.5 w-16 sm:w-36 md:w-40">
           {team && (
             <img
               src={team.logo}
               alt=""
-              className="w-9 h-9 object-contain flex-none"
+              className="w-7 h-7 sm:w-9 sm:h-9 object-contain flex-none"
               onError={(e) => ((e.target as HTMLImageElement).style.display = 'none')}
             />
           )}
-          <div className="min-w-0">
+          <div className="min-w-0 hidden sm:block">
             <div className="font-semibold text-sm truncate">
               {team?.city ?? row.team ?? '—'}
             </div>
@@ -184,17 +184,17 @@ function PickCard({
         </div>
 
         {/* Probability */}
-        <div className="flex-none w-36 md:w-44">
-          <div className="flex items-center justify-between mb-1.5">
-            <span className={cn('text-xs font-medium flex items-center gap-1.5', tier.color)}>
+        <div className="flex-none w-20 sm:w-36 md:w-44">
+          <div className="flex items-center justify-between mb-1 sm:mb-1.5">
+            <span className={cn('hidden sm:inline text-xs font-medium flex items-center gap-1.5', tier.color)}>
               <span className={cn('w-1.5 h-1.5 rounded-full', tier.dot)} />
               {tier.label}
             </span>
-            <span className="font-mono text-base font-semibold tabular-nums">
+            <span className="font-mono text-sm sm:text-base font-semibold tabular-nums ml-auto">
               {((top?.probability ?? 0) * 100).toFixed(0)}%
             </span>
           </div>
-          <div className="h-2 bg-bg-raised rounded-full overflow-hidden">
+          <div className="h-1.5 sm:h-2 bg-bg-raised rounded-full overflow-hidden">
             <div
               className="h-full transition-all"
               style={{
@@ -222,7 +222,7 @@ function PickCard({
 
       {/* Expanded: runner-ups + analyst consensus + reasoning */}
       {expanded && (
-        <div className="px-4 pb-4 pt-3 border-t border-border bg-bg-raised/30 space-y-4">
+        <div className="px-3 sm:px-4 pb-3 sm:pb-4 pt-3 border-t border-border bg-bg-raised/30 space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Runner-ups (model) */}
             <div>
@@ -683,7 +683,10 @@ function AgreementChart({
       <div className="text-xs text-text-muted mb-3">
         Green = model picks the same player as the tier-1 analyst plurality.
       </div>
-      <div className="grid grid-cols-16 gap-0.5" style={{gridTemplateColumns: 'repeat(16, 1fr)'}}>
+      <div
+        className="grid gap-0.5"
+        style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(28px, 1fr))' }}
+      >
         {data.slice(0, 32).map((d) => (
           <div
             key={d.pick}
@@ -1384,8 +1387,8 @@ function TeamPickDetail({ pick, team }: { pick: PickRow; team: any }) {
   const top = pick.candidates[0];
   const tier = confidenceTier(top?.probability ?? 0);
   return (
-    <div className="card p-5">
-      <div className="flex items-start justify-between gap-4 mb-4">
+    <div className="card p-3 sm:p-5">
+      <div className="flex items-start justify-between gap-3 sm:gap-4 mb-3 sm:mb-4 flex-wrap">
         <div>
           <div className="text-[11px] uppercase tracking-wider text-text-muted">
             Pick #{pick.pick_number}
@@ -1402,14 +1405,15 @@ function TeamPickDetail({ pick, team }: { pick: PickRow; team: any }) {
           Top: {((top?.probability ?? 0) * 100).toFixed(0)}% {tier.label}
         </span>
       </div>
-      <table className="w-full text-sm">
+      <div className="overflow-x-auto -mx-3 sm:mx-0">
+        <table className="w-full text-sm min-w-[420px]">
         <thead>
           <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border">
             <th className="text-left font-medium py-2 pr-2 w-8">#</th>
             <th className="text-left font-medium py-2 pr-2">Player</th>
-            <th className="text-left font-medium py-2 pr-2">College</th>
-            <th className="text-right font-medium py-2 w-20" title="Consensus analyst rank">Cons rank</th>
-            <th className="text-right font-medium py-2 pl-2 w-40">Probability</th>
+            <th className="text-left font-medium py-2 pr-2 hidden sm:table-cell">College</th>
+            <th className="text-right font-medium py-2 w-16 sm:w-20" title="Consensus analyst rank">Cons rank</th>
+            <th className="text-right font-medium py-2 pl-2 w-28 sm:w-40">Probability</th>
           </tr>
         </thead>
         <tbody>
@@ -1457,6 +1461,7 @@ function TeamPickDetail({ pick, team }: { pick: PickRow; team: any }) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

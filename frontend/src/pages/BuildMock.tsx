@@ -53,7 +53,7 @@ type Action =
   | { type: 'unpick'; pick_number: number; prev: DraftPick }
   | { type: 'undo' }
   | { type: 'reset'; next: State }
-  | { type: 'auto_fill'; modelPicks: ModelSimPick[] };
+  | { type: 'auto_fill'; modelPicks: ModelSimPick[]; prospects: Prospect[] };
 
 const STORAGE_KEY = 'draft_dash_custom_mock';
 
@@ -201,34 +201,48 @@ function reducer(state: State, action: Action): State {
     case 'reset':
       return action.next;
     case 'auto_fill': {
-      // Atomic: in team mode, fill every unfilled pick owned by a NON-user
-      // team with the model's predicted player. Stops at (and skips) the
-      // user's team picks so the user can choose those themselves.
+      // Sequentially fill picks in draft order starting from currentPick,
+      // stopping when we hit a user-team slot (so the user can pick there).
+      // After the user drafts, the next auto_fill dispatch continues from
+      // their advanced currentPick. Prefers model top-1 per slot; falls
+      // back to highest-ranked untaken prospect so a non-user slot never
+      // sits stuck empty.
       if (state.mode !== 'team' || !state.selectedTeam) return state;
+      const rankedProspects = [...action.prospects].sort(
+        (a, b) => (a.rank ?? 999) - (b.rank ?? 999)
+      );
       const picks = state.picks.map((p) => ({ ...p }));
       const taken = new Set(state.taken);
-      for (const slot of picks) {
-        if (slot.player) continue;                     // already picked
-        if (slot.team === state.selectedTeam) continue; // user's pick — skip
-        const mp = action.modelPicks.find((m) => m.pick_number === slot.pick_number);
-        if (!mp?.player) continue;
-        if (taken.has(mp.player)) continue;             // already drafted
-        slot.player = mp.player;
-        slot.position = mp.position;
-        slot.college = mp.college;
-        slot.consensus_rank = mp.consensus_rank;
+      const assign = (slot: DraftPick, p: { player: string; position: string | null;
+                                             college: string | null; rank: number | null }) => {
+        slot.player = p.player;
+        slot.position = p.position;
+        slot.college = p.college;
+        slot.consensus_rank = p.rank;
         slot.source = 'model';
-        taken.add(mp.player);
+        taken.add(p.player);
+      };
+      let pn = state.currentPick;
+      while (pn <= 32) {
+        const slot = picks.find((p) => p.pick_number === pn);
+        if (!slot) { pn += 1; continue; }
+        if (slot.player) { pn += 1; continue; }
+        if (slot.team === state.selectedTeam) break;  // user's pick — stop
+        const mp = action.modelPicks.find((m) => m.pick_number === pn);
+        if (mp?.player && !taken.has(mp.player)) {
+          assign(slot, {
+            player: mp.player,
+            position: mp.position,
+            college: mp.college,
+            rank: mp.consensus_rank,
+          });
+        } else {
+          const fallback = rankedProspects.find((p) => !taken.has(p.player));
+          if (fallback) assign(slot, fallback);
+        }
+        pn += 1;
       }
-      // Advance currentPick to the user's first unfilled slot (or first
-      // unfilled slot overall if user has no remaining picks).
-      let next = 1;
-      while (next <= 32) {
-        const p = picks.find((x) => x.pick_number === next);
-        if (p && !p.player) break;
-        next += 1;
-      }
-      return { ...state, picks, taken, currentPick: next };
+      return { ...state, picks, taken, currentPick: pn };
     }
     default:
       return state;
@@ -376,25 +390,23 @@ export function BuildMock() {
   const currentPickObj = state.picks.find((p) => p.pick_number === state.currentPick);
   const currentTeam = teamMeta(currentPickObj?.team);
 
-  // In team mode: auto-fill every non-user-team pick with the model's
-  // prediction, atomically via a single reducer action. Only runs when
-  // there's actually a fillable slot — i.e., an unfilled non-user-team
-  // slot whose model pick hasn't been drafted yet. That guard prevents
-  // an infinite re-dispatch loop when the model lacks a prediction for
-  // some slot (or all candidates are already taken).
+  // In team mode: whenever the board advances to a non-user slot that's
+  // unfilled, auto-fill picks forward until we hit the user's next slot.
+  // Stops at user slots so they can pick. After user picks, this effect
+  // re-runs and continues filling. Prevents infinite loops by requiring
+  // the current slot to be non-user AND unfilled before dispatching.
   useEffect(() => {
     if (!loaded) return;
     if (state.mode !== 'team' || !state.selectedTeam) return;
-    if (modelPicks.length === 0) return;
-    const fillable = state.picks.some((p) => {
-      if (p.player) return false;
-      if (p.team === state.selectedTeam) return false;
-      const mp = modelPicks.find((m) => m.pick_number === p.pick_number);
-      return !!mp?.player && !state.taken.has(mp.player);
-    });
-    if (!fillable) return;
-    dispatch({ type: 'auto_fill', modelPicks });
-  }, [loaded, modelPicks, state.mode, state.selectedTeam, state.picks, state.taken]);
+    if (modelPicks.length === 0 && prospects.length === 0) return;
+    if (state.currentPick > 32) return;
+    const currentSlot = state.picks.find((p) => p.pick_number === state.currentPick);
+    if (!currentSlot) return;
+    if (currentSlot.player) return;                    // nothing to fill here
+    if (currentSlot.team === state.selectedTeam) return; // user's slot — wait
+    dispatch({ type: 'auto_fill', modelPicks, prospects });
+  }, [loaded, modelPicks, prospects, state.mode, state.selectedTeam,
+      state.currentPick, state.picks]);
 
   const reset = () => {
     if (!confirm('Reset the entire mock draft? Your picks will be cleared.')) return;
