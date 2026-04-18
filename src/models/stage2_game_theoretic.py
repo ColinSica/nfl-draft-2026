@@ -285,7 +285,8 @@ def compute_dynamic_trade_boost(
     pros: pd.DataFrame,
     top3_needs: dict,
     team_profiles: dict | None = None,
-) -> float:
+    return_reasons: bool = False,
+):
     """Return a multiplicative boost on the current pick's trade probability
     based on board state. >1.0 = more likely to trade than baseline.
 
@@ -305,6 +306,7 @@ def compute_dynamic_trade_boost(
          positions in 2021-2025 R1 trade-up target data).
     """
     boost = 1.0
+    reasons: list[str] = []
     current_team = current_pick.get("team")
     current_needs = top3_needs.get(current_team, [])
     pick_num = int(current_pick.get("pick_number", 0))
@@ -323,22 +325,16 @@ def compute_dynamic_trade_boost(
             if "QB" in top3_needs.get(p.get("team", ""), [])
         )
         if qb_needy_count > 0:
-            # Baseline QB-cascade boost — rises with demand/supply imbalance.
             if qb_needy_count >= n_avail_qbs:
-                # Demand meets/exceeds supply — the user's canonical "every
-                # time" scenario. 2.5x is aggressive on purpose.
                 boost *= 2.50
+                reasons.append(f"QB demand ({qb_needy_count}) exceeds supply ({n_avail_qbs}) behind")
             elif qb_needy_count >= 1:
-                # Even 1 QB-needy team behind elevates probability — the
-                # back team wants to lock the QB in before a competitor
-                # upstream of them trades up first.
                 boost *= 1.60
-            # Extra boost if an elite QB has ALREADY slid past his ADP by
-            # more than 5 picks — this is the "QB falling" scenario that
-            # triggers a scramble from behind.
+                reasons.append(f"QB-needy team within {QB_CASCADE_WINDOW} picks")
             sliding_qbs = avail_qbs & (pros["rank"] < pick_num - 5)
             if sliding_qbs.any():
                 boost *= 1.40
+                reasons.append("elite QB sliding past ADP")
 
     # ------- DRIVER 2: Tier exhaustion (premium positions only) ---------
     # "Last of the tier" panic fires only at premium positions. Non-premium
@@ -358,7 +354,8 @@ def compute_dynamic_trade_boost(
                 if pos in top3_needs.get(p.get("team", ""), [])
             )
             if pos_needy_behind >= 2 and pos not in current_needs:
-                boost *= 1.50   # up from 1.35 — tier panic is strong
+                boost *= 1.50
+                reasons.append(f"{pos} tier nearly exhausted, {pos_needy_behind} teams need")
                 break
 
     # ------- DRIVER 3: Leapfrog (late-R1 is tactical blocking) ----------
@@ -371,9 +368,8 @@ def compute_dynamic_trade_boost(
         next_needs = top3_needs.get(next_pick.get("team", ""), [])
         for need_pos in current_needs:
             if need_pos in next_needs and need_pos in PREMIUM_TRADE_POSITIONS:
-                # Late R1 blocking is harder. Picks 1-19: mild boost.
-                # Picks 20+: stronger because 5YO control + blocking collide.
                 boost *= 1.40 if pick_num >= 20 else 1.15
+                reasons.append(f"leapfrog risk — next pick also needs {need_pos}")
                 break
 
     # ------- DRIVER 4: 5th-year option grab (picks 28-32) ---------------
@@ -386,9 +382,8 @@ def compute_dynamic_trade_boost(
                          & (pros["rank"] <= pick_num + 5)
                          & (~pros["player"].isin(taken_names)))
         if premium_avail.any():
-            # Mild boost — 5YO is a secondary driver but consistent. Only
-            # fires once (already gated by pick range).
             boost *= 1.25
+            reasons.append("5th-year option grab (late R1)")
 
     # ------- DRIVER 5: Win-now aggression -------------------------------
     # Contending teams (high win_pct, high win_now_pressure) value future
@@ -400,9 +395,21 @@ def compute_dynamic_trade_boost(
         prof = team_profiles.get(current_team) or {}
         win_now = float(prof.get("win_now_pressure") or 0)
         if win_now >= 0.7 and any(n in PREMIUM_TRADE_POSITIONS for n in current_needs):
-            # Contending team with premium need: ~15% more aggressive.
             boost *= 1.15
+            reasons.append(f"{current_team} win-now pressure")
+        # GM/HC job stability driver: embattled staffs trade up more
+        # aggressively for near-term impact. new_gm (0-1 yr) or new_hc
+        # also amps aggression. Uses fields already in team_agents JSON.
+        new_gm = bool(prof.get("new_gm"))
+        new_hc = bool(prof.get("new_hc"))
+        if (new_gm or new_hc) and any(n in PREMIUM_TRADE_POSITIONS for n in current_needs):
+            boost *= 1.12
+            reasons.append(
+                f"{current_team} {'new GM' if new_gm else 'new HC'} — job-stability urgency"
+            )
 
+    if return_reasons:
+        return boost, reasons
     return boost
 
 
@@ -1617,7 +1624,8 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
 def try_bilateral_trade(current_idx: int, picks: list[dict],
                         prospects: pd.DataFrame, top3_needs: dict,
                         scores_avail: pd.Series, rng: np.random.Generator,
-                        trade_log: list) -> Optional[int]:
+                        trade_log: list,
+                        reasons: Optional[list[str]] = None) -> Optional[int]:
     """
     Returns the new team owner of picks[current_idx] if a trade fires,
     else None. The trade partner is a later pick-holder with high
@@ -1662,10 +1670,13 @@ def try_bilateral_trade(current_idx: int, picks: list[dict],
     picks[current_idx]["team"] = best_partner
     picks[best_idx]["team"] = old_team
     trade_log.append({
-        "pick_number": pick_now["pick_number"],
-        "from_team": old_team, "to_team": best_partner,
-        "target_player": prospects.loc[top_idx, "player"],
+        "pick_number":     pick_now["pick_number"],
+        "from_team":       old_team,
+        "to_team":         best_partner,
+        "target_player":   prospects.loc[top_idx, "player"],
         "target_position": prospects.loc[top_idx, "position"],
+        "reason":          "; ".join(reasons or []) or "BPA fit + value premium",
+        "trade_type":      "dynamic",
     })
     return best_partner
 
@@ -1700,12 +1711,33 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
     # badge on the UI.
     _scripted_trade_log: list = []
     _orig_team_by_pick = {p["pick_number"]: p["team"] for p in picks_template}
+    # Canonical reasons for each scripted scenario so the UI can explain
+    # why a trade fired (matches analyst mock reasoning).
+    _scripted_reasons = {
+        "A": "DAL trade-up for top LB/S — most-mocked April scenario (6/20 tier-1)",
+        "B": "DAL trade-up alt scenario — premium-position hunt at #4",
+        "CIN_traded": "CIN rare trade-up for premium target at #5 (3% historical rate)",
+        "PHI_traded_up": "PHI trade-up for defensive playmaker (2 analyst mocks)",
+        "CLE_traded_up_to_20": "CLE up for Concepcion — Brugler preferred target (2 mocks)",
+        "CLE_traded_up_to_12": "CLE up for Proctor — Kiper/McShay scenario",
+        "ARI_traded_to_30": "ARI up from R2 for developmental QB (4 tier-1 mocks)",
+    }
+    def _reason_for_pick(pn: int) -> str:
+        dal_sc = trades.get("DAL_trade_scenario")
+        if dal_sc and pn in (4, 6, 12, 20):
+            return _scripted_reasons.get(dal_sc, "DAL trade-up")
+        for key, text in _scripted_reasons.items():
+            if key != "A" and key != "B" and trades.get(key):
+                return text
+        return "scripted trade scenario"
     for pick_num, pick_obj in [(p["pick_number"], p) for p in picks]:
         if pick_num in _orig_team_by_pick and pick_obj["team"] != _orig_team_by_pick[pick_num]:
             _scripted_trade_log.append({
                 "pick_number":      pick_num,
                 "from_team":        _orig_team_by_pick[pick_num],
                 "to_team":          pick_obj["team"],
+                "reason":           _reason_for_pick(pick_num),
+                "trade_type":       "scripted",
                 "target_player":    "",        # unknown at pre-sim time
                 "target_position":  "",
                 "scripted":         True,
@@ -1795,7 +1827,7 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
             # this pick is a juicy trade-down target. Multiplier applied
             # BEFORE hard-constraint caps.
             remaining = picks[i + 1:]
-            dynamic_boost = compute_dynamic_trade_boost(
+            dynamic_boost, dynamic_reasons = compute_dynamic_trade_boost(
                 current_pick=pick,
                 remaining_picks=remaining,
                 history=history,
@@ -1804,6 +1836,7 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
                 top3_needs=top3_needs,
                 team_profiles={t: get_team_profile(t)
                                for t in {pick["team"], *[p["team"] for p in remaining[:8]]}},
+                return_reasons=True,
             )
             effective_trade_rate *= dynamic_boost
 
@@ -1821,7 +1854,8 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
             scores_avail = get_scores()[~local.index.isin(taken)]
             if not scores_avail.empty:
                 new_team = try_bilateral_trade(i, picks, local, top3_needs,
-                                               scores_avail, rng, trade_log)
+                                               scores_avail, rng, trade_log,
+                                               reasons=dynamic_reasons)
                 if new_team is not None:
                     pick = picks[i]
                     invalidate_scores()   # team changed, recompute needed
@@ -2170,11 +2204,25 @@ def main():
                 targets = (grp.groupby("target_player")
                               .size().reset_index(name="n")
                               .sort_values("n", ascending=False).head(3))
+                # Aggregate the top reasons seen for this (from, to) pair
+                # across simulations. Most-common reason wins; ties broken
+                # by sim order. Gives the UI a single explanatory string.
+                reason_col = grp["reason"] if "reason" in grp.columns else None
+                top_reason = ""
+                if reason_col is not None and not reason_col.isna().all():
+                    reason_counts = reason_col.fillna("").replace("", pd.NA).dropna().value_counts()
+                    if len(reason_counts) > 0:
+                        top_reason = str(reason_counts.index[0])
+                type_col = grp["trade_type"] if "trade_type" in grp.columns else None
+                trade_type = (str(type_col.mode().iloc[0])
+                              if type_col is not None and len(type_col.mode()) else "")
                 pairs.append({
-                    "from_team": ft,
-                    "to_team":   tt,
-                    "count":     int(len(grp)),
-                    "prob":      round(len(grp) / N_SIMULATIONS, 3),
+                    "from_team":   ft,
+                    "to_team":     tt,
+                    "count":       int(len(grp)),
+                    "prob":        round(len(grp) / N_SIMULATIONS, 3),
+                    "reason":      top_reason,
+                    "trade_type":  trade_type,
                     "top_targets": [
                         {"player": str(r.target_player), "count": int(r.n)}
                         for r in targets.itertuples(index=False)

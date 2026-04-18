@@ -60,6 +60,7 @@ type ModelReasoning = {
 
 type TradeEvent = {
   from_team: string; to_team: string; prob: number; count: number;
+  reason?: string; trade_type?: string;
   top_targets: Array<{ player: string; count: number }>;
 };
 
@@ -178,11 +179,13 @@ function PickCard({
               <span
                 className="badge flex-none border-accent/40 bg-accent/10 text-accent flex items-center gap-1"
                 title={topTrade
-                  ? `${topTrade.from_team} → ${topTrade.to_team} in ${(topTrade.prob * 100).toFixed(0)}% of sims`
+                  ? `${topTrade.from_team} → ${topTrade.to_team} in ${(topTrade.prob * 100).toFixed(0)}% of sims${topTrade.reason ? '\n' + topTrade.reason : ''}`
                   : `Trades fire in ${(tradeProb * 100).toFixed(0)}% of sims`}
               >
                 <ArrowRightLeft size={10} />
-                Trade {(tradeProb * 100).toFixed(0)}%
+                {topTrade
+                  ? `${topTrade.from_team}→${topTrade.to_team} ${(topTrade.prob * 100).toFixed(0)}%`
+                  : `Trade ${(tradeProb * 100).toFixed(0)}%`}
               </span>
             ) : SCRIPTED_TRADE_PROB[row.pick_number] && (
               <span
@@ -376,25 +379,43 @@ function PickCard({
                   any trade fires in {(tradeProb * 100).toFixed(0)}% of sims
                 </span>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 {trades.map((t, i) => (
                   <div
                     key={`${t.from_team}-${t.to_team}-${i}`}
-                    className="text-xs bg-bg-card border border-border rounded-md p-2.5 flex flex-wrap items-center gap-x-3 gap-y-1"
+                    className="text-xs bg-bg-card border border-border rounded-md p-3 space-y-1.5"
                   >
-                    <span className="font-mono font-semibold">
-                      {t.from_team} → {t.to_team}
-                    </span>
-                    <span className="text-accent font-semibold">
-                      {(t.prob * 100).toFixed(0)}%
-                    </span>
-                    <span className="text-text-subtle">
-                      ({t.count}{nSims ? ` / ${nSims} sims` : ' sims'})
-                    </span>
-                    {t.top_targets.length > 0 && (
-                      <span className="text-text-muted">
-                        · target: {t.top_targets.map((p) => p.player).join(', ')}
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                      <span className="font-mono font-semibold text-sm">
+                        {t.from_team} → {t.to_team}
                       </span>
+                      <span className="text-accent font-semibold">
+                        {(t.prob * 100).toFixed(0)}%
+                      </span>
+                      <span className="text-text-subtle">
+                        ({t.count}{nSims ? ` / ${nSims} sims` : ''})
+                      </span>
+                      {t.trade_type && (
+                        <span className={cn(
+                          'badge text-[9px]',
+                          t.trade_type === 'scripted'
+                            ? 'border-tier-high/40 bg-tier-high/10 text-tier-high'
+                            : 'border-accent/40 bg-accent/10 text-accent'
+                        )}>
+                          {t.trade_type}
+                        </span>
+                      )}
+                    </div>
+                    {t.reason && (
+                      <div className="text-[11px] text-text-muted leading-snug">
+                        <span className="text-text-subtle font-medium">Why:</span> {t.reason}
+                      </div>
+                    )}
+                    {t.top_targets.length > 0 && (
+                      <div className="text-[11px] text-text-muted">
+                        <span className="text-text-subtle font-medium">Target:</span>{' '}
+                        {t.top_targets.map((p) => p.player).join(', ')}
+                      </div>
                     )}
                   </div>
                 ))}
