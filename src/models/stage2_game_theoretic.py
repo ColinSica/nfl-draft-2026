@@ -1896,20 +1896,32 @@ def main():
     n_slots = mc_df["pick_slot"].nunique() if not mc_df.empty else 0
     print(f"\nSaved -> {OUT_MC} ({len(mc_df)} rows, {n_slots}/32 slots)")
 
-    # Per-pick top-2 candidates + utility breakdown + flags
+    # Per-pick top-2 candidates + utility breakdown + flags.
+    # Greedy claim per slot so the same player doesn't appear as top-1
+    # at two different slots (each prospect can only go to one team).
     print("\nRound 1 — top Monte-Carlo candidates per pick (v12 utility):")
     print(f"{'pk':>2}  {'team':<4}  {'top-1':<24} {'prob':>5}  {'cons':>4}  "
           f"{'pos':<5}  {'top-2':<24} {'p2':>5}  flags")
     print("-" * 110)
     anomalies: list[str] = []
+    _claimed_top1: set[str] = set()
     for pn in range(1, 33):
         by_count = [(p, slots.get(pn, 0)) for p, slots in landing.items()
                     if slots.get(pn, 0) > 0]
         if not by_count:
             continue
         by_count.sort(key=lambda t: -t[1])
+        # Promote first unclaimed candidate to top-1.
+        top_idx = next(
+            (i for i, (p, _) in enumerate(by_count) if p not in _claimed_top1),
+            0,
+        )
+        by_count = [by_count[top_idx]] + [
+            t for i, t in enumerate(by_count) if i != top_idx
+        ]
         p1_name, p1_count = by_count[0]
         p2_name, p2_count = (by_count[1] if len(by_count) > 1 else ("", 0))
+        _claimed_top1.add(p1_name)
         teams_here = team_at_slot.get(p1_name, {}).get(pn, {})
         best_team = max(teams_here, key=teams_here.get) if teams_here else "?"
         row = pros[pros["player"] == p1_name]
@@ -1973,13 +1985,21 @@ def main():
           f"{'visit':>5}  {'intel':>5}  {'pv_mult':>7}  {'gm_aff':>7}  {'score':>6}  kiper")
     print("-" * 115)
     reasoning_out: dict[str, dict] = {}
+    _claimed_reasoning: set[str] = set()
     for pn in range(1, 33):
         by_count = [(p, slots.get(pn, 0)) for p, slots in landing.items()
                     if slots.get(pn, 0) > 0]
         if not by_count:
             continue
         by_count.sort(key=lambda t: -t[1])
-        p1_name = by_count[0][0]
+        # Match the greedy claim used in the top-1 table above so the
+        # reasoning JSON stays consistent with what the dashboard shows.
+        top_idx = next(
+            (i for i, (p, _) in enumerate(by_count) if p not in _claimed_reasoning),
+            0,
+        )
+        p1_name = by_count[top_idx][0]
+        _claimed_reasoning.add(p1_name)
         teams_here = team_at_slot.get(p1_name, {}).get(pn, {})
         team = max(teams_here, key=teams_here.get) if teams_here else "?"
         pick_template = {"pick_number": pn, "team": team,

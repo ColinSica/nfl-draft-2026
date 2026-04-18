@@ -1,6 +1,6 @@
 {
   "meta": {
-    "n_sims": 5
+    "n_sims": 10
   },
   "picks": {
     "1": {
@@ -255,23 +255,23 @@
     },
     "11": {
       "team": "MIA",
-      "player": "Arvell Reese",
-      "position": "LB",
+      "player": "Caleb Downs",
+      "position": "S",
       "components": {
-        "bpa": 0.473,
-        "need": 0.5,
+        "bpa": 0.471,
+        "need": 0.625,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.0,
         "gm_affinity": 1.0,
-        "score_final": 1.618
+        "score_final": 1.453
       },
       "top_factors": [
         {
           "key": "team_need",
-          "magnitude": 0.5,
-          "label": "LB is a top roster need",
-          "detail": "Need score contributed 0.50 to the total"
+          "magnitude": 0.625,
+          "label": "S is a top roster need",
+          "detail": "Need score contributed 0.62 to the total"
         }
       ]
     },
@@ -379,29 +379,29 @@
     },
     "15": {
       "team": "TB",
-      "player": "Jermod McCoy",
-      "position": "CB",
+      "player": "Olaivavega Ioane",
+      "position": "IOL",
       "components": {
-        "bpa": 0.463,
+        "bpa": 0.475,
         "need": 0.5,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.2,
+        "pv_mult": 0.95,
         "gm_affinity": 1.0,
-        "score_final": 0.827
+        "score_final": 1.065
       },
       "top_factors": [
         {
           "key": "team_need",
           "magnitude": 0.5,
-          "label": "CB is a top roster need",
+          "label": "IOL is a top roster need",
           "detail": "Need score contributed 0.50 to the total"
         },
         {
-          "key": "positional_value",
-          "magnitude": 0.19999999999999996,
-          "label": "CB position premium",
-          "detail": "Position-value multiplier 1.20x (premium slot)"
+          "key": "non_premium_discount",
+          "magnitude": 0.050000000000000044,
+          "label": "IOL is a non-premium position",
+          "detail": "Discounted 5% but still outscored alternatives"
         }
       ]
     },
@@ -428,7 +428,7 @@
       ]
     },
     "17": {
-      "team": "MIN",
+      "team": "DET",
       "player": "Olaivavega Ioane",
       "position": "IOL",
       "components": {
@@ -437,8 +437,8 @@
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 0.95,
-        "gm_affinity": 1.25,
-        "score_final": 1.332
+        "gm_affinity": 0.97,
+        "score_final": 1.033
       },
       "top_factors": [
         {
@@ -446,12 +446,6 @@
           "magnitude": 0.5,
           "label": "IOL is a top roster need",
           "detail": "Need score contributed 0.50 to the total"
-        },
-        {
-          "key": "gm_affinity",
-          "magnitude": 0.25,
-          "label": "GM historically favors IOL",
-          "detail": "Positional-affinity multiplier 1.25x"
         },
         {
           "key": "non_premium_discount",
@@ -587,35 +581,35 @@
     },
     "22": {
       "team": "LAC",
-      "player": "Kadyn Proctor",
-      "position": "OT",
+      "player": "Akheem Mesidor",
+      "position": "EDGE",
       "components": {
-        "bpa": 0.285,
+        "bpa": 0.279,
         "need": 0.7,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.2,
-        "gm_affinity": 0.84,
-        "score_final": 0.992
+        "pv_mult": 1.3,
+        "gm_affinity": 0.8,
+        "score_final": 1.059
       },
       "top_factors": [
         {
           "key": "team_need",
-          "magnitude": 0.7,
-          "label": "OT is a top roster need",
+          "magnitude": 0.7000000000000001,
+          "label": "EDGE is a top roster need",
           "detail": "Need score contributed 0.70 to the total"
         },
         {
           "key": "positional_value",
-          "magnitude": 0.19999999999999996,
-          "label": "OT position premium",
-          "detail": "Position-value multiplier 1.20x (premium slot)"
+          "magnitude": 0.30000000000000004,
+          "label": "EDGE position premium",
+          "detail": "Position-value multiplier 1.30x (premium slot)"
         },
         {
           "key": "gm_aversion",
-          "magnitude": 0.15999999999999992,
-          "label": "GM rarely drafts OT",
-          "detail": "Positional-affinity penalty 0.84x (model picked anyway)"
+          "magnitude": 0.19999999999999996,
+          "label": "GM rarely drafts EDGE",
+          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
         }
       ]
     },
@@ -649,29 +643,29 @@
     },
     "24": {
       "team": "CLE",
-      "player": "Kevin Concepcion",
-      "position": "WR",
+      "player": "Caleb Lomu",
+      "position": "OT",
       "components": {
-        "bpa": 0.628,
-        "need": 0.566,
+        "bpa": 0.673,
+        "need": 0.0,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.0,
-        "gm_affinity": 0.8,
-        "score_final": 0.993
+        "pv_mult": 1.2,
+        "gm_affinity": 1.25,
+        "score_final": 1.009
       },
       "top_factors": [
         {
-          "key": "team_need",
-          "magnitude": 0.5655,
-          "label": "WR is a top roster need",
-          "detail": "Need score contributed 0.57 to the total"
+          "key": "gm_affinity",
+          "magnitude": 0.25,
+          "label": "GM historically favors OT",
+          "detail": "Positional-affinity multiplier 1.25x"
         },
         {
-          "key": "gm_aversion",
+          "key": "positional_value",
           "magnitude": 0.19999999999999996,
-          "label": "GM rarely drafts WR",
-          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
+          "label": "OT position premium",
+          "detail": "Position-value multiplier 1.20x (premium slot)"
         }
       ]
     },
@@ -704,7 +698,7 @@
       ]
     },
     "26": {
-      "team": "KC",
+      "team": "BUF",
       "player": "Kayden McDonald",
       "position": "DL",
       "components": {
@@ -713,23 +707,30 @@
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.05,
-        "gm_affinity": 1.0,
-        "score_final": 0.298
+        "gm_affinity": 1.25,
+        "score_final": 0.372
       },
-      "top_factors": []
+      "top_factors": [
+        {
+          "key": "gm_affinity",
+          "magnitude": 0.25,
+          "label": "GM historically favors DL",
+          "detail": "Positional-affinity multiplier 1.25x"
+        }
+      ]
     },
     "27": {
       "team": "SF",
-      "player": "Caleb Lomu",
+      "player": "Max Iheanachor",
       "position": "OT",
       "components": {
-        "bpa": 0.288,
+        "bpa": 0.273,
         "need": 0.0,
-        "visit": 0.15,
+        "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.2,
         "gm_affinity": 1.0,
-        "score_final": 0.526
+        "score_final": 0.328
       },
       "top_factors": [
         {

@@ -50,7 +50,9 @@ type State = {
 type Action =
   | { type: 'draft'; pick_number: number; prospect: Prospect; source: 'user' | 'model' }
   | { type: 'trade'; pick_a: number; pick_b: number }
-  | { type: 'unpick'; pick_number: number; prev: DraftPick };
+  | { type: 'unpick'; pick_number: number; prev: DraftPick }
+  | { type: 'undo' }
+  | { type: 'reset'; next: State };
 
 const STORAGE_KEY = 'draft_dash_custom_mock';
 
@@ -152,6 +154,51 @@ function reducer(state: State, action: Action): State {
         history: state.history.slice(0, -1),
       };
     }
+    case 'undo': {
+      const last = state.history[state.history.length - 1];
+      if (!last) return state;
+      if (last.type === 'draft') {
+        const picks = state.picks.map((p) =>
+          p.pick_number === last.pick_number
+            ? {
+                ...p,
+                player: null,
+                position: null,
+                college: null,
+                consensus_rank: null,
+                source: null,
+              }
+            : p
+        );
+        const taken = new Set(state.taken);
+        taken.delete(last.prospect.player);
+        return {
+          ...state,
+          picks,
+          taken,
+          currentPick: Math.min(state.currentPick, last.pick_number),
+          history: state.history.slice(0, -1),
+        };
+      }
+      if (last.type === 'trade') {
+        // Re-swap to revert, drop the recorded trade.
+        const picks = state.picks.map((p) => {
+          if (p.pick_number === last.pick_a) {
+            const other = state.picks.find((x) => x.pick_number === last.pick_b)!;
+            return { ...p, team: other.team };
+          }
+          if (p.pick_number === last.pick_b) {
+            const other = state.picks.find((x) => x.pick_number === last.pick_a)!;
+            return { ...p, team: other.team };
+          }
+          return p;
+        });
+        return { ...state, picks, history: state.history.slice(0, -1) };
+      }
+      return state;
+    }
+    case 'reset':
+      return action.next;
     default:
       return state;
   }
@@ -202,16 +249,19 @@ export function BuildMock() {
     return makeInitialState([], 'full', null);
   });
 
-  // Re-init once model picks arrive (only if state is truly empty)
+  // Re-init once model picks arrive, but only if the current state has
+  // no teams assigned yet (saved state already has real teams). This
+  // runs exactly once after data hydrates so team-mode users get the
+  // proper pick template even before making a pick.
   useEffect(() => {
-    if (loaded && state.picks.every((p) => p.team === 'TBD')) {
-      const fresh = makeInitialState(modelPicks, state.mode, state.selectedTeam);
-      dispatch({ type: 'draft', pick_number: -1, prospect: { player: '', position: '', college: '', rank: 0 }, source: 'model' });
-      // Actually easier: force re-set via localStorage clear + reload state
-      localStorage.removeItem(STORAGE_KEY);
-      Object.assign(state, fresh);
+    if (!loaded) return;
+    if (state.picks.every((p) => p.team === 'TBD')) {
+      dispatch({
+        type: 'reset',
+        next: makeInitialState(modelPicks, state.mode, state.selectedTeam),
+      });
     }
-  }, [loaded]);
+  }, [loaded, modelPicks]);
 
   // Persist on every change
   useEffect(() => {
@@ -334,29 +384,13 @@ export function BuildMock() {
 
   const reset = () => {
     if (!confirm('Reset the entire mock draft? Your picks will be cleared.')) return;
-    localStorage.removeItem(STORAGE_KEY);
-    window.location.reload();
+    dispatch({
+      type: 'reset',
+      next: makeInitialState(modelPicks, state.mode, state.selectedTeam),
+    });
   };
 
-  const undo = () => {
-    const last = state.history[state.history.length - 1];
-    if (!last) return;
-    if (last.type === 'draft') {
-      const prev = state.picks.find((p) => p.pick_number === last.pick_number)!;
-      dispatch({
-        type: 'unpick',
-        pick_number: last.pick_number,
-        prev: { ...prev, player: null, position: null, college: null,
-                consensus_rank: null, source: null },
-      });
-    } else if (last.type === 'trade') {
-      // Re-swap to undo
-      dispatch({ type: 'trade', pick_a: last.pick_a, pick_b: last.pick_b });
-      // Also drop this action from history
-      state.history.pop();
-      state.history.pop();
-    }
-  };
+  const undo = () => dispatch({ type: 'undo' });
 
   const exportMock = () => {
     const blob = new Blob([JSON.stringify({
@@ -435,35 +469,32 @@ export function BuildMock() {
       </div>
 
       {/* Mode toggle */}
-      <div className="card p-3 flex items-center gap-3 flex-wrap">
+      <div className="card p-3 flex items-center gap-2 sm:gap-3 flex-wrap">
         <span className="text-xs text-text-muted uppercase tracking-wider">Mode:</span>
         <button
           onClick={() => {
             if (state.mode === 'full') return;
             if (filledCount > 0 && !confirm('Switching mode resets the draft. Continue?')) return;
-            localStorage.removeItem(STORAGE_KEY);
-            const fresh = makeInitialState(modelPicks, 'full', null);
-            Object.assign(state, fresh);
-            window.location.reload();
+            dispatch({ type: 'reset', next: makeInitialState(modelPicks, 'full', null) });
           }}
-          className={cn('px-3.5 py-1.5 rounded-md text-sm font-medium transition',
+          className={cn('px-3 py-1.5 rounded-md text-sm font-medium transition',
             state.mode === 'full' ? 'bg-accent text-white' : 'bg-bg-raised text-text-muted hover:text-text')}
         >
-          Full draft (all 32 picks)
+          Full draft (32 picks)
         </button>
         <button
           onClick={() => {
             if (state.mode === 'team') return;
             if (filledCount > 0 && !confirm('Switching mode resets the draft. Continue?')) return;
-            localStorage.removeItem(STORAGE_KEY);
-            const fresh = makeInitialState(modelPicks, 'team', 'NYG');
-            Object.assign(state, fresh);
-            window.location.reload();
+            dispatch({
+              type: 'reset',
+              next: makeInitialState(modelPicks, 'team', state.selectedTeam ?? 'NYG'),
+            });
           }}
-          className={cn('px-3.5 py-1.5 rounded-md text-sm font-medium transition',
+          className={cn('px-3 py-1.5 rounded-md text-sm font-medium transition',
             state.mode === 'team' ? 'bg-accent text-white' : 'bg-bg-raised text-text-muted hover:text-text')}
         >
-          Team-only (I only pick for one team)
+          Team-only (pick for one team)
         </button>
 
         {state.mode === 'team' && (
@@ -472,10 +503,10 @@ export function BuildMock() {
             <select
               value={state.selectedTeam ?? 'NYG'}
               onChange={(e) => {
-                localStorage.removeItem(STORAGE_KEY);
-                const fresh = makeInitialState(modelPicks, 'team', e.target.value);
-                Object.assign(state, fresh);
-                window.location.reload();
+                dispatch({
+                  type: 'reset',
+                  next: makeInitialState(modelPicks, 'team', e.target.value),
+                });
               }}
               className="bg-bg-raised border border-border rounded-md px-2.5 py-1.5 text-sm outline-none focus:border-accent"
             >
@@ -488,8 +519,8 @@ export function BuildMock() {
           </>
         )}
 
-        <span className="ml-auto text-xs text-text-subtle">
-          Autosaves locally — refresh the page and your draft will still be here.
+        <span className="w-full sm:w-auto sm:ml-auto text-xs text-text-subtle">
+          Autosaves locally — refresh and your draft will still be here.
         </span>
       </div>
 

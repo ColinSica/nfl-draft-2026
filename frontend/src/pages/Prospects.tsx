@@ -67,7 +67,7 @@ export function Prospects() {
       </div>
 
       <div className="card p-3 flex flex-wrap items-center gap-3">
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-bg-raised border border-border rounded-md flex-1 min-w-[240px]">
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-bg-raised border border-border rounded-md flex-1 min-w-0 sm:min-w-[240px]">
           <Search size={14} className="text-text-subtle" />
           <input
             className="bg-transparent outline-none flex-1 text-sm placeholder:text-text-subtle"

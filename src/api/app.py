@@ -334,38 +334,60 @@ def prospect_landings() -> dict:
 @app.get("/api/simulations/latest")
 def latest_simulation() -> dict:
     """Read the latest monte_carlo output CSV and return per-pick top-4
-    candidates plus summary stats."""
+    candidates plus summary stats.
+
+    Uses greedy per-slot assignment so a player never shows as top-1 at
+    two different slots: we walk picks 1..32 in order and take the highest-
+    probability candidate not yet claimed by an earlier slot. Runner-ups
+    at each slot are still shown (they can repeat) as alternatives."""
     if not MC_CSV.exists():
         return {"picks": [], "meta": {"file_present": False}}
     df = pd.read_csv(MC_CSV)
-    # Schema: one row per (player, most_likely_pick_slot) with probability,
-    # team, consensus_rank, landing stats. Group by pick_slot for UI.
     pick_col = "pick_slot" if "pick_slot" in df.columns else "pick_number"
     team_col = "most_likely_team" if "most_likely_team" in df.columns else "team"
-    out_picks: list[dict] = []
+
+    # Group by slot with candidates sorted by probability desc.
+    per_slot: dict[int, list] = {}
     for pn, sub in df.groupby(pick_col):
-        sub = sub.sort_values("probability", ascending=False).head(4)
+        sub = sub.sort_values("probability", ascending=False)
+        per_slot[int(pn)] = list(sub.itertuples(index=False))
+
+    # Greedy top-1 assignment: walk slots in pick order, claim each slot's
+    # best-available player.
+    claimed: set[str] = set()
+    out_picks: list[dict] = []
+    for pn in sorted(per_slot.keys()):
+        rows = per_slot[pn]
+        # Pick top-1 as first unclaimed, falling back to index 0 if all taken.
+        top_idx = next(
+            (i for i, r in enumerate(rows)
+             if getattr(r, "player", None) not in claimed),
+            0,
+        )
+        ordered = [rows[top_idx]] + [r for i, r in enumerate(rows) if i != top_idx]
+        ordered = ordered[:4]
+        if getattr(ordered[0], "player", None):
+            claimed.add(ordered[0].player)
         out_picks.append({
-            "pick_number": int(pn),
-            "team": sub.iloc[0].get(team_col),
+            "pick_number": pn,
+            "team": getattr(ordered[0], team_col, None),
             "candidates": [
                 {
-                    "player":          r.get("player"),
-                    "position":        r.get("position"),
-                    "college":         r.get("college"),
-                    "probability":     float(r.get("probability") or 0),
-                    "team":            r.get(team_col),
-                    "consensus_rank":  (int(r.get("consensus_rank"))
-                                         if pd.notna(r.get("consensus_rank"))
+                    "player":          getattr(r, "player", None),
+                    "position":        getattr(r, "position", None),
+                    "college":         getattr(r, "college", None),
+                    "probability":     float(getattr(r, "probability", 0) or 0),
+                    "team":            getattr(r, team_col, None),
+                    "consensus_rank":  (int(getattr(r, "consensus_rank"))
+                                         if pd.notna(getattr(r, "consensus_rank", None))
                                          else None),
-                    "variance_landing_pick": (
-                        float(r.get("variance_landing_pick") or 0)
+                    "variance_landing_pick": float(
+                        getattr(r, "variance_landing_pick", 0) or 0
                     ),
                 }
-                for _, r in sub.iterrows()
+                for r in ordered
             ],
         })
-    out_picks.sort(key=lambda p: p["pick_number"])
     return {
         "picks": out_picks,
         "meta": {
@@ -564,18 +586,30 @@ def simulate_replay(req: ReplayRequest) -> dict:
             landing[player][pn] += 1
             team_at_slot[player][pn][pick_team_map.get(pn, "?")] += 1
 
-    # Build per-slot top-4
+    # Build per-slot top-4 with greedy assignment so a player never shows
+    # as top-1 at two different slots. Walk slots 1..32 in order and claim
+    # each slot's best-available unclaimed player.
+    claimed: set[str] = set()
     out_picks: list[dict] = []
     for pn in range(1, 33):
         by_prob = [(player, slots.get(pn, 0))
                    for player, slots in landing.items()
                    if slots.get(pn, 0) > 0]
         by_prob.sort(key=lambda t: -t[1])
-        top4 = by_prob[:4]
-        if not top4:
+        if not by_prob:
             continue
+        # Promote the first unclaimed player to top-1.
+        top_idx = next(
+            (i for i, (p, _) in enumerate(by_prob) if p not in claimed),
+            0,
+        )
+        ordered = [by_prob[top_idx]] + [
+            t for i, t in enumerate(by_prob) if i != top_idx
+        ]
+        ordered = ordered[:4]
+        claimed.add(ordered[0][0])
         candidates = []
-        for player, count in top4:
+        for player, count in ordered:
             prow = pros[pros["player"] == player]
             teams_here = team_at_slot[player][pn]
             team = teams_here.most_common(1)[0][0] if teams_here else "?"
