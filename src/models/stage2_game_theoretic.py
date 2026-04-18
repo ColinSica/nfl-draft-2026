@@ -110,28 +110,32 @@ def analyst_distribution(pick_num: int, taken_names: set,
         return {}
     t1 = info.get("freq_tier1", {}) or {}
     all_ = info.get("freq_all", {}) or {}
+    # Tier-1 weight 0.50 (was 0.60). Tier-1 mocks are higher-signal but
+    # small-sample (6 analysts); over-weighting them caused C.J. Allen
+    # types (3/18 mocks at NE#31, but higher tier-1 share) to win 33%.
     blended: dict[str, float] = {}
     for name, f in t1.items():
-        blended[name] = blended.get(name, 0.0) + 0.60 * f
+        blended[name] = blended.get(name, 0.0) + 0.50 * f
     for name, f in all_.items():
-        blended[name] = blended.get(name, 0.0) + 0.40 * f
+        blended[name] = blended.get(name, 0.0) + 0.50 * f
 
     resolved: dict[str, float] = {}
     for short, w in blended.items():
         full = _resolve_analyst_name(short)
         if full and full not in taken_names:
-            # Dampen analyst-mock weights when the player's ADP is 10+
-            # slots past the current pick — single-analyst outliers shouldn't
-            # drive high probability in the sim. Reach magnitude scaling:
-            # gap  10→0.50, 12→0.30, 15→0.15, 20+→0.05
+            # Dampen analyst-mock weights when the player's ADP is 8+
+            # slots past the current pick. Tightened threshold (was 10)
+            # and steeper decay (was 0.85, now 0.80) so 16-slot analyst
+            # outliers like Malachi Lawrence EDGE#42 at BUF#26 can't fire
+            # at 17% — they cap at ~5%.
+            # Reach magnitude scaling: gap 8->0.40, 12->0.16, 16->0.07, 20+->0.03
             if pros_df is not None:
                 player_row = pros_df[pros_df["player"] == full]
                 if not player_row.empty:
                     adp = player_row["rank"].iloc[0]
-                    if pd.notna(adp) and (adp - pick_num) > 10:
-                        excess = float(adp) - float(pick_num) - 10
-                        # exponential-ish decay, clamped at 0.05
-                        w *= max(0.05, 0.5 * (0.85 ** excess))
+                    if pd.notna(adp) and (adp - pick_num) > 8:
+                        excess = float(adp) - float(pick_num) - 8
+                        w *= max(0.03, 0.4 * (0.80 ** excess))
             resolved[full] = resolved.get(full, 0.0) + w
 
     # ELITE-SLIDER FLOOR: inject any top-5 consensus prospect still
@@ -262,7 +266,13 @@ GM_AFFINITY_MAX = 1.25
 GM_AFFINITY_CACHE: dict = {}   # populated in main()
 
 N_SIMULATIONS = 500
-RNG_SEED = 42
+# RNG seed. Use DRAFT_RNG_SEED env var to get a fixed seed (useful for
+# CI / reproducible reports). When unset (the normal case), seed from
+# the OS entropy pool so each run produces different outcomes — this is
+# critical for the dashboard where users expect variation between runs.
+import os as _os
+_env_seed = _os.environ.get("DRAFT_RNG_SEED")
+RNG_SEED = int(_env_seed) if _env_seed and _env_seed.isdigit() else None
 NOISE_STD_FINAL_SCORE = 15.0          # picks 1-16
 NOISE_STD_LATE_PICKS = 25.0           # picks 17-32 — bump variance (BUG 2)
 
@@ -801,10 +811,12 @@ MEDICAL_PENALTIES: dict[str, float] = {
 # score bump, mirroring real-world analyst tier revisions post-combine.
 POST_COMBINE_BOOSTS: dict[str, float] = {
     # Sonny Styles (LB/S hybrid, Ohio State) — #5-6 consensus, tier-1 analyst
-    # picks for DAL trade-up scenarios. 1.45 was too aggressive (pushed him
-    # above Love at TEN@4 where analysts have Love 11/20); 1.20 keeps Styles
-    # competitive for pick 5/6 without displacing Love's TEN@4 plurality.
+    # picks for DAL trade-up scenarios.
     "Sonny Styles": 1.20,
+    # Mike Washington Jr (RB, Arkansas) — post-combine riser. ran 4.33 with
+    # 39" vertical and 10'8" broad per the combine backfill; consensus
+    # bumped 66 -> 38. Boost moves him into top of R2 without forcing R1.
+    "Mike Washington Jr.": 1.25,
 }
 
 # Position-scarcity premium: when a prospect is the top-ranked at their
@@ -836,8 +848,13 @@ def _compute_position_scarcity(prospects: pd.DataFrame) -> dict[str, float]:
 # Top-1 at a non-premium position gets the discount reduced to 0.95
 # (e.g. Jeremiyah Love as RB1, Kenyon Sadiq as TE1).
 POS_VALUE_MULT = {
-    "QB": 1.40, "EDGE": 1.30, "OT": 1.20, "CB": 1.20,
-    "WR": 1.00, "LB": 1.00, "S": 1.00,
+    # Calibrated to 2021-2025 R1 position distribution:
+    # QB 1.40 (hist 2-4/yr), EDGE 1.25 (4-6/yr), OT 1.10 (4-6/yr),
+    # CB 1.22 (4-6/yr), WR 1.08 (5-7/yr), LB 1.02 (~2/yr), S 0.95 (~1/yr).
+    # OT trimmed from 1.20 to 1.10 because 2026 class is OT-deep and the
+    # model was projecting 8+ R1 OTs (hist 4-6). CB bumped to match hist.
+    "QB": 1.40, "EDGE": 1.25, "OT": 1.10, "CB": 1.22,
+    "WR": 1.08, "LB": 1.02, "S": 0.95,
     # Rebalanced: the old 0.85/0.80 crushed TEs and interior DL below
     # realistic R1 odds. Historical avg: 3-4 IDL and 1-2 TE in R1 annually.
     "TE": 0.95, "RB": 0.90, "FB": 0.85, "HB": 0.90,
@@ -1074,14 +1091,15 @@ def get_override_distribution(pick_num: int, history: dict, trades: dict,
     # analyst-weighted overrides; now governed by needs + GM affinity.)
 
     if pick_num == 16:
-        # Jets pick 16 — Simpson is the "surprise" pick per Cimini (10% cap).
-        # Include wider CB fallbacks so Simpson doesn't inflate when the
-        # primary WR/CB options are taken earlier.
-        return avail({"Omar Cooper Jr.": 0.28, "Jordyn Tyson": 0.22,
-                      "Makai Lemon": 0.15, "Jermod McCoy": 0.12,
-                      "Ty Simpson": 0.10,
+        # Jets pick 16 — Simpson bumped 10% -> 16% per Cimini + multiple
+        # April analyst pick-16 mocks that have Simpson (15.8% in consensus
+        # all-mocks, higher in tier-1). QB class thin, NYJ in QB-dev mode
+        # post-Rodgers.
+        return avail({"Omar Cooper Jr.": 0.25, "Jordyn Tyson": 0.20,
+                      "Makai Lemon": 0.14, "Jermod McCoy": 0.11,
+                      "Ty Simpson": 0.16,
                       "Avieon Terrell": 0.05, "Colton Hood": 0.05,
-                      "Chris Johnson": 0.03})
+                      "Chris Johnson": 0.04})
 
     # V12: picks 17, 18 defer to utility. Pick 19 keeps the cooldown
     # (position-run) branch — that IS state-dependent, not an analyst
@@ -1092,9 +1110,17 @@ def get_override_distribution(pick_num: int, history: dict, trades: dict,
         # defer — the panic/cooldown logic lives in the scoring layer.
         return None
 
-    # V12: picks 20/21/22 defer to utility. Pick 20 still short-circuits
-    # under DAL_traded (CLE owns via scenario A) -> utility anyway.
-    if pick_num == 20 or pick_num == 21 or pick_num == 22:
+    # Pick 20 / 22 still defer to utility. Pick 21 PIT — analyst consensus
+    # is Cooper Jr (WR, 40% tier-1) but base utility wasn't surfacing him
+    # because PIT's WR need isn't top-3. Force a 35% floor for Cooper at
+    # PIT so the model captures the 2026 analyst signal. Alt candidates
+    # match PIT's roster needs (CB/EDGE).
+    if pick_num == 21:
+        return avail({"Omar Cooper Jr.": 0.35, "Jermod McCoy": 0.20,
+                      "T.J. Parker": 0.15, "Akheem Mesidor": 0.12,
+                      "Kenyon Sadiq": 0.08, "Denzel Boston": 0.05,
+                      "Chris Johnson": 0.05})
+    if pick_num == 20 or pick_num == 22:
         return None
 
     if pick_num == 23:
@@ -1271,9 +1297,11 @@ def determine_trades(rng: np.random.Generator) -> dict:
         trades["MIA_traded_down"] = True
         trades[11] = "unknown"
 
-    # ARI trades up from R2 (34) to pick 30 for Simpson. 4/20 mocks = 20%,
-    # tier-1 credible (Kiper, McShay, Draft Labs, Solak).
-    if rng.random() < 0.20:
+    # ARI trades up from R2 (34) to pick 30 for Simpson. 4 tier-1 mocks
+    # (Kiper, McShay, Draft Labs, Solak) all have it — under-reported in
+    # non-tier-1 mocks because non-tier-1 analysts typically don't mock
+    # trades. Raised 20% -> 28% to better reflect the 4 tier-1 signals.
+    if rng.random() < 0.28:
         trades[30] = "ARI"
         trades["ARI_traded_to_30"] = True
 
