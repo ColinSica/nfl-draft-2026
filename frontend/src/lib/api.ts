@@ -55,6 +55,8 @@ export type Candidate = {
 export type PickRow = {
   pick_number: number;
   team: string | null;
+  original_team?: string | null;
+  most_likely_team?: string | null;
   candidates: Candidate[];
 };
 

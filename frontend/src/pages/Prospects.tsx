@@ -1,8 +1,35 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Search } from 'lucide-react';
+import { Search, ArrowDown } from 'lucide-react';
 import { api } from '../lib/api';
 import { cn } from '../lib/format';
 import { positionColor } from '../lib/teams';
+
+function SortHeader({
+  label, title, active, onClick, className,
+}: {
+  label: string;
+  title?: string;
+  active: boolean;
+  onClick: () => void;
+  className?: string;
+}) {
+  return (
+    <th
+      title={title}
+      onClick={onClick}
+      className={cn(
+        'font-medium py-2.5 cursor-pointer select-none hover:text-text transition',
+        active && 'text-accent',
+        className,
+      )}
+    >
+      <span className="inline-flex items-center gap-1">
+        {label}
+        {active && <ArrowDown size={10} />}
+      </span>
+    </th>
+  );
+}
 
 type Prospect = {
   player: string;
@@ -32,13 +59,13 @@ export function Prospects() {
     [data],
   );
 
-  // Derive model rank by sorting ALL prospects by final_score desc — stays
-  // stable regardless of the current position/search filter so a player's
-  // model rank is an absolute ordering across the whole board.
+  // Derive model rank by sorting ALL prospects by final_score ASCENDING —
+  // lower final_score = earlier projected pick = better rank. Stays stable
+  // regardless of the current position/search filter.
   const modelRankMap = useMemo(() => {
     const byScore = [...data]
       .filter((p) => p.final_score != null)
-      .sort((a, b) => (b.final_score ?? -Infinity) - (a.final_score ?? -Infinity));
+      .sort((a, b) => (a.final_score ?? Infinity) - (b.final_score ?? Infinity));
     const m = new Map<string, number>();
     byScore.forEach((p, i) => m.set(p.player, i + 1));
     return m;
@@ -99,18 +126,12 @@ export function Prospects() {
           <option value="ALL">All positions</option>
           {positions.map((p) => <option key={p} value={p}>{p}</option>)}
         </select>
-        <select
-          value={sortKey}
-          onChange={(e) => setSortKey(e.target.value as any)}
-          className="bg-bg-raised border border-border rounded-md px-3 py-1.5 text-sm outline-none focus:border-accent"
-        >
-          <option value="rank">Sort: consensus rank</option>
-          <option value="model">Sort: model rank</option>
-          <option value="ras">Sort: RAS score</option>
-          <option value="weight">Sort: weight</option>
-        </select>
-        <div className="text-xs text-text-subtle">
-          {filtered.length} / {data.length}
+        <div className="text-xs text-text-subtle ml-auto">
+          Sorted by {
+            sortKey === 'rank' ? 'consensus rank' :
+            sortKey === 'model' ? 'model rank' :
+            sortKey === 'ras' ? 'RAS score' : 'weight'
+          } · {filtered.length} / {data.length}
         </div>
       </div>
 
@@ -118,12 +139,36 @@ export function Prospects() {
         <table className="w-full text-sm min-w-[640px]">
           <thead>
             <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border bg-bg-raised/60">
-              <th className="text-left font-medium py-2.5 pl-4 pr-2 w-20" title="Consensus analyst rank (blended across 20+ mock drafts)">Cons rank</th>
-              <th className="text-left font-medium py-2.5 px-2 w-20" title="Model rank — ordering by stage-1 model score across all prospects">Model rank</th>
+              <SortHeader
+                label="Cons rank"
+                title="Consensus analyst rank (blended across 20+ mock drafts) — click to sort best-first"
+                active={sortKey === 'rank'}
+                onClick={() => setSortKey('rank')}
+                className="text-left pl-4 pr-2 w-20"
+              />
+              <SortHeader
+                label="Model rank"
+                title="Model rank — stage-1 score across all prospects. Click to sort best-first."
+                active={sortKey === 'model'}
+                onClick={() => setSortKey('model')}
+                className="text-left px-2 w-20"
+              />
               <th className="text-left font-medium py-2.5 px-2">Player</th>
               <th className="text-left font-medium py-2.5 px-2">College</th>
-              <th className="text-right font-medium py-2.5 px-2 w-20">Weight</th>
-              <th className="text-right font-medium py-2.5 px-2 w-16">RAS</th>
+              <SortHeader
+                label="Weight"
+                title="Weight (lbs). Click to sort highest-first."
+                active={sortKey === 'weight'}
+                onClick={() => setSortKey('weight')}
+                className="text-right px-2 w-20"
+              />
+              <SortHeader
+                label="RAS"
+                title="Relative Athletic Score. Click to sort highest-first."
+                active={sortKey === 'ras'}
+                onClick={() => setSortKey('ras')}
+                className="text-right px-2 w-16"
+              />
               <th className="text-right font-medium py-2.5 pr-4 pl-2 w-24">Model score</th>
             </tr>
           </thead>

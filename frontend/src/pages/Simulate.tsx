@@ -117,7 +117,8 @@ function PickCard({
           </div>
         </div>
 
-        {/* Team identity */}
+        {/* Team identity — always show the ORIGINAL pick owner. Most-likely
+            team after trades is surfaced via the trade badge below. */}
         <div className="flex-none flex items-center gap-2 sm:gap-2.5 w-16 sm:w-36 md:w-40">
           {team && (
             <img
@@ -667,7 +668,7 @@ function ConfidenceByPickChart({ picks }: { picks: PickRow[] }) {
           return (
             <div
               key={slot}
-              className="flex-1 relative group"
+              className="flex-1 relative group h-full flex items-end"
               title={info
                 ? `Pick ${slot}: ${info.player} (${info.position}) — ${pct.toFixed(0)}%`
                 : `Pick ${slot}: no data`}

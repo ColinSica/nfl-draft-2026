@@ -161,29 +161,29 @@
     },
     "7": {
       "team": "WAS",
-      "player": "Carnell Tate",
-      "position": "WR",
+      "player": "Sonny Styles",
+      "position": "LB",
       "components": {
-        "bpa": 0.654,
-        "need": 0.468,
+        "bpa": 0.653,
+        "need": 0.36,
         "visit": 0.0,
-        "intel": 0.2,
+        "intel": 0.0,
         "pv_mult": 1.0,
         "gm_affinity": 0.8,
-        "score_final": 1.1
+        "score_final": 1.132
       },
       "top_factors": [
         {
-          "key": "team_need",
-          "magnitude": 0.46799999999999997,
-          "label": "WR is a top roster need",
-          "detail": "Need score contributed 0.47 to the total"
-        },
-        {
           "key": "gm_aversion",
           "magnitude": 0.19999999999999996,
-          "label": "GM rarely drafts WR",
+          "label": "GM rarely drafts LB",
           "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
+        },
+        {
+          "key": "post_combine_boost",
+          "magnitude": 0.19999999999999996,
+          "label": "Post-combine riser",
+          "detail": "Stage-1 under-rated; boosted 20% to reflect current mocks"
         }
       ]
     },
@@ -429,29 +429,35 @@
     },
     "17": {
       "team": "DET",
-      "player": "Olaivavega Ioane",
-      "position": "IOL",
+      "player": "Kadyn Proctor",
+      "position": "OT",
       "components": {
-        "bpa": 0.475,
+        "bpa": 0.474,
         "need": 0.5,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 0.95,
-        "gm_affinity": 0.97,
-        "score_final": 1.033
+        "pv_mult": 1.2,
+        "gm_affinity": 0.84,
+        "score_final": 0.982
       },
       "top_factors": [
         {
           "key": "team_need",
           "magnitude": 0.5,
-          "label": "IOL is a top roster need",
+          "label": "OT is a top roster need",
           "detail": "Need score contributed 0.50 to the total"
         },
         {
-          "key": "non_premium_discount",
-          "magnitude": 0.050000000000000044,
-          "label": "IOL is a non-premium position",
-          "detail": "Discounted 5% but still outscored alternatives"
+          "key": "positional_value",
+          "magnitude": 0.19999999999999996,
+          "label": "OT position premium",
+          "detail": "Position-value multiplier 1.20x (premium slot)"
+        },
+        {
+          "key": "gm_aversion",
+          "magnitude": 0.15999999999999992,
+          "label": "GM rarely drafts OT",
+          "detail": "Positional-affinity penalty 0.84x (model picked anyway)"
         }
       ]
     },
@@ -552,45 +558,45 @@
       ]
     },
     "21": {
-      "team": "PIT",
-      "player": "Olaivavega Ioane",
-      "position": "IOL",
-      "components": {
-        "bpa": 0.285,
-        "need": 0.875,
-        "visit": 0.15,
-        "intel": 0.0,
-        "pv_mult": 0.95,
-        "gm_affinity": 0.97,
-        "score_final": 1.444
-      },
-      "top_factors": [
-        {
-          "key": "team_need",
-          "magnitude": 0.875,
-          "label": "IOL is a top roster need",
-          "detail": "Need score contributed 0.88 to the total"
-        },
-        {
-          "key": "non_premium_discount",
-          "magnitude": 0.050000000000000044,
-          "label": "IOL is a non-premium position",
-          "detail": "Discounted 5% but still outscored alternatives"
-        }
-      ]
-    },
-    "22": {
-      "team": "LAC",
+      "team": "CHI",
       "player": "Akheem Mesidor",
       "position": "EDGE",
       "components": {
         "bpa": 0.279,
         "need": 0.7,
+        "visit": 0.15,
+        "intel": 0.0,
+        "pv_mult": 1.3,
+        "gm_affinity": 0.97,
+        "score_final": 1.424
+      },
+      "top_factors": [
+        {
+          "key": "team_need",
+          "magnitude": 0.7000000000000001,
+          "label": "EDGE is a top roster need",
+          "detail": "Need score contributed 0.70 to the total"
+        },
+        {
+          "key": "positional_value",
+          "magnitude": 0.30000000000000004,
+          "label": "EDGE position premium",
+          "detail": "Position-value multiplier 1.30x (premium slot)"
+        }
+      ]
+    },
+    "22": {
+      "team": "LAC",
+      "player": "T.J. Parker",
+      "position": "EDGE",
+      "components": {
+        "bpa": 0.275,
+        "need": 0.7,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.3,
         "gm_affinity": 0.8,
-        "score_final": 1.059
+        "score_final": 1.054
       },
       "top_factors": [
         {
@@ -670,17 +676,17 @@
       ]
     },
     "25": {
-      "team": "KC",
-      "player": "T.J. Parker",
+      "team": "CHI",
+      "player": "Zion Young",
       "position": "EDGE",
       "components": {
-        "bpa": 0.275,
+        "bpa": 0.28,
         "need": 0.7,
-        "visit": 0.0,
+        "visit": 0.15,
         "intel": 0.0,
         "pv_mult": 1.3,
-        "gm_affinity": 1.0,
-        "score_final": 1.318
+        "gm_affinity": 0.97,
+        "score_final": 0.713
       },
       "top_factors": [
         {

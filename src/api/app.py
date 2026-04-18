@@ -55,6 +55,19 @@ ANALYST_CONSENSUS_JSON = FEATURES / "analyst_consensus_2026.json"
 MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026.json"
 MC_CSV = PROCESSED / "monte_carlo_2026_v12.csv"
 MC_TRADES_JSON = PROCESSED / "monte_carlo_trades_2026.json"
+TEAM_CTX_CSV = PROCESSED / "team_context_2026_enriched.csv"
+
+
+def _original_pick_owners() -> dict[int, str]:
+    """Map pick_number -> team for R1 picks per the pre-sim draft order.
+    Used as the canonical owner so the UI shows the DEFAULT draft order
+    instead of post-sim 'most_likely_team' (which can differ when trades
+    fire)."""
+    if not TEAM_CTX_CSV.exists():
+        return {}
+    df = pd.read_csv(TEAM_CTX_CSV)
+    r1 = df[df["round"] == 1][["pick_number", "team"]]
+    return {int(r.pick_number): r.team for _, r in r1.iterrows()}
 PREDICTIONS_CSV = PROCESSED / "predictions_2026.csv"
 PROSPECTS_CSV = PROCESSED / "prospects_2026_enriched.csv"
 
@@ -355,6 +368,7 @@ def latest_simulation() -> dict:
     two different slots: we walk picks 1..32 in order and take the highest-
     probability candidate not yet claimed by an earlier slot. Runner-ups
     at each slot are still shown (they can repeat) as alternatives."""
+    original_owners = _original_pick_owners()
     if not MC_CSV.exists():
         return {"picks": [], "meta": {"file_present": False}}
     df = pd.read_csv(MC_CSV)
@@ -373,7 +387,6 @@ def latest_simulation() -> dict:
     out_picks: list[dict] = []
     for pn in sorted(per_slot.keys()):
         rows = per_slot[pn]
-        # Pick top-1 as first unclaimed, falling back to index 0 if all taken.
         top_idx = next(
             (i for i, r in enumerate(rows)
              if getattr(r, "player", None) not in claimed),
@@ -383,9 +396,17 @@ def latest_simulation() -> dict:
         ordered = ordered[:4]
         if getattr(ordered[0], "player", None):
             claimed.add(ordered[0].player)
+
+        # Canonical owner = original draft order. most_likely_team is the
+        # team that actually held the slot in the majority of sims (post-
+        # trade), exposed separately so the UI can flag trade-altered slots.
+        original_team = original_owners.get(pn)
+        most_likely = getattr(ordered[0], team_col, None)
         out_picks.append({
-            "pick_number": pn,
-            "team": getattr(ordered[0], team_col, None),
+            "pick_number":      pn,
+            "team":             original_team or most_likely,
+            "original_team":    original_team,
+            "most_likely_team": most_likely,
             "candidates": [
                 {
                     "player":          getattr(r, "player", None),
