@@ -1408,7 +1408,7 @@ function TeamPickDetail({ pick, team }: { pick: PickRow; team: any }) {
             <th className="text-left font-medium py-2 pr-2 w-8">#</th>
             <th className="text-left font-medium py-2 pr-2">Player</th>
             <th className="text-left font-medium py-2 pr-2">College</th>
-            <th className="text-right font-medium py-2 w-16">Cons</th>
+            <th className="text-right font-medium py-2 w-20" title="Consensus analyst rank">Cons rank</th>
             <th className="text-right font-medium py-2 pl-2 w-40">Probability</th>
           </tr>
         </thead>

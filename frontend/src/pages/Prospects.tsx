@@ -102,7 +102,7 @@ export function Prospects() {
         <table className="w-full text-sm">
           <thead>
             <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border bg-bg-raised/60">
-              <th className="text-left font-medium py-2.5 pl-4 pr-2 w-12">#</th>
+              <th className="text-left font-medium py-2.5 pl-4 pr-2 w-20" title="Consensus analyst rank (blended across 20+ mock drafts)">Cons rank</th>
               <th className="text-left font-medium py-2.5 px-2">Player</th>
               <th className="text-left font-medium py-2.5 px-2">College</th>
               <th className="text-right font-medium py-2.5 px-2 w-20">Weight</th>
@@ -113,8 +113,10 @@ export function Prospects() {
           <tbody>
             {filtered.slice(0, 100).map((p) => (
               <tr key={p.player} className="border-b border-border/60 last:border-0 hover:bg-bg-hover/40">
-                <td className="py-2 pl-4 pr-2 font-mono tabular-nums text-text-muted">
-                  {p.rank ?? '—'}
+                <td className="py-2 pl-4 pr-2 font-mono tabular-nums">
+                  {p.rank != null ? (
+                    <span className="text-text">#{p.rank}</span>
+                  ) : <span className="text-text-subtle">—</span>}
                 </td>
                 <td className="py-2 px-2">
                   <div className="flex items-center gap-2">
