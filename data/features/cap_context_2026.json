@@ -1,0 +1,194 @@
+{
+  "ARI": {
+    "cap_space_m": 40.0,
+    "dead_cap_m": 12.0,
+    "constraint_tier": "flush",
+    "notes": "Full rebuild post-Kyler trade"
+  },
+  "ATL": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "BAL": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "BUF": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "CAR": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "CHI": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "CIN": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "CLE": {
+    "cap_space_m": null,
+    "dead_cap_m": 72.0,
+    "constraint_tier": "tight",
+    "notes": "Watson contract cap-locked per PDF narrative"
+  },
+  "DAL": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "DEN": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "DET": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "GB": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "HOU": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "IND": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "JAX": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "KC": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "LAC": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "LAR": {
+    "cap_space_m": 8.0,
+    "dead_cap_m": 18.0,
+    "constraint_tier": "tight",
+    "notes": "All-in win-now mode per PDF"
+  },
+  "LV": {
+    "cap_space_m": 50.0,
+    "dead_cap_m": 8.0,
+    "constraint_tier": "flush",
+    "notes": "New ownership direction, reset cap"
+  },
+  "MIA": {
+    "cap_space_m": 45.0,
+    "dead_cap_m": 30.0,
+    "constraint_tier": "tight",
+    "notes": "Rebuild mode post-Tua; dead cap from Hill/Waddle exits"
+  },
+  "MIN": {
+    "cap_space_m": 15.0,
+    "dead_cap_m": 20.0,
+    "constraint_tier": "tight",
+    "notes": "PDF: 'cap situation tightening'"
+  },
+  "NE": {
+    "cap_space_m": 50.0,
+    "dead_cap_m": 8.0,
+    "constraint_tier": "flush",
+    "notes": "Rookie-scale Maye + Vrabel reset"
+  },
+  "NO": {
+    "cap_space_m": null,
+    "dead_cap_m": 50.0,
+    "constraint_tier": "tight",
+    "notes": "PDF explicitly cites dead cap issues"
+  },
+  "NYG": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "NYJ": {
+    "cap_space_m": 65.0,
+    "dead_cap_m": 10.0,
+    "constraint_tier": "flush",
+    "notes": "Rebuild mode, high cap space"
+  },
+  "PHI": {
+    "cap_space_m": 12.0,
+    "dead_cap_m": 15.0,
+    "constraint_tier": "normal",
+    "notes": "Roseman typically runs tight but manageable"
+  },
+  "PIT": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "SEA": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "SF": {
+    "cap_space_m": 22.0,
+    "dead_cap_m": 12.0,
+    "constraint_tier": "normal",
+    "notes": "Deep roster with standard Lynch cap structure"
+  },
+  "TB": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  },
+  "TEN": {
+    "cap_space_m": 55.0,
+    "dead_cap_m": 8.0,
+    "constraint_tier": "flush",
+    "notes": "Complete regime change"
+  },
+  "WAS": {
+    "cap_space_m": null,
+    "dead_cap_m": null,
+    "constraint_tier": "normal",
+    "notes": "no signal \u2014 assumed normal"
+  }
+}

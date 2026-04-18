@@ -1,0 +1,1968 @@
+{
+  "_league": {
+    "how_to_read": "Each team is profiled with archetype-based framing rather than analyst-name predictions. The\nquestion is never \"which specific player will they take\" but \"what type of player are they looking\nfor, and why does that type fit their organizational profile.\"\nStandard sections per team:\nPicks & capital - all R1 picks, total picks, capital tier\nLeadership - GM, HC, OC, DC (flags: new hire, tenure)\n2025 context - record, identity, key performance signals\nQB situation - locked / bridge / rebuilding / unknown\nKey 2026 offseason moves - arrivals, departures, trades (net effect)\nScheme identity - what this tells us about player preferences\nRoster needs (tiered) - urgent (2026 impact) / secondary / latent (2027+ cliff)\nPlayer archetype sought at R1 - specific physical/stylistic profile\nGM behavioral fingerprint - trade tendencies, positional affinity, historical patterns\nKey constraints & uncertainty flags - what could break assumptions\nPredictability tier - HIGH / MEDIUM / LOW",
+    "league_context": "Seven new head coaches (highest-uncertainty teams by definition):\nLV: Klint Kubiak (Shanahan tree)\nMIA: Jeff Haefley (Ohio State DC → NFL)\nTEN: Robert Saleh (Jets, 49ers DC)\nNYG: John Harbaugh (Michigan)\nBUF: Joe Brady (internal promotion)\nBAL: Jesse Minter (Chargers DC → HC)\nCLE: Todd Monken (Ravens OC → HC)\n\nPIT: Mike McCarthy (long-tenured HC returning)\nFour new GMs: LV (Spytek), MIA (Sullivan), NYJ (Mougey, 2nd draft), TEN (Borgonzi, 2nd\ndraft). Each of these represents a hard sample-size problem - league-average priors apply.\nMajor pre-draft trades already executed (reshape pick ownership):\nParsons → GB (Cowboys received pick 20)\nSauce Gardner → IND (Jets received pick 16)\nTrent McDuffie → LAR (Chiefs received pick 29)\nJaylen Waddle → DEN (Dolphins received pick 30)\nTyler Linderbaum → LV (via FA)\nRashan Gary → DAL\nMinkah Fitzpatrick → NYJ\nKyler Murray → MIN (after release by ARI)\nTop-of-draft QB situation: Fernando Mendoza to LV at No. 1 is as close to locked as draft\nprediction gets (-20000 betting odds, unanimous five-analyst consensus). The rest of the QB\nclass is hazier - Ty Simpson and Garrett Nussmeier are the next two names, but both project\nas Day 2 most likely.\nClass shape by position:\nDeep: WR, CB, OT, IDL\nThin at the top: QB (Mendoza and then a gap), EDGE (first tier of ~5, then steep drop)\nBoom/bust: S (Downs is elite, Thieneman safe, then variance)\nHot late-riser zone: interior OL (multiple risers post-Senior Bowl)",
+    "position_abbreviation_key": "QB - Quarterback\nRB - Running Back\nWR - Wide Receiver\nTE - Tight End\nOT - Offensive Tackle\nIOL / G / C - Interior OL / Guard / Center\nEDGE - Edge Rusher (DE/OLB hybrid)\nIDL / DT - Interior Defensive Line / Defensive Tackle\n\nLB - Linebacker\nCB - Cornerback\nS - Safety",
+    "high_uncertainty_teams": "Any model will struggle most with these teams. Expect wide confidence intervals:\n1. Miami Dolphins - NEW GM + NEW HC + 11 picks + multiple needs\n2. Las Vegas Raiders - NEW GM + NEW HC (pick 1 itself is the exception - locked on\nMendoza)\n\n3. Tennessee Titans - NEW GM-2nd year + NEW HC + NEW OC + NEW DC + genuine\narchetype debate at 4\n4. Arizona Cardinals - NEW HC + trade-down specialist + genuine QB vs BPA tension at 3\n5. Cleveland Browns - High trade-down probability + QB unresolved + 2 R1 picks\n6. Dallas Cowboys - Highest trade-up probability in the league (reshapes top 10 if\nexecuted)\n7. New York Giants - Multiple archetypes live at 5 + Lawrence trade impasse",
+    "most_predictable_picks": "Teams where the archetype is clear enough to have high model confidence:\n1. LV #1 - Mendoza, absolute lock (-20000 odds)\n2. TB #15 - EDGE, publicly stated by GM\n3. CIN #10 - CB, acute need + Golden scheme demands it\n4. DET #17 - OT or EDGE (Holmes' +14% affinity is strongest signal in dataset)\n5. LAC #22 - Trench player (Harbaugh identity overwhelming)\n6. KC #9 + #29 - CB + WR split, both positions locked even if players aren't",
+    "gm_strongest_fingerprints": "These GMs have enough drafts in-role to generate reliable positional affinity signals:\n\nGM Team Drafts Strongest Affinity Key Pattern\nBrad Holmes DET 5 EDGE +14% (strongest in\nleague)\nNever misses chance at pass rush\nDuke Tobin CIN 9 EDGE +11%, OT +6% Never trades, trench-focused\nMickey\nLoomis\nNO 15+ BPA + premium positions Never trades down (0 in 15 years)\nLes Snead LAR14+ C +13%, IDL +13%, TE +9% Ultimate trade-down king\nJerry Jones DAL 15+ EDGE +14%, IDL +10%, TE\n+7%\nAggressive, emotional picks\nJohn\nSchneider\nSEA 16+ Defense-heavy 24 career trade-downs\nAndrew Berry CLE 7 LB +18%, IDL +13%, S +9% Youngest avg pick age, defensive\nHowie\nRoseman\nPHI 15+ LB +12%, IDL +7%, S +6% Defense-heavy (diverges from \"OL\"\nnarrative)\nBrian\nGutekunst\nGB 8 Highest avg RAS in league Athleticism above all\nChris Ballard IND 9 IDL +15%, WR +9% Heavy trade-down (15:5 ratio)",
+    "trade_up_candidates": "In descending probability:\n1. Dallas Cowboys (12+20) - MOST LIKELY TO TRADE UP per Rapoport. Target: pick 4-6.\nPartners: CLE, TEN.\n2. Kansas City Chiefs - Veach openly said trade-heavy draft. Capital + specific need profile.\n3. Philadelphia Eagles - Roseman's history of tactical moves + AJ Brown trade scenario.\n4. New Orleans Saints - Loomis ONLY trades up (0 down since 2011).",
+    "trade_down_candidates": "1. Arizona Cardinals (3) - Ossenfort's trade-down history + QB class doesn't justify #3\n2. Tennessee Titans (4) - Willing partner for Cowboys, Borgonzi wants top-100 volume\n\n3. Cleveland Browns (6) - Berry's aggression + multiple scenarios projected by analysts\n4. Seattle Seahawks (32) - Schneider's 24 career trade-downs + only 4 total picks\n5. Miami Dolphins (30) - 11 picks already, need capital spread\n6. Los Angeles Rams (13) - Snead's historical pattern dominates",
+    "hard_trade_constraints": "NO Loomis: Zero trade-downs in 15 years. Do not model any trade-down scenario.\nCIN/LAC: Combined 7 trades in 5 years - essentially never move.\nBAL: Has NOT moved R1 pick in 5 consecutive drafts.",
+    "predictability_summary": "Tier Teams Model Guidance\nHIGH (confidence\n80%+)\nLV#1, TB#15, LAC#22 Archetype + player both clear\nMEDIUM-HIGH CIN#10, DET#17, BUF#26, CHI#25 Position clear, player split\nMEDIUM NE#31, NYJ#2+16, NO#8, KC#9+29, WAS#7,\nBAL#14, SEA#32\nMultiple archetypes, position-\nlevel clarity\nLOW-MEDIUM NYG#5, PHI#23, LAR#13, CAR#19 Genuine uncertainty on\narchetype\nLOW TEN#4, MIA#11+30, ARI#3, CLE#6+24,\nDAL#12+20\nTrade-dependent or new\nregime",
+    "position_run_dependencies": "These picks are sensitive to what happens earlier:\nMIN #18 S → CAR #19 S: If MIN takes Thieneman-type S, CAR's S probability drops ~50%\nARI #3 EDGE → NYG #5: Cascade depends on which EDGE is available\nCLE #6 WR → WAS #7 WR: If Cleveland takes top WR, Washington's WR options narrow\nNYJ #2 Bailey/Reese → ARI #3: Inverse cascade (whoever NYJ doesn't take becomes\nARI's likely target)",
+    "position_urgency_heat_map": "Positions appearing as URGENT need (4+ score) for multiple teams:\nEDGE - BUF, MIA, NE, NYJ, CIN, CLE, JAX, CHI, DAL, DEN, KC, LAC, NO, TB, PHI, ATL,\nARI (17 teams)\nCB - MIA, KC, DAL, NYJ, CIN (5 teams urgent + many secondary)\nWR - MIA, CLE, NO, NYJ, WAS, NE (6 teams)\nOL/OT - BAL, NYG, CAR, LAR, SF, HOU, DET, LAC, NE, CLE, TEN (11 teams)\nIDL - BAL, MIN, HOU, BUF (4 teams urgent + many secondary)\nTakeaway: The class depth profile should match demand - WR and OT are deep in this class,\nwhich matches demand. EDGE demand vastly exceeds supply at the top (first tier of ~5, then\nsteep dropoff). CB depth is good but the top-5 is contested.",
+    "scheme_change_flags": "Teams with NEW HC/OC/DC where historical drafting patterns may be unreliable:\nTEN: Saleh/Daboll/Bradley - Bradley's Cover-3 demands big press CBs, centerfield S\nMIA: Haefley - Ohio State template, rangy athletic DBs\nBUF: Brady + Leonhard 3-4 shift - nose tackle anchor need\nNYG: Harbaugh (identity TBD - flagged data concern) - physicality mandate\nCLE: Monken - Ravens offensive template, TE/WR premium\nBAL: Minter - Chargers defensive DNA, aggressive coverage rotations\nLV: Kubiak - Shanahan tree, outside zone, play-action\nCIN: Golden (DC) - college scheme importing demands CB/LB versatility",
+    "known_unknowns": "Things that could shock the draft and invalidate predictions:\n1. Cowboys execute trade-up into top 6 (40% probability per sources) - shifts every pick 3-\n10\n2. AJ Brown traded - Eagles become WR-hunting team at 23\n3. Dexter Lawrence trade resolves - Giants' IDL need either disappears or spikes\n4. Unexpected QB at 2 - if NYJ goes QB instead of EDGE, cascade shifts\n5. Medical red flag on Jermod McCoy or other ACL recovery - boards reshuffle\n6. Late riser not yet in analyst consensus - Omar Cooper Jr, Jake Freeling types\n\nMODEL INPUT SUMMARY",
+    "by_team_quick_reference": "Team Pick(s) Primary Archetype GM Affinity Trade Prob Conf\nLV 1 QB (Mendoza) N/A new Low HIGH\nNYJ 2, 16 EDGE/LB then WR/CB N/A new Mod MED\nARI 3 EDGE (best available) IDL/CB HIGH down LOW\nTEN 4 RB/EDGE/OL tension N/A new HIGH down LOW\nNYG 5 LB/S hybrid or RB EDGE/WR Mod MED\nCLE 6, 24 WR or trade-down LB/IDL/OT HIGH down LOW\nWAS 7 WR1 separator TE/QB/CB Low MED\nNO 8 Best EDGE/WR N/A Up only MED\nKC 9, 29 CB then WR N/A small HIGH up MED\nCIN 10 CB (scheme) EDGE/OT Very low MED-HIGH\nMIA 11, 30 CB/WR then BPA N/A new HIGH down LOW\nDAL 12, 20 EDGE/LB/S EDGE/IDL HIGH up LOW\nLAR 13 WR or trade-down C/IDL/TE HIGH down LOW-MED\nBAL 14 WR/OL versatile S/LB/EDGE Very low LOW-MED\nTB 15 EDGE (stated) N/A mid Mod HIGH\nDET 17 OT/EDGE EDGE +14% Mod MED-HIGH\nMIN 18 IDL/S G/QB/CB Mod MED\nCAR 19 OL/S/TE WR/RB (noisy) Mod LOW-MED\nPIT 21 OL (IOL focus) IDL/QB Mod MED\nLAC 22 Trench (OL/DL) N/A small Very low MED-HIGH\nPHI 23 EDGE/OT LB/IDL/S High up MED\n\nTeam Pick(s) Primary Archetype GM Affinity Trade Prob Conf\nCHI 25 EDGE/S CB/IDL/S Mod MED-HIGH\nBUF 26 Front-7 (IDL/EDGE/LB) IDL/CB Mod MED\nSF 27 OT (Williams succession) N/A small Mod MED-HIGH\nHOU 28 OL (IOL focus) or IDL WR/S/QB Mod MED\nNE 31 EDGE or OT N/A small Mod MED\nSEA 32 RB/CB/S or trade-down N/A HIGH down LOW",
+    "position_demand_rank": "1. EDGE - 17 teams with urgent need, top of every board\n2. OL/OT - 11 teams\n3. CB - 5 teams acute + many secondary\n4. WR - 6 teams\n5. IDL - 4 teams acute + many secondary\n6. S - 3 teams acute\n7. QB - 3 teams real consideration (LV locked, CLE/PIT bridge-y)\n8. LB - 2 teams acute\n9. RB - 2 teams acute (TEN, SEA)\n10. TE - 1 team (TB as secondary)",
+    "data_quality_notes": "Sources consolidated:\nUser-provided research library (6 documents)\n2 PDF team-by-team reports\nCurrent team_agents_2026.json computed data\nVerification searches for draft order and TEN coaching staff\nKnown data gaps (flagged):\nPIT HC (your base data says McCarthy, but public reporting unclear - Tomlin may still be\nHC)\n\nNYG HC identity (John Harbaugh listed - worth verifying vs Jim Harbaugh)\nSome FA moves only populated for 16 \"explicit user spec\" teams; other 16 use \"researched\ndefault\"\nNo cap situation data for most teams (Spotrac scrape failed per note)\nVisit data volumes vary wildly (CIN has 49 confirmed visits, LV has 2) - coverage\nasymmetry\nConfidence adjustments needed in modeling:\nTeams with fewer than 8 visits confirmed should have higher uncertainty\nNew GMs (4 teams) should use league-average priors\nScheme-change teams (7+ teams) should have widened positional value intervals\nPick positions with historical high trade rates (final 10 of R1 = 46% move per PFF) should\nhave explicit trade-risk flags\nEnd of document. Compiled April 17, 2026 - T-6 days to 2026 NFL Draft.",
+    "preamble": "2026 NFL Draft - Comprehensive Team Profiles\nDraft dates: April 23-25, 2026 (Pittsburgh) | Compiled: April 17, 2026 (T-6 days)",
+    "trade_up_candidates_struct": [
+      {
+        "rank": 1,
+        "team": "DAL",
+        "picks": "12+20",
+        "notes": "MOST LIKELY TO TRADE UP per Rapoport. Target: pick 4-6."
+      },
+      {
+        "rank": 2,
+        "team": "KC",
+        "picks": null,
+        "notes": "Veach openly said trade-heavy draft. Capital + specific need profile."
+      },
+      {
+        "rank": 3,
+        "team": "PHI",
+        "picks": null,
+        "notes": "Roseman's history of tactical moves + AJ Brown trade scenario."
+      },
+      {
+        "rank": 4,
+        "team": "NO",
+        "picks": null,
+        "notes": "Loomis ONLY trades up (0 down since 2011)."
+      }
+    ],
+    "trade_down_candidates_struct": [
+      {
+        "rank": 1,
+        "team": "ARI",
+        "picks": "3",
+        "notes": "Ossenfort's trade-down history + QB class doesn't justify #3"
+      },
+      {
+        "rank": 2,
+        "team": "TEN",
+        "picks": "4",
+        "notes": "Willing partner for Cowboys, Borgonzi wants top-100 volume"
+      },
+      {
+        "rank": 3,
+        "team": "CLE",
+        "picks": "6",
+        "notes": "Berry's aggression + multiple scenarios projected by analysts"
+      },
+      {
+        "rank": 4,
+        "team": "SEA",
+        "picks": "32",
+        "notes": "Schneider's 24 career trade-downs + only 4 total picks"
+      },
+      {
+        "rank": 5,
+        "team": "MIA",
+        "picks": "30",
+        "notes": "11 picks already, need capital spread"
+      },
+      {
+        "rank": 6,
+        "team": "LAR",
+        "picks": "13",
+        "notes": "Snead's historical pattern dominates"
+      }
+    ],
+    "cascade_rules_struct": [
+      {
+        "trigger_team": "MIN",
+        "trigger_pick": 18,
+        "trigger_position": "S",
+        "dependent_team": "CAR",
+        "dependent_pick": 19,
+        "dependent_position": "S",
+        "effect": "If MIN takes Thieneman-type S, CAR's S probability drops ~50%",
+        "raw": "MIN #18 S → CAR #19 S: If MIN takes Thieneman-type S, CAR's S probability drops ~50%"
+      },
+      {
+        "trigger_team": "ARI",
+        "trigger_pick": 3,
+        "trigger_position": "EDGE",
+        "dependent_team": "NYG",
+        "dependent_pick": 5,
+        "dependent_position": "EDGE",
+        "effect": "Cascade depends on which EDGE is available",
+        "raw": "ARI #3 EDGE → NYG #5: Cascade depends on which EDGE is available"
+      },
+      {
+        "trigger_team": "CLE",
+        "trigger_pick": 6,
+        "trigger_position": "WR",
+        "dependent_team": "WAS",
+        "dependent_pick": 7,
+        "dependent_position": "WR",
+        "effect": "If Cleveland takes top WR, Washington's WR options narrow",
+        "raw": "CLE #6 WR → WAS #7 WR: If Cleveland takes top WR, Washington's WR options narrow"
+      }
+    ],
+    "known_unknowns_struct": [
+      "Cowboys execute trade-up into top 6 (40% probability per sources) - shifts every pick 3-",
+      "AJ Brown traded - Eagles become WR-hunting team at 23",
+      "Dexter Lawrence trade resolves - Giants' IDL need either disappears or spikes",
+      "Unexpected QB at 2 - if NYJ goes QB instead of EDGE, cascade shifts",
+      "Medical red flag on Jermod McCoy or other ACL recovery - boards reshuffle",
+      "Late riser not yet in analyst consensus - Omar Cooper Jr, Jake Freeling types"
+    ],
+    "hard_trade_constraints_struct": [
+      {
+        "teams": [
+          "NO"
+        ],
+        "constraint": "Zero trade-downs in 15 years. Do not model any trade-down scenario.",
+        "raw": "NO Loomis: Zero trade-downs in 15 years. Do not model any trade-down scenario."
+      },
+      {
+        "teams": [
+          "CIN",
+          "LAC"
+        ],
+        "constraint": "Combined 7 trades in 5 years - essentially never move.",
+        "raw": "CIN/LAC: Combined 7 trades in 5 years - essentially never move."
+      },
+      {
+        "teams": [
+          "BAL"
+        ],
+        "constraint": "Has NOT moved R1 pick in 5 consecutive drafts.",
+        "raw": "BAL: Has NOT moved R1 pick in 5 consecutive drafts."
+      }
+    ]
+  },
+  "ARI": {
+    "leadership": "GM Monti Ossenfort (3 drafts) | HC Mike LaFleur (NEW, from LAR OC) | OC\nLaFleur doubles | DC Nick Rallis (retained)",
+    "context_2025": "3-14. Kyler Murray traded to MIN after disappointing 2025. Full rebuild.",
+    "qb_situation": "REBUILDING - Jacoby Brissett and Gardner Minshew as bridges. Real\nconsideration of developmental QB.",
+    "offseason_moves": "Added: Isaac Seumalo G, Kendrick Bourne WR, Brissett QB, Minshew QB, several short-\nterm veterans\nLost: Kyler Murray QB (trade to MIN), multiple veterans\nNet effect: Full rebuild. Maximum flexibility.",
+    "scheme_identity": "LaFleur is McVay tree - outside zone, play-action, spread formations.\nPremium positions: WR, OT, RB, mobile QB. Rallis defense aggressive 3-4.",
+    "roster_needs_tiered": "Urgent (4+): QB (real possibility - but at 3 is too rich), EDGE (bottom-5 sacks twice in 3\nyears - best need-meets-value at 3), OT (OL hasn't progressed enough)\nSecondary (3+): IDL\nModerate (2.5): WR",
+    "player_archetypes": {
+      "3": "Pick 3 faces the best-available-EDGE vs. scheme-fit-QB vs.\ncornerstone-OT debate. Given pick value (3 is premium), the archetype is the best EDGE on\nthe board - this is both need and value. A QB at 3 would be a reach per most analysts because\nbetter QB value exists at Day 2 (Simpson). OT also fits. Ossenfort's trade-down history makes a\nmove to 5-10 range plausible, in which case target shifts to a specific scheme-fit QB (Simpson\nprofile - accurate passer with developmental upside)."
+    },
+    "gm_fingerprint": "(Ossenfort, 3 drafts):\nTrade tendency: Strong trade-down tendency - 6 trade-downs, 1 trade-up in 2 years.\nHeavy accumulator.\n\nPositional affinity (computed): IDL +24.7%, CB +11.0%, EDGE +9.0%\nPattern: Ossenfort is a rebuilder - classic \"trade back and accumulate picks\"",
+    "uncertainty_flags": "Trade-down probability is HIGH (0.45+)\nFull regime change makes scheme predictions uncertain\nQB vs best-player-available tension at this exact slot",
+    "predictability_tier": "LOW. Multiple archetypes + high trade-down probability.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      3
+    ],
+    "pick_note": null,
+    "header_raw": "Arizona Cardinals - Pick 3",
+    "scheme_struct": {
+      "type": "mcvay_spread",
+      "premium": [
+        "WR",
+        "OT",
+        "RB",
+        "QB"
+      ],
+      "raw": "LaFleur is McVay tree - outside zone, play-action, spread formations.\nPremium positions: WR, OT, RB, mobile QB. Rallis defense aggressive 3-4."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Isaac Seumalo G",
+        "Kendrick Bourne WR",
+        "Brissett QB",
+        "Minshew QB",
+        "several short- term veterans"
+      ],
+      "departures": [
+        "Kyler Murray QB (trade to MIN)",
+        "multiple veterans"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {
+      "trade_down_tier": "HIGH",
+      "trade_down_prob": 0.7
+    },
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Monti Ossenfort",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "ATL": {
+    "leadership": "GM Terry Fontenot (5 drafts) | HC Raheem Morris | OC Zac Robinson | DC Jeff\nUlbrich",
+    "context_2025": "8-9. Penix Jr. took over and flashed but still raw. No R1 after Penix trade-up in\n2024.",
+    "qb_situation": "BRIDGE-Y. Tua signed as veteran (from MIA), Penix competing. Interesting QB\nroom dynamic.",
+    "offseason_moves": "Added: Tua Tagovailoa QB, Jahan Dotson WR, Olamide Zaccheaus WR, Christian Harris\nLB, Nick Folk K\nLost: Kaleb McGary OT (retired), James Pearce Jr. legal issues (draft pick from last year\nnow uncertain)\nNet effect: Offense repositioned around Tua/Penix competition; RT hole created by\nMcGary retirement.",
+    "scheme_identity": "Morris hybrid 4-3. Robinson offense is Shanahan-tree. Premium positions:\nWR, OT, EDGE.",
+    "roster_needs_tiered": "Urgent (4+): WR (London needs real WR2 - Dotson/Zaccheaus are WR3/4 talent), OT\n(McGary retired)\nSecondary (3): EDGE (Pearce uncertainty), CB, IDL\nModerate: Defensive depth",
+    "player_archetypes": {
+      "48": "Day 2 archetype - an interior OL with versatility or a second-\nlevel defender (LB or S) with athletic upside."
+    },
+    "gm_fingerprint": "(Fontenot, 5 drafts):\nTrade tendency: Moderate\nPositional affinity (computed): EDGE +22.3%, TE +5.4%, RB +4.1% - Fontenot loves pass\nrushers\nPattern: Fontenot has a strong EDGE affinity - expect them to hunt for pass rush even\nwithout R1",
+    "uncertainty_flags": "No R1 reduces coverage\nQB competition creates offensive uncertainty",
+    "predictability_tier": "LOW (Day 2 standard).",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      48
+    ],
+    "pick_note": "No R1, traded to LAR",
+    "header_raw": "Atlanta Falcons - Pick 48 (No R1, traded to LAR)",
+    "scheme_struct": {
+      "type": "shanahan_zone",
+      "premium": [
+        "WR",
+        "OT",
+        "EDGE"
+      ],
+      "raw": "Morris hybrid 4-3. Robinson offense is Shanahan-tree. Premium positions:\nWR, OT, EDGE."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Tua Tagovailoa QB",
+        "Jahan Dotson WR",
+        "Olamide Zaccheaus WR",
+        "Christian Harris LB",
+        "Nick Folk K"
+      ],
+      "departures": [
+        "Kaleb McGary OT (retired)",
+        "James Pearce Jr. legal issues (draft pick from last year now uncertain)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Terry Fontenot",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "BAL": {
+    "leadership": "GM Eric DeCosta (7 drafts) | HC Jesse Minter (NEW, from Chargers DC) | OC Todd\nMonken (departed to CLE as HC - replaced by Josh Grimes as internal promotion) | DC Jesse\nMinter doubles as DC philosophy",
+    "context_2025": "13-4, division champion, lost in AFC Championship. Lamar Jackson still elite but\ndefense regressed (pressure rate 29th, pass-rush grade 28th). Harbaugh era ended - Minter\npromoted from Chargers.",
+    "qb_situation": "LOCKED (Lamar Jackson)",
+    "offseason_moves": "Added: Trey Hendrickson EDGE (4yr $112M - massive signing), John Simpson G\n\nLost: Tyler Linderbaum C (to LV, $81M/3yr), Madubuike neck injury uncertainty\nNet effect: Pass rush reloaded with Hendrickson but interior OL lost anchor. IDL\nuncertainty with Madubuike.",
+    "scheme_identity": "Minter's defense is 4-3 base with aggressive coverage rotations, multiple\nsimulated pressures. Premium positions: EDGE, OT, CB, S. Offense remains Lamar-centric -\nRPO heavy with physical run game.",
+    "roster_needs_tiered": "Urgent (3.5+): OT (Linderbaum gone - center succession critical; tackle depth also thin),\nWR (need hulking complement to Zay Flowers - they lack a true X)\nSecondary (3): EDGE depth behind Hendrickson, IDL (Madubuike injury)\nLatent: IOL depth (Simpson is one-year stop-gap)",
+    "player_archetypes": {
+      "14": "Because Baltimore historically takes BPA with premium-\nposition tiebreakers, two distinct archetypes are live: (1) a big-bodied power-slot or contested-\ncatch WR to complement Flowers and give Lamar a red-zone target, or (2) a versatile OL who\ncan play center and kick out to tackle (Fano-type profile) to solve both the Linderbaum\nreplacement and tackle depth issues at once. A third less likely but plausible: a tight end with\ninline blocking + seam-stretching receiving ability given Lamar's love of TE usage."
+    },
+    "gm_fingerprint": "(DeCosta):\nTrade tendency: Low - BAL has NOT moved their R1 pick in 5 consecutive drafts. Near-\nzero trade-down probability.\nPositional affinity (computed from 7 drafts): S +15.0%, LB +9.7%, EDGE +9.0% -\nhistorically defense-heavy\nPattern: BPA tiebreaker is premium position. Comfortable waiting for the board to come\nto them.",
+    "uncertainty_flags": "New HC (Minter) but GM continuity - DeCosta's board dominates\nBoard is unusually wide at 14 (many defensible archetypes)\nPick 14 is one of the harder R1 picks to predict league-wide",
+    "predictability_tier": "LOW-MEDIUM. Broad board, GM's defensive tilt fights against the acute\noffensive needs.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      14
+    ],
+    "pick_note": null,
+    "header_raw": "Baltimore Ravens - Pick 14",
+    "scheme_struct": {
+      "type": "minter_multiple",
+      "premium": [
+        "EDGE",
+        "OT",
+        "CB",
+        "S"
+      ],
+      "raw": "Minter's defense is 4-3 base with aggressive coverage rotations, multiple\nsimulated pressures. Premium positions: EDGE, OT, CB, S. Offense remains Lamar-centric -\nRPO heavy with physical run game."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Trey Hendrickson EDGE (4yr $112M - massive signing)",
+        "John Simpson G"
+      ],
+      "departures": [
+        "Tyler Linderbaum C (to LV, $81M/3yr)",
+        "Madubuike neck injury uncertainty"
+      ]
+    },
+    "latent_needs_struct": {
+      "IOL": 2.0
+    },
+    "predictability_enum": "LOW-MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Eric DeCosta",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "no_r1_movement_streak",
+        "raw": "has NOT moved their R1 pick in 5 consecutive"
+      }
+    ]
+  },
+  "BUF": {
+    "leadership": "GM Brandon Beane (8 drafts) | HC Joe Brady (NEW, promoted from OC) | OC Joe\nBrady (retained role) | DC Bobby Babich",
+    "context_2025": "12-5, AFC East champion again but another playoff exit. Record-setting offense,\ndefense that collapsed in run defense (28th) and wasn't getting enough pass rush (15th in\nsacks). Allen won MVP again. The team's identity question is defense - they cannot win a\nSuper Bowl with this D.",
+    "qb_situation": "LOCKED (Josh Allen)",
+    "offseason_moves": "Major trade: Acquired DJ Moore from Bears (3rd + future 3rd) - instant WR1\ncomplement to existing room\nAdded: Bradley Chubb EDGE (3yr deal, replacement for Bosa), Connor McGovern C\n(extension)\nLost: Joey Bosa EDGE, AJ Epenesa EDGE, Matt Milano LB, David Edwards G, multiple DB\ndepth\nNet effect: Offense got better (Moore), defense front-seven depleted despite Chubb\naddition. LB room needs rebuild.",
+    "scheme_identity": "Brady offense is Moore/McDermott evolved - heavy motion, Allen-first,\nRPO-heavy. Defense under Babich continues modified Leonhard 3-4 principles requiring nose\ntackle anchor and versatile edges. Premium positions: EDGE, IOL, CB.",
+    "roster_needs_tiered": "Urgent (4+): EDGE (depth behind aging Chubb, Bosa/Epenesa gone), IDL (run D 28th,\nneed nose tackle anchor for scheme shift)\nSecondary (3): LB (Milano replacement), IOL (Edwards gone)\nLatent: EDGE succession (Chubb, Mack, Dupree all expire after 2026), CB depth for 2027",
+    "player_archetypes": {
+      "26": "Given pick 26 and the class shape, the natural profile is a run-\nstuffing interior defender with pass-rush juice (the nose tackle the scheme demands) OR a\nlong-limbed edge rusher with developmental upside to replace the aging trio. Buffalo at 26\nsits exactly in the tier break where top-10 IDL talent is gone but mid-first IDL/EDGE are at their\nbest value-to-cost ratio. A third archetype: versatile off-ball LB with 3-down coverage ability\nto replace Milano's role."
+    },
+    "gm_fingerprint": "(Beane):\nTrade tendency: Moderate - willing to move back for volume when board cooperates\n(~35% up, ~40% down)\nPositional affinity (computed from 8 drafts): IDL +14.7%, CB +11.0%, S +5.0% - defense-\nheavy historical investor\nAthletic profile: Above-average RAS preference\nPattern: Aggressive in-trade GM (Diggs trade, Moore trade, Chubb signing) - has shown\nwillingness to swing big",
+    "uncertainty_flags": "New HC (Brady) makes scheme specifics uncertain\nPick 26 is in a classic tier-break zone - high trade-down probability\nPost-Moore trade, WR is NOT a need anymore; model should suppress WR probability",
+    "predictability_tier": "MEDIUM. Strong positional consensus (defense, specifically front-7),\nmoderate player uncertainty within that.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      26
+    ],
+    "pick_note": null,
+    "header_raw": "Buffalo Bills - Pick 26",
+    "scheme_struct": {
+      "type": "leonhard_3-4",
+      "premium": [
+        "EDGE",
+        "IOL",
+        "CB"
+      ],
+      "raw": "Brady offense is Moore/McDermott evolved - heavy motion, Allen-first,\nRPO-heavy. Defense under Babich continues modified Leonhard 3-4 principles requiring nose\ntackle anchor and versatile edges. Premium positions: EDGE, IOL, CB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Bradley Chubb EDGE (3yr deal, replacement for Bosa)",
+        "Connor McGovern C (extension)"
+      ],
+      "departures": [
+        "Joey Bosa EDGE",
+        "AJ Epenesa EDGE",
+        "Matt Milano LB",
+        "David Edwards G",
+        "multiple DB depth"
+      ]
+    },
+    "latent_needs_struct": {
+      "EDGE": 2.0,
+      "CB": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Brandon Beane",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "CAR": {
+    "leadership": "GM Dan Morgan (2 drafts) | HC Dave Canales | OC Brad Idzik | DC Ejiro Evero",
+    "context_2025": "6-11. Bryce Young took real step forward in Year 3. McMillan emerged as WR1.\nOffense ranked 27th in scoring despite the progress.",
+    "qb_situation": "LOCKED (Bryce Young - improved trajectory)",
+    "offseason_moves": "Added: Jaelan Phillips EDGE (from MIA), Devin Lloyd LB (from JAX), Stone Forsythe OT,\nKenny Pickett QB (backup), Rasheed Walker OT (from GB), John Metchie III WR\nLost: Rico Dowdle RB (to PIT)\n\nNet effect: Defense upgraded (Phillips, Lloyd), OL patched with stop-gaps.",
+    "scheme_identity": "Canales offense is West Coast with heavy screens + TE usage. Evero defense\nis multiple-front 3-4. Premium positions: OL, S, TE.",
+    "roster_needs_tiered": "Urgent (4.5+): OL (Ekwonu ACL rehab, Walker stop-gap, no long-term C)\nSecondary (3+): S (Moehrig complement needed), WR (McMillan alone - need WR2)\nModerate (2.5): EDGE depth, IDL",
+    "player_archetypes": {
+      "19": "Given Canales' scheme and the interior line emergency, two\narchetypes live: (1) a mauler guard or versatile interior OL to stabilize protection for Young, or\n(2) a safety with Cover-3 centerfield range to pair with Moehrig. Tertiary: a seam-stretching\nTE given Canales' scheme loves TE mismatches."
+    },
+    "gm_fingerprint": "(Morgan, 2 drafts):\nTrade tendency: Moderate, small sample\nPositional affinity (computed, 2 drafts - noisy): WR +29.0%, RB +18.0%, EDGE +14.0% -\nbut sample too small for confidence\nPattern: Morgan from Buffalo scouting tree - historical Beane-influenced patterns",
+    "uncertainty_flags": "Small GM sample\nPosition-run dependency: if Minnesota takes S at 18, Carolina S drops in probability\nYoung's surprising ascent changes WR urgency",
+    "predictability_tier": "LOW-MEDIUM. Multiple archetypes plausible.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      19
+    ],
+    "pick_note": null,
+    "header_raw": "Carolina Panthers - Pick 19",
+    "scheme_struct": {
+      "type": "canales_westcoast",
+      "premium": [
+        "OL",
+        "S",
+        "TE"
+      ],
+      "raw": "Canales offense is West Coast with heavy screens + TE usage. Evero defense\nis multiple-front 3-4. Premium positions: OL, S, TE."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Jaelan Phillips EDGE (from MIA)",
+        "Devin Lloyd LB (from JAX)",
+        "Stone Forsythe OT",
+        "Kenny Pickett QB (backup)",
+        "Rasheed Walker OT (from GB)",
+        "John Metchie III WR"
+      ],
+      "departures": [
+        "Rico Dowdle RB (to PIT)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW-MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Dan Morgan",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "CHI": {
+    "leadership": "GM Ryan Poles (4 drafts) | HC Ben Johnson (NEW, from DET OC - major hire) | OC\nJohnson doubles | DC Eric Washington",
+    "context_2025": "9-8. Playoff team for first time in years. Caleb Williams solid Year 2. Defense\nregressed due to injuries.",
+    "qb_situation": "LOCKED (Caleb Williams)",
+    "offseason_moves": "Added: Garrett Bradbury C (FA), Coby Bryant S, Devin Bush LB, Kalif Raymond WR\nLost: DJ Moore WR (trade to BUF - major), Jaquan Brisker S, Kevin Byard S, Tremaine\nEdmunds LB, Drew Dalman C (retired), Ozzy Trapilo OT (ACL)\n\nNet effect: Moved DJ Moore to clear WR hierarchy for Burden/Odunze. Defense lost 3\nsafeties and a linebacker. OL depth hit hard.",
+    "scheme_identity": "Johnson's offense is the DET template - explosive, physical, efficient motion\n+ play-action. Values versatile WRs, strong OL, mobile TEs. Washington's defense is aggressive\npressure-based. Premium positions under this duo: EDGE, S, IDL, OL.",
+    "roster_needs_tiered": "Urgent (5+): EDGE (Odeyingbo torn ACL + $48M bust, 35 sacks t-7th fewest, only Sweat\nreliable)\nSecondary (4): S (Brisker + Byard both gone)\nModerate (3): OT (Trapilo ACL, depth thin), IDL\nModerate (2.5): LB (Edmunds gone but Bush added)",
+    "player_archetypes": {
+      "25": "Given the EDGE emergency, the primary archetype is a power\nedge rusher with consistent pressure-generation - someone who can replace Odeyingbo's\ncontract while actually producing. Alternative: an alpha free safety with centerfield range\ngiven both safety starters are gone. Tertiary: a center-of-the-box DT to anchor the interior."
+    },
+    "gm_fingerprint": "(Poles, 4 drafts):\nTrade tendency: Moderate (0.30/0.35)\nPositional affinity (computed): CB +11.0%, IDL +4.7%, S +5.0% - defense-leaning with\nsecondary bias\nPattern: Poles has invested heavily in offense recently (Caleb Williams, DJ Moore trade,\nBurden pick) - expect defensive priority in 2026. The \"Poles never drafts EDGE\"\nnarrative is actually false - his pattern is CB-forward, not EDGE-avoidant.",
+    "uncertainty_flags": "Ben Johnson's first draft as HC - scheme details shifting\nEDGE depth in class determines if they can get starter-caliber at 25 or should reach\nSafety class is boom/bust (Downs/Thieneman then dropoff)",
+    "predictability_tier": "MEDIUM-HIGH. Position (EDGE or S) is very clear.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      25
+    ],
+    "pick_note": null,
+    "header_raw": "Chicago Bears - Pick 25",
+    "scheme_struct": {
+      "type": "default",
+      "premium": [
+        "EDGE",
+        "S",
+        "IDL",
+        "OL"
+      ],
+      "raw": "Johnson's offense is the DET template - explosive, physical, efficient motion\n+ play-action. Values versatile WRs, strong OL, mobile TEs. Washington's defense is aggressive\npressure-based. Premium positions under this duo: EDGE, S, IDL, OL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Garrett Bradbury C (FA)",
+        "Coby Bryant S",
+        "Devin Bush LB",
+        "Kalif Raymond WR"
+      ],
+      "departures": [
+        "DJ Moore WR (trade to BUF - major)",
+        "Jaquan Brisker S",
+        "Kevin Byard S",
+        "Tremaine Edmunds LB",
+        "Drew Dalman C (retired)",
+        "Ozzy Trapilo OT (ACL)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM-HIGH",
+    "trade_probability": {},
+    "injury_flags": [
+      {
+        "player": "Ozzy Trapilo OT",
+        "injury": "ACL",
+        "severity": "high"
+      }
+    ],
+    "decision_maker": {
+      "primary": "Ryan Poles",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "CIN": {
+    "leadership": "GM Duke Tobin (9 drafts) | HC Zac Taylor (entering pressure year) | OC Dan\nPitcher | DC Al Golden (NEW, from Notre Dame) - this is the key coaching change",
+    "context_2025": "6-11. Catastrophic defensive collapse. Allowed 7.8 yards per attempt (4th worst),\n30+ points per game in multiple stretches. Burrow openly frustrated with defense.\nOrganization fired Anarumo and pivoted to Al Golden's college-proven aggressive 3-4 scheme.",
+    "qb_situation": "LOCKED (Burrow)",
+    "offseason_moves": "Added: Boye Mafe EDGE, Jonathan Allen IDL, Bryan Cook S, Joe Flacco QB (veteran\nbackup)\nLost: Trey Hendrickson EDGE (to BAL - biggest loss), Joseph Ossai EDGE (to NYJ), Cam\nTaylor-Britt CB (to IND)\nNet effect: Lost their premier pass rusher AND their starting CB2. Mafe is a solid addition\nbut not a Hendrickson replacement. This is a net-negative defensive offseason.",
+    "scheme_identity": "Golden's scheme is a 3-4 hybrid with heavy disguise, emphasis on coverage\nDBs and versatile front-7 pieces. Premium positions under Golden: CB, LB, EDGE, S.",
+    "roster_needs_tiered": "Urgent (4.5+): CB (Taylor-Britt gone, CB2 wide open, new scheme demands coverage\ntalent)\nSecondary (3+): S, LB (second level weak - Golden wants rangy LBs), EDGE\n(Hendrickson hole unfilled)\nModerate (2): IDL depth (Allen is aging)",
+    "player_archetypes": {
+      "10": "Given the Golden scheme change and acute CB need, the\ncleanest archetype is a long, press-capable, zone-versatile CB with ball production - the kind\nof player who can play outside or rotate to slot. Secondary archetype: a do-everything S who\ncan line up in the box, deep, or man coverage. Tertiary: a bendy sub-package EDGE to replace\nHendrickson's specific skill set. Low DT/RB/OL/WR probability."
+    },
+    "gm_fingerprint": "(Tobin):\nTrade tendency: Extremely low - Bengals + Chargers combined for just 7 trades over last\n5 drafts\nPositional affinity (computed from 9 drafts): EDGE +11.2%, OT +5.8% - strong trench\norientation\n\nPattern: Famous for staying put. Willingness to trade up is hypothetically discussed (pick\n5 for Styles) but historical base rate is near zero.",
+    "uncertainty_flags": "New DC (Golden) changes positional value weightings from prior years\nPotential McCoy decision: if available, his torn ACL (missed all 2025) creates medical-\ndiscount calculus that could override \"best CB available\" logic\nTobin historically hates trades - if they're mocked into a trade-up, treat skeptically",
+    "predictability_tier": "MEDIUM-HIGH. Position (CB) is very clear, player within that tier is the\nquestion.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      10
+    ],
+    "pick_note": null,
+    "header_raw": "Cincinnati Bengals - Pick 10",
+    "scheme_struct": {
+      "type": "golden_hybrid",
+      "premium": [
+        "CB",
+        "LB",
+        "EDGE",
+        "S"
+      ],
+      "raw": "Golden's scheme is a 3-4 hybrid with heavy disguise, emphasis on coverage\nDBs and versatile front-7 pieces. Premium positions under Golden: CB, LB, EDGE, S."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Boye Mafe EDGE",
+        "Jonathan Allen IDL",
+        "Bryan Cook S",
+        "Joe Flacco QB (veteran backup)"
+      ],
+      "departures": [
+        "Trey Hendrickson EDGE (to BAL - biggest loss)",
+        "Joseph Ossai EDGE (to NYJ)",
+        "Cam Taylor-Britt CB (to IND)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM-HIGH",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Duke Tobin",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "rarely_trades",
+        "raw": "Famous for staying put"
+      }
+    ]
+  },
+  "CLE": {
+    "leadership": "GM Andrew Berry (7 drafts) | HC Todd Monken (NEW, from BAL OC) | OC Ken\nDorsey | DC Jim Schwartz",
+    "context_2025": "5-12. Season lost to Watson uncertainty and injuries. Receivers caught 4 TDs all\nseason (dead last). QB room completely unsettled. Franchise in full rebuild despite recent win-\nnow attempts.",
+    "qb_situation": "UNSETTLED. Watson injury ongoing, Shedeur Sanders and Dillon Gabriel on\nrookie deals but neither has seized the job. QB at 6 is a legitimate possibility but likely ranks\nbelow roster-foundation building given 2026 QB class depth.",
+    "offseason_moves": "Added: Tytus Howard OT (from HOU), Zion Johnson G (from LAC), Elgton Jenkins G\n(from GB), Teven Jenkins OL (re-signed)\nLost: Multiple OL depth pieces, Morgan Moses retained but aging\nNet effect: Massive OL investment in FA, but WR and QB situations untouched.",
+    "scheme_identity": "Monken's offense is aggressive vertical passing with heavy TE/WR usage\n(Ravens template updated). Premium positions: WR, TE, OT, CB. Schwartz defense still Wide-\n9, values elite edge rushers.",
+    "roster_needs_tiered": "Urgent (4+): WR (dead last in receiving TDs - catastrophic), QB (situation genuinely\nunresolved)\nSecondary (2.5-3): OT (LT long-term despite FA additions - Howard is RT), CB (depth)\n\nModerate (2): EDGE depth, secondary help",
+    "player_archetypes": {
+      "6": "Two very different archetypes live: (1) an elite separator WR or\nbig-bodied X-receiver to give whoever plays QB a legitimate weapon, or (2) a developmental\nfranchise QB to plan around long-term. Given Berry's historical aggression in trades and the\nthree-analyst consensus projecting CLE trades down, the most likely scenario is they trade\nback to acquire more capital and take WR later. Standing pat at 6 favors WR over QB given class\ndepth.",
+      "24": "If they stand pat at 6 and take WR, pick 24 becomes best\navailable trench player (tackle or EDGE). If they trade down from 6, pick 24 becomes part of a\nbroader multi-pick strategy targeting CB/EDGE/OT."
+    },
+    "gm_fingerprint": "(Berry):\nTrade tendency: Very high trade-down rate - Berry averages 5.2 trades per draft (above\naverage)\nPositional affinity (computed, 7 drafts): LB +18.2%, IDL +13.2%, S +9.3%, OT +8.9% -\ndefense-heavy with OL emphasis\nPattern: Youngest average draft pick age of any GM - prioritizes developmental upside\nover immediate impact. This matters: Berry is more likely than most GMs to take a high-\nupside young WR over a polished veteran-ready one.\nThe Berry affinity data contradicts the WR narrative - his actual pattern is defense-\nheavy. Watch for a surprise defensive selection at 6 if the board breaks that way.",
+    "uncertainty_flags": "Trade-down is the modal outcome per multiple analysts (~40% probability)\nBerry's computed affinity (defense-heavy) conflicts with obvious WR need - possible\ncurveball\nQB plans genuinely unclear even internally",
+    "predictability_tier": "LOW. Trade-down probability dominates all other considerations.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      6,
+      24
+    ],
+    "pick_note": null,
+    "header_raw": "Cleveland Browns - Picks 6, 24",
+    "scheme_struct": {
+      "type": "monken_vertical",
+      "premium": [
+        "WR",
+        "TE",
+        "OT",
+        "CB"
+      ],
+      "raw": "Monken's offense is aggressive vertical passing with heavy TE/WR usage\n(Ravens template updated). Premium positions: WR, TE, OT, CB. Schwartz defense still Wide-\n9, values elite edge rushers."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Tytus Howard OT (from HOU)",
+        "Zion Johnson G (from LAC)",
+        "Elgton Jenkins G (from GB)",
+        "Teven Jenkins OL (re-signed)"
+      ],
+      "departures": [
+        "Multiple OL depth pieces",
+        "Morgan Moses retained but aging"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Andrew Berry",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "DAL": {
+    "leadership": "GM Jerry Jones/Stephen Jones (15+ drafts) | HC Mike McCarthy | OC Brian\nSchottenheimer | DC Christian Parker (NEW, from PHI)",
+    "context_2025": "7-10. Catastrophic defense - allowed most points AND yards in NFL, worst\ndefensive EPA. Multiple DC hires in 3 years. Parsons traded to GB (netted pick 20). Jerry in full\naggressive-mode.",
+    "qb_situation": "LOCKED-ISH (Dak Prescott). Ext is done, but playoff performance still in\nquestion.",
+    "offseason_moves": "Added: Rashan Gary EDGE (trade from GB), Quinnen Williams IDL (trade), Jalen\nThompson S, PJ Locke S, Tyrus Wheat LB, Otito Ogbonnia DL, Cobie Durant CB, George\nPickens WR (franchise tagged)\nLost: Micah Parsons EDGE (trade to GB - returned pick 20)\nNet effect: Defensive front rebuilt through trades (Gary + Williams), but Parsons void is\nmassive. Secondary patched with veterans.",
+    "scheme_identity": "Parker DC from PHI school - aggressive 4-3 with zone-match coverage.\nSchottenheimer offense is Dak-centric, pass-heavy. Premium positions under Parker: EDGE,\nCB, LB, S.",
+    "roster_needs_tiered": "Urgent (4.5+): EDGE (Parsons gone, no elite rusher, Gary addition insufficient), CB (251.5\npass yards/game allowed - worst in NFL)\nSecondary (3+): LB (second level weak), S (Thompson added but depth thin)\nModerate (2.5): IDL (Williams added but rotation needed)",
+    "player_archetypes": {
+      "12": "Given the acute defensive collapse and Jerry's\nwin-now mentality, the archetype is a blue-chip defensive impact player at any level -\nspecifically a rangy off-ball LB with coverage ability, a long press-CB, or an elite S. Multiple\narchetypes fit; Jerry tends to pick the \"brightest star\" available.",
+      "20": "The second defender - likely an EDGE or\nsecondary player to continue the defensive rebuild. Offensive selection here would be\nsurprising given needs."
+    },
+    "gm_fingerprint": "(Jones family, 15+ drafts):\nTrade tendency: HIGH trade-up rate (0.65) - Jerry's pattern of aggressive moves is well-\ndocumented\nPositional affinity (computed): EDGE +14.0%, IDL +9.7%, TE +6.8% - historically trench\nand TE heavy\nPattern: Jerry's drafts are famously emotional - he picks players he's \"excited about.\"\nLess BPA-rigorous than most GMs.",
+    "uncertainty_flags": "Trade-up scenario is the highest-impact variable in the entire draft - if Cowboys move\nup, every pick in top 12 shifts\nJerry's public comments sometimes leak intent - worth monitoring draft week\nParker's first draft as DC - positional value weights are new",
+    "predictability_tier": "LOW at 12 (trade-up probability), MEDIUM at 20 (defensive position clear).",
+    "trade_up_scenario": "Multiple sources report Cowboys as \"most likely team to trade\nup.\" If they package 12+20 to move into top 6 (likely Cleveland partner), the archetype sought\n\nshifts to a premier LB/S hybrid or elite EDGE - the kind of player Jerry is willing to overpay to\nget. If this happens, secondary picks go to later rounds.",
+    "cascade_rule": "",
+    "picks": [
+      12,
+      20
+    ],
+    "pick_note": null,
+    "header_raw": "Dallas Cowboys - Picks 12, 20",
+    "scheme_struct": {
+      "type": "parker_zonematch",
+      "premium": [
+        "EDGE"
+      ],
+      "raw": "Parker DC from PHI school - aggressive 4-3 with zone-match coverage.\nSchottenheimer offense is Dak-centric, pass-heavy. Premium positions under Parker: EDGE,\nCB, LB, S."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Rashan Gary EDGE (trade from GB)",
+        "Quinnen Williams IDL (trade)",
+        "Jalen Thompson S",
+        "PJ Locke S",
+        "Tyrus Wheat LB",
+        "Otito Ogbonnia DL",
+        "Cobie Durant CB",
+        "George Pickens WR (franchise tagged)"
+      ],
+      "departures": [
+        "Micah Parsons EDGE (trade to GB - returned pick 20)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {
+      "trade_up_tier": "HIGH",
+      "trade_up_prob": 0.7
+    },
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Jerry Jones",
+      "tiebreaker": "Stephen Jones",
+      "advisor_weight": 0.2,
+      "source": "narrative"
+    },
+    "hard_constraints": []
+  },
+  "DEN": {
+    "leadership": "GM George Paton (5 drafts) | HC Sean Payton | OC Lombardi (retained) | DC Vance\nJoseph",
+    "context_2025": "14-3, nearly made Super Bowl LX. Nix ascended. Elite roster, especially defense.\nDefending division champs.",
+    "qb_situation": "LOCKED (Bo Nix)",
+    "offseason_moves": "Added: Jaylen Waddle WR (trade from MIA - massive addition for Nix), JK Dobbins RB\n(extended despite injuries)\nLost: John Franklin-Myers DL (to TEN), Dre Greenlaw LB",
+    "scheme_identity": "Payton West Coast with motion/play-action, values joker-role mismatch\nTE/RB. Premium positions under Payton historically: RB/TE (joker role), OL, WR. Joseph\ndefense is multiple-fronts aggressive.",
+    "roster_needs_tiered": "Urgent (4.5+): RB (Dobbins injured again, Charbonnet ACL, Walker III gone -\ncatastrophic backfield)\nSecondary (3): IDL (Franklin-Myers gone), TE (Engram final year), LB (Greenlaw gone)\nLatent: RB (depth), TE (succession)",
+    "player_archetypes": {
+      "62": "No R1. At 62, the archetype becomes a mid-round RB with\nthree-down upside or a mismatch TE (classic Payton joker). DB depth also live."
+    },
+    "gm_fingerprint": "(Paton):\nTrade tendency: Moderate\nPositional affinity (computed): RB +26.3% (one of the highest RB affinities in the league),\nCB +7.7% - Paton invests in skill and DBs\nPattern: Paton's RB affinity is notable given the team's need - a strong pre-indicator that\nRB is likely",
+    "uncertainty_flags": "No R1 reduces the stakes of analyst coverage\nPayton's unique positional preferences don't always follow convention",
+    "predictability_tier": "MEDIUM (Day 2 position is clear, player is not).",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      62
+    ],
+    "pick_note": "No R1, traded to MIA for Waddle",
+    "header_raw": "Denver Broncos - Pick 62 (No R1, traded to MIA for Waddle)",
+    "scheme_struct": {
+      "type": "payton_westcoast",
+      "premium": [
+        "RB",
+        "TE",
+        "OL",
+        "WR"
+      ],
+      "raw": "Payton West Coast with motion/play-action, values joker-role mismatch\nTE/RB. Premium positions under Payton historically: RB/TE (joker role), OL, WR. Joseph\ndefense is multiple-fronts aggressive."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Jaylen Waddle WR (trade from MIA - massive addition for Nix)",
+        "JK Dobbins RB (extended despite injuries)"
+      ],
+      "departures": [
+        "John Franklin-Myers DL (to TEN)",
+        "Dre Greenlaw LB"
+      ]
+    },
+    "latent_needs_struct": {
+      "RB": 2.0,
+      "TE": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "George Paton",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "DET": {
+    "leadership": "GM Brad Holmes (5 drafts) | HC Dan Campbell | OC John Morton (replaced\nJohnson who went to CHI) | DC Kelvin Sheppard",
+    "context_2025": "15-2, NFC top seed, lost in NFC Championship. Elite team. Ben Johnson\ndeparture is the key loss.",
+    "qb_situation": "LOCKED (Jared Goff)",
+    "offseason_moves": "Added: Juice Scruggs C (trade from HOU), Isiah Pacheco RB, Larry Borom OT (stop-gap),\nedge/CB depth\nLost: Taylor Decker OT (released - end of era), David Montgomery RB (trade to HOU)\nNet effect: OL continuity shattered. Need LT long-term.",
+    "scheme_identity": "Campbell's physicality identity + Morton offense (from SF/NYJ tree) - power\nrun, play-action vertical. Sheppard defense continues Aaron Glenn's foundations. Premium\npositions: OT, EDGE, CB.",
+    "roster_needs_tiered": "Urgent (4.5+): OT (Decker released - Borom stop-gap, Sewell could kick to LT, LT\nsuccession critical), EDGE (Holmes' strongest affinity + depth need opposite Hutchinson)\nSecondary (3+): CB (Arnold penalty/availability concerns), S (Joseph + Branch recovering\ninjuries)\nModerate (2): IDL",
+    "player_archetypes": {
+      "17": "Given the Decker void and LT urgency, the primary archetype is\na bookend franchise LT with pass-protection and run-blocking balance - someone Sewell\ncan eventually flip tackle sides with. Alternative: a bendy, explosive EDGE rusher given\nHolmes' +14% EDGE affinity (STRONGEST single-GM positional signal in the entire dataset).\nBoth archetypes fit."
+    },
+    "gm_fingerprint": "(Holmes, 5 drafts):\nTrade tendency: Moderate - known for in-draft \"curveball\" picks (Gibbs Year 1,\nCampbell DL Year 2, Williams Year 3). Expect a surprise.\nPositional affinity (computed):EDGE +14.0% - STRONGEST single-GM affinity of any\nactive GM in the entire dataset. This is real signal.\nPattern: Holmes never misses a chance to add a pass rusher. Also values athletic RAS-\ntested players. OT affinity also positive.",
+    "uncertainty_flags": "EDGE vs OT tension - both have +3-4 urgency scores\n\nHolmes' historical \"curveball\" picks mean surprise is on the table\nOC change (Morton replaces Johnson) changes offensive scheme slightly",
+    "predictability_tier": "MEDIUM-HIGH. Archetype (OT or EDGE) clear; specific position split.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      17
+    ],
+    "pick_note": null,
+    "header_raw": "Detroit Lions - Pick 17",
+    "scheme_struct": {
+      "type": "glenn_multiple",
+      "premium": [],
+      "raw": "Campbell's physicality identity + Morton offense (from SF/NYJ tree) - power\nrun, play-action vertical. Sheppard defense continues Aaron Glenn's foundations. Premium\npositions: OT, EDGE, CB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Juice Scruggs C (trade from HOU)",
+        "Isiah Pacheco RB",
+        "Larry Borom OT (stop-gap)",
+        "edge/CB depth"
+      ],
+      "departures": [
+        "Taylor Decker OT (released - end of era)",
+        "David Montgomery RB (trade to HOU)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM-HIGH",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Brad Holmes",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "GB": {
+    "leadership": "GM Brian Gutekunst (8 drafts) | HC Matt LaFleur | OC Adam Stenavich | DC Jeff\nHafley (departed to MIA as HC - replaced by Derek Mason)",
+    "context_2025": "11-6, playoff team. Jordan Love solid. Defense fluctuated - Parsons trade was the\nrebalancing move.",
+    "qb_situation": "LOCKED (Jordan Love)",
+    "offseason_moves": "Added: Micah Parsons EDGE (trade from DAL - returned pick 20), Javon Hargrave DT,\nZaire Franklin LB (trade)\nLost: Rashan Gary EDGE (trade to DAL - balanced), Elgton Jenkins G, Quay Walker LB,\nKenny Clark IDL, Malik Willis QB, Romeo Doubs WR, Kingsley Enagbare EDGE, Rasheed\nWalker OT\nNet effect: Elite pass rusher acquired but massive roster turnover. Interior line (both O\nand D) hit hard.",
+    "scheme_identity": "LaFleur/Stenavich offense is McVay/Shanahan tree - outside zone + play-\naction. Mason's defense will establish identity. Premium positions: EDGE, IDL, CB, OL.",
+    "roster_needs_tiered": "Urgent (4+): EDGE (depth behind Parsons), IDL (Clark gone, Hargrave is short-term\nbridge), OL (Jenkins gone, tackle depth thin)\nSecondary (3): CB (Valentine's tackling struggles)\nModerate (2.5): WR (Doubs gone)",
+    "player_archetypes": {
+      "52": "No R1. At 52, the archetype is a high-RAS athlete at defensive\nline or linebacker - Gutekunst's signature."
+    },
+    "gm_fingerprint": "(Gutekunst, 8 drafts):\nTrade tendency: Moderate\n\nPositional affinity (computed): Strongly athleticism-biased - highest average RAS in\nleague among drafted players. Not position-specific but profile-specific.\nPattern: Gutekunst rarely takes WRs in R1 (historical data). Defense and trenches\ndominate. High athletic testing thresholds.",
+    "uncertainty_flags": "No R1 = Day 2 variance\nHafley departure + new DC (Mason) changes defensive positional weights",
+    "predictability_tier": "LOW (Day 2 standard).",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      52
+    ],
+    "pick_note": "No R1, traded for Parsons",
+    "header_raw": "Green Bay Packers - Pick 52 (No R1, traded for Parsons)",
+    "scheme_struct": {
+      "type": "shanahan_zone",
+      "premium": [
+        "EDGE",
+        "IDL",
+        "CB",
+        "OL"
+      ],
+      "raw": "LaFleur/Stenavich offense is McVay/Shanahan tree - outside zone + play-\naction. Mason's defense will establish identity. Premium positions: EDGE, IDL, CB, OL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Micah Parsons EDGE (trade from DAL - returned pick 20)",
+        "Javon Hargrave DT",
+        "Zaire Franklin LB (trade)"
+      ],
+      "departures": [
+        "Rashan Gary EDGE (trade to DAL - balanced)",
+        "Elgton Jenkins G",
+        "Quay Walker LB",
+        "Kenny Clark IDL",
+        "Malik Willis QB",
+        "Romeo Doubs WR",
+        "Kingsley Enagbare EDGE",
+        "Rasheed Walker OT"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Brian Gutekunst",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "HOU": {
+    "leadership": "GM Nick Caserio (5 drafts) | HC DeMeco Ryans | OC Bobby Slowik\n(retained/departed uncertainty) | DC Matt Burke",
+    "context_2025": "12-5, division champion, lost in divisional round. Elite defense. Stroud's growth\nstalled in Year 2 due to OL collapse and WR health issues (Tank Dell recovery).",
+    "qb_situation": "LOCKED (CJ Stroud)",
+    "offseason_moves": "Added: Danielle Hunter EDGE (extended - kept elite pass rusher), David Montgomery\nRB (trade from DET), Marte Mapu LB (trade)\nLost: Tytus Howard OT (to CLE), Juice Scruggs IOL\nNet effect: OL got worse (2 starters gone), defense maintained. Stroud supporting cast\nremains thin.",
+    "scheme_identity": "Ryans defense is 4-3 aggressive, values twitchy front-7. Premium positions:\nEDGE, IDL, CB. Slowik offense (assuming retained) is Shanahan-tree, requires mobile OL, TE\nusage, YAC receivers.",
+    "roster_needs_tiered": "Urgent (4+): OL (Howard and Scruggs both gone), WR (Tank Dell health uncertain, need\nlegit complement)\nSecondary (3): IDL (Ryans always adds trench talent), LB depth\nModerate (2-2.5): CB depth",
+    "player_archetypes": {
+      "28": "Given Ryans' defensive priorities and the OL holes, two\narchetypes: (1) an interior OL (guard or center) with plug-and-play ability to immediately\nstabilize Stroud's protection, or (2) a penetrating 3-technique DT to continue building the\ndefensive front. The interior OL archetype is more acutely needed; the IDL archetype is Ryans'\nhistorical preference."
+    },
+    "gm_fingerprint": "(Caserio):\nTrade tendency: Moderately active (0.30/0.30)\nPositional affinity (computed, 5 drafts): WR +12.3%, S +11.7%, QB +8.3% - historically\nskill-position investor\nPattern: Caserio is willing to make in-draft trades, often accumulates Day 2/3 picks",
+    "uncertainty_flags": "Ryans' defense-first mindset vs. Caserio's skill-position affinity creates internal tension\nOC situation worth monitoring\nPick 28 is in the \"contender tier-break\" zone",
+    "predictability_tier": "MEDIUM. Position (OL or IDL) is reasonably clear; specific player is board-\ndependent.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      28
+    ],
+    "pick_note": null,
+    "header_raw": "Houston Texans - Pick 28",
+    "scheme_struct": {
+      "type": "shanahan_zone",
+      "premium": [
+        "EDGE",
+        "IDL",
+        "CB"
+      ],
+      "raw": "Ryans defense is 4-3 aggressive, values twitchy front-7. Premium positions:\nEDGE, IDL, CB. Slowik offense (assuming retained) is Shanahan-tree, requires mobile OL, TE\nusage, YAC receivers."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Danielle Hunter EDGE (extended - kept elite pass rusher)",
+        "David Montgomery RB (trade from DET)",
+        "Marte Mapu LB (trade)"
+      ],
+      "departures": [
+        "Tytus Howard OT (to CLE)",
+        "Juice Scruggs IOL"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [
+      {
+        "player": "Stroud's growth\nstalled",
+        "injury": "Year 2 due to OL collapse and WR health issues (Tank Dell recovery",
+        "severity": "medium"
+      }
+    ],
+    "decision_maker": {
+      "primary": "Nick Caserio",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "IND": {
+    "leadership": "GM Chris Ballard (9 drafts) | HC Shane Steichen | OC Jim Bob Cooter | DC Lou\nAnarumo (acquired from CIN)",
+    "context_2025": "8-9. Richardson struggled, Daniel Jones stabilized things late. Mediocre defense.",
+    "qb_situation": "LOCKED-ISH (Daniel Jones). QB urgency is low - signed Jones to extension.",
+    "offseason_moves": "Added: Cam Taylor-Britt CB (from CIN), Akeem Davis-Gaither LB, Derrick Nnadi DT,\nNick Westbrook-Ikhine WR, Nasir Adderley S, Sauce Gardner CB (major trade - gave up\npick 16 from their previous pick 16 ownership, now gives Colts an elite CB1)\nLost: Michael Pittman WR (trade to PIT)\nNet effect: Sauce Gardner trade is enormous - transformed their CB room. But lost\nPittman as WR1.",
+    "scheme_identity": "Steichen offense is pass-first spread. Anarumo defense is aggressive,\npressure-heavy, demands versatile DBs. Premium positions: EDGE, LB, S.",
+    "roster_needs_tiered": "Urgent (4+): EDGE (aging Paye, no elite rusher), LB (no R1 pick means can't address this\nat top of draft)\n\nSecondary (3+): S (aging room), OL depth\nModerate: WR (Pittman replacement), CB depth behind Gardner",
+    "player_archetypes": {
+      "47": "No R1 pick. At 47 the archetype is a downhill LB with coverage\nability OR a powerful sub-package EDGE rusher. Day 2 is about roster-complement players for\nBallard."
+    },
+    "gm_fingerprint": "(Ballard):\nTrade tendency: Heavy trade-down (15 trade-downs, 5 trade-ups over 8 drafts - one of\nthe most trade-down-heavy GMs)\nPositional affinity (computed): IDL +14.7%, WR +9.0% - trench-heavy historical pattern\nPattern: Classic accumulator. Without R1 pick, likely to trade back further from 47 to add\nvolume.",
+    "uncertainty_flags": "No R1 pick = less analyst coverage = more uncertain projections\nRecent Gardner trade reshapes positional needs",
+    "predictability_tier": "LOW (Day 2 has inherent uncertainty for all teams).",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      47
+    ],
+    "pick_note": "No R1",
+    "header_raw": "Indianapolis Colts - Pick 47 (No R1)",
+    "scheme_struct": {
+      "type": "anarumo_pressure",
+      "premium": [
+        "EDGE",
+        "LB",
+        "S"
+      ],
+      "raw": "Steichen offense is pass-first spread. Anarumo defense is aggressive,\npressure-heavy, demands versatile DBs. Premium positions: EDGE, LB, S."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Cam Taylor-Britt CB (from CIN)",
+        "Akeem Davis-Gaither LB",
+        "Derrick Nnadi DT",
+        "Nick Westbrook-Ikhine WR",
+        "Nasir Adderley S",
+        "Sauce Gardner CB (major trade - gave up pick 16 from their previous pick 16 ownership, now gives Colts an elite CB1)"
+      ],
+      "departures": [
+        "Michael Pittman WR (trade to PIT)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Chris Ballard",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "heavy_trade_down",
+        "raw": "Heavy trade-down"
+      }
+    ]
+  },
+  "JAX": {
+    "leadership": "GM James Gladstone (NEW 2024 - 2 drafts) | HC Liam Coen (2nd year) | OC Grant\nUdinski | DC Anthony Campanile",
+    "context_2025": "13-4, division winner, lost divisional round. Travis Hunter delivered on the #2\npick investment. Defense improved markedly.",
+    "qb_situation": "LOCKED (Trevor Lawrence)",
+    "offseason_moves": "Added: Travis Hunter CB/WR (from 2025 draft, now entering Year 2)\nLost: Devin Lloyd LB (to CAR - major loss)",
+    "scheme_identity": "Coen offense is pass-oriented, YAC-focused. Campanile defense is pressure-\nheavy. Premium positions: EDGE, LB, IDL.",
+    "roster_needs_tiered": "Urgent (4.5+): LB (Lloyd gone, no viable starter replacement), EDGE (Hines-Allen alone,\n27th in sacks)\nSecondary (3): IDL, S\nModerate: OL depth",
+    "player_archetypes": {
+      "56": "A three-down LB with coverage versatility (Lloyd\nreplacement) or a power-edge rusher with inside/outside versatility. Mid-round Day 2 gives\nthem starter-caliber options at either spot."
+    },
+    "gm_fingerprint": "(Gladstone):\nTrade tendency: Small sample, modest activity\nPositional affinity: Insufficient data (2 drafts)\nPattern: New GM with Rams-scouting-tree background - typically values RAS-tested\nathletes and positional versatility",
+    "uncertainty_flags": "Small GM sample\nNo R1 = focus on Day 2 which is wider variance",
+    "predictability_tier": "LOW (Day 2 standard).",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      56
+    ],
+    "pick_note": "No R1",
+    "header_raw": "Jacksonville Jaguars - Pick 56 (No R1)",
+    "scheme_struct": {
+      "type": "coen_pass",
+      "premium": [
+        "EDGE",
+        "LB",
+        "IDL"
+      ],
+      "raw": "Coen offense is pass-oriented, YAC-focused. Campanile defense is pressure-\nheavy. Premium positions: EDGE, LB, IDL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Travis Hunter CB/WR (from 2025 draft, now entering Year 2)"
+      ],
+      "departures": [
+        "Devin Lloyd LB (to CAR - major loss)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "James Gladstone",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "KC": {
+    "leadership": "GM Brett Veach (8 drafts) | HC Andy Reid | OC Matt Nagy | DC Steve Spagnuolo",
+    "context_2025": "11-6, lost in divisional round. Mahomes had a tough year recovering from early-\nseason ACL injury. Receiving corps aged out (Hollywood Brown gone, Worthy 1 TD, Kelce at\nend).",
+    "qb_situation": "LOCKED (Mahomes, recovering ACL)",
+    "offseason_moves": "Added: Kenneth Walker III RB (from SEA), Alohi Gilman S, Justin Fields QB (trade from\nNYJ as backup), Kader Kohou CB (slot)\nLost: Trent McDuffie CB (trade to LAR - gave up pick 29 to acquire, HUGE loss), Jaylen\nWatson CB (FA departure), Hollywood Brown WR\nNet effect:BOTH starting CBs gone. CB room is catastrophically thin. WR also weaker.",
+    "scheme_identity": "Spagnuolo's defense demands press-man CBs. Reid's offense requires speed\nWRs and versatile route-runners. Premium positions: CB, WR, EDGE.",
+    "roster_needs_tiered": "Urgent (5+): CB (BOTH starters literally gone - Kohou is slot only)\nSecondary (3+): WR (Kelce aging, Brown gone, Worthy inconsistent), EDGE (35 sacks t-\n7th fewest, Anudike-Uzomah hamstring issues)\nModerate (2-2.5): IDL (Jones aging succession), OL depth",
+    "player_archetypes": {
+      "9": "Given the acute CB emergency and the WR need, two archetypes\nare live: (1) a blue-chip press-man CB with positional flexibility (scheme fit for Spagnuolo), or\n(2) a separation WR1 with speed (Reid's ideal). The CB archetype is more urgent; the WR\narchetype is more \"Mahomes era-defining\" in potential impact.",
+      "29": "The other of the two. If they take CB at 9, pick 29 targets a speed\nWR or big-slot X. If they take WR at 9, pick 29 becomes an outside press CB."
+    },
+    "gm_fingerprint": "(Veach):\nTrade tendency: VERY aggressive (0.75 trade-up rate) - Veach openly said this will be a\ntrade-heavy draft for them\nPositional affinity: Premium-position-biased, aggressive trader\nPattern: Veach has explicit history of moving up for specific targets (Pacheco, Sneed,\nWorthy trade). Expect in-draft movement.\nFirst top-10 pick since Mahomes 2017 - this alone makes the situation unusual for Veach",
+    "uncertainty_flags": "Mahomes ACL recovery creates uncertainty about full Year 10+ ceiling\nVeach's trade aggression means pick 9 specifically could move\nTwo needs are essentially equal priority - split outcomes",
+    "predictability_tier": "MEDIUM. Positions (CB, WR) are very clear; specific players are board-\ndependent.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      9,
+      29
+    ],
+    "pick_note": null,
+    "header_raw": "Kansas City Chiefs - Picks 9, 29",
+    "scheme_struct": {
+      "type": "reid_spread",
+      "premium": [
+        "CB",
+        "WR",
+        "EDGE"
+      ],
+      "raw": "Spagnuolo's defense demands press-man CBs. Reid's offense requires speed\nWRs and versatile route-runners. Premium positions: CB, WR, EDGE."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Kenneth Walker III RB (from SEA)",
+        "Alohi Gilman S",
+        "Justin Fields QB (trade from NYJ as backup)",
+        "Kader Kohou CB (slot)"
+      ],
+      "departures": [
+        "Trent McDuffie CB (trade to LAR - gave up pick 29 to acquire, HUGE loss)",
+        "Jaylen Watson CB (FA departure)",
+        "Hollywood Brown WR"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Brett Veach",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "aggressive_trader",
+        "raw": "aggressive trader"
+      }
+    ]
+  },
+  "LAC": {
+    "leadership": "GM Joe Hortiz (2 drafts) | HC Jim Harbaugh | OC Greg Roman | DC Jesse Minter\n(departed to BAL as HC - replaced by Derrick Ansley)",
+    "context_2025": "11-6, lost in divisional round. Another playoff failure with OL collapse protecting\nHerbert. Defense elite but gassed by season's end.",
+    "qb_situation": "LOCKED (Justin Herbert)",
+    "offseason_moves": "Added: Tyler Biadasz C (FA), Dalvin Tomlinson DT\nLost: Bradley Bozeman C (retired)\nNet effect: Modest moves, still have trench holes.",
+    "scheme_identity": "Harbaugh/Roman = physical under-center power run + play-action. Michigan\nDNA. Values maulers and physical players. Premium positions: OL (especially IOL), EDGE,\nIDL.",
+    "roster_needs_tiered": "Urgent (4+): OL (LG void specifically, 60 sacks allowed - t-2nd most in NFL), EDGE\n(Mack/Dupree/Tuipulotu all expire after 2026)\nSecondary (3+): IDL (Tomlinson 32 years old), WR (McDaniel motion offense wants\nanother playmaker)\nLatent: EDGE (all 3 expire after 2026 - succession), OL depth",
+    "player_archetypes": {
+      "22": "Given Harbaugh's explicit trench-physicality identity and the\n60-sack season, the cleanest archetype is a mauler interior OL (guard or center) with road-\ngrading ability or a bull-rush-first DT to pair with Bosa. Alternative: a bendy, high-floor EDGE\nrusher given the 2027 contract cliff."
+    },
+    "gm_fingerprint": "(Hortiz):\nTrade tendency: Very low (0.10/0.10) - Bengals/Chargers combined 7 trades over last 5\ndrafts, essentially never move\nPositional affinity (computed, 2 drafts - small sample): WR +45.7%, RB +26.3% - but\nthis is noisy due to sample size\nPattern: Hortiz comes from Baltimore front office under DeCosta - historical Ravens\npattern is BPA with trench emphasis",
+    "uncertainty_flags": "Ansley replaces Minter as DC - scheme details shift\nHarbaugh's identity overrides most positional affinity data - expect trench pick\nExtremely low trade probability",
+    "predictability_tier": "MEDIUM-HIGH. Archetype (trench player) is clear; specific position (OL vs\nDL) split.\nNFC EAST",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      22
+    ],
+    "pick_note": null,
+    "header_raw": "Los Angeles Chargers - Pick 22",
+    "scheme_struct": {
+      "type": "harbaugh_power",
+      "premium": [
+        "OL",
+        "IOL",
+        "EDGE"
+      ],
+      "raw": "Harbaugh/Roman = physical under-center power run + play-action. Michigan\nDNA. Values maulers and physical players. Premium positions: OL (especially IOL), EDGE,\nIDL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Tyler Biadasz C (FA)",
+        "Dalvin Tomlinson DT"
+      ],
+      "departures": [
+        "Bradley Bozeman C (retired)"
+      ]
+    },
+    "latent_needs_struct": {
+      "EDGE": 2.0,
+      "OL": 2.0
+    },
+    "predictability_enum": "MEDIUM-HIGH",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Joe Hortiz",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "rarely_trades",
+        "raw": "essentially never move"
+      }
+    ]
+  },
+  "LAR": {
+    "leadership": "GM Les Snead (14+ drafts) | HC Sean McVay | OC Mike LaFleur (departed to ARI as\nHC - replaced by Thomas Brown) | DC Chris Shula",
+    "context_2025": "13-4, NFC Championship loss. Near-Super Bowl. Stafford still playing at 38.\nMcDuffie trade signals all-in mode.",
+    "qb_situation": "BRIDGE-ISH (Stafford 38, year-to-year). Succession planning real but not urgent.",
+    "offseason_moves": "Added: Trent McDuffie CB (trade from KC - gave up pick 29), Jaylen Watson CB, Davante\nAdams WR (FA)\nLost: Rob Havenstein OT (retired), Darious Williams CB\nNet effect: Secondary transformed via McDuffie trade. Lost RT.",
+    "scheme_identity": "McVay spread motion YAC offense. Shula defense. Premium positions: WR,\nOT, IDL.",
+    "roster_needs_tiered": "Urgent (3.5-4): WR (Adams 34 final year, Nacua rehab), OT (Havenstein retired - RT\nsuccession)\nSecondary (3): LB (second level thin), IDL\nLatent: QB (Stafford 38), OT (succession), WR (Adams final year)",
+    "player_archetypes": {
+      "13": "Given McVay's win-now mandate and Adams' finality, the\nprimary archetype is a YAC-ready separation WR who can step into the slot or flex. Alternative:\na franchise RT given Havenstein's retirement. Snead's history of trade-down suggests moving\nback to add picks is also live."
+    },
+    "gm_fingerprint": "Trade tendency:Ultimate trade-down GM - 25 trade-downs since 2012 (highest in\nleague). Pick 13 is prime trade-back candidate.\nPositional affinity (computed, 14+ drafts):C +13.3%, IDL +13.2%, TE +9.0% - this is a\nDIVERGENCE from the \"Snead loves WRs\" narrative. Snead's historical pattern is\ninterior trenches + TE.\nPattern: Heavy trader, selective about positional priorities",
+    "uncertainty_flags": "Snead computed affinity diverges from narrative - interior focus, not WR\nTrade-down probability is HIGH (0.89 historical rate)\nAdams' presence technically reduces WR urgency in 2026 specifically",
+    "predictability_tier": "LOW-MEDIUM. Trade-down probability dominates; if standing pat, WR\nmost likely.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      13
+    ],
+    "pick_note": null,
+    "header_raw": "Los Angeles Rams - Pick 13",
+    "scheme_struct": {
+      "type": "mcvay_spread",
+      "premium": [
+        "WR"
+      ],
+      "raw": "McVay spread motion YAC offense. Shula defense. Premium positions: WR,\nOT, IDL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Trent McDuffie CB (trade from KC - gave up pick 29)",
+        "Jaylen Watson CB",
+        "Davante Adams WR (FA)"
+      ],
+      "departures": [
+        "Rob Havenstein OT (retired)",
+        "Darious Williams CB"
+      ]
+    },
+    "latent_needs_struct": {
+      "QB": 2.0,
+      "OT": 2.0,
+      "WR": 2.0
+    },
+    "predictability_enum": "LOW-MEDIUM",
+    "trade_probability": {
+      "trade_down_tier": "HIGH",
+      "trade_down_prob": 0.7
+    },
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Les Snead",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "heavy_trade_down",
+        "raw": "Ultimate trade-down"
+      }
+    ]
+  },
+  "LV": {
+    "leadership": "GM John Spytek (NEW, 0 drafts in role) | HC Klint Kubiak (NEW, from NO OC) | OC\nKubiak doubles | DC Rob Leonard (NEW)",
+    "context_2025": "3-14. Franchise reset. New ownership direction, new HC, new GM, new\neverything.",
+    "qb_situation": "REBUILDING - Kirk Cousins signed as bridge ($60M/2yr). Mendoza incoming at\nNo. 1.",
+    "offseason_moves": "Added: Tyler Linderbaum C ($81M/3yr - huge OL anchor), Taron Johnson CB, Quay\nWalker LB, Kirk Cousins QB (bridge)\nLost: Geno Smith QB (trade to NYJ), multiple veterans cut\nNet effect: OL got significantly better (Linderbaum is elite C), defense added LB/CB,\nbridge QB in place for Mendoza to develop",
+    "scheme_identity": "Kubiak comes from Shanahan/McVay tree - outside zone run, play-action\npass, mobile QB emphasis. Premium positions: OT, WR, TE. Leonard defense is 3-4 hybrid.",
+    "roster_needs_tiered": "Urgent (4.5+ but addressed at 1): QB (addressed by Mendoza)\nSecondary (3+): WR (one of weakest rooms in league), OT (long-term build around\nMendoza), IDL (Leonard scheme needs interior)\nModerate: CB (Johnson added, depth still thin)",
+    "player_archetypes": {
+      "1": "Mendoza. Locked. -20000 odds. Universal consensus. Mendoza\nfits the Kubiak scheme perfectly: strong-armed pocket passer with play-action/mobility combo,\nCFP winner, Heisman credentials."
+    },
+    "gm_fingerprint": "(Spytek):\nTrade tendency: Zero drafts in role - league-average priors\nPositional affinity: No data (new GM)\nPattern: Spytek comes from TB under Licht. Licht tree values trench investment and\npremium positions. Has explicitly said \"teams know where they stand\" - suggests he's\nNOT trading down from 1.",
+    "uncertainty_flags": "Despite consensus certainty on Mendoza, any shock medical or interview concern could\nchange the calculus\nNew HC AND new GM = scheme details for future picks are unpredictable",
+    "predictability_tier": "HIGHEST in the draft for pick 1 specifically. Mendoza is the closest thing to a\nlock.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      1
+    ],
+    "pick_note": null,
+    "header_raw": "Las Vegas Raiders - Pick 1",
+    "scheme_struct": {
+      "type": "shanahan_zone",
+      "premium": [
+        "OT",
+        "WR",
+        "TE"
+      ],
+      "raw": "Kubiak comes from Shanahan/McVay tree - outside zone run, play-action\npass, mobile QB emphasis. Premium positions: OT, WR, TE. Leonard defense is 3-4 hybrid."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Tyler Linderbaum C ($81M/3yr - huge OL anchor)",
+        "Taron Johnson CB",
+        "Quay Walker LB",
+        "Kirk Cousins QB (bridge)"
+      ],
+      "departures": [
+        "Geno Smith QB (trade to NYJ)",
+        "multiple veterans cut"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "HIGH",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "John Spytek",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "stay_put_stated",
+        "raw": "NOT trading down from"
+      }
+    ]
+  },
+  "MIA": {
+    "leadership": "GM Jon-Eric Sullivan (NEW, 0 drafts) | HC Jeff Haefley (NEW, from Green Bay DC)\n| OC Frank Smith | DC Anthony Weaver (retained)",
+    "context_2025": "7-10, full rebuild mode. Tua benched, then traded. Tyreek Hill disaster season,\ntraded. Defense mediocre. Full identity reset.",
+    "qb_situation": "BRIDGE → REBUILDING. Malik Willis signed (3yr deal) as starter but\norganization is openly planning beyond him. QB at 11 or 30 is live but secondary - can wait.",
+    "offseason_moves": "Catastrophic losses: Tua Tagovailoa QB (to ATL), Jaylen Waddle WR (trade to DEN,\nnetted pick 30), Tyreek Hill WR (released), Minkah Fitzpatrick S (trade to NYJ), Bradley\n\nChubb EDGE\nAdded: Malik Willis QB (bridge), Achane retained\nNet effect: Roster gutted at every skill position and most of the secondary. 11 picks total, 7\nin first 3 rounds - maximum draft capital",
+    "scheme_identity": "Haefley defense requires fast, rangy, athletic DBs and linebackers - Ohio\nState template. Premium positions: CB, S, EDGE. Smith offense is a tempo/spread system that\nmaximizes YAC and requires WR separation.",
+    "roster_needs_tiered": "Urgent (4.5+): WR (Waddle AND Hill both gone - only Tyreek replacements), CB\n(Fitzpatrick gone plus multiple secondary)\nSecondary (3+): S, EDGE, OT (Austin Jackson missed 11 games)\nLatent: QB (Willis is placeholder - 2027 franchise QB plan real), OL depth",
+    "player_archetypes": {
+      "11": "Given Haefley's scheme and acute CB need, a long, athletic\npress-man CB with Cover-3 experience is the cleanest archetype. Alternative: elite separation\nWR1 profile to anchor the rebuild. Either works; both fill catastrophic holes. Low QB probability\nhere because better value waits.",
+      "30": "A second impact skill player (WR2 or TE) OR a high-floor S to\npair with their CB pick. If they trade down (likely given 11 picks), target shifts to Day 2 capital\naccumulation."
+    },
+    "gm_fingerprint": "(Sullivan): ZERO drafts in role. Use league-average priors. Sullivan\ncomes from Green Bay scouting tree under Gutekunst - historical Packers pattern is high-RAS\nathletes with developmental upside.",
+    "uncertainty_flags": "Brand-new GM AND brand-new HC = highest-variance team in the league\n11 picks total - very high trade-down probability at 30 (likely) and even at 11 (possible)\nWillis contract means QB is on the table but not forced",
+    "predictability_tier": "LOW. Complete regime change, extreme capital, multiple needs. Pick 11 is\nmore predictable than pick 30.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      11,
+      30
+    ],
+    "pick_note": null,
+    "header_raw": "Miami Dolphins - Picks 11, 30",
+    "scheme_struct": {
+      "type": "hafley_ohio",
+      "premium": [
+        "CB",
+        "S",
+        "EDGE"
+      ],
+      "raw": "Haefley defense requires fast, rangy, athletic DBs and linebackers - Ohio\nState template. Premium positions: CB, S, EDGE. Smith offense is a tempo/spread system that\nmaximizes YAC and requires WR separation."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Malik Willis QB (bridge)",
+        "Achane retained"
+      ],
+      "departures": [
+        "Tua Tagovailoa QB (to ATL)",
+        "Jaylen Waddle WR (trade to DEN, netted pick 30)",
+        "Tyreek Hill WR (released)",
+        "Minkah Fitzpatrick S (trade to NYJ)",
+        "Bradley Chubb EDGE"
+      ]
+    },
+    "latent_needs_struct": {
+      "QB": 2.0,
+      "OL": 2.0
+    },
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Jon-Eric Sullivan",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "MIN": {
+    "leadership": "GM Kwesi Adofo-Mensah (3 drafts) | HC Kevin O'Connell | OC Wes Phillips | DC\nBrian Flores",
+    "context_2025": "10-7, wild card loss. JJ McCarthy ACL ended his season. Cap situation tightening.",
+    "qb_situation": "LOCKED (Kyler Murray - acquired from ARI). Carson Wentz signed as veteran\nbackup.",
+    "offseason_moves": "Added: Kyler Murray QB (from ARI), Carson Wentz QB\nLost: Jonathan Allen IDL (salary cut), Javon Hargrave IDL (salary cut - now GB),\nHarrison Smith S (retirement uncertain), Ryan Kelly C (retired)\nNet effect: QB situation resolved via Murray, but catastrophic interior line losses (both DL\nand OL).",
+    "scheme_identity": "O'Connell/Phillips McVay-tree offense - motion heavy, YAC. Flores\naggressive 3-4 defense with heavy pressure, demands versatile DBs. Premium positions: IDL,\nS, CB (Flores scheme), OL.",
+    "roster_needs_tiered": "Urgent (4.5+): IDL (BOTH starters gone - catastrophic), S (Smith retired/uncertain)\nSecondary (3+): C (Kelly retired), OL depth, CB\nModerate (2): WR depth",
+    "player_archetypes": {
+      "18": "Given the interior DL emergency, the primary archetype is a\ndisruptive 3-technique DT or versatile interior defender - ideally with both pass-rush and\n\nrun-stopping ability. Alternative: an alpha safety with Flores-scheme versatility (box, deep,\nman coverage) given Smith's succession."
+    },
+    "gm_fingerprint": "(Adofo-Mensah, 3 drafts):\nTrade tendency: Moderate (0.35/0.30)\nPositional affinity (computed, small sample): G +19.0%, QB +11.7%, CB +11.0%\nPattern: Adofo-Mensah is analytics-informed; takes value when the board falls\nImportant nuance: Organization has \"interim GM\" dynamics per reporting - O'Connell\nhas unusual power in draft room. Watch for \"shiny offensive toy\" possibility.",
+    "uncertainty_flags": "O'Connell having unusual power could override positional value logic\nAllen + Hargrave + Kelly + Smith all gone = 4-starter hole, any of which could be 18\nFlores scheme places premium on specific archetypes that not all analysts recognize",
+    "predictability_tier": "MEDIUM. IDL or S is the likely outcome.\nNFC SOUTH",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      18
+    ],
+    "pick_note": null,
+    "header_raw": "Minnesota Vikings - Pick 18",
+    "scheme_struct": {
+      "type": "mcvay_spread",
+      "premium": [
+        "IDL"
+      ],
+      "raw": "O'Connell/Phillips McVay-tree offense - motion heavy, YAC. Flores\naggressive 3-4 defense with heavy pressure, demands versatile DBs. Premium positions: IDL,\nS, CB (Flores scheme), OL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Kyler Murray QB (from ARI)",
+        "Carson Wentz QB"
+      ],
+      "departures": [
+        "Jonathan Allen IDL (salary cut)",
+        "Javon Hargrave IDL (salary cut - now GB)",
+        "Harrison Smith S (retirement uncertain)",
+        "Ryan Kelly C (retired)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Kevin O'Connell",
+      "tiebreaker": "Kwesi Adofo-Mensah",
+      "advisor_weight": 0.5,
+      "source": "narrative"
+    },
+    "hard_constraints": []
+  },
+  "NE": {
+    "leadership": "GM Eliot Wolf (3 drafts) | HC Mike Vrabel (2nd year) | OC Josh McDaniels | DC\nDeMarcus Covington",
+    "context_2025": "10-7, playoff team. Drake Maye ascended to top-10 QB play. Defense solid but\nfront-7 depth thin. Vrabel-McDaniels era is working.",
+    "qb_situation": "LOCKED (Drake Maye - legitimate franchise QB)",
+    "offseason_moves": "Added: Romeo Doubs WR (FA), Dre'Mont Jones DL (short-term), Kevin Byard S (veteran),\nAlijah Vera-Tucker G (one-year prove-it after injury)\nLost: K'Lavon Chaisson EDGE (had breakout 8-sack year), Stefon Diggs WR (injury-prone\nand aging), Garrett Bradbury C\nNet effect: Maintained roster but lost edge help and center. Depth concerns at trenches.",
+    "scheme_identity": "McDaniels offense = pro-style with heavy pre-snap motion, Vrabel defense =\n4-3 base with multiple fronts. Physical, disciplined identity. Premium positions: EDGE, OT, WR,\nCB.",
+    "roster_needs_tiered": "Urgent (4+): EDGE (Chaisson gone, 35 sacks t-7th fewest), OT (Morgan Moses\nsuccession, Vera-Tucker on prove-it deal), WR (Diggs gone, need legit WR2 for Maye)\nSecondary (3): DL rotation, C (Bradbury gone)\nLatent: TE (Hunter Henry final contract year)",
+    "player_archetypes": {
+      "31": "Pick 31 is a fifth-year-option pivot slot. Given Maye is locked and\nplaying well, the archetype should be either a bookend tackle with pass-protection ceiling\n(protect the franchise QB long-term) OR a long, bendy edge rusher (Chaisson replacement).\nBoth fit Vrabel's \"sturdy and physical\" identity. WR is possible but less likely at this specific slot\nbecause WR options better fit day 2."
+    },
+    "gm_fingerprint": "(Wolf):\nTrade tendency: Near league-average, modest sample (3 drafts)\nPositional affinity: Small sample - defaults to Wolf family scouting (Packers/Browns\ntree): prioritizes trenches and athletic profile\nPattern: Has shown willingness to trade mid-round picks for players but hasn't made bold\nR1 moves",
+    "uncertainty_flags": "Small sample on Wolf - predictions have wider intervals\nPick 31 is prime trade-back territory (fifth-year-option deadline)\n\nEleven total picks means they can afford to trade back and add volume",
+    "predictability_tier": "MEDIUM. Position is reasonably predictable (EDGE or OT); specific\nprospect selection within those tiers is broad.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      31
+    ],
+    "pick_note": null,
+    "header_raw": "New England Patriots - Pick 31",
+    "scheme_struct": {
+      "type": "mcdaniels_pro",
+      "premium": [
+        "EDGE",
+        "OT",
+        "WR"
+      ],
+      "raw": "McDaniels offense = pro-style with heavy pre-snap motion, Vrabel defense =\n4-3 base with multiple fronts. Physical, disciplined identity. Premium positions: EDGE, OT, WR,\nCB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Romeo Doubs WR (FA)",
+        "Dre'Mont Jones DL (short-term)",
+        "Kevin Byard S (veteran)",
+        "Alijah Vera-Tucker G (one-year prove-it after injury)"
+      ],
+      "departures": [
+        "K'Lavon Chaisson EDGE (had breakout 8-sack year)",
+        "Stefon Diggs WR (injury-prone and aging)",
+        "Garrett Bradbury C"
+      ]
+    },
+    "latent_needs_struct": {
+      "TE": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Eliot Wolf",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "NO": {
+    "leadership": "GM Mickey Loomis (15+ drafts) | HC Kellen Moore (entering 2nd year) | OC Moore\ndoubles | DC Brandon Staley",
+    "context_2025": "5-12. Rebuild mode continues. Tyler Shough taking over QB. Dead cap issues.",
+    "qb_situation": "BRIDGE (Tyler Shough Year 2)",
+    "offseason_moves": "Added: Travis Etienne Jr. RB (from JAX), Noah Fant TE, Kaden Elliss LB (retained), David\nEdwards G, Dillon Radunz OT\nLost: Rashid Shaheed WR (trade), Alontae Taylor CB\nNet effect: Modest moves. Roster still rebuilding.",
+    "scheme_identity": "Moore offense is pass-heavy, RPO-inclusive (Cowboys template updated).\nStaley defense is modified 3-4. Premium positions: EDGE, WR, CB.",
+    "roster_needs_tiered": "Urgent (4+): WR (Olave is only established threat - depth catastrophic), EDGE (Jordan's\nfuture uncertain, Cameron Jordan aging)\nSecondary (3+): CB (Taylor gone, nickel hole)\nModerate (2.5-3): IDL depth, OL",
+    "player_archetypes": {
+      "8": "Given Loomis's BPA+premium-position tiebreaker pattern, the\narchetype is the highest-graded EDGE or WR the board offers. Loomis takes talent - he\ndoesn't scheme-reach. If a top-3 EDGE somehow falls to 8, that's the pick. If the WRs are the\ncleanest value, that's the pick."
+    },
+    "gm_fingerprint": "(Loomis, 15+ drafts - largest sample in dataset):\nTrade tendency:Famously NEVER trades down - 20 trade-ups, 0 trade-downs since\n2011. This is a HARDCODED truth in any trade modeling.\nPositional affinity: BPA-heavy with premium position tiebreaker\nPattern: Loomis picks impact players, not need players. Ignores year-to-year positional\ntrends.",
+    "uncertainty_flags": "Loomis's BPA approach means the specific prospect is very board-dependent\nDead cap creates rebuild vs contend tension",
+    "predictability_tier": "MEDIUM. Position (EDGE or WR) is clear; specific player depends on board\nbreak.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      8
+    ],
+    "pick_note": null,
+    "header_raw": "New Orleans Saints - Pick 8",
+    "scheme_struct": {
+      "type": "staley_3-4",
+      "premium": [
+        "EDGE",
+        "WR",
+        "CB"
+      ],
+      "raw": "Moore offense is pass-heavy, RPO-inclusive (Cowboys template updated).\nStaley defense is modified 3-4. Premium positions: EDGE, WR, CB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Travis Etienne Jr. RB (from JAX)",
+        "Noah Fant TE",
+        "Kaden Elliss LB (retained)",
+        "David Edwards G",
+        "Dillon Radunz OT"
+      ],
+      "departures": [
+        "Rashid Shaheed WR (trade)",
+        "Alontae Taylor CB"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Mickey Loomis",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "no_trade_down",
+        "raw": "NEVER trades down"
+      }
+    ]
+  },
+  "NYG": {
+    "leadership": "GM Joe Schoen (4 drafts) | HC John Harbaugh (NEW, from Michigan) | OC Shane\nSteichen - WAIT, Steichen is IND. NYG OC is Mike Kafka. Let me flag: the base data had John\nHarbaugh as new NYG HC, which is unusual given he's been BAL HC. This is a data point to\nverify carefully - Harbaugh may refer to Jim Harbaugh (Michigan/LAC) rather than John.\nGiven user data, I'll proceed with assumption John Harbaugh is new NYG HC but flag as HIGH\nUNCERTAINTY.\n[DATA CONCERN: User's base data lists \"John Harbaugh\" as new NYG HC. This conflicts\nwith BAL having Jesse Minter as new HC. Possible error - Jim Harbaugh may be intended.\nProceeding with caution.]",
+    "context_2025": "4-13. Second consecutive bottom-5 record. Dart-Nabers core emerged late in\n2025 as positive signal. Coaching change triggered.",
+    "qb_situation": "LOCKED (Jaxson Dart Year 2)",
+    "offseason_moves": "Added: Isaiah Likely TE (FA), Tremaine Edmunds LB, Jermaine Eluemunor OT, Daniel\nFaalele IOL\n\nLost: Dexter Lawrence IDL (active trade impasse - has requested trade)\nNet effect: Large FA class added at various positions, but the Lawrence trade cloud is\nmassive.",
+    "scheme_identity": "Harbaugh brings physical, disciplined, run-first identity (Michigan DNA).\nValues OL, EDGE, physical DBs. Premium positions: OT, LB, EDGE, S.",
+    "roster_needs_tiered": "Urgent (3.5-4): WR (Nabers + Dart need WR2), OT (RT Eluemunor unproven full-time),\nIDL (if Lawrence traded - catastrophic), IOL (RG unproven)\nSecondary (2.5-3): CB (CB2 thin), S, LB depth\nLatent: IDL (Lawrence impasse), WR (age at key positions), IOL (RG)",
+    "player_archetypes": {
+      "5": "Given Harbaugh's physicality mandate and the cascade of needs,\nseveral archetypes are live: (1) a versatile LB/S hybrid with coverage ability and downhill\nphysicality - exactly Harbaugh's archetype, (2) an elite safety with ball-hawk ability, (3) a\ndominant RB who can be the offensive centerpiece (also fits Harbaugh's run-first DNA), or (4)\na big-bodied WR to pair with Nabers. Schefter intel: \"A lot of people think Giants first pick\ncomes from Columbus\" - referencing multiple Ohio State prospects visited. This suggests a\ndefensive-priority pick."
+    },
+    "gm_fingerprint": "(Schoen, 4 drafts):\nTrade tendency: Moderate (has received \"couple of calls\" about trading 5 - per his own\nstatement)\nPositional affinity (computed): EDGE +29.0%, WR +19.0% - skill + pass rush heavy\nPattern: Schoen has shown willingness to use multiple picks on same position group (WR\nin 2023, OL in 2024)",
+    "uncertainty_flags": "Harbaugh identity question in source data (John vs Jim) - high priority to resolve\nLawrence trade impasse creates moving target for IDL need\nTrade-down probability exists but not dominant",
+    "predictability_tier": "MEDIUM. Multiple archetypes all plausible.",
+    "trade_up_scenario": "",
+    "cascade_rule": "The Giants' pick at 5 is heavily dependent on what happens at 2/3. If a specific\narchetype (elite LB or S) is still on the board, that's the pick. If the top options at 2/3 have\ncleared, the Giants pivot to WR or OT.",
+    "picks": [
+      5
+    ],
+    "pick_note": null,
+    "header_raw": "New York Giants - Pick 5",
+    "scheme_struct": {
+      "type": "harbaugh_power",
+      "premium": [
+        "OT",
+        "LB",
+        "EDGE",
+        "S"
+      ],
+      "raw": "Harbaugh brings physical, disciplined, run-first identity (Michigan DNA).\nValues OL, EDGE, physical DBs. Premium positions: OT, LB, EDGE, S."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Isaiah Likely TE (FA)",
+        "Tremaine Edmunds LB",
+        "Jermaine Eluemunor OT",
+        "Daniel Faalele IOL"
+      ],
+      "departures": [
+        "Dexter Lawrence IDL (active trade impasse - has requested trade)"
+      ]
+    },
+    "latent_needs_struct": {
+      "IDL": 2.0,
+      "WR": 2.0,
+      "IOL": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Joe Schoen",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "NYJ": {
+    "leadership": "GM Darren Mougey (NEW, 1 draft) | HC Aaron Glenn (2nd year) | OC Tanner\nEngstrand | DC Steve Wilks",
+    "context_2025": "3-14. Full collapse. Mass defensive overhaul already begun in FA. Glenn on warm\nseat but organization committed to rebuild. Sauce Gardner trade signal = even their best\nplayers aren't untouchable.",
+    "qb_situation": "BRIDGE (Geno Smith, 1-year $3.3M deal). 2027 franchise QB plan confirmed per\nCimini. Developmental QB at 2 is possible but NOT forced.",
+    "offseason_moves": "Major acquisitions: Geno Smith QB (trade from LV), Minkah Fitzpatrick S (trade from\nMIA), Demario Davis LB (veteran FA), T'Vondre Sweat IDL (trade), David Onyemata IDL\n(FA), Joseph Ossai EDGE (FA), Kingsley Enagbare EDGE (FA), Nahshon Wright CB (FA),\nDylan Parham G (FA)\nMajor losses: Sauce Gardner CB (trade to IND - returned pick 16), Quinnen Williams IDL\n(traded), Justin Fields QB (trade to KC)\nNet effect: Defensive front rebuilt with veterans, secondary gutted, QB is bridge.\nAccumulated draft capital (9 picks now + 5 firsts over next 2 years - most in league).",
+    "scheme_identity": "Glenn confirmed \"multiple 3-4 fronts\" - wants versatile chess pieces. Wilks\ndefense is aggressive, gap-sound, physical. Premium positions: EDGE, LB, CB.",
+    "roster_needs_tiered": "Urgent (4.5+): EDGE (31st in sacks at 26, 27th pressure rate), WR (no receiver hit 400\nyards last year beyond Wilson)\nSecondary (3): CB (Gardner gone, Wright is backup-level replacement), S (beyond\nFitzpatrick, depth thin)\nModerate (1.5-2): QB (Geno bridge), LB (Davis is 37)",
+    "player_archetypes": {
+      "2": "Given Glenn's scheme and pressure-rate failures, the archetype\nis an elite edge rusher or versatile chess-piece LB with pass-rush ability. The two dominant\nprofiles in the consensus board (Bailey/Reese types - edge vs. rangy LB) both fit. Glenn has\n\nopenly said he wants \"multiple fronts\" players, which favors the versatile LB profile over a pure\nedge. Secondary option: blue-chip CB to replace Gardner's production.",
+      "16": "A separation WR or YAC WR1 type to give Geno (or future QB) a\nlegitimate weapon. Alternative: long press-CB to complete the secondary rebuild. Low but non-\nzero QB probability given 2027 plans."
+    },
+    "gm_fingerprint": "(Mougey):\nTrade tendency: 1 draft of data - some evidence of aggressive willingness (\"always open\"\nper his own quote)\nPositional affinity: No meaningful sample\nHistorical context: Mougey is ex-DEN scouting - comes from analytics-informed front\noffice",
+    "uncertainty_flags": "New GM with 1 draft = league-average priors\nGlenn on hot seat = win-now pressure at odds with rebuild\n5 future firsts = extreme flexibility to trade up OR down on draft day",
+    "predictability_tier": "MEDIUM at pick 2 (EDGE/LB consensus), LOWER at pick 16 (WR vs CB vs\nQB branches).\nAFC NORTH",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      2,
+      16
+    ],
+    "pick_note": null,
+    "header_raw": "New York Jets - Picks 2, 16",
+    "scheme_struct": {
+      "type": "glenn_multiple",
+      "premium": [
+        "EDGE",
+        "LB",
+        "CB"
+      ],
+      "raw": "Glenn confirmed \"multiple 3-4 fronts\" - wants versatile chess pieces. Wilks\ndefense is aggressive, gap-sound, physical. Premium positions: EDGE, LB, CB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Geno Smith QB (trade from LV)",
+        "Minkah Fitzpatrick S (trade from MIA)",
+        "Demario Davis LB (veteran FA)",
+        "T'Vondre Sweat IDL (trade)",
+        "David Onyemata IDL (FA)",
+        "Joseph Ossai EDGE (FA)",
+        "Kingsley Enagbare EDGE (FA)",
+        "Nahshon Wright CB (FA)",
+        "Dylan Parham G (FA)"
+      ],
+      "departures": [
+        "Sauce Gardner CB (trade to IND - returned pick 16)",
+        "Quinnen Williams IDL (traded)",
+        "Justin Fields QB (trade to KC)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Darren Mougey",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "PHI": {
+    "leadership": "GM Howie Roseman (15+ drafts) | HC Nick Sirianni | OC Kevin Patullo | DC Vic\nFangio",
+    "context_2025": "14-3, won Super Bowl LIX. Defending champs. Aging roster pieces but core intact.\nRoseman's draft reputation is gold-plated.",
+    "qb_situation": "LOCKED (Jalen Hurts)",
+    "offseason_moves": "Added: Riq Woolen CB (FA), Dontayvion Wicks WR (trade), Hollywood Brown WR (FA),\nElijah Moore WR (FA), Jaelan Phillips EDGE (trade)\nLost: Josh Sweat EDGE (2nd consecutive EDGE loss to FA)\nNet effect: Secondary got better (Woolen), pass rush replenished with Phillips, WR depth\ndeep. But OL is aging.",
+    "scheme_identity": "Sirianni offense is spread with heavy RPO and pre-snap motion. Fangio\ndefense is the legendary \"Fangio system\" - match coverage, simulated pressures, versatile\nDBs. Premium positions: EDGE, OT, CB, S.",
+    "roster_needs_tiered": "Urgent (3.5-4): EDGE (Sweat gone - NFL.com called this \"water the edge farm\"), OT\n(Johnson age 36, Dickerson/Jurgens recovering injuries)\nSecondary (2.5-3): S (Blankenship gone), IOL (Jurgens/Dickerson health concerns)\nLatent (2+): WR (AJ Brown trade rumors - if traded, becomes urgent), OT (Johnson\nsuccession), TE (Goedert 2027 expiration)",
+    "player_archetypes": {
+      "23": "Given Fangio scheme and EDGE need, the cleanest archetype is\na long, bendy EDGE rusher with developmental pass-rush ceiling. Alternative: a bookend OT\nwith long-term starter upside given the aging line. If AJ Brown is traded closer to draft day,\narchetype shifts to elite separation WR."
+    },
+    "gm_fingerprint": "(Roseman, 15+ drafts):\nTrade tendency: High (0.55 trade-up rate) - Roseman averages 5.6 trades per draft.\nKnown for tactical moves for specific targets.\nPositional affinity (computed, 15+ drafts):LB +11.9%, IDL +6.9%, S +6.1% - this is a\nKEY divergence from the \"Eagles love OL\" narrative. Roseman's actual pattern is\nDEFENSE-HEAVY recently. Do not assume OL at 23 just because Eagles traditionally love\nOL.\n\nPattern: Roseman is the best public tactician. Willingness to trade up for specific target is\nreal.",
+    "uncertainty_flags": "The Roseman affinity data (defense-heavy) contradicts common narrative (OL-heavy)\n- key divergence to watch\nAJ Brown trade rumor could transform pick 23 into a WR situation\nRoseman's trade aggression creates volatility",
+    "predictability_tier": "MEDIUM. Multiple archetypes live (EDGE, OT, S all defensible).",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      23
+    ],
+    "pick_note": null,
+    "header_raw": "Philadelphia Eagles - Pick 23",
+    "scheme_struct": {
+      "type": "fangio_match",
+      "premium": [
+        "EDGE",
+        "OT",
+        "CB",
+        "S"
+      ],
+      "raw": "Sirianni offense is spread with heavy RPO and pre-snap motion. Fangio\ndefense is the legendary \"Fangio system\" - match coverage, simulated pressures, versatile\nDBs. Premium positions: EDGE, OT, CB, S."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Riq Woolen CB (FA)",
+        "Dontayvion Wicks WR (trade)",
+        "Hollywood Brown WR (FA)",
+        "Elijah Moore WR (FA)",
+        "Jaelan Phillips EDGE (trade)"
+      ],
+      "departures": [
+        "Josh Sweat EDGE (2nd consecutive EDGE loss to FA)"
+      ]
+    },
+    "latent_needs_struct": {
+      "WR": 2.0,
+      "OT": 2.0,
+      "TE": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Howie Roseman",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "PIT": {
+    "leadership": "GM Omar Khan (4 drafts) | HC Mike Tomlin (longest-tenured) - NOTE: Your\nsource file lists McCarthy as HC but as of current reporting Tomlin remains HC. I'm flagging\nthis as a contradiction in your base data. | OC Arthur Smith | DC Teryl Austin",
+    "context_2025": "10-7 (Rodgers era Year 1). Playoff team but flaws exposed. 47 sacks allowed (OL\nbreakdown). Defense transitioning from Watt-era dominance. Rodgers likely returning but\naging fast.",
+    "qb_situation": "BRIDGE (Rodgers - 1 more year likely). QB succession is the long-term plan, not\nthe 2026 plan.",
+    "offseason_moves": "Added: Rico Dowdle RB (FA), Michael Pittman WR (trade from IND), Cameron Heyward\n(extended), Jaquan Brisker S\nLost: Isaac Seumalo G (major interior OL loss)\nNet effect: Offensive skill upgrades (Pittman, Dowdle) but interior OL weaker, not better.",
+    "scheme_identity": "Smith offense is under-center heavy, multiple TE sets, physical run game.\nAustin defense still Tomlin-era fire-zone hybrid. Premium positions: OL, WR, EDGE, CB.",
+    "roster_needs_tiered": "Urgent (4+): OL (47 sacks allowed, Seumalo gone, Broderick Jones LT concern), WR\n(Pittman is WR2 - still need WR3 or successor)\nSecondary (2.5-3): IOL, S depth, QB (for 2027)\nLatent: QB (Rodgers near end), OT (Jones uncertain)",
+    "player_archetypes": {
+      "21": "Two plausible archetypes: (1) a mauler-style interior OL or\nswing tackle who can anchor the line for a decade, or (2) a developmental QB with starter\nupside (low at 21, but draft is in Pittsburgh and Khan knows Rodgers is near the end). The OL\narchetype is cleaner; the QB archetype requires a specific profile to fall to 21, which most\nanalysts say is unlikely value-wise."
+    },
+    "gm_fingerprint": "(Khan):\nTrade tendency: Moderate, small sample (4 drafts)\nPositional affinity: Limited data - IDL emphasis emerging\nPattern: Khan has shown willingness to acquire veterans via trade (Pittman, Heyward\nextensions) - less of a \"stick and pick\" GM than most",
+    "uncertainty_flags": "HC uncertainty in source data - verify whether Tomlin is still HC or McCarthy has been\nhired (your team_agents file suggests McCarthy but that requires confirmation)\nDraft held in Pittsburgh = home-team-factor is real but typically overrated\n\nRodgers return creates QB ambiguity",
+    "predictability_tier": "MEDIUM. OL is the clear primary archetype, but QB at 21 would be the\nshock scenario.\nAFC SOUTH",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      21
+    ],
+    "pick_note": null,
+    "header_raw": "Pittsburgh Steelers - Pick 21",
+    "scheme_struct": {
+      "type": "default",
+      "premium": [
+        "OL",
+        "WR",
+        "EDGE",
+        "CB"
+      ],
+      "raw": "Smith offense is under-center heavy, multiple TE sets, physical run game.\nAustin defense still Tomlin-era fire-zone hybrid. Premium positions: OL, WR, EDGE, CB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Rico Dowdle RB (FA)",
+        "Michael Pittman WR (trade from IND)",
+        "Cameron Heyward (extended)",
+        "Jaquan Brisker S"
+      ],
+      "departures": [
+        "Isaac Seumalo G (major interior OL loss)"
+      ]
+    },
+    "latent_needs_struct": {
+      "QB": 2.0,
+      "OT": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Omar Khan",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "SEA": {
+    "leadership": "GM John Schneider (16+ drafts) | HC Mike Macdonald | OC Klint Kubiak (departed\nto LV as HC - replaced by Ryan Grubb) | DC Aden Durde",
+    "context_2025": "14-3, SUPER BOWL LX CHAMPION (defeated opponent - per the source\nmaterial). Sam Darnold delivered franchise-changing season. Defending champs.",
+    "qb_situation": "LOCKED - Darnold signed long-term extension. ABSOLUTE BLOCK on QB at\n32.",
+    "offseason_moves": "Added: Emanuel Wilson RB (depth), Josh Jobe CB (retained)\nLost: Kenneth Walker III RB (to KC), Anthony Bradford RG, Riq Woolen CB (to PHI), Boye\nMafe EDGE\nNet effect: Core offensive pieces lost. Only 4 picks total (fewest in league).",
+    "scheme_identity": "Macdonald defense is aggressive 4-3 with multiple fronts. Premium\npositions: RB, CB, EDGE, S. Grubb offense brings Washington college system.",
+    "roster_needs_tiered": "Urgent (5): RB (Walker gone, Charbonnet ACL - no proven RB)\nSecondary (4): RG (Bradford gone - starting hole), CB (Woolen gone)\nModerate (3): EDGE (Mafe gone), S",
+    "player_archetypes": {
+      "32": "Given Macdonald's preference for versatile DBs and the acute\nRB/OL needs, the archetype options are: (1) a three-down RB with receiving ability to replace\nWalker's production, (2) a versatile safety with Cover-2/Cover-3 range, or (3) a press-capable\nCB. Schneider's trade-down history (24 trade-downs) plus only 4 total picks strongly suggests\ntrade-down is likely to add Day 2 capital."
+    },
+    "gm_fingerprint": "(Schneider, 16+ drafts):\nTrade tendency: HEAVY trade-down - 24 career trade-downs, 13 trade-ups. Pick 32 is\nclassic slide-back spot.\nPositional affinity: Defense-heavy historical pattern\nPattern: Schneider specializes in accumulating value late in drafts",
+    "uncertainty_flags": "Trade-down probability is HIGH (0.65) given only 4 picks\nSuper Bowl champion status means roster is deep; luxury pick options exist\nDarnold's extension absolutely blocks QB - model must respect this hard constraint",
+    "predictability_tier": "LOW. Trade-down probability dominates all other considerations.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      32
+    ],
+    "pick_note": null,
+    "header_raw": "Seattle Seahawks - Pick 32",
+    "scheme_struct": {
+      "type": "macdonald_multiple",
+      "premium": [],
+      "raw": "Macdonald defense is aggressive 4-3 with multiple fronts. Premium\npositions: RB, CB, EDGE, S. Grubb offense brings Washington college system."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Emanuel Wilson RB (depth)",
+        "Josh Jobe CB (retained)"
+      ],
+      "departures": [
+        "Kenneth Walker III RB (to KC)",
+        "Anthony Bradford RG",
+        "Riq Woolen CB (to PHI)",
+        "Boye Mafe EDGE"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {
+      "trade_down_tier": "HIGH",
+      "trade_down_prob": 0.7
+    },
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "John Schneider",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "heavy_trade_down",
+        "raw": "HEAVY trade-down"
+      }
+    ]
+  },
+  "SF": {
+    "leadership": "GM John Lynch (8 drafts) | HC Kyle Shanahan | OC Klay Kubiak | DC Nick Sorensen",
+    "context_2025": "12-5, playoff team, lost divisional round. Injury-plagued year (Bosa ACL, Warner).\nDefense fell off from elite tier. Last ranked 31st in 2025 draft value (Sharp Football warning).",
+    "qb_situation": "LOCKED (Brock Purdy)",
+    "offseason_moves": "Added: Osa Odighizuwa IDL (trade), Mike Evans WR (from TB), Jack Jones CB, Cameron\nSample DL\nLost: Spencer Burford LG\nNet effect: WR upgraded with Evans (at age 32 - short-term). Defensive line rotation\nimproved.",
+    "scheme_identity": "Shanahan outside zone + play-action + motion. Sorensen defense is Wide-9.\nPremium positions: OT, EDGE, WR.",
+    "roster_needs_tiered": "Urgent (4.5+): OT (Trent Williams 38 - succession critical), EDGE (dead last in sacks\nwith 20, Bosa ACL recovery)\n\nSecondary (3+): S (safety depth), IDL (rotation), IOL (Burford gone, interior aging)\nLatent: OT (Williams ticking clock), EDGE (behind Bosa thin)",
+    "player_archetypes": {
+      "27": "Given Williams' age and the sack drought, two archetypes are\nlive: (1) a developmental franchise LT to apprentice under Williams, or (2) a high-floor sub-\npackage pass rusher to add behind/beside Bosa. The OT archetype is more urgent longer-term;\nthe EDGE archetype is more immediate."
+    },
+    "gm_fingerprint": "(Lynch, 8 drafts):\nTrade tendency: Moderate (0.25/0.35)\nPositional affinity: Historical SF pattern is skill-heavy (WR, TE, RB)\nPattern: Ranked 31st in 2025 draft value per Sharp Football - recent draft performance is\na warning flag. May be overcompensating by reaching for \"need\" players.",
+    "uncertainty_flags": "Only 4 total picks (among lowest in league)\nLynch's recent draft performance warning\nPick 27 is in contender-zone tier break",
+    "predictability_tier": "MEDIUM-HIGH. OT is clear primary archetype.",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      27
+    ],
+    "pick_note": null,
+    "header_raw": "San Francisco 49ers - Pick 27",
+    "scheme_struct": {
+      "type": "shanahan_zone",
+      "premium": [
+        "OT",
+        "EDGE",
+        "WR"
+      ],
+      "raw": "Shanahan outside zone + play-action + motion. Sorensen defense is Wide-9.\nPremium positions: OT, EDGE, WR."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Osa Odighizuwa IDL (trade)",
+        "Mike Evans WR (from TB)",
+        "Jack Jones CB",
+        "Cameron Sample DL"
+      ],
+      "departures": [
+        "Spencer Burford LG"
+      ]
+    },
+    "latent_needs_struct": {
+      "OT": 2.0,
+      "EDGE": 2.0
+    },
+    "predictability_enum": "MEDIUM-HIGH",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "John Lynch",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "TB": {
+    "leadership": "GM Jason Licht (12+ drafts) | HC Todd Bowles | OC Josh Grizzard (NEW -\nreplaced Coen who left for JAX earlier, now further shuffled) | DC Kacy Rodgers",
+    "context_2025": "10-7, division champion. Baker Mayfield resurgence continues. Defense\nstruggled with pass rush.",
+    "qb_situation": "LOCKED (Baker Mayfield)",
+    "offseason_moves": "Added: Alex Anzalone LB (FA bridge), Kenneth Gainwell RB, Jake Browning QB (backup),\nCade Otton TE (re-signed)\nLost: Mike Evans WR (to SF - monumental), Lavonte David LB (retirement - institution)\nNet effect: Lost franchise WR and franchise LB simultaneously. Massive identity changes.",
+    "scheme_identity": "Bowles blitz-heavy 3-4. Grizzard offense (new OC) brings fresh scheme.\nPremium positions: EDGE, CB, LB.",
+    "roster_needs_tiered": "Urgent (5+): EDGE (4 consecutive years without a 10-sack player - Licht said publicly\nthey \"must get more QB pressure\")\nSecondary (3+): CB (Dean gone, Morrison next up), LB (David retired - institution gone),\nWR (Evans gone)\nModerate (2): OL depth",
+    "player_archetypes": {
+      "15": "Given Licht's explicit EDGE mandate and the 4-year sack\ndrought, the dominant archetype is a disruptive, high-floor EDGE rusher with immediate\npass-rush production ability. Alternative: a seam-stretching TE - Kiper has repeatedly\nconnected TB to TE prospects, and TB confirmed heavy TE board work. Tertiary: a versatile LB\nto replace David's leadership/production."
+    },
+    "gm_fingerprint": "(Licht, 12+ drafts):\nTrade tendency: Moderate (0.30/0.30)\nPositional affinity: Premium position tilted, particularly EDGE\nPattern: Licht gets his guy - strong history of sticking with his target",
+    "uncertainty_flags": "New OC (Grizzard) changes offensive scheme\nDavid's retirement is generational loss - may drive emotional pick\nPublicly stated EDGE mandate is rare - highest-conviction positional need in the league",
+    "predictability_tier": "HIGH. Licht told us what he's targeting. EDGE is the answer unless board\nfalls dramatically.\n\nNFC WEST",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      15
+    ],
+    "pick_note": null,
+    "header_raw": "Tampa Bay Buccaneers - Pick 15",
+    "scheme_struct": {
+      "type": "bowles_blitz",
+      "premium": [
+        "EDGE",
+        "CB",
+        "LB"
+      ],
+      "raw": "Bowles blitz-heavy 3-4. Grizzard offense (new OC) brings fresh scheme.\nPremium positions: EDGE, CB, LB."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Alex Anzalone LB (FA bridge)",
+        "Kenneth Gainwell RB",
+        "Jake Browning QB (backup)",
+        "Cade Otton TE (re-signed)"
+      ],
+      "departures": [
+        "Mike Evans WR (to SF - monumental)",
+        "Lavonte David LB (retirement - institution)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "HIGH",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Jason Licht",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "TEN": {
+    "leadership": "GM Mike Borgonzi (NEW 2024 - 2 drafts) | HC Robert Saleh (NEW, from 49ers\nDC) | OC Brian Daboll (NEW, formerly Giants HC) | DC Gus Bradley (NEW, Cover-3/Legion of\nBoom template)",
+    "context_2025": "3-14. Worst record in NFL. Cam Ward rookie year (59.8% completion, 15 TDs, 7\nINTs, 80.3 rating - promising but raw). Full coaching staff overhaul.",
+    "qb_situation": "LOCKED (Cam Ward, Year 2)",
+    "offseason_moves": "Added: John Franklin-Myers DL (FA), Wan'Dale Robinson WR, Jermaine Johnson II\nEDGE (trade), Cordell Volson G, Alontae Taylor CB (FA)\nLost: L'Jarius Sneed CB (released), T'Vondre Sweat IDL (trade to NYJ)\nNet effect: Some EDGE help arrived (JJ II), but roster remains thin everywhere.",
+    "scheme_identity": "Saleh is defensive-minded but hands the offense to Daboll (spread + RPO,\nGiants/Bills blood). Bradley's defense is the key signal: Cover-3/Legion of Boom template\ndemands big press CBs (6'0\"+), rangy centerfield safeties, speed LBs, and leveraged edge\nrushers. This is the most predictive scheme detail in the entire draft - you can almost cast the\narchetype from the scheme profile.",
+    "roster_needs_tiered": "Urgent (3.5+): OL (multiple holes), EDGE (Bradley scheme demands leverage rushers;\nJohnson II alone insufficient), WR (Ward needs weapons beyond Ridley), RB (Love is the\nultimate weapon for a young QB)\nSecondary (2.5-3): CB (Sneed gone, need press-coverage types), S (centerfield specialist\nfor Cover-3)\nModerate (2): IDL",
+    "player_archetypes": {
+      "4": "Pick 4 faces genuine debate between three distinct archetypes:\n(1) an elite, explosive RB with pass-catching ability (Ward-weapon argument), (2) a blue-chip\nedge rusher or twitchy pass-rushing LB (Saleh/Bradley defensive priority), or (3) a bookend\ntackle (OL foundation). The strongest consensus across five analyst mocks favors the RB\narchetype, but that arguably reflects \"mock inertia\" - the newer reasoning pieces (NFL.com,\nCBS) explicitly argue for EDGE/OL at this slot because of positional value. The Bradley scheme\nspecifically suggests the EDGE or rangy LB archetype fits best ideologically; the RB archetype\nfits best from a Ward-development standpoint. Both are defensible."
+    },
+    "gm_fingerprint": "(Borgonzi):\nTrade tendency: Small sample (2 drafts) - somewhat willing\nPositional affinity: Insufficient data\nPattern: Borgonzi comes from KC scouting under Veach - Veach tree is aggressive,\npremium-position-focused\nTrade-down candidate: Multiple sources confirm TEN is a willing trade-down partner\n(Dallas primary suitor)",
+    "uncertainty_flags": "Complete regime change (new HC, new OC, new DC, 2nd-year GM) = maximum\nuncertainty\nBorgonzi has explicitly said he wants more top-100 picks - trade-down is live\nIf Cowboys trade up to pick 4, TEN moves back and the calculus changes entirely",
+    "predictability_tier": "LOW. Three legitimate archetype options + high trade-down probability.\n\nAFC WEST",
+    "trade_up_scenario": "",
+    "cascade_rule": "",
+    "picks": [
+      4
+    ],
+    "pick_note": null,
+    "header_raw": "Tennessee Titans - Pick 4",
+    "scheme_struct": {
+      "type": "bradley_cover3",
+      "premium": [],
+      "raw": "Saleh is defensive-minded but hands the offense to Daboll (spread + RPO,\nGiants/Bills blood). Bradley's defense is the key signal: Cover-3/Legion of Boom template\ndemands big press CBs (6'0\"+), rangy centerfield safeties, speed LBs, and leveraged edge\nrushers. This is the most predictive scheme detail in the entire draft - you can almost cast the\narchetype from the scheme profile."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "John Franklin-Myers DL (FA)",
+        "Wan'Dale Robinson WR",
+        "Jermaine Johnson II EDGE (trade)",
+        "Cordell Volson G",
+        "Alontae Taylor CB (FA)"
+      ],
+      "departures": [
+        "L'Jarius Sneed CB (released)",
+        "T'Vondre Sweat IDL (trade to NYJ)"
+      ]
+    },
+    "latent_needs_struct": {},
+    "predictability_enum": "LOW",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Mike Borgonzi",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": []
+  },
+  "WAS": {
+    "leadership": "GM Adam Peters (2 drafts) | HC Dan Quinn | OC Kliff Kingsbury | DC Joe Whitt Jr.",
+    "context_2025": "12-5, NFC Championship loss. Daniels became superstar in Year 2. Defense\nimproved but still has holes.",
+    "qb_situation": "LOCKED (Jayden Daniels)",
+    "offseason_moves": "Added: Odafe Oweh EDGE, Nick Cross S, Rachaad White RB, Laremy Tunsil OT\n(extended)\nLost: Cor'Dale Flott CB, Tyler Biadasz C (released)\nNet effect: Modest - Peters conserving capital. Only 2 picks in first 4 rounds.",
+    "scheme_identity": "Quinn 4-3 aggressive defense + Kingsbury spread air raid offense. Premium\npositions: WR, EDGE, CB, OL.",
+    "roster_needs_tiered": "Urgent (4+): WR (McLaurin aging + zero WR2 option), EDGE (Quinn always wants pass\nrush)\nSecondary (3+): OL (Biadasz gone - center thin), CB (Flott gone), S\nLatent: WR (McLaurin succession), C (Biadasz gone)",
+    "player_archetypes": {
+      "7": "Given Daniels' need for weapons and McLaurin's age, the\ndominant archetype is an elite separation WR or big-bodied X-receiver to stabilize the passing\n\ngame. Alternative: a dynamic LB/S hybrid to continue defensive build. Tertiary: a dominant\nRB who can be the offensive spark (Love archetype)."
+    },
+    "gm_fingerprint": "(Peters, 2 drafts):\nTrade tendency: Low (0.15/0.15) - Peters has publicly said \"more likely than not staying\nat 7\"\nPositional affinity (computed, 2 drafts - small sample): TE +19.3%, QB +16.7%, CB\n+16.0%\nPattern: Peters from SF/Baltimore scouting tree - BPA-leaning",
+    "uncertainty_flags": "Only 6 total picks - cannot afford misses, tends to conservative\nPeters publicly stated stay-put preference\nMultiple visit signals suggest heavy WR board work (Tate, Lemon, Cooper, Hurst all\nvisited)",
+    "predictability_tier": "MEDIUM. WR is clear primary archetype, but defense remains in play.\nNFC NORTH",
+    "trade_up_scenario": "",
+    "cascade_rule": "Washington's pick at 7 heavily depends on what the top 6 yields. If\nGiants took LB/S at 5, the top WR options might still be on the board. If top 6 cleared WRs, pivot\nto defense.",
+    "picks": [
+      7
+    ],
+    "pick_note": null,
+    "header_raw": "Washington Commanders - Pick 7",
+    "scheme_struct": {
+      "type": "quinn_aggressive",
+      "premium": [],
+      "raw": "Quinn 4-3 aggressive defense + Kingsbury spread air raid offense. Premium\npositions: WR, EDGE, CB, OL."
+    },
+    "fa_moves_struct": {
+      "arrivals": [
+        "Odafe Oweh EDGE",
+        "Nick Cross S",
+        "Rachaad White RB",
+        "Laremy Tunsil OT (extended)"
+      ],
+      "departures": [
+        "Cor'Dale Flott CB",
+        "Tyler Biadasz C (released)"
+      ]
+    },
+    "latent_needs_struct": {
+      "WR": 2.0,
+      "C": 2.0
+    },
+    "predictability_enum": "MEDIUM",
+    "trade_probability": {},
+    "injury_flags": [],
+    "decision_maker": {
+      "primary": "Adam Peters",
+      "tiebreaker": null,
+      "advisor_weight": 0.0,
+      "source": "default"
+    },
+    "hard_constraints": [
+      {
+        "type": "stay_put_stated",
+        "raw": "stay-put"
+      }
+    ]
+  }
+}

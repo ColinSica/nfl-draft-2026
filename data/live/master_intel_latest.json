@@ -1,0 +1,1776 @@
+{
+  "timestamp": "2026-04-17",
+  "players": {
+    "Fernando Mendoza": {
+      "american_odds": 10000,
+      "implied_prob": 0.009900990099009901,
+      "teams_visited": [
+        "LAC",
+        "LV"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Arvell Reese": {
+      "american_odds": 10000,
+      "implied_prob": 0.009900990099009901,
+      "teams_visited": [
+        "ATL",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "David Bailey": {
+      "american_odds": 160,
+      "implied_prob": 0.38461538461538464,
+      "teams_visited": [
+        "ARI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jeremiyah Love": {
+      "american_odds": 800,
+      "implied_prob": 0.1111111111111111,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Sonny Styles": {
+      "american_odds": 120,
+      "implied_prob": 0.45454545454545453,
+      "teams_visited": [
+        "CIN",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Francis Mauigoa": {
+      "american_odds": 125,
+      "implied_prob": 0.4444444444444444,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Carnell Tate": {
+      "american_odds": 9000,
+      "implied_prob": 0.01098901098901099,
+      "teams_visited": [
+        "CLE",
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Caleb Downs": {
+      "american_odds": 6500,
+      "implied_prob": 0.015151515151515152,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Rueben Bain": {
+      "american_odds": 120,
+      "implied_prob": 0.45454545454545453,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Mansoor Delane": {
+      "american_odds": 3500,
+      "implied_prob": 0.027777777777777776,
+      "teams_visited": [
+        "BUF",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Spencer Fano": {
+      "american_odds": 1100,
+      "implied_prob": 0.08333333333333333,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Makai Lemon": {
+      "american_odds": 7000,
+      "implied_prob": 0.014084507042253521,
+      "teams_visited": [
+        "CLE",
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Monroe Freeling": {
+      "american_odds": 1600,
+      "implied_prob": 0.058823529411764705,
+      "teams_visited": [
+        "CLE",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jermod McCoy": {
+      "american_odds": 4000,
+      "implied_prob": 0.024390243902439025,
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jordyn Tyson": {
+      "american_odds": 2800,
+      "implied_prob": 0.034482758620689655,
+      "teams_visited": [
+        "BUF",
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Olaivavega Ioane": {
+      "american_odds": 6500,
+      "implied_prob": 0.015151515151515152,
+      "teams_visited": [
+        "PIT"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kenyon Sadiq": {
+      "american_odds": 4500,
+      "implied_prob": 0.021739130434782608,
+      "teams_visited": [
+        "DAL",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Dillon Thieneman": {
+      "american_odds": 4000,
+      "implied_prob": 0.024390243902439025,
+      "teams_visited": [
+        "CAR",
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Kadyn Proctor": {
+      "american_odds": 4000,
+      "implied_prob": 0.024390243902439025,
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Keldric Faulk": {
+      "american_odds": 5000,
+      "implied_prob": 0.0196078431372549,
+      "teams_visited": [
+        "KC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Omar Cooper Jr.": {
+      "american_odds": 2800,
+      "implied_prob": 0.034482758620689655,
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Blake Miller": {
+      "american_odds": 7000,
+      "implied_prob": 0.014084507042253521,
+      "teams_visited": [
+        "CLE"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Caleb Lomu": {
+      "american_odds": 7500,
+      "implied_prob": 0.013157894736842105,
+      "teams_visited": [
+        "CIN",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "T.J. Parker": {
+      "american_odds": 3500,
+      "implied_prob": 0.027777777777777776,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Peter Woods": {
+      "american_odds": 4500,
+      "implied_prob": 0.021739130434782608,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Cashius Howell": {
+      "american_odds": 6000,
+      "implied_prob": 0.01639344262295082,
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Ty Simpson": {
+      "american_odds": 10000,
+      "implied_prob": 0.009900990099009901,
+      "teams_visited": [
+        "ATL",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Colton Hood": {
+      "american_odds": 5000,
+      "implied_prob": 0.0196078431372549,
+      "teams_visited": [
+        "KC",
+        "LAC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Akheem Mesidor": {
+      "teams_visited": [
+        "CHI",
+        "CLE",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Emmanuel McNeil-Warren": {
+      "teams_visited": [
+        "BAL",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Denzel Boston": {
+      "teams_visited": [
+        "BAL",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Avieon Terrell": {
+      "teams_visited": [
+        "CIN",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kayden McDonald": {
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Max Iheanachor": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Zion Young": {
+      "teams_visited": [
+        "BAL",
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Chris Johnson": {
+      "teams_visited": [
+        "KC"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Caleb Banks": {
+      "teams_visited": [
+        "ARI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Chase Bisontis": {
+      "teams_visited": [
+        "LAC"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Emmanuel Pregnon": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Malachi Lawrence": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Brandon Cisse": {
+      "teams_visited": [
+        "KC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jadarian Price": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jacob Rodriguez": {
+      "teams_visited": [
+        "CHI",
+        "CIN",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Christen Miller": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "R Mason Thomas": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Anthony Hill Jr.": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Lee Hunter": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Eli Stowers": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Gabe Jacas": {
+      "teams_visited": [
+        "LAR",
+        "TB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Chris Bell": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Chris Brazzell": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jake Golday": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Treydan Stukes": {
+      "teams_visited": [
+        "ATL",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Keylan Rutledge": {
+      "teams_visited": [
+        "CHI",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Germie Bernard": {
+      "teams_visited": [
+        "ATL",
+        "BUF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "A.J. Haulcy": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Derrick Moore": {
+      "teams_visited": [
+        "ATL",
+        "PHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Josiah Trotter": {
+      "teams_visited": [
+        "CAR",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Zachariah Branch": {
+      "teams_visited": [
+        "ATL",
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Keionte Scott": {
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Caleb Tiernan": {
+      "teams_visited": [
+        "ATL",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Mike Washington Jr.": {
+      "teams_visited": [
+        "TB"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Domonique Orange": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Connor Lew": {
+      "teams_visited": [
+        "HOU"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Dani Dennis-Sutton": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Max Klare": {
+      "teams_visited": [
+        "DEN",
+        "DET"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Malachi Fields": {
+      "teams_visited": [
+        "NYJ"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Elijah Sarratt": {
+      "teams_visited": [
+        "NO"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Romello Height": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Antonio Williams": {
+      "teams_visited": [
+        "CHI",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Gracen Halton": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kyle Louis": {
+      "teams_visited": [
+        "SF",
+        "TB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Davison Igbinosun": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Garrett Nussmeier": {
+      "teams_visited": [
+        "IND",
+        "PHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Ted Hurst": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Sam Hecht": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Skyler Bell": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Joshua Josephs": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jaishawn Barham": {
+      "teams_visited": [
+        "BUF",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Darrell Jackson Jr.": {
+      "teams_visited": [
+        "CAR",
+        "GB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Oscar Delp": {
+      "teams_visited": [
+        "CHI",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kamari Ramsey": {
+      "teams_visited": [
+        "BUF",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Bud Clark": {
+      "teams_visited": [
+        "DET"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jalon Kilgore": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jonah Coleman": {
+      "teams_visited": [
+        "DEN",
+        "MIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Keyron Crawford": {
+      "teams_visited": [
+        "WAS"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Malik Muhammad": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Zakee Wheatley": {
+      "teams_visited": [
+        "DAL",
+        "NO"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Julian Neal": {
+      "teams_visited": [
+        "CAR",
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Genesis Smith": {
+      "teams_visited": [
+        "TB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Drew Allar": {
+      "teams_visited": [
+        "ARI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Devin Moore": {
+      "teams_visited": [
+        "BAL",
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Dametrious Crownover": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Deion Burks": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Chandler Rivers": {
+      "teams_visited": [
+        "KC"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jalen Farmer": {
+      "teams_visited": [
+        "LAC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Daylen Everette": {
+      "teams_visited": [
+        "CHI",
+        "SF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Markel Bell": {
+      "teams_visited": [
+        "CIN",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Sam Roush": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Emmett Johnson": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Brenen Thompson": {
+      "teams_visited": [
+        "ATL",
+        "NYG"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Kaleb Proctor": {
+      "teams_visited": [
+        "ATL",
+        "TB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Austin Barber": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Justin Joly": {
+      "teams_visited": [
+        "BUF",
+        "CAR"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Will Lee III": {
+      "teams_visited": [
+        "NYG"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Chris McClellan": {
+      "teams_visited": [
+        "ATL",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Zxavian Harris": {
+      "teams_visited": [
+        "CHI",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Trey Zuhn III": {
+      "teams_visited": [
+        "HOU",
+        "IND"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jude Bowry": {
+      "teams_visited": [
+        "CIN",
+        "NO"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Cole Payton": {
+      "teams_visited": [
+        "CHI",
+        "JAX",
+        "KC"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Billy Schrauth": {
+      "teams_visited": [
+        "HOU"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Carson Beck": {
+      "teams_visited": [
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Tacario Davis": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Harold Perkins": {
+      "teams_visited": [
+        "LAC",
+        "SF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Dontay Corleone": {
+      "teams_visited": [
+        "BUF",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kaleb Elarms-Orr": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Tyler Onyedim": {
+      "teams_visited": [
+        "ATL",
+        "TB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Eli Raridon": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Kaytron Allen": {
+      "teams_visited": [
+        "KC",
+        "LAC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Zane Durant": {
+      "teams_visited": [
+        "BUF",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Nick Singleton": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Ephesians Prysock": {
+      "teams_visited": [
+        "PIT",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Rayshaun Benny": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "DeMonte Capehart": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Hezekiah Masses": {
+      "teams_visited": [
+        "MIA",
+        "MIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Isaiah World": {
+      "teams_visited": [
+        "LAC",
+        "LAR",
+        "MIA"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Taylen Green": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Bryce Boettcher": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Taurean York": {
+      "teams_visited": [
+        "DET"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Beau Stephens": {
+      "teams_visited": [
+        "BAL",
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Joe Royer": {
+      "teams_visited": [
+        "CIN",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jack Endries": {
+      "teams_visited": [
+        "PHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Josh Cameron": {
+      "teams_visited": [
+        "ATL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Travis Burke": {
+      "teams_visited": [
+        "BAL",
+        "BUF",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jadon Canady": {
+      "teams_visited": [
+        "DET"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Charles Demmings": {
+      "teams_visited": [
+        "IND"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Nick Barrett": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jimmy Rolder": {
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Keagen Trost": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Michael Taaffe": {
+      "teams_visited": [
+        "CHI",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Demond Claiborne": {
+      "teams_visited": [
+        "KC",
+        "LAC",
+        "MIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jeff Caldwell": {
+      "teams_visited": [
+        "PIT"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Drew Shelton": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jakobe Thomas": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "J.C. Davis": {
+      "teams_visited": [
+        "NYG"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jeremiah Wright": {
+      "teams_visited": [
+        "CIN",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jager Burton": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Parker Brailsford": {
+      "teams_visited": [
+        "JAX",
+        "NYJ"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Marlin Klein": {
+      "teams_visited": [
+        "PHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jack Kelly": {
+      "teams_visited": [
+        "CLE",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Adam Randall": {
+      "teams_visited": [
+        "DEN",
+        "IND"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Nate Boerkircher": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Kevin Coleman Jr.": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Nadame Tucker": {
+      "teams_visited": [
+        "TB",
+        "TEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Justin Jefferson": {
+      "teams_visited": [
+        "BAL",
+        "TB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kendrick Law": {
+      "teams_visited": [
+        "PIT"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Febechi Nwaiwu": {
+      "teams_visited": [
+        "CHI",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Landon Robinson": {
+      "teams_visited": [
+        "CIN",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Tyreak Sapp": {
+      "teams_visited": [
+        "DET"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Wesley Williams": {
+      "teams_visited": [
+        "DAL",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Reggie Virgil": {
+      "teams_visited": [
+        "ARI",
+        "ATL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jaydn Ott": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Tanner Koziol": {
+      "teams_visited": [
+        "DET"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Robert Spears-Jennings": {
+      "teams_visited": [
+        "CHI",
+        "NO"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kaelon Black": {
+      "teams_visited": [
+        "CAR",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Will Kacmarek": {
+      "teams_visited": [
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Cyrus Allen": {
+      "teams_visited": [
+        "MIA",
+        "TB"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Thaddeus Dixon": {
+      "teams_visited": [
+        "LAC"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Trey Moore": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Seth McGowan": {
+      "teams_visited": [
+        "CHI",
+        "NE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Carver Willis": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Aamil Wagner": {
+      "teams_visited": [
+        "MIA"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Mason Reiger": {
+      "teams_visited": [
+        "NE",
+        "NO"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Pat Coogan": {
+      "teams_visited": [
+        "LAR",
+        "LV"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Matthew Hibner": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Kaden Wetjen": {
+      "teams_visited": [
+        "PIT"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Mikail Kamara": {
+      "teams_visited": [
+        "CHI",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Eli Heidenreich": {
+      "teams_visited": [
+        "NYG"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Josh Cuevas": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Malik Benson": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Andre Fuller": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Caleb Douglas": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Rene Konga": {
+      "teams_visited": [
+        "KC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Cole Wisniewski": {
+      "teams_visited": [
+        "DEN",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Caden Barnett": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "John Michael Gyllenborg": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Logan Taylor": {
+      "teams_visited": [
+        "NYG",
+        "NYJ"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Alex Harkey": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Brandon Cleveland": {
+      "teams_visited": [
+        "SEA"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Colbie Young": {
+      "teams_visited": [
+        "SEA",
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jordan van den Berg": {
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Kendal Daniels": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Barion Brown": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Avery Smith": {
+      "teams_visited": [
+        "ATL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Latrell McCutchin": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Haynes King": {
+      "teams_visited": [
+        "BAL",
+        "IND"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Michael Heldman": {
+      "teams_visited": [
+        "LAC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Zavion Thomas": {
+      "teams_visited": [
+        "ARI",
+        "ATL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Eric Rivers": {
+      "teams_visited": [
+        "WAS"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Tyren Montgomery": {
+      "teams_visited": [
+        "HOU"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Nolan Rucci": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Joe Fagnano": {
+      "teams_visited": [
+        "NYJ"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Micah Morris": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Evan Beerntsen": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jaeden Roberts": {
+      "teams_visited": [
+        "NO",
+        "NYG"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Alan Herron": {
+      "teams_visited": [
+        "WAS"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jaden Dugger": {
+      "teams_visited": [
+        "KC"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Xavian Sorey Jr.": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Wade Woodaz": {
+      "teams_visited": [
+        "CLE",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jordan Hudson": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jalon Daniels": {
+      "teams_visited": [
+        "BUF"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Diego Pavia": {
+      "teams_visited": [
+        "CAR",
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jalen Stroman": {
+      "teams_visited": [
+        "NO"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Chip Trayanum": {
+      "teams_visited": [
+        "SEA",
+        "TB"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jackson Kuwatch": {
+      "teams_visited": [
+        "BUF",
+        "IND"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Keyshawn James-Newby": {
+      "teams_visited": [
+        "SEA"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Bauer Sharp": {
+      "teams_visited": [
+        "TB"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Rahsul Faison": {
+      "teams_visited": [
+        "MIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Namdi Obiazor": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Zach Durfee": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Anterio Thompson": {
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Tyre West": {
+      "teams_visited": [
+        "GB",
+        "NYJ"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Behren Morton": {
+      "teams_visited": [
+        "CIN",
+        "HOU"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "James Brockermeyer": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Uar Bernard": {
+      "teams_visited": [
+        "SF"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Bobby Jamison-Travis": {
+      "teams_visited": [
+        "DET",
+        "GB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Dan Villari": {
+      "teams_visited": [
+        "CHI",
+        "TEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Tristan Leigh": {
+      "teams_visited": [
+        "CHI",
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Josh Gesky": {
+      "teams_visited": [
+        "BUF",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jacob Thomas": {
+      "teams_visited": [
+        "GB",
+        "HOU"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Athan Kaliakmanis": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Ethan Onianwa": {
+      "teams_visited": [
+        "GB",
+        "HOU"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Khalil Dinkins": {
+      "teams_visited": [
+        "PIT"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Mark Gronowski": {
+      "teams_visited": [
+        "WAS"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Romello Brinson": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Lance Mason": {
+      "teams_visited": [
+        "MIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jack Strand": {
+      "teams_visited": [
+        "ATL"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jaren Kanak": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Miles Kitselman": {
+      "teams_visited": [
+        "HOU"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Kapena Gushiken": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Chris Hilton": {
+      "teams_visited": [
+        "TEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jack Stonehouse": {
+      "teams_visited": [
+        "BUF",
+        "CAR"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Cian Slone": {
+      "teams_visited": [
+        "NYJ"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jayden Williams": {
+      "teams_visited": [
+        "IND"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "TJ Quinn": {
+      "teams_visited": [
+        "GB"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Jarod Washington": {
+      "teams_visited": [
+        "BUF",
+        "CAR"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Trebor Pena": {
+      "teams_visited": [
+        "PHI"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Drew Stevens": {
+      "teams_visited": [
+        "ATL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Nick Dawkins": {
+      "teams_visited": [
+        "DAL"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Dasan McCullough": {
+      "teams_visited": [
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Gavin Ortega": {
+      "teams_visited": [
+        "BUF",
+        "DEN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Karon Prunty": {
+      "teams_visited": [
+        "CHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Malik Spencer": {
+      "teams_visited": [
+        "NE",
+        "NO"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Tywone Malone": {
+      "teams_visited": [
+        "NO"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Jerand Bradley": {
+      "teams_visited": [
+        "IND"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Cam Porter": {
+      "teams_visited": [
+        "CIN",
+        "CLE"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "De'Zhaun Stribling": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Louis Moore": {
+      "teams_visited": [
+        "JAX",
+        "KC"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Bishop Fitzgerald": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Devon Marshall": {
+      "teams_visited": [
+        "JAX"
+      ],
+      "cancelled_visit_flag": 1
+    },
+    "Lorenzo Styles Jr.": {
+      "teams_visited": [
+        "CLE"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "C.J. Daniels": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Luke Altmyer": {
+      "teams_visited": [
+        "PHI"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Nyjalik Kelly": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "C.J. Donaldson": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Skyler Thomas": {
+      "teams_visited": [
+        "CIN"
+      ],
+      "cancelled_visit_flag": 0
+    },
+    "Aaron Hall": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Erick Hunter": {
+      "teams_visited": [],
+      "cancelled_visit_flag": 0
+    },
+    "Cash Jones": {
+      "teams_visited": [
+        "BAL"
+      ],
+      "cancelled_visit_flag": 0
+    }
+  }
+}

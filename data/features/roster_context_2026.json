@@ -1,0 +1,2850 @@
+{
+  "ARI": {
+    "age_cliffs": [
+      {
+        "player": "Calais Campbell",
+        "position": "DL",
+        "age_2026": 40,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Kelvin Beachum",
+        "position": "OL",
+        "age_2026": 37,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Dalvin Tomlinson",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "James Conner",
+        "position": "RB",
+        "age_2026": 31,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Budda Baker",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "WR",
+          "player": "Marvin Harrison Jr.",
+          "pick": 4
+        },
+        {
+          "pos": "IDL",
+          "player": "Darius Robinson",
+          "pick": 27
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Max Melton",
+          "pick": 43
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "IDL",
+          "player": "Walter Nolen",
+          "pick": 16
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "CB",
+          "player": "Will Johnson",
+          "pick": 47
+        }
+      ]
+    }
+  },
+  "ATL": {
+    "age_cliffs": [
+      {
+        "player": "Kirk Cousins",
+        "position": "QB",
+        "age_2026": 38,
+        "threshold": 35,
+        "severity": "high"
+      },
+      {
+        "player": "David Onyemata",
+        "position": "DL",
+        "age_2026": 34,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Leonard Floyd",
+        "position": "DL",
+        "age_2026": 34,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Jake Matthews",
+        "position": "OL",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Kaden Elliss",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "QB",
+          "player": "Michael Penix",
+          "pick": 8
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Ruke Orhorhoro",
+          "pick": 35
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "EDGE",
+          "player": "Jalon Walker",
+          "pick": 15
+        },
+        {
+          "pos": "EDGE",
+          "player": "James Pearce",
+          "pick": 26
+        }
+      ],
+      "2025_r2": []
+    }
+  },
+  "BAL": {
+    "age_cliffs": [
+      {
+        "player": "John Jenkins",
+        "position": "DL",
+        "age_2026": 37,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Brent Urban",
+        "position": "DL",
+        "age_2026": 35,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Kyle Van Noy",
+        "position": "LB",
+        "age_2026": 35,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Ronnie Stanley",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Derrick Henry",
+        "position": "RB",
+        "age_2026": 32,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Patrick Ricard",
+        "position": "RB",
+        "age_2026": 32,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Chidobe Awuzie",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Marlon Humphrey",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Justice Hill",
+        "position": "RB",
+        "age_2026": 29,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "CB",
+          "player": "Nate Wiggins",
+          "pick": 30
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "OL",
+          "player": "Roger Rosengarten",
+          "pick": 62
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "SAF",
+          "player": "Malaki Starks",
+          "pick": 27
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "EDGE",
+          "player": "Mike Green",
+          "pick": 59
+        }
+      ]
+    }
+  },
+  "BUF": {
+    "age_cliffs": [
+      {
+        "player": "Jordan Poyer",
+        "position": "DB",
+        "age_2026": 35,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "DaQuan Jones",
+        "position": "DL",
+        "age_2026": 35,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Larry Ogunjobi",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Matt Milano",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Shaq Thompson",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Dion Dawkins",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Tre'Davious White",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Joey Bosa",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Taron Johnson",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Curtis Samuel",
+        "position": "WR",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Reggie Gilliam",
+        "position": "RB",
+        "age_2026": 29,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [],
+      "2024_r2": [
+        {
+          "pos": "WR",
+          "player": "Keon Coleman",
+          "pick": 33
+        },
+        {
+          "pos": "SAF",
+          "player": "Cole Bishop",
+          "pick": 60
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "CB",
+          "player": "Maxwell Hairston",
+          "pick": 30
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "IDL",
+          "player": "T.J. Sanders",
+          "pick": 41
+        }
+      ]
+    }
+  },
+  "CAR": {
+    "age_cliffs": [
+      {
+        "player": "Taylor Moton",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Nick Scott",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "A'Shawn Robinson",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "David Moore",
+        "position": "WR",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Rico Dowdle",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "WR",
+          "player": "Xavier Legette",
+          "pick": 32
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "RB",
+          "player": "Jonathon Brooks",
+          "pick": 46
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "WR",
+          "player": "Tetairoa McMillan",
+          "pick": 8
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "EDGE",
+          "player": "Nic Scourton",
+          "pick": 51
+        }
+      ]
+    }
+  },
+  "CHI": {
+    "age_cliffs": [
+      {
+        "player": "Joe Thuney",
+        "position": "OL",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Grady Jarrett",
+        "position": "DL",
+        "age_2026": 33,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Jalen Reeves-Maybin",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "T.J. Edwards",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "QB",
+          "player": "Caleb Williams",
+          "pick": 1
+        },
+        {
+          "pos": "WR",
+          "player": "Rome Odunze",
+          "pick": 9
+        }
+      ],
+      "2024_r2": [],
+      "2025_r1": [
+        {
+          "pos": "TE",
+          "player": "Colston Loveland",
+          "pick": 10
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "WR",
+          "player": "Luther Burden",
+          "pick": 39
+        },
+        {
+          "pos": "OL",
+          "player": "Ozzy Trapilo",
+          "pick": 56
+        },
+        {
+          "pos": "EDGE",
+          "player": "Shemar Turner",
+          "pick": 62
+        }
+      ]
+    }
+  },
+  "CIN": {
+    "age_cliffs": [
+      {
+        "player": "Joe Flacco",
+        "position": "QB",
+        "age_2026": 41,
+        "threshold": 35,
+        "severity": "high"
+      },
+      {
+        "player": "Ted Karras",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Lucas Patrick",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Trey Hendrickson",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "B.J. Hill",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Oren Burks",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jalen Davis",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Amarius Mims",
+          "pick": 18
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Kris Jenkins",
+          "pick": 49
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "EDGE",
+          "player": "Shemar Stewart",
+          "pick": 17
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "LB",
+          "player": "Demetrius Knight",
+          "pick": 49
+        }
+      ]
+    }
+  },
+  "CLE": {
+    "age_cliffs": [
+      {
+        "player": "Shelby Harris",
+        "position": "DL",
+        "age_2026": 35,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Joel Bitonio",
+        "position": "OL",
+        "age_2026": 35,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Cornelius Lucas",
+        "position": "OL",
+        "age_2026": 35,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "DeAndre Carter",
+        "position": "WR",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Wyatt Teller",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Jack Conklin",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Maliek Collins",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Myles Garrett",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Jerome Baker",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Trayveon Williams",
+        "position": "RB",
+        "age_2026": 29,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Michael Hall",
+          "pick": 54
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "IDL",
+          "player": "Mason Graham",
+          "pick": 5
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "LB",
+          "player": "Carson Schwesinger",
+          "pick": 33
+        },
+        {
+          "pos": "RB",
+          "player": "Quinshon Judkins",
+          "pick": 36
+        }
+      ]
+    }
+  },
+  "DAL": {
+    "age_cliffs": [
+      {
+        "player": "Dante Fowler Jr.",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Donovan Wilson",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Kenny Clark",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Malik Hooker",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Logan Wilson",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "KaVontae Turpin",
+        "position": "WR",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Tyler Guyton",
+          "pick": 29
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Marshawn Kneeland",
+          "pick": 56
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "OL",
+          "player": "Tyler Booker",
+          "pick": 12
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "EDGE",
+          "player": "Donovan Ezeiruaku",
+          "pick": 44
+        }
+      ]
+    }
+  },
+  "DEN": {
+    "age_cliffs": [
+      {
+        "player": "Garett Bolles",
+        "position": "OL",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Michael Burton",
+        "position": "RB",
+        "age_2026": 34,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Alex Singleton",
+        "position": "LB",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Evan Engram",
+        "position": "TE",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "D.J. Jones",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Courtland Sutton",
+        "position": "WR",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Justin Strnad",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Adam Prentice",
+        "position": "RB",
+        "age_2026": 29,
+        "threshold": 28,
+        "severity": "medium"
+      },
+      {
+        "player": "J.K. Dobbins",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "QB",
+          "player": "Bo Nix",
+          "pick": 12
+        }
+      ],
+      "2024_r2": [],
+      "2025_r1": [
+        {
+          "pos": "CB",
+          "player": "Jahdae Barron",
+          "pick": 20
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "RB",
+          "player": "RJ Harvey",
+          "pick": 60
+        }
+      ]
+    }
+  },
+  "DET": {
+    "age_cliffs": [
+      {
+        "player": "Graham Glasgow",
+        "position": "OL",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Arthur Maulet",
+        "position": "DB",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Taylor Decker",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "DJ Reader",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Alex Anzalone",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Kalif Raymond",
+        "position": "WR",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Al-Quadin Muhammad",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "D.J. Reed",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Rock Ya-Sin",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Avonte Maddox",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Tom Kennedy",
+        "position": "WR",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "CB",
+          "player": "Terrion Arnold",
+          "pick": 24
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Ennis Rakestraw",
+          "pick": 61
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "IDL",
+          "player": "Tyleik Williams",
+          "pick": 28
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "OL",
+          "player": "Tate Ratledge",
+          "pick": 57
+        }
+      ]
+    }
+  },
+  "GB": {
+    "age_cliffs": [
+      {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Jordan Morgan",
+          "pick": 25
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "LB",
+          "player": "Edgerrin Cooper",
+          "pick": 45
+        },
+        {
+          "pos": "CB",
+          "player": "Javon Bullard",
+          "pick": 58
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "WR",
+          "player": "Matthew Golden",
+          "pick": 23
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "OT",
+          "player": "Anthony Belton",
+          "pick": 54
+        }
+      ]
+    }
+  },
+  "HOU": {
+    "age_cliffs": [
+      {
+        "player": "Jimmie Ward",
+        "position": "DB",
+        "age_2026": 35,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Trent Brown",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Danielle Hunter",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Sheldon Rankins",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Jakob Johnson",
+        "position": "RB",
+        "age_2026": 32,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "M.J. Stewart",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "E.J. Speed",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Nick Chubb",
+        "position": "RB",
+        "age_2026": 31,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Braxton Berrios",
+        "position": "WR",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Tremon Smith",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Joe Mixon",
+        "position": "RB",
+        "age_2026": 30,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Kamari Lassiter",
+          "pick": 42
+        },
+        {
+          "pos": "OL",
+          "player": "Blake Fisher",
+          "pick": 59
+        }
+      ],
+      "2025_r1": [],
+      "2025_r2": [
+        {
+          "pos": "WR",
+          "player": "Jayden Higgins",
+          "pick": 34
+        },
+        {
+          "pos": "OL",
+          "player": "Aireontae Ersery",
+          "pick": 48
+        }
+      ]
+    }
+  },
+  "IND": {
+    "age_cliffs": [
+      {
+        "player": "Philip Rivers",
+        "position": "QB",
+        "age_2026": 45,
+        "threshold": 35,
+        "severity": "high"
+      },
+      {
+        "player": "Xavien Howard",
+        "position": "DB",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Grover Stewart",
+        "position": "DL",
+        "age_2026": 33,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Ameer Abdullah",
+        "position": "RB",
+        "age_2026": 33,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "DeForest Buckner",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Kenny Moore II",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Tyquan Lewis",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Charvarius Ward",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Germaine Pratt",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Zaire Franklin",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "IDL",
+          "player": "Laiatu Latu",
+          "pick": 15
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "WR",
+          "player": "Adonai Mitchell",
+          "pick": 52
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "TE",
+          "player": "Tyler Warren",
+          "pick": 14
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "EDGE",
+          "player": "JT Tuimoloau",
+          "pick": 45
+        }
+      ]
+    }
+  },
+  "JAX": {
+    "age_cliffs": [
+      {
+        "player": "Arik Armstead",
+        "position": "DL",
+        "age_2026": 33,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Eric Murray",
+        "position": "DB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Dennis Gardeck",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Johnny Mundt",
+        "position": "TE",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Jourdan Lewis",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Andrew Wingard",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "WR",
+          "player": "Brian Thomas",
+          "pick": 23
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Maason Smith",
+          "pick": 48
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "WR",
+          "player": "Travis Hunter",
+          "pick": 2
+        }
+      ],
+      "2025_r2": []
+    }
+  },
+  "KC": {
+    "age_cliffs": [
+      {
+        "player": "Travis Kelce",
+        "position": "TE",
+        "age_2026": 37,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Mike Pennel",
+        "position": "DL",
+        "age_2026": 35,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Chris Jones",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Drue Tranquill",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Kareem Hunt",
+        "position": "RB",
+        "age_2026": 31,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Mike Edwards",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "WR",
+          "player": "Xavier Worthy",
+          "pick": 28
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "OL",
+          "player": "Kingsley Suamataia",
+          "pick": 63
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "OL",
+          "player": "Josh Simmons",
+          "pick": 32
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "IDL",
+          "player": "Omarr Norman-Lott",
+          "pick": 63
+        }
+      ]
+    }
+  },
+  "LAC": {
+    "age_cliffs": [
+      {
+        "player": "Khalil Mack",
+        "position": "LB",
+        "age_2026": 35,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Tony Jefferson",
+        "position": "DB",
+        "age_2026": 34,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Denzel Perryman",
+        "position": "LB",
+        "age_2026": 34,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Bud Dupree",
+        "position": "LB",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Bradley Bozeman",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Bobby Hart",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Donte Jackson",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Da'Shawn Hand",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Troy Dye",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Najee Harris",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Joe Alt",
+          "pick": 5
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "WR",
+          "player": "Ladd McConkey",
+          "pick": 34
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "RB",
+          "player": "Omarion Hampton",
+          "pick": 22
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "WR",
+          "player": "Tre Harris",
+          "pick": 55
+        }
+      ]
+    }
+  },
+  "LAR": {
+    "age_cliffs": [
+      {
+        "player": "Matthew Stafford",
+        "position": "QB",
+        "age_2026": 38,
+        "threshold": 35,
+        "severity": "high"
+      },
+      {
+        "player": "Rob Havenstein",
+        "position": "OL",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Darious Williams",
+        "position": "DB",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Tyler Higbee",
+        "position": "TE",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Ahkello Witherspoon",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Poona Ford",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "IDL",
+          "player": "Jared Verse",
+          "pick": 19
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Braden Fiske",
+          "pick": 39
+        }
+      ],
+      "2025_r1": [],
+      "2025_r2": [
+        {
+          "pos": "TE",
+          "player": "Terrance Ferguson",
+          "pick": 46
+        }
+      ]
+    }
+  },
+  "LV": {
+    "age_cliffs": [
+      {
+        "player": "Geno Smith",
+        "position": "QB",
+        "age_2026": 36,
+        "threshold": 35,
+        "severity": "medium"
+      },
+      {
+        "player": "Raheem Mostert",
+        "position": "RB",
+        "age_2026": 34,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Adam Butler",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Elandon Roberts",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jamal Adams",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Alex Bachman",
+        "position": "WR",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {}
+  },
+  "LVR": {
+    "age_cliffs": [],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "TE",
+          "player": "Brock Bowers",
+          "pick": 13
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "OL",
+          "player": "Jackson Powers-Johnson",
+          "pick": 44
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "RB",
+          "player": "Ashton Jeanty",
+          "pick": 6
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "WR",
+          "player": "Jack Bech",
+          "pick": 58
+        }
+      ]
+    }
+  },
+  "MIA": {
+    "age_cliffs": [
+      {
+        "player": "Darren Waller",
+        "position": "TE",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Rasul Douglas",
+        "position": "DB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Daniel Brunskill",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Tyreek Hill",
+        "position": "WR",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Zach Sieler",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Ashtyn Davis",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Minkah Fitzpatrick",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Kendall Sheffield",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Bradley Chubb",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Alec Ingold",
+        "position": "RB",
+        "age_2026": 30,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "EDGE",
+          "player": "Chop Robinson",
+          "pick": 21
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "OL",
+          "player": "Patrick Paul",
+          "pick": 55
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "IDL",
+          "player": "Kenneth Grant",
+          "pick": 13
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "OL",
+          "player": "Jonah Savaiinaea",
+          "pick": 37
+        }
+      ]
+    }
+  },
+  "MIN": {
+    "age_cliffs": [
+      {
+        "player": "Harrison Smith",
+        "position": "DB",
+        "age_2026": 37,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Javon Hargrave",
+        "position": "DL",
+        "age_2026": 33,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Ryan Kelly",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "C.J. Ham",
+        "position": "RB",
+        "age_2026": 33,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Eric Wilson",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jonathan Allen",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Andrew Van Ginkel",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Tavierre Thomas",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Blake Cashman",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Ty Chandler",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "QB",
+          "player": "J.J. McCarthy",
+          "pick": 10
+        },
+        {
+          "pos": "LB",
+          "player": "Dallas Turner",
+          "pick": 17
+        }
+      ],
+      "2024_r2": [],
+      "2025_r1": [
+        {
+          "pos": "OL",
+          "player": "Donovan Jackson",
+          "pick": 24
+        }
+      ],
+      "2025_r2": []
+    }
+  },
+  "NE": {
+    "age_cliffs": [
+      {
+        "player": "Morgan Moses",
+        "position": "OL",
+        "age_2026": 35,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Stefon Diggs",
+        "position": "WR",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Hunter Henry",
+        "position": "TE",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Robert Spillane",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Carlton Davis III",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Harold Landry III",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "D'Ernest Johnson",
+        "position": "RB",
+        "age_2026": 30,
+        "threshold": 28,
+        "severity": "medium"
+      },
+      {
+        "player": "Rhamondre Stevenson",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      },
+      {
+        "player": "Antonio Gibson",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "QB",
+          "player": "Drake Maye",
+          "pick": 3
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "WR",
+          "player": "Ja'Lynn Polk",
+          "pick": 37
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "OT",
+          "player": "Will Campbell",
+          "pick": 4
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "RB",
+          "player": "TreVeyon Henderson",
+          "pick": 38
+        }
+      ]
+    }
+  },
+  "NO": {
+    "age_cliffs": [
+      {
+        "player": "Cameron Jordan",
+        "position": "LB",
+        "age_2026": 37,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Demario Davis",
+        "position": "LB",
+        "age_2026": 37,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Davon Godchaux",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Alvin Kamara",
+        "position": "RB",
+        "age_2026": 31,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Dante Pettis",
+        "position": "WR",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Isaac Yiadom",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Carl Granderson",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Taliese Fuaga",
+          "pick": 14
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Kool-Aid McKinstry",
+          "pick": 41
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "OL",
+          "player": "Kelvin Banks",
+          "pick": 9
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "QB",
+          "player": "Tyler Shough",
+          "pick": 40
+        }
+      ]
+    }
+  },
+  "NYG": {
+    "age_cliffs": [
+      {
+        "player": "Russell Wilson",
+        "position": "QB",
+        "age_2026": 38,
+        "threshold": 35,
+        "severity": "high"
+      },
+      {
+        "player": "Greg Van Roten",
+        "position": "OL",
+        "age_2026": 36,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Roy Robertson-Harris",
+        "position": "DL",
+        "age_2026": 33,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Rakeem Nunez-Roches",
+        "position": "DL",
+        "age_2026": 33,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Jermaine Eluemunor",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Chris Board",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Bobby Okereke",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Demetrius Flannigan-Fowles",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Gunner Olszewski",
+        "position": "WR",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "WR",
+          "player": "Malik Nabers",
+          "pick": 6
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Tyler Nubin",
+          "pick": 47
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "EDGE",
+          "player": "Abdul Carter",
+          "pick": 3
+        },
+        {
+          "pos": "QB",
+          "player": "Jaxson Dart",
+          "pick": 25
+        }
+      ],
+      "2025_r2": []
+    }
+  },
+  "NYJ": {
+    "age_cliffs": [
+      {
+        "player": "Tyrod Taylor",
+        "position": "QB",
+        "age_2026": 37,
+        "threshold": 35,
+        "severity": "medium"
+      },
+      {
+        "player": "Isaiah Oliver",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Quincy Williams",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Andrew Beck",
+        "position": "RB",
+        "age_2026": 30,
+        "threshold": 28,
+        "severity": "medium"
+      },
+      {
+        "player": "Kene Nwangwu",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      },
+      {
+        "player": "Avery Williams",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Olumuyiwa Fashanu",
+          "pick": 11
+        }
+      ],
+      "2024_r2": [],
+      "2025_r1": [
+        {
+          "pos": "OL",
+          "player": "Armand Membou",
+          "pick": 7
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "TE",
+          "player": "Mason Taylor",
+          "pick": 42
+        }
+      ]
+    }
+  },
+  "PHI": {
+    "age_cliffs": [
+      {
+        "player": "Lane Johnson",
+        "position": "OL",
+        "age_2026": 36,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Za'Darius Smith",
+        "position": "LB",
+        "age_2026": 34,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Adoree' Jackson",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Marcus Epps",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Zack Baun",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Saquon Barkley",
+        "position": "RB",
+        "age_2026": 29,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "CB",
+          "player": "Quinyon Mitchell",
+          "pick": 22
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Cooper DeJean",
+          "pick": 40
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "LB",
+          "player": "Jihaad Campbell",
+          "pick": 31
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "SAF",
+          "player": "Andrew Mukuba",
+          "pick": 64
+        }
+      ]
+    }
+  },
+  "PIT": {
+    "age_cliffs": [
+      {
+        "player": "Aaron Rodgers",
+        "position": "QB",
+        "age_2026": 43,
+        "threshold": 35,
+        "severity": "high"
+      },
+      {
+        "player": "Cameron Heyward",
+        "position": "DL",
+        "age_2026": 37,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Isaac Seumalo",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Andrus Peat",
+        "position": "OL",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Jalen Ramsey",
+        "position": "DB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "T.J. Watt",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Chuck Clark",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jabrill Peppers",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Kyle Dugger",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "James Pierre",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Cole Holcomb",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jaylen Warren",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Troy Fautanu",
+          "pick": 20
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "OL",
+          "player": "Zach Frazier",
+          "pick": 51
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "IDL",
+          "player": "Derrick Harmon",
+          "pick": 21
+        }
+      ],
+      "2025_r2": []
+    }
+  },
+  "SEA": {
+    "age_cliffs": [
+      {
+        "player": "Jarran Reed",
+        "position": "DL",
+        "age_2026": 34,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "DeMarcus Lawrence",
+        "position": "LB",
+        "age_2026": 34,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Leonard Williams",
+        "position": "DL",
+        "age_2026": 32,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Uchenna Nwosu",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Brady Russell",
+        "position": "RB",
+        "age_2026": 28,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "IDL",
+          "player": "Byron Murphy",
+          "pick": 16
+        }
+      ],
+      "2024_r2": [],
+      "2025_r1": [
+        {
+          "pos": "OT",
+          "player": "Grey Zabel",
+          "pick": 18
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "SAF",
+          "player": "Nick Emmanwori",
+          "pick": 35
+        },
+        {
+          "pos": "TE",
+          "player": "Elijah Arroyo",
+          "pick": 50
+        }
+      ]
+    }
+  },
+  "SF": {
+    "age_cliffs": [
+      {
+        "player": "Trent Williams",
+        "position": "OL",
+        "age_2026": 38,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Kyle Juszczyk",
+        "position": "RB",
+        "age_2026": 35,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Eric Kendricks",
+        "position": "LB",
+        "age_2026": 34,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Jake Brendel",
+        "position": "OL",
+        "age_2026": 34,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "George Kittle",
+        "position": "TE",
+        "age_2026": 33,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Luke Gifford",
+        "position": "LB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Fred Warner",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Christian McCaffrey",
+        "position": "RB",
+        "age_2026": 30,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "WR",
+          "player": "Ricky Pearsall",
+          "pick": 31
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "CB",
+          "player": "Renardo Green",
+          "pick": 64
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "IDL",
+          "player": "Mykel Williams",
+          "pick": 11
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "IDL",
+          "player": "Alfred Collins",
+          "pick": 43
+        }
+      ]
+    }
+  },
+  "TB": {
+    "age_cliffs": [
+      {
+        "player": "Lavonte David",
+        "position": "LB",
+        "age_2026": 36,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Mike Evans",
+        "position": "WR",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Haason Reddick",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Dan Feeney",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Vita Vea",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Jamel Dean",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Chris Godwin Jr.",
+        "position": "WR",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "Graham Barton",
+          "pick": 26
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "LB",
+          "player": "Chris Braswell",
+          "pick": 57
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "WR",
+          "player": "Emeka Egbuka",
+          "pick": 19
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "CB",
+          "player": "Benjamin Morrison",
+          "pick": 53
+        }
+      ]
+    }
+  },
+  "TEN": {
+    "age_cliffs": [
+      {
+        "player": "Kevin Zeitler",
+        "position": "OL",
+        "age_2026": 36,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Jihad Ward",
+        "position": "LB",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Corey Levin",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Calvin Ridley",
+        "position": "WR",
+        "age_2026": 32,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Xavier Woods",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Sebastian Joseph-Day",
+        "position": "DL",
+        "age_2026": 31,
+        "threshold": 31,
+        "severity": "medium"
+      },
+      {
+        "player": "Cody Barton",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Arden Key",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Tony Pollard",
+        "position": "RB",
+        "age_2026": 29,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "OL",
+          "player": "JC Latham",
+          "pick": 7
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "T'Vondre Sweat",
+          "pick": 38
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "QB",
+          "player": "Cam Ward",
+          "pick": 1
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "EDGE",
+          "player": "Oluwafemi Oladejo",
+          "pick": 52
+        }
+      ]
+    }
+  },
+  "WAS": {
+    "age_cliffs": [
+      {
+        "player": "Nick Bellore",
+        "position": "LB",
+        "age_2026": 37,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Von Miller",
+        "position": "LB",
+        "age_2026": 37,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Bobby Wagner",
+        "position": "LB",
+        "age_2026": 36,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Zach Ertz",
+        "position": "TE",
+        "age_2026": 36,
+        "threshold": 32,
+        "severity": "high"
+      },
+      {
+        "player": "Preston Smith",
+        "position": "DL",
+        "age_2026": 34,
+        "threshold": 31,
+        "severity": "high"
+      },
+      {
+        "player": "Jonathan Jones",
+        "position": "DB",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Chris Moore",
+        "position": "WR",
+        "age_2026": 33,
+        "threshold": 30,
+        "severity": "high"
+      },
+      {
+        "player": "Laremy Tunsil",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Andrew Wylie",
+        "position": "OL",
+        "age_2026": 32,
+        "threshold": 32,
+        "severity": "medium"
+      },
+      {
+        "player": "Will Harris",
+        "position": "DB",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Austin Ekeler",
+        "position": "RB",
+        "age_2026": 31,
+        "threshold": 28,
+        "severity": "high"
+      },
+      {
+        "player": "Terry McLaurin",
+        "position": "WR",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jamal Agnew",
+        "position": "WR",
+        "age_2026": 31,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Jeremy Reaves",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Marshon Lattimore",
+        "position": "DB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Frankie Luvu",
+        "position": "LB",
+        "age_2026": 30,
+        "threshold": 30,
+        "severity": "medium"
+      },
+      {
+        "player": "Chase Edmonds",
+        "position": "RB",
+        "age_2026": 30,
+        "threshold": 28,
+        "severity": "medium"
+      }
+    ],
+    "previous_year_allocation": {
+      "2024_r1": [
+        {
+          "pos": "QB",
+          "player": "Jayden Daniels",
+          "pick": 2
+        }
+      ],
+      "2024_r2": [
+        {
+          "pos": "IDL",
+          "player": "Jer'Zhan Newton",
+          "pick": 36
+        },
+        {
+          "pos": "CB",
+          "player": "Mike Sainristil",
+          "pick": 50
+        },
+        {
+          "pos": "TE",
+          "player": "Ben Sinnott",
+          "pick": 53
+        }
+      ],
+      "2025_r1": [
+        {
+          "pos": "OL",
+          "player": "Josh Conerly",
+          "pick": 29
+        }
+      ],
+      "2025_r2": [
+        {
+          "pos": "CB",
+          "player": "Trey Amos",
+          "pick": 61
+        }
+      ]
+    }
+  }
+}

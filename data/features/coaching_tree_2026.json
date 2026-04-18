@@ -1,0 +1,203 @@
+{
+  "ARI": {
+    "hc": "Mike LaFleur",
+    "hc_tree": "mcvay",
+    "hc_college_stints": []
+  },
+  "ATL": {
+    "hc": "Raheem Morris",
+    "hc_tree": "mcvay",
+    "hc_college_stints": []
+  },
+  "BAL": {
+    "hc": "Jesse Minter",
+    "hc_tree": "harbaugh",
+    "hc_college_stints": [
+      "Michigan"
+    ]
+  },
+  "BUF": {
+    "hc": "Joe Brady",
+    "hc_tree": "internal",
+    "hc_college_stints": [
+      "Penn State",
+      "LSU"
+    ]
+  },
+  "CAR": {
+    "hc": "Dave Canales",
+    "hc_tree": "seattle",
+    "hc_college_stints": []
+  },
+  "CHI": {
+    "hc": "Ben Johnson",
+    "hc_tree": "detroit",
+    "hc_college_stints": [
+      "Boston College"
+    ]
+  },
+  "CIN": {
+    "hc": "Zac Taylor",
+    "hc_tree": "mcvay",
+    "hc_college_stints": [
+      "Texas A&M"
+    ]
+  },
+  "CLE": {
+    "hc": "Todd Monken",
+    "hc_tree": "harbaugh",
+    "hc_college_stints": [
+      "Georgia",
+      "Oklahoma State"
+    ]
+  },
+  "DAL": {
+    "hc": "Mike McCarthy",
+    "hc_tree": "mccarthy",
+    "hc_college_stints": []
+  },
+  "DEN": {
+    "hc": "Sean Payton",
+    "hc_tree": "payton",
+    "hc_college_stints": [
+      "Purdue"
+    ]
+  },
+  "DET": {
+    "hc": "Dan Campbell",
+    "hc_tree": "saints",
+    "hc_college_stints": []
+  },
+  "GB": {
+    "hc": "Matt LaFleur (GB)",
+    "hc_tree": "shanahan",
+    "hc_college_stints": []
+  },
+  "HOU": {
+    "hc": "DeMeco Ryans",
+    "hc_tree": "shanahan",
+    "hc_college_stints": []
+  },
+  "IND": {
+    "hc": "Shane Steichen",
+    "hc_tree": "reid",
+    "hc_college_stints": []
+  },
+  "JAX": {
+    "hc": "Liam Coen",
+    "hc_tree": "mcvay",
+    "hc_college_stints": [
+      "Northern Iowa"
+    ]
+  },
+  "KC": {
+    "hc": "Andy Reid",
+    "hc_tree": "reid",
+    "hc_college_stints": []
+  },
+  "LAC": {
+    "hc": "Jim Harbaugh (LAC)",
+    "hc_tree": "harbaugh",
+    "hc_college_stints": [
+      "Michigan",
+      "Stanford"
+    ]
+  },
+  "LAR": {
+    "hc": "Sean McVay",
+    "hc_tree": "mcvay",
+    "hc_college_stints": [
+      "Miami OH"
+    ]
+  },
+  "LV": {
+    "hc": "Klint Kubiak",
+    "hc_tree": "shanahan",
+    "hc_college_stints": []
+  },
+  "MIA": {
+    "hc": "Jeff Hafley",
+    "hc_tree": "ohio_state",
+    "hc_college_stints": [
+      "Ohio State",
+      "Boston College"
+    ]
+  },
+  "MIN": {
+    "hc": "Kevin O'Connell",
+    "hc_tree": "mcvay",
+    "hc_college_stints": []
+  },
+  "NE": {
+    "hc": "Mike Vrabel",
+    "hc_tree": "belichick",
+    "hc_college_stints": [
+      "Ohio State"
+    ]
+  },
+  "NO": {
+    "hc": "Kellen Moore",
+    "hc_tree": "cowboys",
+    "hc_college_stints": [
+      "Boise State"
+    ]
+  },
+  "NYG": {
+    "hc": "John Harbaugh",
+    "hc_tree": "harbaugh",
+    "hc_college_stints": [
+      "Western Michigan"
+    ]
+  },
+  "NYJ": {
+    "hc": "Aaron Glenn",
+    "hc_tree": "saints",
+    "hc_college_stints": []
+  },
+  "PHI": {
+    "hc": "Nick Sirianni",
+    "hc_tree": "indiana",
+    "hc_college_stints": [
+      "Indiana (PA)",
+      "Mount Union"
+    ]
+  },
+  "PIT": {
+    "hc": "Mike Tomlin",
+    "hc_tree": "tomlin",
+    "hc_college_stints": [
+      "VMI"
+    ]
+  },
+  "SEA": {
+    "hc": "Mike Macdonald",
+    "hc_tree": "ravens",
+    "hc_college_stints": [
+      "Georgia"
+    ]
+  },
+  "SF": {
+    "hc": "Kyle Shanahan",
+    "hc_tree": "shanahan",
+    "hc_college_stints": []
+  },
+  "TB": {
+    "hc": "Todd Bowles",
+    "hc_tree": "bowles",
+    "hc_college_stints": []
+  },
+  "TEN": {
+    "hc": "Robert Saleh",
+    "hc_tree": "49ers_dc",
+    "hc_college_stints": [
+      "Central Michigan"
+    ]
+  },
+  "WAS": {
+    "hc": "Dan Quinn",
+    "hc_tree": "falcons",
+    "hc_college_stints": [
+      "Hofstra"
+    ]
+  }
+}

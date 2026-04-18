@@ -1,0 +1,4381 @@
+{
+  "meta": {
+    "n_analysts": 20,
+    "n_tier1": 6,
+    "mock_date_range": [
+      "2026-04-03",
+      "2026-04-17"
+    ],
+    "generated_at": "2026-04-18T04:49:06+00:00"
+  },
+  "analysts": [
+    {
+      "idx": 1,
+      "name": "Dane Brugler \u2014 The Athletic (7-round)",
+      "date": "2026-04-16",
+      "tier1": true
+    },
+    {
+      "idx": 2,
+      "name": "Dane Brugler \u2014 The Athletic (1st-round)",
+      "date": "2026-04-15",
+      "tier1": true
+    },
+    {
+      "idx": 3,
+      "name": "ESPN Anonymous Scouts",
+      "date": "2026-04-17",
+      "tier1": true
+    },
+    {
+      "idx": 4,
+      "name": "Mel Kiper Jr. \u2014 ESPN (Final)",
+      "date": "2026-04-15",
+      "tier1": true
+    },
+    {
+      "idx": 5,
+      "name": "Todd McShay \u2014 The Ringer (4.0)",
+      "date": "2026-04-15",
+      "tier1": true
+    },
+    {
+      "idx": 6,
+      "name": "Peter Schrager \u2014 ESPN (Insider)",
+      "date": "2026-04-07",
+      "tier1": true
+    },
+    {
+      "idx": 7,
+      "name": "Chad Reuter \u2014 NFL.com (7-round)",
+      "date": "2026-04-17",
+      "tier1": false
+    },
+    {
+      "idx": 8,
+      "name": "Chad Reuter \u2014 NFL.com (5-round)",
+      "date": "2026-04-03",
+      "tier1": false
+    },
+    {
+      "idx": 9,
+      "name": "Bradley Locker \u2014 PFF",
+      "date": "2026-04-14",
+      "tier1": false
+    },
+    {
+      "idx": 10,
+      "name": "Daire Carragher \u2014 PFF",
+      "date": "2026-04-06",
+      "tier1": false
+    },
+    {
+      "idx": 11,
+      "name": "Mike Renner \u2014 CBS Sports",
+      "date": "2026-04-13",
+      "tier1": false
+    },
+    {
+      "idx": 12,
+      "name": "Garrett Podell \u2014 CBS Sports (Mock 5.0)",
+      "date": "2026-04-08",
+      "tier1": false
+    },
+    {
+      "idx": 13,
+      "name": "Vinnie Iyer \u2014 Sporting News",
+      "date": "2026-04-15",
+      "tier1": false
+    },
+    {
+      "idx": 14,
+      "name": "Ben Solak \u2014 ESPN (QB-only)",
+      "date": "2026-04-08",
+      "tier1": false
+    },
+    {
+      "idx": 15,
+      "name": "Walter Cherepinsky \u2014 WalterFootball",
+      "date": "2026-04-17",
+      "tier1": false
+    },
+    {
+      "idx": 16,
+      "name": "Charlie Campbell \u2014 WalterFootball",
+      "date": "2026-04-13",
+      "tier1": false
+    },
+    {
+      "idx": 17,
+      "name": "Gary Davenport \u2014 Bleacher Report (Fan Vote)",
+      "date": "2026-04-16",
+      "tier1": false
+    },
+    {
+      "idx": 18,
+      "name": "Mike Band \u2014 NFL.com",
+      "date": "2026-04-10",
+      "tier1": false
+    },
+    {
+      "idx": 19,
+      "name": "Draft Labs Aggregator",
+      "date": "2026-04-16",
+      "tier1": false
+    },
+    {
+      "idx": 20,
+      "name": "NFL Mock Draft Database (Consensus)",
+      "date": "2026-04-17",
+      "tier1": false
+    }
+  ],
+  "per_pick": {
+    "1": {
+      "team": "LV",
+      "picks_all": {
+        "Mendoza": 20
+      },
+      "picks_tier1": {
+        "Mendoza": 6
+      },
+      "freq_all": {
+        "Mendoza": 1.0
+      },
+      "freq_tier1": {
+        "Mendoza": 1.0
+      },
+      "consensus_player": "Mendoza",
+      "consensus_tier1": "Mendoza",
+      "trade_noted": false
+    },
+    "2": {
+      "team": "NYJ",
+      "picks_all": {
+        "Reese": 14,
+        "Bailey": 5
+      },
+      "picks_tier1": {
+        "Reese": 3,
+        "Bailey": 3
+      },
+      "freq_all": {
+        "Reese": 0.737,
+        "Bailey": 0.263
+      },
+      "freq_tier1": {
+        "Reese": 0.5,
+        "Bailey": 0.5
+      },
+      "consensus_player": "Reese",
+      "consensus_tier1": "Reese",
+      "trade_noted": false
+    },
+    "3": {
+      "team": "ARI",
+      "picks_all": {
+        "Mauigoa": 8,
+        "Bailey": 4,
+        "Reese": 6,
+        "Love": 1
+      },
+      "picks_tier1": {
+        "Mauigoa": 2,
+        "Bailey": 1,
+        "Reese": 3
+      },
+      "freq_all": {
+        "Mauigoa": 0.421,
+        "Bailey": 0.211,
+        "Reese": 0.316,
+        "Love": 0.053
+      },
+      "freq_tier1": {
+        "Mauigoa": 0.333,
+        "Bailey": 0.167,
+        "Reese": 0.5
+      },
+      "consensus_player": "Mauigoa",
+      "consensus_tier1": "Reese",
+      "trade_noted": true
+    },
+    "4": {
+      "team": "TEN",
+      "picks_all": {
+        "Bailey": 7,
+        "Love": 11,
+        "Mauigoa": 1
+      },
+      "picks_tier1": {
+        "Bailey": 2,
+        "Love": 4
+      },
+      "freq_all": {
+        "Bailey": 0.368,
+        "Love": 0.579,
+        "Mauigoa": 0.053
+      },
+      "freq_tier1": {
+        "Bailey": 0.333,
+        "Love": 0.667
+      },
+      "consensus_player": "Love",
+      "consensus_tier1": "Love",
+      "trade_noted": false
+    },
+    "5": {
+      "team": "NYG",
+      "picks_all": {
+        "Downs": 8,
+        "Mauigoa": 1,
+        "Styles": 5,
+        "Love": 2,
+        "Tate": 1,
+        "Fano": 2
+      },
+      "picks_tier1": {
+        "Downs": 4,
+        "Mauigoa": 1,
+        "Styles": 1
+      },
+      "freq_all": {
+        "Downs": 0.421,
+        "Mauigoa": 0.053,
+        "Styles": 0.263,
+        "Love": 0.105,
+        "Tate": 0.053,
+        "Fano": 0.105
+      },
+      "freq_tier1": {
+        "Downs": 0.667,
+        "Mauigoa": 0.167,
+        "Styles": 0.167
+      },
+      "consensus_player": "Downs",
+      "consensus_tier1": "Downs",
+      "trade_noted": false
+    },
+    "6": {
+      "team": "CLE",
+      "picks_all": {
+        "Styles": 6,
+        "Tate": 7,
+        "Fano": 4,
+        "Freeling": 2
+      },
+      "picks_tier1": {
+        "Styles": 4,
+        "Tate": 1,
+        "Fano": 1
+      },
+      "freq_all": {
+        "Styles": 0.316,
+        "Tate": 0.368,
+        "Fano": 0.211,
+        "Freeling": 0.105
+      },
+      "freq_tier1": {
+        "Styles": 0.667,
+        "Tate": 0.167,
+        "Fano": 0.167
+      },
+      "consensus_player": "Tate",
+      "consensus_tier1": "Styles",
+      "trade_noted": true
+    },
+    "7": {
+      "team": "WAS",
+      "picks_all": {
+        "Love": 3,
+        "Tate": 6,
+        "Styles": 3,
+        "Delane": 6,
+        "Downs": 1
+      },
+      "picks_tier1": {
+        "Love": 2,
+        "Tate": 3,
+        "Styles": 1
+      },
+      "freq_all": {
+        "Love": 0.158,
+        "Tate": 0.316,
+        "Styles": 0.158,
+        "Delane": 0.316,
+        "Downs": 0.053
+      },
+      "freq_tier1": {
+        "Love": 0.333,
+        "Tate": 0.5,
+        "Styles": 0.167
+      },
+      "consensus_player": "Tate",
+      "consensus_tier1": "Tate",
+      "trade_noted": true
+    },
+    "8": {
+      "team": "NO",
+      "picks_all": {
+        "Tate": 3,
+        "Bain Jr.": 8,
+        "Fano": 1,
+        "Downs": 5,
+        "Delane": 2
+      },
+      "picks_tier1": {
+        "Tate": 2,
+        "Bain Jr.": 3,
+        "Fano": 1
+      },
+      "freq_all": {
+        "Tate": 0.158,
+        "Bain Jr.": 0.421,
+        "Fano": 0.053,
+        "Downs": 0.263,
+        "Delane": 0.105
+      },
+      "freq_tier1": {
+        "Tate": 0.333,
+        "Bain Jr.": 0.5,
+        "Fano": 0.167
+      },
+      "consensus_player": "Bain Jr.",
+      "consensus_tier1": "Bain Jr.",
+      "trade_noted": true
+    },
+    "9": {
+      "team": "KC",
+      "picks_all": {
+        "Bain Jr.": 8,
+        "Tyson": 7,
+        "Bailey": 1,
+        "Styles": 1,
+        "Delane": 1,
+        "Mansoor Delane": 1
+      },
+      "picks_tier1": {
+        "Bain Jr.": 2,
+        "Tyson": 4
+      },
+      "freq_all": {
+        "Bain Jr.": 0.421,
+        "Tyson": 0.368,
+        "Bailey": 0.053,
+        "Styles": 0.053,
+        "Delane": 0.053,
+        "Mansoor Delane": 0.053
+      },
+      "freq_tier1": {
+        "Bain Jr.": 0.333,
+        "Tyson": 0.667
+      },
+      "consensus_player": "Bain Jr.",
+      "consensus_tier1": "Tyson",
+      "trade_noted": true
+    },
+    "10": {
+      "team": "CIN",
+      "picks_all": {
+        "Delane": 9,
+        "Downs": 3,
+        "McCoy": 4,
+        "Bain Jr.": 2,
+        "Woods": 1
+      },
+      "picks_tier1": {
+        "Delane": 5,
+        "Downs": 1
+      },
+      "freq_all": {
+        "Delane": 0.474,
+        "Downs": 0.158,
+        "McCoy": 0.211,
+        "Bain Jr.": 0.105,
+        "Woods": 0.053
+      },
+      "freq_tier1": {
+        "Delane": 0.833,
+        "Downs": 0.167
+      },
+      "consensus_player": "Delane",
+      "consensus_tier1": "Delane",
+      "trade_noted": false
+    },
+    "11": {
+      "team": "MIA",
+      "picks_all": {
+        "Faulk": 2,
+        "Mauigoa": 6,
+        "Delane": 3,
+        "Tate": 3,
+        "Lemon": 4
+      },
+      "picks_tier1": {
+        "Faulk": 2,
+        "Mauigoa": 1,
+        "Delane": 1,
+        "Tate": 1
+      },
+      "freq_all": {
+        "Faulk": 0.111,
+        "Mauigoa": 0.333,
+        "Delane": 0.167,
+        "Tate": 0.167,
+        "Lemon": 0.222
+      },
+      "freq_tier1": {
+        "Faulk": 0.4,
+        "Mauigoa": 0.2,
+        "Delane": 0.2,
+        "Tate": 0.2
+      },
+      "consensus_player": "Mauigoa",
+      "consensus_tier1": "Faulk",
+      "trade_noted": false
+    },
+    "12": {
+      "team": "DAL",
+      "picks_all": {
+        "Fano": 2,
+        "Proctor": 2,
+        "Downs": 2,
+        "Styles": 6,
+        "Bain Jr.": 1,
+        "McCoy": 2,
+        "Mauigoa": 2,
+        "Thieneman": 1
+      },
+      "picks_tier1": {
+        "Fano": 2,
+        "Proctor": 2,
+        "Downs": 1
+      },
+      "freq_all": {
+        "Fano": 0.111,
+        "Proctor": 0.111,
+        "Downs": 0.111,
+        "Styles": 0.333,
+        "Bain Jr.": 0.056,
+        "McCoy": 0.111,
+        "Mauigoa": 0.111,
+        "Thieneman": 0.056
+      },
+      "freq_tier1": {
+        "Fano": 0.4,
+        "Proctor": 0.4,
+        "Downs": 0.2
+      },
+      "consensus_player": "Styles",
+      "consensus_tier1": "Fano",
+      "trade_noted": true
+    },
+    "13": {
+      "team": "ATL",
+      "picks_all": {
+        "Tyson": 4,
+        "Lemon": 8,
+        "Fano": 6
+      },
+      "picks_tier1": {
+        "Tyson": 2,
+        "Lemon": 3
+      },
+      "freq_all": {
+        "Tyson": 0.222,
+        "Lemon": 0.444,
+        "Fano": 0.333
+      },
+      "freq_tier1": {
+        "Tyson": 0.4,
+        "Lemon": 0.6
+      },
+      "consensus_player": "Lemon",
+      "consensus_tier1": "Lemon",
+      "trade_noted": true
+    },
+    "14": {
+      "team": "BAL",
+      "picks_all": {
+        "Sadiq": 6,
+        "Fano": 1,
+        "Bain Jr.": 1,
+        "Ioane": 8,
+        "Freeling": 1,
+        "Woods": 1
+      },
+      "picks_tier1": {
+        "Sadiq": 3,
+        "Fano": 1,
+        "Bain Jr.": 1
+      },
+      "freq_all": {
+        "Sadiq": 0.333,
+        "Fano": 0.056,
+        "Bain Jr.": 0.056,
+        "Ioane": 0.444,
+        "Freeling": 0.056,
+        "Woods": 0.056
+      },
+      "freq_tier1": {
+        "Sadiq": 0.6,
+        "Fano": 0.2,
+        "Bain Jr.": 0.2
+      },
+      "consensus_player": "Ioane",
+      "consensus_tier1": "Sadiq",
+      "trade_noted": false
+    },
+    "15": {
+      "team": "TB",
+      "picks_all": {
+        "Ioane": 4,
+        "Sadiq": 6,
+        "Mesidor": 5,
+        "McCoy": 1,
+        "Allen": 1,
+        "Howell": 1
+      },
+      "picks_tier1": {
+        "Ioane": 2,
+        "Sadiq": 1,
+        "Mesidor": 1,
+        "McCoy": 1
+      },
+      "freq_all": {
+        "Ioane": 0.222,
+        "Sadiq": 0.333,
+        "Mesidor": 0.278,
+        "McCoy": 0.056,
+        "Allen": 0.056,
+        "Howell": 0.056
+      },
+      "freq_tier1": {
+        "Ioane": 0.4,
+        "Sadiq": 0.2,
+        "Mesidor": 0.2,
+        "McCoy": 0.2
+      },
+      "consensus_player": "Sadiq",
+      "consensus_tier1": "Ioane",
+      "trade_noted": false
+    },
+    "16": {
+      "team": "IND",
+      "picks_all": {
+        "Lemon": 6,
+        "Cooper Jr.": 4,
+        "Simpson": 3,
+        "Tyson": 4,
+        "McCoy": 2
+      },
+      "picks_tier1": {
+        "Lemon": 2,
+        "Cooper Jr.": 3
+      },
+      "freq_all": {
+        "Lemon": 0.316,
+        "Cooper Jr.": 0.211,
+        "Simpson": 0.158,
+        "Tyson": 0.211,
+        "McCoy": 0.105
+      },
+      "freq_tier1": {
+        "Lemon": 0.4,
+        "Cooper Jr.": 0.6
+      },
+      "consensus_player": "Lemon",
+      "consensus_tier1": "Cooper Jr.",
+      "trade_noted": false
+    },
+    "17": {
+      "team": "DET",
+      "picks_all": {
+        "Freeling": 7,
+        "Blake Miller": 1,
+        "Ioane": 2,
+        "Cooper Jr.": 2,
+        "Thieneman": 1,
+        "Proctor": 4,
+        "Mauigoa": 1
+      },
+      "picks_tier1": {
+        "Freeling": 3,
+        "Blake Miller": 1,
+        "Ioane": 1
+      },
+      "freq_all": {
+        "Freeling": 0.389,
+        "Blake Miller": 0.056,
+        "Ioane": 0.111,
+        "Cooper Jr.": 0.111,
+        "Thieneman": 0.056,
+        "Proctor": 0.222,
+        "Mauigoa": 0.056
+      },
+      "freq_tier1": {
+        "Freeling": 0.6,
+        "Blake Miller": 0.2,
+        "Ioane": 0.2
+      },
+      "consensus_player": "Freeling",
+      "consensus_tier1": "Freeling",
+      "trade_noted": true
+    },
+    "18": {
+      "team": "MIN",
+      "picks_all": {
+        "McCoy": 4,
+        "Thieneman": 8,
+        "Boston": 1,
+        "Banks": 3,
+        "Woods": 2
+      },
+      "picks_tier1": {
+        "McCoy": 2,
+        "Thieneman": 2,
+        "Boston": 1
+      },
+      "freq_all": {
+        "McCoy": 0.222,
+        "Thieneman": 0.444,
+        "Boston": 0.056,
+        "Banks": 0.167,
+        "Woods": 0.111
+      },
+      "freq_tier1": {
+        "McCoy": 0.4,
+        "Thieneman": 0.4,
+        "Boston": 0.2
+      },
+      "consensus_player": "Thieneman",
+      "consensus_tier1": "McCoy",
+      "trade_noted": false
+    },
+    "19": {
+      "team": "CAR",
+      "picks_all": {
+        "Thieneman": 2,
+        "McNeil-Warren": 1,
+        "Sadiq": 8,
+        "Freeling": 1,
+        "Blake Miller": 4,
+        "Tyson": 2
+      },
+      "picks_tier1": {
+        "Thieneman": 2,
+        "McNeil-Warren": 1,
+        "Sadiq": 1,
+        "Freeling": 1
+      },
+      "freq_all": {
+        "Thieneman": 0.111,
+        "McNeil-Warren": 0.056,
+        "Sadiq": 0.444,
+        "Freeling": 0.056,
+        "Blake Miller": 0.222,
+        "Tyson": 0.111
+      },
+      "freq_tier1": {
+        "Thieneman": 0.4,
+        "McNeil-Warren": 0.2,
+        "Sadiq": 0.2,
+        "Freeling": 0.2
+      },
+      "consensus_player": "Sadiq",
+      "consensus_tier1": "Thieneman",
+      "trade_noted": false
+    },
+    "20": {
+      "team": "GB",
+      "picks_all": {
+        "Concepcion": 2,
+        "Boston": 1,
+        "McCoy": 1,
+        "Mesidor": 5,
+        "Proctor": 2,
+        "Faulk": 2,
+        "Hood": 2,
+        "Ioane": 2,
+        "Allen": 1
+      },
+      "picks_tier1": {
+        "Concepcion": 2,
+        "Boston": 1,
+        "McCoy": 1,
+        "Mesidor": 1
+      },
+      "freq_all": {
+        "Concepcion": 0.111,
+        "Boston": 0.056,
+        "McCoy": 0.056,
+        "Mesidor": 0.278,
+        "Proctor": 0.111,
+        "Faulk": 0.111,
+        "Hood": 0.111,
+        "Ioane": 0.111,
+        "Allen": 0.056
+      },
+      "freq_tier1": {
+        "Concepcion": 0.4,
+        "Boston": 0.2,
+        "McCoy": 0.2,
+        "Mesidor": 0.2
+      },
+      "consensus_player": "Mesidor",
+      "consensus_tier1": "Concepcion",
+      "trade_noted": true
+    },
+    "21": {
+      "team": "PIT",
+      "picks_all": {
+        "Cooper Jr.": 5,
+        "Ioane": 4,
+        "Parker": 1,
+        "Blake Miller": 4,
+        "McNeil-Warren": 1,
+        "Proctor": 1,
+        "Simpson": 2
+      },
+      "picks_tier1": {
+        "Cooper Jr.": 2,
+        "Ioane": 2,
+        "Parker": 1
+      },
+      "freq_all": {
+        "Cooper Jr.": 0.278,
+        "Ioane": 0.222,
+        "Parker": 0.056,
+        "Blake Miller": 0.222,
+        "McNeil-Warren": 0.056,
+        "Proctor": 0.056,
+        "Simpson": 0.111
+      },
+      "freq_tier1": {
+        "Cooper Jr.": 0.4,
+        "Ioane": 0.4,
+        "Parker": 0.2
+      },
+      "consensus_player": "Cooper Jr.",
+      "consensus_tier1": "Cooper Jr.",
+      "trade_noted": false
+    },
+    "22": {
+      "team": "LAC",
+      "picks_all": {
+        "Mesidor": 4,
+        "Woods": 2,
+        "Thieneman": 1,
+        "Miller": 1,
+        "Howell": 3,
+        "Banks": 3,
+        "Terrell": 1,
+        "McDonald": 2,
+        "Pregnon": 1
+      },
+      "picks_tier1": {
+        "Mesidor": 2,
+        "Woods": 1,
+        "Thieneman": 1,
+        "Miller": 1
+      },
+      "freq_all": {
+        "Mesidor": 0.222,
+        "Woods": 0.111,
+        "Thieneman": 0.056,
+        "Miller": 0.056,
+        "Howell": 0.167,
+        "Banks": 0.167,
+        "Terrell": 0.056,
+        "McDonald": 0.111,
+        "Pregnon": 0.056
+      },
+      "freq_tier1": {
+        "Mesidor": 0.4,
+        "Woods": 0.2,
+        "Thieneman": 0.2,
+        "Miller": 0.2
+      },
+      "consensus_player": "Mesidor",
+      "consensus_tier1": "Mesidor",
+      "trade_noted": true
+    },
+    "23": {
+      "team": "PHI",
+      "picks_all": {
+        "Proctor": 3,
+        "Blake Miller": 1,
+        "Freeling": 4,
+        "Boston": 1,
+        "Lemon": 2,
+        "Terrell": 2,
+        "McNeil-Warren": 1,
+        "Lomu": 2,
+        "Iheanachor": 2
+      },
+      "picks_tier1": {
+        "Proctor": 2,
+        "Blake Miller": 1,
+        "Freeling": 1,
+        "Boston": 1
+      },
+      "freq_all": {
+        "Proctor": 0.167,
+        "Blake Miller": 0.056,
+        "Freeling": 0.222,
+        "Boston": 0.056,
+        "Lemon": 0.111,
+        "Terrell": 0.111,
+        "McNeil-Warren": 0.056,
+        "Lomu": 0.111,
+        "Iheanachor": 0.111
+      },
+      "freq_tier1": {
+        "Proctor": 0.4,
+        "Blake Miller": 0.2,
+        "Freeling": 0.2,
+        "Boston": 0.2
+      },
+      "consensus_player": "Freeling",
+      "consensus_tier1": "Proctor",
+      "trade_noted": false
+    },
+    "24": {
+      "team": "JAX",
+      "picks_all": {
+        "McNeil-Warren": 3,
+        "McCoy": 1,
+        "Concepcion": 4,
+        "Tyson": 1,
+        "Howell": 1,
+        "Faulk": 2,
+        "Cooper Jr.": 1,
+        "Lomu": 2,
+        "Freeling": 2,
+        "Proctor": 1
+      },
+      "picks_tier1": {
+        "McNeil-Warren": 2,
+        "McCoy": 1,
+        "Concepcion": 2
+      },
+      "freq_all": {
+        "McNeil-Warren": 0.167,
+        "McCoy": 0.056,
+        "Concepcion": 0.222,
+        "Tyson": 0.056,
+        "Howell": 0.056,
+        "Faulk": 0.111,
+        "Cooper Jr.": 0.056,
+        "Lomu": 0.111,
+        "Freeling": 0.111,
+        "Proctor": 0.056
+      },
+      "freq_tier1": {
+        "McNeil-Warren": 0.4,
+        "McCoy": 0.2,
+        "Concepcion": 0.4
+      },
+      "consensus_player": "Concepcion",
+      "consensus_tier1": "McNeil-Warren",
+      "trade_noted": true
+    },
+    "25": {
+      "team": "CHI",
+      "picks_all": {
+        "Parker": 4,
+        "Young": 1,
+        "Johnson": 1,
+        "Proctor": 1,
+        "Concepcion": 2,
+        "McNeil-Warren": 3,
+        "McDonald": 1,
+        "Lomu": 1,
+        "Faulk": 3,
+        "Washington": 1
+      },
+      "picks_tier1": {
+        "Parker": 2,
+        "Young": 1,
+        "Johnson": 1,
+        "Proctor": 1
+      },
+      "freq_all": {
+        "Parker": 0.222,
+        "Young": 0.056,
+        "Johnson": 0.056,
+        "Proctor": 0.056,
+        "Concepcion": 0.111,
+        "McNeil-Warren": 0.167,
+        "McDonald": 0.056,
+        "Lomu": 0.056,
+        "Faulk": 0.167,
+        "Washington": 0.056
+      },
+      "freq_tier1": {
+        "Parker": 0.4,
+        "Young": 0.2,
+        "Johnson": 0.2,
+        "Proctor": 0.2
+      },
+      "consensus_player": "Parker",
+      "consensus_tier1": "Parker",
+      "trade_noted": true
+    },
+    "26": {
+      "team": "BUF",
+      "picks_all": {
+        "Lawrence": 3,
+        "Faulk": 4,
+        "McDonald": 1,
+        "Thieneman": 2,
+        "Terrell": 1,
+        "Allen": 1,
+        "Howell": 2,
+        "Boston": 3,
+        "Cooper Jr.": 1
+      },
+      "picks_tier1": {
+        "Lawrence": 2,
+        "Faulk": 2,
+        "McDonald": 1
+      },
+      "freq_all": {
+        "Lawrence": 0.167,
+        "Faulk": 0.222,
+        "McDonald": 0.056,
+        "Thieneman": 0.111,
+        "Terrell": 0.056,
+        "Allen": 0.056,
+        "Howell": 0.111,
+        "Boston": 0.167,
+        "Cooper Jr.": 0.056
+      },
+      "freq_tier1": {
+        "Lawrence": 0.4,
+        "Faulk": 0.4,
+        "McDonald": 0.2
+      },
+      "consensus_player": "Faulk",
+      "consensus_tier1": "Lawrence",
+      "trade_noted": true
+    },
+    "27": {
+      "team": "SF",
+      "picks_all": {
+        "Lomu": 6,
+        "Iheanachor": 5,
+        "Freeling": 1,
+        "Blake Miller": 1,
+        "Proctor": 1,
+        "Concepcion": 3,
+        "Lemon": 1
+      },
+      "picks_tier1": {
+        "Lomu": 4,
+        "Iheanachor": 1
+      },
+      "freq_all": {
+        "Lomu": 0.333,
+        "Iheanachor": 0.278,
+        "Freeling": 0.056,
+        "Blake Miller": 0.056,
+        "Proctor": 0.056,
+        "Concepcion": 0.167,
+        "Lemon": 0.056
+      },
+      "freq_tier1": {
+        "Lomu": 0.8,
+        "Iheanachor": 0.2
+      },
+      "consensus_player": "Lomu",
+      "consensus_tier1": "Lomu",
+      "trade_noted": false
+    },
+    "28": {
+      "team": "HOU",
+      "picks_all": {
+        "Bisontis": 5,
+        "Christen Miller": 1,
+        "Iheanachor": 4,
+        "Pregnon": 2,
+        "Banks": 1,
+        "Allen": 1,
+        "McDonald": 3,
+        "Woods": 1
+      },
+      "picks_tier1": {
+        "Bisontis": 2,
+        "Christen Miller": 1,
+        "Iheanachor": 2
+      },
+      "freq_all": {
+        "Bisontis": 0.278,
+        "Christen Miller": 0.056,
+        "Iheanachor": 0.222,
+        "Pregnon": 0.111,
+        "Banks": 0.056,
+        "Allen": 0.056,
+        "McDonald": 0.167,
+        "Woods": 0.056
+      },
+      "freq_tier1": {
+        "Bisontis": 0.4,
+        "Christen Miller": 0.2,
+        "Iheanachor": 0.4
+      },
+      "consensus_player": "Bisontis",
+      "consensus_tier1": "Bisontis",
+      "trade_noted": false
+    },
+    "29": {
+      "team": "LAR",
+      "picks_all": {
+        "Boston": 2,
+        "Hood": 8,
+        "Howell": 2,
+        "Simpson": 1,
+        "Cooper Jr.": 1,
+        "Thieneman": 2,
+        "Terrell": 1,
+        "McNeil-Warren": 1
+      },
+      "picks_tier1": {
+        "Boston": 2,
+        "Hood": 3
+      },
+      "freq_all": {
+        "Boston": 0.111,
+        "Hood": 0.444,
+        "Howell": 0.111,
+        "Simpson": 0.056,
+        "Cooper Jr.": 0.056,
+        "Thieneman": 0.111,
+        "Terrell": 0.056,
+        "McNeil-Warren": 0.056
+      },
+      "freq_tier1": {
+        "Boston": 0.4,
+        "Hood": 0.6
+      },
+      "consensus_player": "Hood",
+      "consensus_tier1": "Hood",
+      "trade_noted": true
+    },
+    "30": {
+      "team": "DEN",
+      "picks_all": {
+        "Johnson": 3,
+        "Simpson": 4,
+        "Thieneman": 1,
+        "Faulk": 2,
+        "Hood": 3,
+        "McNeil-Warren": 1,
+        "Concepcion": 3,
+        "Terrell": 2
+      },
+      "picks_tier1": {
+        "Johnson": 2,
+        "Simpson": 2,
+        "Thieneman": 1
+      },
+      "freq_all": {
+        "Johnson": 0.158,
+        "Simpson": 0.211,
+        "Thieneman": 0.053,
+        "Faulk": 0.105,
+        "Hood": 0.158,
+        "McNeil-Warren": 0.053,
+        "Concepcion": 0.158,
+        "Terrell": 0.105
+      },
+      "freq_tier1": {
+        "Johnson": 0.4,
+        "Simpson": 0.4,
+        "Thieneman": 0.2
+      },
+      "consensus_player": "Simpson",
+      "consensus_tier1": "Johnson",
+      "trade_noted": true
+    },
+    "31": {
+      "team": "NE",
+      "picks_all": {
+        "Blake Miller": 4,
+        "Mesidor": 1,
+        "McNeil-Warren": 3,
+        "Stowers": 1,
+        "Allen": 3,
+        "Golday": 2,
+        "Howell": 2,
+        "Boston": 1,
+        "McDonald": 1
+      },
+      "picks_tier1": {
+        "Blake Miller": 2,
+        "Mesidor": 1,
+        "McNeil-Warren": 1,
+        "Stowers": 1
+      },
+      "freq_all": {
+        "Blake Miller": 0.222,
+        "Mesidor": 0.056,
+        "McNeil-Warren": 0.167,
+        "Stowers": 0.056,
+        "Allen": 0.167,
+        "Golday": 0.111,
+        "Howell": 0.111,
+        "Boston": 0.056,
+        "McDonald": 0.056
+      },
+      "freq_tier1": {
+        "Blake Miller": 0.4,
+        "Mesidor": 0.2,
+        "McNeil-Warren": 0.2,
+        "Stowers": 0.2
+      },
+      "consensus_player": "Blake Miller",
+      "consensus_tier1": "Blake Miller",
+      "trade_noted": false
+    },
+    "32": {
+      "team": "SEA",
+      "picks_all": {
+        "Hood": 4,
+        "Price": 4,
+        "Parker": 2,
+        "Johnson": 3,
+        "McDonald": 2,
+        "Boston": 1,
+        "Terrell": 1,
+        "Concepcion": 1
+      },
+      "picks_tier1": {
+        "Hood": 2,
+        "Price": 2,
+        "Parker": 1
+      },
+      "freq_all": {
+        "Hood": 0.222,
+        "Price": 0.222,
+        "Parker": 0.111,
+        "Johnson": 0.167,
+        "McDonald": 0.111,
+        "Boston": 0.056,
+        "Terrell": 0.056,
+        "Concepcion": 0.056
+      },
+      "freq_tier1": {
+        "Hood": 0.4,
+        "Price": 0.4,
+        "Parker": 0.2
+      },
+      "consensus_player": "Hood",
+      "consensus_tier1": "Hood",
+      "trade_noted": false
+    }
+  },
+  "reasoning": {
+    "1": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Raiders desperate for franchise QB after '25 collapse; Mendoza's pocket poise + arm talent = cleanest QB1 in class."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Same as 7rd mock \u2014 Brugler views Mendoza as only true Day-1 starter QB available."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "Anonymous scouts: 'He's the only QB with starter traits we'd stake a job on.' Raiders staff reportedly in love post-Pro Day."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Mendoza's processing + accuracy over middle separate him; LV has no QB future without him."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Locked since February \u2014 Geno is a bridge, Mendoza is the plan."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager insider intel: 'Raiders brass privately told me this is done.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: No-brainer. LV needs QB, Mendoza is QB1 on board."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Same \u2014 Reuter consistent across both mocks."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker (PFF): Highest-graded QB in class (92.4 PFF grade); LV need is obvious."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher (PFF): Positional-value match \u2014 premium position, premium prospect."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: LV rebuild starts under center; Mendoza's traits are the floor they need."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Team-need fit \u2014 QB room is barren post-Geno."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Safest QB projection; Raiders can't afford to miss."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak (QB-only): Mendoza is his QB1 \u2014 'only true plus-starter.'"
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Film grade = top prospect overall; fits LV's scheme."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Pocket-passer archetype Pete Carroll wants."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport (B/R): Fan vote overwhelmingly Mendoza \u2014 community consensus."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Combine testing backed up film; LV takes no risk."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Aggregator median = Mendoza #1 in 100% of mocks."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: 87-mock consensus = Mendoza #1 unanimous."
+      }
+    ],
+    "2": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Reese's length + bend fits Aaron Glenn's defense; Jets need EDGE1 opposite Jermaine Johnson."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Same logic \u2014 Brugler's two mocks align on Reese."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: 'Glenn wants a dominant edge; Reese's upside is highest in class.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Bailey's pass-rush production at TT (17 sacks) edges out Reese for immediate impact."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Bailey \u2014 best pure pass rusher; Jets pick for production over projection."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Bailey's motor/get-off wins the coin flip with Reese."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Reese \u2014 higher ceiling, better fit in Glenn's 3-4 hybrid."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Same as 7rd \u2014 Reuter consistent on Reese."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Reese's PFF pass-rush grade (90.1) is elite; fits analytically."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Reese positional value > Bailey."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Reese's length (35\" arms) = Glenn prototype."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Team need = EDGE; Reese fits scheme."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Bailey \u2014 production-based pick."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A (QB-only mock)."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Bailey \u2014 better pure rusher tape."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Reese \u2014 ceiling player."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Reese \u2014 fan favorite post-combine."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Reese \u2014 combine 4.55 40 at 260 lbs stands out."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Reese plurality across aggregated mocks."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Reese narrowly over Bailey in consensus."
+      }
+    ],
+    "3": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Mauigoa \u2014 ARI's OL needs immediate upgrade to protect Kyler."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Mauigoa is a plug-and-play LT."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Bailey available here = steal; ARI can't pass on pass rush."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Reese \u2014 if NYJ takes Bailey, ARI grabs remaining EDGE1."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: NO trades up from #9 to #3 for Reese; ARI slides back gets capital."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Reese \u2014 ARI's pass rush is the worst weakness on the roster."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Mauigoa \u2014 OT1 for Kyler protection."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Same."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: TEN trades up for Love (RB); ARI gets capital."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Mauigoa \u2014 OT value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Mauigoa \u2014 positional-value hit."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Mauigoa \u2014 team need = OT."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Reese \u2014 pass-rush priority."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: DAL trades up to #3 for Reese."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Reese \u2014 EDGE need."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Bailey \u2014 fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Bailey \u2014 combine standout."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Mauigoa \u2014 OT plurality."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Bailey \u2014 aggregated plurality."
+      }
+    ],
+    "4": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Bailey \u2014 EDGE need trumps RB luxury for rebuilding Titans."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Love \u2014 'He's the best skill player, TEN needs weapons for Ward.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Love \u2014 best playmaker for young QB Cam Ward."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Love \u2014 Titans want offensive identity around Ward."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Love \u2014 'sources indicate TEN is RB-curious at 4.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Bailey \u2014 defensive priority."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Same."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Mauigoa \u2014 OL protection for Ward (trade-up scenario)."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Bailey \u2014 EDGE value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Bailey \u2014 positional value > RB."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Bailey \u2014 team-need pick."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Love \u2014 offensive weapon."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Love \u2014 weapon for Ward."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Love \u2014 skill playmaker."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Love \u2014 fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Love \u2014 testing backs up film."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Love \u2014 aggregate plurality."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Love \u2014 consensus."
+      }
+    ],
+    "5": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Downs \u2014 elite safety, plug-and-play Day 1 starter; NYG secondary in shambles."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Downs \u2014 'no safety has graded this high since Minkah.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Downs \u2014 best defensive player available; NYG love his versatility."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Mauigoa \u2014 NYG can't pass on OT after protecting Russell."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Styles \u2014 Giants pivot to LB after missing on EDGE."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Love \u2014 NYG need offense; RB1 available."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Same \u2014 Love."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Downs \u2014 PFF top-graded DB."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Downs \u2014 positional value elite."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Downs \u2014 top-10 player on board."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Tate (WR) \u2014 Giants need WR1."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Styles \u2014 LB need."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Fano (OT) \u2014 protect Russell."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Fano \u2014 OL priority."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Styles \u2014 fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Styles \u2014 combine winner."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Downs \u2014 plurality."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Styles \u2014 aggregate lean."
+      }
+    ],
+    "6": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: DAL trades up (picks 12+2027 2nd+2027 4th) for Styles \u2014 Jerry Jones loves LBs, Styles is elite coverage LB."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same DAL\u2192CLE trade; Styles pairs with Parsons."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Tate \u2014 CLE need WR1 badly; 'Tate is Chad Johnson-lite.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: DAL\u2192CLE trade for Styles \u2014 'most obvious trade of Round 1.'"
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: DAL\u2192CLE trade for Styles; CLE gets Parker-era haul."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Fano \u2014 CLE stays put, OT to protect future QB."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Freeling (OT) \u2014 CLE goes OL."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Freeling."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Fano \u2014 KC trades up for him (alt scenario)."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Styles \u2014 PFF loves LB coverage grades."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Fano \u2014 OT positional value."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Fano \u2014 team need."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Tate \u2014 WR1 for next QB."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Tate \u2014 WR priority."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Tate \u2014 skill need."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Tate \u2014 fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Tate \u2014 combine WR1."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Styles (via DAL trade) \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Tate \u2014 consensus plurality."
+      }
+    ],
+    "7": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Love \u2014 WAS backfield weak; pair with Jayden Daniels."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Love."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Tate \u2014 Daniels needs WR1."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Tate \u2014 WR1 for Daniels, obvious fit."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: NYJ trades up to #7 for Tate; WAS slides to #16."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Styles \u2014 LB need on Dan Quinn defense."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Delane \u2014 CB1 for depleted Washington secondary."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Delane."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Tate \u2014 WR value; Daniels weapons."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Tate \u2014 positional value WR."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Tate \u2014 scheme fit."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Love \u2014 RB for offense."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Downs \u2014 safety need."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Styles \u2014 Quinn LB fit."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Styles \u2014 LB fit."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Delane \u2014 fan vote CB."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Delane \u2014 combine CB1."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Delane \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Delane \u2014 consensus."
+      }
+    ],
+    "8": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Tate \u2014 NO needs WR after Olave drama."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Tate."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Bain Jr. \u2014 'best pure pass rusher available.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Bain Jr. \u2014 EDGE need on aging defense."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Fano (OT) \u2014 ARI trades up here; scheme cascade."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Bain Jr. \u2014 replaces Cam Jordan era."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Downs \u2014 safety after Mathieu era."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Downs."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Delane \u2014 CB1 value."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Delane \u2014 PFF favorite."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Tate \u2014 WR fit."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Downs \u2014 team need."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Bain Jr. \u2014 EDGE priority."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Downs \u2014 secondary help."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Downs \u2014 safety need."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Bain Jr. \u2014 fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Bain Jr. \u2014 combine EDGE."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Bain Jr. \u2014 plurality."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Bain Jr. \u2014 consensus."
+      }
+    ],
+    "9": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Bain Jr. \u2014 Chris Jones needs pass-rush help, KC doubles down on DL."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Bain Jr."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Tyson \u2014 'Mahomes needs WR1 after Rice drama.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Tyson \u2014 Mahomes WR after trading Rashee."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Tyson \u2014 WR priority, KC has EDGE capital."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Tyson \u2014 'KC told me they want the WR here.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Bain Jr. \u2014 EDGE need."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Bain Jr."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Bailey (EDGE trade up) \u2014 KC aggressive for pass rush."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Bain Jr. \u2014 PFF value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Bain Jr. \u2014 positional value."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Styles (LB) \u2014 KC LB need."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Delane \u2014 CB depth."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Bain Jr. \u2014 EDGE priority."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Bain Jr. \u2014 EDGE."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Tyson \u2014 fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Tyson \u2014 combine 4.38 40."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Tyson \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Delane \u2014 consensus lean."
+      }
+    ],
+    "10": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Delane \u2014 CIN secondary disaster; elite cover CB."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Delane \u2014 same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: Delane \u2014 'Bengals have to fix corner.'"
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Delane \u2014 Cincy's worst unit."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Downs (S) \u2014 alt DB, safety value higher."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Delane \u2014 'sources say CIN locked in on CB.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: McCoy (CB) \u2014 Tennessee CB same value tier."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: McCoy."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Bain Jr. \u2014 EDGE instead; Delane value tier shifts."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Bain Jr. \u2014 PFF alt."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Delane \u2014 CB need."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: McCoy \u2014 CB2 option."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Woods (CB) \u2014 alt CB."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Delane \u2014 CB1 fit."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Delane \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Downs \u2014 fan vote safety."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Downs \u2014 combine S1."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Delane \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: McCoy \u2014 consensus CB."
+      }
+    ],
+    "11": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Faulk \u2014 EDGE opposite Chop Robinson; MIA defense needs rush."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Faulk."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A (top-10 only)."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Mauigoa \u2014 Tua protection priority."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Delane \u2014 CB fit."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Tate \u2014 WR depth."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Tate \u2014 WR."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Tate."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Lemon (WR) \u2014 WR value tier."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Lemon \u2014 WR value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Delane \u2014 CB."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Delane \u2014 CB need."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Mauigoa \u2014 OT1 available."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Mauigoa \u2014 fan OT."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Mauigoa \u2014 OT."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Mauigoa \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Mauigoa \u2014 consensus."
+      }
+    ],
+    "12": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Fano (via CLE trade) \u2014 DAL trades DOWN #6\u2192#12, takes OT."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Fano via CLE trade."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Proctor (via CLE trade) \u2014 DAL traded up from here."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Proctor \u2014 CLE trade makes OT pick cleaner."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Downs \u2014 BPA safety."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Styles \u2014 LB fit."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Styles."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Styles \u2014 PFF LB grade."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Styles \u2014 positional value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Styles \u2014 LB need after Parsons."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Bain Jr. \u2014 EDGE pair for Parsons replacement."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: McCoy \u2014 CB."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Mauigoa \u2014 OT fit."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Mauigoa \u2014 OT."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: McCoy \u2014 CB fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Styles \u2014 LB."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Downs \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Thieneman \u2014 S consensus."
+      }
+    ],
+    "13": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Tyson \u2014 local LA WR, McVay weapons."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Tyson."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Lemon \u2014 local USC WR, Stafford weapon."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Lemon \u2014 WR1 for Stafford's farewell tour."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Lemon \u2014 'LAR told me WR is priority.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Fano (DET trade up from #17) \u2014 OT value."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Fano \u2014 stays."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Fano \u2014 OT2 value."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Fano \u2014 OT."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Fano \u2014 OT need."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Tyson \u2014 WR."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Tyson \u2014 WR."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Fano \u2014 fan OT."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Lemon \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Lemon \u2014 consensus."
+      }
+    ],
+    "14": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Sadiq \u2014 Mark Andrews aging; TE1 of class."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Sadiq."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Fano \u2014 OT need bigger than TE."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Bain Jr. \u2014 EDGE depth."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Sadiq \u2014 'BAL front office loves him.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Ioane (OG) \u2014 OL interior."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Ioane."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Ioane \u2014 PFF OG."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Ioane \u2014 OG value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Sadiq \u2014 TE value."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Ioane \u2014 OG need."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Ioane \u2014 OG fan vote."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Woods \u2014 CB alt."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Ioane \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Sadiq \u2014 consensus."
+      }
+    ],
+    "15": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Ioane \u2014 TB OL interior disaster."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Ioane."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Sadiq \u2014 TE for Mayfield."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Mesidor (EDGE) \u2014 pass rush."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: McCoy \u2014 CB fit."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Mesidor."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Sadiq \u2014 TE fit."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Sadiq \u2014 PFF TE."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Allen \u2014 TB local."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Howell \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Mesidor \u2014 EDGE fan."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Ioane \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Sadiq \u2014 consensus."
+      }
+    ],
+    "16": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Lemon \u2014 WR for Jets offense."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Lemon."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Cooper Jr. \u2014 WR1 fit."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Cooper Jr. \u2014 WR for Fields/whoever."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Cooper Jr. \u2014 'NYJ need WR2.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Simpson (QB) \u2014 NYJ takes dev QB."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Simpson."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Tyson \u2014 WR value."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Tyson \u2014 PFF."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Tyson \u2014 WR."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: Simpson \u2014 QB-only mock puts him here."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: McCoy \u2014 CB."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: McCoy \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Lemon \u2014 fan WR."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Tyson \u2014 combine WR."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Lemon \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Cooper Jr. \u2014 consensus."
+      }
+    ],
+    "17": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Freeling \u2014 DET OL future after Decker/Ragnow aging."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Freeling."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Freeling \u2014 OT insurance."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Blake Miller (OT) \u2014 similar OL pick."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Ioane \u2014 OG alt."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Cooper Jr. (LAR trade up) \u2014 LAR jumps for WR; DET trades DOWN."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Same \u2014 Cooper Jr. via LAR trade up."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Thieneman (PHI trade up) \u2014 PFF scenario, S pick for PHI."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Proctor \u2014 OT2."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Proctor \u2014 OT."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Proctor \u2014 OT."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Freeling \u2014 fan OT."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Mauigoa \u2014 OT slide."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Freeling \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Proctor \u2014 consensus."
+      }
+    ],
+    "18": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: McCoy \u2014 CB need, Flores defense."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 McCoy."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Thieneman \u2014 S for Flores."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Boston (WR) \u2014 JJ's successor."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Thieneman \u2014 S fit."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Banks (OG) \u2014 OL."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Banks."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: McCoy \u2014 PFF CB."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: McCoy \u2014 value."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Thieneman \u2014 S fit."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Thieneman \u2014 S."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Thieneman \u2014 S."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Woods \u2014 CB."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Woods \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Thieneman \u2014 fan S."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Banks \u2014 combine OG."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Thieneman \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Thieneman \u2014 consensus."
+      }
+    ],
+    "19": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Thieneman \u2014 S for Evero defense."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: McNeil-Warren \u2014 S alt."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Sadiq \u2014 TE for Bryce Young."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Freeling \u2014 OT protection."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Sadiq."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Blake Miller (OT) \u2014 OL for Young."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Blake Miller \u2014 same."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Sadiq \u2014 TE fit."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Tyson \u2014 WR."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Blake Miller \u2014 OT."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Blake Miller \u2014 OT."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Sadiq \u2014 fan TE."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Sadiq \u2014 TE."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Sadiq \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Tyson \u2014 WR consensus."
+      }
+    ],
+    "20": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Concepcion (CLE trade) \u2014 DAL trades for CLE's #24 + 4th to jump 4 spots for WR."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Concepcion via CLE trade."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Boston (CLE trade) \u2014 same trade structure, different WR target."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: McCoy \u2014 CB stay pick."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Proctor (KC trade up) \u2014 KC jumps for OT."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Proctor via KC trade."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Allen \u2014 fan pick."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Faulk \u2014 EDGE."
+      }
+    ],
+    "21": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Cooper Jr. \u2014 Rodgers successor QB weapon."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Cooper Jr."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Ioane \u2014 OG interior."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Parker (EDGE) \u2014 rush."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Blake Miller (OT) \u2014 OL."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Blake Miller."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Cooper Jr. \u2014 WR."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Cooper Jr. \u2014 WR."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Blake Miller \u2014 OT."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Blake Miller \u2014 OT."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Ioane \u2014 OG."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Proctor \u2014 fan OT."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Simpson \u2014 QB dev."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Cooper Jr. \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Simpson \u2014 QB consensus."
+      }
+    ],
+    "22": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Mesidor \u2014 EDGE fit."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Woods \u2014 CB need."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Thieneman (CHI trade up) \u2014 CHI trades for S."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Miller (OT) \u2014 protect Herbert."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Howell (CLE trade up) \u2014 CLE trades for CB."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Same \u2014 Howell."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Banks \u2014 OG."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Banks \u2014 OG."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Howell \u2014 CB."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Terrell (CB) \u2014 CB."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Pregnon \u2014 fan OG."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Banks \u2014 combine OG."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Mesidor \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Woods \u2014 CB."
+      }
+    ],
+    "23": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Proctor \u2014 PHI OL future."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Blake Miller \u2014 OT alt."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Boston \u2014 WR weapon."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Lemon."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Terrell \u2014 CB."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Lomu \u2014 OT."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Lomu \u2014 OT."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Iheanachor \u2014 fan OT."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Terrell \u2014 CB."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Proctor \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Iheanachor \u2014 OT consensus."
+      }
+    ],
+    "24": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: McNeil-Warren \u2014 S depth."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: McCoy \u2014 CB."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Concepcion \u2014 WR (via DAL trade)."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Tyson (LAC trade up) \u2014 LAC jumps for WR."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Howell \u2014 CB."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Cooper Jr. \u2014 WR."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Lomu \u2014 OT."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Lomu \u2014 fan OT."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Proctor \u2014 OT."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: McNeil-Warren \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Concepcion \u2014 WR consensus."
+      }
+    ],
+    "25": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Parker \u2014 EDGE opposite Sweat."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Parker."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Young (DT) \u2014 interior DL."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Johnson DT (LAC trade) \u2014 LAC jumps for interior DL."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Proctor \u2014 OT for Williams."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Concepcion (BUF trade up) \u2014 BUF jumps for WR."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Concepcion \u2014 BUF trade."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Lomu \u2014 OT."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: McNeil-Warren \u2014 fan S."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Washington (DT) \u2014 combine DT."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Parker \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Parker \u2014 consensus."
+      }
+    ],
+    "26": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Lawrence \u2014 EDGE depth."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Lawrence."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Thieneman (CHI trade up) \u2014 CHI jumps for S."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Thieneman \u2014 CHI trade."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Terrell (CAR trade up) \u2014 CAR jumps."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Allen \u2014 DT."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Howell \u2014 CB."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Boston \u2014 WR."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Boston \u2014 WR."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Cooper Jr. \u2014 fan WR."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Boston \u2014 WR."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Lawrence \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Howell \u2014 CB."
+      }
+    ],
+    "27": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Lomu \u2014 OT for Trent Williams successor."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Lomu."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Iheanachor \u2014 OT alt."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Lomu \u2014 same logic."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Lomu \u2014 'SF brass loves him.'"
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Iheanachor."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Freeling \u2014 OT."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Blake Miller \u2014 OT."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Proctor \u2014 OT."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Concepcion \u2014 fan WR."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Lemon \u2014 WR."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Lomu \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Lomu \u2014 consensus."
+      }
+    ],
+    "28": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Bisontis \u2014 OG for Stroud protection."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Bisontis."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Christen Miller (DT) \u2014 interior DL."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Bisontis \u2014 OG."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Bisontis."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Pregnon \u2014 OG."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Pregnon \u2014 OG."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Banks \u2014 OG."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Allen (DT) \u2014 interior DL."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Iheanachor \u2014 OT."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Woods \u2014 fan CB."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Bisontis \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: McDonald \u2014 CB."
+      }
+    ],
+    "29": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Boston \u2014 WR for Mahomes."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Boston."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Hood \u2014 CB need."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Hood (DAL trade) \u2014 DAL jumps for CB."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Hood \u2014 DAL trade."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Howell (ARI trade up) \u2014 ARI jumps."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Howell \u2014 ARI trade."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Simpson \u2014 QB dev for Mahomes successor."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Cooper Jr. \u2014 WR."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Thieneman \u2014 S."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Thieneman \u2014 S."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Terrell \u2014 fan CB."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Hood \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Hood \u2014 consensus."
+      }
+    ],
+    "30": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Johnson (CB, San Diego State) \u2014 CB need."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Johnson."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Simpson (ARI trade up) \u2014 ARI jumps for QB; MIA gets capital."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Simpson (ARI trade up) \u2014 same logic."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Thieneman \u2014 S."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Faulk \u2014 EDGE."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Faulk."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: Simpson \u2014 QB-only mock, ARI trade up for QB."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Terrell \u2014 CB."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Terrell \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Hood \u2014 fan CB."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Simpson \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Johnson \u2014 CB."
+      }
+    ],
+    "31": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Blake Miller \u2014 OT for Maye."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Blake Miller."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Mesidor \u2014 EDGE."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Stowers (EDGE) \u2014 pass rush."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Allen (DT) \u2014 interior DL."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Allen."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: Golday \u2014 OL."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: Golday \u2014 OL."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Howell \u2014 CB."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Boston \u2014 WR for Maye."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Allen \u2014 DT."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: McNeil-Warren \u2014 S."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: McDonald \u2014 fan CB."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Howell \u2014 CB."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Blake Miller \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Blake Miller \u2014 OT consensus."
+      }
+    ],
+    "32": [
+      {
+        "analyst": "Brugler 7rd",
+        "text": "Brugler: Hood \u2014 CB value."
+      },
+      {
+        "analyst": "Brugler 1st",
+        "text": "Brugler 1st: Same \u2014 Hood."
+      },
+      {
+        "analyst": "ESPN Scouts",
+        "text": "ESPN Scouts: N/A."
+      },
+      {
+        "analyst": "Kiper Final",
+        "text": "Kiper: Price \u2014 RB for Seattle run game."
+      },
+      {
+        "analyst": "McShay 4.0",
+        "text": "McShay: Parker \u2014 EDGE fall."
+      },
+      {
+        "analyst": "Schrager",
+        "text": "Schrager: Price \u2014 RB."
+      },
+      {
+        "analyst": "Reuter 7rd",
+        "text": "Reuter: Johnson (CB) \u2014 CB."
+      },
+      {
+        "analyst": "Reuter 5rd",
+        "text": "Reuter 5rd: Johnson."
+      },
+      {
+        "analyst": "Locker PFF",
+        "text": "Locker: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Carragher PFF",
+        "text": "Carragher: McDonald \u2014 CB."
+      },
+      {
+        "analyst": "Renner CBS",
+        "text": "Renner: Boston \u2014 WR."
+      },
+      {
+        "analyst": "Podell CBS",
+        "text": "Podell: Terrell \u2014 CB."
+      },
+      {
+        "analyst": "Iyer SN",
+        "text": "Iyer: Parker \u2014 EDGE."
+      },
+      {
+        "analyst": "Solak ESPN QB",
+        "text": "Solak: N/A."
+      },
+      {
+        "analyst": "Walter WF",
+        "text": "Walter WF: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Campbell WF",
+        "text": "Campbell WF: Hood \u2014 CB."
+      },
+      {
+        "analyst": "Davenport B/R",
+        "text": "Davenport: Johnson \u2014 fan CB."
+      },
+      {
+        "analyst": "Band NFL",
+        "text": "Band: Concepcion \u2014 WR."
+      },
+      {
+        "analyst": "Draft Labs",
+        "text": "Draft Labs: Price \u2014 aggregator."
+      },
+      {
+        "analyst": "Mock DB",
+        "text": "Mock DB: Price \u2014 RB consensus."
+      }
+    ]
+  },
+  "trades": [
+    {
+      "pick": 6,
+      "up_team": "DAL",
+      "down_team": "CLE",
+      "target_player": "Sonny Styles",
+      "times_mocked": 6,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#12) + 2027 2nd + 2027 4th",
+      "trade_type": "Move up for LB",
+      "analysts": "Brugler 7rd, Brugler 1st, Kiper, McShay, Draft Labs, Mock DB",
+      "notes": "MOST COMMON TRADE in April mocks"
+    },
+    {
+      "pick": 30,
+      "up_team": "ARI",
+      "down_team": "DEN",
+      "target_player": "Ty Simpson",
+      "times_mocked": 4,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#30) + 2026 3rd + 2027 2nd",
+      "trade_type": "QB jump end Rd1",
+      "analysts": "Kiper, McShay, Draft Labs, Solak",
+      "notes": "ARI jumps back into Rd1 for developmental QB"
+    },
+    {
+      "pick": 20,
+      "up_team": "CLE",
+      "down_team": "GB",
+      "target_player": "KC Concepcion",
+      "times_mocked": 2,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#24) + 2026 4th",
+      "trade_type": "WR reach",
+      "analysts": "Brugler 7rd, Brugler 1st",
+      "notes": "CLE uses #24 to move up 4 spots \u2014 Brugler's preferred target. Kiper also has CLE\u2192DAL #20 but targets Boston (see row 38)."
+    },
+    {
+      "pick": 17,
+      "up_team": "LAR",
+      "down_team": "DET",
+      "target_player": "Omar Cooper Jr.",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st (later) + 2027 pick",
+      "trade_type": "WR jump",
+      "analysts": "Reuter 7rd, Reuter 5rd",
+      "notes": "LAR up for WR \u2014 mocked by Reuter twice"
+    },
+    {
+      "pick": 20,
+      "up_team": "KC",
+      "down_team": "GB",
+      "target_player": "Kadyn Proctor",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#29) + 2026 3rd + 2027 3rd",
+      "trade_type": "OT reach",
+      "analysts": "Reuter 7rd, Reuter 5rd",
+      "notes": "KC back into Rd1 for OT"
+    },
+    {
+      "pick": 22,
+      "up_team": "CLE",
+      "down_team": "LAC",
+      "target_player": "Malachi Howell",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#24) + 2026 5th",
+      "trade_type": "CB jump",
+      "analysts": "Reuter 7rd, Reuter 5rd",
+      "notes": "CLE uses extra 1st"
+    },
+    {
+      "pick": 25,
+      "up_team": "BUF",
+      "down_team": "CHI",
+      "target_player": "KC Concepcion",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#26) + 2026 4th",
+      "trade_type": "WR jump",
+      "analysts": "Reuter 7rd, Reuter 5rd",
+      "notes": "BUF up 1 for WR"
+    },
+    {
+      "pick": 26,
+      "up_team": "CHI",
+      "down_team": "BUF",
+      "target_player": "Dillon Thieneman",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#25) + late swap",
+      "trade_type": "S alt",
+      "analysts": "Reuter 7rd, Reuter 5rd",
+      "notes": "CHI up 1 for safety"
+    },
+    {
+      "pick": 29,
+      "up_team": "DAL",
+      "down_team": "LAR",
+      "target_player": "Colton Hood",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st + 2026 4th",
+      "trade_type": "CB jump",
+      "analysts": "Reuter 7rd, Reuter 5rd",
+      "notes": "DAL hunts CB late"
+    },
+    {
+      "pick": 29,
+      "up_team": "ARI",
+      "down_team": "LAR",
+      "target_player": "Malachi Howell",
+      "times_mocked": 2,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#30) + 2026 4th",
+      "trade_type": "Minor swap",
+      "analysts": "Locker PFF, Carragher PFF",
+      "notes": "PFF-favored micro-trade"
+    },
+    {
+      "pick": 12,
+      "up_team": "CLE",
+      "down_team": "DAL",
+      "target_player": "Kadyn Proctor",
+      "times_mocked": 2,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#23) + 2026 3rd + 2027 1st (top-10 protected)",
+      "trade_type": "CLE up for OT",
+      "analysts": "Kiper, McShay",
+      "notes": "Alternate version of CLE-DAL swap"
+    },
+    {
+      "pick": 3,
+      "up_team": "NO",
+      "down_team": "ARI",
+      "target_player": "Arvell Reese",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#9) + 2026 2nd + 2027 2nd",
+      "trade_type": "EDGE jump",
+      "analysts": "McShay 4.0",
+      "notes": "NO vaults for pass rusher"
+    },
+    {
+      "pick": 3,
+      "up_team": "DAL",
+      "down_team": "ARI",
+      "target_player": "Arvell Reese",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#12) + 2026 2nd + 2027 1st",
+      "trade_type": "EDGE jump",
+      "analysts": "Walter WF",
+      "notes": "DAL trade-up alternate"
+    },
+    {
+      "pick": 3,
+      "up_team": "TEN",
+      "down_team": "ARI",
+      "target_player": "Jeremiyah Love",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#4) + 2026 5th",
+      "trade_type": "Short swap for RB",
+      "analysts": "Locker PFF",
+      "notes": "TEN moves up 1 for Love"
+    },
+    {
+      "pick": 3,
+      "up_team": "CLE",
+      "down_team": "ARI",
+      "target_player": "Francis Mauigoa",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#6) + 2026 2nd",
+      "trade_type": "OT grab",
+      "analysts": "Campbell WF",
+      "notes": "CLE up for OT1 alt scenario"
+    },
+    {
+      "pick": 7,
+      "up_team": "NYJ",
+      "down_team": "WAS",
+      "target_player": "Carnell Tate",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#16) + 2026 2nd + 2027 1st",
+      "trade_type": "WR leap",
+      "analysts": "McShay 4.0",
+      "notes": "NYJ up from #16 for WR1"
+    },
+    {
+      "pick": 8,
+      "up_team": "ARI",
+      "down_team": "NO",
+      "target_player": "Spencer Fano",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#3) + swap (NO gets #3)",
+      "trade_type": "Daisy-chain",
+      "analysts": "McShay 4.0",
+      "notes": "ARI slides back, NO uses #3"
+    },
+    {
+      "pick": 6,
+      "up_team": "KC",
+      "down_team": "CLE",
+      "target_player": "Spencer Fano",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st + 2026 3rd + 2027 2nd",
+      "trade_type": "OT jump alt",
+      "analysts": "Locker PFF",
+      "notes": "Alt CLE trade \u2014 KC instead of DAL"
+    },
+    {
+      "pick": 9,
+      "up_team": "KC",
+      "down_team": null,
+      "target_player": "David Bailey",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "Mid-round picks + swap",
+      "trade_type": "EDGE jump",
+      "analysts": "Locker PFF",
+      "notes": "KC aggressive for pass rush"
+    },
+    {
+      "pick": 11,
+      "up_team": "ARI",
+      "down_team": "MIA",
+      "target_player": "Francis Mauigoa",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#30) + 2026 2nd + 2027 3rd",
+      "trade_type": "ARI up for OT",
+      "analysts": "Podell CBS",
+      "notes": "ARI Rd1 double-dip scenario"
+    },
+    {
+      "pick": 11,
+      "up_team": "ATL",
+      "down_team": "MIA",
+      "target_player": "Makai Lemon",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (later) + 2026 3rd",
+      "trade_type": "WR jump",
+      "analysts": "Carragher PFF",
+      "notes": "ATL back in for WR (speculative)"
+    },
+    {
+      "pick": 13,
+      "up_team": "DET",
+      "down_team": "ATL",
+      "target_player": "Spencer Fano",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#17) + 2026 3rd",
+      "trade_type": "OT jump",
+      "analysts": "Reuter 7rd",
+      "notes": "DET up 4 for OT1"
+    },
+    {
+      "pick": 15,
+      "up_team": "BAL",
+      "down_team": "TB",
+      "target_player": "Kenyon Sadiq",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#14) + 2026 5th",
+      "trade_type": "TE jump",
+      "analysts": "Podell CBS",
+      "notes": "BAL up 1 for TE1"
+    },
+    {
+      "pick": 17,
+      "up_team": "PHI",
+      "down_team": "DET",
+      "target_player": "Dillon Thieneman",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#23) + 2026 4th",
+      "trade_type": "S jump",
+      "analysts": "Locker PFF",
+      "notes": "PHI up for safety"
+    },
+    {
+      "pick": 19,
+      "up_team": "PHI",
+      "down_team": "CAR",
+      "target_player": "Blake Miller",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#23) + 2026 3rd",
+      "trade_type": "OT protect QB",
+      "analysts": "Renner CBS",
+      "notes": "PHI up for OT depth"
+    },
+    {
+      "pick": 22,
+      "up_team": "CHI",
+      "down_team": "LAC",
+      "target_player": "Dillon Thieneman",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#25) + 2026 4th",
+      "trade_type": "S jump",
+      "analysts": "McShay 4.0",
+      "notes": "CHI up 3 for safety"
+    },
+    {
+      "pick": 24,
+      "up_team": "LAC",
+      "down_team": "JAX",
+      "target_player": "Jordyn Tyson",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#22) + 2026 3rd",
+      "trade_type": "WR move",
+      "analysts": "Reuter 7rd",
+      "notes": "LAC swap up for WR"
+    },
+    {
+      "pick": 25,
+      "up_team": "LAC",
+      "down_team": "CHI",
+      "target_player": "Travis Johnson",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#22) + 2026 3rd",
+      "trade_type": "DT jump alt",
+      "analysts": "McShay 4.0",
+      "notes": "LAC up for interior DL"
+    },
+    {
+      "pick": 26,
+      "up_team": "CAR",
+      "down_team": "BUF",
+      "target_player": "A.J. Terrell",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#19) + swap",
+      "trade_type": "Late Rd1 jump",
+      "analysts": "Locker PFF",
+      "notes": "CAR back into late Rd1"
+    },
+    {
+      "pick": 27,
+      "up_team": "NE",
+      "down_team": "SF",
+      "target_player": "Caleb Lomu",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#31) + 2026 4th",
+      "trade_type": "OT jump",
+      "analysts": "Davenport B/R",
+      "notes": "NE up 4 for OT"
+    },
+    {
+      "pick": 28,
+      "up_team": "GB",
+      "down_team": "HOU",
+      "target_player": "Francis Mauigoa",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (later) + 2026 3rd",
+      "trade_type": "OT grab",
+      "analysts": "Band NFL.com",
+      "notes": "GB back into Rd1"
+    },
+    {
+      "pick": 31,
+      "up_team": "SEA",
+      "down_team": "NE",
+      "target_player": "Jadarian Price",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#32) + 2026 5th",
+      "trade_type": "RB jump",
+      "analysts": "Iyer SN",
+      "notes": "SEA up 1 for RB"
+    },
+    {
+      "pick": 5,
+      "up_team": "CHI",
+      "down_team": "NYG",
+      "target_player": "Caleb Downs",
+      "times_mocked": 1,
+      "tier1_credible": false,
+      "compensation": "2026 1st (#25) + 1st (#26) + 2027 1st",
+      "trade_type": "Blockbuster S",
+      "analysts": "Draft Labs Aggregator",
+      "notes": "CHI mega-package for Downs"
+    },
+    {
+      "pick": 20,
+      "up_team": "CLE",
+      "down_team": "GB",
+      "target_player": "Jihaad Campbell / Boston",
+      "times_mocked": 1,
+      "tier1_credible": true,
+      "compensation": "2026 1st (#24) + 2026 4th",
+      "trade_type": "WR alt target",
+      "analysts": "Kiper Final",
+      "notes": "Same CLE\u2192DAL #20 trade structure as row 7, but Kiper targets Boston instead of Concepcion"
+    },
+    {
+      "pick": 2,
+      "up_team": "ARI",
+      "down_team": "NYJ",
+      "target_player": "Fernando Mendoza",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "NOT MOCKED",
+      "analysts": "(No April analyst mocked this)",
+      "notes": "Commonly discussed hypothetical \u2014 no April analyst actually mocked it"
+    },
+    {
+      "pick": 16,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "Sauce Gardner-era deal",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "Pre-existing trade",
+      "trade_type": "Pre-existing",
+      "analysts": "Reference only",
+      "notes": "Not an April mock \u2014 existing roster trade"
+    },
+    {
+      "pick": 13,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "Matt Stafford / Kirk Cousins era deal",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "Pre-existing trade",
+      "trade_type": "Pre-existing",
+      "analysts": "Reference only",
+      "notes": "Not an April mock \u2014 existing roster trade"
+    },
+    {
+      "pick": 20,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "Micah Parsons deal",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "Pre-existing trade",
+      "trade_type": "Pre-existing",
+      "analysts": "Reference only",
+      "notes": "Not an April mock \u2014 existing roster trade"
+    },
+    {
+      "pick": 24,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "Trevor Lawrence-era deal",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "Pre-existing trade",
+      "trade_type": "Pre-existing",
+      "analysts": "Reference only",
+      "notes": "Not an April mock \u2014 existing roster trade"
+    },
+    {
+      "pick": 29,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "Prior deal",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "Pre-existing trade",
+      "trade_type": "Pre-existing",
+      "analysts": "Reference only",
+      "notes": "Not an April mock \u2014 existing roster trade"
+    },
+    {
+      "pick": 30,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "Jalen Ramsey / Bradley Chubb era",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "Pre-existing trade",
+      "trade_type": "Pre-existing",
+      "analysts": "Reference only",
+      "notes": "Not an April mock \u2014 existing roster trade"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    },
+    {
+      "pick": null,
+      "up_team": null,
+      "down_team": null,
+      "target_player": "",
+      "times_mocked": 0,
+      "tier1_credible": false,
+      "compensation": "nan",
+      "trade_type": "nan",
+      "analysts": "nan",
+      "notes": "nan"
+    }
+  ]
+}

@@ -1,0 +1,7070 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-18T02:34:12+00:00",
+    "latest_intel_date": "2026-04-17",
+    "sources": {
+      "visits": [
+        "nfltr",
+        "pfn",
+        "walterfootball"
+      ],
+      "betting_odds": [
+        "cbs",
+        "vegasinsider"
+      ],
+      "stock_moves": [
+        "twsn"
+      ]
+    },
+    "per_kind_latest_date": {
+      "visits": "2026-04-17",
+      "betting_odds": "2026-04-17",
+      "stock_moves": "2026-04-17"
+    },
+    "player_count": 270
+  },
+  "players": {
+    "A.J. Haulcy": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Aamil Wagner": {
+      "visits": {
+        "confirmed_teams": [
+          "MIA"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "MIA"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Aaron Hall": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Adam Randall": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN",
+          "IND"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Akheem Mesidor": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CLE",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Alan Herron": {
+      "visits": {
+        "confirmed_teams": [
+          "WAS"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "WAS"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Alex Harkey": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Andre Fuller": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Anterio Thompson": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Anthony Hill Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Antonio Williams": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Arvell Reese": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 10000,
+        "best_implied_prob": 0.009900990099009901,
+        "avg_implied_prob": 0.23222322232223222,
+        "source_count": 2,
+        "per_source": {
+          "cbs": {
+            "american_odds": 120,
+            "implied_prob": 0.45454545454545453
+          },
+          "vegasinsider": {
+            "american_odds": 10000,
+            "implied_prob": 0.009900990099009901
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Athan Kaliakmanis": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Austin Barber": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Avery Smith": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Avieon Terrell": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Barion Brown": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Bauer Sharp": {
+      "visits": {
+        "confirmed_teams": [
+          "TB"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Beau Stephens": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Behren Morton": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "HOU"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Billy Schrauth": {
+      "visits": {
+        "confirmed_teams": [
+          "HOU"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Bishop Fitzgerald": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Blake Miller": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 7000,
+        "best_implied_prob": 0.014084507042253521,
+        "avg_implied_prob": 0.014084507042253521,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 7000,
+            "implied_prob": 0.014084507042253521
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Bobby Jamison-Travis": {
+      "visits": {
+        "confirmed_teams": [
+          "DET",
+          "GB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DET",
+              "GB"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Brandon Cisse": {
+      "visits": {
+        "confirmed_teams": [
+          "KC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Brandon Cleveland": {
+      "visits": {
+        "confirmed_teams": [
+          "SEA"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SEA"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Brenen Thompson": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "NYG"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ATL",
+              "NYG"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Bryce Boettcher": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Bryce Lance": {
+      "stock_moves": {
+        "net_daily": 1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Bud Clark": {
+      "visits": {
+        "confirmed_teams": [
+          "DET"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DET"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "C.J. Daniels": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "C.J. Donaldson": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Caden Barnett": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Caleb Banks": {
+      "visits": {
+        "confirmed_teams": [
+          "ARI",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ARI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Caleb Douglas": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Caleb Downs": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 6500,
+        "best_implied_prob": 0.015151515151515152,
+        "avg_implied_prob": 0.015151515151515152,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 6500,
+            "implied_prob": 0.015151515151515152
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Caleb Lomu": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 7500,
+        "best_implied_prob": 0.013157894736842105,
+        "avg_implied_prob": 0.013157894736842105,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 7500,
+            "implied_prob": 0.013157894736842105
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Caleb Tiernan": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cam Porter": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "CLE"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Carnell Tate": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE",
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 9000,
+        "best_implied_prob": 0.01098901098901099,
+        "avg_implied_prob": 0.01098901098901099,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 9000,
+            "implied_prob": 0.01098901098901099
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": -1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": -1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Carson Beck": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Carver Willis": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cash Jones": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cashius Howell": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 6000,
+        "best_implied_prob": 0.01639344262295082,
+        "avg_implied_prob": 0.01639344262295082,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 6000,
+            "implied_prob": 0.01639344262295082
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chandler Rivers": {
+      "visits": {
+        "confirmed_teams": [
+          "KC"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Charles Demmings": {
+      "visits": {
+        "confirmed_teams": [
+          "IND"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chase Bisontis": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chip Trayanum": {
+      "visits": {
+        "confirmed_teams": [
+          "SEA",
+          "TB"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SEA"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chris Bell": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chris Brazzell": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chris Hilton": {
+      "visits": {
+        "confirmed_teams": [
+          "TEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chris Johnson": {
+      "visits": {
+        "confirmed_teams": [
+          "KC"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Chris McClellan": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Christen Miller": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cian Slone": {
+      "visits": {
+        "confirmed_teams": [
+          "NYJ"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYJ"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Colbie Young": {
+      "visits": {
+        "confirmed_teams": [
+          "SEA",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "SEA"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cole Payton": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "JAX",
+          "KC"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "JAX",
+              "KC"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cole Wisniewski": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Colton Hood": {
+      "visits": {
+        "confirmed_teams": [
+          "KC",
+          "LAC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC",
+              "LAC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 5000,
+        "best_implied_prob": 0.0196078431372549,
+        "avg_implied_prob": 0.0196078431372549,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 5000,
+            "implied_prob": 0.0196078431372549
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Connor Lew": {
+      "visits": {
+        "confirmed_teams": [
+          "HOU"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Cyrus Allen": {
+      "visits": {
+        "confirmed_teams": [
+          "MIA",
+          "TB"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "MIA"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Dametrious Crownover": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Dan Villari": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "TEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "TEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Dani Dennis-Sutton": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Darrell Jackson Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "CAR",
+          "GB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CAR",
+              "GB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Dasan McCullough": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "David Bailey": {
+      "visits": {
+        "confirmed_teams": [
+          "ARI",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ARI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 160,
+        "best_implied_prob": 0.38461538461538464,
+        "avg_implied_prob": 0.4195804195804196,
+        "source_count": 2,
+        "per_source": {
+          "cbs": {
+            "american_odds": 120,
+            "implied_prob": 0.45454545454545453
+          },
+          "vegasinsider": {
+            "american_odds": 160,
+            "implied_prob": 0.38461538461538464
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Davison Igbinosun": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Daylen Everette": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "SF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "De'Zhaun Stribling": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "DeMonte Capehart": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Deion Burks": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Demond Claiborne": {
+      "visits": {
+        "confirmed_teams": [
+          "KC",
+          "LAC",
+          "MIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC",
+              "LAC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "MIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Denzel Boston": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": 1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Derrick Moore": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "PHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ATL",
+              "PHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Devin Moore": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Devon Marshall": {
+      "visits": {
+        "confirmed_teams": [
+          "JAX"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "JAX"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Diego Pavia": {
+      "visits": {
+        "confirmed_teams": [
+          "CAR",
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Dillon Thieneman": {
+      "visits": {
+        "confirmed_teams": [
+          "CAR",
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 4000,
+        "best_implied_prob": 0.024390243902439025,
+        "avg_implied_prob": 0.024390243902439025,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 4000,
+            "implied_prob": 0.024390243902439025
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Domonique Orange": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Dontay Corleone": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF",
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Drew Allar": {
+      "visits": {
+        "confirmed_teams": [
+          "ARI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ARI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "ARI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Drew Shelton": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Drew Stevens": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Eli Heidenreich": {
+      "visits": {
+        "confirmed_teams": [
+          "NYG"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYG"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Eli Raridon": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Eli Stowers": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Elijah Sarratt": {
+      "visits": {
+        "confirmed_teams": [
+          "NO"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": 1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Emmanuel McNeil-Warren": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Emmanuel Pregnon": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Emmett Johnson": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Ephesians Prysock": {
+      "visits": {
+        "confirmed_teams": [
+          "PIT",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PIT"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Eric Rivers": {
+      "visits": {
+        "confirmed_teams": [
+          "WAS"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "WAS"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Erick Hunter": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Ethan Onianwa": {
+      "visits": {
+        "confirmed_teams": [
+          "GB",
+          "HOU"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "GB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Evan Beerntsen": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Febechi Nwaiwu": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Fernando Mendoza": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC",
+          "LV"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LV"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 10000,
+        "best_implied_prob": 0.009900990099009901,
+        "avg_implied_prob": 0.012526252625262527,
+        "source_count": 2,
+        "per_source": {
+          "cbs": {
+            "american_odds": 6500,
+            "implied_prob": 0.015151515151515152
+          },
+          "vegasinsider": {
+            "american_odds": 10000,
+            "implied_prob": 0.009900990099009901
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": -1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": -1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Francis Mauigoa": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 125,
+        "best_implied_prob": 0.4444444444444444,
+        "avg_implied_prob": 0.4444444444444444,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 125,
+            "implied_prob": 0.4444444444444444
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Gabe Jacas": {
+      "visits": {
+        "confirmed_teams": [
+          "LAR",
+          "TB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "LAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Garrett Nussmeier": {
+      "visits": {
+        "confirmed_teams": [
+          "IND",
+          "PHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "PHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Gavin Ortega": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF",
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Genesis Smith": {
+      "visits": {
+        "confirmed_teams": [
+          "TB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Germie Bernard": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "BUF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Gracen Halton": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Harold Perkins": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC",
+          "SF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Haynes King": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "IND"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Hezekiah Masses": {
+      "visits": {
+        "confirmed_teams": [
+          "MIA",
+          "MIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "MIA"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "MIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Isaiah World": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC",
+          "LAR",
+          "MIA"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "LAR",
+              "MIA"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "J.C. Davis": {
+      "visits": {
+        "confirmed_teams": [
+          "NYG"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYG"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jack Endries": {
+      "visits": {
+        "confirmed_teams": [
+          "PHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PHI"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jack Kelly": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE",
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jack Stonehouse": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "CAR"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jack Strand": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jackson Kuwatch": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "IND"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jacob Rodriguez": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN",
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jacob Thomas": {
+      "visits": {
+        "confirmed_teams": [
+          "GB",
+          "HOU"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "GB"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jadarian Price": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jaden Dugger": {
+      "visits": {
+        "confirmed_teams": [
+          "KC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jadon Canady": {
+      "visits": {
+        "confirmed_teams": [
+          "DET"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DET"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jaeden Roberts": {
+      "visits": {
+        "confirmed_teams": [
+          "NO",
+          "NYG"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "NYG"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jager Burton": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jaishawn Barham": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF",
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jake Golday": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jakobe Thomas": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jalen Farmer": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jalen Stroman": {
+      "visits": {
+        "confirmed_teams": [
+          "NO"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jalon Daniels": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jalon Kilgore": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "James Brockermeyer": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jaren Kanak": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jarod Washington": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "CAR"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jayden Williams": {
+      "visits": {
+        "confirmed_teams": [
+          "IND"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jaydn Ott": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jeff Caldwell": {
+      "visits": {
+        "confirmed_teams": [
+          "PIT"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PIT"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jerand Bradley": {
+      "visits": {
+        "confirmed_teams": [
+          "IND"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jeremiah Wright": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jeremiyah Love": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 800,
+        "best_implied_prob": 0.1111111111111111,
+        "avg_implied_prob": 0.3229974160206718,
+        "source_count": 2,
+        "per_source": {
+          "cbs": {
+            "american_odds": -115,
+            "implied_prob": 0.5348837209302325
+          },
+          "vegasinsider": {
+            "american_odds": 800,
+            "implied_prob": 0.1111111111111111
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": -1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": -1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jermod McCoy": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 4000,
+        "best_implied_prob": 0.024390243902439025,
+        "avg_implied_prob": 0.024390243902439025,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 4000,
+            "implied_prob": 0.024390243902439025
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jimmy Rolder": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Joe Fagnano": {
+      "visits": {
+        "confirmed_teams": [
+          "NYJ"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYJ"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Joe Royer": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "John Michael Gyllenborg": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jonah Coleman": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN",
+          "MIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "MIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jordan Hudson": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jordan van den Berg": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jordyn Tyson": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 2800,
+        "best_implied_prob": 0.034482758620689655,
+        "avg_implied_prob": 0.034482758620689655,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 2800,
+            "implied_prob": 0.034482758620689655
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": -1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": -1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Josh Cameron": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Josh Cuevas": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Josh Gesky": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Joshua Josephs": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Josiah Trotter": {
+      "visits": {
+        "confirmed_teams": [
+          "CAR",
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Jude Bowry": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "NO"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Julian Neal": {
+      "visits": {
+        "confirmed_teams": [
+          "CAR",
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Justin Jefferson": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "TB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Justin Joly": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "CAR"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kaden Wetjen": {
+      "visits": {
+        "confirmed_teams": [
+          "PIT"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PIT"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kadyn Proctor": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 4000,
+        "best_implied_prob": 0.024390243902439025,
+        "avg_implied_prob": 0.024390243902439025,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 4000,
+            "implied_prob": 0.024390243902439025
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kaelon Black": {
+      "visits": {
+        "confirmed_teams": [
+          "CAR",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CAR"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kaleb Elarms-Orr": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kaleb Proctor": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "TB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kamari Ramsey": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF",
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kapena Gushiken": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Karon Prunty": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kayden McDonald": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kaytron Allen": {
+      "visits": {
+        "confirmed_teams": [
+          "KC",
+          "LAC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC",
+              "LAC"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Keagen Trost": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Keionte Scott": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Keldric Faulk": {
+      "visits": {
+        "confirmed_teams": [
+          "KC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 5000,
+        "best_implied_prob": 0.0196078431372549,
+        "avg_implied_prob": 0.0196078431372549,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 5000,
+            "implied_prob": 0.0196078431372549
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kendal Daniels": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kendrick Law": {
+      "visits": {
+        "confirmed_teams": [
+          "PIT"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PIT"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kenyon Sadiq": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL",
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 4500,
+        "best_implied_prob": 0.021739130434782608,
+        "avg_implied_prob": 0.021739130434782608,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 4500,
+            "implied_prob": 0.021739130434782608
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kevin Coleman Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Keylan Rutledge": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Keyron Crawford": {
+      "visits": {
+        "confirmed_teams": [
+          "WAS"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "WAS"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Keyshawn James-Newby": {
+      "visits": {
+        "confirmed_teams": [
+          "SEA"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SEA"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Khalil Dinkins": {
+      "visits": {
+        "confirmed_teams": [
+          "PIT"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PIT"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Kyle Louis": {
+      "visits": {
+        "confirmed_teams": [
+          "SF",
+          "TB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Lance Mason": {
+      "visits": {
+        "confirmed_teams": [
+          "MIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "MIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Landon Robinson": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "CLE"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Latrell McCutchin": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Lee Hunter": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Logan Taylor": {
+      "visits": {
+        "confirmed_teams": [
+          "NYG",
+          "NYJ"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYJ"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "NYG"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Lorenzo Styles Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Louis Moore": {
+      "visits": {
+        "confirmed_teams": [
+          "JAX",
+          "KC"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "JAX",
+              "KC"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Luke Altmyer": {
+      "visits": {
+        "confirmed_teams": [
+          "PHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "PHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Makai Lemon": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE",
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 7000,
+        "best_implied_prob": 0.014084507042253521,
+        "avg_implied_prob": 0.014084507042253521,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 7000,
+            "implied_prob": 0.014084507042253521
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Malachi Fields": {
+      "visits": {
+        "confirmed_teams": [
+          "NYJ"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYJ"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": 1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Malachi Lawrence": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Malik Benson": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Malik Muhammad": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Malik Spencer": {
+      "visits": {
+        "confirmed_teams": [
+          "NE",
+          "NO"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NE"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Mansoor Delane": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 3500,
+        "best_implied_prob": 0.027777777777777776,
+        "avg_implied_prob": 0.027777777777777776,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 3500,
+            "implied_prob": 0.027777777777777776
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Mark Gronowski": {
+      "visits": {
+        "confirmed_teams": [
+          "WAS"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "WAS"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Markel Bell": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "CLE"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Marlin Klein": {
+      "visits": {
+        "confirmed_teams": [
+          "PHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Mason Reiger": {
+      "visits": {
+        "confirmed_teams": [
+          "NE",
+          "NO"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "NE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Matthew Hibner": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Max Iheanachor": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Max Klare": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN",
+          "DET"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "DET"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Micah Morris": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Michael Heldman": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Michael Taaffe": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Mikail Kamara": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Mike Washington Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "TB"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Miles Kitselman": {
+      "visits": {
+        "confirmed_teams": [
+          "HOU"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Monroe Freeling": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE",
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 1600,
+        "best_implied_prob": 0.058823529411764705,
+        "avg_implied_prob": 0.058823529411764705,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 1600,
+            "implied_prob": 0.058823529411764705
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": 1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nadame Tucker": {
+      "visits": {
+        "confirmed_teams": [
+          "TB",
+          "TEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "TEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Namdi Obiazor": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nate Boerkircher": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nick Barrett": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nick Dawkins": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nick Singleton": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nolan Rucci": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Nyjalik Kelly": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Olaivavega Ioane": {
+      "visits": {
+        "confirmed_teams": [
+          "PIT"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PIT"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 6500,
+        "best_implied_prob": 0.015151515151515152,
+        "avg_implied_prob": 0.015151515151515152,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 6500,
+            "implied_prob": 0.015151515151515152
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Omar Cooper Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 2800,
+        "best_implied_prob": 0.034482758620689655,
+        "avg_implied_prob": 0.034482758620689655,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 2800,
+            "implied_prob": 0.034482758620689655
+          }
+        }
+      },
+      "stock_moves": {
+        "net_daily": -1,
+        "source_count": 1,
+        "per_source": {
+          "twsn": {
+            "stock_direction_daily": -1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Oscar Delp": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Parker Brailsford": {
+      "visits": {
+        "confirmed_teams": [
+          "JAX",
+          "NYJ"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "JAX",
+              "NYJ"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Pat Coogan": {
+      "visits": {
+        "confirmed_teams": [
+          "LAR",
+          "LV"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAR",
+              "LV"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Peter Woods": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 4500,
+        "best_implied_prob": 0.021739130434782608,
+        "avg_implied_prob": 0.021739130434782608,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 4500,
+            "implied_prob": 0.021739130434782608
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "R Mason Thomas": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Rahsul Faison": {
+      "visits": {
+        "confirmed_teams": [
+          "MIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "MIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Rayshaun Benny": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Reggie Virgil": {
+      "visits": {
+        "confirmed_teams": [
+          "ARI",
+          "ATL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ARI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Rene Konga": {
+      "visits": {
+        "confirmed_teams": [
+          "KC"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "KC"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Robert Spears-Jennings": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "NO"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Romello Brinson": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Romello Height": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Rueben Bain": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 120,
+        "best_implied_prob": 0.45454545454545453,
+        "avg_implied_prob": 0.45454545454545453,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 120,
+            "implied_prob": 0.45454545454545453
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Sam Hecht": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Sam Roush": {
+      "visits": {
+        "confirmed_teams": [],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Seth McGowan": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "NE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "NE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Skyler Bell": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Skyler Thomas": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "walterfootball": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Sonny Styles": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN",
+          "CLE"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 120,
+        "best_implied_prob": 0.45454545454545453,
+        "avg_implied_prob": 0.45454545454545453,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 120,
+            "implied_prob": 0.45454545454545453
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Spencer Fano": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 1100,
+        "best_implied_prob": 0.08333333333333333,
+        "avg_implied_prob": 0.08333333333333333,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 1100,
+            "implied_prob": 0.08333333333333333
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "T.J. Parker": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 3500,
+        "best_implied_prob": 0.027777777777777776,
+        "avg_implied_prob": 0.027777777777777776,
+        "source_count": 1,
+        "per_source": {
+          "cbs": {
+            "american_odds": 3500,
+            "implied_prob": 0.027777777777777776
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "TJ Quinn": {
+      "visits": {
+        "confirmed_teams": [
+          "GB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "GB"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tacario Davis": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tanner Koziol": {
+      "visits": {
+        "confirmed_teams": [
+          "DET"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DET"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Taurean York": {
+      "visits": {
+        "confirmed_teams": [
+          "DET"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DET"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Taylen Green": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Ted Hurst": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Thaddeus Dixon": {
+      "visits": {
+        "confirmed_teams": [
+          "LAC"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "LAC"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Travis Burke": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "BUF",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL",
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Trebor Pena": {
+      "visits": {
+        "confirmed_teams": [
+          "PHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "PHI"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Trey Moore": {
+      "visits": {
+        "confirmed_teams": [
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Trey Zuhn III": {
+      "visits": {
+        "confirmed_teams": [
+          "HOU",
+          "IND"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "IND"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Treydan Stukes": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tristan Leigh": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Ty Simpson": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "market": {
+        "best_american_odds": 10000,
+        "best_implied_prob": 0.009900990099009901,
+        "avg_implied_prob": 0.021079527307569467,
+        "source_count": 2,
+        "per_source": {
+          "cbs": {
+            "american_odds": 3000,
+            "implied_prob": 0.03225806451612903
+          },
+          "vegasinsider": {
+            "american_odds": 10000,
+            "implied_prob": 0.009900990099009901
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tyler Onyedim": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "TB"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "TB"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tyre West": {
+      "visits": {
+        "confirmed_teams": [
+          "GB",
+          "NYJ"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYJ"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "GB"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tyreak Sapp": {
+      "visits": {
+        "confirmed_teams": [
+          "DET"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DET"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tyren Montgomery": {
+      "visits": {
+        "confirmed_teams": [
+          "HOU"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "HOU"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Tywone Malone": {
+      "visits": {
+        "confirmed_teams": [
+          "NO"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 1
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Uar Bernard": {
+      "visits": {
+        "confirmed_teams": [
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Wade Woodaz": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE",
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE",
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Wesley Williams": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL",
+          "DEN"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Will Kacmarek": {
+      "visits": {
+        "confirmed_teams": [
+          "CLE"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CLE"
+            ],
+            "cancelled_flag": 0
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Will Lee III": {
+      "visits": {
+        "confirmed_teams": [
+          "NYG"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "NYG"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Xavian Sorey Jr.": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zach Durfee": {
+      "visits": {
+        "confirmed_teams": [
+          "DEN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DEN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zachariah Branch": {
+      "visits": {
+        "confirmed_teams": [
+          "ATL",
+          "DAL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zakee Wheatley": {
+      "visits": {
+        "confirmed_teams": [
+          "DAL",
+          "NO"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "DAL"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "NO"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zane Durant": {
+      "visits": {
+        "confirmed_teams": [
+          "BUF",
+          "CIN"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "BUF",
+              "CIN"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zavion Thomas": {
+      "visits": {
+        "confirmed_teams": [
+          "ARI",
+          "ATL"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "ARI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "ATL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zion Young": {
+      "visits": {
+        "confirmed_teams": [
+          "BAL",
+          "CHI"
+        ],
+        "cancelled_flag": 1,
+        "source_count": 2,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI"
+            ],
+            "cancelled_flag": 1
+          },
+          "walterfootball": {
+            "teams": [
+              "BAL"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    },
+    "Zxavian Harris": {
+      "visits": {
+        "confirmed_teams": [
+          "CHI",
+          "SF"
+        ],
+        "cancelled_flag": 0,
+        "source_count": 1,
+        "per_source": {
+          "nfltr": {
+            "teams": [
+              "CHI",
+              "SF"
+            ],
+            "cancelled_flag": 0
+          }
+        }
+      },
+      "freshness": {
+        "latest_signal_date": "2026-04-17",
+        "days_stale": 1
+      }
+    }
+  }
+}

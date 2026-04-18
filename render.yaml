@@ -1,0 +1,26 @@
+# Render.com blueprint — one-click deploy via the Render dashboard.
+# Point Render at your GitHub repo, and this file auto-configures the service.
+#
+# After first deploy the dashboard will be live at:
+#   https://<service-name>.onrender.com
+#
+# Free tier: spins down after 15 min idle, 30-60s cold start on first visit.
+# Upgrade to Starter ($7/mo) for always-on.
+
+services:
+  - type: web
+    name: nfl-draft-predictor-2026
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    # Free tier: 512 MB RAM, spins down after 15 min idle (~30-60s cold
+    # start on first visit). Enough for occasional visitors, but LinkedIn
+    # drive-by traffic will hit cold starts. Upgrade to `starter` ($7/mo)
+    # anytime from the Render dashboard for always-on service.
+    plan: free
+    envVars:
+      - key: DRAFT_MAX_SIMS
+        value: "50"          # cap per-run sim count; free tier is slow & memory-tight
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    healthCheckPath: /api/meta
+    autoDeploy: true         # auto-redeploy on git push to main

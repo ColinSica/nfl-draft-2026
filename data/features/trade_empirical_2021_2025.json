@@ -1,0 +1,338 @@
+{
+  "source": "r1_trades_2021_2025.json",
+  "n_years": 5,
+  "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_trades": 58,
+  "league_avg_trades_per_year": 11.6,
+  "league_avg_rate_per_pick": 0.362,
+  "per_pick_rate": {
+    "1": 0.4,
+    "2": 0.2,
+    "3": 0.2,
+    "4": 0.0,
+    "5": 0.4,
+    "6": 0.4,
+    "7": 0.2,
+    "8": 0.0,
+    "9": 0.4,
+    "10": 0.8,
+    "11": 0.6,
+    "12": 0.6,
+    "13": 0.4,
+    "14": 0.4,
+    "15": 0.4,
+    "16": 0.2,
+    "17": 0.4,
+    "18": 0.2,
+    "19": 0.2,
+    "20": 0.2,
+    "21": 0.2,
+    "22": 0.2,
+    "23": 0.6,
+    "24": 0.4,
+    "25": 0.8,
+    "26": 0.4,
+    "27": 0.6,
+    "28": 0.2,
+    "29": 0.6,
+    "30": 0.0,
+    "31": 0.4,
+    "32": 0.6
+  },
+  "per_team_rates": {
+    "ARI": {
+      "n_trades_up": 2,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "ATL": {
+      "n_trades_up": 1,
+      "n_trades_down": 0,
+      "trade_up_rate": 0.2,
+      "trade_down_rate": 0.0,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "BAL": {
+      "n_trades_up": 2,
+      "n_trades_down": 0,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.0,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "BUF": {
+      "n_trades_up": 2,
+      "n_trades_down": 3,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "CAR": {
+      "n_trades_up": 2,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "CHI": {
+      "n_trades_up": 3,
+      "n_trades_down": 3,
+      "trade_up_rate": 0.6,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "CIN": {
+      "n_trades_up": 0,
+      "n_trades_down": 0,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.0,
+      "sample_years": 5,
+      "has_signal": false
+    },
+    "CLE": {
+      "n_trades_up": 1,
+      "n_trades_down": 4,
+      "trade_up_rate": 0.2,
+      "trade_down_rate": 0.8,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "DAL": {
+      "n_trades_up": 2,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "DEN": {
+      "n_trades_up": 0,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "DET": {
+      "n_trades_up": 3,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.6,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "GB": {
+      "n_trades_up": 2,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "HOU": {
+      "n_trades_up": 2,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "IND": {
+      "n_trades_up": 0,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "JAX": {
+      "n_trades_up": 5,
+      "n_trades_down": 3,
+      "trade_up_rate": 1.0,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "KC": {
+      "n_trades_up": 3,
+      "n_trades_down": 3,
+      "trade_up_rate": 0.6,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "LAC": {
+      "n_trades_up": 0,
+      "n_trades_down": 0,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.0,
+      "sample_years": 5,
+      "has_signal": false
+    },
+    "LAR": {
+      "n_trades_up": 0,
+      "n_trades_down": 4,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.8,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "LV": {
+      "n_trades_up": 0,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "MIA": {
+      "n_trades_up": 1,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.2,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "MIN": {
+      "n_trades_up": 4,
+      "n_trades_down": 3,
+      "trade_up_rate": 0.8,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "NE": {
+      "n_trades_up": 2,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "NO": {
+      "n_trades_up": 3,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.6,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "NYG": {
+      "n_trades_up": 4,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.8,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "NYJ": {
+      "n_trades_up": 5,
+      "n_trades_down": 2,
+      "trade_up_rate": 1.0,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "PHI": {
+      "n_trades_up": 4,
+      "n_trades_down": 3,
+      "trade_up_rate": 0.8,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "PIT": {
+      "n_trades_up": 1,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.2,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "SEA": {
+      "n_trades_up": 2,
+      "n_trades_down": 2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.4,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "SF": {
+      "n_trades_up": 0,
+      "n_trades_down": 3,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.6,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "TB": {
+      "n_trades_up": 0,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.0,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "TEN": {
+      "n_trades_up": 1,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.2,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    },
+    "WAS": {
+      "n_trades_up": 1,
+      "n_trades_down": 1,
+      "trade_up_rate": 0.2,
+      "trade_down_rate": 0.2,
+      "sample_years": 5,
+      "has_signal": true
+    }
+  },
+  "per_bucket_rates": {
+    "1-5": {
+      "n_trades": 6,
+      "opportunities": 25,
+      "rate": 0.24
+    },
+    "6-10": {
+      "n_trades": 9,
+      "opportunities": 25,
+      "rate": 0.36
+    },
+    "11-15": {
+      "n_trades": 12,
+      "opportunities": 25,
+      "rate": 0.48
+    },
+    "16-20": {
+      "n_trades": 6,
+      "opportunities": 25,
+      "rate": 0.24
+    },
+    "21-25": {
+      "n_trades": 11,
+      "opportunities": 25,
+      "rate": 0.44
+    },
+    "26-32": {
+      "n_trades": 14,
+      "opportunities": 35,
+      "rate": 0.4
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.pro-football-reference.com)",
+      "Bash(python -c \"import bs4; print\\(bs4.__version__\\)\")",
+      "Bash(python -c \"import requests; print\\(requests.__version__\\)\")",
+      "Bash(python -c \"import pandas; print\\(pandas.__version__\\)\")",
+      "Bash(pip install *)",
+      "Bash(python src/data/scrape_historical_drafts.py)",
+      "Bash(where chrome *)",
+      "Bash(where \"C:/Program Files/Google/Chrome/Application/chrome.exe\")",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}
