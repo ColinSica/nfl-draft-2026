@@ -1020,20 +1020,20 @@ export function Simulate() {
               <input
                 id="sim-count"
                 type="number"
-                min={10}
+                min={1}
                 max={appMeta?.share_mode?.max_sims ?? 5000}
-                step={10}
+                step={1}
                 value={n}
                 onChange={(e) => {
                   const cap = appMeta?.share_mode?.max_sims ?? 5000;
-                  setN(Math.min(cap, Math.max(10, Number(e.target.value))));
+                  setN(Math.min(cap, Math.max(1, Number(e.target.value))));
                 }}
                 disabled={running || readOnly}
                 className="bg-bg-raised border border-border rounded-md px-3 py-2 text-sm w-28 outline-none focus:border-accent disabled:opacity-60 font-mono tabular-nums"
-                title={`Estimated time: ${formatDuration(estimateSeconds(n))} · Max ${appMeta?.share_mode?.max_sims ?? 5000}`}
+                title={`Estimated time: ${formatDuration(estimateSeconds(n))} · Range 1-${appMeta?.share_mode?.max_sims ?? 5000}`}
               />
               <div className="flex gap-1 text-[10px] text-text-subtle">
-                {[30, 50, 100, 200].map((preset) => (
+                {[1, 10, 50, 100, 200].map((preset) => (
                   <button
                     key={preset}
                     type="button"
