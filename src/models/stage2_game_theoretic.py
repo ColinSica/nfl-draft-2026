@@ -1758,8 +1758,19 @@ def main():
         # (picks list was mutated; we reconstruct from current picks_template by sim)
         for trade in trades_this:
             all_trades.append(trade)
-        if (sim + 1) % 100 == 0:
-            print(f"  ...{sim + 1}/{N_SIMULATIONS}")
+        # Adaptive progress cadence so small runs still show motion — emit
+        # at every sim when N <= 20, every 5 when N <= 100, every 25 when
+        # N <= 500, every 100 for larger runs.
+        if N_SIMULATIONS <= 20:
+            cadence = 1
+        elif N_SIMULATIONS <= 100:
+            cadence = 5
+        elif N_SIMULATIONS <= 500:
+            cadence = 25
+        else:
+            cadence = 100
+        if (sim + 1) % cadence == 0 or (sim + 1) == N_SIMULATIONS:
+            print(f"  ...{sim + 1}/{N_SIMULATIONS}", flush=True)
 
     # Reconstruct team-at-slot tallies by re-running a lightweight pass of
     # the owning team per simulation. Simpler: re-store during loop.
