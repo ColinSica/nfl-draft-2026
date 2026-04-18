@@ -98,8 +98,8 @@ export function Prospects() {
         </div>
       </div>
 
-      <div className="card overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="card overflow-x-auto">
+        <table className="w-full text-sm min-w-[560px]">
           <thead>
             <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border bg-bg-raised/60">
               <th className="text-left font-medium py-2.5 pl-4 pr-2 w-20" title="Consensus analyst rank (blended across 20+ mock drafts)">Cons rank</th>

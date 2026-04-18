@@ -90,7 +90,7 @@ export function TeamDetail() {
           </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center">
           {(data.all_r1_picks ?? []).map((pn: number) => (
-            <div key={pn} className="card px-4 py-2 min-w-[80px]">
+            <div key={pn} className="card px-4 py-2 min-w-[60px] sm:min-w-[80px]">
               <div className="font-mono text-3xl font-semibold">#{pn}</div>
               <div className="text-[10px] text-text-subtle uppercase tracking-wide">
                 R1 pick
@@ -108,13 +108,13 @@ export function TeamDetail() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 border-b border-border">
+      <div className="flex gap-1 border-b border-border overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0">
         {(['overview', 'needs', 'roster', 'narrative', 'intel'] as Tab[]).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
             className={cn(
-              'px-4 py-2 text-sm font-medium border-b-2 -mb-px transition',
+              'px-3 sm:px-4 py-2 text-sm font-medium border-b-2 -mb-px transition whitespace-nowrap',
               tab === t
                 ? 'border-accent text-text'
                 : 'border-transparent text-text-muted hover:text-text',
@@ -128,7 +128,7 @@ export function TeamDetail() {
       {tab === 'overview' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <InfoCard title="Leadership" Icon={Briefcase}>
-            <pre className="text-xs text-text whitespace-pre-wrap leading-5 font-sans">
+            <pre className="text-xs text-text whitespace-pre-wrap break-words leading-5 font-sans">
               {narrative.leadership || '—'}
             </pre>
           </InfoCard>
@@ -254,7 +254,7 @@ export function TeamDetail() {
           </InfoCard>
 
           <InfoCard title="Roster needs (tiered, from PDF)" Icon={Target}>
-            <pre className="text-xs text-text whitespace-pre-wrap leading-5 font-sans">
+            <pre className="text-xs text-text whitespace-pre-wrap break-words leading-5 font-sans">
               {narrative.roster_needs_tiered || '—'}
             </pre>
           </InfoCard>

@@ -280,7 +280,7 @@ function NumInput({
       'flex flex-wrap items-center gap-3 p-2.5 rounded-md',
       changed && 'bg-accent/5 border border-accent/20',
     )}>
-      <div className="flex-1 min-w-[200px]">
+      <div className="flex-1 min-w-[120px] sm:min-w-[200px]">
         <div className="flex items-center gap-2">
           <div className="text-sm font-medium text-text">{label}</div>
           {live && (

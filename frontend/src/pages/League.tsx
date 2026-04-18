@@ -90,8 +90,8 @@ export function League() {
           </div>
           <div className="space-y-2">
             {cascades.map((c: any, i: number) => (
-              <div key={i} className="flex items-start gap-3 text-sm bg-bg-raised rounded-md p-3">
-                <div className="flex items-center gap-1 flex-none">
+              <div key={i} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-3 text-sm bg-bg-raised rounded-md p-3">
+                <div className="flex items-center gap-1 flex-wrap sm:flex-none">
                   <Link to={`/team/${c.trigger_team}`} className="font-semibold hover:underline">
                     {c.trigger_team}
                   </Link>
