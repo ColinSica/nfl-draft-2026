@@ -240,11 +240,25 @@ export function Dashboard() {
       </div>
 
       {/* Team grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-        {filtered.map((t) => (
-          <TeamCard key={t.team} t={t} />
-        ))}
-      </div>
+      {filtered.length === 0 ? (
+        <div className="card p-8 text-center">
+          <div className="text-text-muted text-sm mb-2">
+            No teams match your filters.
+          </div>
+          <button
+            onClick={() => { setQ(''); setTierFilter('all'); }}
+            className="text-accent text-xs hover:underline"
+          >
+            Clear filters
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+          {filtered.map((t) => (
+            <TeamCard key={t.team} t={t} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -135,6 +135,17 @@ export function Prospects() {
         </div>
       </div>
 
+      {filtered.length === 0 ? (
+        <div className="card p-8 text-center text-text-muted text-sm">
+          No prospects match your filters.
+          <button
+            onClick={() => { setSearch(''); setPosFilter('ALL'); }}
+            className="text-accent hover:underline ml-2"
+          >
+            Clear filters
+          </button>
+        </div>
+      ) : (
       <div className="card overflow-x-auto">
         <table className="w-full text-sm min-w-[640px]">
           <thead>
@@ -242,7 +253,13 @@ export function Prospects() {
             })}
           </tbody>
         </table>
+        {filtered.length > 100 && (
+          <div className="text-[11px] text-text-subtle text-center py-2 border-t border-border">
+            Showing top 100 of {filtered.length} matches — refine filters to narrow.
+          </div>
+        )}
       </div>
+      )}
     </div>
   );
 }

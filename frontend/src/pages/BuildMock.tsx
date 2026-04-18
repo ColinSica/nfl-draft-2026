@@ -324,6 +324,7 @@ export function BuildMock() {
   const [tradeOpen, setTradeOpen] = useState(false);
   const [replaying, setReplaying] = useState(false);
   const [replayError, setReplayError] = useState<string | null>(null);
+  const [replaySuccess, setReplaySuccess] = useState<string | null>(null);
   const [mobilePickerOpen, setMobilePickerOpen] = useState(false);
 
   // Cache per-team roster needs so we can display "what this team needs"
@@ -367,14 +368,14 @@ export function BuildMock() {
     }
     setReplaying(true);
     setReplayError(null);
+    setReplaySuccess(null);
     try {
       const r = await api.simulateReplay(forced, 10);
-      // Update model-source picks with fresh predictions from replay.
+      let updated = 0;
       for (const slot of r.picks) {
         const top = slot.candidates[0];
         if (!top) continue;
         const existing = state.picks.find((x) => x.pick_number === slot.pick_number);
-        // Only update if this pick is NOT a user pick (don't overwrite user choices).
         if (!existing || existing.source === 'user') continue;
         dispatch({
           type: 'draft',
@@ -387,7 +388,12 @@ export function BuildMock() {
           },
           source: 'model',
         });
+        updated += 1;
       }
+      setReplaySuccess(
+        `Model re-cascaded · updated ${updated} downstream pick${updated === 1 ? '' : 's'}`
+      );
+      setTimeout(() => setReplaySuccess(null), 6000);
     } catch (e) {
       setReplayError(String(e));
     } finally {
@@ -580,6 +586,13 @@ export function BuildMock() {
       {replayError && (
         <div className="card p-3 text-xs text-tier-low bg-tier-low/5 border-tier-low/30">
           {replayError}
+        </div>
+      )}
+
+      {replaySuccess && (
+        <div className="card p-3 text-xs text-tier-high bg-tier-high/5 border-tier-high/30 flex items-center gap-2">
+          <Check size={14} className="text-tier-high" />
+          {replaySuccess}
         </div>
       )}
 
@@ -1083,6 +1096,16 @@ function TradeModal({ state, onClose, onTrade }: {
               <span className="text-text-muted">→</span>
               <span className="font-semibold">{a.team}</span>
             </div>
+          </div>
+        )}
+        {!canTrade && pickA === pickB && (
+          <div className="bg-tier-midlo/10 border border-tier-midlo/30 rounded-md p-3 text-xs text-tier-midlo mb-4">
+            Pick A and Pick B can't be the same slot — select two different picks.
+          </div>
+        )}
+        {!canTrade && pickA !== pickB && ((a?.player) || (b?.player)) && (
+          <div className="bg-tier-midlo/10 border border-tier-midlo/30 rounded-md p-3 text-xs text-tier-midlo mb-4">
+            Can't trade a pick that's already been drafted.
           </div>
         )}
 
