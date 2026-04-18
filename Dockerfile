@@ -37,7 +37,7 @@ COPY --from=frontend /app/src/api/static/ /app/src/api/static/
 ENV PORT=8000
 # Cap sim count on public hosts so one visitor can't monopolize the box.
 # DRAFT_MAX_SIMS overrides the 5000 default in the POST /api/simulate handler.
-ENV DRAFT_MAX_SIMS=100
+ENV DRAFT_MAX_SIMS=200
 
 EXPOSE 8000
 

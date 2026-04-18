@@ -20,7 +20,7 @@ services:
     plan: free
     envVars:
       - key: DRAFT_MAX_SIMS
-        value: "50"          # cap per-run sim count; free tier is slow & memory-tight
+        value: "200"         # cap per-run sim count; free tier is slow & memory-tight
       - key: PYTHONUNBUFFERED
         value: "1"
     healthCheckPath: /api/meta

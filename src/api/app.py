@@ -54,6 +54,7 @@ ANALYST_AGG_JSON = FEATURES / "analyst_aggregate_2026.json"
 ANALYST_CONSENSUS_JSON = FEATURES / "analyst_consensus_2026.json"
 MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026.json"
 MC_CSV = PROCESSED / "monte_carlo_2026_v12.csv"
+MC_TRADES_JSON = PROCESSED / "monte_carlo_trades_2026.json"
 PREDICTIONS_CSV = PROCESSED / "predictions_2026.csv"
 PROSPECTS_CSV = PROCESSED / "prospects_2026_enriched.csv"
 
@@ -329,6 +330,20 @@ def prospect_landings() -> dict:
         "meta": {"file_present": True, "mtime": _file_mtime(MC_CSV),
                  "source": MC_CSV.name, "n_prospects": len(out)},
     }
+
+
+@app.get("/api/simulations/trades")
+def simulation_trades() -> dict:
+    """Per-pick trade events from the latest Monte Carlo run.
+
+    Response:
+      { n_simulations, total_trade_events,
+        per_pick: { "21": [{ from_team, to_team, prob, count, top_targets }] } }
+    """
+    if not MC_TRADES_JSON.exists():
+        return {"n_simulations": 0, "total_trade_events": 0, "per_pick": {}}
+    with open(MC_TRADES_JSON, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 @app.get("/api/simulations/latest")

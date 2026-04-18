@@ -20,7 +20,7 @@ export function Prospects() {
   const [err, setErr] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [posFilter, setPosFilter] = useState('ALL');
-  const [sortKey, setSortKey] = useState<'rank' | 'ras' | 'weight'>('rank');
+  const [sortKey, setSortKey] = useState<'rank' | 'ras' | 'weight' | 'model'>('rank');
 
   useEffect(() => {
     api.prospects(80).then((r) => setData(r.prospects as Prospect[]))
@@ -31,6 +31,18 @@ export function Prospects() {
     () => Array.from(new Set(data.map((p) => p.position).filter(Boolean) as string[])).sort(),
     [data],
   );
+
+  // Derive model rank by sorting ALL prospects by final_score desc — stays
+  // stable regardless of the current position/search filter so a player's
+  // model rank is an absolute ordering across the whole board.
+  const modelRankMap = useMemo(() => {
+    const byScore = [...data]
+      .filter((p) => p.final_score != null)
+      .sort((a, b) => (b.final_score ?? -Infinity) - (a.final_score ?? -Infinity));
+    const m = new Map<string, number>();
+    byScore.forEach((p, i) => m.set(p.player, i + 1));
+    return m;
+  }, [data]);
 
   const filtered = useMemo(() => {
     const needle = search.trim().toLowerCase();
@@ -46,10 +58,13 @@ export function Prospects() {
     out.sort((a, b) => {
       if (sortKey === 'ras') return (b.ras_score ?? 0) - (a.ras_score ?? 0);
       if (sortKey === 'weight') return (b.weight ?? 0) - (a.weight ?? 0);
+      if (sortKey === 'model') {
+        return (modelRankMap.get(a.player) ?? 9999) - (modelRankMap.get(b.player) ?? 9999);
+      }
       return (a.rank ?? 999) - (b.rank ?? 999);
     });
     return out;
-  }, [data, search, posFilter, sortKey]);
+  }, [data, search, posFilter, sortKey, modelRankMap]);
 
   if (err) return <div className="card p-6 text-tier-low text-sm">{err}</div>;
 
@@ -90,6 +105,7 @@ export function Prospects() {
           className="bg-bg-raised border border-border rounded-md px-3 py-1.5 text-sm outline-none focus:border-accent"
         >
           <option value="rank">Sort: consensus rank</option>
+          <option value="model">Sort: model rank</option>
           <option value="ras">Sort: RAS score</option>
           <option value="weight">Sort: weight</option>
         </select>
@@ -99,10 +115,11 @@ export function Prospects() {
       </div>
 
       <div className="card overflow-x-auto">
-        <table className="w-full text-sm min-w-[560px]">
+        <table className="w-full text-sm min-w-[640px]">
           <thead>
             <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border bg-bg-raised/60">
               <th className="text-left font-medium py-2.5 pl-4 pr-2 w-20" title="Consensus analyst rank (blended across 20+ mock drafts)">Cons rank</th>
+              <th className="text-left font-medium py-2.5 px-2 w-20" title="Model rank — ordering by stage-1 model score across all prospects">Model rank</th>
               <th className="text-left font-medium py-2.5 px-2">Player</th>
               <th className="text-left font-medium py-2.5 px-2">College</th>
               <th className="text-right font-medium py-2.5 px-2 w-20">Weight</th>
@@ -111,11 +128,32 @@ export function Prospects() {
             </tr>
           </thead>
           <tbody>
-            {filtered.slice(0, 100).map((p) => (
+            {filtered.slice(0, 100).map((p) => {
+              const modelRank = modelRankMap.get(p.player);
+              const gap = (p.rank != null && modelRank != null) ? p.rank - modelRank : null;
+              return (
               <tr key={p.player} className="border-b border-border/60 last:border-0 hover:bg-bg-hover/40">
                 <td className="py-2 pl-4 pr-2 font-mono tabular-nums">
                   {p.rank != null ? (
                     <span className="text-text">#{p.rank}</span>
+                  ) : <span className="text-text-subtle">—</span>}
+                </td>
+                <td className="py-2 px-2 font-mono tabular-nums">
+                  {modelRank != null ? (
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className="text-text">#{modelRank}</span>
+                      {gap != null && gap !== 0 && (
+                        <span className={cn(
+                          'text-[10px] font-medium',
+                          gap > 0 ? 'text-tier-high' : 'text-tier-midlo',
+                        )}
+                        title={gap > 0
+                          ? `Model ranks ${Math.abs(gap)} spots higher than consensus`
+                          : `Model ranks ${Math.abs(gap)} spots lower than consensus`}>
+                          {gap > 0 ? `↑${gap}` : `↓${Math.abs(gap)}`}
+                        </span>
+                      )}
+                    </span>
                   ) : <span className="text-text-subtle">—</span>}
                 </td>
                 <td className="py-2 px-2">
@@ -155,7 +193,8 @@ export function Prospects() {
                   {p.final_score != null ? p.final_score.toFixed(1) : '—'}
                 </td>
               </tr>
-            ))}
+              );
+            })}
           </tbody>
         </table>
       </div>

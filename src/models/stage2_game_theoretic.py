@@ -40,6 +40,7 @@ ANALYST_AGG_JSON = ROOT / "data" / "features" / "analyst_aggregate_2026.json"
 TRADE_EMPIRICAL_JSON = ROOT / "data" / "features" / "trade_empirical_2021_2025.json"
 ANALYST_CONSENSUS_JSON = ROOT / "data" / "features" / "analyst_consensus_2026.json"
 OUT_MC = ROOT / "data" / "processed" / "monte_carlo_2026_v12.csv"
+OUT_TRADES = ROOT / "data" / "processed" / "monte_carlo_trades_2026.json"
 GM_ALLOC_CSV = ROOT / "data" / "processed" / "gm_positional_allocation.csv"
 
 # ---------------------------------------------------------------------------
@@ -1959,13 +1960,46 @@ def main():
 
     # Trade events summary
     print(f"\nBilateral trade events fired across {N_SIMULATIONS} sims: {len(all_trades)}")
+    # Always write the JSON — even empty — so the dashboard can reliably
+    # read it without a file-missing branch.
+    trades_payload: dict = {
+        "n_simulations": N_SIMULATIONS,
+        "total_trade_events": len(all_trades),
+        "per_pick": {},          # pick_number -> list of {from_team, to_team, count, prob, top_targets}
+    }
     if all_trades:
+        import json as _json
         tr_df = pd.DataFrame(all_trades)
         print("Top-10 most-frequent bilateral trade scenarios:")
         freq = (tr_df.groupby(["pick_number", "from_team", "to_team"])
                      .size().reset_index(name="count")
                      .sort_values("count", ascending=False).head(10))
         print(freq.to_string(index=False))
+
+        # Per-pick aggregation: for each slot, list each (from, to) trade
+        # combination with fire probability and the top-3 player targets.
+        for pn, sub in tr_df.groupby("pick_number"):
+            pairs = []
+            for (ft, tt), grp in sub.groupby(["from_team", "to_team"]):
+                targets = (grp.groupby("target_player")
+                              .size().reset_index(name="n")
+                              .sort_values("n", ascending=False).head(3))
+                pairs.append({
+                    "from_team": ft,
+                    "to_team":   tt,
+                    "count":     int(len(grp)),
+                    "prob":      round(len(grp) / N_SIMULATIONS, 3),
+                    "top_targets": [
+                        {"player": str(r.target_player), "count": int(r.n)}
+                        for r in targets.itertuples(index=False)
+                    ],
+                })
+            pairs.sort(key=lambda d: -d["prob"])
+            trades_payload["per_pick"][str(int(pn))] = pairs
+    with open(OUT_TRADES, "w", encoding="utf-8") as _f:
+        import json as _json
+        _json.dump(trades_payload, _f, indent=2)
+    print(f"Saved -> {OUT_TRADES}")
 
     if anomalies:
         print(f"\nCAP-VIOLATIONS in picks 1-28: {len(anomalies)}")

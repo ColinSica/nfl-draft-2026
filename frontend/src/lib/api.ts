@@ -128,6 +128,18 @@ export const api = {
   analystConsensus: () => getJson<any>('/api/analyst-consensus'),
   latestSim: () =>
     getJson<{ picks: PickRow[]; meta: any }>('/api/simulations/latest'),
+  simulationTrades: () =>
+    getJson<{
+      n_simulations: number;
+      total_trade_events: number;
+      per_pick: Record<string, Array<{
+        from_team: string;
+        to_team: string;
+        prob: number;
+        count: number;
+        top_targets: Array<{ player: string; count: number }>;
+      }>>;
+    }>('/api/simulations/trades'),
   prospectLandings: () =>
     getJson<{ prospects: ProspectRow[]; meta: any }>(
       '/api/simulations/prospects',

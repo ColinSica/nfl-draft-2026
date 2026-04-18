@@ -58,8 +58,14 @@ type ModelReasoning = {
   top_factors: Array<{ key: string; magnitude: number; label: string; detail: string }>;
 };
 
+type TradeEvent = {
+  from_team: string; to_team: string; prob: number; count: number;
+  top_targets: Array<{ player: string; count: number }>;
+};
+
 function PickCard({
   row, expanded, onToggle, analyst, reasoning, modelReasoning, nAnalysts, nTier1,
+  trades, nSims,
 }: {
   row: PickRow;
   expanded: boolean;
@@ -69,7 +75,11 @@ function PickCard({
   modelReasoning?: ModelReasoning;
   nAnalysts: number;
   nTier1: number;
+  trades?: TradeEvent[];
+  nSims?: number;
 }) {
+  const tradeProb = (trades ?? []).reduce((a, t) => a + t.prob, 0);
+  const topTrade = (trades && trades.length > 0) ? trades[0] : undefined;
   const top = row.candidates[0];
   const team = teamMeta(row.team);
   const tier = confidenceTier(top?.probability ?? 0);
@@ -162,13 +172,23 @@ function PickCard({
                 {analystAgreed ? 'Matches analysts' : 'Differs from analysts'}
               </span>
             )}
-            {SCRIPTED_TRADE_PROB[row.pick_number] && (
+            {tradeProb > 0 ? (
+              <span
+                className="badge flex-none border-accent/40 bg-accent/10 text-accent flex items-center gap-1"
+                title={topTrade
+                  ? `${topTrade.from_team} → ${topTrade.to_team} in ${(topTrade.prob * 100).toFixed(0)}% of sims`
+                  : `Trades fire in ${(tradeProb * 100).toFixed(0)}% of sims`}
+              >
+                <ArrowRightLeft size={10} />
+                Trade {(tradeProb * 100).toFixed(0)}%
+              </span>
+            ) : SCRIPTED_TRADE_PROB[row.pick_number] && (
               <span
                 className="badge flex-none border-accent/40 bg-accent/10 text-accent flex items-center gap-1"
                 title={SCRIPTED_TRADE_PROB[row.pick_number].note}
               >
                 <ArrowRightLeft size={10} />
-                Traded {SCRIPTED_TRADE_PROB[row.pick_number].pct}%
+                Trade {SCRIPTED_TRADE_PROB[row.pick_number].pct}%
               </span>
             )}
           </div>
@@ -327,6 +347,44 @@ function PickCard({
                 Visit: {modelReasoning.components.visit.toFixed(2)} ·
                 Position multiplier: {modelReasoning.components.pv_mult.toFixed(2)}× ·
                 GM affinity: {modelReasoning.components.gm_affinity.toFixed(2)}×
+              </div>
+            </div>
+          )}
+
+          {/* Trade events — shown when one or more bilateral trades fire
+              at this pick across sims. Each row: from → to, % of sims,
+              top-3 targeted players. */}
+          {trades && trades.length > 0 && (
+            <div>
+              <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-text-muted mb-2">
+                <ArrowRightLeft size={12} />
+                Trade scenarios at this pick
+                <span className="text-text-subtle ml-auto font-normal normal-case">
+                  any trade fires in {(tradeProb * 100).toFixed(0)}% of sims
+                </span>
+              </div>
+              <div className="space-y-1.5">
+                {trades.map((t, i) => (
+                  <div
+                    key={`${t.from_team}-${t.to_team}-${i}`}
+                    className="text-xs bg-bg-card border border-border rounded-md p-2.5 flex flex-wrap items-center gap-x-3 gap-y-1"
+                  >
+                    <span className="font-mono font-semibold">
+                      {t.from_team} → {t.to_team}
+                    </span>
+                    <span className="text-accent font-semibold">
+                      {(t.prob * 100).toFixed(0)}%
+                    </span>
+                    <span className="text-text-subtle">
+                      ({t.count}{nSims ? ` / ${nSims} sims` : ' sims'})
+                    </span>
+                    {t.top_targets.length > 0 && (
+                      <span className="text-text-muted">
+                        · target: {t.top_targets.map((p) => p.player).join(', ')}
+                      </span>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           )}
@@ -783,6 +841,11 @@ export function Simulate() {
   const [appMeta, setAppMeta] = useState<MetaInfo | null>(null);
   const [consensus, setConsensus] = useState<any>(null);
   const [modelReasoning, setModelReasoning] = useState<Record<string, ModelReasoning>>({});
+  const [trades, setTrades] = useState<Record<string, Array<{
+    from_team: string; to_team: string; prob: number; count: number;
+    top_targets: Array<{ player: string; count: number }>;
+  }>>>({});
+  const [tradesN, setTradesN] = useState<number>(0);
   const [token, setToken] = useState(() => tokenStore.get());
   const [err, setErr] = useState<string | null>(null);
   const [expanded, setExpanded] = useState<Set<number>>(new Set());
@@ -793,15 +856,18 @@ export function Simulate() {
 
   const loadLatest = async () => {
     try {
-      const [r, p, mr] = await Promise.all([
+      const [r, p, mr, tr] = await Promise.all([
         api.latestSim(),
         api.prospectLandings(),
         api.simulationReasoning().catch(() => ({ picks: {} })),
+        api.simulationTrades().catch(() => ({ per_pick: {} as any })),
       ]);
       setPicks(r.picks);
       setMeta(r.meta);
       setProspects(p.prospects);
       setModelReasoning(mr.picks as Record<string, ModelReasoning>);
+      setTrades((tr as any).per_pick ?? {});
+      setTradesN((tr as any).n_simulations ?? 0);
     } catch (e) {
       setErr(String(e));
     }
@@ -1231,6 +1297,8 @@ export function Simulate() {
                         modelReasoning={modelReasoning[String(r.pick_number)]}
                         nAnalysts={nAnalysts}
                         nTier1={nTier1}
+                        trades={trades[String(r.pick_number)]}
+                        nSims={tradesN}
                       />
                     </div>
                   );
