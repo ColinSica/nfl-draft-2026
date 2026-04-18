@@ -120,6 +120,18 @@ def analyst_distribution(pick_num: int, taken_names: set,
     for short, w in blended.items():
         full = _resolve_analyst_name(short)
         if full and full not in taken_names:
+            # Dampen analyst-mock weights when the player's ADP is 10+
+            # slots past the current pick — single-analyst outliers shouldn't
+            # drive high probability in the sim. Reach magnitude scaling:
+            # gap  10→0.50, 12→0.30, 15→0.15, 20+→0.05
+            if pros_df is not None:
+                player_row = pros_df[pros_df["player"] == full]
+                if not player_row.empty:
+                    adp = player_row["rank"].iloc[0]
+                    if pd.notna(adp) and (adp - pick_num) > 10:
+                        excess = float(adp) - float(pick_num) - 10
+                        # exponential-ish decay, clamped at 0.05
+                        w *= max(0.05, 0.5 * (0.85 ** excess))
             resolved[full] = resolved.get(full, 0.0) + w
 
     # ELITE-SLIDER FLOOR: inject any top-5 consensus prospect still
@@ -879,11 +891,17 @@ ANALYST_PICKS: dict[int, dict[str, str]] = {
 # Per-pick consensus-rank cap applied in the BASE model only. Intel
 # overrides are exempt by design (they're listing specific targets).
 def cap_threshold(pick_num: int) -> int:
+    # Consensus-rank cap per pick range. Cap too tight → no legit candidates
+    # pass and noise picks the "winner" among -1e6 sentinels; cap too loose
+    # → crazy reaches. Late R1 widened to 55 so picks 28-32 have realistic
+    # candidate pools without rewarding mid-R2 guys.
     if pick_num <= 10:
-        return 22      # top-10 tighter (was 25)
+        return 22
     if pick_num <= 20:
-        return 35      # mid-first tighter (was 40)
-    return 45          # late-first tighter (was 60) — stops 12-slot reaches
+        return 38
+    if pick_num <= 28:
+        return 48
+    return 55
 
 # Prospect position -> canonical need position
 POS_TO_NEEDS = {
@@ -1584,16 +1602,37 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
     pv_mult = pv_mult.where(~early_lb, pv_mult * 0.60)
 
     # Safety slide (2021-2025): 4 of 5 years the top-ranked S landed R2+
-    # despite being R1-mocked. Apply a -0.15 multiplier to the top S if
-    # they're being considered early (before their typical landing zone).
+    # despite being R1-mocked. Historical R1 S count: avg 0.4/year. Apply
+    # progressive penalty: top S gets 0.75x at picks 1-15, 0.85x at 16-22.
+    # Second/third safeties considered in top-20 get 0.65x (almost never
+    # R1 in practice). Only Caleb Downs 2024-25 class had R1-worthy S2+.
     s_mask = raw_pos == "S"
     if s_mask.any():
-        top_s_cons = prospects[s_mask]["rank"].min()
+        s_sorted = prospects[s_mask].sort_values("rank")
+        top_s_cons = s_sorted["rank"].iloc[0] if len(s_sorted) else 999
+        second_s_cons = s_sorted["rank"].iloc[1] if len(s_sorted) > 1 else 999
         is_top_s = s_mask & (prospects["rank"] == top_s_cons)
-        # Only penalize if the current pick is earlier than the typical
-        # top-S landing slot (pick 20 historical median).
-        if pick_num < 20:
-            pv_mult = pv_mult.where(~is_top_s, pv_mult * 0.82)
+        is_second_s = s_mask & (prospects["rank"] == second_s_cons)
+        if pick_num < 15:
+            pv_mult = pv_mult.where(~is_top_s, pv_mult * 0.75)
+        elif pick_num < 22:
+            pv_mult = pv_mult.where(~is_top_s, pv_mult * 0.85)
+        # Second safety only R1-viable in deep classes. Heavy penalty
+        # before pick 25 — historical: 2nd S essentially never goes R1.
+        if pick_num < 25:
+            pv_mult = pv_mult.where(~is_second_s, pv_mult * 0.55)
+
+    # IOL slide: interior OL (G/C) averages 1 R1 pick/year. IOL in top-16
+    # is the exception, not the rule. Top IOL cons <= 20 OK; 3rd IOL
+    # considered early gets heavy penalty.
+    iol_mask = raw_pos.isin({"IOL", "G", "C"})
+    if iol_mask.any():
+        iol_sorted = prospects[iol_mask].sort_values("rank")
+        if len(iol_sorted) > 1:
+            second_iol_cons = iol_sorted["rank"].iloc[1]
+            is_second_iol = iol_mask & (prospects["rank"] == second_iol_cons)
+            if pick_num < 25:
+                pv_mult = pv_mult.where(~is_second_iol, pv_mult * 0.65)
 
     score = score * pv_mult
 
@@ -1624,7 +1663,20 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
     # never go 15+ spots ahead of ADP in 2021-2025 R1 data.
     NON_REACH_POSITIONS = NON_PREMIUM_RAW | {"LB", "S", "FS", "SS"}
     non_premium_reach = ((cons - pick_num) > 15) & raw_pos.isin(NON_REACH_POSITIONS) & ~premium_need
-    score = score.where(~non_premium_reach, score * 0.15)
+    score = score.where(~non_premium_reach, score * 0.10)
+
+    # Position-specific reach caps, calibrated against 2021-2025 actual R1
+    # reach distribution:
+    # - EDGE: reaches >12 slots rare (~2% of R1 picks); cap hard.
+    # - CB: reaches >10 slots rare; cap hard.
+    # - IDL/DL: reaches >12 slots essentially unseen in last 5 years.
+    # - OT: NOT reached — premium_need already exempts legit OT reaches.
+    edge_deep_reach = ((cons - pick_num) > 12) & raw_pos.isin({"EDGE", "DE"}) & ~premium_need
+    score = score.where(~edge_deep_reach, score * 0.12)
+    cb_deep_reach = ((cons - pick_num) > 10) & (raw_pos == "CB") & ~premium_need
+    score = score.where(~cb_deep_reach, score * 0.20)
+    idl_deep_reach = ((cons - pick_num) > 12) & raw_pos.isin({"DL", "DT", "IDL", "NT"}) & ~premium_need
+    score = score.where(~idl_deep_reach, score * 0.12)
 
     # NEW: scaled slippage boost. A top-15 consensus prospect available
     # past their expected slot gets a multiplicative boost proportional to
