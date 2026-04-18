@@ -267,9 +267,15 @@ NOISE_STD_LATE_PICKS = 25.0           # picks 17-32 — bump variance (BUG 2)
 #      positional need → the TRAILING team has elevated trade-up prob
 #      (jump the team in front).
 # ---------------------------------------------------------------------------
-QB_CASCADE_WINDOW = 5   # look at next 5 picks for QB-needy teams
+QB_CASCADE_WINDOW = 8   # widened: QB teams leapfrog from 8 slots back
 TIER_SIZES = {"EDGE": 5, "OT": 5, "CB": 5, "WR": 6, "QB": 2, "IDL": 4}
 LEAPFROG_WINDOW = 2     # immediate next 2 picks define "leapfrog" range
+
+# Positions that ACTUALLY drive R1 trade-ups (2021-2025 empirical). Teams
+# essentially never give up picks to move up for a non-premium position
+# early. This gates the tier/leapfrog boosters so mid-round RB/LB/S runs
+# don't fire spurious trade signals.
+PREMIUM_TRADE_POSITIONS = {"QB", "EDGE", "OT", "CB", "WR", "IDL", "DL"}
 
 def compute_dynamic_trade_boost(
     current_pick: dict,
@@ -278,66 +284,124 @@ def compute_dynamic_trade_boost(
     taken_names: set,
     pros: pd.DataFrame,
     top3_needs: dict,
+    team_profiles: dict | None = None,
 ) -> float:
-    """Return a multiplicative boost on the current pick's trade-down
-    probability based on board state. >1.0 means the current pick is more
-    likely to be traded than baseline. Returns 1.0 when no driver fires."""
-    boost = 1.0
+    """Return a multiplicative boost on the current pick's trade probability
+    based on board state. >1.0 = more likely to trade than baseline.
 
-    # Driver 1: QB cascade. If QB-needy teams pick in the next N slots
-    # AND there are fewer quality QBs than demand, current pick (if owned
-    # by a non-QB-needy team) becomes a trade-down target for a QB-needy
-    # team leapfrogging up.
+    Encodes the 6 actual drivers that cause R1 trades (2021-2025 empirical):
+      1. QB urgency — the dominant driver. When a QB is still on the board
+         and QB-needy teams lurk behind, trades fire nearly every time.
+      2. Tier exhaustion — "last elite player in a tier" panic at premium
+         positions (OT, EDGE, WR, CB). Non-premium positions do NOT trigger.
+      3. Leapfrog — adjacent teams with the same positional need cause a
+         further-back team to jump BOTH to block them.
+      4. 5th-year option grab — picks 28-32 attract trade-ups for premium
+         prospects (QB, EDGE, OT) specifically for the 5YO control.
+      5. Win-now aggression — contending teams value future picks less and
+         trade up more aggressively.
+      6. Non-premium suppression — R1 trade-ups do NOT fire for RB, LB, S,
+         TE (explicit: these positions are empirically absent as trigger
+         positions in 2021-2025 R1 trade-up target data).
+    """
+    boost = 1.0
     current_team = current_pick.get("team")
     current_needs = top3_needs.get(current_team, [])
-    if "QB" not in current_needs:
-        # Count QB-needy teams in next QB_CASCADE_WINDOW picks
+    pick_num = int(current_pick.get("pick_number", 0))
+
+    # ------- DRIVER 1: QB urgency (the dominant trade-up cause) ---------
+    # Fires when: (a) an elite QB is available, (b) at least one QB-needy
+    # team is within reach behind the current pick, (c) current team does
+    # NOT need a QB (so they're the trade-down seller).
+    avail_qbs = ((pros["position"] == "QB")
+                 & (pros["rank"] <= 50)
+                 & (~pros["player"].isin(taken_names)))
+    n_avail_qbs = int(avail_qbs.sum())
+    if n_avail_qbs > 0 and "QB" not in current_needs:
         qb_needy_count = sum(
             1 for p in remaining_picks[:QB_CASCADE_WINDOW]
             if "QB" in top3_needs.get(p.get("team", ""), [])
         )
-        if qb_needy_count >= 1:
-            # Count available QBs with reasonable consensus rank
-            avail_qbs = int(((pros["position"] == "QB") & (pros["rank"] <= 50)
-                             & (~pros["player"].isin(taken_names))).sum())
-            if qb_needy_count > avail_qbs:
-                # Supply < demand → strong trade-up pressure on downstream QB teams
-                boost *= 1.8
+        if qb_needy_count > 0:
+            # Baseline QB-cascade boost — rises with demand/supply imbalance.
+            if qb_needy_count >= n_avail_qbs:
+                # Demand meets/exceeds supply — the user's canonical "every
+                # time" scenario. 2.5x is aggressive on purpose.
+                boost *= 2.50
+            elif qb_needy_count >= 1:
+                # Even 1 QB-needy team behind elevates probability — the
+                # back team wants to lock the QB in before a competitor
+                # upstream of them trades up first.
+                boost *= 1.60
+            # Extra boost if an elite QB has ALREADY slid past his ADP by
+            # more than 5 picks — this is the "QB falling" scenario that
+            # triggers a scramble from behind.
+            sliding_qbs = avail_qbs & (pros["rank"] < pick_num - 5)
+            if sliding_qbs.any():
+                boost *= 1.40
 
-    # Driver 2: tier exhaustion at premium positions. If the "last of a
-    # tier" is still on board, and multiple downstream teams need that
-    # position, current pick becomes valuable trade-back real estate.
+    # ------- DRIVER 2: Tier exhaustion (premium positions only) ---------
+    # "Last of the tier" panic fires only at premium positions. Non-premium
+    # positions (RB/LB/S/TE) do NOT trigger tier boosts — teams don't give
+    # up picks to lock in the 3rd-best safety.
     for pos, tier_n in TIER_SIZES.items():
-        # How many at this position have been taken so far?
+        if pos not in PREMIUM_TRADE_POSITIONS:
+            continue
         taken_at_pos = sum(
             1 for name in taken_names
-            if (pros.loc[pros["player"] == name, "position"].iloc[0]
-                if not pros[pros["player"] == name].empty else "") == pos
+            if not pros[pros["player"] == name].empty
+            and pros.loc[pros["player"] == name, "position"].iloc[0] == pos
         )
         if taken_at_pos >= tier_n - 1:
-            # Tier nearly exhausted. Count downstream need.
             pos_needy_behind = sum(
                 1 for p in remaining_picks[:LEAPFROG_WINDOW + 2]
                 if pos in top3_needs.get(p.get("team", ""), [])
             )
             if pos_needy_behind >= 2 and pos not in current_needs:
-                boost *= 1.35
-                break   # one tier-boost at a time
+                boost *= 1.50   # up from 1.35 — tier panic is strong
+                break
 
-    # Driver 3: leapfrog. If current team's top-available position matches
-    # the VERY NEXT pick holder's need, there's pressure (for a different
-    # partner further downstream) to leapfrog. This elevates the overall
-    # trade-rate at the current slot.
+    # ------- DRIVER 3: Leapfrog (late-R1 is tactical blocking) ----------
+    # Two adjacent teams with matching positional need → a team 3-5 picks
+    # behind jumps BOTH. The boost is stronger at picks 20+ where late-R1
+    # blocking behavior is empirically more common (2021-2025: 42% of
+    # picks 21-32 were traded vs 25% of picks 1-5).
     if remaining_picks:
         next_pick = remaining_picks[0]
         next_needs = top3_needs.get(next_pick.get("team", ""), [])
-        # Pick what the CURRENT team would take — use their top unfilled need
         for need_pos in current_needs:
-            if need_pos in next_needs:
-                # Both teams want same position → incentive for team further
-                # down to jump BOTH. Mild boost.
-                boost *= 1.15
+            if need_pos in next_needs and need_pos in PREMIUM_TRADE_POSITIONS:
+                # Late R1 blocking is harder. Picks 1-19: mild boost.
+                # Picks 20+: stronger because 5YO control + blocking collide.
+                boost *= 1.40 if pick_num >= 20 else 1.15
                 break
+
+    # ------- DRIVER 4: 5th-year option grab (picks 28-32) ---------------
+    # Teams without an R1 pick trade up into 28-32 for premium prospects
+    # specifically to capture the 5th-year option. Fires when: current
+    # pick is 28-32, a premium-position prospect is still available at
+    # reasonable ADP, and current team doesn't desperately need that pos.
+    if 28 <= pick_num <= 32:
+        premium_avail = ((pros["position"].isin(PREMIUM_TRADE_POSITIONS))
+                         & (pros["rank"] <= pick_num + 5)
+                         & (~pros["player"].isin(taken_names)))
+        if premium_avail.any():
+            # Mild boost — 5YO is a secondary driver but consistent. Only
+            # fires once (already gated by pick range).
+            boost *= 1.25
+
+    # ------- DRIVER 5: Win-now aggression -------------------------------
+    # Contending teams (high win_pct, high win_now_pressure) value future
+    # picks less and trade up more aggressively. Applied to the CURRENT
+    # team's willingness to move — not the trade-up seller. Subtle: we
+    # nudge boost UP when the team would be a trade-UP buyer, i.e., when
+    # they're a contender with a premium need on the board.
+    if team_profiles is not None:
+        prof = team_profiles.get(current_team) or {}
+        win_now = float(prof.get("win_now_pressure") or 0)
+        if win_now >= 0.7 and any(n in PREMIUM_TRADE_POSITIONS for n in current_needs):
+            # Contending team with premium need: ~15% more aggressive.
+            boost *= 1.15
 
     return boost
 
@@ -967,19 +1031,20 @@ def determine_trades(rng: np.random.Generator) -> dict:
     trades: dict = {}
 
     # Cowboys trade-up — calibrated against April 2026 analyst consensus
-    # (20 mocks, 6 tier-1):
-    #   A) 30%: DAL -> CLE (pick 6). Matches 6/20 mocks (tier-1 credible).
-    #   B)  8%: DAL -> TEN (pick 4). Speculative; no direct mock support
-    #            but plausible alt scenario if CLE demands too much.
-    #   C) 62%: no DAL trade.
+    # (20 mocks, 6 tier-1) AND historical R1 trade rate (avg ~5 trades/R1
+    # in 2021-2025). Analysts undercount trades because they mock a static
+    # board; real drafts average 5 R1 trades.
+    #   A) 35%: DAL -> CLE (pick 6). Slight bump from 30% to hit history.
+    #   B) 10%: DAL -> TEN (pick 4). Slight bump for same reason.
+    #   C) 55%: no DAL trade.
     r = rng.random()
-    if r < 0.30:
+    if r < 0.35:
         trades[6] = "DAL"
         trades[12] = "CLE"
         trades[20] = "CLE"
         trades["DAL_traded"] = True
         trades["DAL_trade_scenario"] = "A"
-    elif r < 0.38:
+    elif r < 0.45:
         trades[4] = "DAL"
         trades[12] = "TEN"
         trades["DAL_traded"] = True
@@ -1397,7 +1462,20 @@ def compute_base_scores(prospects: pd.DataFrame, pick: dict,
                     & (visit_flag_series == 1))
     gap_threshold = LATE_PICK_REACH_THRESHOLD if pick_num >= 21 else REACH_GAP_THRESHOLD
     reach_mask = ((pick_num - cons) < -gap_threshold) & ~premium_need
-    score = score.where(~reach_mask, score * 0.5)
+    # Scaled reach penalty — harsher the farther past threshold. Previous
+    # flat 0.5 allowed 15+ slot reaches too often (Eli Stowers TE #51 going
+    # at pick 31). Tighter formula: penalty grows with reach magnitude.
+    reach_distance = (-(pick_num - cons) - gap_threshold).clip(lower=0)
+    reach_multiplier = (0.55 - 0.035 * reach_distance).clip(lower=0.10)
+    score = score.where(~reach_mask, score * reach_multiplier)
+
+    # EXTRA HARD CAP on non-premium reaches. Even with a dire team need,
+    # analysts rarely put a LB/S/TE/RB/iOL 15+ slots ahead of ADP in R1.
+    # Expanded beyond NON_PREMIUM_RAW to include LB and S which empirically
+    # never go 15+ spots ahead of ADP in 2021-2025 R1 data.
+    NON_REACH_POSITIONS = NON_PREMIUM_RAW | {"LB", "S", "FS", "SS"}
+    non_premium_reach = ((cons - pick_num) > 15) & raw_pos.isin(NON_REACH_POSITIONS) & ~premium_need
+    score = score.where(~non_premium_reach, score * 0.15)
 
     # NEW: scaled slippage boost. A top-15 consensus prospect available
     # past their expected slot gets a multiplicative boost proportional to
@@ -1724,6 +1802,8 @@ def simulate_one(pros: pd.DataFrame, picks_template: list[dict],
                 taken_names=taken_names,
                 pros=local,
                 top3_needs=top3_needs,
+                team_profiles={t: get_team_profile(t)
+                               for t in {pick["team"], *[p["team"] for p in remaining[:8]]}},
             )
             effective_trade_rate *= dynamic_boost
 
