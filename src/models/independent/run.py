@@ -349,6 +349,7 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
                         "fit_score": round(p["fit_score"], 3),
                         "trade_down_p_structural": p["trade_down_p_structural"],
                     })
+                    rs, top_factors = _build_reasoning(p, prob)
                     reasoning["picks"][str(slot)] = {
                         "team": p["team"],
                         "player": player,
@@ -357,6 +358,8 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
                         "independent_grade": round(p["independent_grade"], 2),
                         "probability": prob,
                         "trade_down_p_structural": p["trade_down_p_structural"],
+                        "reasoning_summary": rs,
+                        "top_factors": top_factors,
                     }
                     break
             else:
@@ -370,6 +373,104 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
 
     reason_path = ROOT / cfg["outputs"]["reasoning_json"]
     reason_path.write_text(json.dumps(reasoning, indent=2), encoding="utf-8")
+
+
+def _build_reasoning(pick: dict, prob: float) -> tuple[str, list[dict]]:
+    """Synthesize a human-readable reasoning summary + top factors from
+    the team profile + pick data. Called during MC aggregation so the
+    frontend has a proper 'Why this pick?' explanation."""
+    team_code = pick.get("team")
+    player = pick.get("player")
+    position = pick.get("position") or ""
+    fit_score = pick.get("fit_score", 0) or 0
+    indep_grade = pick.get("independent_grade", 999) or 999
+
+    # Load team profile for context
+    try:
+        agents_path = ROOT / "data/features/team_agents_2026.json"
+        agents = json.loads(agents_path.read_text(encoding="utf-8")) if agents_path.exists() else {}
+        team = agents.get(team_code, {}) or {}
+    except Exception:
+        team = {}
+
+    needs = team.get("roster_needs", {}) or {}
+    need_weight = float(needs.get(position, 0.0))
+    qb_urg = float(team.get("qb_urgency", 0.0) or 0.0)
+    scheme = (team.get("scheme") or {}).get("type") or (team.get("scheme") or {}).get("base") or ""
+    hc_tree = (team.get("coaching") or {}).get("hc_tree") or ""
+    cap_tier = (team.get("cap_context") or {}).get("cap_tier") or team.get("cap_tier")
+    predictability = team.get("predictability") or ""
+
+    # Factor contributions — ordered, each with approximate weight
+    factors: list[dict] = []
+    if need_weight >= 4:
+        factors.append({"label": f"Critical need at {position} (weight {need_weight:.1f})", "weight": need_weight / 5})
+    elif need_weight >= 2.5:
+        factors.append({"label": f"Roster need at {position} (weight {need_weight:.1f})", "weight": need_weight / 5})
+    elif need_weight >= 1:
+        factors.append({"label": f"Moderate interest at {position}", "weight": need_weight / 5})
+
+    if position == "QB" and qb_urg >= 0.8:
+        factors.append({"label": "QB urgency high — team rebuilding at the position", "weight": qb_urg})
+
+    # Board-value signal
+    if indep_grade < 20:
+        factors.append({"label": f"Top-of-board talent (independent grade {indep_grade:.1f})", "weight": 0.9})
+    elif indep_grade < 50:
+        factors.append({"label": f"Strong board value at this slot (grade {indep_grade:.1f})", "weight": 0.7})
+
+    if fit_score >= 2.5:
+        factors.append({"label": f"Elite team-fit score ({fit_score:.2f})", "weight": min(fit_score / 3, 1)})
+    elif fit_score >= 1.8:
+        factors.append({"label": f"Strong team-fit score ({fit_score:.2f})", "weight": fit_score / 3})
+
+    if scheme:
+        factors.append({"label": f"Aligns with {scheme} scheme", "weight": 0.5})
+    if hc_tree and hc_tree not in ("None", ""):
+        factors.append({"label": f"Fits {hc_tree}-tree coaching tendencies", "weight": 0.4})
+
+    if prob >= 0.8:
+        factors.append({"label": f"Dominant pick across sims ({int(prob*100)}%)", "weight": prob})
+    elif prob < 0.4:
+        factors.append({"label": f"Close call ({int(prob*100)}% modal vs competing paths)", "weight": 0.3})
+
+    # Narrative summary — 1-2 sentences
+    parts: list[str] = []
+    if need_weight >= 4:
+        parts.append(f"{team_code} has a critical {position} need (weight {need_weight:.1f})")
+    elif need_weight >= 2.5:
+        parts.append(f"{team_code} has a real {position} need here")
+    elif indep_grade < 20:
+        parts.append(f"{team_code} takes the board's top {position} on pure value")
+    else:
+        parts.append(f"{team_code} addresses {position} at this slot")
+
+    if scheme or hc_tree:
+        scheme_bit = scheme or f"{hc_tree} tree"
+        parts.append(f"{player}'s profile fits the {scheme_bit} scheme")
+
+    if prob >= 0.8:
+        parts.append(f"the pick is a near-lock across {int(prob*100)}% of simulations")
+    elif prob >= 0.5:
+        parts.append(f"the pick carries in {int(prob*100)}% of sims")
+    else:
+        parts.append(f"it's a {int(prob*100)}% modal outcome with real alternate paths")
+
+    # Build into readable summary (preserve case for names/abbrs)
+    summary = "; ".join(parts)
+    if summary:
+        summary = summary[0].upper() + summary[1:]
+    summary = summary.rstrip(".") + "."
+    if cap_tier:
+        summary += f" Cap posture: {cap_tier}."
+    if predictability and predictability.lower() != "medium":
+        summary += f" Predictability: {predictability.lower()}."
+
+    # Top 4 factors by weight
+    factors.sort(key=lambda f: -float(f.get("weight", 0)))
+    top_factors = factors[:6]
+
+    return summary, top_factors
 
 
 def main(argv: list[str] | None = None) -> int:
