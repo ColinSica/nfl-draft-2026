@@ -1,70 +1,68 @@
 player,position,school,independent_grade,pick_slot,modal_round,probability,most_likely_team,n_r1_landings,n_any_landings,mean_landing_pick,variance_landing_pick
-Fernando Mendoza,QB,Indiana,-19.11,1,1,0.71,LV,196,196,4.13,27.2745
-David Bailey,EDGE,Texas Tech,-12.62,2,1,0.81,NYJ,200,200,2.21,0.2059
-Rueben Bain,EDGE,Miami (FL),-1.25,3,1,0.76,ARI,200,200,5.87,34.1531
-Carnell Tate,WR,Ohio State,-3.15,4,1,0.655,TEN,200,200,5.47,5.0394
-Olaivavega Ioane,IOL,Penn State,0.55,5,1,0.945,NYG,200,200,7.88,32.6594
-Spencer Fano,OT,Utah,1.1,6,1,0.87,CLE,200,200,6.49,8.8299
-Kenyon Sadiq,TE,Oregon,5.02,7,1,0.965,WAS,200,200,7.14,3.314
-Jordyn Tyson,WR,Arizona State,26.05,8,1,0.655,NO,200,200,11.43,28.8144
-Logan Jones,IOL,Iowa,99.98,10,1,0.005,NYG,1,1,10.0,0.0
-Makai Lemon,WR,USC,4.25,11,1,0.43,MIA,200,200,9.95,13.732
-Ty Simpson,QB,Alabama,19.29,11,1,0.45,PIT,200,200,8.46,22.0284
-Keldric Faulk,EDGE,Auburn,32.43,12,1,0.535,NYG,200,200,10.09,6.6119
-Kayden McDonald,DL,Ohio State,55.04,12,1,0.005,DAL,3,3,16.33,97.5556
-T.J. Parker,EDGE,Clemson,32.43,12,1,0.425,DAL,200,200,10.36,16.389
-Cole Payton,QB,North Dakota State,103.01,13,1,0.15,PIT,30,30,13.8,1.76
-Francis Mauigoa,OT,Miami (FL),-11.68,14,1,0.58,SF,200,200,16.57,35.7558
-Jalon Kilgore,S,South Carolina,15.55,14,1,0.63,BAL,192,192,22.29,32.4462
-Carson Beck,QB,Miami (FL),104.38,14,1,0.05,PIT,10,10,13.6,0.24
-Arvell Reese,LB,Ohio State,-15.98,15,1,0.55,TB,200,200,16.43,16.2358
-Jeremiyah Love,RB,Notre Dame,-17.08,16,1,0.91,NYJ,200,200,14.48,33.2496
-Akheem Mesidor,EDGE,Miami (FL),19.78,17,1,0.545,DET,200,200,17.68,23.2376
-Avieon Terrell,CB,Clemson,35.62,18,1,0.51,MIN,173,173,22.13,20.9939
-Mansoor Delane,CB,LSU,-0.71,18,1,0.365,KC,200,200,16.68,35.9694
-Keyron Crawford,EDGE,Auburn,73.31,19,1,0.03,CAR,7,7,20.57,14.8163
-Zion Young,EDGE,Missouri,68.51,19,1,0.29,CAR,92,92,21.84,20.6582
-Romello Height,EDGE,Texas Tech,77.08,19,1,0.005,CAR,1,1,19.0,0.0
-Cashius Howell,EDGE,Texas A&M,48.84,20,1,0.645,DAL,185,185,19.25,12.3625
-Joshua Josephs,EDGE,Tennessee,76.38,20,1,0.005,DAL,2,2,23.5,12.25
-KC Concepcion,WR,Texas A&M,49.31,22,1,0.46,LAC,165,165,23.95,29.0819
-Skyler Bell,WR,UConn,72.64,22,1,0.02,LAC,6,6,22.67,3.8889
-Bryce Lance,WR,North Dakota State,81.32,22,1,0.025,LAC,5,5,22.0,0.0
-Omar Cooper Jr.,WR,Indiana,47.54,22,1,0.53,LAR,184,184,20.33,18.3847
-Dillon Thieneman,S,Oregon,1.92,23,1,0.35,PHI,200,200,21.62,17.3444
-Caleb Downs,S,Ohio State,-7.74,23,1,0.685,MIA,200,200,18.79,30.4588
-Blake Miller,OT,Clemson,43.0,24,1,0.405,CLE,119,119,26.13,26.4693
-Gracen Halton,DL,Oklahoma,103.71,25,1,0.005,CHI,1,1,25.0,0.0
-Zakee Wheatley,S,Penn State,76.39,25,1,0.01,CHI,3,3,24.33,0.8889
-Caleb Banks,DL,Florida,50.18,26,1,0.22,BUF,89,89,25.35,16.5641
-Christen Miller,DL,Georgia,56.02,26,1,0.01,BUF,2,2,26.0,0.0
-Peter Woods,DL,Clemson,40.69,26,1,0.275,BUF,145,145,24.5,12.319
-Malachi Lawrence,EDGE,UCF,57.1,27,1,0.055,BAL,31,31,24.19,23.769
-Sonny Styles,LB,Ohio State,-8.68,28,1,0.255,HOU,159,159,25.16,23.0802
-Colton Hood,CB,Tennessee,70.42,29,1,0.03,KC,6,6,29.0,0.0
-Jermod McCoy,CB,Tennessee,15.89,29,1,0.285,KC,128,128,27.01,13.789
-Chandler Rivers,CB,Duke,102.68,29,1,0.125,KC,25,25,28.2,15.36
-Daylen Everette,CB,Georgia,59.43,29,1,0.12,KC,38,38,28.47,4.2493
-Chris Johnson,CB,San Diego State,87.53,29,1,0.015,KC,3,3,29.0,0.0
-Kadyn Proctor,OT,Alabama,18.12,29,1,0.44,KC,200,200,23.66,35.716
-Treydan Stukes,CB,Arizona,93.78,29,1,0.005,KC,1,1,29.0,0.0
-Emmanuel McNeil-Warren,S,Toledo,50.69,30,1,0.085,MIA,26,26,26.31,17.5207
-C.J. Allen,LB,Georgia,59.11,30,1,0.04,TB,10,10,29.1,1.89
-Tacario Davis,CB,Washington,65.99,30,1,0.01,MIN,2,2,28.5,2.25
-Dani Dennis-Sutton,EDGE,Penn State,72.14,30,1,0.13,DET,34,34,28.09,9.4334
-Chris McClellan,DL,Missouri,60.88,30,1,0.01,PHI,3,3,26.67,22.2222
+Fernando Mendoza,QB,Indiana,-19.11,1,1,0.75,LV,192,192,3.28,19.9105
+David Bailey,EDGE,Texas Tech,-12.62,2,1,0.83,NYJ,200,200,2.23,0.9698
+Rueben Bain,EDGE,Miami (FL),-1.25,3,1,0.725,ARI,200,200,6.32,34.7776
+Carnell Tate,WR,Ohio State,-3.15,4,1,0.69,TEN,200,200,5.37,5.1218
+Olaivavega Ioane,IOL,Penn State,0.55,5,1,0.895,NYG,196,196,8.47,45.7391
+Spencer Fano,OT,Utah,1.1,6,1,0.87,CLE,200,200,6.01,3.8399
+Kenyon Sadiq,TE,Oregon,5.02,7,1,0.98,WAS,200,200,6.93,0.3908
+Jordyn Tyson,WR,Arizona State,26.05,8,1,0.67,NO,200,200,11.63,33.2331
+Makai Lemon,WR,USC,4.25,9,1,0.325,MIA,200,200,10.82,19.4576
+Ty Simpson,QB,Alabama,19.29,11,1,0.585,PIT,200,200,8.87,16.5668
+Keldric Faulk,EDGE,Auburn,32.43,12,1,0.54,NYG,200,200,10.06,6.6708
+T.J. Parker,EDGE,Clemson,32.43,12,1,0.435,DAL,200,200,10.67,16.4611
+Carson Beck,QB,Miami (FL),104.38,13,1,0.025,PIT,5,5,13.4,0.24
+Cole Payton,QB,North Dakota State,103.01,13,1,0.105,PIT,21,21,13.95,3.7596
+Jalon Kilgore,S,South Carolina,15.55,14,1,0.56,BAL,194,194,22.03,38.3702
+Arvell Reese,LB,Ohio State,-15.98,15,1,0.655,TB,200,200,16.14,13.074
+Jeremiyah Love,RB,Notre Dame,-17.08,16,1,0.875,NYJ,200,200,14.42,32.9636
+Akheem Mesidor,EDGE,Miami (FL),19.78,17,1,0.58,DET,200,200,16.21,27.4688
+Mansoor Delane,CB,LSU,-0.71,18,1,0.325,KC,200,200,17.26,36.2724
+Avieon Terrell,CB,Clemson,35.62,18,1,0.495,MIN,171,171,22.05,19.5534
+Keyron Crawford,EDGE,Auburn,73.31,19,1,0.045,CAR,9,9,19.0,0.0
+Zion Young,EDGE,Missouri,68.51,19,1,0.315,CAR,88,88,20.8,15.0263
+Cashius Howell,EDGE,Texas A&M,48.84,20,1,0.665,DAL,189,189,19.78,14.8924
+KC Concepcion,WR,Texas A&M,49.31,22,1,0.435,LAC,163,163,25.07,17.5967
+Omar Cooper Jr.,WR,Indiana,47.54,22,1,0.43,LAR,172,172,20.38,20.0737
+Dillon Thieneman,S,Oregon,1.92,23,1,0.38,PHI,200,200,22.17,13.4611
+Caleb Downs,S,Ohio State,-7.74,23,1,0.665,MIA,200,200,19.24,25.2524
+Francis Mauigoa,OT,Miami (FL),-11.68,24,1,0.5,SF,199,199,16.44,41.9552
+Kadyn Proctor,OT,Alabama,18.12,24,1,0.465,KC,199,199,22.43,41.5311
+Blake Miller,OT,Clemson,43.0,24,1,0.4,CLE,121,121,26.32,27.0283
+Peter Woods,DL,Clemson,40.69,26,1,0.24,BUF,147,147,24.22,11.6805
+Jermod McCoy,CB,Tennessee,15.89,26,1,0.29,KC,134,134,27.21,11.4787
+Chris McClellan,DL,Missouri,60.88,26,1,0.01,BUF,6,6,25.67,8.8889
+Christen Miller,DL,Georgia,56.02,26,1,0.01,BUF,3,3,19.67,80.2222
+Caleb Banks,DL,Florida,50.18,26,1,0.165,BUF,78,78,24.86,14.0699
+Kayden McDonald,DL,Ohio State,55.04,27,1,0.065,MIA,13,13,25.85,23.5148
+Skyler Bell,WR,UConn,72.64,27,1,0.02,LAR,7,7,25.57,5.102
+Sonny Styles,LB,Ohio State,-8.68,28,1,0.19,HOU,143,143,23.9,25.7442
+Max Klare,TE,Ohio State,84.01,29,1,0.005,KC,1,1,29.0,0.0
+Daylen Everette,CB,Georgia,59.43,29,1,0.135,KC,36,36,28.69,1.2677
+Colton Hood,CB,Tennessee,70.42,29,1,0.04,KC,8,8,29.0,0.0
+Chandler Rivers,CB,Duke,102.68,29,1,0.155,KC,31,31,28.1,14.1519
+Chris Johnson,CB,San Diego State,87.53,29,1,0.005,KC,1,1,29.0,0.0
+Jaishawn Barham,LB,Michigan,72.31,30,1,0.005,TB,1,1,30.0,0.0
+Devin Moore,CB,Florida,65.55,30,1,0.03,BAL,10,10,28.9,2.89
+Zakee Wheatley,S,Penn State,76.39,30,1,0.005,CHI,1,1,30.0,0.0
+Joshua Josephs,EDGE,Tennessee,76.38,30,1,0.005,DET,1,1,30.0,0.0
+Emmanuel McNeil-Warren,S,Toledo,50.69,30,1,0.145,MIA,40,40,27.12,12.9094
+C.J. Allen,LB,Georgia,59.11,30,1,0.05,TB,12,12,28.75,2.1875
+Dani Dennis-Sutton,EDGE,Penn State,72.14,30,1,0.1,DET,32,32,27.5,16.0625
+Malachi Lawrence,EDGE,UCF,57.1,30,1,0.08,CAR,38,38,24.39,30.5547
+Anthony Hill Jr.,LB,Texas,57.1,30,1,0.03,TB,7,7,27.86,9.551
 Kamari Ramsey,S,USC,100.33,30,1,0.005,BAL,1,1,30.0,0.0
-Anthony Hill Jr.,LB,Texas,57.1,30,1,0.055,TB,11,11,28.91,2.0826
-Max Iheanachor,OT,Arizona State,38.65,31,1,0.27,NE,115,115,30.3,9.5682
-Chase Bisontis,IOL,Texas A&M,66.78,31,1,0.59,NE,197,197,27.74,45.4507
-Parker Brailsford,IOL,Alabama,93.2,31,1,0.015,NE,3,3,31.0,0.0
-Connor Lew,IOL,Auburn,96.45,31,1,0.06,NE,23,23,29.57,2.2457
-Emmett Johnson,RB,Nebraska,81.31,32,1,0.01,SEA,2,2,32.0,0.0
-Jonah Coleman,RB,Washington,116.88,32,1,0.01,SEA,2,2,32.0,0.0
-Jadarian Price,RB,Notre Dame,53.79,32,1,0.08,SEA,16,16,32.0,0.0
+Parker Brailsford,IOL,Alabama,93.2,31,1,0.01,NE,2,2,31.0,0.0
+Chase Bisontis,IOL,Texas A&M,66.78,31,1,0.535,NE,193,193,26.3,70.6869
+Max Iheanachor,OT,Arizona State,38.65,31,1,0.3,NE,118,118,30.44,8.9753
+Connor Lew,IOL,Auburn,96.45,31,1,0.085,NE,30,30,29.7,2.21
+Caleb Lomu,OT,Utah,38.46,32,1,0.255,SF,138,138,23.75,57.1748
+Jadarian Price,RB,Notre Dame,53.79,32,1,0.105,SEA,21,21,32.0,0.0
 Mike Washington Jr.,RB,Arkansas,103.36,32,1,0.065,SEA,13,13,32.0,0.0
 Emmanuel Pregnon,IOL,Oregon,73.55,32,1,0.01,SEA,2,2,32.0,0.0
-Zachariah Branch,WR,Georgia,84.42,32,1,0.005,SEA,1,1,32.0,0.0
-Trey Zuhn III,OT,Texas A&M,71.38,32,1,0.01,SEA,2,2,32.0,0.0
-Germie Bernard,WR,Alabama,76.43,32,1,0.01,SEA,2,2,32.0,0.0
-Caleb Lomu,OT,Utah,38.46,32,1,0.22,SEA,133,133,25.07,48.9353
+Germie Bernard,WR,Alabama,76.43,32,1,0.01,SEA,3,3,28.67,22.2222
+Emmett Johnson,RB,Nebraska,81.31,32,1,0.025,SEA,5,5,32.0,0.0
+Jonah Coleman,RB,Washington,116.88,32,1,0.005,SEA,1,1,32.0,0.0
+Trey Zuhn III,OT,Texas A&M,71.38,32,1,0.005,SEA,1,1,32.0,0.0
+Monroe Freeling,OT,Georgia,89.54,32,1,0.01,SEA,2,2,32.0,0.0
+Keylan Rutledge,IOL,Georgia Tech,86.96,32,1,0.005,SEA,1,1,32.0,0.0

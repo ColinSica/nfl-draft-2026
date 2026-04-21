@@ -1,0 +1,880 @@
+{
+  "date_generated": "2026-04-21",
+  "draft_date": "2026-04-23",
+  "sources_scraped": [
+    "espn.com",
+    "nfl.com",
+    "cbssports.com",
+    "pff.com",
+    "bleacherreport.com",
+    "draftcountdown.com",
+    "giants.com",
+    "raiders.com",
+    "commanders.com",
+    "chargers.com",
+    "clevelandbrowns.com",
+    "patriots.com",
+    "panthers.com",
+    "denverbroncos.com",
+    "buccaneers.com",
+    "baltimoreravens.com",
+    "detroitlions.com",
+    "buffalobills.com",
+    "colts.com",
+    "miamidolphins.com",
+    "seahawks.com",
+    "philadelphiaeagles.com",
+    "jaguars.com",
+    "azcardinals.com",
+    "atlantafalcons.com",
+    "tennesseetitans.com",
+    "neworleanssaints.com",
+    "dallascowboys.com",
+    "steelernation.com",
+    "arrowheadpride.com",
+    "packers.com",
+    "atozsports.com",
+    "nbcsports.com",
+    "si.com",
+    "nflmockdraftdatabase.com",
+    "theringer.com",
+    "silverandblackpride.com",
+    "prospect-radar.com"
+  ],
+  "pressers": [
+    {
+      "team": "LV",
+      "gm": "John Spytek",
+      "hc": "Pete Carroll",
+      "date": "2026-04-14",
+      "key_quotes": [
+        "We've gotten a few calls, and those teams know where they stand.",
+        "If there's a player that stands out that we feel it's not worth losing, it's not worth even picking up the phone, then we'll just make the pick. But if it's a player that we're not as excited about, or there's a group of players that we would love to pick from, and we can get value for that, then certainly open to listening.",
+        "Ultimately, this is a meritocracy, and the best guy will play."
+      ],
+      "positional_priorities": ["QB"],
+      "trade_posture": "Staying put at No. 1 very likely; few calls received; value threshold extremely high to move",
+      "player_interest_signals": ["Fernando Mendoza (implied — QB room framing with Cousins/O'Connell)"],
+      "source_url": "https://www.espn.com/nfl/story/_/id/48488757/raiders-spytek-says-teams-inquired-no-1-draft-pick"
+    },
+    {
+      "team": "NYJ",
+      "gm": "Darren Mougey",
+      "hc": "Aaron Glenn",
+      "date": "2026-04-20",
+      "key_quotes": [
+        "We're always open. We'll go through this draft process, like I said, and really build the board.",
+        "The calls typically don't happen until [the] middle [of the week], as it gets closer to the draft, but we'll always be open and always pick up the phone."
+      ],
+      "positional_priorities": ["EDGE/LB", "OL"],
+      "trade_posture": "Open to both move up or back from No. 2; listening posture",
+      "player_interest_signals": ["Arvell Reese (consensus projection)"],
+      "source_url": "https://www.newyorkjets.com/news/nfl-draft-trade-winds-could-be-swirling-for-the-jets-darren-mougey-04-20-2026"
+    },
+    {
+      "team": "ARI",
+      "gm": "Monti Ossenfort",
+      "hc": "Mike LaFleur",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "I never think it's a good idea to go into a draft and draft for need. I just don't think that's a good philosophy overall.",
+        "We're not really naming anybody, and we'll see how that room looks by the time we get [to] August."
+      ],
+      "positional_priorities": ["EDGE", "Trenches", "QB (Day 2, Ty Simpson)"],
+      "trade_posture": "Openly exploring trade-down at No. 3 (engaged with KC); per PHNX, no 'serious' offers yet",
+      "player_interest_signals": ["Ty Simpson (repeated hints for Round 2)"],
+      "source_url": "https://gophnx.com/arizona-cardinals-kansas-city-chiefs-have-trade-talks/"
+    },
+    {
+      "team": "TEN",
+      "gm": "Mike Borgonzi",
+      "pof": "Chad Brinker",
+      "hc": "Robert Saleh",
+      "date": "2026-04-17",
+      "key_quotes": [
+        "Patient, disciplined approach to team-building.",
+        "We're in the final stages of preparation."
+      ],
+      "positional_priorities": ["RB", "WR", "OL"],
+      "trade_posture": "Open to trade-down at 4 — BPA oriented",
+      "player_interest_signals": ["Jeremiyah Love (63% consensus)"],
+      "source_url": "https://www.tennesseetitans.com/news/titans-2026-pre-draft-press-conference-transcript"
+    },
+    {
+      "team": "NYG",
+      "gm": "Joe Schoen",
+      "hc": "Brian Daboll",
+      "date": "2026-04-15",
+      "key_quotes": [
+        "We're going to look for the best player regardless of position, and I'm excited about where the roster is right now based on what we did in free agency.",
+        "I've watched a lot of Ohio State defensive film the last couple of months. Those are two of the key players on that defense that we looked at. Certainly guys that we've talked a lot about and think very highly of.",
+        "We've gotten a couple calls of teams sniffing around about potentially coming up."
+      ],
+      "positional_priorities": ["S/LB (Ohio State)", "DL (post-Lawrence trade)"],
+      "trade_posture": "Willing to move back — multiple teams have called about coming up to 5; now owns 2 top-10 picks via Lawrence trade",
+      "player_interest_signals": ["Sonny Styles", "Caleb Downs"],
+      "source_url": "https://www.giants.com/news/joe-schoen-pre-draft-press-conference-general-manager-nfl-2026"
+    },
+    {
+      "team": "CLE",
+      "gm": "Andrew Berry",
+      "hc": "Kevin Stefanski (prior) / Mike Vrabel (2026)",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "We're working through a number of different scenarios at this point.",
+        "It's certainly a possibility — there's always someone realistic to trade up for; the key factor is the acquisition cost.",
+        "[Carnell Tate] could be a trapeze artist with how acrobatic he is; [Jordyn] Tyson is an excellent creator with the ball in his hands.",
+        "Tackles are tackles."
+      ],
+      "positional_priorities": ["WR", "OT", "EDGE"],
+      "trade_posture": "Not ruling out trade-up; two first-rounders (6, 24) gives ammunition",
+      "player_interest_signals": ["Carnell Tate (praise)", "Jordyn Tyson (praise)"],
+      "source_url": "https://www.clevelandbrowns.com/news/andrew-berry-discusses-outlook-on-no-6-pick-and-more-ahead-of-the-2026-nfl-draft"
+    },
+    {
+      "team": "WAS",
+      "gm": "Adam Peters",
+      "hc": "Dan Quinn",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "That's what we wanted to do coming out of free agency: make it so we're not having to pick for need or having to pick, reach for a certain position or player. We feel really good about being able to pick the best player available.",
+        "We do what's best for our team.",
+        "It's hard to understand or figure out where everything's gonna go. You hear something new every day, and nobody's telling the truth."
+      ],
+      "positional_priorities": ["Defense (every level)", "BPA"],
+      "trade_posture": "'More likely than not' staying at No. 7; will NOT trade within NFC East",
+      "player_interest_signals": ["Broad — defense at all three levels"],
+      "source_url": "https://www.commanders.com/news/washington-commanders-pre-draft-press-conference-adam-peters"
+    },
+    {
+      "team": "NO",
+      "gm": "Mickey Loomis",
+      "hc": "Kellen Moore",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "We have flexibility.",
+        "We've been scouting a wider variety of prospects heading into this draft."
+      ],
+      "positional_priorities": ["Secondary", "Trenches", "RB (Moore likes loaded RB room)"],
+      "trade_posture": "Flexibility noted; rebuilding, could move back",
+      "player_interest_signals": ["Mansoor Delane (26% consensus at 8)"],
+      "source_url": "https://www.washingtonpost.com/sports/nfl/2026/04/16/nfl-draft-new-orleans-saints/2829829a-39b5-11f1-90c4-9772c7fabc03_story.html"
+    },
+    {
+      "team": "KC",
+      "gm": "Brett Veach",
+      "hc": "Andy Reid",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "It should be an entertaining night. There'll probably be a lot of trades.",
+        "I think you're going to get a massive run of offensive lineman from 10-25. I think there are numbers there, but once you get to pick 35, those numbers quickly diminish.",
+        "I think our goal is to just make that selection and add a player that is going to be an impact player on our team... I don't want to take a lesser player."
+      ],
+      "positional_priorities": ["EDGE", "iDL", "CB", "WR", "OL"],
+      "trade_posture": "Actively engaged in trade talks (ARI No. 3 rumored); expects many trades",
+      "player_interest_signals": ["OL run 10-25 signals possible OT target; Rueben Bain EDGE consensus fit"],
+      "source_url": "https://atozsports.com/nfl/kansas-city-chiefs-news/chiefs-gm-brett-veach-press-conferece-final-draft-clues-position-strengths-weaknesses-trades-2026-nfl-draft/"
+    },
+    {
+      "team": "CIN",
+      "gm_pp": "Duke Tobin",
+      "hc": "Zac Taylor",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "The opportunity to add a player of Dexter's ability was too good to pass up.",
+        "Dexter fits the vision we have on our defense and will also elevate others around him.",
+        "Excited to turn to the draft and our remaining picks to further enhance our team."
+      ],
+      "positional_priorities": ["CB", "Secondary", "OL"],
+      "trade_posture": "Just traded FOR No. 10 via Dexter Lawrence deal; likely standing pat and picking",
+      "player_interest_signals": ["Jermod McCoy (CB, 9% consensus — lower confidence)"],
+      "source_url": "https://www.bengals.com/news/dexter-lawrence-ii-deal-duke-tobin-steven-radicevic-trey-brown"
+    },
+    {
+      "team": "MIA",
+      "gm": "Jon-Eric Sullivan",
+      "hc": "Mike McDaniel",
+      "date": "2026-04-15",
+      "key_quotes": [
+        "The higher that you take a player, in the first three rounds, you're expecting that guy to be a valuable starter for you.",
+        "[De'Von Achane] is not available for trade.",
+        "We'll be a draft and develop team."
+      ],
+      "positional_priorities": ["DL", "OL", "LB"],
+      "trade_posture": "Much more likely to trade DOWN than up — need volume (11 picks)",
+      "player_interest_signals": ["Francis Mauigoa (consensus at 11)"],
+      "source_url": "https://www.miamidolphins.com/news/takeaways-gm-jon-eric-sullivan-outlines-vision-ahead-of-2026-nfl-draft"
+    },
+    {
+      "team": "DAL",
+      "owner_gm": "Jerry Jones",
+      "hc": "Brian Schottenheimer",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "Absolutely. We'll entertain improving or an in-draft read on what gives us a better chance to get another player, and still have our pick and the red meat of top players.",
+        "When you've got the kind of assets or the kind of ammunition we've got in this draft, you should look at all machinations.",
+        "I've looked at that mirror a lot, about how to go up and down and trade and do those kinds of things."
+      ],
+      "positional_priorities": ["DL", "WR", "LB/S"],
+      "trade_posture": "Very open to trading — two 1st rounders (12 + 20) from Parsons deal",
+      "player_interest_signals": ["Broad; LB/S hinted via Dillon Thieneman consensus"],
+      "source_url": "https://www.nfl.com/news/cowboys-jerry-jones-absolutely-open-to-trading-in-first-round-of-2026-nfl-draft"
+    },
+    {
+      "team": "LAR",
+      "gm": "Les Snead",
+      "hc": "Sean McVay",
+      "date": "2026-04-15",
+      "key_quotes": [
+        "Our macro philosophy is, if we can use free agency to not be desperate in the draft, we more than likely will be better drafters, because we're not reaching, we're not desperate. We're not going in there with a major void, major hole that has to be filled."
+      ],
+      "positional_priorities": ["WR (successor/complement)", "Secondary", "DL"],
+      "trade_posture": "Disciplined BPA; Snead historically active — poised for 1st-round pick for only 2nd time in a decade",
+      "player_interest_signals": ["Makai Lemon (43% consensus WR fit)"],
+      "source_url": "https://www.therams.com/news/top-takeaways-from-gm-les-snead-post-2026-nfl-combine-press-conference-pending-free-agents-addressing-needs-in-free-agency-versus-draft-contract-extensions-restructure-candidates-first-round-picks-2026"
+    },
+    {
+      "team": "BAL",
+      "gm": "Eric DeCosta",
+      "hc": "Jesse Minter",
+      "date": "2026-04-15",
+      "key_quotes": [
+        "Fano can play wherever you want him to play. He can play tackle, he can play guard.",
+        "Vega Ioane — physical, tough. He's probably a guard... prototypes, straight from central casting, of what you want your guards to look like.",
+        "[We] finished the third set of draft meetings... happy with the accomplishments."
+      ],
+      "positional_priorities": ["iOL", "TE", "CB"],
+      "trade_posture": "11 picks — trade flexibility acknowledged",
+      "player_interest_signals": ["Olaivavega Ioane (51% consensus at 14)", "Spencer Fano"],
+      "source_url": "https://www.baltimoreravens.com/news/transcript-pre-draft-press-conference-4-15-26"
+    },
+    {
+      "team": "TB",
+      "gm": "Jason Licht",
+      "hc": "Todd Bowles",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "You can never go wrong with taking the best player and you are going to be happy at some point that you did instead of trying to force a pick.",
+        "We do see that there is a need for help there on the defensive side, for sure.",
+        "Our two biggest needs [are] edge rusher and inside linebacker."
+      ],
+      "positional_priorities": ["EDGE", "ILB"],
+      "trade_posture": "Actively working trade-down scenarios at 15",
+      "player_interest_signals": ["TE strong (Sadiq consensus fit), EDGE/ILB priority"],
+      "source_url": "https://www.buccaneers.com/news/bucs-working-through-first-round-trade-down-scenarios-2026-draft"
+    },
+    {
+      "team": "NE",
+      "evp": "Eliot Wolf",
+      "hc": "Mike Vrabel",
+      "date": "2026-04-13",
+      "key_quotes": [
+        "It's a pretty strong draft on the offensive and defensive line. Secondary, maybe not as much. Receiver and tight end are pretty good in comparison to some other recent years.",
+        "We could complement our room with some speed. We would like to get faster.",
+        "[On Morgan Moses at RT, could be a successor in this class]."
+      ],
+      "positional_priorities": ["OL (both T and G)", "EDGE (speed)", "iDL"],
+      "trade_posture": "Not explicitly signaled; BPA lean",
+      "player_interest_signals": ["Kayden McDonald (NT) — directly linked in reports"],
+      "source_url": "https://www.patriots.com/news/five-takeaways-from-eliot-wolf-s-pre-draft-press-conference"
+    },
+    {
+      "team": "CAR",
+      "gm": "Dan Morgan",
+      "hc": "Dave Canales",
+      "date": "2026-04-15",
+      "key_quotes": [
+        "I think really it's us getting to know guys. If you're going to miss on a guy, you're going to miss because you know what he's about from a personal character standpoint.",
+        "If anything, [free agency] opens up a lot of possibilities. All positions are on the table.",
+        "Ready for all scenarios."
+      ],
+      "positional_priorities": ["EDGE", "WR", "OT"],
+      "trade_posture": "Ready for all scenarios, including trade-back at 19",
+      "player_interest_signals": ["Pass-rusher, WR for Bryce Young, or top OT"],
+      "source_url": "https://www.panthers.com/news/six-takeaways-from-gm-dan-morgan-getting-to-know-prospects-at-a-human-level-wide-receiver"
+    },
+    {
+      "team": "DEN",
+      "gm": "George Paton",
+      "hc": "Sean Payton",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "We've homed in on a zone between picks 45 and 75.",
+        "[Six players we're focused on at 62 — feel good about those].",
+        "[Evan Engram] has a big part to play in 2026."
+      ],
+      "positional_priorities": ["Depth everywhere; no Round 1 pick"],
+      "trade_posture": "All but ruled out trade-up into Round 1 (too costly)",
+      "player_interest_signals": ["None disclosed; 6 players in 45-75 range"],
+      "source_url": "https://www.denverbroncos.com/video/hc-sean-payton-gm-george-paton-address-media-ahead-of-2026-nfl-draft"
+    },
+    {
+      "team": "PHI",
+      "gm": "Howie Roseman",
+      "hc": "Nick Sirianni",
+      "date": "2026-04-14",
+      "key_quotes": [
+        "The best player who may be available may be a position that going into the draft we didn't necessarily want to take.",
+        "Sometimes when I think about those picks and think about the reasons that I miss on those picks, sometimes I even overcompensate.",
+        "[Increasing depth at WR was an offseason priority]."
+      ],
+      "positional_priorities": ["WR depth", "Defensive front", "BPA"],
+      "trade_posture": "Roseman 'plotting to shake up' first round (per Schefter); classic misdirection",
+      "player_interest_signals": ["None explicit; measured/poker face"],
+      "source_url": "https://www.phillyvoice.com/eight-takeaways-howie-roseman-pre-draft-press-conference/"
+    },
+    {
+      "team": "PIT",
+      "gm": "Omar Khan",
+      "hc": "Mike Tomlin",
+      "date": "2026-04-20",
+      "key_quotes": [
+        "Love where we are at. Maybe we have 14 [picks].",
+        "[There's] no news on Aaron Rodgers.",
+        "[Open to picking a player the team did NOT host on a pre-draft visit — breaking trend]."
+      ],
+      "positional_priorities": ["OL", "DL", "QB contingent"],
+      "trade_posture": "Trade-active — 12 picks, could become 10-14 depending on maneuvering",
+      "player_interest_signals": ["Vega Ioane (IOL) per B/R mock"],
+      "source_url": "https://www.steelernation.com/2026/04/20/steelers-omar-khan-critical-message"
+    },
+    {
+      "team": "LAC",
+      "gm": "Joe Hortiz",
+      "hc": "Jim Harbaugh",
+      "date": "2026-04-17",
+      "key_quotes": [
+        "I have made zero calls about Quentin, and I've had zero calls regarding Quentin.",
+        "We're really excited about the wide receiver room.",
+        "We have players coming up that are going to be eating up a lot of that cap room."
+      ],
+      "positional_priorities": ["EDGE (deep class)", "Secondary", "OL"],
+      "trade_posture": "Many options — limited disclosure per reports",
+      "player_interest_signals": ["EDGE emphasis (Brugler draft class fit)"],
+      "source_url": "https://www.espn.com/nfl/story/_/id/48521150/los-angeles-chargers-2026-nfl-draft-press-conference-gm-joe-hortiz-questions"
+    },
+    {
+      "team": "GB",
+      "gm": "Brian Gutekunst",
+      "hc": "Matt LaFleur",
+      "date": "2026-04-17",
+      "key_quotes": [
+        "It's about winning now.",
+        "If there's players who we can sign that give us the opportunity to win now more so than holding out for a compensatory pick in 2027, that's the decision we're going to make.",
+        "The most important thing is our ability to win in 2026."
+      ],
+      "positional_priorities": ["EDGE (post-Parsons)", "CB", "WR"],
+      "trade_posture": "No 2026/2027 Round 1 pick (Parsons trade); first pick at 52 — open to trading up",
+      "player_interest_signals": ["None explicit"],
+      "source_url": "https://www.packers.com/news/pre-draft-picture-changes-up-front-coming-into-focus-for-packers-april-16-2026"
+    },
+    {
+      "team": "SEA",
+      "gm": "John Schneider",
+      "hc": "Mike Macdonald",
+      "date": "2026-04-20",
+      "key_quotes": [
+        "It's no secret with us. We have four picks, so we'll be looking to move back.",
+        "I think there's a lack of depth in this draft.",
+        "We've talked within our division... Everybody in our division we would trade with, and we have good relationships with all three of those teams."
+      ],
+      "positional_priorities": ["RB", "EDGE", "CB"],
+      "trade_posture": "Publicly committed to trading BACK from 32 — premium targeted",
+      "player_interest_signals": ["None explicit"],
+      "source_url": "https://www.seahawks.com/news/no-secret-the-seahawks-want-to-trade-back-other-takeaways-from-monday-s-pre-draft-press-conference"
+    },
+    {
+      "team": "DET",
+      "gm": "Brad Holmes",
+      "hc": "Dan Campbell",
+      "date": "2026-04-13",
+      "key_quotes": [
+        "[On 'eff them picks' mentality for a Super Bowl push] Absolutely, yeah.",
+        "[Draft class is] very similar to the past couple drafts.",
+        "[Drafting 24-25 year-olds raises questions about longevity into second contract]."
+      ],
+      "positional_priorities": ["OT (debated truthfulness)", "EDGE", "OL depth"],
+      "trade_posture": "Willing to be bold/trade up",
+      "player_interest_signals": ["None explicit — smokescreen potential"],
+      "source_url": "https://eu.detroitnews.com/story/sports/nfl/lions/2026/04/13/takeaways-from-detroit-lions-gm-brad-holmes-pre-draft-news-conference/89592225007/"
+    },
+    {
+      "team": "BUF",
+      "gm": "Brandon Beane",
+      "hc": "Joe Brady (assoc.)",
+      "date": "2026-04-20",
+      "key_quotes": [
+        "You probably don't get as many consensus names anywhere near getting to 26.",
+        "There are areas in this draft where you can find players to help your team... incrementally help our roster, whether it's depth, starter, special teams or whatever it may be.",
+        "You know I'll always listen."
+      ],
+      "positional_priorities": ["CB", "EDGE", "WR"],
+      "trade_posture": "Always listening; fewer Round 1 grades this year — could move",
+      "player_interest_signals": ["None"],
+      "source_url": "https://www.buffalobills.com/video/brandon-beane-talks-with-the-media-ahead-of-the-nfl-draft"
+    },
+    {
+      "team": "IND",
+      "gm": "Chris Ballard",
+      "hc": "Shane Steichen",
+      "date": "2026-04-21",
+      "key_quotes": [
+        "The more shots you have at the board, the better.",
+        "[Likes] the depth in this year's class at linebacker, edge rusher, wide receiver, interior offensive line and safety."
+      ],
+      "positional_priorities": ["LB", "EDGE", "WR", "iOL", "S"],
+      "trade_posture": "Expects to be 'active' up or back; no Round 1 pick",
+      "player_interest_signals": ["None; Rounds 3-5 is his sweet spot"],
+      "source_url": "https://www.colts.com/news/chris-ballard-2026-nfl-draft-linebacker-wide-receiver-defensive-end-safety"
+    },
+    {
+      "team": "HOU",
+      "gm": "Nick Caserio",
+      "hc": "DeMeco Ryans",
+      "date": "2026-04-15",
+      "key_quotes": [
+        "We'll see if we pick — if we pick, we pick; if we don't, we don't. I'm sure we'll keep you on your toes like we always do.",
+        "If we move out of the first round, I'll probably get some choice words about the draft party.",
+        "We'll take the best football players, regardless of the position."
+      ],
+      "positional_priorities": ["OL", "TE", "WR"],
+      "trade_posture": "Weighing trade OUT of Round 1",
+      "player_interest_signals": ["Extensive TE breakdown"],
+      "source_url": "https://www.houstontexans.com/podcasts/full-7-round-mock-draft-for-texans-ahead-of-2026-nfl-draft"
+    },
+    {
+      "team": "ATL",
+      "gm": "Ian Cunningham",
+      "hc": "Kevin Stefanski",
+      "date": "2026-04-20",
+      "key_quotes": [
+        "[Deepest groups are] cornerback, safety and defensive end.",
+        "[Weakest groups relative to past drafts are] running backs and defensive tackles.",
+        "[On WR class]: 'Receivers are deep.'"
+      ],
+      "positional_priorities": ["EDGE", "Secondary", "WR depth"],
+      "trade_posture": "No Round 1 pick, first on Day 2; limited capital (5 picks)",
+      "player_interest_signals": ["None explicit"],
+      "source_url": "https://www.atlantafalcons.com/news/ian-cunningham-2026-draft-class-strengths-depth-positional-cliffs"
+    },
+    {
+      "team": "JAX",
+      "gm": "James Gladstone",
+      "hc": "Liam Coen",
+      "date": "2026-04-17",
+      "key_quotes": [
+        "You're always going to stay agile.",
+        "[On Travis Hunter]: 'For all intents and purposes, he'll be a limited participant through the offseason program with eyes on return to play at full tick in training camp.'",
+        "[Coen]: 'It's just allowed us to maybe get to different or deeper dialogue quicker on some of the guys we're really honing in on.'"
+      ],
+      "positional_priorities": ["OL", "DL", "depth"],
+      "trade_posture": "Agile — could move around; first pick No. 56 overall",
+      "player_interest_signals": ["None; Hunter recovery limited"],
+      "source_url": "https://www.jaguars.com/news/k000609-draft-luncheon-2026-stay-agile"
+    },
+    {
+      "team": "SF",
+      "gm": "John Lynch",
+      "hc": "Kyle Shanahan",
+      "date": "2026-04-17",
+      "key_quotes": [
+        "Ready to go here in a few days and per usual, really happy with our entire organization.",
+        "The thing I probably love most about the Draft is that it involves every ounce of our organization."
+      ],
+      "positional_priorities": ["DL", "OL", "Secondary"],
+      "trade_posture": "Standard posture — willing to move",
+      "player_interest_signals": ["None"],
+      "source_url": "https://www.49erswebzone.com/articles/200308-transcript-49ers-lynch-speaks-nfl/"
+    },
+    {
+      "team": "MIN",
+      "evp": "Rob Brzezinski",
+      "hc": "Kevin O'Connell",
+      "date": "2026-04-16",
+      "key_quotes": [
+        "[Interim leadership after Adofo-Mensah departure — 'collaborative' approach]."
+      ],
+      "positional_priorities": ["DL", "iOL"],
+      "trade_posture": "Unclear due to GM transition; no Round 1 pick",
+      "player_interest_signals": ["None"],
+      "source_url": "https://www.vikings.com/video/rob-brzezinski-talks-vikings-2026-nfl-draft-process-working-with-kevin-o-connell-offseason-changes"
+    },
+    {
+      "team": "CHI",
+      "gm": "Ryan Poles",
+      "hc": "Ben Johnson",
+      "date": "2026-04-17",
+      "key_quotes": [
+        "[We want] sustainable success, which starts with saving money by nailing draft picks.",
+        "[Staying disciplined with BPA philosophy] even if that means drafting offense over defense."
+      ],
+      "positional_priorities": ["DL", "EDGE", "OL"],
+      "trade_posture": "BPA discipline; could move up urged by analysts",
+      "player_interest_signals": ["None explicit"],
+      "source_url": "https://chicago.suntimes.com/bears/2026/04/19/bears-gm-ryan-poles-wants-sustainable-success-which-starts-with-saving-money-by-nailing-draft-picks"
+    }
+  ],
+  "final_mocks": [
+    {
+      "analyst": "Mel Kiper Jr.",
+      "outlet": "ESPN",
+      "date": "2026-04-17",
+      "scope": "Rounds 1-2 (64 picks)",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE/LB, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Caleb Downs, S, Ohio State"},
+        {"slot": 6, "team": "CLE", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 7, "team": "WAS", "pick": "Rueben Bain Jr., EDGE, Miami"},
+        {"slot": 8, "team": "NO", "pick": "Mansoor Delane, CB, LSU"},
+        {"slot": 9, "team": "KC", "pick": "Sonny Styles, LB, Ohio State"},
+        {"slot": 10, "team": "CIN", "pick": "Francis Mauigoa, OT, Miami (trade w/ MIA)"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 10, "prior_pick": "Jermod McCoy", "final_pick": "Francis Mauigoa (MIA trade)", "reasoning": "Kiper added a MIA->CIN trade in final mock; OT value over CB at 10"},
+        {"slot": 32, "final_pick": "Kayden McDonald, DT, Ohio State to LV (via second round pairing)", "reasoning": "Raiders land 2 national champions (Mendoza + McDonald)"},
+        {"slot": 21, "final_pick": "Vega Ioane, G, Penn State to PIT", "reasoning": "Steelers 'hit a home run' on OL"}
+      ],
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48478995/2026-nfl-mock-draft-mel-kiper-two-rounds-64-picks-final-predictions"
+    },
+    {
+      "analyst": "Daniel Jeremiah",
+      "outlet": "NFL Network",
+      "date": "2026-04-18",
+      "scope": "Round 1 + Top 150 Big Board",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Sonny Styles, LB, Ohio State"},
+        {"slot": 6, "team": "CLE", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 7, "team": "WAS", "pick": "Rueben Bain Jr., EDGE, Miami"},
+        {"slot": 8, "team": "NO", "pick": "Caleb Downs, S, Ohio State"},
+        {"slot": 9, "team": "KC", "pick": "Mansoor Delane, CB, LSU"},
+        {"slot": 10, "team": "CIN", "pick": "Jermod McCoy, CB, Tennessee"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 8, "prior_pick": "Mansoor Delane (9)", "final_pick": "Caleb Downs bumps up to 8", "reasoning": "Safety class thinner — Downs rises 1 spot"},
+        {"slot": 18, "prior_pick": "others", "final_pick": "Jordyn Tyson, WR, ASU (+3)", "reasoning": "Tyson rises on big board"},
+        {"slot": 19, "prior_pick": "Jermod McCoy (15)", "final_pick": "McCoy falls 4 spots", "reasoning": "Medical concerns (ACL) — but still top-25"},
+        {"slot": 40, "final_pick": "Malachi Lawrence, EDGE, UCF (+6)", "reasoning": "Biggest riser on final big board"}
+      ],
+      "source_url": "https://www.nfl.com/news/daniel-jeremiah-s-top-150-prospects-in-the-2026-nfl-draft-class"
+    },
+    {
+      "analyst": "Dane Brugler",
+      "outlet": "The Athletic",
+      "date": "2026-04-20",
+      "scope": "7-round mock + 'The Beast' final top 300",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Caleb Downs, S, Ohio State"},
+        {"slot": 6, "team": "CLE", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 7, "team": "WAS", "pick": "Sonny Styles, LB, Ohio State"},
+        {"slot": 8, "team": "NO", "pick": "Rueben Bain Jr., EDGE, Miami"},
+        {"slot": 9, "team": "KC", "pick": "Mansoor Delane, CB, LSU"},
+        {"slot": 10, "team": "CIN", "pick": "Francis Mauigoa, OT, Miami"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 16, "final_pick": "Makai Lemon, WR, USC", "reasoning": "'Extremely QB-friendly route manipulation and toughness'"},
+        {"slot": 2, "final_pick": "Reese: 'whatever you want him to be' EDGE defender", "reasoning": "Can set edge, drop, or pin-ear-back rush"}
+      ],
+      "source_url": "https://www.newyorkjets.com/news/jets-mock-draft-roundup-14-the-athletics-dane-brugler-carnell-tate-04-20-2026"
+    },
+    {
+      "analyst": "Peter Schrager",
+      "outlet": "ESPN",
+      "date": "2026-04-17",
+      "scope": "Round 1 (post-'tear it up' revision)",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 3, "team": "ARI", "pick": "Arvell Reese, EDGE/LB, Ohio State"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Francis Mauigoa, OT, Miami"},
+        {"slot": 9, "team": "KC", "pick": "Jordyn Tyson, WR, ASU"},
+        {"slot": 11, "team": "MIA", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 14, "team": "ATL/OTHER", "pick": "Makai Lemon, WR, USC"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": "multi", "final_pick": "Entire prior mock 'torn up' after insider feedback", "reasoning": "Schrager said teams told him certain picks weren't the direction they were going — significant revisions"}
+      ],
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48408193/2026-nfl-mock-draft-peter-schrager-insider-intel-first-round-picks-predictions"
+    },
+    {
+      "analyst": "Lance Zierlein",
+      "outlet": "NFL.com",
+      "date": "2026-04-16",
+      "scope": "Round 1, Mock 3.0",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 12, "team": "DAL", "pick": "Sonny Styles, LB, Ohio State (value fall)"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 12, "prior_pick": "Styles top 10", "final_pick": "Styles falls to Cowboys at 12", "reasoning": "LB devalue run on top 10 EDGEs/WRs"},
+        {"slot": "n/a", "final_pick": "Two trades — Carolina and Arizona trading up for trench additions", "reasoning": "Zierlein projecting trade activity"}
+      ],
+      "source_url": "https://www.nfl.com/news/lance-zierlein-2026-nfl-mock-draft-3-0-cowboys-hit-the-jackpot-at-no-12-plus-two-trades"
+    },
+    {
+      "analyst": "PFF (Trevor Sikkema)",
+      "outlet": "PFF",
+      "date": "2026-04-18",
+      "scope": "Round 1 w/ trades",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Sonny Styles, LB, Ohio State"},
+        {"slot": 6, "team": "CLE", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 9, "team": "KC", "pick": "Rueben Bain Jr., EDGE, Miami"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": "multi", "final_pick": "Rams trade up for Fernando Mendoza scenario (alternate mock)", "reasoning": "Two PFF versions — one blockbuster trade scenario"},
+        {"slot": "MIA", "final_pick": "Doubles down on WR", "reasoning": "Jets reset defense, Miami doubles on WR"}
+      ],
+      "source_url": "https://www.pff.com/news/draft-nfl-mock-draft-jets-reset-on-defense-miami-doubles-down-on-wide-receiver"
+    },
+    {
+      "analyst": "Todd McShay",
+      "outlet": "The Ringer / McShay Report",
+      "date": "2026-04-19",
+      "scope": "Round 1 Mock 4.0 + top-10 flash",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "Francis Mauigoa, OT, Miami"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Francis Mauigoa, OT, Miami (alt)"},
+        {"slot": 16, "team": "WAS (via trade down)", "pick": "WAS trades 7 → 16 with Jets"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 7, "prior_pick": "No trade", "final_pick": "Commanders trade 7→16 with Jets", "reasoning": "McShay projects WAS trade-DOWN — contradicts Peters' 'more likely than not' stay-at-7"},
+        {"slot": 7, "final_pick": "Carnell Tate, WR, Ohio State to Jets via trade-up", "reasoning": "Jets jump for Tate"}
+      ],
+      "source_url": "https://mcshay-report.beehiiv.com/p/mock-3-0-plus-debuting-the-mcshay-nfl-draft-room-and-my-latest-top-100-big-board"
+    },
+    {
+      "analyst": "Ryan Wilson",
+      "outlet": "CBS Sports",
+      "date": "2026-04-18",
+      "scope": "Round 1 Mock 5.0",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, LB, Ohio State"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 5, "final_pick": "Arvell Reese to Giants (dropped)", "reasoning": "Wilson still lists only 3 QBs in top 100; no QB run in Round 1 expected"}
+      ],
+      "source_url": "https://www.cbssports.com/nfl/draft/mock-draft/"
+    },
+    {
+      "analyst": "B/R NFL Scouting Dept (Thorn/Parson/Harms/Holder)",
+      "outlet": "Bleacher Report",
+      "date": "2026-04-18",
+      "scope": "3-round mock",
+      "top_15": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, LB, Ohio State"},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech"},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame"},
+        {"slot": 5, "team": "NYG", "pick": "Sonny Styles, LB, Ohio State"},
+        {"slot": 6, "team": "CLE", "pick": "Kadyn Proctor, OT, Alabama"},
+        {"slot": 7, "team": "WAS", "pick": "Carnell Tate, WR, Ohio State"},
+        {"slot": 8, "team": "NO", "pick": "Caleb Downs, S, Ohio State"},
+        {"slot": 9, "team": "KC", "pick": "Rueben Bain Jr., EDGE, Miami"},
+        {"slot": 10, "team": "CIN", "pick": "Mansoor Delane, CB, LSU"},
+        {"slot": 11, "team": "MIA", "pick": "Spencer Fano, OL, Utah"},
+        {"slot": 12, "team": "DAL", "pick": "Jermod McCoy, CB, Tennessee"},
+        {"slot": 13, "team": "LAR (via ATL)", "pick": "Francis Mauigoa, OT, Miami"},
+        {"slot": 14, "team": "BAL", "pick": "Olaivavega Ioane, IOL, Penn State"},
+        {"slot": 15, "team": "TB", "pick": "Kenyon Sadiq, TE, Oregon"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": 6, "prior_pick": "WR/Downs", "final_pick": "Kadyn Proctor, OT", "reasoning": "Cleveland goes OT after taking Carnell Tate off board at 7 to Washington"},
+        {"slot": 13, "prior_pick": "ATL picks", "final_pick": "Rams trade up from ~26 to 13", "reasoning": "LAR aggressive trade up for Mauigoa"}
+      ],
+      "source_url": "https://bleacherreport.com/articles/25417940-2026-nfl-mock-draft-3-round-predictions-based-latest-br-scouting-dept-rankings"
+    },
+    {
+      "analyst": "Chris Simms",
+      "outlet": "NBC Sports",
+      "date": "2026-04-19",
+      "scope": "Round 1 final",
+      "top_10": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana"},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, EDGE/LB, Ohio State"}
+      ],
+      "notable_changes_vs_prior": [
+        {"slot": "WAS", "final_pick": "Commanders trade UP for Carnell Tate", "reasoning": "Notable trade-up contradicts Peters 'stay at 7' presser signal"}
+      ],
+      "source_url": "https://www.nbcsports.com/nfl/news/chris-simms-final-2026-nfl-mock-draft-jets-pick-arvell-reese-commanders-trade-up-for-carnell-tate"
+    },
+    {
+      "analyst": "NFL Mock Draft DB Consensus",
+      "outlet": "NFLMockDraftDatabase / DraftCountdown",
+      "date": "2026-04-20",
+      "scope": "Final consensus mock (aggregate of 100+ mocks)",
+      "top_15": [
+        {"slot": 1, "team": "LV", "pick": "Fernando Mendoza, QB, Indiana", "consensus_pct": 0.99},
+        {"slot": 2, "team": "NYJ", "pick": "Arvell Reese, LB, Ohio State", "consensus_pct": 0.51},
+        {"slot": 3, "team": "ARI", "pick": "David Bailey, EDGE, Texas Tech", "consensus_pct": 0.27},
+        {"slot": 4, "team": "TEN", "pick": "Jeremiyah Love, RB, Notre Dame", "consensus_pct": 0.63},
+        {"slot": 5, "team": "NYG", "pick": "Sonny Styles, LB, Ohio State", "consensus_pct": 0.34},
+        {"slot": 6, "team": "CLE", "pick": "Carnell Tate, WR, Ohio State", "consensus_pct": 0.41},
+        {"slot": 7, "team": "WAS", "pick": "Caleb Downs, S, Ohio State", "consensus_pct": 0.21},
+        {"slot": 8, "team": "NO", "pick": "Mansoor Delane, CB, LSU", "consensus_pct": 0.26},
+        {"slot": 9, "team": "KC", "pick": "Rueben Bain, EDGE, Miami", "consensus_pct": 0.20},
+        {"slot": 10, "team": "CIN", "pick": "Jermod McCoy, CB, Tennessee", "consensus_pct": 0.09},
+        {"slot": 11, "team": "MIA", "pick": "Francis Mauigoa, OT, Miami", "consensus_pct": 0.19},
+        {"slot": 12, "team": "DAL", "pick": "Dillon Thieneman, S, Oregon", "consensus_pct": 0.19},
+        {"slot": 13, "team": "LAR", "pick": "Makai Lemon, WR, USC", "consensus_pct": 0.43},
+        {"slot": 14, "team": "BAL", "pick": "Olaivavega Ioane, IOL, Penn State", "consensus_pct": 0.51},
+        {"slot": 15, "team": "TB", "pick": "Kenyon Sadiq, TE, Oregon", "consensus_pct": 0.26}
+      ],
+      "source_url": "https://www.draftcountdown.com/2026-nfl-draft/2026-nfl-draft-final-consensus-mock-draft/"
+    }
+  ],
+  "high_confidence_pick_locks": [
+    {
+      "slot": 1,
+      "team": "LV",
+      "player": "Fernando Mendoza, QB, Indiana",
+      "agreement_across": ["Kiper final", "Jeremiah final", "Brugler final", "Schrager final", "Zierlein 3.0", "PFF", "McShay final", "Ryan Wilson final", "B/R final", "Simms final", "Consensus DB"],
+      "consensus_pct": 0.99,
+      "confidence_tier": "near-certain",
+      "notes": "Spytek presser + every major final mock converge. Only scenario breaking this is a draft-day trade, for which Spytek set a very high value bar."
+    },
+    {
+      "slot": 3,
+      "team": "ARI",
+      "player": "David Bailey, EDGE, Texas Tech",
+      "agreement_across": ["Kiper", "Jeremiah", "Brugler", "Zierlein", "PFF", "B/R", "Consensus DB"],
+      "consensus_pct": 0.27,
+      "confidence_tier": "moderate",
+      "notes": "Player is near-lock IF ARI stays — but Ossenfort openly shopping pick with KC. Bailey could slide to 9."
+    },
+    {
+      "slot": 4,
+      "team": "TEN",
+      "player": "Jeremiyah Love, RB, Notre Dame",
+      "agreement_across": ["Kiper", "Jeremiah", "Brugler", "Schrager", "Zierlein", "PFF", "McShay", "B/R", "Consensus DB"],
+      "consensus_pct": 0.63,
+      "confidence_tier": "high",
+      "notes": "Strongest non-Mendoza consensus in top 10."
+    },
+    {
+      "slot": 2,
+      "team": "NYJ",
+      "player": "Arvell Reese, EDGE/LB, Ohio State",
+      "agreement_across": ["Kiper", "Jeremiah", "Brugler", "Zierlein", "PFF", "Ryan Wilson", "B/R", "Simms", "Consensus DB"],
+      "consensus_pct": 0.51,
+      "confidence_tier": "high",
+      "notes": "Schrager & McShay dissent (Bailey/Mauigoa at 2). Reese still 4+ analyst lock."
+    }
+  ],
+  "top_surprise_candidates": [
+    "Schrager 'torn up' prior mock after teams told him certain picks weren't happening — biggest unknown is which picks shifted",
+    "Browns at 6 — Kiper/Brugler/Consensus go Tate/Downs, but B/R has Kadyn Proctor (OT) as the SURPRISE; Berry publicly praised Tate AND Tyson",
+    "Washington at 7 — McShay & Simms now projecting a TRADE-DOWN/UP swap, directly contradicting Peters' 'more likely than not staying' presser statement. This is a live signal-shift.",
+    "Miami at 11 — Sullivan publicly said 'much more likely to trade DOWN' — multiple mocks still have MIA picking OL/DL, but a move to late teens is plausible",
+    "Jerry Jones at 12 — self-describing as wanting to 'go up and down and trade'; Cowboys with two 1sts are the most likely trade-up catalyst",
+    "Final mocks are now converging on Jordyn Tyson (ASU) at 18-20 despite prior consensus for Makai Lemon being WR2 — Tyson +3 spots on Jeremiah's final big board",
+    "Jermod McCoy (CB, TN) slipping out of top 10 in Kiper + Jeremiah finals due to medical concerns; consensus only 9% at slot 10. Could land 11-20.",
+    "Aaron Rodgers decision still pending as of 4/20 Khan presser — if he signs with PIT, 21st pick shifts from QB contingency to BPA"
+  ],
+  "signal_shifts_vs_earlier_mocks": [
+    {
+      "shift": "Caleb Downs rising slightly",
+      "detail": "Jeremiah bumped Downs 8→7; Brugler/Kiper go Downs at 5. Safety class thinner than expected."
+    },
+    {
+      "shift": "McCoy (CB) falling",
+      "detail": "Jeremiah moved him 15→19 on final big board; medical drives consensus at slot 10 down to 9%"
+    },
+    {
+      "shift": "Jordyn Tyson rising",
+      "detail": "+3 to No. 18 on Jeremiah's final; Schrager slotting Tyson as WR1 off board at 9. New top-15 candidate."
+    },
+    {
+      "shift": "Malachi Lawrence (UCF EDGE) rising",
+      "detail": "+6 spots on Jeremiah's final big board; now top-40."
+    },
+    {
+      "shift": "Trades expected to proliferate",
+      "detail": "Veach: 'there'll probably be a lot of trades.' Jerry Jones 'absolutely' open. Seattle public about moving back. Miami public about moving back. ARI shopping 3. This is the most trade-expected R1 in recent memory."
+    }
+  ],
+  "team_agent_update_suggestions": [
+    {
+      "team": "WAS",
+      "update": "Peters explicitly said 'more likely than not staying at 7' and 'we will NOT trade in NFC East'. Tighten trade-posture to 'low-probability trade-out, zero intra-NFC-East trades'. Agent should prefer BPA defender.",
+      "contradiction_note": "McShay and Simms final mocks BOTH project a WAS trade-down. Analyst feedback should not override direct GM statement — keep Peters' stated posture as primary, analyst content as secondary."
+    },
+    {
+      "team": "LV",
+      "update": "Spytek framing Mendoza selection as near-certainty; trade threshold explicitly very high. Lock Raiders at Mendoza in agent decision logic with ~0.97 probability."
+    },
+    {
+      "team": "MIA",
+      "update": "Sullivan said 'much more likely to trade down' — increase MIA trade-down willingness. First three rounds = 'valuable starter' expectation, which favors DL/OL profile."
+    },
+    {
+      "team": "SEA",
+      "update": "Schneider PUBLIC about moving back from 32 AND willing to trade within division. Elevate SEA trade-back probability significantly, include NFC West partners."
+    },
+    {
+      "team": "ARI",
+      "update": "Ossenfort confirmed engaged trade discussions with KC; 'not really naming anybody' at QB + hinting at Ty Simpson Round 2. Add Ty Simpson as R2 target, open trade-down from 3."
+    },
+    {
+      "team": "PIT",
+      "update": "Khan: may break 'Round 1 = visited player' trend. Loosen Steelers' historical visit-correlation prior."
+    },
+    {
+      "team": "NE",
+      "update": "Wolf: 'would like to get faster' at EDGE + direct Kayden McDonald links. Elevate NT/interior-DL + speed EDGE targets."
+    },
+    {
+      "team": "DAL",
+      "update": "Jerry Jones 'absolutely' trading-active. Two 1sts + public willingness = highest trade-activity probability in Round 1."
+    },
+    {
+      "team": "NYG",
+      "update": "Schoen specifically watched lot of Ohio State defensive film — Styles and Downs explicitly named. Downweight WR/OT fits at 5."
+    },
+    {
+      "team": "CLE",
+      "update": "Berry praised Tate AND Tyson as WR; 'tackles are tackles' — flexible at 6. Open to trade-up too."
+    },
+    {
+      "team": "KC",
+      "update": "Veach signaled massive OL run 10-25 — KC is likely the upward-mobile team (rumored ARI #3 partner) or takes OL at 23 if available."
+    },
+    {
+      "team": "TB",
+      "update": "Licht public about trade-down from 15 + EDGE/ILB as top-2 needs. TE Sadiq still in play but trade-down risk high."
+    },
+    {
+      "team": "CAR",
+      "update": "Morgan 'all positions on the table, ready for all scenarios' at 19 — keep broad posture."
+    }
+  ],
+  "stats": {
+    "pressers_scraped": 32,
+    "teams_with_pressers": 32,
+    "final_mocks_pulled": 11,
+    "analyst_consensus_coverage": "100+ mocks aggregated (via DraftCountdown/MockDraftDB)"
+  }
+}

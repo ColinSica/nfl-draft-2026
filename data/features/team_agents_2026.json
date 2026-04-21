@@ -30,7 +30,9 @@
       "S": 2.5,
       "WR": 1.2
     },
-    "latent_needs": {},
+    "latent_needs": {
+      "QB_R2": 0.35
+    },
     "needs_source": "nfl_com_top5_verified_2026-04-20",
     "fa_moves": {
       "arrivals": [
@@ -509,6 +511,10 @@
     },
     "_4_21_news": [
       "Schefter 4/20: growing chatter on Love at 3; trade-down still live"
+    ],
+    "_4_21_presser_note": "Ossenfort 4/21: hinted R2 QB (Ty Simpson type)",
+    "_4_21_pressers": [
+      "Smokescreen-adjusted; don't force R1 QB"
     ]
   },
   "ATL": {
@@ -4299,8 +4305,8 @@
       "G": -0.01
     },
     "trade_behavior": {
-      "trade_up_rate": 0.65,
-      "trade_down_rate": 0.2,
+      "trade_up_rate": 0.4,
+      "trade_down_rate": 0.45,
       "pdf_tier": {
         "trade_up_tier": "HIGH",
         "trade_up_prob": 0.7
@@ -4845,7 +4851,11 @@
         "scheme fit emphasis",
         "bold choice at LB departing typical priority patterns"
       ]
-    }
+    },
+    "_4_21_pressers": [
+      "Jones 4/21: 'Absolutely' open to trade",
+      "Jones 4/21: double-1st + open = highest trade-activity signal"
+    ]
   },
   "DEN": {
     "team": "DEN",
@@ -6207,7 +6217,11 @@
         "Brian Gutekunst late-round QB fliers acceptable",
         "accumulate picks"
       ]
-    }
+    },
+    "_4_21_presser_note": "Low-key pre-draft presser; no major shifts",
+    "_4_21_pressers": [
+      "Standard board-driven"
+    ]
   },
   "HOU": {
     "team": "HOU",
@@ -9210,7 +9224,7 @@
     "gm_affinity": {},
     "trade_behavior": {
       "trade_up_rate": 0.35,
-      "trade_down_rate": 0.05,
+      "trade_down_rate": 0.03,
       "pdf_tier": {}
     },
     "visit_signals": {
@@ -9597,6 +9611,9 @@
     },
     "_4_21_news": [
       "Spytek presser 4/20: 'teams know where they stand' — Mendoza effective lock"
+    ],
+    "_4_21_pressers": [
+      "Spytek 4/21: re-affirmed willingness to stay at 1; P(Mendoza) ~= 0.97"
     ]
   },
   "MIA": {
@@ -9666,7 +9683,7 @@
     },
     "trade_behavior": {
       "trade_up_rate": 0.25,
-      "trade_down_rate": 0.5,
+      "trade_down_rate": 0.62,
       "pdf_tier": {}
     },
     "visit_signals": {
@@ -10230,7 +10247,10 @@
         "talent accumulation despite non-Power-Five background",
         "upside-focused evaluation"
       ]
-    }
+    },
+    "_4_21_pressers": [
+      "Sullivan 4/21: 'much more likely to trade down' at 11"
+    ]
   },
   "MIN": {
     "team": "MIN",
@@ -12909,7 +12929,11 @@
         "prioritizing long-term scheme flexibility",
         "two first-rounders afford high-upside gambling"
       ]
-    }
+    },
+    "_4_21_reese_dissent": "Schrager/McShay finals dissent on Reese at 2 — Bailey remains competitive alt",
+    "_4_21_pressers": [
+      "Signals Reese not 100% — alternate EDGE still live"
+    ]
   },
   "PHI": {
     "team": "PHI",
@@ -13980,6 +14004,10 @@
     "_4_21_news_qb": "Rodgers silence + Broderick Jones neck setback — OT R1 lock contingent on QB path",
     "_4_21_news": [
       "Breer 4/20"
+    ],
+    "_4_21_presser_loosen_visit": true,
+    "_4_21_pressers": [
+      "Khan 4/20: hinted R1 player not hosted on pre-draft visit — breaks visit-correlation prior"
     ]
   },
   "SEA": {
@@ -14044,7 +14072,7 @@
     },
     "trade_behavior": {
       "trade_up_rate": 0.35,
-      "trade_down_rate": 0.55,
+      "trade_down_rate": 0.65,
       "pdf_tier": {
         "trade_down_tier": "HIGH",
         "trade_down_prob": 0.85,
@@ -14483,6 +14511,9 @@
     },
     "_4_21_news": [
       "4/20: SEA actively shopping 32 — RB top need"
+    ],
+    "_4_21_pressers": [
+      "Schneider 4/20: publicly declared trade-back intent at 32, willing to deal in NFC West"
     ]
   },
   "SF": {
@@ -16021,6 +16052,10 @@
     "_4_21_news_pick4": "Schefter 4/20: P(Styles at 4 | Love gone) ~0.45",
     "_4_21_news": [
       "conditional on ARI not taking Love at 3"
+    ],
+    "_4_21_lock_signal": "Love @ 4 agreed across 9 final mocks (Kiper, Jeremiah, Brugler, Zierlein, PFF, McShay, BR, Simms, CBS)",
+    "_4_21_pressers": [
+      "High-confidence lock contingent on ARI not taking Love at 3"
     ]
   },
   "WAS": {
@@ -16087,7 +16122,7 @@
     },
     "trade_behavior": {
       "trade_up_rate": 0.5,
-      "trade_down_rate": 0.5,
+      "trade_down_rate": 0.15,
       "pdf_tier": {}
     },
     "visit_signals": {
@@ -16618,7 +16653,10 @@
         "complement established OL investment",
         "willing to trade up for targets"
       ]
-    }
+    },
+    "_4_21_pressers": [
+      "Peters 4/21 presser: 'more likely than not staying at 7'; zero intra-NFC-East trades"
+    ]
   },
   "_meta_corrections": {
     "applied_at": "2026-04-20T03:46:57Z",
