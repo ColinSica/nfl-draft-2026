@@ -464,12 +464,12 @@ function buildWhyHint(
   probability: number | null | undefined,
 ): string {
   const probPct = probability ? Math.round(probability * 100) : null;
-  if (!probPct) return `${player} emerges from team-agent consensus at this slot.`;
+  if (!probPct) return `${player} is the modal pick at this slot.`;
   if (probPct >= 80) {
-    return `${player} locks in across ${probPct}% of simulations — team need at ${position} and board availability converge strongly.`;
+    return `${player} locks in across ${probPct}% of simulations — team need at ${position} and roster fit align strongly.`;
   }
   if (probPct >= 50) {
-    return `${player} is the modal pick (${probPct}% of sims). Alternative paths include other ${position} options and small trade probability.`;
+    return `${player} is the modal pick (${probPct}% of sims). Alternatives include other ${position} options.`;
   }
-  return `${player} narrowly edges competing prospects here (${probPct}% share). Multiple reasonable outcomes remain in play.`;
+  return `${player} narrowly edges competing prospects (${probPct}% share). Multiple reasonable outcomes remain.`;
 }

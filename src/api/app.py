@@ -266,10 +266,18 @@ def prospects_summary(limit: int = 64) -> dict:
     df = pd.read_csv(PROSPECTS_CSV)
     pred = pd.read_csv(PREDICTIONS_CSV) if PREDICTIONS_CSV.exists() else None
     if pred is not None:
-        df = df.merge(pred[["player", "final_score", "model_pred"]],
-                      how="left", on="player")
-    keep = ["player", "position", "college", "rank", "final_score", "ras_score",
-            "weight", "height"]
+        # Independent mode: predictions CSV has independent_grade + raw_model_pred
+        # (legacy names final_score/model_pred no longer exist post-refactor).
+        pred_cols = [c for c in ["player", "independent_grade", "raw_model_pred",
+                                  "independent_tier", "confidence", "final_rank"]
+                     if c in pred.columns]
+        df = df.merge(pred[pred_cols], how="left", on="player")
+        # Back-compat: UI expects "final_score" — alias independent_grade
+        if "independent_grade" in df.columns and "final_score" not in df.columns:
+            df["final_score"] = df["independent_grade"]
+    keep = ["player", "position", "college", "rank", "final_score",
+            "independent_grade", "independent_tier", "confidence", "final_rank",
+            "ras_score", "weight", "height"]
     have = [c for c in keep if c in df.columns]
     df = df[have].copy()
     if "rank" in df.columns:
@@ -354,6 +362,22 @@ def simulation_reasoning() -> dict:
     }
 
 
+def _merge_consensus_rank(df: pd.DataFrame) -> pd.DataFrame:
+    """MC CSV lacks consensus_rank; merge it in from prospects_2026_enriched.csv
+    (rank column) so downstream consumers see it correctly."""
+    if "consensus_rank" in df.columns:
+        return df
+    if not PROSPECTS_CSV.exists():
+        df["consensus_rank"] = None
+        return df
+    pros = pd.read_csv(PROSPECTS_CSV, usecols=["player", "rank", "college"])
+    df = df.merge(pros, on="player", how="left", suffixes=("", "_pros"))
+    df["consensus_rank"] = df["rank"]
+    if "college" not in df.columns and "college_pros" in df.columns:
+        df["college"] = df["college_pros"]
+    return df
+
+
 @app.get("/api/simulations/prospects")
 def prospect_landings() -> dict:
     """Per-prospect landing distribution from the latest Monte Carlo CSV.
@@ -364,6 +388,7 @@ def prospect_landings() -> dict:
     if not MC_CSV.exists():
         return {"prospects": [], "meta": {"file_present": False}}
     df = pd.read_csv(MC_CSV)
+    df = _merge_consensus_rank(df)
     slot_col = "pick_slot" if "pick_slot" in df.columns else "pick_number"
     team_col = "most_likely_team" if "most_likely_team" in df.columns else "team"
 
@@ -432,6 +457,7 @@ def latest_simulation() -> dict:
     if not MC_CSV.exists():
         return {"picks": [], "meta": {"file_present": False}}
     df = pd.read_csv(MC_CSV)
+    df = _merge_consensus_rank(df)
     pick_col = "pick_slot" if "pick_slot" in df.columns else "pick_number"
     team_col = "most_likely_team" if "most_likely_team" in df.columns else "team"
 

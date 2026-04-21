@@ -65,17 +65,37 @@ export function Simulate() {
             ?? `Modal pick at slot ${p.pick_number}.`,
           whyDetail: modelReasoning?.top_factors
             ? (
-                <ul className="space-y-1">
-                  {modelReasoning.top_factors.slice(0, 6).map((f: any, i: number) => (
-                    <li key={i}>
-                      <span className="font-mono text-xs text-ink-soft/80 mr-2">
-                        {typeof f === 'object' && f.weight !== undefined
-                          ? `+${Number(f.weight).toFixed(2)}`
-                          : '·'}
-                      </span>
-                      <span>{typeof f === 'object' ? (f.label ?? f.factor ?? '') : String(f)}</span>
-                    </li>
-                  ))}
+                <ul className="space-y-1.5">
+                  {modelReasoning.top_factors.slice(0, 6).map((f: any, i: number) => {
+                    const src = (typeof f === 'object' && f.source) ? String(f.source) : '';
+                    const srcLabel = src.startsWith('research:')
+                      ? src.slice('research:'.length)
+                      : src === 'team_profile' ? 'team profile'
+                      : src === 'qb_situation' ? 'QB situation'
+                      : src === 'scheme' ? 'scheme'
+                      : src === 'coaching_tree' ? 'coaching tree'
+                      : src === 'gm_fingerprint' ? 'GM fingerprint'
+                      : src === 'team_profile_narrative' ? 'team narrative'
+                      : src === 'model' ? 'model'
+                      : src;
+                    return (
+                      <li key={i} className="flex items-baseline gap-2 text-sm">
+                        <span className="font-mono text-xs text-ink-soft/80 shrink-0">
+                          {typeof f === 'object' && f.weight !== undefined
+                            ? `+${Number(f.weight).toFixed(2)}`
+                            : '·'}
+                        </span>
+                        <span className="flex-1">
+                          {typeof f === 'object' ? (f.label ?? f.factor ?? '') : String(f)}
+                        </span>
+                        {srcLabel && (
+                          <span className="font-mono text-[10px] uppercase tracking-wider text-ink-soft/60 shrink-0">
+                            {srcLabel}
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               )
             : null,
