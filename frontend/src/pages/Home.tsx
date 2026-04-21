@@ -5,6 +5,7 @@ import { api, type MetaInfo, type PickRow } from '../lib/api';
 import { useMode, MODE_META } from '../lib/mode';
 import { ModeDescription, ModeSwitcher } from '../components/ModeSwitcher';
 import { FreshnessPanel, StaleBadge } from '../components/FreshnessPanel';
+import { useMemo } from 'react';
 import { TrustBox } from '../components/TrustBox';
 import { HRule, SmallCaps, SectionHeader, LiveBadge } from '../components/editorial';
 import { PickCard, type PickData } from '../components/PickCard';
@@ -239,6 +240,9 @@ export function Home() {
         />
       </section>
 
+      {/* ───── R1 POSITION DISTRIBUTION ───── */}
+      <PositionHistogram picks={latestPicks ?? []} />
+
       {/* ───── HOW IT WORKS ───── */}
       <section>
         <SectionHeader
@@ -271,6 +275,69 @@ export function Home() {
         </div>
       </section>
     </div>
+  );
+}
+
+function PositionHistogram({ picks }: { picks: PickRow[] }) {
+  const counts = useMemo(() => {
+    const r1 = picks.filter(p => p.pick_number <= 32);
+    const byPos: Record<string, number> = {};
+    r1.forEach(p => {
+      const pos = p.candidates?.[0]?.position ?? '—';
+      byPos[pos] = (byPos[pos] ?? 0) + 1;
+    });
+    return Object.entries(byPos)
+      .sort((a, b) => b[1] - a[1]);
+  }, [picks]);
+
+  if (counts.length === 0) return null;
+  const max = Math.max(...counts.map(([, c]) => c));
+  const POS_COLOR: Record<string, string> = {
+    QB: '#D9A400', RB: '#B88A00', WR: '#1F6FEB', TE: '#4A9EFF',
+    OT: '#DC2F3D', IOL: '#E68A6A',
+    EDGE: '#17A870', DL: '#0E6945', IDL: '#0E6945',
+    LB: '#7BC043', CB: '#5B6370', S: '#848B98',
+  };
+
+  return (
+    <section>
+      <SectionHeader
+        number={4}
+        kicker="R1 mix"
+        title="Position count in the first round."
+      />
+      <div className="mt-8 card p-5">
+        <div className="space-y-3">
+          {counts.map(([pos, c]) => (
+            <div key={pos} className="flex items-center gap-3">
+              <span
+                className="display-broadcast w-14 shrink-0 text-right text-ink"
+                style={{ color: POS_COLOR[pos] ?? '#848B98' }}
+              >
+                {pos}
+              </span>
+              <div className="flex-1 h-5 bg-paper-hover relative overflow-hidden">
+                <div
+                  className="absolute inset-y-0 left-0 flex items-center justify-end pr-2"
+                  style={{
+                    width: `${(c / max) * 100}%`,
+                    background: POS_COLOR[pos] ?? '#848B98',
+                  }}
+                >
+                  <span className="display-num text-sm text-paper">{c}</span>
+                </div>
+              </div>
+              <span className="font-mono text-xs text-ink-soft w-14 shrink-0">
+                {Math.round((c / 32) * 100)}% of R1
+              </span>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-ink-soft/80 italic mt-4">
+          Aggregated across all simulation runs. Top positions drafted in R1 this year.
+        </p>
+      </div>
+    </section>
   );
 }
 

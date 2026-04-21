@@ -4,11 +4,12 @@
  * Rebuilt for light theme.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { Search, Star } from 'lucide-react';
+import { Search, Star, Download } from 'lucide-react';
 import { teamColor } from '../lib/teamColors';
 import { SectionHeader, SmallCaps, MissingText, HRule } from '../components/editorial';
 import { displayValue } from '../lib/display';
 import { useWatchlist } from '../lib/watchlist';
+import { downloadCsv } from '../lib/csvExport';
 
 type Prospect = {
   player: string;
@@ -85,6 +86,23 @@ export function Prospects() {
           >
             <Star size={14} style={onlyStarred ? { color: '#D9A400', fill: '#D9A400' } : undefined} />
             <span>Watchlist ({wl.count})</span>
+          </button>
+          <button
+            onClick={() => downloadCsv('2026-big-board.csv', filtered.map(p => ({
+              most_likely_slot: p.most_likely_slot,
+              most_likely_team: p.most_likely_team ?? '',
+              player: p.player,
+              position: p.position,
+              college: p.college ?? '',
+              consensus_rank: p.consensus_rank ?? '',
+              mean_landing: p.mean_landing,
+              variance_landing: p.variance_landing,
+            })))}
+            className="btn-ghost"
+            title="Download CSV"
+          >
+            <Download size={14} />
+            <span>Export</span>
           </button>
           <span className="ml-auto text-sm text-ink-soft">
             {filtered.length} {filtered.length === 1 ? 'prospect' : 'prospects'}

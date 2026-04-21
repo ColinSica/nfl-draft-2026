@@ -5,8 +5,9 @@
  * position, or confidence tier and star picks to a watchlist.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { Star, Filter, X } from 'lucide-react';
+import { Star, Filter, X, Download } from 'lucide-react';
 import { api, type PickRow } from '../lib/api';
+import { downloadCsv } from '../lib/csvExport';
 import { useMode, MODE_META } from '../lib/mode';
 import { SectionHeader, HRule, SmallCaps } from '../components/editorial';
 import { PickCard, type PickData } from '../components/PickCard';
@@ -140,9 +141,18 @@ export function Simulate() {
             <div className="display-num text-3xl text-ink">{wl.count}</div>
           </div>
         </div>
-        <span className="ml-auto text-xs text-ink-soft italic">
-          Click a pick to expand reasoning · star to watchlist
-        </span>
+        <button
+          onClick={() => downloadCsv('2026-r1-predictions.csv', all32.map(p => ({
+            slot: p.slot, team: p.team, player: p.player,
+            position: p.position, college: p.college ?? '',
+            probability: p.probability, consensus_rank: p.consensusRank ?? '',
+          })))}
+          className="btn-ghost ml-auto"
+          title="Download CSV"
+        >
+          <Download size={14} />
+          <span>Export CSV</span>
+        </button>
       </div>
 
       {/* Filter controls */}
