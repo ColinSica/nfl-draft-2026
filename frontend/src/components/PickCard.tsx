@@ -1,8 +1,16 @@
 import { useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Star } from 'lucide-react';
 import { displayNum, displayValue, getConfidence, type ConfLabel } from '../lib/display';
 import { teamColor } from '../lib/teamColors';
+import { useWatchlist } from '../lib/watchlist';
+
+export type PickAlternate = {
+  player: string;
+  position: string;
+  college?: string | null;
+  probability?: number | null;
+};
 
 export type PickData = {
   slot: number;
@@ -18,6 +26,7 @@ export type PickData = {
   whyDetail?: ReactNode | null;
   confidence?: ConfLabel | 'HIGH' | 'MEDIUM' | 'LOW' | null;
   accent?: string;
+  alternates?: PickAlternate[] | null;   // runners-up from the MC distribution
 };
 
 // Legacy aliases kept for back-compat with any call sites still passing old labels
@@ -34,6 +43,8 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
   const [expanded, setExpanded] = useState(initialExpanded);
   const accent = data.accent ?? '#D9A400';
   const tc = teamColor(data.team);
+  const wl = useWatchlist();
+  const starred = wl.has(data.player);
   const prob = data.probability ?? null;
   const cons = data.consensusRank ?? null;
   // Prefer prob-based calibrated label. Fall back to explicit confidence prop (mapped via legacy).
@@ -128,9 +139,22 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
         {/* Player — the hero */}
         <div className="px-5 py-5">
           <div className="flex items-baseline justify-between gap-3 flex-wrap">
-            <h3 className="display-broadcast text-2xl md:text-3xl leading-none text-ink">
-              {displayValue(data.player).toUpperCase()}
-            </h3>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h3 className="display-broadcast text-2xl md:text-3xl leading-none text-ink">
+                {displayValue(data.player).toUpperCase()}
+              </h3>
+              <button
+                onClick={() => wl.toggle(data.player, { slot: data.slot, team: data.team })}
+                className="p-1 -m-1 transition text-ink-soft hover:text-ink"
+                title={starred ? 'Remove from watchlist' : 'Add to watchlist'}
+                aria-label={starred ? 'Remove from watchlist' : 'Add to watchlist'}
+              >
+                <Star
+                  size={18}
+                  style={{ color: starred ? '#D9A400' : undefined, fill: starred ? '#D9A400' : 'transparent' }}
+                />
+              </button>
+            </div>
             <div className="flex items-center gap-2.5 text-xs text-ink-soft font-mono">
               <span
                 className="px-1.5 py-0.5 font-bold"
@@ -173,6 +197,27 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
             )}
           </div>
         </div>
+
+        {/* Alternates strip — runner-up candidates from MC distribution */}
+        {data.alternates && data.alternates.length > 0 && (
+          <>
+            <hr className="hrule" />
+            <div className="px-5 py-3">
+              <div className="caps-tight text-ink-soft mb-2">Also in play</div>
+              <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
+                {data.alternates.slice(0, 3).map((alt, i) => (
+                  <span key={i} className="inline-flex items-baseline gap-2">
+                    <span className="font-mono text-xs text-ink-soft/80 shrink-0">
+                      {alt.probability ? `${Math.round(alt.probability * 100)}%` : '—'}
+                    </span>
+                    <span className="text-ink font-semibold">{alt.player}</span>
+                    <span className="font-mono text-[0.65rem] text-ink-soft">{alt.position}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
 
         {/* Why-this-pick */}
         {(data.whySummary || data.whyDetail) && (

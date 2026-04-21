@@ -45,10 +45,16 @@ export function Home() {
         probability: pri?.probability ?? null,
         consensusRank: pri?.consensus_rank ?? null,
         grade: null,
-        confidence: null, // PickCard derives calibrated label from probability
+        confidence: null,
         whySummary: modelReasoning?.reasoning_summary
           ?? (pri ? buildWhyHint(pri.player, pri.position, pri.probability) : 'Awaiting latest simulation.'),
         accent: meta_.accent,
+        alternates: (p.candidates ?? []).slice(1, 4).map(c => ({
+          player: c.player,
+          position: c.position,
+          college: c.college,
+          probability: c.probability,
+        })),
       };
     });
 

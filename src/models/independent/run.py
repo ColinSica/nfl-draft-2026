@@ -192,19 +192,38 @@ def _simulate_once(prospects: pd.DataFrame, team_agents: dict,
     board = prospects.copy()
 
     # ---- Bilateral trade matching BEFORE picks start ----
-    # Each sim gets its own slot_team copy so trades vary per run
     sim_slot_team = dict(slot_team)
     trades_fired = _maybe_fire_bilateral_trades(
         sim_slot_team, team_agents, trade_rate_by_slot, board, rng, max_slot)
+
+    # ---- Cascade state tracked during the sim ----
+    # Position-run detection: if 2+ prospects at a position go in the last
+    # 3 picks, subsequent teams with that need get a premium boost (FOMO).
+    # Tier-exhaustion: if a position's R1-grade prospects are gone, teams
+    # that needed that position see their need DAMPENED (they pivot).
+    recent_positions: list[str] = []   # last 3 pick positions
 
     for slot in range(1, max_slot + 1):
         team = sim_slot_team.get(slot)
         if team is None:
             continue
         profile = dict(team_agents[team])
-        profile["team"] = team  # ensure team_fit can look up archetype prefs
+        profile["team"] = team
         profile["_slot"] = slot
         profile["_round"] = _round_for_slot(slot)
+
+        # --- CASCADE: boost need for positions in recent "run" ---
+        run_counts: dict[str, int] = {}
+        for p in recent_positions[-3:]:
+            run_counts[p] = run_counts.get(p, 0) + 1
+        active_runs = {p: c for p, c in run_counts.items() if c >= 2}
+        if active_runs:
+            boosted_needs = dict(profile.get("roster_needs", {}) or {})
+            for pos, c in active_runs.items():
+                cur = float(boosted_needs.get(pos, 0.0))
+                # 2 of 3 = 1.2x, 3 of 3 = 1.4x; capped at 5.5
+                boosted_needs[pos] = min(cur * (1.0 + 0.2 * c), 5.5)
+            profile["roster_needs"] = boosted_needs
 
         avail_series = available_mask(board, picks_made)
         avail = board[avail_series]
@@ -237,6 +256,8 @@ def _simulate_once(prospects: pd.DataFrame, team_agents: dict,
             "trade_down_p_structural": round(p_down, 3),
             "trade_noted": trade_noted,
         })
+        # Track recent positions for cascade detection
+        recent_positions.append(str(player_row["position"]))
 
     return picks_made
 

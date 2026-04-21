@@ -1,0 +1,690 @@
+{
+  "date": "2026-04-20",
+  "scraped_at": "2026-04-20T18:45:00-07:00",
+  "window": "2026-04-19 Sunday through 2026-04-20 Monday (T-3 to T-2)",
+  "methodology": "National insider sweep (Schefter/Rapoport/Pelissero/Garafolo/Breer/Fowler/King/Schultz) plus team-beat writers. Strict date filter: reports filed 4/19 or 4/20 only. Prior-week rumors excluded unless an insider explicitly re-reported them inside the window.",
+  "tier_counts": {
+    "tier1": 11,
+    "tier2": 7,
+    "smoke": 4
+  },
+  "insider_reports": [
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "date": "2026-04-20",
+      "topic": "team_intent",
+      "team": "ARI",
+      "player": "Jeremiyah Love",
+      "summary": "'Growing chatter' Cardinals could take Notre Dame RB Jeremiyah Love at No. 3 overall. Arizona has had exploratory trade-down calls but will take Love if they hold.",
+      "credibility": "tier1",
+      "impact_on_model": "Bump ARI P(Love @ 3) materially; cap ARI trade_down_rate — exploratory not advanced."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "date": "2026-04-20",
+      "topic": "team_intent",
+      "team": "TEN",
+      "player": "Sonny Styles",
+      "summary": "If Love is off the board at 3, Titans could target Ohio State LB Sonny Styles at No. 4.",
+      "credibility": "tier1",
+      "impact_on_model": "Raise TEN P(Styles @ 4 | Love gone); de-emphasize Bailey to TEN."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "date": "2026-04-20",
+      "topic": "player_slide",
+      "team": null,
+      "player": "Arvell Reese",
+      "summary": "If Jets take Bailey @ 2, Cardinals take Love @ 3, Titans take Styles @ 4, Ohio State EDGE Arvell Reese could slide to No. 5 (NYG).",
+      "credibility": "tier1",
+      "impact_on_model": "Build conditional slide branch: P(Reese to NYG @ 5) elevated in Bailey-NYJ path."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "CLE",
+      "player": null,
+      "summary": "Browns taking calls on the No. 6 pick and are open to moving it. GM Andrew Berry public-framed as 'maximizing the asset' — trade down, trade up, or trade for a veteran all live.",
+      "credibility": "tier1",
+      "impact_on_model": "CLE trade_down_rate already 0.70; hold; flag BOTH trade-down AND trade-up as live. Add veteran-acquisition branch."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "date": "2026-04-20",
+      "topic": "team_intent",
+      "team": "PIT",
+      "player": "Ty Simpson",
+      "summary": "Aaron Rodgers has not informed Steelers whether he'll play in 2026; if no answer by Thursday, PIT will internally discuss Ty Simpson at No. 21.",
+      "credibility": "tier1",
+      "impact_on_model": "Keep PIT QB branch contingent on Rodgers; Ty Simpson @ 21 is live, not dominant."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://steelersdepot.com/2026/04/schefter-broderick-jones-suffered-neck-injury-setback/",
+      "date": "2026-04-20",
+      "topic": "team_shuffle",
+      "team": "PIT",
+      "player": null,
+      "summary": "Steelers LT Broderick Jones suffered a neck-injury setback (post spinal fusion); re-examined this week. Could push Pittsburgh to draft a LT on Day 1 or early Day 2.",
+      "credibility": "tier1",
+      "impact_on_model": "Elevate PIT OT need to first-round tier; OT competes with Simpson for pick 21."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://heavy.com/sports/nfl/seattle-seahawks/seahawks-rumors-news-trade-nfl-draft/",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "SEA",
+      "player": null,
+      "summary": "Seahawks enter the week with only 4 picks (32, 64, 96, 188) and are actively shopping No. 32 to stockpile picks. RB flagged as top SEA need.",
+      "credibility": "tier1",
+      "impact_on_model": "SEA trade_down_rate → high; RB need → high."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://atozsports.com/nfl/philadelphia-eagles-news/eagles-gm-howie-roseman-old-tricks-plotting-to-shake-up-2026-nfl-draft-adam-schefter/",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "PHI",
+      "player": "Jonathan Greenard",
+      "summary": "League sources: Howie Roseman 'plotting to make a deal on draft weekend.' Greenard trade talks with Vikings lost steam but could be revisited. Eagles want proven talent and/or to move up in R1.",
+      "credibility": "tier1",
+      "impact_on_model": "PHI trade_up_rate elevated; PHI MAY skip EDGE if Greenard acquired, otherwise EDGE live at 23."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.inquirer.com/eagles/aj-brown-patriots-trade-june-1-salary-cap-2026-nfl-draft-20260420.html",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "PHI",
+      "player": "A.J. Brown",
+      "summary": "A.J. Brown trade to Patriots 'still tracking' post-June 1 for cap split. Trade before June 1 would cost Eagles $43.4M dead cap.",
+      "credibility": "tier1",
+      "impact_on_model": "Eagles NOT drafting Brown replacement this week. Patriots NOT adjusting draft posture for Brown."
+    },
+    {
+      "source": "Rapoport (NFL Network)",
+      "source_url": "https://www.nfl.com/news/2026-nfl-draft-buzz-monday",
+      "date": "2026-04-20",
+      "topic": "team_shuffle",
+      "team": "NYG",
+      "player": "Kayvon Thibodeaux",
+      "summary": "Giants now LESS likely to deal EDGE Thibodeaux after acquiring two top-10 picks (5 & 10) via the Dexter Lawrence trade. Thibodeaux set to play 2026 on $14.751M fifth-year option.",
+      "credibility": "tier1",
+      "impact_on_model": "NYG edge need demoted; DT need elevated post-Lawrence; both top-10 picks live."
+    },
+    {
+      "source": "Pelissero (NFL Network)",
+      "source_url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-garrett-nussmeier-had-cyst-on-spine-during-2025-season",
+      "date": "2026-04-20",
+      "topic": "player_slide",
+      "team": null,
+      "player": "Garrett Nussmeier",
+      "summary": "NFL Combine tests revealed cyst on spine — source of 2025 oblique pain. Nussmeier asymptomatic since pre-Senior Bowl; any future procedure is minimally invasive with 2-3 week recovery. Pelissero also: 'I don't think Ty Simpson gets out of the first half of Round 1.'",
+      "credibility": "tier1",
+      "impact_on_model": "Nussmeier stabilizes Day 2 (not free-fall). Simpson floor = R1 by a tier-1 insider."
+    },
+    {
+      "source": "Rapoport/Pelissero/Garafolo (NFL Network)",
+      "source_url": "https://www.nfl.com/news/2026-nfl-draft-buzz-monday",
+      "date": "2026-04-20",
+      "topic": "team_shuffle",
+      "team": "PHI",
+      "player": "A.J. Brown",
+      "summary": "Trio report: A.J. Brown will NOT attend Eagles voluntary workouts starting Monday; Eagles/Patriots deal still tracking for on-or-after June 1.",
+      "credibility": "tier1",
+      "impact_on_model": "Reinforces deferred-trade scenario; neutral on draft picks this week."
+    },
+    {
+      "source": "Rapoport (NFL Network) via Pelissero on GMFB",
+      "source_url": "https://www.nfl.com/news/steelers-have-not-received-word-aaron-rodgers-future-likely-wont-before-draft",
+      "date": "2026-04-20",
+      "topic": "team_intent",
+      "team": "PIT",
+      "player": null,
+      "summary": "Steelers have NOT received word from Aaron Rodgers and do not expect to before the draft. Rodgers decision will NOT come before Thursday.",
+      "credibility": "tier1",
+      "impact_on_model": "PIT draft plan will be built assuming Rodgers-uncertainty; raises Simpson/Allar @ 21 branch weight."
+    },
+    {
+      "source": "Breer (SI MMQB)",
+      "source_url": "https://www.si.com/nfl/albert-breer-takeaways-prospect-who-makes-sense-for-jets-nfl-draft-2026",
+      "date": "2026-04-20",
+      "topic": "smoke",
+      "team": "NYJ",
+      "player": "David Bailey / Arvell Reese",
+      "summary": "Breer: 'A consensus seems to be crystallizing that Texas Tech EDGE David Bailey will be the second pick.' Conflicting team-source quotes on Bailey vs Reese; Jets canceled a private Bailey visit (could be smokescreen).",
+      "credibility": "tier1",
+      "impact_on_model": "NYJ @ 2 still a two-man race; Bailey consensus favorite but Reese live, visit-cancellation is a smoke flag."
+    },
+    {
+      "source": "Breer (SI MMQB)",
+      "source_url": "https://www.si.com/nfl/albert-breer-2026-nfl-draft-needs-every-team-reveal-compelling-theme",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "ARI/TEN/NYG/CLE/WAS",
+      "player": null,
+      "summary": "Breer: ARI, TEN, NYG, CLE, WAS all exploring deals to move down — problem is finding buyers. Reluctance to move high 2027 picks (per Schultz) compounds it.",
+      "credibility": "tier1",
+      "impact_on_model": "Boost trade_down_rate for these 5 teams, but DAMP conversion probability (buyers scarce). Net: more calls, fewer actual moves."
+    },
+    {
+      "source": "Breer (SI MMQB)",
+      "source_url": "https://www.si.com/nfl/albert-breer-2026-nfl-draft-needs-every-team-reveal-compelling-theme",
+      "date": "2026-04-20",
+      "topic": "player_slide",
+      "team": null,
+      "player": "Kadyn Proctor / Monroe Freeling / Caleb Lomu",
+      "summary": "Breer: second-10 picks will see an OT run — Proctor going higher than expected; Freeling (UGA) and Lomu (Utah) carry real LT potential.",
+      "credibility": "tier1",
+      "impact_on_model": "Elevate OT tier for picks 12-25; PIT, NE (second R1), NYG-at-10, DAL, PHI, MIA all sensitive."
+    },
+    {
+      "source": "Schultz (independent)",
+      "source_url": "https://bleacherreport.com/articles/25417331-new-nfl-draft-2026-rumors-reveal-teams-looking-trade-down-get-additional-picks",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": null,
+      "player": null,
+      "summary": "Schultz: 2026 expected to be 'one of the more trade-heavy drafts in recent memory.' Multiple top-10 teams want to move down; teams reluctant to surrender high 2027 picks is slowing deals.",
+      "credibility": "tier1",
+      "impact_on_model": "Global trade_rate +, but trade_success_rate - due to pricing friction."
+    },
+    {
+      "source": "John Spytek (Raiders GM presser)",
+      "source_url": "https://www.espn.com/nfl/story/_/id/48488757/raiders-spytek-says-teams-inquired-no-1-draft-pick",
+      "date": "2026-04-20",
+      "topic": "pick_lock",
+      "team": "LV",
+      "player": "Fernando Mendoza",
+      "summary": "Spytek: 'We've gotten a few calls, and those teams know where they stand.' Raiders staying at No. 1. Strong implication Mendoza is the pick.",
+      "credibility": "tier1",
+      "impact_on_model": "LV @ 1 Mendoza → LOCK (P > 0.95). Zero out LV trade_down_rate for this cycle."
+    },
+    {
+      "source": "Andrew Berry (Browns GM presser)",
+      "source_url": "https://www.clevelandbrowns.com/news/andrew-berry-discusses-outlook-on-no-6-pick-and-more-ahead-of-the-2026-nfl-draft",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "CLE",
+      "player": null,
+      "summary": "Berry: goal at No. 6 is 'maximizing the asset' — working trade down, trade up, and trade-for-veteran scenarios up to going on the clock.",
+      "credibility": "tier1",
+      "impact_on_model": "CLE posture confirmed tripartite; increase variance on CLE @ 6 outcome."
+    },
+    {
+      "source": "Pelissero (NFL Network) GMFB",
+      "source_url": "https://www.msn.com/en-us/sports/other/pelissero-on-latest-with-steelers-aaron-rodgers-three-days-prior-to-draft-gmfb/vi-AA21jwNM",
+      "date": "2026-04-20",
+      "topic": "team_intent",
+      "team": "PIT",
+      "player": "Ty Simpson",
+      "summary": "Pelissero: 'I don't think Ty Simpson gets out of the first half of Round 1.' Simpson top-30 visits: NYJ, ARI, CLE, PIT. Arizona +130 betting favorite; Jets +225.",
+      "credibility": "tier1",
+      "impact_on_model": "Simpson R1 floor confirmed by tier-1 insider. ARI, NYJ (second pick 39 likely too late) = bidders; PIT contingent; CLE wild card."
+    },
+    {
+      "source": "CBS Sports (aggregated insider intel, one-week-out)",
+      "source_url": "https://www.cbssports.com/nfl/news/one-week-out-from-the-nfl-draft-intel-rumors-and-what-were-hearing/",
+      "date": "2026-04-19",
+      "topic": "smoke",
+      "team": "NYJ",
+      "player": "David Bailey",
+      "summary": "Jets canceled a private Bailey visit this week — 'could mean something, or smokescreen.' Dueling team-exec quotes on Bailey vs Reese: 'Reese's body isn't ready' vs. 'I'd go Reese because of versatility.'",
+      "credibility": "smoke",
+      "impact_on_model": "Treat as smoke; do not collapse NYJ @ 2 onto Bailey. Maintain Reese as live alternative."
+    },
+    {
+      "source": "CBS Sports (one-week-out)",
+      "source_url": "https://www.cbssports.com/nfl/news/one-week-out-from-the-nfl-draft-intel-rumors-and-what-were-hearing/",
+      "date": "2026-04-19",
+      "topic": "team_intent",
+      "team": "ARI",
+      "player": null,
+      "summary": "'Arizona Cardinals hold the keys to how the rest of R1 unfolds.' Ossenfort known for draft-day deals; no definitive board read.",
+      "credibility": "tier2",
+      "impact_on_model": "ARI @ 3 = highest-variance pick in top-5; keep both Love-pick and trade-down branches at meaningful mass."
+    },
+    {
+      "source": "Giants.com (beat)",
+      "source_url": "https://www.giants.com/news/nfl-draft-order-2026-updated-dexter-lawrence-trade-details-cincinnati-bengals",
+      "date": "2026-04-19",
+      "topic": "team_shuffle",
+      "team": "NYG",
+      "player": "Dexter Lawrence",
+      "summary": "Dexter Lawrence trade to Bengals finalized; Giants now own picks 5 and 10. Bengals added 1-year $28M extension through 2028.",
+      "credibility": "tier1",
+      "impact_on_model": "NYG picks: add 10. CIN: remove 10, add DT-solved."
+    },
+    {
+      "source": "Big Blue View (beat)",
+      "source_url": "https://www.bigblueview.com/nfl-draft-scouting-report-profiles/159917/ny-giants-2026-nfl-draft-scouting-report-kamari-ramsey-s-usc",
+      "date": "2026-04-20",
+      "topic": "smoke",
+      "team": "NYG",
+      "player": "Kamari Ramsey",
+      "summary": "Profile of USC S Kamari Ramsey as a potential Day-2 Giants target.",
+      "credibility": "smoke",
+      "impact_on_model": "Minor NYG Day-2 signal; no R1 implication."
+    },
+    {
+      "source": "Bleeding Green Nation (beat)",
+      "source_url": "https://www.bleedinggreennation.com/news/173767/eagles-news-espn-makes-the-case-for-philadelphia-to-trade-up-in-the-2026-nfl-draft",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "PHI",
+      "player": null,
+      "summary": "Beat case for PHI to trade up from No. 23 ahead of NYG/CAR/DAL/PIT who could swipe an OT. Aligns with Roseman 'selective strike' pattern.",
+      "credibility": "tier2",
+      "impact_on_model": "Reinforces PHI trade_up_rate. OT is the likely target position."
+    },
+    {
+      "source": "Field Gulls (beat)",
+      "source_url": "https://www.fieldgulls.com/seattle-seahawks-nfl-draft/165883/espn-seahawks-collecting-picks-browns-all-trades-2026-nfl-mock-draft",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "SEA/CLE",
+      "player": null,
+      "summary": "Most-cited framework: CLE sends pick 32 to SEA receiving 39+70+149. Schneider rarely stays at 4 picks.",
+      "credibility": "tier2",
+      "impact_on_model": "Codify CLE-SEA 32-for-39+70+149 as a live trade scenario."
+    },
+    {
+      "source": "At-Z Sports (beat agg)",
+      "source_url": "https://atozsports.com/nfl/pittsburgh-steelers-news/alex-highsmith-steelers-trade-rumors-ahead-of-2026-nfl-draft/",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "PIT",
+      "player": "Alex Highsmith",
+      "summary": "Front offices view Highsmith as likelier-to-be-moved than Nick Herbig if Steelers deal an edge.",
+      "credibility": "tier2",
+      "impact_on_model": "Minor — affects PIT's willingness to draft a rotational EDGE on Day 2, not R1 posture."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "NYJ",
+      "player": "Garrett Wilson",
+      "summary": "Multiple teams pinging Jets about WR Garrett Wilson. GM Darren Mougey willing to listen on strong offer.",
+      "credibility": "tier1",
+      "impact_on_model": "Low direct impact on R1 order; minor P(NYJ WR pick) reduction at 39."
+    },
+    {
+      "source": "Schefter (ESPN) via Chicago Bears/Cardinals coverage",
+      "source_url": "https://atozsports.com/nfl/chicago-bears-news/adam-schefter-latest-draft-intel-bears-tyson-bagent-trade-rumors-cardinals-ty-simpson/",
+      "date": "2026-04-20",
+      "topic": "team_shuffle",
+      "team": "CHI/ARI",
+      "player": "Ty Simpson / Tyson Bagent",
+      "summary": "Bears-Bagent trade rumors cooled (Chicago not a QB suitor this week); ARI remains Simpson destination at top of R2 or late R1 reach.",
+      "credibility": "tier2",
+      "impact_on_model": "Remove CHI QB latent need; ARI Simpson contingency live."
+    },
+    {
+      "source": "Yardbarker agg (Schefter-derived)",
+      "source_url": "https://www.yardbarker.com/nfl/articles/adam_schefter_just_added_more_fuel_to_the_fire_around_what_the_cleveland_browns_are_trying_to_do_in_the_nfl_drafts_first_round/s1_17313_43749929",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "CLE",
+      "player": null,
+      "summary": "Additional Schefter color: Browns exploring veteran-trade scenarios alongside trade-down/up. Reinforces Berry 'maximize asset' posture.",
+      "credibility": "tier2",
+      "impact_on_model": "No new directional change; confirms tripartite posture."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "source_url": "https://www.dailynorseman.com/minnesota-vikings-draft/96025/jonathan-greenard-trade-still-possible-draft-weekend-minnesota-vikings-philadelphia-eagles",
+      "date": "2026-04-20",
+      "topic": "trade_rumor",
+      "team": "PHI/MIN",
+      "player": "Jonathan Greenard",
+      "summary": "Eagles re-emerged as suitors for MIN EDGE Greenard; discussions could reignite during draft weekend. Vikings want premium Day-2 pick.",
+      "credibility": "tier1",
+      "impact_on_model": "PHI-MIN Greenard trade branch live; MIN draft plan sensitive to whether deal fires."
+    },
+    {
+      "source": "Yahoo Live / Rapoport",
+      "source_url": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-ahead-of-2026-draft-brandon-aubrey-cowboys-agree-on-record-setting-extension-steelers-open-minicamp-without-aaron-rodgers-update-162323363.html",
+      "date": "2026-04-20",
+      "topic": "smoke",
+      "team": "DAL",
+      "player": "Brandon Aubrey",
+      "summary": "Cowboys extended K Aubrey 4yr/$28M. Indirect signal DAL prioritizing veteran retention; not drafting a kicker Day 3.",
+      "credibility": "tier2",
+      "impact_on_model": "Negligible — remove tiny K probability from DAL Day 3."
+    }
+  ],
+  "pick_locks_summary": [
+    {
+      "team": "LV",
+      "pick": 1,
+      "player": "Fernando Mendoza",
+      "confidence": "tier1",
+      "p_estimate": 0.96,
+      "sources": ["Spytek presser 4/20", "Schefter 4/20", "Breer 4/20"]
+    },
+    {
+      "team": "ARI",
+      "pick": 3,
+      "player": "Jeremiyah Love",
+      "confidence": "tier1 (growing chatter, not hard lock)",
+      "p_estimate": 0.55,
+      "note": "Trade-down still a real branch; if hold → Love",
+      "sources": ["Schefter 4/20"]
+    },
+    {
+      "team": "TEN",
+      "pick": 4,
+      "player": "Sonny Styles",
+      "confidence": "tier1 (contingent on Love gone)",
+      "p_estimate": 0.45,
+      "sources": ["Schefter 4/20"]
+    },
+    {
+      "team": "CIN",
+      "pick": "no longer R1",
+      "note": "Removed — Dexter Lawrence trade delivered pick 10 to Bengals who then shipped it elsewhere? No — CIN RECEIVED pick 10. Hold.",
+      "correction": "CIN gained pick 10 from NYG via Lawrence trade per Pelissero 4/19. Both NYG (5) and CIN (10) now in top-10."
+    }
+  ],
+  "trade_scenarios_new_or_updated": [
+    {
+      "id": "CLE-trade-down-to-DAL",
+      "teams": ["CLE", "DAL"],
+      "framework": "DAL 12 + 20 → CLE for CLE 6 + 39 (or variant)",
+      "status": "rumored, Berry publicly working scenarios",
+      "p_fires": 0.15,
+      "source": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-first-round-trades-chiefs-cowboys/"
+    },
+    {
+      "id": "KC-trade-up-to-ARI-or-TEN",
+      "teams": ["KC", "ARI or TEN"],
+      "framework": "KC 9 + future → 3 or 4 for top EDGE (Bailey/Reese)",
+      "status": "reported by Schefter 4/20, Veach public signals active Thursday",
+      "p_fires": 0.12
+    },
+    {
+      "id": "PHI-trade-up-from-23",
+      "teams": ["PHI", "NYG/CAR/DAL/PIT range"],
+      "framework": "Roseman trying to jump ahead for an OT",
+      "status": "Schefter 4/20 'plotting'; Beat corroboration 4/20",
+      "p_fires": 0.20
+    },
+    {
+      "id": "PHI-MIN-Greenard",
+      "teams": ["PHI", "MIN"],
+      "framework": "PHI sends premium Day-2 pick (54 or 68) + Day-3 for Greenard",
+      "status": "reignites on draft weekend per Schefter 4/20",
+      "p_fires": 0.25
+    },
+    {
+      "id": "SEA-trade-down-from-32",
+      "teams": ["SEA", "CLE-back-up or other late-R1 buyer"],
+      "framework": "Most cited: CLE 32-for-39+70+149 (CLE moving up from 39 into 32)",
+      "status": "openly shopping per Schefter 4/20",
+      "p_fires": 0.30
+    },
+    {
+      "id": "NYG-Lawrence-completed",
+      "teams": ["NYG", "CIN"],
+      "framework": "NYG sends Dexter Lawrence to CIN for pick 10 + Lawrence 1yr/$28M ext",
+      "status": "COMPLETED 4/19",
+      "p_fires": 1.0
+    },
+    {
+      "id": "ARI-trade-down",
+      "teams": ["ARI", "KC or other"],
+      "framework": "ARI moves off 3 if offer meets value",
+      "status": "exploratory calls only (Schefter 4/20); Ossenfort willing to deal",
+      "p_fires": 0.18
+    },
+    {
+      "id": "NYJ-Garrett-Wilson",
+      "teams": ["NYJ", "multiple inquirers"],
+      "framework": "WR trade, not draft-capital-for-draft-capital",
+      "status": "listening only per Schefter 4/20",
+      "p_fires": 0.08
+    }
+  ],
+  "prospects_sliding": [
+    {
+      "player": "Garrett Nussmeier",
+      "direction": "stabilizing (not free-falling)",
+      "range_before": "late-R1 to Day 2",
+      "range_now": "solid Day 2 (post-spinal-cyst diagnosis, asymptomatic)",
+      "source": "Pelissero 4/20"
+    },
+    {
+      "player": "Jordyn Tyson",
+      "direction": "down",
+      "reason": "Durability / hamstring soft-tissue history — missed Combine and pro day",
+      "range_now": "late R1 (Jeremiah dropped 4 spots to 21)",
+      "source": "Brugler/Jeremiah aggregated 4/20"
+    },
+    {
+      "player": "Jermod McCoy",
+      "direction": "down",
+      "reason": "ACL medical file is sticking point despite 4.39 pro day",
+      "range_now": "late R1 / early R2",
+      "source": "Legwold top-100 4/20"
+    },
+    {
+      "player": "Arvell Reese",
+      "direction": "down (conditional slide)",
+      "reason": "If Bailey/Love/Styles go 2-3-4, Reese lands at 5 (NYG). Tier-1 conditional slide.",
+      "range_now": "2 (NYJ) or 5 (NYG)",
+      "source": "Schefter 4/20"
+    },
+    {
+      "player": "Kadyn Proctor",
+      "direction": "UP",
+      "reason": "Breer: 'going higher than some expected' — OT run in picks 12-25",
+      "range_now": "mid-R1 (was late-R1 to early R2)",
+      "source": "Breer 4/20"
+    }
+  ],
+  "team_shuffles": [
+    {
+      "team": "NYG",
+      "change": "Acquired pick 10 (Lawrence trade). DT need elevated. Thibodeaux staying.",
+      "source": "Pelissero 4/19, Rapoport 4/20"
+    },
+    {
+      "team": "CIN",
+      "change": "Added DT Lawrence (solved DT need); paid premium (pick 10 + 1yr/$28M ext); draft focus now skill/LB/secondary.",
+      "source": "Pelissero 4/19"
+    },
+    {
+      "team": "PIT",
+      "change": "OT need elevated to R1-tier (Broderick Jones neck setback). QB branch (Simpson) still live pending Rodgers.",
+      "source": "Schefter 4/20"
+    },
+    {
+      "team": "PHI",
+      "change": "Not replacing A.J. Brown in draft (deferred trade). Actively plotting trade-up AND Greenard EDGE acquisition.",
+      "source": "Schefter 4/20, Bleeding Green Nation 4/20"
+    },
+    {
+      "team": "CHI",
+      "change": "Bagent QB trade rumors cooled — CHI not a QB suitor this week.",
+      "source": "Schefter via At-Z 4/20"
+    },
+    {
+      "team": "DAL",
+      "change": "Kicker Aubrey extended; no K drafted Day 3.",
+      "source": "Rapoport 4/20"
+    },
+    {
+      "team": "ARI",
+      "change": "Raised P(Love @ 3). Still willing to trade down but no advanced offer.",
+      "source": "Schefter 4/20"
+    },
+    {
+      "team": "CLE",
+      "change": "Berry 'maximize the asset' — trade-down, trade-up, and veteran-acquisition ALL live at 6.",
+      "source": "Berry presser 4/20"
+    },
+    {
+      "team": "SEA",
+      "change": "Shopping No. 32; RB confirmed top need.",
+      "source": "Schefter 4/20"
+    }
+  ],
+  "top_10_highest_impact_findings": [
+    "1. Raiders LOCK at Mendoza @ 1 (Spytek presser, 4/20) — collapse LV P(Mendoza) to ~0.96; zero trade-down.",
+    "2. Cardinals 'growing chatter' on Jeremiyah Love @ 3 (Schefter 4/20) — RB top-3 scenario is now the modal outcome for ARI if they hold.",
+    "3. Schefter 4/20 conditional cascade: if NYJ→Bailey, ARI→Love, TEN→Styles, then Reese slides to NYG @ 5. Encode this as the baseline top-5.",
+    "4. Dexter Lawrence → Bengals for pick 10 COMPLETED (4/19). NYG holds 5 AND 10. CIN removes DT need, loses a R1 pick.",
+    "5. Pittsburgh OT need elevated to R1-tier after Broderick Jones neck setback (Schefter 4/20) — competes with Simpson QB branch at pick 21 contingent on Rodgers non-answer by Thursday.",
+    "6. Pelissero: 'Ty Simpson won't get out of the first half of R1' — tier-1 floor for Simpson. ARI (+130 betting fav) and NYJ (+225) the bidders; PIT contingent.",
+    "7. Howie Roseman 'plotting a deal on draft weekend' (Schefter 4/20) — two live branches: (a) trade up from 23 for OT, (b) Greenard EDGE acquisition from MIN. Both raise PHI variance.",
+    "8. Nussmeier's spinal-cyst cause diagnosed, asymptomatic (Pelissero 4/20) — prevents free-fall, stabilizes at Day 2. Saints @ 8 and Steelers @ 21 are NOT floors anymore; Day 2 is.",
+    "9. NYG Thibodeaux NOT being traded (Rapoport 4/20) — edge supply tightens for any team planning to trade for a vet EDGE; Greenard and Highsmith remain the names.",
+    "10. Five teams (ARI, TEN, NYG, CLE, WAS) exploring trade-down but buyers scarce (Breer 4/20 + Schultz 4/19-20) — trade RATES up, trade SUCCESS down. Net effect: more rumor noise, fewer completed R1 deals than supply would suggest."
+  ],
+  "team_agents_2026_recommended_edits": [
+    {
+      "team": "LV",
+      "edits": {
+        "trade_down_rate": "set to 0.05 (was higher)",
+        "P(Mendoza @ 1)": "pin to >= 0.95",
+        "source_note": "4/20: Spytek presser explicit — teams 'know where they stand.'"
+      }
+    },
+    {
+      "team": "ARI",
+      "edits": {
+        "roster_needs.RB": "bump to 3.5+ (was moderate)",
+        "qb_urgency": "keep moderate — Simpson only at top of R2/late-R1 reach",
+        "trade_down_rate": "0.30 (exploratory only)",
+        "P(Love @ 3)": "raise to ~0.55",
+        "needs_source": "schefter_2026-04-20"
+      }
+    },
+    {
+      "team": "TEN",
+      "edits": {
+        "P(Styles @ 4 | Love gone)": "raise to ~0.45",
+        "trade_down_rate": "0.25 (listed as down-mover but no advanced offers)"
+      }
+    },
+    {
+      "team": "NYG",
+      "edits": {
+        "all_r1_picks": "[5, 10]",
+        "roster_needs.IDL": "bump to 4.0+ (Lawrence departed)",
+        "roster_needs.EDGE": "reduce — Thibodeaux staying",
+        "trade_down_rate": "0.20 (listed among 5 teams exploring down-moves)"
+      }
+    },
+    {
+      "team": "CIN",
+      "edits": {
+        "all_r1_picks": "[27]  # removed 10 — used in Lawrence trade",
+        "roster_needs.IDL": "reduce sharply (Lawrence solves it)",
+        "cap_posture": "veteran-retention flagged"
+      }
+    },
+    {
+      "team": "CLE",
+      "edits": {
+        "trade_down_rate": "hold at 0.70",
+        "trade_up_rate": "raise to 0.25 (Berry 'up' scenario live)",
+        "veteran_trade_branch": "add; non-zero probability of trading pick for a vet"
+      }
+    },
+    {
+      "team": "PIT",
+      "edits": {
+        "roster_needs.OT": "elevate to R1 tier (5.0)",
+        "qb_urgency": "keep contingent; Rodgers silence = Simpson branch @ 21 live",
+        "P(OT @ 21)": "meaningful second branch alongside Simpson"
+      }
+    },
+    {
+      "team": "PHI",
+      "edits": {
+        "trade_up_rate": "raise to 0.35 (Schefter 4/20 'plotting')",
+        "roster_needs.WR": "do NOT add — Brown trade deferred, they're fine for 2026",
+        "edge_branch": "add Greenard-acquisition alt path (P ~ 0.25 of firing)"
+      }
+    },
+    {
+      "team": "MIN",
+      "edits": {
+        "trade_posture": "Greenard potentially moved for premium Day-2 pick",
+        "contingent_edge_replacement": "flag — if Greenard goes, MIN drafts EDGE at 24"
+      }
+    },
+    {
+      "team": "KC",
+      "edits": {
+        "trade_up_rate": "raise to 0.25 (Schefter 4/20 contacted ARI and TEN)",
+        "trade_target_position": "EDGE (Bailey/Reese)"
+      }
+    },
+    {
+      "team": "SEA",
+      "edits": {
+        "trade_down_rate": "raise to 0.55 (only 4 picks, openly shopping 32)",
+        "roster_needs.RB": "elevate to top-3 need"
+      }
+    },
+    {
+      "team": "CHI",
+      "edits": {
+        "qb_latent_need": "remove / reduce — Bagent rumors cooled"
+      }
+    },
+    {
+      "team": "DAL",
+      "edits": {
+        "K_draft_prob": "zero out — Aubrey extended"
+      }
+    },
+    {
+      "team": "NYJ",
+      "edits": {
+        "P(Bailey @ 2)": "~0.55 (consensus crystallizing per Breer, but visit-cancellation flag)",
+        "P(Reese @ 2)": "~0.35",
+        "P(trade_down)": "~0.10",
+        "garrett_wilson_trade": "listening only; low probability"
+      }
+    },
+    {
+      "team": "NE",
+      "edits": {
+        "A.J. Brown acquisition": "deferred post-June-1 — do NOT change draft posture for it"
+      }
+    },
+    {
+      "team": "WAS",
+      "edits": {
+        "trade_down_rate": "raise modestly — listed among 5 teams exploring down-move per Breer 4/20"
+      }
+    }
+  ],
+  "explicitly_no_new_intel_in_window": [
+    "Jeremy Fowler (ESPN) — no standalone 4/19-4/20 report; folded into Schefter column.",
+    "Mike Garafolo — only co-bylined on NFL.com Monday buzz (captured above).",
+    "Peter King (FMIA) — next FMIA preview posted earlier in week; no 4/19 or 4/20 standalone.",
+    "Dianna Russini (The Athletic) — resigned from The Athletic recently (Vrabel photo investigation fallout); no draft reporting in window.",
+    "Josina Anderson — no dated 4/19-4/20 posts surfaced in public indexing.",
+    "Jay Glazer (FOX) — no dated 4/19-4/20 posts surfaced.",
+    "Local beats: BAL, BUF, CAR, DEN, DET, GB, HOU, IND, JAX, KC (beyond Schefter), LAC, LAR, MIA, NO (Nussmeier coverage only), SF, TB, ATL, TEN (beyond Schefter) — no net-new reporting dated 4/19 or 4/20."
+  ],
+  "caveats": [
+    "Dianna Russini has exited The Athletic; treat any April reporting attributed to her as pre-departure legacy unless confirmed.",
+    "All 'trade-down exploring' intel (ARI/TEN/NYG/CLE/WAS) reflects LISTENING, not CLOSED deals. Weight accordingly.",
+    "The NYJ visit-cancellation on Bailey is explicitly flagged by CBS/Breer as potentially a smokescreen — do NOT collapse NYJ onto Reese based on it.",
+    "Rodgers decision is the single biggest pending variable for PIT; model must branch."
+  ]
+}

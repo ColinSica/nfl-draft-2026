@@ -331,6 +331,35 @@ def _apply_reasoning(pros: pd.DataFrame) -> pd.DataFrame:
         grade = grade + shift
         delta = delta + shift
 
+    # Exclusive / private-workout visits — per backtest agent, generic visit
+    # is saturated (78% of R1 prospects have one) but EXCLUSIVE visits
+    # (few teams, or private workouts) carry real signal. Give them a
+    # stronger pull. Uses visit_exclusivity (lower = more exclusive).
+    if "visit_exclusivity" in out.columns:
+        vex = pd.to_numeric(out["visit_exclusivity"], errors="coerce").fillna(99)
+        # <=3 teams visited = highly exclusive interest
+        exclusive = (vex <= 3).astype(float)
+        shift = -6.0 * exclusive * dampen
+        grade = grade + shift
+        delta = delta + shift
+
+    # RAS override for traits-over-tape EDGE/OL — per 2024-2025 backtest
+    # pattern: PFF < 83 + RAS > 9.5 prospects went R1 at 2-3x the board-implied
+    # rate (Stewart, Chop, Mims, Guyton, Zabel, Mykel Williams). Our PFF prior
+    # was dominating where a trait-athlete override should pull them up.
+    if "ras_score" in out.columns and "pff_grade_3yr" in out.columns:
+        ras_s = pd.to_numeric(out["ras_score"], errors="coerce").fillna(0)
+        pff_s = pd.to_numeric(out["pff_grade_3yr"], errors="coerce").fillna(99)
+        pos_s = out["position"].fillna("").astype(str).str.upper()
+        # Traits-over-tape positions: EDGE, OT, IOL, DL/IDL, CB (where
+        # analysts regularly reach for elite athletic profiles)
+        trait_pos = pos_s.isin(["EDGE", "OT", "T", "IOL", "G", "C", "DL", "IDL", "CB"])
+        # Elite RAS + modest PFF = reach candidate
+        ras_override = ((ras_s >= 9.5) & (pff_s < 83) & (pff_s >= 70) & trait_pos).astype(float)
+        shift = -14.0 * ras_override * dampen
+        grade = grade + shift
+        delta = delta + shift
+
     # Pre-draft stock direction — public reports of trending-up prospects.
     if "stock_direction" in out.columns:
         sd = pd.to_numeric(out["stock_direction"], errors="coerce").fillna(0)

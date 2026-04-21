@@ -61,7 +61,7 @@
     },
     "trade_behavior": {
       "trade_up_rate": 0.5,
-      "trade_down_rate": 0.5,
+      "trade_down_rate": 0.3,
       "pdf_tier": {
         "trade_down_tier": "HIGH",
         "trade_down_prob": 0.7
@@ -506,7 +506,10 @@
         "recent Day 2 investments in edge depth",
         "defensive foundation priority"
       ]
-    }
+    },
+    "_4_21_news": [
+      "Schefter 4/20: growing chatter on Love at 3; trade-down still live"
+    ]
   },
   "ATL": {
     "team": "ATL",
@@ -3591,7 +3594,11 @@
         "Duke Tobin consistent secondary investment strategy",
         "best-available at premium position"
       ]
-    }
+    },
+    "r1_picks": [],
+    "_4_21_news": [
+      "Out of R1: sent pick 10 to NYG for Dexter Lawrence (Rapoport 4/19)"
+    ]
   },
   "CLE": {
     "team": "CLE",
@@ -3659,7 +3666,7 @@
       "G": -0.01
     },
     "trade_behavior": {
-      "trade_up_rate": 0.5,
+      "trade_up_rate": 0.25,
       "trade_down_rate": 0.7,
       "pdf_tier": {
         "trade_down_prob": 0.7,
@@ -4222,7 +4229,11 @@
         "ranked last in team pass-blocking grade (49.7)",
         "ranked last in WR receiving yards (1,467)"
       ]
-    }
+    },
+    "_4_21_news": [
+      "Berry presser 4/20: 'maximize the asset' — trade-up branch new",
+      "Berry 4/20: trade-down also live"
+    ]
   },
   "DAL": {
     "team": "DAL",
@@ -7597,7 +7608,7 @@
     },
     "gm_affinity": {},
     "trade_behavior": {
-      "trade_up_rate": 0.7,
+      "trade_up_rate": 0.25,
       "trade_down_rate": 0.4,
       "pdf_tier": {
         "trade_up_prob": 0.7,
@@ -8131,7 +8142,10 @@
         "aggressive trade-ups for elite talent",
         "rare top-10 pick opportunity"
       ]
-    }
+    },
+    "_4_21_news": [
+      "4/20: Veach exploring trade-up to 3-4 for top EDGE; contacted ARI & TEN"
+    ]
   },
   "LAC": {
     "team": "LAC",
@@ -9196,7 +9210,7 @@
     "gm_affinity": {},
     "trade_behavior": {
       "trade_up_rate": 0.35,
-      "trade_down_rate": 0.3,
+      "trade_down_rate": 0.05,
       "pdf_tier": {}
     },
     "visit_signals": {
@@ -9580,7 +9594,10 @@
         "Tom Brady minority owner influence",
         "prioritize QB evaluation above all"
       ]
-    }
+    },
+    "_4_21_news": [
+      "Spytek presser 4/20: 'teams know where they stand' — Mendoza effective lock"
+    ]
   },
   "MIA": {
     "team": "MIA",
@@ -10722,7 +10739,11 @@
         "haven't had starting safety above 75.0 since 2021",
         "multi-year pattern of safety-in-first-round"
       ]
-    }
+    },
+    "_4_21_news_edge": "Schefter 4/20: Greenard trade talks reignited — EDGE replacement contingent",
+    "_4_21_news": [
+      "if PHI completes Greenard deal, MIN pivots draft"
+    ]
   },
   "NE": {
     "team": "NE",
@@ -11779,9 +11800,9 @@
     "roster_needs": {
       "IOL": 4.0,
       "S": 4.0,
+      "IDL": 4.0,
       "TE": 2.5,
       "OT": 2.5,
-      "IDL": 2.5,
       "LB": 2.5,
       "CB": 2.5,
       "QB": 1.5,
@@ -12314,7 +12335,10 @@
         "Ohio State program ties / pro day attendance",
         "only two top-100 picks limits options"
       ]
-    }
+    },
+    "_4_21_news": [
+      "Rapoport 4/19: Dexter Lawrence to CIN — NYG now holds 5 AND 10; IDL need spikes; Thibodeaux staying"
+    ]
   },
   "NYJ": {
     "team": "NYJ",
@@ -12952,7 +12976,7 @@
       "_source": "2020-2025 R1 analysis: Roseman IDL 2 of 7 (28.6% vs 5.2% league) = +23.4 pts (Jordan Davis '22 + Jalen Carter '23, both trade-ups); 4 of 7 R1 were trade-ups (57%)"
     },
     "trade_behavior": {
-      "trade_up_rate": 0.6,
+      "trade_up_rate": 0.35,
       "trade_down_rate": 0.4,
       "pdf_tier": {}
     },
@@ -13409,7 +13433,10 @@
         "invest in youth over experience",
         "proactive depth / risk-taking on upside"
       ]
-    }
+    },
+    "_4_21_news": [
+      "Schefter 4/20: Roseman 'plotting a deal' — WR urgency deferred post-Jun-1"
+    ]
   },
   "PIT": {
     "team": "PIT",
@@ -13431,7 +13458,7 @@
     "qb_situation": "bridge",
     "qb_urgency": 0.65,
     "roster_needs": {
-      "OT": 4.5,
+      "OT": 5.0,
       "QB": 4.0,
       "WR": 2.5,
       "IOL": 2.5,
@@ -13949,7 +13976,11 @@
         "traditional approach emphasizing LB play",
         "ranked fourth from last in WR receiving yards"
       ]
-    }
+    },
+    "_4_21_news_qb": "Rodgers silence + Broderick Jones neck setback — OT R1 lock contingent on QB path",
+    "_4_21_news": [
+      "Breer 4/20"
+    ]
   },
   "SEA": {
     "team": "SEA",
@@ -13972,6 +14003,7 @@
     "qb_urgency": 0.0,
     "roster_needs": {
       "IOL": 5.0,
+      "RB": 4.5,
       "OT": 4.0,
       "TE": 2.5,
       "EDGE": 2.5,
@@ -13979,7 +14011,6 @@
       "CB": 2.5,
       "S": 2.5,
       "QB": 1.2,
-      "RB": 1.2,
       "WR": 1.2,
       "IDL": 1.2
     },
@@ -14013,7 +14044,7 @@
     },
     "trade_behavior": {
       "trade_up_rate": 0.35,
-      "trade_down_rate": 0.85,
+      "trade_down_rate": 0.55,
       "pdf_tier": {
         "trade_down_tier": "HIGH",
         "trade_down_prob": 0.85,
@@ -14449,7 +14480,10 @@
         "patient board approach / trade-back opportunity",
         "Super Bowl champions no immediate needs outside RB"
       ]
-    }
+    },
+    "_4_21_news": [
+      "4/20: SEA actively shopping 32 — RB top need"
+    ]
   },
   "SF": {
     "team": "SF",
@@ -15983,7 +16017,11 @@
         "luxury pick after free agency",
         "best-player-available with safest floor"
       ]
-    }
+    },
+    "_4_21_news_pick4": "Schefter 4/20: P(Styles at 4 | Love gone) ~0.45",
+    "_4_21_news": [
+      "conditional on ARI not taking Love at 3"
+    ]
   },
   "WAS": {
     "team": "WAS",
@@ -16646,9 +16684,9 @@
   },
   "_meta_medical_flags_2026": {
     "Jordyn Tyson": {
-      "type": "durability",
-      "severity": "low",
-      "detail": "Injury history but 4/17 workout looked elite per Fowler — stock rising, R1 back in play. Minimal penalty."
+      "type": "hamstring_durability",
+      "severity": "medium",
+      "detail": "Jeremiah 4/20 mock: dropped 4 spots to WR21 over hamstring durability concerns."
     },
     "Caleb Banks": {
       "type": "foot",
@@ -16656,9 +16694,9 @@
       "detail": "Missed 9 games of 2025 with foot injury. Pass-rush production solid; run defense grade weak."
     },
     "Jermod McCoy": {
-      "type": "acl_recovery_clean",
-      "severity": "low",
-      "detail": "Kiper 4/19 research: ACL recovery complete, 4.37 forty, full injury context priced in at consensus #16."
+      "type": "acl_medical_file_reviewed",
+      "severity": "medium",
+      "detail": "4/20: despite 4.39 pro day, teams flagging medical file — late-R1 / early-R2."
     },
     "Drew Allar": {
       "type": "ankle",
@@ -16668,7 +16706,7 @@
     "Garrett Nussmeier": {
       "type": "spinal_cyst_asymptomatic",
       "severity": "low",
-      "detail": "Pelissero 2026-04-20: asymptomatic post-spinal-cyst diagnosis; stabilizes at Day 2."
+      "detail": "Pelissero 4/20: asymptomatic post-diagnosis; Day 2 projection stable."
     },
     "Zachariah Branch": {
       "type": "character_arrest",
