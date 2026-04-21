@@ -329,11 +329,10 @@ def simulation_reasoning() -> dict:
     }
 
 
-# Market-implied probability lookup, loaded lazily on first use. Used as the
-# primary source of "will this pick actually happen" probability on the UI —
-# Kalshi prices are real money on the outcome, which is more meaningful than
-# our sim's raw frequency (which only measures model conviction).
+# Market-implied probability lookups, loaded lazily on first use.
 _MARKET_LANDING_CACHE: dict[str, dict[str, float]] | None = None
+_PICK_ANCHORS_CACHE: dict[str, dict[str, float]] | None = None
+_TEAM_R1_SLOTS_CACHE: dict[str, list[int]] | None = None
 
 
 def _load_market_landings() -> dict[str, dict[str, float]]:
@@ -352,6 +351,62 @@ def _load_market_landings() -> dict[str, dict[str, float]]:
     except Exception:
         _MARKET_LANDING_CACHE = {}
     return _MARKET_LANDING_CACHE
+
+
+def _load_pick_anchors() -> dict[str, dict[str, float]]:
+    """{player: {p10, p50, p90}} from Kalshi pick-position markets."""
+    global _PICK_ANCHORS_CACHE
+    if _PICK_ANCHORS_CACHE is not None:
+        return _PICK_ANCHORS_CACHE
+    try:
+        import sys as _sys
+        _sys.path.insert(0, str(ROOT))
+        from src.models.independent.odds_anchor import load_anchors
+        raw = load_anchors()
+        _PICK_ANCHORS_CACHE = {
+            p: {"p10": float(d.get("pick_p10") or 0),
+                "p50": float(d.get("pick_p50") or 0),
+                "p90": float(d.get("pick_p90") or 0)}
+            for p, d in raw.items()
+        }
+    except Exception:
+        _PICK_ANCHORS_CACHE = {}
+    return _PICK_ANCHORS_CACHE
+
+
+def _load_team_r1_slots() -> dict[str, list[int]]:
+    """{team_code: [r1_slot, ...]} — the R1 picks each team originally owns."""
+    global _TEAM_R1_SLOTS_CACHE
+    if _TEAM_R1_SLOTS_CACHE is not None:
+        return _TEAM_R1_SLOTS_CACHE
+    owners = _original_pick_owners()
+    out: dict[str, list[int]] = {}
+    for slot, team in owners.items():
+        if team and slot <= 32:
+            out.setdefault(team, []).append(slot)
+    for k in out:
+        out[k].sort()
+    _TEAM_R1_SLOTS_CACHE = out
+    return out
+
+
+def _slot_share_of_team_landing(player: str, team: str, slot: int) -> float:
+    """If a team has multiple R1 picks, distribute the team-landing probability
+    across their slots. Slot weight is proportional to inverse distance to
+    the player's market P50. Returns this slot's share of the team's total
+    landing probability — 1.0 for single-slot teams, <1 otherwise."""
+    team_slots = _load_team_r1_slots().get(team, [])
+    if len(team_slots) <= 1:
+        return 1.0
+    anchors = _load_pick_anchors()
+    p50 = (anchors.get(player) or {}).get("p50") or 0.0
+    if p50 <= 0:
+        # No market P50 — share evenly across the team's slots
+        return 1.0 / len(team_slots)
+    weights = [1.0 / (1.0 + abs(s - p50)) for s in team_slots]
+    total = sum(weights)
+    this_weight = 1.0 / (1.0 + abs(slot - p50))
+    return this_weight / total if total > 0 else 1.0 / len(team_slots)
 
 
 def _displayed_probability(raw_sim_prob: float,
@@ -386,11 +441,18 @@ def _displayed_probability(raw_sim_prob: float,
             discount += min(0.12, (slot - 5) * 0.008)
         model_prior = raw_sim_prob * (1.0 - discount)
 
-    # Market side — Kalshi team-landing probability (if covered)
+    # Market side — Kalshi team-landing probability (if covered).
+    # Team-landing = P(team drafts player in entire draft). For teams with
+    # multiple R1 picks, we split that across slots weighted by the player's
+    # market P50 (closer slot = larger share). Single-slot teams get full
+    # allocation at their one R1 pick.
     market_prob = None
     if player and team:
         landings = _load_market_landings()
-        market_prob = (landings.get(player) or {}).get(team)
+        team_landing = (landings.get(player) or {}).get(team)
+        if team_landing is not None and team_landing > 0 and slot:
+            share = _slot_share_of_team_landing(player, team, int(slot))
+            market_prob = float(team_landing) * share
 
     # Blend or use model-only
     if market_prob is None or market_prob <= 0:
@@ -400,7 +462,7 @@ def _displayed_probability(raw_sim_prob: float,
         # consensus plus trader intel we don't see; we lean on it slightly
         # more than our own sim, but our structural signals still carry
         # weight because markets can under-price specific team-fit data.
-        blended = 0.60 * float(market_prob) + 0.40 * model_prior
+        blended = 0.60 * market_prob + 0.40 * model_prior
 
     # World-uncertainty haircut: whatever the signals say, the actual draft
     # has slot-swap trades, last-minute calls from GMs, medical flags, and
