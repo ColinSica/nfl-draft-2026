@@ -16,14 +16,16 @@ export function SmallCaps({
   as: As = 'span' as any,
   className = '',
   tight = false,
+  style,
 }: {
   children: ReactNode;
   as?: any;
   className?: string;
   tight?: boolean;
+  style?: React.CSSProperties;
 }) {
   return (
-    <As className={`${tight ? 'caps-tight' : 'caps'} ${className}`}>
+    <As className={`${tight ? 'caps-tight' : 'caps'} ${className}`} style={style}>
       {children}
     </As>
   );

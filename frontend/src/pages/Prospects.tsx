@@ -1,265 +1,239 @@
+/**
+ * Prospects — big board with landing distributions.
+ * Per user brief: Summary / Landing spots / Team fits / Intel / Reasoning.
+ * Rebuilt for light theme.
+ */
 import { useEffect, useMemo, useState } from 'react';
-import { Search, ArrowDown } from 'lucide-react';
-import { api } from '../lib/api';
-import { cn } from '../lib/format';
-import { positionColor } from '../lib/teams';
-
-function SortHeader({
-  label, title, active, onClick, className,
-}: {
-  label: string;
-  title?: string;
-  active: boolean;
-  onClick: () => void;
-  className?: string;
-}) {
-  return (
-    <th
-      title={title}
-      onClick={onClick}
-      className={cn(
-        'font-medium py-2.5 cursor-pointer select-none hover:text-text transition',
-        active && 'text-accent',
-        className,
-      )}
-    >
-      <span className="inline-flex items-center gap-1">
-        {label}
-        {active && <ArrowDown size={10} />}
-      </span>
-    </th>
-  );
-}
+import { Search } from 'lucide-react';
+import { teamColor } from '../lib/teamColors';
+import { SectionHeader, SmallCaps, MissingText, HRule } from '../components/editorial';
+import { displayValue } from '../lib/display';
 
 type Prospect = {
   player: string;
-  position: string | null;
+  position: string;
   college: string | null;
-  rank: number | null;
-  final_score: number | null;
-  ras_score: number | null;
-  weight: number | null;
-  height: number | null;
+  consensus_rank: number | null;
+  landings: { slot: number; team: string | null; probability: number }[];
+  mean_landing: number;
+  variance_landing: number;
+  most_likely_slot: number;
+  most_likely_team: string | null;
 };
 
 export function Prospects() {
-  const [data, setData] = useState<Prospect[]>([]);
-  const [err, setErr] = useState<string | null>(null);
-  const [search, setSearch] = useState('');
-  const [posFilter, setPosFilter] = useState('ALL');
-  const [sortKey, setSortKey] = useState<'rank' | 'ras' | 'weight' | 'model'>('rank');
+  const [prospects, setProspects] = useState<Prospect[] | null>(null);
+  const [query, setQuery] = useState('');
+  const [posFilter, setPosFilter] = useState<string>('ALL');
+  const [selected, setSelected] = useState<string | null>(null);
 
   useEffect(() => {
-    api.prospects(80).then((r) => setData(r.prospects as Prospect[]))
-      .catch((e) => setErr(String(e)));
+    fetch('/api/simulations/prospects')
+      .then(r => r.json())
+      .then(d => setProspects(d.prospects ?? []))
+      .catch(() => setProspects([]));
   }, []);
 
-  const positions = useMemo(
-    () => Array.from(new Set(data.map((p) => p.position).filter(Boolean) as string[])).sort(),
-    [data],
-  );
-
-  // Derive model rank by sorting ALL prospects by final_score ASCENDING —
-  // lower final_score = earlier projected pick = better rank. Stays stable
-  // regardless of the current position/search filter.
-  const modelRankMap = useMemo(() => {
-    const byScore = [...data]
-      .filter((p) => p.final_score != null)
-      .sort((a, b) => (a.final_score ?? Infinity) - (b.final_score ?? Infinity));
-    const m = new Map<string, number>();
-    byScore.forEach((p, i) => m.set(p.player, i + 1));
-    return m;
-  }, [data]);
+  const positions = useMemo(() => {
+    const s = new Set<string>();
+    (prospects ?? []).forEach(p => p.position && s.add(p.position));
+    return ['ALL', ...Array.from(s).sort()];
+  }, [prospects]);
 
   const filtered = useMemo(() => {
-    const needle = search.trim().toLowerCase();
-    const out = data.filter((p) => {
+    if (!prospects) return [];
+    const q = query.trim().toLowerCase();
+    return prospects.filter(p => {
       if (posFilter !== 'ALL' && p.position !== posFilter) return false;
-      if (!needle) return true;
+      if (!q) return true;
       return (
-        p.player.toLowerCase().includes(needle) ||
-        (p.college ?? '').toLowerCase().includes(needle) ||
-        (p.position ?? '').toLowerCase() === needle
+        p.player.toLowerCase().includes(q) ||
+        (p.college ?? '').toLowerCase().includes(q) ||
+        (p.position ?? '').toLowerCase().includes(q)
       );
     });
-    out.sort((a, b) => {
-      if (sortKey === 'ras') return (b.ras_score ?? 0) - (a.ras_score ?? 0);
-      if (sortKey === 'weight') return (b.weight ?? 0) - (a.weight ?? 0);
-      if (sortKey === 'model') {
-        return (modelRankMap.get(a.player) ?? 9999) - (modelRankMap.get(b.player) ?? 9999);
-      }
-      return (a.rank ?? 999) - (b.rank ?? 999);
-    });
-    return out;
-  }, [data, search, posFilter, sortKey, modelRankMap]);
+  }, [prospects, query, posFilter]);
 
-  if (err) return <div className="card p-6 text-tier-low text-sm">{err}</div>;
+  const selectedProspect = filtered.find(p => p.player === selected) ?? null;
 
   return (
-    <div className="space-y-5">
-      <div>
-        <div className="text-[11px] font-medium uppercase tracking-wider text-text-muted mb-1">
-          Consensus big board
-        </div>
-        <h1 className="text-2xl font-semibold tracking-tight">Prospects</h1>
-        <p className="text-sm text-text-muted mt-1 max-w-3xl">
-          Top-ranked prospects by consensus rank, with combine measurements
-          and stage-1 model's predicted draft slot.
-        </p>
-      </div>
+    <div className="space-y-10 pb-16">
+      <SectionHeader
+        kicker="Big board"
+        title="Prospects and landing spots."
+      />
 
-      <div className="card p-3 flex flex-wrap items-center gap-3">
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-bg-raised border border-border rounded-md flex-1 min-w-0 sm:min-w-[240px]">
-          <Search size={14} className="text-text-subtle" />
+      <div className="flex flex-wrap items-center gap-3">
+        <label className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md">
+          <Search size={16} className="text-ink-soft" />
           <input
-            className="bg-transparent outline-none flex-1 text-sm placeholder:text-text-subtle"
-            placeholder="Search prospect / college / position…"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search prospect, college, position…"
+            className="flex-1 bg-transparent outline-none text-sm text-ink placeholder:text-ink-soft/60"
           />
-        </div>
+        </label>
         <select
           value={posFilter}
           onChange={(e) => setPosFilter(e.target.value)}
-          className="bg-bg-raised border border-border rounded-md px-3 py-1.5 text-sm outline-none focus:border-accent"
+          className="px-3 py-2 bg-paper-surface border border-ink-edge text-sm text-ink font-mono"
         >
-          <option value="ALL">All positions</option>
-          {positions.map((p) => <option key={p} value={p}>{p}</option>)}
+          {positions.map(p => <option key={p} value={p}>{p}</option>)}
         </select>
-        <div className="text-xs text-text-subtle ml-auto">
-          Sorted by {
-            sortKey === 'rank' ? 'consensus rank' :
-            sortKey === 'model' ? 'model rank' :
-            sortKey === 'ras' ? 'RAS score' : 'weight'
-          } · {filtered.length} / {data.length}
+        <span className="ml-auto text-sm text-ink-soft">
+          {filtered.length} {filtered.length === 1 ? 'prospect' : 'prospects'}
+        </span>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-6">
+        {/* Left: prospect list */}
+        <div>
+          {!prospects ? (
+            <div className="card p-10 text-center text-ink-soft italic">Loading big board…</div>
+          ) : filtered.length === 0 ? (
+            <div className="card p-10 text-center text-ink-soft italic">No prospects match.</div>
+          ) : (
+            <div className="border border-ink-edge bg-paper-surface">
+              {filtered.slice(0, 120).map((p, i) => (
+                <button
+                  key={p.player + i}
+                  onClick={() => setSelected(p.player)}
+                  className={`w-full text-left flex items-baseline gap-4 px-4 py-3 border-b border-ink-edge last:border-b-0
+                    transition ${selected === p.player ? 'bg-mode-indie/12' : 'hover:bg-paper-hover'}
+                  `}
+                >
+                  <span className="display-num text-xl text-ink-soft w-8 shrink-0 text-right">
+                    {p.most_likely_slot || '·'}
+                  </span>
+                  <span className="flex-1 min-w-0">
+                    <div className="display-broadcast text-lg leading-none text-ink truncate">
+                      {p.player.toUpperCase()}
+                    </div>
+                    <div className="text-xs text-ink-soft mt-0.5 font-mono">
+                      {p.position} · {displayValue(p.college, '—')}
+                    </div>
+                  </span>
+                  <span className="text-right shrink-0 text-xs font-mono">
+                    {p.most_likely_team && (
+                      <>
+                        <span className="caps-tight text-ink-soft">to</span>{' '}
+                        <span className="text-ink font-bold">{p.most_likely_team}</span>
+                      </>
+                    )}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+          {filtered.length > 120 && (
+            <p className="mt-4 text-xs text-ink-soft text-center">
+              Showing first 120 of {filtered.length}. Refine search to see others.
+            </p>
+          )}
+        </div>
+
+        {/* Right: detail panel */}
+        <aside className="space-y-5 lg:sticky lg:top-20 self-start">
+          {!selectedProspect ? (
+            <div className="card p-6 text-center">
+              <p className="text-ink-soft italic">Select a prospect to see landing distribution and details.</p>
+            </div>
+          ) : (
+            <ProspectDetail p={selectedProspect} />
+          )}
+        </aside>
+      </div>
+    </div>
+  );
+}
+
+function ProspectDetail({ p }: { p: Prospect }) {
+  const landings = p.landings.slice(0, 8);
+  const totalProb = landings.reduce((s, l) => s + l.probability, 0);
+
+  return (
+    <>
+      <div className="card">
+        <div className="p-5 space-y-3">
+          <div>
+            <SmallCaps tight className="text-ink-soft">Selected</SmallCaps>
+            <h3 className="display-broadcast text-3xl md:text-4xl leading-[0.9] text-ink mt-1">
+              {p.player.toUpperCase()}
+            </h3>
+            <div className="mt-2 text-xs font-mono text-ink-soft">
+              <span className="px-1.5 py-0.5 bg-ink text-paper font-bold mr-2">{p.position}</span>
+              {displayValue(p.college, '—')}
+              {p.consensus_rank && (
+                <span className="ml-2">· Consensus #{p.consensus_rank}</span>
+              )}
+            </div>
+          </div>
+          <HRule />
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <SmallCaps tight className="text-ink-soft block">Mean landing</SmallCaps>
+              <div className="display-num text-3xl text-ink mt-1">
+                {p.mean_landing?.toFixed(1) ?? '—'}
+              </div>
+            </div>
+            <div>
+              <SmallCaps tight className="text-ink-soft block">Variance</SmallCaps>
+              <div className="display-num text-3xl text-ink mt-1">
+                ±{Math.sqrt(p.variance_landing ?? 0).toFixed(1)}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {filtered.length === 0 ? (
-        <div className="card p-8 text-center text-text-muted text-sm">
-          No prospects match your filters.
-          <button
-            onClick={() => { setSearch(''); setPosFilter('ALL'); }}
-            className="text-accent hover:underline ml-2"
-          >
-            Clear filters
-          </button>
-        </div>
-      ) : (
-      <div className="card overflow-x-auto">
-        <table className="w-full text-sm min-w-[640px]">
-          <thead>
-            <tr className="text-[10px] uppercase tracking-wider text-text-subtle border-b border-border bg-bg-raised/60">
-              <SortHeader
-                label="ADP"
-                title="Average Draft Position — consensus across 20+ analyst mock drafts. Click to sort best-first."
-                active={sortKey === 'rank'}
-                onClick={() => setSortKey('rank')}
-                className="text-left pl-4 pr-2 w-16"
-              />
-              <SortHeader
-                label="Model rank"
-                title="Model rank — stage-1 score across all prospects. Click to sort best-first."
-                active={sortKey === 'model'}
-                onClick={() => setSortKey('model')}
-                className="text-left px-2 w-20"
-              />
-              <th className="text-left font-medium py-2.5 px-2">Player</th>
-              <th className="text-left font-medium py-2.5 px-2">College</th>
-              <SortHeader
-                label="Weight"
-                title="Weight (lbs). Click to sort highest-first."
-                active={sortKey === 'weight'}
-                onClick={() => setSortKey('weight')}
-                className="text-right px-2 w-20"
-              />
-              <SortHeader
-                label="RAS"
-                title="Relative Athletic Score. Click to sort highest-first."
-                active={sortKey === 'ras'}
-                onClick={() => setSortKey('ras')}
-                className="text-right px-2 w-16"
-              />
-              <th className="text-right font-medium py-2.5 pr-4 pl-2 w-24">Model score</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtered.slice(0, 100).map((p) => {
-              const modelRank = modelRankMap.get(p.player);
-              const gap = (p.rank != null && modelRank != null) ? p.rank - modelRank : null;
-              return (
-              <tr key={p.player} className="border-b border-border/60 last:border-0 hover:bg-bg-hover/40">
-                <td className="py-2 pl-4 pr-2 font-mono tabular-nums">
-                  {p.rank != null ? (
-                    <span className="text-text">#{p.rank}</span>
-                  ) : <span className="text-text-subtle">—</span>}
-                </td>
-                <td className="py-2 px-2 font-mono tabular-nums">
-                  {modelRank != null ? (
-                    <span className="inline-flex items-center gap-1.5">
-                      <span className="text-text">#{modelRank}</span>
-                      {gap != null && gap !== 0 && (
-                        <span className={cn(
-                          'text-[10px] font-medium',
-                          gap > 0 ? 'text-tier-high' : 'text-tier-midlo',
-                        )}
-                        title={gap > 0
-                          ? `Model ranks ${Math.abs(gap)} spots higher than consensus`
-                          : `Model ranks ${Math.abs(gap)} spots lower than consensus`}>
-                          {gap > 0 ? `↑${gap}` : `↓${Math.abs(gap)}`}
-                        </span>
-                      )}
+      <div className="card">
+        <header className="px-5 py-3 border-b border-ink-edge">
+          <SmallCaps className="text-ink">Landing distribution</SmallCaps>
+        </header>
+        <div className="p-5">
+          {landings.length === 0 ? (
+            <MissingText>No simulated landings.</MissingText>
+          ) : (
+            <ul className="space-y-3">
+              {landings.map((l, i) => {
+                const tc = teamColor(l.team ?? undefined);
+                const pct = l.probability / (totalProb || 1);
+                return (
+                  <li key={i} className="flex items-center gap-3">
+                    <span className="display-num text-lg text-ink-soft w-10 shrink-0 text-right">
+                      {l.slot}
                     </span>
-                  ) : <span className="text-text-subtle">—</span>}
-                </td>
-                <td className="py-2 px-2">
-                  <div className="flex items-center gap-2">
-                    {p.position && (
+                    <div className="flex-1 flex items-center gap-2">
                       <span
-                        className="badge flex-none"
+                        className="w-7 h-7 flex items-center justify-center text-[0.65rem] font-bold shrink-0"
                         style={{
-                          color: positionColor(p.position),
-                          borderColor: `${positionColor(p.position)}4D`,
-                          backgroundColor: `${positionColor(p.position)}1A`,
+                          background: tc.primary,
+                          color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary,
                         }}
                       >
-                        {p.position}
+                        {l.team}
                       </span>
-                    )}
-                    <span className="font-medium text-text">{p.player}</span>
-                  </div>
-                </td>
-                <td className="py-2 px-2 text-text-muted text-xs">{p.college ?? '—'}</td>
-                <td className="py-2 px-2 text-right font-mono tabular-nums text-xs text-text-muted">
-                  {p.weight ? p.weight.toFixed(0) : '—'}
-                </td>
-                <td className="py-2 px-2 text-right font-mono tabular-nums text-xs">
-                  {p.ras_score ? (
-                    <span className={cn(
-                      p.ras_score >= 9 ? 'text-tier-high' :
-                      p.ras_score >= 7 ? 'text-tier-midhi' :
-                      p.ras_score >= 5 ? 'text-tier-mid' :
-                      p.ras_score > 0  ? 'text-tier-midlo' : 'text-text-subtle',
-                    )}>
-                      {p.ras_score.toFixed(2)}
+                      <div className="flex-1 h-2 bg-paper-hover overflow-hidden relative">
+                        <div
+                          className="absolute inset-y-0 left-0"
+                          style={{
+                            width: `${pct * 100}%`,
+                            background: tc.primary,
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <span className="font-mono text-xs text-ink w-12 shrink-0 text-right">
+                      {Math.round(l.probability * 100)}%
                     </span>
-                  ) : <span className="text-text-subtle">—</span>}
-                </td>
-                <td className="py-2 pr-4 pl-2 text-right font-mono tabular-nums text-text-muted">
-                  {p.final_score != null ? p.final_score.toFixed(1) : '—'}
-                </td>
-              </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        {filtered.length > 100 && (
-          <div className="text-[11px] text-text-subtle text-center py-2 border-t border-border">
-            Showing top 100 of {filtered.length} matches — refine filters to narrow.
-          </div>
-        )}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
       </div>
-      )}
-    </div>
+    </>
   );
 }

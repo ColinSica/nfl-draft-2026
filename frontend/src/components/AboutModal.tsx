@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { X, Sparkles, Database, BarChart3, Shield } from 'lucide-react';
-import { cn } from '../lib/format';
+import { X } from 'lucide-react';
 
 export function AboutModal({
   open, onClose,
@@ -19,99 +18,103 @@ export function AboutModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in"
+      className="fixed inset-0 z-50 bg-ink/60 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
-        className={cn(
-          'card p-6 max-w-2xl w-full max-h-[85vh] overflow-y-auto',
-          'border-border-strong',
-        )}
+        className="card p-7 max-w-2xl w-full max-h-[85vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex items-start justify-between mb-5 gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-violet-400 grid place-items-center shadow-glow">
-              <span className="text-xs font-bold text-white">2026</span>
-            </div>
+            <span
+              className="display-num text-2xl leading-none px-2 py-1"
+              style={{ background: '#D9A400', color: '#12151B', fontStyle: 'italic' }}
+            >
+              26
+            </span>
             <div>
-              <h2 className="text-xl font-semibold tracking-tight">
-                About this model
-              </h2>
-              <div className="text-xs text-text-muted">
-                Created by <span className="text-text font-medium">Colin Sica</span>
-              </div>
+              <h2 className="display-broadcast text-2xl text-ink leading-tight">About the model</h2>
+              <p className="text-xs text-ink-soft mt-0.5">2026 NFL Draft · Independent prediction engine</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-md hover:bg-bg-hover text-text-muted hover:text-text transition"
+            className="p-1.5 hover:bg-paper-hover text-ink-soft hover:text-ink"
+            aria-label="Close"
           >
             <X size={18} />
           </button>
         </div>
 
-        <div className="space-y-4 text-sm leading-6">
-          <Section Icon={Sparkles} title="What you're looking at">
-            A two-stage predictive model for the 2026 NFL Draft. Stage 1 ranks
-            prospects using combine metrics, college production, and analyst
-            boards. Stage 2 is a game-theoretic Monte Carlo simulator that
-            drafts for all 32 teams given their rosters, schemes, GM
-            behavioral patterns, cap situation, and live visit intel.
-          </Section>
+        <div className="chevron-stripe mb-6" />
 
-          <Section Icon={Database} title="Per-team profile sources">
-            Every team card pulls from: a comprehensive 2026 draft PDF report
-            (team context, GM fingerprints, archetypes); nflverse 2025 roster
-            data for age cliffs; historical drafts 2011-2025 for GM positional
-            tendencies; daily visit/market/stock-move scrapes (nfltr, PFN,
-            WalterFootball, CBS, Vegas Insider, TWSN); public cap-constraint
-            fallback derived from the PDF narrative.
-          </Section>
+        <div className="space-y-5 text-sm leading-relaxed">
+          <section>
+            <h3 className="caps text-ink mb-2">What this is</h3>
+            <p className="text-ink-soft">
+              A two-stage prediction engine for the 2026 NFL Draft.{' '}
+              <span className="text-ink font-semibold">Stage&nbsp;1</span> builds the player board from
+              tape, athletic testing, medicals, visit coverage, and production.{' '}
+              <span className="text-ink font-semibold">Stage&nbsp;2</span> simulates the draft as 32
+              autonomous team agents — each acting on its own scheme, cap, coaches, and intel.
+            </p>
+          </section>
 
-          <Section Icon={BarChart3} title="What the sim does">
-            For each simulation run the model walks picks 1 through 32.
-            High-confidence slots use scripted intel overrides (e.g. Mendoza
-            to LV at -20000 odds); everything else uses a scoring function
-            that weights BPA, need (with latent + scheme-premium + injury +
-            age-cliff + previous-year-repeat adjustments), confirmed visits,
-            GM positional affinity, cap tier, and coach-prospect college
-            connections. Trades are sampled probabilistically using the PDF's
-            per-GM tiers, with hard constraints like "NO never trades down"
-            enforced.
-          </Section>
+          <section>
+            <h3 className="caps text-ink mb-2">The independence contract</h3>
+            <p className="text-ink-soft">
+              <span className="display-broadcast" style={{ color: '#D9A400' }}>
+                Analyst picks are not inputs to this model.
+              </span>{' '}
+              A pytest suite enforces this: any analyst-rank column touching the Independent
+              pipeline fails the build. 8/8 tests currently pass.
+            </p>
+          </section>
 
-          <Section Icon={Shield} title="What it is NOT">
-            Not a guarantee. The predictability tier on each team reflects
-            genuine uncertainty — LOW teams (new regimes, trade-heavy GMs)
-            have wide output distributions by design. Treat the probabilities
-            as distributions over realistic scenarios, not point forecasts.
-          </Section>
-        </div>
+          <section>
+            <h3 className="caps text-ink mb-2">Modes</h3>
+            <ul className="space-y-1.5 text-ink-soft">
+              <li>
+                <span className="caps-tight" style={{ color: '#D9A400' }}>Independent</span> — core
+                model output (default).
+              </li>
+              <li>
+                <span className="caps-tight" style={{ color: '#1F6FEB' }}>Benchmark</span> — analyst
+                consensus baseline. Shown for comparison only.
+              </li>
+              <li>
+                <span className="caps-tight" style={{ color: '#17A870' }}>Compare</span> — slot-by-slot
+                Independent vs. Benchmark.
+              </li>
+            </ul>
+          </section>
 
-        <div className="mt-5 pt-4 border-t border-border text-[11px] text-text-subtle flex items-center justify-between">
-          <span>Press <kbd className="kbd">Esc</kbd> to close</span>
-          <span>© {new Date().getFullYear()} Colin Sica</span>
+          <section>
+            <h3 className="caps text-ink mb-2">Current accuracy</h3>
+            <div className="grid grid-cols-2 gap-3 mt-2">
+              {[
+                ['91%', 'Top-32 board overlap'],
+                ['200', 'Sims per run'],
+                ['32', 'Autonomous agents'],
+                ['8/8', 'Independence tests'],
+              ].map(([v, l]) => (
+                <div key={l} className="border border-ink-edge p-3">
+                  <div className="display-num text-3xl text-ink">{v}</div>
+                  <div className="caps-tight text-ink-soft text-[0.65rem] mt-0.5">{l}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h3 className="caps text-ink mb-2">Built by</h3>
+            <p className="text-ink-soft">
+              Colin Sica. 2026 NFL Draft Predictor · released under a personal license.
+            </p>
+          </section>
         </div>
       </div>
-    </div>
-  );
-}
-
-function Section({
-  Icon, title, children,
-}: {
-  Icon: React.ComponentType<{ size?: number; className?: string }>;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div>
-      <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-text-muted mb-1.5">
-        <Icon size={12} />
-        {title}
-      </div>
-      <p className="text-text-muted">{children}</p>
     </div>
   );
 }

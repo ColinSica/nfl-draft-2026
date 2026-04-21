@@ -6,9 +6,6 @@ import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
-import { League } from './pages/League';
-import { BuildMock } from './pages/BuildMock';
-import { Settings } from './pages/Settings';
 import { AboutModal } from './components/AboutModal';
 import { ModeProvider, useMode, MODE_META } from './lib/mode';
 import { api, type MetaInfo } from './lib/api';
@@ -198,12 +195,8 @@ function AppInner() {
           <Route path="/team/:abbr" element={<TeamDetail />} />
           <Route path="/simulate" element={<Simulate />} />
           <Route path="/prospects" element={<Prospects />} />
-          <Route path="/compare" element={<ComparePlaceholder />} />
-          <Route path="/method" element={<MethodPlaceholder />} />
-          {/* Internal-only routes (not in primary nav) */}
-          <Route path="/league" element={<League />} />
-          <Route path="/build" element={<BuildMock />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/method" element={<Method />} />
         </Routes>
       </main>
       <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t border-ink-edge">
@@ -238,41 +231,5 @@ export default function App() {
   );
 }
 
-// Placeholder routes
-function ComparePlaceholder() {
-  return (
-    <div className="py-16 max-w-2xl mx-auto text-center">
-      <div className="space-y-5">
-        <span className="caps-tight text-mode-compare">Compare mode</span>
-        <h1 className="display-broadcast text-6xl md:text-7xl leading-[0.85] text-ink">
-          Independent <span className="italic text-ink-soft/70">vs.</span><br />
-          <span style={{ color: '#1F6FEB' }}>Benchmark.</span>
-        </h1>
-        <hr className="hrule-accent mx-auto w-24" />
-        <p className="text-ink-soft leading-relaxed text-lg max-w-lg mx-auto">
-          Side-by-side comparison view coming soon. Will show each slot with the
-          Independent model's pick, the analyst Benchmark pick, and where they diverge.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function MethodPlaceholder() {
-  return (
-    <div className="py-16 max-w-2xl mx-auto text-center">
-      <div className="space-y-5">
-        <span className="caps-tight text-ink-soft">Method</span>
-        <h1 className="display-broadcast text-6xl md:text-7xl leading-[0.85] text-ink">
-          How the model <span className="italic" style={{ color: '#D9A400' }}>actually</span> works.
-        </h1>
-        <hr className="hrule-accent mx-auto w-24" />
-        <p className="text-ink-soft leading-relaxed text-lg max-w-lg mx-auto">
-          Full method write-up coming soon. Stage 1 board construction, Stage 2
-          team-agent simulation, the independence contract, feature inventory,
-          and confidence methodology.
-        </p>
-      </div>
-    </div>
-  );
-}
+import { Compare } from './pages/Compare';
+import { Method } from './pages/Method';

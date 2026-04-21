@@ -15,12 +15,15 @@ export function Home() {
   const [meta, setMeta] = useState<MetaInfo | null>(null);
   const [latestPicks, setLatestPicks] = useState<PickRow[] | null>(null);
   const [simMeta, setSimMeta] = useState<any>(null);
+  const [reasoning, setReasoning] = useState<any>(null);
 
   useEffect(() => {
     api.meta().then(setMeta).catch(() => {});
     api.latestSim()
       .then((r) => { setLatestPicks(r.picks); setSimMeta(r.meta); })
       .catch(() => {});
+    fetch('/api/simulations/reasoning')
+      .then(r => r.json()).then(setReasoning).catch(() => {});
   }, []);
 
   // Show top 5 picks — friendlier, less overwhelming than 10
@@ -28,6 +31,7 @@ export function Home() {
     .filter((p) => p.pick_number <= 5)
     .map((p) => {
       const pri = p.candidates?.[0];
+      const modelReasoning = reasoning?.picks?.[String(p.pick_number)];
       return {
         slot: p.pick_number,
         team: p.most_likely_team ?? p.team ?? '—',
@@ -39,7 +43,8 @@ export function Home() {
         consensusRank: pri?.consensus_rank ?? null,
         grade: null,
         confidence: pri ? (pri.probability >= 0.6 ? 'HIGH' : pri.probability >= 0.35 ? 'MEDIUM' : 'LOW') : null,
-        whySummary: pri ? buildWhyHint(pri.player, pri.position, pri.probability) : 'Awaiting latest simulation.',
+        whySummary: modelReasoning?.reasoning_summary
+          ?? (pri ? buildWhyHint(pri.player, pri.position, pri.probability) : 'Awaiting latest simulation.'),
         accent: meta_.accent,
       };
     });
