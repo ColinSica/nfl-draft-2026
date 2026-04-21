@@ -9,9 +9,9 @@
       "position": "QB",
       "fit_score": 2.581,
       "independent_grade": -16.71,
-      "probability": 0.775,
+      "probability": 0.79,
       "trade_down_p_structural": 0.162,
-      "reasoning_summary": "LV has a critical QB need (weight 5.5); Fernando Mendoza's profile fits the Shanahan zone (Kubiak) scheme; the pick carries in 77% of sims. Predictability: high.",
+      "reasoning_summary": "LV has a critical QB need (weight 5.5); Fernando Mendoza's profile fits the Shanahan zone (Kubiak) scheme; the pick carries in 79% of sims. Predictability: high.",
       "top_factors": [
         {
           "label": "Critical need at QB (weight 5.5)",
@@ -45,17 +45,17 @@
       "position": "EDGE",
       "fit_score": 2.356,
       "independent_grade": -10.22,
-      "probability": 0.925,
+      "probability": 0.86,
       "trade_down_p_structural": 0.148,
-      "reasoning_summary": "NYJ has a real EDGE need here; David Bailey's profile fits the 3-4 multiple (Glenn) scheme; the pick is a near-lock across 92% of simulations.",
+      "reasoning_summary": "NYJ has a real EDGE need here; David Bailey's profile fits the 3-4 multiple (Glenn) scheme; the pick is a near-lock across 86% of simulations.",
       "top_factors": [
-        {
-          "label": "Dominant pick across sims (92%)",
-          "weight": 0.925
-        },
         {
           "label": "Top-of-board talent (independent grade -10.2)",
           "weight": 0.9
+        },
+        {
+          "label": "Dominant pick across sims (86%)",
+          "weight": 0.86
         },
         {
           "label": "Strong team-fit score (2.36)",
@@ -81,9 +81,9 @@
       "position": "EDGE",
       "fit_score": 2.63,
       "independent_grade": 1.15,
-      "probability": 0.83,
+      "probability": 0.81,
       "trade_down_p_structural": 0.195,
-      "reasoning_summary": "ARI has a critical EDGE need (weight 4.0); Rueben Bain's profile fits the McVay tree (LaFleur) scheme; the pick is a near-lock across 83% of simulations. Predictability: low.",
+      "reasoning_summary": "ARI has a critical EDGE need (weight 4.0); Rueben Bain's profile fits the McVay tree (LaFleur) scheme; the pick is a near-lock across 81% of simulations. Predictability: low.",
       "top_factors": [
         {
           "label": "Top-of-board talent (independent grade 1.2)",
@@ -94,8 +94,8 @@
           "weight": 0.8767882987179488
         },
         {
-          "label": "Dominant pick across sims (83%)",
-          "weight": 0.83
+          "label": "Dominant pick across sims (81%)",
+          "weight": 0.81
         },
         {
           "label": "Critical need at EDGE (weight 4.0)",
@@ -117,13 +117,17 @@
       "position": "WR",
       "fit_score": 2.449,
       "independent_grade": -0.75,
-      "probability": 0.74,
+      "probability": 0.845,
       "trade_down_p_structural": 0.247,
-      "reasoning_summary": "TEN has a real WR need here; Carnell Tate's profile fits the saleh_4-3_wide-9 scheme; the pick carries in 74% of sims. Predictability: low.",
+      "reasoning_summary": "TEN has a real WR need here; Carnell Tate's profile fits the saleh_4-3_wide-9 scheme; the pick is a near-lock across 84% of simulations. Predictability: low.",
       "top_factors": [
         {
           "label": "Top-of-board talent (independent grade -0.8)",
           "weight": 0.9
+        },
+        {
+          "label": "Dominant pick across sims (84%)",
+          "weight": 0.845
         },
         {
           "label": "Strong team-fit score (2.45)",
@@ -149,9 +153,9 @@
       "position": "WR",
       "fit_score": 2.743,
       "independent_grade": 22.45,
-      "probability": 0.425,
+      "probability": 0.51,
       "trade_down_p_structural": 0.083,
-      "reasoning_summary": "NO has a real WR need here; Jordyn Tyson's profile fits the staley_3-4 scheme; it's a 42% modal outcome with real alternate paths.",
+      "reasoning_summary": "NO has a real WR need here; Jordyn Tyson's profile fits the staley_3-4 scheme; the pick carries in 51% of sims.",
       "top_factors": [
         {
           "label": "Elite team-fit score (2.74)",
@@ -181,9 +185,9 @@
       "position": "OT",
       "fit_score": 2.945,
       "independent_grade": 3.5,
-      "probability": 0.84,
+      "probability": 0.87,
       "trade_down_p_structural": 0.281,
-      "reasoning_summary": "CLE has a real OT need here; Spencer Fano's profile fits the Monken offense scheme; the pick is a near-lock across 84% of simulations. Predictability: low.",
+      "reasoning_summary": "CLE has a real OT need here; Spencer Fano's profile fits the Monken offense scheme; the pick is a near-lock across 87% of simulations. Predictability: low.",
       "top_factors": [
         {
           "label": "Elite team-fit score (2.94)",
@@ -194,8 +198,8 @@
           "weight": 0.9
         },
         {
-          "label": "Dominant pick across sims (84%)",
-          "weight": 0.84
+          "label": "Dominant pick across sims (87%)",
+          "weight": 0.87
         },
         {
           "label": "Roster need at OT (weight 2.5)",
@@ -213,21 +217,29 @@
     },
     "7": {
       "team": "WAS",
-      "player": "Mansoor Delane",
-      "position": "CB",
-      "fit_score": 2.224,
-      "independent_grade": 1.69,
-      "probability": 0.41,
+      "player": "Kenyon Sadiq",
+      "position": "TE",
+      "fit_score": 2.506,
+      "independent_grade": 7.42,
+      "probability": 0.985,
       "trade_down_p_structural": 0.195,
-      "reasoning_summary": "WAS takes the board's top CB on pure value; Mansoor Delane's profile fits the quinn_aggressive scheme; it's a 41% modal outcome with real alternate paths.",
+      "reasoning_summary": "WAS has a real TE need here; Kenyon Sadiq's profile fits the quinn_aggressive scheme; the pick is a near-lock across 98% of simulations.",
       "top_factors": [
         {
-          "label": "Top-of-board talent (independent grade 1.7)",
+          "label": "Dominant pick across sims (98%)",
+          "weight": 0.985
+        },
+        {
+          "label": "Top-of-board talent (independent grade 7.4)",
           "weight": 0.9
         },
         {
-          "label": "Strong team-fit score (2.22)",
-          "weight": 0.7413604665521155
+          "label": "Elite team-fit score (2.51)",
+          "weight": 0.835402789274713
+        },
+        {
+          "label": "Roster need at TE (weight 2.5)",
+          "weight": 0.5
         },
         {
           "label": "Aligns with quinn_aggressive scheme",
@@ -236,10 +248,6 @@
         {
           "label": "Fits falcons-tree coaching tendencies",
           "weight": 0.4
-        },
-        {
-          "label": "Moderate interest at CB",
-          "weight": 0.24
         }
       ]
     },
@@ -249,7 +257,7 @@
       "position": "IOL",
       "fit_score": 2.566,
       "independent_grade": 2.95,
-      "probability": 0.55,
+      "probability": 0.555,
       "trade_down_p_structural": 0.425,
       "reasoning_summary": "NYG has a critical IOL need (weight 4.0); Olaivavega Ioane's profile fits the Michigan / Harbaugh (physical) scheme; the pick carries in 55% of sims.",
       "top_factors": [
@@ -276,37 +284,37 @@
       ]
     },
     "9": {
-      "team": "PIT",
-      "player": "Ty Simpson",
-      "position": "QB",
-      "fit_score": 2.784,
-      "independent_grade": 21.69,
-      "probability": 0.26,
-      "trade_down_p_structural": 0.234,
-      "reasoning_summary": "PIT has a critical QB need (weight 4.0); Ty Simpson's profile fits the mccarthy_west_coast scheme; it's a 26% modal outcome with real alternate paths.",
+      "team": "KC",
+      "player": "Makai Lemon",
+      "position": "WR",
+      "fit_score": 2.161,
+      "independent_grade": 6.65,
+      "probability": 0.3,
+      "trade_down_p_structural": 0.303,
+      "reasoning_summary": "KC has a real WR need here; Makai Lemon's profile fits the reid_spread scheme; it's a 30% modal outcome with real alternate paths.",
       "top_factors": [
         {
-          "label": "Elite team-fit score (2.78)",
-          "weight": 0.9279783936944807
+          "label": "Top-of-board talent (independent grade 6.6)",
+          "weight": 0.9
         },
         {
-          "label": "Critical need at QB (weight 4.0)",
-          "weight": 0.8
+          "label": "Strong team-fit score (2.16)",
+          "weight": 0.7203548469531298
         },
         {
-          "label": "Strong board value at this slot (grade 21.7)",
-          "weight": 0.7
-        },
-        {
-          "label": "Aligns with mccarthy_west_coast scheme",
+          "label": "Roster need at WR (weight 2.5)",
           "weight": 0.5
         },
         {
-          "label": "Fits mccarthy_west_coast-tree coaching tendencies",
+          "label": "Aligns with reid_spread scheme",
+          "weight": 0.5
+        },
+        {
+          "label": "Fits reid-tree coaching tendencies",
           "weight": 0.4
         },
         {
-          "label": "Close call (26% modal vs competing paths)",
+          "label": "Close call (30% modal vs competing paths)",
           "weight": 0.3
         }
       ]
@@ -317,9 +325,9 @@
       "position": "IOL",
       "fit_score": 2.413,
       "independent_grade": 72.17,
-      "probability": 0.535,
+      "probability": 0.425,
       "trade_down_p_structural": 0.255,
-      "reasoning_summary": "NYG has a critical IOL need (weight 4.0); Chase Bisontis's profile fits the Michigan / Harbaugh (physical) scheme; the pick carries in 53% of sims.",
+      "reasoning_summary": "NYG has a critical IOL need (weight 4.0); Chase Bisontis's profile fits the Michigan / Harbaugh (physical) scheme; it's a 42% modal outcome with real alternate paths.",
       "top_factors": [
         {
           "label": "Strong team-fit score (2.41)",
@@ -343,19 +351,19 @@
       "team": "MIA",
       "player": "Caleb Downs",
       "position": "S",
-      "fit_score": 2.337,
+      "fit_score": 2.304,
       "independent_grade": -5.34,
-      "probability": 0.415,
+      "probability": 0.24,
       "trade_down_p_structural": 0.288,
-      "reasoning_summary": "MIA has a real S need here; Caleb Downs's profile fits the Hafley defense scheme; it's a 41% modal outcome with real alternate paths. Predictability: low.",
+      "reasoning_summary": "MIA has a real S need here; Caleb Downs's profile fits the Hafley defense scheme; it's a 24% modal outcome with real alternate paths. Predictability: low.",
       "top_factors": [
         {
           "label": "Top-of-board talent (independent grade -5.3)",
           "weight": 0.9
         },
         {
-          "label": "Strong team-fit score (2.34)",
-          "weight": 0.7790606581333331
+          "label": "Strong team-fit score (2.30)",
+          "weight": 0.7680982661333334
         },
         {
           "label": "Roster need at S (weight 2.5)",
@@ -368,30 +376,30 @@
         {
           "label": "Fits ohio_state-tree coaching tendencies",
           "weight": 0.4
+        },
+        {
+          "label": "Close call (24% modal vs competing paths)",
+          "weight": 0.3
         }
       ]
     },
     "12": {
       "team": "DAL",
-      "player": "Arvell Reese",
-      "position": "LB",
-      "fit_score": 2.621,
-      "independent_grade": -13.58,
-      "probability": 0.75,
+      "player": "Keldric Faulk",
+      "position": "EDGE",
+      "fit_score": 2.887,
+      "independent_grade": 35.61,
+      "probability": 0.77,
       "trade_down_p_structural": 0.165,
-      "reasoning_summary": "DAL has a critical LB need (weight 4.0); Arvell Reese's profile fits the schottenheimer_pro_style scheme; the pick carries in 75% of sims. Predictability: low.",
+      "reasoning_summary": "DAL addresses EDGE at this slot; Keldric Faulk's profile fits the schottenheimer_pro_style scheme; the pick carries in 77% of sims. Predictability: low.",
       "top_factors": [
         {
-          "label": "Top-of-board talent (independent grade -13.6)",
-          "weight": 0.9
+          "label": "Elite team-fit score (2.89)",
+          "weight": 0.9622392916432053
         },
         {
-          "label": "Elite team-fit score (2.62)",
-          "weight": 0.8735595166666665
-        },
-        {
-          "label": "Critical need at LB (weight 4.0)",
-          "weight": 0.8
+          "label": "Strong board value at this slot (grade 35.6)",
+          "weight": 0.7
         },
         {
           "label": "Aligns with schottenheimer_pro_style scheme",
@@ -400,66 +408,66 @@
         {
           "label": "Fits pete_carroll_seattle-tree coaching tendencies",
           "weight": 0.4
+        },
+        {
+          "label": "Moderate interest at EDGE",
+          "weight": 0.24
         }
       ]
     },
     "13": {
-      "team": "SF",
-      "player": "Francis Mauigoa",
-      "position": "OT",
-      "fit_score": 2.71,
-      "independent_grade": -9.28,
-      "probability": 0.265,
-      "trade_down_p_structural": 0.21,
-      "reasoning_summary": "SF has a real OT need here; Francis Mauigoa's profile fits the shanahan_zone scheme; it's a 26% modal outcome with real alternate paths. Predictability: medium-high.",
+      "team": "LAR",
+      "player": "Omar Cooper Jr.",
+      "position": "WR",
+      "fit_score": 2.718,
+      "independent_grade": 50.84,
+      "probability": 0.305,
+      "trade_down_p_structural": 0.595,
+      "reasoning_summary": "LAR has a real WR need here; Omar Cooper Jr.'s profile fits the mcvay_spread scheme; it's a 30% modal outcome with real alternate paths. Predictability: low-medium.",
       "top_factors": [
         {
-          "label": "Elite team-fit score (2.71)",
-          "weight": 0.9034974999999998
+          "label": "Elite team-fit score (2.72)",
+          "weight": 0.9059845568502395
         },
         {
-          "label": "Top-of-board talent (independent grade -9.3)",
-          "weight": 0.9
-        },
-        {
-          "label": "Roster need at OT (weight 2.5)",
+          "label": "Roster need at WR (weight 2.5)",
           "weight": 0.5
         },
         {
-          "label": "Aligns with shanahan_zone scheme",
+          "label": "Aligns with mcvay_spread scheme",
           "weight": 0.5
         },
         {
-          "label": "Fits shanahan-tree coaching tendencies",
+          "label": "Fits mcvay-tree coaching tendencies",
           "weight": 0.4
         },
         {
-          "label": "Close call (26% modal vs competing paths)",
+          "label": "Close call (30% modal vs competing paths)",
           "weight": 0.3
         }
       ]
     },
     "14": {
       "team": "BAL",
-      "player": "T.J. Parker",
-      "position": "EDGE",
-      "fit_score": 2.64,
-      "independent_grade": 35.61,
-      "probability": 0.075,
-      "trade_down_p_structural": 0.288,
-      "reasoning_summary": "BAL has a real EDGE need here; T.J. Parker's profile fits the defensive multiple (Minter) scheme; it's a 7% modal outcome with real alternate paths. Predictability: low-medium.",
+      "player": "Mansoor Delane",
+      "position": "CB",
+      "fit_score": 2.859,
+      "independent_grade": 1.69,
+      "probability": 0.44,
+      "trade_down_p_structural": 0.48,
+      "reasoning_summary": "BAL has a critical CB need (weight 4.0); Mansoor Delane's profile fits the defensive multiple (Minter) scheme; it's a 44% modal outcome with real alternate paths. Predictability: low-medium.",
       "top_factors": [
         {
-          "label": "Elite team-fit score (2.64)",
-          "weight": 0.8800293366826925
+          "label": "Elite team-fit score (2.86)",
+          "weight": 0.9529520861919042
         },
         {
-          "label": "Strong board value at this slot (grade 35.6)",
-          "weight": 0.7
+          "label": "Top-of-board talent (independent grade 1.7)",
+          "weight": 0.9
         },
         {
-          "label": "Roster need at EDGE (weight 2.5)",
-          "weight": 0.5
+          "label": "Critical need at CB (weight 4.0)",
+          "weight": 0.8
         },
         {
           "label": "Aligns with defensive multiple (Minter) scheme",
@@ -468,34 +476,30 @@
         {
           "label": "Fits harbaugh-tree coaching tendencies",
           "weight": 0.4
-        },
-        {
-          "label": "Close call (7% modal vs competing paths)",
-          "weight": 0.3
         }
       ]
     },
     "15": {
       "team": "TB",
-      "player": "Sonny Styles",
+      "player": "Arvell Reese",
       "position": "LB",
-      "fit_score": 2.203,
-      "independent_grade": -6.28,
-      "probability": 0.43,
+      "fit_score": 2.414,
+      "independent_grade": -13.58,
+      "probability": 0.695,
       "trade_down_p_structural": 0.375,
-      "reasoning_summary": "TB has a critical LB need (weight 4.0); Sonny Styles's profile fits the bowles_blitz scheme; it's a 43% modal outcome with real alternate paths. Predictability: high.",
+      "reasoning_summary": "TB has a critical LB need (weight 4.0); Arvell Reese's profile fits the bowles_blitz scheme; the pick carries in 69% of sims. Predictability: high.",
       "top_factors": [
         {
-          "label": "Top-of-board talent (independent grade -6.3)",
+          "label": "Top-of-board talent (independent grade -13.6)",
           "weight": 0.9
+        },
+        {
+          "label": "Strong team-fit score (2.41)",
+          "weight": 0.80465
         },
         {
           "label": "Critical need at LB (weight 4.0)",
           "weight": 0.8
-        },
-        {
-          "label": "Strong team-fit score (2.20)",
-          "weight": 0.7343500000000001
         },
         {
           "label": "Aligns with bowles_blitz scheme",
@@ -509,25 +513,25 @@
     },
     "16": {
       "team": "NYJ",
-      "player": "Kenyon Sadiq",
-      "position": "TE",
-      "fit_score": 2.113,
-      "independent_grade": 7.42,
-      "probability": 0.415,
+      "player": "Jeremiyah Love",
+      "position": "RB",
+      "fit_score": 2.271,
+      "independent_grade": -14.68,
+      "probability": 0.845,
       "trade_down_p_structural": 0.198,
-      "reasoning_summary": "NYJ has a critical TE need (weight 4.0); Kenyon Sadiq's profile fits the 3-4 multiple (Glenn) scheme; it's a 41% modal outcome with real alternate paths.",
+      "reasoning_summary": "NYJ takes the board's top RB on pure value; Jeremiyah Love's profile fits the 3-4 multiple (Glenn) scheme; the pick is a near-lock across 84% of simulations.",
       "top_factors": [
         {
-          "label": "Top-of-board talent (independent grade 7.4)",
+          "label": "Top-of-board talent (independent grade -14.7)",
           "weight": 0.9
         },
         {
-          "label": "Critical need at TE (weight 4.0)",
-          "weight": 0.8
+          "label": "Dominant pick across sims (84%)",
+          "weight": 0.845
         },
         {
-          "label": "Strong team-fit score (2.11)",
-          "weight": 0.7043944473506399
+          "label": "Strong team-fit score (2.27)",
+          "weight": 0.756908244
         },
         {
           "label": "Aligns with 3-4 multiple (Glenn) scheme",
@@ -536,6 +540,10 @@
         {
           "label": "Fits saints-tree coaching tendencies",
           "weight": 0.4
+        },
+        {
+          "label": "Moderate interest at RB",
+          "weight": 0.24
         }
       ]
     },
@@ -545,9 +553,9 @@
       "position": "EDGE",
       "fit_score": 2.635,
       "independent_grade": 22.18,
-      "probability": 0.505,
+      "probability": 0.695,
       "trade_down_p_structural": 0.385,
-      "reasoning_summary": "DET has a real EDGE need here; Akheem Mesidor's profile fits the glenn_multiple scheme; the pick carries in 50% of sims. Predictability: medium-high.",
+      "reasoning_summary": "DET has a real EDGE need here; Akheem Mesidor's profile fits the glenn_multiple scheme; the pick carries in 69% of sims. Predictability: medium-high.",
       "top_factors": [
         {
           "label": "Elite team-fit score (2.63)",
@@ -577,9 +585,9 @@
       "position": "CB",
       "fit_score": 2.414,
       "independent_grade": 38.62,
-      "probability": 0.54,
+      "probability": 0.57,
       "trade_down_p_structural": 0.297,
-      "reasoning_summary": "MIN has a critical CB need (weight 4.0); Avieon Terrell's profile fits the mcvay_spread scheme; the pick carries in 54% of sims.",
+      "reasoning_summary": "MIN has a critical CB need (weight 4.0); Avieon Terrell's profile fits the mcvay_spread scheme; the pick carries in 56% of sims.",
       "top_factors": [
         {
           "label": "Strong team-fit score (2.41)",
@@ -605,21 +613,21 @@
     },
     "19": {
       "team": "CAR",
-      "player": "Keldric Faulk",
+      "player": "T.J. Parker",
       "position": "EDGE",
-      "fit_score": 2.172,
+      "fit_score": 2.246,
       "independent_grade": 35.61,
-      "probability": 0.375,
+      "probability": 0.535,
       "trade_down_p_structural": 0.24,
-      "reasoning_summary": "CAR has a critical EDGE need (weight 4.0); Keldric Faulk's profile fits the canales_westcoast scheme; it's a 37% modal outcome with real alternate paths. Predictability: low-medium.",
+      "reasoning_summary": "CAR has a critical EDGE need (weight 4.0); T.J. Parker's profile fits the canales_westcoast scheme; the pick carries in 53% of sims. Predictability: low-medium.",
       "top_factors": [
         {
           "label": "Critical need at EDGE (weight 4.0)",
           "weight": 0.8
         },
         {
-          "label": "Strong team-fit score (2.17)",
-          "weight": 0.7240357708333335
+          "label": "Strong team-fit score (2.25)",
+          "weight": 0.7487357708333335
         },
         {
           "label": "Strong board value at this slot (grade 35.6)",
@@ -632,30 +640,22 @@
         {
           "label": "Fits seattle-tree coaching tendencies",
           "weight": 0.4
-        },
-        {
-          "label": "Close call (37% modal vs competing paths)",
-          "weight": 0.3
         }
       ]
     },
     "20": {
       "team": "DAL",
-      "player": "Peter Woods",
-      "position": "DL",
-      "fit_score": 2.335,
-      "independent_grade": 44.17,
-      "probability": 0.185,
+      "player": "Cashius Howell",
+      "position": "EDGE",
+      "fit_score": 2.607,
+      "independent_grade": 53.1,
+      "probability": 0.515,
       "trade_down_p_structural": 0.165,
-      "reasoning_summary": "DAL addresses DL at this slot; Peter Woods's profile fits the schottenheimer_pro_style scheme; it's a 18% modal outcome with real alternate paths. Predictability: low.",
+      "reasoning_summary": "DAL addresses EDGE at this slot; Cashius Howell's profile fits the schottenheimer_pro_style scheme; the pick carries in 51% of sims. Predictability: low.",
       "top_factors": [
         {
-          "label": "Strong team-fit score (2.33)",
-          "weight": 0.7783118243559931
-        },
-        {
-          "label": "Strong board value at this slot (grade 44.2)",
-          "weight": 0.7
+          "label": "Elite team-fit score (2.61)",
+          "weight": 0.869116665761814
         },
         {
           "label": "Aligns with schottenheimer_pro_style scheme",
@@ -666,8 +666,8 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (18% modal vs competing paths)",
-          "weight": 0.3
+          "label": "Moderate interest at EDGE",
+          "weight": 0.24
         }
       ]
     },
@@ -677,9 +677,9 @@
       "position": "OT",
       "fit_score": 2.063,
       "independent_grade": 20.52,
-      "probability": 0.17,
+      "probability": 0.145,
       "trade_down_p_structural": 0.385,
-      "reasoning_summary": "KC has a critical OT need (weight 4.0); Kadyn Proctor's profile fits the reid_spread scheme; it's a 17% modal outcome with real alternate paths.",
+      "reasoning_summary": "KC has a critical OT need (weight 4.0); Kadyn Proctor's profile fits the reid_spread scheme; it's a 14% modal outcome with real alternate paths.",
       "top_factors": [
         {
           "label": "Critical need at OT (weight 4.0)",
@@ -702,7 +702,7 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (17% modal vs competing paths)",
+          "label": "Close call (14% modal vs competing paths)",
           "weight": 0.3
         }
       ]
@@ -713,9 +713,9 @@
       "position": "WR",
       "fit_score": 2.258,
       "independent_grade": 52.61,
-      "probability": 0.47,
+      "probability": 0.545,
       "trade_down_p_structural": 0.096,
-      "reasoning_summary": "LAC has a critical WR need (weight 4.0); KC Concepcion's profile fits the harbaugh_power scheme; it's a 47% modal outcome with real alternate paths. Predictability: medium-high.",
+      "reasoning_summary": "LAC has a critical WR need (weight 4.0); KC Concepcion's profile fits the harbaugh_power scheme; the pick carries in 54% of sims. Predictability: medium-high.",
       "top_factors": [
         {
           "label": "Critical need at WR (weight 4.0)",
@@ -739,19 +739,19 @@
       "team": "PHI",
       "player": "Dillon Thieneman",
       "position": "S",
-      "fit_score": 2.186,
+      "fit_score": 2.321,
       "independent_grade": 4.32,
-      "probability": 0.64,
+      "probability": 0.405,
       "trade_down_p_structural": 0.473,
-      "reasoning_summary": "PHI takes the board's top S on pure value; Dillon Thieneman's profile fits the fangio_match scheme; the pick carries in 64% of sims.",
+      "reasoning_summary": "PHI takes the board's top S on pure value; Dillon Thieneman's profile fits the fangio_match scheme; it's a 40% modal outcome with real alternate paths.",
       "top_factors": [
         {
           "label": "Top-of-board talent (independent grade 4.3)",
           "weight": 0.9
         },
         {
-          "label": "Strong team-fit score (2.19)",
-          "weight": 0.7287212373228283
+          "label": "Strong team-fit score (2.32)",
+          "weight": 0.7736866373228284
         },
         {
           "label": "Aligns with fangio_match scheme",
@@ -773,9 +773,9 @@
       "position": "OT",
       "fit_score": 2.776,
       "independent_grade": 46.3,
-      "probability": 0.345,
+      "probability": 0.285,
       "trade_down_p_structural": 0.383,
-      "reasoning_summary": "CLE has a real OT need here; Blake Miller's profile fits the Monken offense scheme; it's a 34% modal outcome with real alternate paths. Predictability: low.",
+      "reasoning_summary": "CLE has a real OT need here; Blake Miller's profile fits the Monken offense scheme; it's a 28% modal outcome with real alternate paths. Predictability: low.",
       "top_factors": [
         {
           "label": "Elite team-fit score (2.78)",
@@ -798,7 +798,7 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (34% modal vs competing paths)",
+          "label": "Close call (28% modal vs competing paths)",
           "weight": 0.3
         }
       ]
@@ -809,9 +809,9 @@
       "position": "S",
       "fit_score": 2.218,
       "independent_grade": 17.51,
-      "probability": 0.505,
-      "trade_down_p_structural": 0.288,
-      "reasoning_summary": "CHI has a real S need here; Emmanuel McNeil-Warren's profile fits the default scheme; the pick carries in 50% of sims. Predictability: medium-high.",
+      "probability": 0.2,
+      "trade_down_p_structural": 0.48,
+      "reasoning_summary": "CHI has a real S need here; Emmanuel McNeil-Warren's profile fits the default scheme; it's a 20% modal outcome with real alternate paths. Predictability: medium-high.",
       "top_factors": [
         {
           "label": "Top-of-board talent (independent grade 17.5)",
@@ -832,30 +832,30 @@
         {
           "label": "Fits detroit-tree coaching tendencies",
           "weight": 0.4
+        },
+        {
+          "label": "Close call (20% modal vs competing paths)",
+          "weight": 0.3
         }
       ]
     },
     "26": {
       "team": "BUF",
-      "player": "Jermod McCoy",
-      "position": "CB",
-      "fit_score": 2.4,
-      "independent_grade": 12.29,
-      "probability": 0.765,
+      "player": "Peter Woods",
+      "position": "DL",
+      "fit_score": 2.399,
+      "independent_grade": 44.17,
+      "probability": 0.395,
       "trade_down_p_structural": 0.258,
-      "reasoning_summary": "BUF has a critical CB need (weight 4.0); Jermod McCoy's profile fits the Brady offense scheme; the pick carries in 76% of sims.",
+      "reasoning_summary": "BUF addresses DL at this slot; Peter Woods's profile fits the Brady offense scheme; it's a 39% modal outcome with real alternate paths.",
       "top_factors": [
         {
-          "label": "Top-of-board talent (independent grade 12.3)",
-          "weight": 0.9
-        },
-        {
-          "label": "Critical need at CB (weight 4.0)",
-          "weight": 0.8
-        },
-        {
           "label": "Strong team-fit score (2.40)",
-          "weight": 0.7998498735044443
+          "weight": 0.7997219521066513
+        },
+        {
+          "label": "Strong board value at this slot (grade 44.2)",
+          "weight": 0.7
         },
         {
           "label": "Aligns with Brady offense scheme",
@@ -864,26 +864,26 @@
         {
           "label": "Fits internal-tree coaching tendencies",
           "weight": 0.4
+        },
+        {
+          "label": "Close call (39% modal vs competing paths)",
+          "weight": 0.3
         }
       ]
     },
     "27": {
       "team": "BAL",
-      "player": "Cashius Howell",
-      "position": "EDGE",
-      "fit_score": 2.529,
-      "independent_grade": 53.1,
-      "probability": 0.185,
+      "player": "Jalon Kilgore",
+      "position": "S",
+      "fit_score": 2.606,
+      "independent_grade": 55.67,
+      "probability": 0.155,
       "trade_down_p_structural": 0.346,
-      "reasoning_summary": "BAL has a real EDGE need here; Cashius Howell's profile fits the defensive multiple (Minter) scheme; it's a 18% modal outcome with real alternate paths. Predictability: low-medium.",
+      "reasoning_summary": "BAL addresses S at this slot; Jalon Kilgore's profile fits the defensive multiple (Minter) scheme; it's a 15% modal outcome with real alternate paths. Predictability: low-medium.",
       "top_factors": [
         {
-          "label": "Elite team-fit score (2.53)",
-          "weight": 0.8428351733866059
-        },
-        {
-          "label": "Roster need at EDGE (weight 2.5)",
-          "weight": 0.5
+          "label": "Elite team-fit score (2.61)",
+          "weight": 0.8686515529236942
         },
         {
           "label": "Aligns with defensive multiple (Minter) scheme",
@@ -894,32 +894,36 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (18% modal vs competing paths)",
+          "label": "Close call (15% modal vs competing paths)",
           "weight": 0.3
+        },
+        {
+          "label": "Moderate interest at S",
+          "weight": 0.24
         }
       ]
     },
     "28": {
       "team": "HOU",
-      "player": "Max Iheanachor",
-      "position": "OT",
-      "fit_score": 2.009,
-      "independent_grade": 41.95,
-      "probability": 0.295,
+      "player": "Sonny Styles",
+      "position": "LB",
+      "fit_score": 2.131,
+      "independent_grade": -6.28,
+      "probability": 0.31,
       "trade_down_p_structural": 0.284,
-      "reasoning_summary": "HOU has a critical OT need (weight 5.0); Max Iheanachor's profile fits the shanahan_zone scheme; it's a 29% modal outcome with real alternate paths.",
+      "reasoning_summary": "HOU has a real LB need here; Sonny Styles's profile fits the shanahan_zone scheme; it's a 31% modal outcome with real alternate paths.",
       "top_factors": [
         {
-          "label": "Critical need at OT (weight 5.0)",
-          "weight": 1.0
+          "label": "Top-of-board talent (independent grade -6.3)",
+          "weight": 0.9
         },
         {
-          "label": "Strong board value at this slot (grade 42.0)",
-          "weight": 0.7
+          "label": "Strong team-fit score (2.13)",
+          "weight": 0.7102711416666666
         },
         {
-          "label": "Strong team-fit score (2.01)",
-          "weight": 0.669787596850976
+          "label": "Roster need at LB (weight 2.5)",
+          "weight": 0.5
         },
         {
           "label": "Aligns with shanahan_zone scheme",
@@ -930,24 +934,28 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (29% modal vs competing paths)",
+          "label": "Close call (31% modal vs competing paths)",
           "weight": 0.3
         }
       ]
     },
     "29": {
       "team": "KC",
-      "player": "Colton Hood",
+      "player": "Jermod McCoy",
       "position": "CB",
-      "fit_score": 1.864,
-      "independent_grade": 75.47,
-      "probability": 0.395,
-      "trade_down_p_structural": 0.199,
-      "reasoning_summary": "KC has a real CB need here; Colton Hood's profile fits the reid_spread scheme; it's a 39% modal outcome with real alternate paths.",
+      "fit_score": 1.988,
+      "independent_grade": 12.29,
+      "probability": 0.365,
+      "trade_down_p_structural": 0.331,
+      "reasoning_summary": "KC has a real CB need here; Jermod McCoy's profile fits the reid_spread scheme; it's a 36% modal outcome with real alternate paths.",
       "top_factors": [
         {
-          "label": "Strong team-fit score (1.86)",
-          "weight": 0.6212484914080779
+          "label": "Top-of-board talent (independent grade 12.3)",
+          "weight": 0.9
+        },
+        {
+          "label": "Strong team-fit score (1.99)",
+          "weight": 0.6626691334649569
         },
         {
           "label": "Roster need at CB (weight 2.5)",
@@ -962,7 +970,7 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (39% modal vs competing paths)",
+          "label": "Close call (36% modal vs competing paths)",
           "weight": 0.3
         }
       ]
@@ -973,9 +981,9 @@
       "position": "DL",
       "fit_score": 2.034,
       "independent_grade": 59.42,
-      "probability": 0.25,
+      "probability": 0.14,
       "trade_down_p_structural": 0.242,
-      "reasoning_summary": "MIA addresses DL at this slot; Kayden McDonald's profile fits the Hafley defense scheme; it's a 25% modal outcome with real alternate paths. Predictability: low.",
+      "reasoning_summary": "MIA addresses DL at this slot; Kayden McDonald's profile fits the Hafley defense scheme; it's a 14% modal outcome with real alternate paths. Predictability: low.",
       "top_factors": [
         {
           "label": "Strong team-fit score (2.03)",
@@ -990,32 +998,32 @@
           "weight": 0.4
         },
         {
-          "label": "Close call (25% modal vs competing paths)",
+          "label": "Close call (14% modal vs competing paths)",
           "weight": 0.3
         }
       ]
     },
     "31": {
       "team": "NE",
-      "player": "Caleb Lomu",
+      "player": "Max Iheanachor",
       "position": "OT",
-      "fit_score": 2.068,
-      "independent_grade": 41.52,
-      "probability": 0.19,
+      "fit_score": 2.193,
+      "independent_grade": 41.95,
+      "probability": 0.6,
       "trade_down_p_structural": 0.242,
-      "reasoning_summary": "NE has a critical OT need (weight 5.0); Caleb Lomu's profile fits the mcdaniels_pro scheme; it's a 19% modal outcome with real alternate paths.",
+      "reasoning_summary": "NE has a critical OT need (weight 5.0); Max Iheanachor's profile fits the mcdaniels_pro scheme; the pick carries in 60% of sims.",
       "top_factors": [
         {
           "label": "Critical need at OT (weight 5.0)",
           "weight": 1.0
         },
         {
-          "label": "Strong board value at this slot (grade 41.5)",
-          "weight": 0.7
+          "label": "Strong team-fit score (2.19)",
+          "weight": 0.7311413264830838
         },
         {
-          "label": "Strong team-fit score (2.07)",
-          "weight": 0.6893216508938736
+          "label": "Strong board value at this slot (grade 42.0)",
+          "weight": 0.7
         },
         {
           "label": "Aligns with mcdaniels_pro scheme",
@@ -1024,30 +1032,30 @@
         {
           "label": "Fits belichick-tree coaching tendencies",
           "weight": 0.4
-        },
-        {
-          "label": "Close call (19% modal vs competing paths)",
-          "weight": 0.3
         }
       ]
     },
     "32": {
       "team": "SEA",
-      "player": "Jeremiyah Love",
-      "position": "RB",
-      "fit_score": 1.876,
-      "independent_grade": -14.68,
-      "probability": 0.485,
+      "player": "Caleb Lomu",
+      "position": "OT",
+      "fit_score": 1.941,
+      "independent_grade": 41.52,
+      "probability": 0.315,
       "trade_down_p_structural": 0.22,
-      "reasoning_summary": "SEA takes the board's top RB on pure value; Jeremiyah Love's profile fits the macdonald_multiple scheme; it's a 48% modal outcome with real alternate paths. Predictability: low.",
+      "reasoning_summary": "SEA has a critical OT need (weight 4.0); Caleb Lomu's profile fits the macdonald_multiple scheme; it's a 31% modal outcome with real alternate paths. Predictability: low.",
       "top_factors": [
         {
-          "label": "Top-of-board talent (independent grade -14.7)",
-          "weight": 0.9
+          "label": "Critical need at OT (weight 4.0)",
+          "weight": 0.8
         },
         {
-          "label": "Strong team-fit score (1.88)",
-          "weight": 0.6252882266666665
+          "label": "Strong board value at this slot (grade 41.5)",
+          "weight": 0.7
+        },
+        {
+          "label": "Strong team-fit score (1.94)",
+          "weight": 0.6468810113460477
         },
         {
           "label": "Aligns with macdonald_multiple scheme",
@@ -1058,8 +1066,8 @@
           "weight": 0.4
         },
         {
-          "label": "Moderate interest at RB",
-          "weight": 0.24
+          "label": "Close call (31% modal vs competing paths)",
+          "weight": 0.3
         }
       ]
     }
