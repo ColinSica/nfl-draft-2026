@@ -1,33 +1,33 @@
 pick,round,team,player,position,school,probability,independent_grade,fit_score,trade_down_p_structural
-1,1,LV,Fernando Mendoza,QB,Indiana,0.75,-19.11,2.581,0.065
-2,1,NYJ,David Bailey,EDGE,Texas Tech,0.83,-12.62,2.356,0.148
-3,1,ARI,Rueben Bain,EDGE,Miami (FL),0.725,-1.25,2.637,0.135
-4,1,TEN,Carnell Tate,WR,Ohio State,0.69,-3.15,2.449,0.247
-5,1,NYG,Olaivavega Ioane,IOL,Penn State,0.625,0.55,2.578,0.255
-6,1,CLE,Spencer Fano,OT,Utah,0.87,1.1,2.961,0.281
-7,1,WAS,Kenyon Sadiq,TE,Oregon,0.98,5.02,2.52,0.09
-8,1,NO,Jordyn Tyson,WR,Arizona State,0.67,26.05,2.722,0.083
-9,1,PIT,Ty Simpson,QB,Alabama,0.275,19.29,2.798,0.234
-10,1,NYG,Keldric Faulk,EDGE,Auburn,0.38,32.43,2.505,0.255
-11,1,MIA,Makai Lemon,WR,USC,0.195,4.25,2.369,0.331
-12,1,DAL,T.J. Parker,EDGE,Clemson,0.415,32.43,2.804,0.247
-13,1,SF,Francis Mauigoa,OT,Miami (FL),0.185,-11.68,2.71,0.21
-14,1,BAL,Jalon Kilgore,S,South Carolina,0.33,15.55,2.88,0.48
-15,1,TB,Arvell Reese,LB,Ohio State,0.63,-15.98,2.414,0.375
-16,1,NYJ,Jeremiyah Love,RB,Notre Dame,0.675,-17.08,2.271,0.198
-17,1,DET,Akheem Mesidor,EDGE,Miami (FL),0.55,19.78,2.651,0.385
-18,1,MIN,Avieon Terrell,CB,Clemson,0.415,35.62,2.431,0.495
-19,1,CAR,Zion Young,EDGE,Missouri,0.315,68.51,2.15,0.24
-20,1,DAL,Cashius Howell,EDGE,Texas A&M,0.585,48.84,2.633,0.247
-21,1,KC,Kadyn Proctor,OT,Alabama,0.175,18.12,2.075,0.385
-22,1,LAC,KC Concepcion,WR,Texas A&M,0.435,49.31,2.279,0.096
-23,1,PHI,Dillon Thieneman,S,Oregon,0.385,1.92,2.334,0.473
-24,1,CLE,Blake Miller,OT,Clemson,0.34,43.0,2.797,0.383
-25,1,CHI,Caleb Downs,S,Ohio State,0.18,-7.74,2.431,0.288
-26,1,BUF,Jermod McCoy,CB,Tennessee,0.265,15.89,2.379,0.258
-27,1,TB,Sonny Styles,LB,Ohio State,0.13,-8.68,2.203,0.455
-28,1,HOU,Chase Bisontis,IOL,Texas A&M,0.265,66.78,2.113,0.284
-29,1,KC,Chandler Rivers,CB,Duke,0.145,102.68,1.895,0.199
-30,1,DET,Dani Dennis-Sutton,EDGE,Penn State,0.1,72.14,2.168,0.331
-31,1,NE,Max Iheanachor,OT,Arizona State,0.3,38.65,2.208,0.242
-32,1,SEA,Caleb Lomu,OT,Utah,0.205,38.46,1.958,0.186
+1,1,LV,Fernando Mendoza,QB,Indiana,0.675,-19.11,2.581,0.065
+2,1,NYJ,Arvell Reese,LB,Ohio State,0.545,-16.46,2.394,0.148
+3,1,ARI,David Bailey,EDGE,Texas Tech,0.57,-12.62,2.785,0.135
+4,1,TEN,Jeremiyah Love,RB,Notre Dame,0.605,-17.08,2.531,0.247
+5,1,NYG,Peter Woods,DL,Clemson,0.88,40.69,3.109,0.255
+6,1,CLE,Spencer Fano,OT,Utah,0.85,1.1,2.961,0.281
+7,1,WAS,T.J. Parker,EDGE,Clemson,0.995,32.43,2.784,0.09
+8,1,NO,Carnell Tate,WR,Ohio State,0.765,-3.15,2.839,0.083
+9,1,KC,Kenyon Sadiq,TE,Oregon,0.535,5.02,2.306,0.303
+10,1,NYG,Caleb Banks,DL,Florida,0.725,50.18,2.941,0.255
+11,1,MIA,Ty Simpson,QB,Alabama,0.36,19.29,2.412,0.331
+12,1,DAL,Keldric Faulk,EDGE,Auburn,1.0,32.43,2.906,0.247
+13,1,PIT,Makai Lemon,WR,USC,0.215,4.25,2.324,0.288
+14,1,BAL,Mansoor Delane,CB,LSU,0.23,-0.71,2.87,0.48
+15,1,TB,Sonny Styles,LB,Ohio State,0.305,-8.68,2.203,0.375
+16,1,NYJ,Rueben Bain,EDGE,Miami (FL),0.15,-1.25,2.155,0.198
+17,1,DET,Akheem Mesidor,EDGE,Miami (FL),0.335,19.78,2.651,0.385
+18,1,MIN,Dillon Thieneman,S,Oregon,0.415,1.92,2.667,0.495
+19,1,CAR,Chris McClellan,DL,Missouri,0.195,60.88,2.114,0.24
+20,1,DAL,Cashius Howell,EDGE,Texas A&M,0.535,47.63,2.64,0.247
+21,1,LAR,Jordyn Tyson,WR,Arizona State,0.125,26.05,2.871,0.595
+22,1,LAC,Omar Cooper Jr.,WR,Indiana,0.41,47.54,2.326,0.16
+23,1,PHI,Caleb Downs,S,Ohio State,0.175,-7.74,2.576,0.473
+24,1,CLE,Blake Miller,OT,Clemson,0.345,43.0,2.689,0.383
+25,1,CHI,Jalon Kilgore,S,South Carolina,0.44,15.55,2.375,0.48
+26,1,BUF,Jermod McCoy,CB,Tennessee,0.225,15.89,2.379,0.258
+27,1,LAR,KC Concepcion,WR,Texas A&M,0.1,49.31,2.599,0.675
+28,1,HOU,Kadyn Proctor,OT,Alabama,0.385,18.12,2.536,0.284
+29,1,KC,Chandler Rivers,CB,Duke,0.19,102.68,1.895,0.199
+30,1,MIN,Avieon Terrell,CB,Clemson,0.145,35.62,2.431,0.408
+31,1,NE,Chase Bisontis,IOL,Texas A&M,0.815,66.78,2.382,0.242
+32,1,SEA,Olaivavega Ioane,IOL,Penn State,0.53,0.55,2.107,0.186

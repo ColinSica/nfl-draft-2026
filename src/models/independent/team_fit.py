@@ -259,9 +259,17 @@ def compute_team_fit(prospects: pd.DataFrame,
     scheme    = _max_with_flex(lookups["scheme"])
     age_cliff = pos_canon.map(lookups["age_cliff"]).fillna(0.0)
     prior     = pos_canon.map(lookups["prior"]).fillna(0.0)
-    gm_mult   = pos_canon.map(lookups["gm_mult"]).fillna(1.0)
+    # Multipliers: for hybrid prospects, take MAX of primary-pos and flex-pos
+    # GM affinity + coaching tree should credit the flex role too.
+    def _max_mult(lookup_dict):
+        primary = pos_canon.map(lookup_dict).fillna(1.0)
+        flex = pos_flex.map(lookup_dict).fillna(1.0)
+        # Only replace primary if the prospect has a flex AND the flex multiplier is higher
+        has_flex = pos_flex != ""
+        return primary.where(~has_flex, pd.concat([primary, flex], axis=1).max(axis=1))
+    gm_mult   = _max_mult(lookups["gm_mult"])
+    coach_mult = _max_mult(lookups["coach_mult"])
     cap_mult  = pos_canon.map(lookups["cap_mult"]).fillna(1.0)
-    coach_mult = pos_canon.map(lookups["coach_mult"]).fillna(1.0)
     need = need * cap_mult
 
     # College connection — vectorized over the stints list once.
