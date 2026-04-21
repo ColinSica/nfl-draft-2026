@@ -79,10 +79,19 @@ function Header({ onAbout }: {
   return (
     <header className="sticky top-0 z-30 backdrop-blur-md bg-ink/85 border-b border-ink-edge">
       <div className="max-w-[1320px] mx-auto px-4 sm:px-6 h-16 flex items-center gap-4 sm:gap-8">
-        <Link to="/" className="flex items-baseline gap-2 group flex-none">
-          <span className="display-serif text-2xl font-bold tracking-tight leading-none">
-            2026
-            <span className="italic font-normal text-paper-muted">/Draft</span>
+        <Link to="/" className="flex items-center gap-2.5 group flex-none">
+          <span
+            className="display-num text-2xl leading-none px-2 py-1"
+            style={{
+              background: '#FFD23F',
+              color: '#06080F',
+              fontStyle: 'italic',
+            }}
+          >
+            26
+          </span>
+          <span className="display-broadcast text-xl leading-none hidden sm:inline">
+            Draft<span className="text-paper-muted">/</span><span className="text-mode-indie">Intel</span>
           </span>
         </Link>
 
@@ -194,9 +203,10 @@ function AppInner() {
         </Routes>
       </main>
       <footer className="max-w-[1320px] w-full mx-auto px-4 sm:px-6 py-6 mt-8 border-t border-ink-edge">
+        <div className="chevron-stripe mb-5 opacity-60" />
         <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-paper-subtle">
           <div className="flex items-center gap-3">
-            <span className="display-serif italic">2026 Draft Predictor</span>
+            <span className="display-broadcast text-paper">2026 Draft Intel</span>
             <span className="text-ink-edge">·</span>
             <span>Built by <span className="text-paper-muted">Colin Sica</span></span>
           </div>
@@ -230,10 +240,11 @@ function ComparePlaceholder() {
     <div className="py-16 max-w-2xl">
       <div className="space-y-4">
         <span className="caps-tight text-mode-compare">Compare mode</span>
-        <h1 className="display-serif text-5xl font-semibold tracking-tight">
-          Independent <span className="italic text-paper-muted">vs.</span> Benchmark.
+        <h1 className="display-broadcast text-6xl leading-[0.85]">
+          Independent <span className="italic text-paper-muted">vs.</span><br />
+          <span style={{ color: '#4A9EFF' }}>Benchmark.</span>
         </h1>
-        <hr className="hrule-thick" />
+        <hr className="hrule-accent" />
         <p className="text-paper-muted leading-relaxed">
           Side-by-side comparison view coming next. Will show each slot with the
           Independent model's pick, the analyst Benchmark pick, overlap/divergence,
@@ -249,10 +260,10 @@ function MethodPlaceholder() {
     <div className="py-16 max-w-2xl">
       <div className="space-y-4">
         <span className="caps-tight text-paper-subtle">Method</span>
-        <h1 className="display-serif text-5xl font-semibold tracking-tight">
-          How the model <span className="italic">actually</span> works.
+        <h1 className="display-broadcast text-6xl leading-[0.85]">
+          How the model <span className="italic" style={{ color: '#FFD23F' }}>actually</span> works.
         </h1>
-        <hr className="hrule-thick" />
+        <hr className="hrule-accent" />
         <p className="text-paper-muted leading-relaxed">
           Detailed method page coming next. Will cover Stage 1 board construction,
           Stage 2 team-agent simulation, the independence contract, feature inventory,

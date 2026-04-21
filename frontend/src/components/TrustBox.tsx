@@ -1,9 +1,5 @@
 import { useMode } from '../lib/mode';
 
-/**
- * Trust statement — a product-defining affirmation shown near the top
- * of the homepage. Makes the Independent model's contract explicit.
- */
 export function TrustBox() {
   const { mode } = useMode();
   const showIndieTrust = mode === 'independent';
@@ -11,30 +7,39 @@ export function TrustBox() {
   return (
     <section
       aria-label="Model transparency"
-      className="border border-ink-edge bg-ink-raised/60 backdrop-blur-sm"
-      style={{ borderRadius: '2px' }}
+      className="relative border border-ink-edge bg-ink-raised/70 backdrop-blur-sm overflow-hidden"
     >
-      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-0">
+      {/* yellow chevron stripe top-edge — broadcast motif */}
+      <div className="chevron-stripe" />
+
+      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr]">
         <div
-          className="px-6 py-5 md:border-r border-b md:border-b-0 border-ink-edge
-                     flex items-center justify-center"
+          className="px-6 py-6 md:border-r border-b md:border-b-0 border-ink-edge
+                     flex items-center justify-center min-w-[140px]"
           style={{
             background: showIndieTrust
-              ? 'linear-gradient(135deg, rgba(200,241,105,0.08), rgba(200,241,105,0.02))'
+              ? 'linear-gradient(135deg, rgba(255,210,63,0.14), rgba(255,210,63,0.03))'
               : 'transparent',
           }}
         >
           <span
-            className="display-serif text-4xl md:text-5xl font-bold italic"
-            style={{ color: showIndieTrust ? '#C8F169' : '#A29987' }}
+            className="display-num"
+            style={{
+              color: showIndieTrust ? '#FFD23F' : '#9FACC2',
+              fontSize: 'clamp(3.5rem, 7vw, 5rem)',
+              lineHeight: 1,
+            }}
           >
             01
           </span>
         </div>
         <div className="px-6 py-5 space-y-2.5">
-          <h3 className="caps text-mode-indie">The contract</h3>
+          <div className="flex items-center gap-2">
+            <span className="live-dot" />
+            <h3 className="caps" style={{ color: '#FFD23F' }}>The contract</h3>
+          </div>
           <p className="text-paper leading-relaxed text-[0.95rem]">
-            This model <span className="display-serif italic font-medium">does not copy analyst mocks.</span>
+            This model <span className="display-broadcast text-xl" style={{ color: '#FFD23F' }}>DOES NOT COPY ANALYST MOCKS.</span>
             &nbsp;Analyst picks are never fed into the Independent engine.
           </p>
           <p className="text-paper-muted text-sm leading-relaxed">

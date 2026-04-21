@@ -1,10 +1,14 @@
-// Editorial primitives — hairline rules, small-caps labels, stat displays.
-// Used throughout the product as its visual signature.
-
+// Broadcast/editorial primitives — hairlines, small-caps, stat display.
 import { type ReactNode } from 'react';
 
-export function HRule({ thick = false, className = '' }: { thick?: boolean; className?: string }) {
-  return <hr className={`${thick ? 'hrule-thick' : 'hrule'} ${className}`} />;
+export function HRule({ thick = false, live = false, accent = false, className = '' }: {
+  thick?: boolean;
+  live?: boolean;
+  accent?: boolean;
+  className?: string;
+}) {
+  const cls = live ? 'hrule-live' : accent ? 'hrule-accent' : thick ? 'hrule-thick' : 'hrule';
+  return <hr className={`${cls} ${className}`} />;
 }
 
 export function SmallCaps({
@@ -42,8 +46,8 @@ export function Stat({
     <div className="space-y-1">
       <div className="caps-tight text-paper-subtle">{label}</div>
       <div
-        className={big ? 'stat-big' : 'display-serif text-2xl font-semibold'}
-        style={{ color: accent ?? '#EDE7D8' }}
+        className={big ? 'stat-big' : 'display-broadcast text-3xl'}
+        style={{ color: accent ?? '#F3F6FA' }}
       >
         {value}
       </div>
@@ -64,19 +68,19 @@ export function SectionHeader({
   className?: string;
 }) {
   return (
-    <header className={`space-y-2 ${className}`}>
+    <header className={`space-y-3 ${className}`}>
       <div className="flex items-baseline gap-3">
         {number !== undefined && (
-          <span className="display-serif text-sm text-paper-subtle font-mono">
+          <span className="display-num font-mono text-sm text-paper-subtle">
             §{String(number).padStart(2, '0')}
           </span>
         )}
-        {kicker && <span className="caps-tight text-mode-indie">{kicker}</span>}
+        {kicker && <span className="caps text-mode-indie">{kicker}</span>}
       </div>
-      <h2 className="display-serif text-3xl md:text-4xl font-semibold tracking-tight">
+      <h2 className="display-broadcast text-4xl md:text-5xl tracking-tight">
         {title}
       </h2>
-      <HRule className="rule-draw" />
+      <HRule accent className="rule-draw" />
     </header>
   );
 }
@@ -84,6 +88,16 @@ export function SectionHeader({
 export function MissingText({ children = 'Not available' }: { children?: ReactNode }) {
   return (
     <span className="italic text-paper-subtle text-sm">
+      {children}
+    </span>
+  );
+}
+
+/** Pulsing LIVE / ON THE CLOCK indicator */
+export function LiveBadge({ children = 'Live' }: { children?: ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-2 px-2.5 py-1 caps-tight bg-live/10 text-live border border-live/40">
+      <span className="live-dot" />
       {children}
     </span>
   );

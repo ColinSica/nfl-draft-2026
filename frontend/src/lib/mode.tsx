@@ -18,24 +18,24 @@ export const MODE_META: Record<Mode, {
     caption: 'Model prediction',
     description:
       'Analyst-independent prediction engine. Stage 1 builds the board from tape and traits. Stage 2 simulates the draft with 32 team agents. Analyst picks are NOT used as input.',
-    accent: '#C8F169',
-    accentDim: '#6F8334',
+    accent: '#FFD23F',      // broadcast yellow
+    accentDim: '#8A6E1F',
   },
   benchmark: {
     label: 'Benchmark',
     caption: 'Analyst consensus',
     description:
       'Aggregate of public analyst mocks and big boards. Shown for comparison only — never feeds into the Independent model.',
-    accent: '#E6AF5A',
-    accentDim: '#82633A',
+    accent: '#4A9EFF',      // broadcast blue
+    accentDim: '#26578F',
   },
   compare: {
     label: 'Compare',
     caption: 'Side-by-side',
     description:
       'Compare the Independent model to the analyst Benchmark. See where they agree, where they diverge, and why.',
-    accent: '#6AA4D9',
-    accentDim: '#3F6388',
+    accent: '#2EE09A',      // field green
+    accentDim: '#1A7D55',
   },
 };
 

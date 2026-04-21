@@ -6,7 +6,7 @@ import { useMode, MODE_META } from '../lib/mode';
 import { ModeDescription, ModeSwitcher } from '../components/ModeSwitcher';
 import { FreshnessPanel } from '../components/FreshnessPanel';
 import { TrustBox } from '../components/TrustBox';
-import { HRule, SmallCaps, SectionHeader } from '../components/editorial';
+import { HRule, SmallCaps, SectionHeader, LiveBadge } from '../components/editorial';
 import { PickCard, type PickData } from '../components/PickCard';
 
 export function Home() {
@@ -53,30 +53,34 @@ export function Home() {
   return (
     <div className="space-y-14 pb-16">
       {/* ───────────────────────── HERO ───────────────────────── */}
-      <section className="relative pt-6 md:pt-10">
+      <section className="relative pt-4 md:pt-6">
         <div className="space-y-5">
-          <div className="flex items-center gap-3 reveal reveal-1">
+          <div className="flex items-center flex-wrap gap-3 reveal reveal-1">
+            <LiveBadge>T-3 Days · On the clock</LiveBadge>
             <SmallCaps className="text-paper-subtle">2026 NFL Draft</SmallCaps>
             <span className="font-mono text-[0.68rem] text-paper-faint">—</span>
-            <SmallCaps tight className="text-paper-muted">Analyst-independent prediction engine</SmallCaps>
+            <SmallCaps tight className="text-paper-muted">Independent Prediction Engine</SmallCaps>
           </div>
 
-          <h1 className="display-serif tracking-[-0.03em] leading-[0.95] reveal reveal-2"
-              style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 700 }}>
-            How the draft
+          <h1 className="display-broadcast tracking-[-0.02em] leading-[0.85] reveal reveal-2"
+              style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}>
+            Who picks
             <br />
-            <span className="italic font-normal text-paper-muted">will actually play out.</span>
+            <span className="italic" style={{ color: '#FFD23F' }}>whom.</span>
+            <span className="italic text-paper-muted ml-4" style={{ fontSize: '0.55em' }}>
+              And why.
+            </span>
           </h1>
 
           <div className="reveal reveal-3">
-            <HRule thick className="rule-draw" />
+            <HRule accent className="rule-draw" />
           </div>
 
-          <p className="max-w-2xl text-lg leading-[1.55] text-paper-muted reveal reveal-3">
+          <p className="max-w-2xl text-lg leading-[1.5] text-paper-muted reveal reveal-3">
             A two-stage simulation of the 2026 NFL Draft.&nbsp;
-            <span className="text-paper">Stage&nbsp;1</span> builds the player board from tape grades,
+            <span className="text-paper font-semibold">Stage&nbsp;1</span> builds the player board from tape grades,
             athletic testing, and scheme-fit signals.&nbsp;
-            <span className="text-paper">Stage&nbsp;2</span> simulates the draft as 32 autonomous team agents —
+            <span className="text-paper font-semibold">Stage&nbsp;2</span> simulates the draft as 32 autonomous team agents —
             each acting on its own needs, cap, coaches, and visit intel.
           </p>
 
@@ -203,6 +207,7 @@ export function Home() {
               'Every prospect is graded from factual signals only: PFF tape grades, RAS athletic composite, visit intel, medicals, conference, age, production.',
               'No analyst rank or mock pick data feeds into this stage. Guard tests enforce the contract.',
             ]}
+            accent="#FFD23F"
           />
           <StageBlock
             index="02"
@@ -212,7 +217,7 @@ export function Home() {
               'Each team acts as an autonomous agent. Profile includes GM, coach, scheme, win-now pressure, QB urgency, cap tier, roster depth, visit spread, coaching-tree tendencies, and trade behavior.',
               'Monte Carlo simulation runs the draft thousands of times. Trades emerge organically from capital + need + aggressiveness.',
             ]}
-            accent="#E6AF5A"
+            accent="#4A9EFF"
             border
           />
         </div>
@@ -224,7 +229,7 @@ export function Home() {
 /* ──────────────── Supporting components ──────────────── */
 
 function EntryCard({
-  kicker, title, description, to, Icon, questionMark, accent = '#C8F169',
+  kicker, title, description, to, Icon, questionMark, accent = '#FFD23F',
 }: {
   kicker: string;
   title: string;
@@ -237,26 +242,30 @@ function EntryCard({
   return (
     <Link
       to={to}
-      className="card p-6 hover:border-paper-muted transition-all ease-editorial duration-200 group
-                 flex flex-col gap-4"
-      style={{ borderRadius: '2px' }}
+      className="card p-6 hover:border-paper-muted transition-all ease-broadcast duration-200 group
+                 flex flex-col gap-4 relative overflow-hidden"
     >
+      {/* hover accent bar */}
+      <span
+        className="absolute top-0 left-0 right-0 h-[3px] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-broadcast"
+        style={{ background: accent }}
+      />
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-xs text-paper-subtle">{kicker}</span>
+          <span className="display-num text-xs text-paper-subtle">{kicker}</span>
           <SmallCaps tight className="text-paper-subtle">{questionMark}</SmallCaps>
         </div>
-        <Icon size={18} style={{ color: accent }} />
+        <Icon size={20} style={{ color: accent }} />
       </div>
-      <h3 className="display-serif text-3xl md:text-4xl font-semibold leading-none tracking-tight">
+      <h3 className="display-broadcast text-4xl md:text-5xl leading-[0.85]">
         {title}
       </h3>
       <p className="text-paper-muted text-sm leading-relaxed">{description}</p>
       <div className="mt-auto pt-2 flex items-center justify-between border-t border-ink-edge">
-        <span className="caps-tight text-paper-subtle">Explore</span>
+        <span className="caps-tight text-paper-subtle">Open</span>
         <ArrowUpRight
-          size={16}
-          className="text-paper-muted group-hover:text-paper transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          size={18}
+          className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           style={{ color: accent }}
         />
       </div>
@@ -265,7 +274,7 @@ function EntryCard({
 }
 
 function StageBlock({
-  index, label, title, body, accent = '#C8F169', border = false,
+  index, label, title, body, accent = '#FFD23F', border = false,
 }: {
   index: string;
   label: string;
@@ -276,23 +285,25 @@ function StageBlock({
 }) {
   return (
     <div
-      className={`p-6 md:p-8 space-y-4 ${border ? 'md:border-l border-ink-edge' : ''}`}
+      className={`p-6 md:p-8 space-y-4 relative ${border ? 'md:border-l border-ink-edge' : ''}`}
       style={{
-        background: `linear-gradient(180deg, ${accent}04 0%, transparent 50%)`,
+        background: `linear-gradient(180deg, ${accent}08 0%, transparent 60%)`,
       }}
     >
       <div className="flex items-baseline gap-3">
         <span
-          className="display-serif text-6xl md:text-7xl font-bold italic leading-none"
-          style={{ color: accent }}
+          className="display-num leading-none"
+          style={{
+            color: accent,
+            fontSize: 'clamp(4.5rem, 9vw, 7rem)',
+            textShadow: `0 0 28px ${accent}30`,
+          }}
         >
           {index}
         </span>
-        <div>
-          <SmallCaps tight className="text-paper-subtle">{label}</SmallCaps>
-        </div>
+        <SmallCaps tight className="text-paper-subtle">{label}</SmallCaps>
       </div>
-      <h3 className="display-serif text-2xl md:text-3xl font-semibold tracking-tight leading-tight">
+      <h3 className="display-broadcast text-3xl md:text-4xl leading-[0.9]">
         {title}
       </h3>
       <div className="space-y-3 text-paper-muted text-sm leading-relaxed max-w-md">
