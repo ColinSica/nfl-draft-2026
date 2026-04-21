@@ -1,0 +1,345 @@
+{
+  "date": "2026-04-20",
+  "scrape_timestamp_local": "2026-04-20",
+  "draft_kickoff_in_days": 3,
+  "sources_scraped": [
+    "ESPN NFL Draft 2026 hub",
+    "NFL.com news (Monday draft buzz)",
+    "NBC Sports ProFootballTalk (PFT)",
+    "CBS Sports NFL Draft",
+    "Yahoo Sports NFL Live",
+    "Steelers Depot",
+    "SI.com team sites (Steelers, Vikings, Patriots, Seahawks)",
+    "Philadelphia Inquirer",
+    "Arizona Sports",
+    "Cleveland.com / News 5 Cleveland",
+    "Giants.com / Big Blue View",
+    "Raiders.com / Washington Post",
+    "Tigerrag (LSU beat)",
+    "Heavy.com team verticals",
+    "Seahawks.com / Field Gulls / Seaside Joe",
+    "Daily Norseman (Vikings) / Vikings Territory",
+    "Bleeding Green Nation (Eagles)",
+    "Behind The Steel Curtain (Steelers)",
+    "Clutch Points",
+    "Yardbarker aggregation"
+  ],
+  "insider_reports_today": [
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "team_intent",
+      "summary": "Schefter published draft-week intel piece Monday: Steelers LT Broderick Jones suffered a neck-injury setback and will be re-examined this week, which could push Pittsburgh to draft a LT on Day 1 or early Day 2.",
+      "url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "team_intent",
+      "summary": "Schefter: 'growing chatter' that the Cardinals could draft Notre Dame RB Jeremiyah Love at No. 3 overall; Arizona has had exploratory calls about trading down but will consider taking Love if they hold.",
+      "url": "https://arizonasports.com/nfl/arizona-cardinals/jeremiyah-love-2/3618392/",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "trade",
+      "summary": "Schefter: Eagles have re-emerged as suitors for Vikings EDGE Jonathan Greenard; discussions could reignite during draft weekend. Vikings continue to seek a premium Day 2 pick.",
+      "url": "https://www.dailynorseman.com/minnesota-vikings-draft/96025/jonathan-greenard-trade-still-possible-draft-weekend-minnesota-vikings-philadelphia-eagles",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "trade",
+      "summary": "Schefter: Browns are taking calls on the No. 6 pick and are open to moving it; Andrew Berry framed the approach Monday as 'maximizing the asset' (trade down, trade up, or trade for a veteran all live).",
+      "url": "https://www.nfl.com/news/andrew-berry-browns-goal-no-6-pick-maximizing-the-asset-2026-draft",
+      "time_approx": "afternoon"
+    },
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "trade",
+      "summary": "Schefter: A.J. Brown trade to Patriots 'still tracking' to happen on or after June 1; both sides waiting so $40M cap hit can split across years. Trade before June 1 would cost Eagles $43.4M dead cap.",
+      "url": "https://www.inquirer.com/eagles/aj-brown-patriots-trade-june-1-salary-cap-2026-nfl-draft-20260420.html",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "team_intent",
+      "summary": "Schefter: Aaron Rodgers has still not informed Steelers whether he intends to play in 2026; if no answer by Thursday, Pittsburgh will internally discuss Ty Simpson at No. 21.",
+      "url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Adam Schefter",
+      "outlet": "ESPN",
+      "topic": "team_intent",
+      "summary": "Schefter: Seahawks enter the week with only 4 picks (32, 64, 96, 188) and are actively looking to trade out of Round 1 to stockpile selections; RB is flagged as a top need.",
+      "url": "https://heavy.com/sports/nfl/seattle-seahawks/seahawks-rumors-news-trade-nfl-draft/",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Ian Rapoport",
+      "outlet": "NFL Network",
+      "topic": "trade",
+      "summary": "Rapoport on Monday: Giants now considered LESS likely to deal EDGE Kayvon Thibodeaux after acquiring two top-10 picks via the Lawrence trade; Thibodeaux set to play 2026 on his $14.751M fifth-year option.",
+      "url": "https://www.nfl.com/news/2026-nfl-draft-buzz-monday",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Ian Rapoport",
+      "outlet": "NFL Network",
+      "topic": "prospect_news",
+      "summary": "Rapoport: Cowboys signed K Brandon Aubrey to a 4-year, $28M extension ($20M guaranteed), making him the league's highest-paid kicker. Indirect signal that Dallas is prioritizing veteran retention over spending Day 3 capital on a specialist.",
+      "url": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-ahead-of-2026-draft-brandon-aubrey-cowboys-agree-on-record-setting-extension-steelers-open-minicamp-without-aaron-rodgers-update-162323363.html",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Tom Pelissero",
+      "outlet": "NFL Network",
+      "topic": "medical",
+      "summary": "Pelissero on Monday: NFL Combine tests revealed a cyst on Garrett Nussmeier's spine that caused his 2025 oblique pain; Nussmeier has been asymptomatic since just prior to Senior Bowl; any future procedure is minimally invasive with 2-3 week recovery.",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-garrett-nussmeier-had-cyst-on-spine-during-2025-season",
+      "time_approx": "morning"
+    },
+    {
+      "reporter": "Ian Rapoport / Tom Pelissero / Mike Garafolo",
+      "outlet": "NFL Network",
+      "topic": "trade",
+      "summary": "Trio report: A.J. Brown will NOT attend Eagles voluntary workouts that started today; Eagles/Patriots deal still tracking for on-or-after June 1 window.",
+      "url": "https://www.nfl.com/news/2026-nfl-draft-buzz-monday",
+      "time_approx": "morning"
+    }
+  ],
+  "team_press_conferences_today": [
+    {
+      "team": "CLE",
+      "speaker": "Andrew Berry (GM)",
+      "summary": "Pre-draft presser Monday: goal at No. 6 is 'maximizing the asset' — will work scenarios including trade down, trade up, or trade for a veteran up through going on the clock Thursday. Did not commit to any path.",
+      "url": "https://www.clevelandbrowns.com/news/andrew-berry-discusses-outlook-on-no-6-pick-and-more-ahead-of-the-2026-nfl-draft"
+    },
+    {
+      "team": "LV",
+      "speaker": "John Spytek (GM)",
+      "summary": "Spytek confirmed teams have called about the No. 1 pick but Raiders staying put; strong implication Fernando Mendoza is the selection, pairing behind veterans Kirk Cousins / Aidan O'Connell.",
+      "url": "https://www.espn.com/nfl/story/_/id/48488757/raiders-spytek-says-teams-inquired-no-1-draft-pick"
+    }
+  ],
+  "prospect_news_today": [
+    {
+      "player": "Garrett Nussmeier",
+      "news_type": "injury",
+      "summary": "Confirmed Monday: Combine MRI revealed a spinal cyst (cause of 2025 oblique pain). Asymptomatic since January; minimally invasive surgery possible with 2-3 week recovery. Now projected as Day 2 pick.",
+      "source": "https://www.ktik.com/2026/04/20/report-draft-prospect-qb-garrett-nussmeier-asymptomatic/"
+    },
+    {
+      "player": "Broderick Jones",
+      "news_type": "injury",
+      "summary": "Schefter: Steelers LT (post-spinal-fusion) has suffered a setback on his neck injury; further evaluation this week. Direct draft implication — Pittsburgh may need LT in Round 1 or early Day 2.",
+      "source": "https://steelersdepot.com/2026/04/schefter-broderick-jones-suffered-neck-injury-setback/"
+    },
+    {
+      "player": "Jermod McCoy",
+      "news_type": "workout",
+      "summary": "McCoy skipped Combine after January 2025 ACL tear but ran 4.39 at pro day; medical file is the sticking point, not testing. Continues to surface in late-R1 / early-R2 projections.",
+      "source": "https://www.espn.com/nfl/draft2026/story/_/id/48479903/2026-nfl-draft-jeff-legwold-ranking-top-100-prospects"
+    },
+    {
+      "player": "Jordyn Tyson",
+      "news_type": "injury",
+      "summary": "Dane Brugler flagged durability as his primary red flag Monday — hamstring soft-tissue history caused him to miss both Combine and pro day workouts. Jeremiah dropped him 4 spots to No. 21.",
+      "source": "https://fansided.com/nfl/biggest-red-flag-for-every-2026-nfl-draft-prospect-in-the-top-25"
+    },
+    {
+      "player": "A.J. Brown",
+      "news_type": "workout",
+      "summary": "Confirmed Monday: Brown a no-show for Eagles voluntary workouts (day 1) amid unresolved Patriots trade situation.",
+      "source": "https://ca.sports.yahoo.com/news/aj-brown-reportedly-not-expected-to-attend-eagles-voluntary-offseason-workouts-amid-trade-speculation-172446846.html"
+    }
+  ],
+  "injury_medical_today": [
+    {
+      "player": "Garrett Nussmeier",
+      "status": "asymptomatic; cyst on spine identified as cause of 2025 oblique pain",
+      "draft_impact": "Day 2 range now, down from prior first-round talk; teams with clean medical flag are more comfortable.",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/report-garrett-nussmeier-had-cyst-on-spine-during-2025-season"
+    },
+    {
+      "player": "Broderick Jones (Steelers LT)",
+      "status": "neck injury setback; further evaluation this week",
+      "draft_impact": "Raises probability Steelers target OT at No. 21 or early Day 2; relevant for any team weighing trading up into Pittsburgh's range.",
+      "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/steelers-left-tackle-broderick-jones-needs-further-evaluation-after-neck-injury-setback"
+    }
+  ],
+  "trade_rumors_today": [
+    {
+      "teams_involved": ["NYG", "CIN"],
+      "status": "completed Saturday 4/19, terms finalized Sunday 4/20",
+      "summary": "Dexter Lawrence traded to Bengals for No. 10 overall pick. Bengals added 1-year, $28M extension (through 2028). Giants now hold two top-10 picks (5 & 10) entering the Harbaugh era.",
+      "url": "https://www.nfl.com/news/nfl-network-giants-trading-dt-dexter-lawrence-to-bengals-in-exchange-for-2026-no-10-overall-pick"
+    },
+    {
+      "teams_involved": ["PHI", "MIN"],
+      "status": "active, could reignite during draft weekend",
+      "summary": "Eagles have checked back in on EDGE Jonathan Greenard; Vikings want a premium Day 2 pick. Eagles have picks 54, 68, 98 on Day 2.",
+      "url": "https://clutchpoints.com/nfl/philadelphia-eagles/nfl-rumors-jonathan-greenard-trade-eagles-radar-howie-roseman"
+    },
+    {
+      "teams_involved": ["PHI", "NE"],
+      "status": "deferred to post-June 1",
+      "summary": "A.J. Brown to Patriots trade 'still tracking' but will wait for cap split; does NOT materially affect draft behavior this week beyond Eagles not expecting to draft Brown's replacement.",
+      "url": "https://www.inquirer.com/eagles/aj-brown-patriots-trade-june-1-salary-cap-2026-nfl-draft-20260420.html"
+    },
+    {
+      "teams_involved": ["CLE", "DAL"],
+      "status": "rumored / market-testing",
+      "summary": "Continued chatter of a Browns-Cowboys swap (Dallas 12+20 for Cleveland 6+39 or similar); Berry confirmed Monday he's working all scenarios.",
+      "url": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-first-round-trades-chiefs-cowboys/"
+    },
+    {
+      "teams_involved": ["KC"],
+      "status": "monitoring",
+      "summary": "Chiefs reportedly talked to Cardinals (No. 3) and Titans (No. 4) about trading up from No. 9; Veach publicly predicted active Thursday.",
+      "url": "https://sports.yahoo.com/nfl/article/2026-nfl-mock-draft-90-final-edition-has-chiefs-and-eagles-trading-up-giants-making-post-dexter-lawrence-splashes-and-much-more-114919166.html"
+    },
+    {
+      "teams_involved": ["SEA"],
+      "status": "openly shopping",
+      "summary": "Seahawks willing to trade out of No. 32 to recover Day 2/3 picks (only 4 total selections currently). Multiple reported scenarios involve Browns taking No. 32 for 39/70/149.",
+      "url": "https://www.fieldgulls.com/seattle-seahawks-nfl-draft/165883/espn-seahawks-collecting-picks-browns-all-trades-2026-nfl-mock-draft"
+    },
+    {
+      "teams_involved": ["NYG"],
+      "status": "less likely",
+      "summary": "Thibodeaux market cooled post-Lawrence trade; Giants now more inclined to keep him on his $14.751M fifth-year option.",
+      "url": "https://www.nfl.com/news/2026-nfl-draft-buzz-monday"
+    },
+    {
+      "teams_involved": ["PIT"],
+      "status": "rumored",
+      "summary": "Alex Highsmith name in the trade rumor mill Monday; front offices view him as likelier to be moved than Nick Herbig if Pittsburgh moves an edge.",
+      "url": "https://atozsports.com/nfl/pittsburgh-steelers-news/alex-highsmith-steelers-trade-rumors-ahead-of-2026-nfl-draft/"
+    },
+    {
+      "teams_involved": ["NYJ"],
+      "status": "teams checking in, low probability",
+      "summary": "Multiple teams are pinging Jets about WR Garrett Wilson; GM Darren Mougey willing to listen if offer is strong.",
+      "url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"
+    }
+  ],
+  "visit_reports_today": [
+    {
+      "note": "Top-30 visit window effectively closing today/tomorrow. No new confirmed 30-visits dated specifically April 20 in public reporting; all trackers (CBS, PFN, WalterFootball) updated with previously reported visits.",
+      "url": "https://www.cbssports.com/nfl/news/nfl-draft-top-30-visits-tracker-2026/"
+    }
+  ],
+  "beat_writer_posts_today": [
+    {
+      "team": "PIT",
+      "writer": "Alex Kozora (Steelers Depot)",
+      "summary": "Broderick Jones setback report flags potential pivot to OT in first round; aggregated Schefter's reporting with local context that the Steelers' current swing tackle depth is thin.",
+      "url": "https://steelersdepot.com/2026/04/schefter-broderick-jones-suffered-neck-injury-setback/"
+    },
+    {
+      "team": "NYG",
+      "writer": "Big Blue View staff",
+      "summary": "New scouting profile posted Monday on USC S Kamari Ramsey as a potential Day 2 Giants target; Giants now hold picks 5 and 10.",
+      "url": "https://www.bigblueview.com/nfl-draft-scouting-report-profiles/159917/ny-giants-2026-nfl-draft-scouting-report-kamari-ramsey-s-usc"
+    },
+    {
+      "team": "SEA",
+      "writer": "Field Gulls staff",
+      "summary": "All-trades mock where Seahawks receive multiple picks from Browns for No. 32; article explicitly tied to Schneider's history of never staying at 4 picks.",
+      "url": "https://www.fieldgulls.com/seattle-seahawks-nfl-draft/165883/espn-seahawks-collecting-picks-browns-all-trades-2026-nfl-mock-draft"
+    },
+    {
+      "team": "PHI",
+      "writer": "Bleeding Green Nation staff",
+      "summary": "Case for Eagles trading up from No. 23 ahead of NYG/CAR/DAL/PIT who could swipe an OT ahead of them; aligns with Roseman's 'selective strike' history.",
+      "url": "https://www.bleedinggreennation.com/news/173767/eagles-news-espn-makes-the-case-for-philadelphia-to-trade-up-in-the-2026-nfl-draft"
+    },
+    {
+      "team": "CLE",
+      "writer": "News 5 Cleveland",
+      "summary": "Write-up of Berry's Monday presser — Berry is 'maximizing the asset' at No. 6 and did not rule out any scenario.",
+      "url": "https://www.news5cleveland.com/sports/browns/how-browns-gm-andrew-berry-is-approaching-2026-nfl-draft"
+    },
+    {
+      "team": "ARI",
+      "writer": "Arizona Sports",
+      "summary": "Localized Schefter Cardinals-Love chatter; notes Ossenfort's 'need is overrated' philosophy as rationale to take Love if offer to trade back doesn't meet value.",
+      "url": "https://arizonasports.com/nfl/arizona-cardinals/jeremiyah-love-2/3618392/"
+    },
+    {
+      "team": "LSU / NO adjacent",
+      "writer": "Tigerrag / NOLA.com",
+      "summary": "Beat coverage of the Nussmeier spinal-cyst diagnosis; Saints at No. 8 are a spotlighted downstream beneficiary if he slips to Day 2.",
+      "url": "https://www.nola.com/sports/lsu/football/lsu-garrett-nussmeier-nfl-draft-mysterious-injury-root-cause/article_fdde648b-ec80-4d21-8783-61d6bafe2e55.html"
+    }
+  ],
+  "high_impact_findings_today": [
+    "Steelers LT Broderick Jones neck setback (Schefter) — raises probability Pittsburgh drafts OT at 21 or early Day 2, which shifts OT demand curve for everyone picking 12-30.",
+    "Giants complete Dexter Lawrence trade; Bengals now hold pick 10 while Giants hold both 5 AND 10. Directly restructures top-10 team-need map.",
+    "Cardinals growing chatter on Jeremiyah Love at No. 3 (Schefter) — elevates odds of top-3 RB going earlier than Barkley 2018 precedent; knocks on down-board QB/edge availability at 4-6.",
+    "Garrett Nussmeier confirmed asymptomatic post-spinal-cyst diagnosis (Pelissero) — stabilizes his stock at Day 2 rather than free-fall; Saints at 8 and Steelers at 21 now realistic floors.",
+    "Kayvon Thibodeaux now 'less likely' to be traded (Rapoport) — NYG option value dropped post-Lawrence deal; reduces edge supply for trade-up suitors.",
+    "A.J. Brown to Patriots deal deferred to post-June 1 — Eagles will NOT draft a Brown replacement; frees their No. 23 pick for OT/EDGE/CB per Roseman pattern.",
+    "Browns Andrew Berry public 'maximize the asset' messaging — confirms No. 6 is actively shoppable; Cowboys-to-Browns swap (12+20 for 6+39) is the most-cited live scenario.",
+    "Eagles-Vikings Jonathan Greenard talks reignite (Schefter) — direct influence on whether PHI spends No. 23 on EDGE vs. OL/CB, and whether MIN drafts an edge replacement at No. 24.",
+    "Seahawks openly seeking to trade out of No. 32 with only 4 total picks — Browns-Seahawks 32-for-39/70/149 framework most cited; RB flagged as top SEA need.",
+    "Chiefs exploring trade-up to No. 3 (ARI) or No. 4 (TEN) from No. 9 — if executed, reshuffles picks 3-9; Veach publicly signaled active Thursday; likely targeting top edge (Bailey/Reese)."
+  ],
+  "no_new_posts_today": [
+    "Jay Glazer (FOX) — no dated 4/20 posts surfaced",
+    "Jeremy Fowler (ESPN) — aggregated to Schefter piece, no standalone 4/20 report",
+    "Mike Garafolo — co-bylined on NFL.com Monday buzz but no solo report",
+    "Local beat: Raiders (quiet post-Spytek presser), Chargers, Jaguars, Titans, Panthers, Broncos, Ravens, Bills, Dolphins, Colts, Jaguars, Buccaneers, Falcons, Lions, Packers, Bears, Commanders, 49ers, Rams, Texans — nothing new and dated 4/20 beyond aggregation of national reporting",
+    "No confirmed arrests today",
+    "No confirmed NEW trades dated today (Lawrence trade completed 4/19; Aubrey extension is not a draft-impact trade)"
+  ],
+  "confirmed_shifts_to_team_profiles": [
+    {
+      "team": "PIT",
+      "shift": "Promote OT need to first-round tier; increase weight on Broderick Jones medical uncertainty; QB (Ty Simpson) remains contingent on Rodgers decision."
+    },
+    {
+      "team": "CIN",
+      "shift": "Remove pick 10. Remove DT as a need. Cap/draft capital posture is now veteran-retention over rookie building."
+    },
+    {
+      "team": "NYG",
+      "shift": "Add pick 10. DT need now elevated (Lawrence departed). Thibodeaux staying means edge need is lower-priority."
+    },
+    {
+      "team": "ARI",
+      "shift": "Raise probability of RB at No. 3 (Love). Retain dual-path (trade down) flag but no longer a pure QB/edge pick."
+    },
+    {
+      "team": "CLE",
+      "shift": "Pick 6 posture explicitly 'open to all scenarios'. Increase trade-down probability."
+    },
+    {
+      "team": "SEA",
+      "shift": "Pick 32 actively shopped. RB now clearly a top-3 need (Walker departed)."
+    },
+    {
+      "team": "PHI",
+      "shift": "Not drafting Brown replacement (deferred trade). Add EDGE (Greenard trade) as alternate path."
+    },
+    {
+      "team": "KC",
+      "shift": "Trade-up probability elevated; target profile is top edge."
+    },
+    {
+      "team": "NE",
+      "shift": "No draft-day Brown acquisition; hold current top-of-draft posture."
+    },
+    {
+      "team": "MIN",
+      "shift": "Greenard trade still live; potential draft-day return of premium Day 2 capital."
+    }
+  ]
+}

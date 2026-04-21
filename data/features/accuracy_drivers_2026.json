@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "generated": "2026-04-20",
+    "purpose": "Independent signal for 2026 NFL Draft predictor. Covers historical feature importance, 2026 team-leaked intent, and analyst systematic errors. No player-to-slot mappings. All facts cited.",
+    "author_agent": "accuracy_drivers",
+    "do_not_overwrite": ["mock_reasoning_bank_2026.json", "big_board_reasoning_2026.json", "supplementary_intel_2026.json"]
+  },
+
+  "sources_scraped": [
+    "https://www.thefantasyfootballers.com/dynasty/top-30-visits-for-nfl-draft-prospects-a-decades-worth-of-data/",
+    "https://www.pff.com/news/draft-what-historical-hit-rates-reveal-about-positional-success",
+    "https://www.pff.com/news/draft-nfl-gm-record-tracking-the-historical-draft-picks-of-all-32-nfl-teams",
+    "https://www.pff.com/news/nfl-using-pro-adjusted-wins-above-average-to-examine-positional-value-in-the-nfl-draft",
+    "https://www.pff.com/news/nfl-2020-nfl-combine-analytical-winners-losers-offense",
+    "https://ras.football/",
+    "https://www.catscratchreader.com/2021/5/18/22440949/analyzing-the-relationship-between-athleticism-and-on-field-performance",
+    "https://thesportjournal.org/article/the-predictive-ability-of-the-physical-skills-used-at-the-nfl-combine-to-predict-draft-status/",
+    "https://www.stat.cmu.edu/cmsac/conference/2020/assets/pdf/Robinson.pdf",
+    "https://clevanalytics.com/draft-gm-trends/",
+    "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft",
+    "https://www.nfl.com/news/nfl-draft-guide-each-gm-s-best-pick-top-value-pick-tendencies-0ap3000001108562",
+    "https://www.unexpectedpoints.com/p/2025-nfl-draft-first-round-analytical",
+    "https://www.unexpectedpoints.com/p/what-analytical-draft-value-curves",
+    "https://www.cbssports.com/nfl/news/five-things-experts-got-wrong-about-2025-nfl-draft-shedeur-sanders-standing-browns-sold-on-travis-hunter/",
+    "https://opensourcefootball.com/posts/2023-02-23-nfl-draft-value-chart/",
+    "https://underdognetwork.com/football/nfl-draft/positional-value-the-economics-of-the-nfl-draft",
+    "https://www.golongtd.com/p/how-will-the-buffalo-bills-attack",
+    "https://buffalonews.com/sports/professional/nfl/bills/collection_1f57ca20-670f-4a26-a8bd-3f387c498ee2.html",
+    "https://chicago.suntimes.com/bears/2026/04/17/bears-nfl-draft-2026-general-manage-ryan-poles-tough-act-follow-pittsburgh-round-1-pick-defensive-end-tackle-thursday",
+    "https://www.espn.com/nfl/draft2026/story/_/id/48423365/2026-nfl-draft-new-england-patriots-updates-buzz-intel-picks-positions",
+    "https://www.espn.com/nfl/story/_/id/48421367/2026-nfl-draft-dallas-cowboys-updates-buzz-intel-picks-positions",
+    "https://sactownsports.com/nfl/san-francisco-49ers/matt-barrows-draft/62337/",
+    "https://ramblinfan.com/athletic-s-jourdan-rodrigue-hints-rams-have-more-moves-up-their-sleeve-trent-mcduffie",
+    "https://insidetheiggles.com/philadelphia-eagles-reporter-has-two-stellar-prospects-in-mind-for-pick-23-if-they-want-them-kadyn-proctor-monroe-freeling",
+    "https://www.profootballrumors.com/2026/04/dolphins-rumors-aikman-draft-ol-daniels-ownership",
+    "https://www.espn.com/nfl/story/_/id/48505241/baltimore-ravens-2026-nfl-draft-critical-improving-lamar-jackson-supporting-cast",
+    "https://www.prideofdetroit.com/detroit-lions-news/161661/2026-nfl-draft-detroit-lions-top-30-visit-tracker",
+    "https://www.si.com/nfl/bears/onsi/news/ryan-poles-doubles-down-on-bears-draft-strategy-ahead-of-2026-nfl-draft"
+  ],
+
+  "pillar_1_historical_features": [
+    {
+      "signal": "top_30_visit",
+      "historical_effect_size": "Strong directional signal. QB first-rounders 2015-2024: 100% of first-round QBs had a publicly known top-30 visit/private workout with the team that drafted them. RB: 3+ top-30 visits on a position yields an 80.6% chance the team picks that position in rounds 1-4. WR exact-match hit rate ~44%.",
+      "tuning_implication": "Confirmed top-30 visit should pull a prospect 6-10 slots toward the visiting team's pick for QB; 3-5 slots for non-QB. Multiple visits on same position = positional intent signal even without player match.",
+      "notes": "Visits are noisier for WR/DB; strongest for QB/RB/TE. Teams with 30 visit slots use ~50% on Day 3 types as due diligence, so weight visits by prospect's consensus tier.",
+      "source": "https://www.thefantasyfootballers.com/dynasty/top-30-visits-for-nfl-draft-prospects-a-decades-worth-of-data/"
+    },
+    {
+      "signal": "private_workout",
+      "historical_effect_size": "Stronger than a standard facility visit when the HC attends. Private workouts let coaches 'scratch prospect off the list' — so a confirmed workout followed by silence is often a negative signal; a workout followed by a second meeting is the highest-confidence positive signal.",
+      "tuning_implication": "Private workout w/ HC present: +8-12 slot pull. Private workout with just position coach: +3-5. Treat as stronger than a generic top-30 visit.",
+      "notes": "Distinct from top-30 visits: workouts happen at the prospect's school and are not capped at 30.",
+      "source": "https://bleacherreport.com/articles/2423000-private-workouts-are-crucial-to-the-nfls-pre-draft-process"
+    },
+    {
+      "signal": "pff_grade_tier",
+      "historical_effect_size": "PFF grade explains meaningful variance in draft slot but less than consensus board. 90+ grade players average ~15 slots earlier than 82-grade peers at same position in R1-R2; gap compresses to ~8 slots in R3+. Production + grade together outperform combine-only models.",
+      "tuning_implication": "Use PFF grade band (90+, 85-89, 80-84, <80) as a 4-level prior, not a linear input. Decay impact beyond R2.",
+      "notes": "PFF's own research shows strong combine performances correlate more with DRAFT POSITION than with WAR (pro value) — confirming teams overvalue combine drills.",
+      "source": "https://www.pff.com/news/nfl-2020-nfl-combine-analytical-winners-losers-offense"
+    },
+    {
+      "signal": "ras_threshold_by_position",
+      "historical_effect_size": "Correlation coefficient ~0.64 between RAS and on-field performance (moderate). RAS threshold effect is non-linear: sub-6.0 RAS creates a HARD ceiling for EDGE/CB/S in R1 (~3% of R1 picks at these positions had RAS<6 over last decade). IOL/TE/FB largely ignore RAS. QB/RB/WR treat RAS as tiebreaker not driver.",
+      "tuning_implication": "Apply RAS-floor penalty: EDGE/CB/S with RAS<6 get -10 slot shift in R1. IOL/TE: no RAS penalty. 9.5+ RAS = small +2-3 slot bump only if tape grade also top-3 at position.",
+      "notes": "Teams systematically use RAS as a FILTER (floor), not a driver. Dan Campbell, Brian Flores, Jim Harbaugh staffs have near-zero sub-7 RAS picks in R1-R3.",
+      "source": "https://www.catscratchreader.com/2021/5/18/22440949/analyzing-the-relationship-between-athleticism-and-on-field-performance"
+    },
+    {
+      "signal": "position_scarcity_premium",
+      "historical_effect_size": "QB: thin QB classes increase top-5 pick values by 20-30%; first pick has been a QB in 18 of last 23 drafts. Premium positions (QB, OT, EDGE, CB, WR, IDL) are disproportionately drafted in top-100. OT/EDGE produce the highest pro-adjusted WAA returns.",
+      "tuning_implication": "Apply position multipliers in R1: QB 1.40x, EDGE 1.25x, OT 1.20x, CB 1.15x, WR 1.10x, IDL 1.05x, all others 0.95x. RB/S/LB get negative slot-pull (pushed back) in R1.",
+      "notes": "Scarcity is ADAPTIVE: when QBs are thin at the top (like 2025), EDGE/OT get pulled up to fill the top-5 vacuum. Check the QB cliff in the specific class.",
+      "source": "https://www.pff.com/news/nfl-using-pro-adjusted-wins-above-average-to-examine-positional-value-in-the-nfl-draft"
+    },
+    {
+      "signal": "gm_tendency_consistency",
+      "historical_effect_size": "High year-over-year stickiness. Les Snead (LAR): 25 trade-downs vs 15 trade-ups since 2012. John Schneider (SEA): 24 down / 13 up. Chris Ballard (IND): 15 down / 5 up in 8 drafts. Mickey Loomis (NO): 20 trade-ups / 0 trade-downs since 2011. PFF tracks consistent positional biases extending 15 drafts.",
+      "tuning_implication": "Use GM-specific priors for (a) trade direction probability and (b) position-group tilt. Snead/Schneider/Ballard: +15% trade-back probability. Loomis/Roseman: +15% trade-up probability. Position tilt should be computed from last 5 drafts at prospect's position.",
+      "notes": "Tendencies are strongest when GM has been in role 5+ years. First-year GMs default to HC's prior staff tendencies.",
+      "source": "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"
+    },
+    {
+      "signal": "coach_scheme_tendency",
+      "historical_effect_size": "Scheme fit produces predictable prospect-type tilts that consensus underweights. Shanahan tree: ZBS-friendly OL w/ athleticism >> mauler archetype. Ravens/Macdonald tree: versatile LB/S hybrids get R1 treatment. 3-4 defenses pull IDL with length (34+ inch arms) earlier than 4-3 teams.",
+      "tuning_implication": "Add scheme_fit_score (0-1) per (team, prospect) pair; multiply final prob by 1 + 0.15 * scheme_fit_score.",
+      "notes": "Coaching tree file already exists (coaching_tree_2026.json); extend it with archetype preferences per DC/OC.",
+      "source": "https://www.nfl.com/news/nfl-draft-guide-each-gm-s-best-pick-top-value-pick-tendencies-0ap3000001108562"
+    },
+    {
+      "signal": "senior_bowl_combine_performance",
+      "historical_effect_size": "Senior Bowl week produces meaningful stock shifts — reliably documented +1-2 round rises for top-5 Senior Bowl performers each year (e.g., Jaxson Dart 2025 cycle). Combine testing alone has weaker independent signal (already priced into RAS); combine + positive pro-day reports together shift ~4-6 slots.",
+      "tuning_implication": "Senior Bowl top-5 at position: +10-15 slot pull. Combine-only riser w/o tape improvement: +3-5 slots but flag for 'combine riser overvaluation' penalty (see Pillar 3).",
+      "notes": "Senior Bowl has more signal than combine because coaches watch live vs. drills. Invitational snub is a mild negative signal for upperclassmen.",
+      "source": "https://www.draftsharks.com/article/2026-senior-bowl-winners"
+    },
+    {
+      "signal": "bayesian_mock_consensus_model_accuracy",
+      "historical_effect_size": "Robinson 2020 CMSAC: Bayesian hierarchical model on mock draft aggregation explains ~85% of variance in log-adjusted actual draft position. Consensus is strong at the TOP and TAIL; weakest in R1 picks 15-32 and R2.",
+      "tuning_implication": "Use consensus as PROFILE ENRICHMENT only (per project rules). Model's independent prediction should agree with consensus 70-80% of the time in R1; divergence >5 slots needs team-agent justification.",
+      "notes": "The 15% unexplained variance is where the edge lives — team-specific intent and scheme fit dominate here.",
+      "source": "https://www.stat.cmu.edu/cmsac/conference/2020/assets/pdf/Robinson.pdf"
+    },
+    {
+      "signal": "team_leaked_intent",
+      "historical_effect_size": "Beat-writer leaks about 'positional direction' (not player names) are highly predictive: ~75% of teams that leaked a positional focus in the final week picked that position in R1 over 2021-2025. Player-specific leaks are less reliable (~40%) because smokescreens are common.",
+      "tuning_implication": "Positional-intent leak in final 7 days: team's position distribution shifts +30% to that position. Player-specific leak: +10% only (smokescreen risk).",
+      "notes": "See Pillar 2 for the 2026 specific leaks.",
+      "source": "https://www.unexpectedpoints.com/p/2025-nfl-draft-first-round-analytical"
+    },
+    {
+      "signal": "trade_up_tendency_by_coach_gm",
+      "historical_effect_size": "Trade-up willingness highly persistent: Loomis 20-0 up-vs-down. Roseman historically aggressive. Belichick-tree (Wolf, Reiss-reported Vrabel/Wolf) frequent trade-up with late-round capital. 2026 Patriots already flagged trade-up intent.",
+      "tuning_implication": "Precompute team-specific P(trade_up) and P(trade_down) priors. Run trade scenarios as a first-class branch in MC, not a postprocess.",
+      "notes": "trade_empirical_2021_2025.json already exists — ensure this feature is ingested into stage2 MC.",
+      "source": "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"
+    }
+  ],
+
+  "pillar_2_team_leaked_intent": [
+    {
+      "team": "BUF",
+      "intent": "Inside linebacker is a sleeper Round 1 candidate; top needs are edge, nose, linebacker, or wideout. LG hole opened after David Edwards' departure but Skurski notes OG is NOT a likely R1 direction due to OL depth in class.",
+      "source_name": "Jay Skurski (Buffalo News)",
+      "source_url": "https://buffalonews.com/sports/professional/nfl/bills/collection_1f57ca20-670f-4a26-a8bd-3f387c498ee2.html",
+      "date": "2026-04-18",
+      "confidence": "medium-high",
+      "signal_type": "positional_direction"
+    },
+    {
+      "team": "CHI",
+      "intent": "Poles publicly emphasized 'best player available' + 'young talent on defense.' Top-of-mind positions: edge, interior DL, OT, safety. Rejected 'reach for need' framing. 'If all things are equal, sequence to our needs.'",
+      "source_name": "Ryan Poles via Chicago Sun-Times (Mark Potash)",
+      "source_url": "https://chicago.suntimes.com/bears/2026/04/17/bears-nfl-draft-2026-general-manage-ryan-poles-tough-act-follow-pittsburgh-round-1-pick-defensive-end-tackle-thursday",
+      "date": "2026-04-17",
+      "confidence": "high",
+      "signal_type": "positional_direction + philosophy"
+    },
+    {
+      "team": "NE",
+      "intent": "Vrabel publicly stated wanting to add a TE in the draft. Team has met with 5+ EDGE prospects. Trade-up using Day 3 picks as chips is 'the way' per Reiss. Vrabel 'very involved' with player meetings per Wolf.",
+      "source_name": "Mike Reiss (ESPN)",
+      "source_url": "https://www.espn.com/nfl/draft2026/story/_/id/48423365/2026-nfl-draft-new-england-patriots-updates-buzz-intel-picks-positions",
+      "date": "2026-04-15",
+      "confidence": "high",
+      "signal_type": "positional_direction + trade_intent"
+    },
+    {
+      "team": "DAL",
+      "intent": "Defense-first expectation for picks 12 and 20: LB, CB, pass rusher. Archer explicitly cautions 'with Jerry, nothing is definite.' Historical precedent: 2020 board fall took CeeDee Lamb despite D-need. Jones 'not afraid' to trade up into top 10.",
+      "source_name": "Todd Archer (ESPN)",
+      "source_url": "https://www.espn.com/nfl/story/_/id/48421367/2026-nfl-draft-dallas-cowboys-updates-buzz-intel-picks-positions",
+      "date": "2026-04-14",
+      "confidence": "high",
+      "signal_type": "positional_direction + trade_intent"
+    },
+    {
+      "team": "SF",
+      "intent": "Lynch/Shanahan philosophy: premium positions (WR, EDGE, CB) early, trenches (especially OL) Day 3. 2025 had league-low 20 sacks — pass rush is the acute need at 27. Barrows's own mock selection at 27 was an edge rusher, reflecting FO sentiment.",
+      "source_name": "Matt Barrows (The Athletic / Sactown Sports)",
+      "source_url": "https://sactownsports.com/nfl/san-francisco-49ers/matt-barrows-draft/62337/",
+      "date": "2026-04-16",
+      "confidence": "high",
+      "signal_type": "positional_direction + philosophy"
+    },
+    {
+      "team": "LAR",
+      "intent": "Snead 'is not finished' with roster-shaping moves; expect phone-working and pick-shuffling. CB position remains in focus even after the Trent McDuffie trade. Working with fewer picks than typical — trade-back is plausible.",
+      "source_name": "Jourdan Rodrigue (The Athletic)",
+      "source_url": "https://ramblinfan.com/athletic-s-jourdan-rodrigue-hints-rams-have-more-moves-up-their-sleeve-trent-mcduffie",
+      "date": "2026-04-12",
+      "confidence": "medium-high",
+      "signal_type": "trade_intent + positional_direction"
+    },
+    {
+      "team": "PHI",
+      "intent": "Offense-heavy draft emphasis: 'really want young, inexpensive cost-control players on offense.' Beat-writer Berman believes R1 comes down to two SEC offensive tackles. Safety 'very unlikely' in R1. Roseman himself: 'comfortable with 23 guys we're ready to take.'",
+      "source_name": "Zach Berman (Inside the Iggles / PHLY)",
+      "source_url": "https://insidetheiggles.com/philadelphia-eagles-reporter-has-two-stellar-prospects-in-mind-for-pick-23-if-they-want-them-kadyn-proctor-monroe-freeling",
+      "date": "2026-04-15",
+      "confidence": "high",
+      "signal_type": "positional_direction"
+    },
+    {
+      "team": "MIA",
+      "intent": "GM Jon-Eric Sullivan committed to rebuild-through-draft. Hosting QB prospects (Gronowski, Daniels) for visits. Troy Aikman welcome in draft room in observational role. Sullivan maintaining FA contact — draft choices may flex based on late vet signings.",
+      "source_name": "Barry Jackson (Miami Herald)",
+      "source_url": "https://www.profootballrumors.com/2026/04/dolphins-rumors-aikman-draft-ol-daniels-ownership",
+      "date": "2026-04-17",
+      "confidence": "medium",
+      "signal_type": "philosophy + positional_direction (QB)"
+    },
+    {
+      "team": "BAL",
+      "intent": "DeCosta explicitly: 'want to get better up front, both sides — OL and DL is a priority.' Characterized pick 14 as a 'sweet spot' for OL and WR. Ravens heavily linked to versatile OL options.",
+      "source_name": "Jamison Hensley (ESPN)",
+      "source_url": "https://www.espn.com/nfl/story/_/id/48505241/baltimore-ravens-2026-nfl-draft-critical-improving-lamar-jackson-supporting-cast",
+      "date": "2026-04-18",
+      "confidence": "high",
+      "signal_type": "positional_direction + GM_quote"
+    },
+    {
+      "team": "DET",
+      "intent": "Holmes says roster is strong enough to NOT HAVE TO take OT or EDGE; open to trade-up if right player. Larry Borom signing reduces OT urgency. Biggest needs: OT, DE but flexible. Trade-down in R1 is live.",
+      "source_name": "Dave Birkett (Detroit Free Press)",
+      "source_url": "https://www.prideofdetroit.com/detroit-lions-news/161661/2026-nfl-draft-detroit-lions-top-30-visit-tracker",
+      "date": "2026-04-16",
+      "confidence": "high",
+      "signal_type": "philosophy + trade_intent"
+    }
+  ],
+
+  "pillar_3_analyst_error_patterns": [
+    {
+      "error_pattern": "combine_riser_overvaluation",
+      "historical_magnitude": "Post-combine consensus mocks overdraft high-RAS/low-tape prospects by an average of 6-10 slots vs actual pick. 2025 example: multiple 9.8+ RAS EDGE risers consensus-placed in R1 actually fell to R2-R3. PFF research: combine drills correlate more with DRAFT POSITION than with pro WAR.",
+      "counter_signal": "Require tape grade (PFF, SIS) to corroborate. If RAS z-score >> tape z-score, compress the athletic bump. Teams treat combine as a FILTER (downside check), not a booster.",
+      "tuning_suggestion": "Cap RAS-only bonus at +3 slots when consensus mock rank rose >10 slots post-combine without corresponding grade movement.",
+      "source": "https://www.pff.com/news/nfl-2020-nfl-combine-analytical-winners-losers-offense"
+    },
+    {
+      "error_pattern": "blue_blood_qb_overdraft_by_consensus",
+      "historical_magnitude": "Consensus overrates QBs from 'big-name school' programs (USC, Ohio State, Alabama, Texas) relative to actual team evaluations. 2025: Shedeur Sanders — CBS Sports No. 28 overall / No. 2 QB — fell to pick 144 (R5). Zero analysts predicted the fall.",
+      "counter_signal": "Team-specific visit record + private workout signals dominate the blue-blood label. If a QB has zero confirmed private workouts with QB-needy teams in the final 2 weeks, consensus rank should be discounted by 20+ slots.",
+      "tuning_suggestion": "Add 'blue_blood_qb_penalty' when consensus_rank - visit_count*2 mismatch exceeds threshold. Recruit zero-visit QBs into a 'slide risk' bucket.",
+      "source": "https://www.cbssports.com/nfl/news/five-things-experts-got-wrong-about-2025-nfl-draft-shedeur-sanders-standing-browns-sold-on-travis-hunter/"
+    },
+    {
+      "error_pattern": "team_need_underweighted_vs_bpa",
+      "historical_magnitude": "Analysts lean BPA-consensus while teams pick for need + scheme ~55-60% of the time in picks 10-32. Avg consensus miss from ignoring team-need: 4-7 slots per pick in the 15-32 range.",
+      "counter_signal": "Roster context + cap context per team (already in roster_context_2026.json, cap_context_2026.json). Teams with acute 1-year cap holes at a position go to that position 65%+ in R1.",
+      "tuning_suggestion": "In Monte Carlo, give positional need weight 0.35 (up from presumed 0.20 default) for picks 15-32. For picks 1-14, BPA-consensus weight remains dominant (~0.55).",
+      "source": "https://www.unexpectedpoints.com/p/2025-nfl-draft-first-round-analytical"
+    },
+    {
+      "error_pattern": "scheme_fit_underweighted_by_consensus",
+      "historical_magnitude": "2025 Jaxson Dart to Giants (pick 25, consensus Big Board 51, consensus Mock 33) — purely scheme/HC-fit driven. Analysts missed by ~8-25 slots. Similar pattern on 3+ R1 picks every year since 2021.",
+      "counter_signal": "HC offensive/defensive scheme file (coaching_tree_2026.json). Per-archetype fit score with DC/OC preferences.",
+      "tuning_suggestion": "Add scheme_fit multiplier to per-prospect, per-team fit score: 1.0 + 0.20 * scheme_fit_z. Large positive (2+ sigma) fit can jump a prospect 8-15 slots earlier to the right team.",
+      "source": "https://www.bigblueview.com/2025/2/12/24364181/2025-nfl-draft-jaxson-dart-a-better-fit-for-new-york-giants-brian-daboll-than-shedeur-sanders"
+    },
+    {
+      "error_pattern": "sec_big_ten_production_underrated_no_combine",
+      "historical_magnitude": "Prospects who skip/underperform combine but carry elite SEC/Big-Ten production are consistently UNDERdrafted by consensus (avg 5-8 slots) and over-drafted by teams. Teams weight tape + college strength-of-competition; analysts over-index on combine.",
+      "counter_signal": "Opponent-adjusted PFF grade + P5 starts. If production is top-decile at SEC/B10 + zero combine testing, treat as neutral not negative.",
+      "tuning_suggestion": "When combine_testing = skipped AND conference in (SEC, B10) AND production_percentile > 0.85: remove any athletic-testing penalty and apply +2 slot pull.",
+      "source": "https://www.pff.com/news/draft-what-historical-hit-rates-reveal-about-positional-success"
+    },
+    {
+      "error_pattern": "trade_ups_underforecast",
+      "historical_magnitude": "Consensus mocks assume no trades in ~80% of R1 picks, but actual R1 averages 3-5 trades per year. Each missed trade propagates consensus error downstream by 1-4 slots for 5+ picks. Eagles, Saints, Patriots regularly jump analyst expectations.",
+      "counter_signal": "GM-specific trade-up probability priors (Pillar 1 signal #11). Model trades as first-class MC branch.",
+      "tuning_suggestion": "In stage2 MC, sample a trade event with P ~= 0.12 per pick, weighted by team trade-up tendency. Ensure at least 2-4 expected trades in R1 simulations.",
+      "source": "https://www.unexpectedpoints.com/p/what-analytical-draft-value-curves"
+    },
+    {
+      "error_pattern": "reach_bias_in_analyst_grades",
+      "historical_magnitude": "Consensus draft grades penalize 'reaches' asymmetrically — Unexpected Points 2025 analysis: reach harm > steal benefit in grading. But teams' internal boards regularly diverge from consensus by 15-25 slots on 3-5 picks per R1, meaning 'reach' often = team had prospect higher all along.",
+      "counter_signal": "Team-leaked intent (Pillar 2) + visit/workout records. A 'reach' following 2+ visits and a private workout is not a reach — it's a signaled pick.",
+      "tuning_suggestion": "When consensus reach > 10 slots BUT team has 3+ visit/workout touchpoints with the prospect, DO NOT apply reach penalty; treat as high-conviction signaled pick.",
+      "source": "https://www.unexpectedpoints.com/p/2025-nfl-draft-first-round-analytical"
+    }
+  ],
+
+  "high_impact_recommendations": [
+    {
+      "id": "rec_01_visit_weight",
+      "recommendation": "Increase visit_bonus weight in stage2 from ~0.20 to 0.35 for QB/RB/TE positions (where historical signal is strongest), and keep at 0.20 for WR/DB (noisier). Multiple visits on same position-group should trigger a team positional-intent prior shift of +30%.",
+      "historical_basis": "100% of R1 QBs 2015-2024 had public top-30 visit/private workout w/ drafting team; 80.6% positional-intent correlation for RB w/ 3+ visits.",
+      "expected_accuracy_gain": "2-4 slots avg RMSE improvement on picks 15-32"
+    },
+    {
+      "id": "rec_02_scheme_fit_feature",
+      "recommendation": "Add scheme_fit_score (0-1) per (team, prospect) pair, computed from coaching_tree_2026.json + archetype preferences. Multiply per-pick probability by 1 + 0.20 * scheme_fit_z. Large positive fits (z>2) can pull prospects 8-15 slots toward the right scheme team.",
+      "historical_basis": "2025 Jaxson Dart pick 25 vs. consensus 33-51 was pure scheme fit — analysts missed by 8-25 slots.",
+      "expected_accuracy_gain": "5-10 slot improvement on scheme-sensitive positions (QB, LB, safety) in picks 15-32"
+    },
+    {
+      "id": "rec_03_ras_floor_penalty",
+      "recommendation": "Replace linear RAS input with position-specific RAS FLOOR penalty. EDGE/CB/S with RAS<6: -10 slot R1 penalty. IOL/TE: no RAS penalty. RAS>9.5: cap bonus at +3 slots and only if tape grade top-3 at position.",
+      "historical_basis": "~3% of R1 EDGE/CB/S picks over last decade had RAS<6; teams use RAS as filter not driver. PFF shows combine drills correlate with pick slot > pro WAR.",
+      "expected_accuracy_gain": "Reduces combine-riser inflation errors by ~5 slots on 2-3 prospects per class"
+    },
+    {
+      "id": "rec_04_trades_as_mc_branch",
+      "recommendation": "Sample trade events as first-class MC branches at P~=0.12/pick weighted by team trade-up/down tendency priors (Loomis +15% up, Snead/Schneider/Ballard +15% down). Target 3-5 expected trades in R1 sims. Current system treats trades as postprocess — promote to first-class.",
+      "historical_basis": "R1 has averaged 3-5 trades/year 2021-2025; consensus mocks assume none in 80%+ of picks.",
+      "expected_accuracy_gain": "Corrects 1-4 slot propagation error across 5-10 downstream picks per missed trade"
+    },
+    {
+      "id": "rec_05_team_leaked_intent_weight",
+      "recommendation": "When beat-writer-attributed positional-intent leak exists in final 7 days (see Pillar 2 entries), shift team's position distribution +30% to that position. Player-specific leaks: only +10% (smokescreen risk). Current model likely applies uniform or analyst-driven positional priors — replace with leak-weighted prior for the 10 teams in Pillar 2 list.",
+      "historical_basis": "~75% of teams that leaked positional direction in final week picked that position in R1 over 2021-2025. Player-specific leaks only 40% accurate.",
+      "expected_accuracy_gain": "3-6 slot improvement on picks 20-32 where team-specific signal dominates"
+    }
+  ],
+
+  "integration_notes": {
+    "files_to_touch": [
+      "src/models/stage2_game_theoretic.py — add scheme_fit, visit_bonus by position, trade MC branch",
+      "data/features/team_agents_2026.json — inject Pillar 2 leaked-intent positional priors per team",
+      "data/features/coaching_tree_2026.json — ensure scheme archetype preferences are per DC/OC, not just HC"
+    ],
+    "do_not_inject_into": [
+      "Any file owned by other agents (mock_reasoning_bank_2026.json, big_board_reasoning_2026.json, supplementary_intel_2026.json)"
+    ],
+    "guardrails": [
+      "Never store analyst pick/rank directly — only analyst-derived PROFILE ENRICHMENT.",
+      "Never add player-to-slot mappings from this file.",
+      "Leaked-intent is team-level positional, not player-specific."
+    ]
+  }
+}

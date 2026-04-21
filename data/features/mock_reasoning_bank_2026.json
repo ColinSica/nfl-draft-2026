@@ -1,0 +1,2506 @@
+{
+  "sources_scraped": [
+    "https://www.espn.com/nfl/draft2026/story/_/id/48478995/2026-nfl-mock-draft-mel-kiper-two-rounds-64-picks-final-predictions",
+    "https://www.espn.com/nfl/draft2026/story/_/id/48480079/2026-nfl-mock-draft-seven-rounds-257-picks-predictions-jordan-reid-fits",
+    "https://www.espn.com/nfl/draft2026/story/_/id/48299038/2026-nfl-mock-draft-seven-rounds-257-picks-projections-matt-miller",
+    "https://www.espn.com/nfl/draft2026/story/_/id/48408193/2026-nfl-mock-draft-peter-schrager-insider-intel-first-round-picks-predictions",
+    "https://www.nfl.com/news/seven-round-2026-nfl-mock-draft-round-one",
+    "https://www.nfl.com/news/daniel-jeremiah-2026-nfl-mock-draft-3-0-rb-jeremiyah-love-lb-sonny-styles-crack-top-five",
+    "https://www.nfl.com/news/lance-zierlein-2026-nfl-mock-draft-3-0-cowboys-hit-the-jackpot-at-no-12-plus-two-trades",
+    "https://www.nfl.com/news/eric-edholm-2026-nfl-mock-draft-3-0-giants-double-down-on-buckeyes-cowboys-make-bold-choice-at-lb",
+    "https://www.nfl.com/news/daniel-jeremiah-s-top-150-prospects-in-the-2026-nfl-draft-class",
+    "https://www.pff.com/news/draft-nfl-mock-draft-jets-reset-on-defense-miami-doubles-down-on-wide-receiver",
+    "https://www.cbssports.com/nfl/news/2026-nfl-draft-seven-round-mock-draft-picks-by-team/",
+    "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-chiefs-trade-up-twice/",
+    "https://walterfootball.com/draft2026charlie.php",
+    "https://walterfootball.com/draft2026charlie_1.php",
+    "https://bleacherreport.com/articles/25417940-2026-nfl-mock-draft-3-round-predictions-based-latest-br-scouting-dept-rankings",
+    "https://bleacherreport.com/articles/25407634-2026-nfl-mock-draft",
+    "https://www.nbcsports.com/nfl/news/chris-simms-final-2026-nfl-mock-draft-jets-pick-arvell-reese-commanders-trade-up-for-carnell-tate",
+    "https://www.profootballnetwork.com/2026-nfl-mock-draft-7-round-elijah-april/",
+    "https://theringer.com/todd-mcshay/mock-draft",
+    "https://985thesportshub.com/2026/04/20/nfl-mock-draft-3-0-the-top-40-picks/",
+    "https://www.giants.com/news/nfl-draft-2026-mock-draft-tracker-mel-kiper-daniel-jeremiah-peter-schrager",
+    "https://www.drafttek.com/2026-NFL-Mock-Draft/2026-NFL-Mock-Draft-Round-1.asp",
+    "https://www.draftking.com/2026/"
+  ],
+  "mock_count": 21,
+  "team_reasoning": {
+    "ARI": {
+      "scheme_cited": [
+        "new offensive-minded HC system emphasizing scheme fit",
+        "outside zone running game alignment",
+        "LaFleur-inspired system",
+        "QB-centric offense requiring OL stability",
+        "defensive foundation build under new regime"
+      ],
+      "needs_cited": [
+        "edge rusher / pass-rush production (28th in sacks)",
+        "offensive line protection",
+        "offensive tackle",
+        "QB flexibility behind Kyler",
+        "edge opposite Sweat"
+      ],
+      "archetype_cited": [
+        "elite pure pass-rusher with consistent pressure",
+        "plug-and-play OT with immediate starting capability",
+        "dominant run blocker",
+        "athletic traits / sideline-to-sideline defender",
+        "bendy edge with hand usage"
+      ],
+      "gm_tendency_cited": [
+        "Monti Ossenfort targets athletic traits",
+        "trade-down candidate willing to accumulate capital",
+        "builds foundation after veteran departures",
+        "recent Day 2 investments in edge depth",
+        "defensive foundation priority"
+      ]
+    },
+    "ATL": {
+      "scheme_cited": [
+        "Raheem Morris aggressive fronts",
+        "transitioned weapons to Penix era",
+        "interior defensive line rebuild"
+      ],
+      "needs_cited": [
+        "edge rusher",
+        "interior DL",
+        "secondary depth",
+        "WR2 behind Drake London"
+      ],
+      "archetype_cited": [
+        "pure pass-rusher",
+        "3-tech interior disruptor",
+        "physical safety"
+      ],
+      "gm_tendency_cited": [
+        "Terry Fontenot values upside swings",
+        "willing to trade down for capital"
+      ]
+    },
+    "BAL": {
+      "scheme_cited": [
+        "phone-booth power football",
+        "Jackson protection / physical identity",
+        "interior line strength priority",
+        "downhill, duo-based run game",
+        "two-edge complementary pass rush"
+      ],
+      "needs_cited": [
+        "interior offensive line after Linderbaum departure",
+        "edge rusher complement",
+        "guard",
+        "offensive tackle",
+        "CB with medical flags"
+      ],
+      "archetype_cited": [
+        "cleanest offensive line prospect / pure guard",
+        "punch-first linemen",
+        "dual-threat edge with run and pass production",
+        "fastest TE profile",
+        "positional versatility / 5-position flex"
+      ],
+      "gm_tendency_cited": [
+        "Eric DeCosta best-available philosophy aligned with need",
+        "values ultra-dependable, strong-handed players",
+        "character/leadership preference",
+        "multi-purpose approach"
+      ]
+    },
+    "BUF": {
+      "scheme_cited": [
+        "Sean McDermott pressure packages",
+        "speed rush",
+        "versatile secondary coverage",
+        "different edge archetype to pair with Rousseau"
+      ],
+      "needs_cited": [
+        "edge rotation",
+        "wide receiver depth",
+        "cornerback",
+        "ball-hawking safety",
+        "interior OL"
+      ],
+      "archetype_cited": [
+        "athletic pass rusher with length",
+        "WR with deep/short route versatility",
+        "physical tone-setter guard",
+        "ball-hawking safety who tackles"
+      ],
+      "gm_tendency_cited": [
+        "Brandon Beane seeks developmental upside",
+        "multiple positional needs across all days",
+        "scheme-versatile selections",
+        "edge position investment despite free-agency approach"
+      ]
+    },
+    "CAR": {
+      "scheme_cited": [
+        "Bryce Young offensive development support",
+        "secondary reinforcement over edge urgency",
+        "defensive back priority"
+      ],
+      "needs_cited": [
+        "safety production",
+        "explosive slot receiver to complement McMillan",
+        "pass rusher",
+        "offensive line depth / injury"
+      ],
+      "archetype_cited": [
+        "consensus All-American safety / forced-fumble specialist",
+        "YAC creator slot receiver",
+        "rare-sized power prospect",
+        "shifty route-runner"
+      ],
+      "gm_tendency_cited": [
+        "Dan Morgan seeks proven production over injury risk",
+        "home-state prospect recruitment preference",
+        "depth building at multiple secondary spots"
+      ]
+    },
+    "CHI": {
+      "scheme_cited": [
+        "Ben Johnson offense acceleration",
+        "contender acceleration",
+        "pass rush / run defense interior focus",
+        "power-based edge complement to Sweat"
+      ],
+      "needs_cited": [
+        "edge rush partner for Sweat",
+        "nose tackle replacement after free agency loss",
+        "interior run defense",
+        "safety rebuild after Byard/Gardner-Johnson"
+      ],
+      "archetype_cited": [
+        "pressure generator / top-50 edge focus",
+        "bigger nose tackle than departed veteran",
+        "high growth-potential edge at age 21",
+        "box safety / instinctive run defender"
+      ],
+      "gm_tendency_cited": [
+        "Ryan Poles: 'you can never have enough pass rushers'",
+        "values athleticism and motor",
+        "fill long-standing edge void"
+      ]
+    },
+    "CIN": {
+      "scheme_cited": [
+        "Al Golden new defensive scheme",
+        "boundary corner capable of leading secondary",
+        "physical SEC-tested defender priority"
+      ],
+      "needs_cited": [
+        "secondary cornerstone",
+        "edge rusher complement to Hendrickson",
+        "interior DL",
+        "offensive line"
+      ],
+      "archetype_cited": [
+        "physical boundary corner",
+        "competitive SEC-experienced defender",
+        "disruptive interior rusher"
+      ],
+      "gm_tendency_cited": [
+        "Duke Tobin consistent secondary investment strategy",
+        "best-available at premium position"
+      ]
+    },
+    "CLE": {
+      "scheme_cited": [
+        "Todd Monken route-diverse offense",
+        "Monken-Switzer tight-end-heavy system preference",
+        "trenches-first philosophy",
+        "offensive line priority / pass-blocking foundation",
+        "veteran line coach George Warhop development"
+      ],
+      "needs_cited": [
+        "offensive tackle after departures",
+        "WR1 alternative",
+        "CB with ball skills",
+        "three first-round picks allow positional flexibility",
+        "edge complement to Garrett"
+      ],
+      "archetype_cited": [
+        "blind-side protection specialist / elite physical tools at 350+ lbs",
+        "diverse route-runner with reliable hands",
+        "national championship big-play receiver with 4.4 speed",
+        "athletic tackle with movement skills",
+        "three-down edge capability"
+      ],
+      "gm_tendency_cited": [
+        "Andrew Berry sack reduction through line upgrades",
+        "multi-pick maximization / flexibility between needs",
+        "ranked last in team pass-blocking grade (49.7)",
+        "ranked last in WR receiving yards (1,467)"
+      ]
+    },
+    "DAL": {
+      "scheme_cited": [
+        "Matt Eberflus / Christian Parker 3-4 base front",
+        "aggressive defensive rebuild",
+        "gap control / run defense",
+        "defense-heavy first two selections"
+      ],
+      "needs_cited": [
+        "cornerback replacement after two departures",
+        "defensive front renovation",
+        "linebacker after starter departures",
+        "edge vacancy post-Lawrence",
+        "interior DL"
+      ],
+      "archetype_cited": [
+        "top-10 viable corner with experience / explosive athlete",
+        "big-bodied strong edge rusher",
+        "elite linebacker with high-floor projection",
+        "interior/edge hybrid at 6'6\"/276"
+      ],
+      "gm_tendency_cited": [
+        "Jerry Jones systematic line rebuild direction",
+        "willingness to trade up for elite defensive help",
+        "scheme fit emphasis",
+        "bold choice at LB departing typical priority patterns"
+      ]
+    },
+    "DEN": {
+      "scheme_cited": [
+        "Vance Joseph aggressive pressure schemes",
+        "Sean Payton offense timing-based"
+      ],
+      "needs_cited": [
+        "safety reinforcement",
+        "RB",
+        "WR depth",
+        "interior OL depth"
+      ],
+      "archetype_cited": [
+        "ball-hawking safety",
+        "three-down RB",
+        "value Day 2-3 builder"
+      ],
+      "gm_tendency_cited": [
+        "George Paton asset trading for veteran acquisition (Waddle)",
+        "value-focused"
+      ]
+    },
+    "DET": {
+      "scheme_cited": [
+        "Ben Johnson / Kelvin Sheppard continuation of elite OL standard",
+        "Gibbs support",
+        "physical aggressive culture",
+        "multi-year development timeline"
+      ],
+      "needs_cited": [
+        "offensive tackle succession after Decker release",
+        "edge rusher",
+        "safety",
+        "LB reloading late"
+      ],
+      "archetype_cited": [
+        "long-armed tackle / 54-game starter with elite character",
+        "athletic tackle that can pair with Sewell",
+        "massive SEC lineman"
+      ],
+      "gm_tendency_cited": [
+        "Brad Holmes values SEC experience and upside",
+        "insurance at QB",
+        "bridge addition made, long-term planning priority",
+        "aggressive trade-up if tackle prospect available"
+      ]
+    },
+    "GB": {
+      "scheme_cited": [
+        "Matt LaFleur zone-heavy offense",
+        "Hafley defensive scheme",
+        "secondary versatility"
+      ],
+      "needs_cited": [
+        "cornerback depth",
+        "edge opposite Parsons",
+        "WR",
+        "OL"
+      ],
+      "archetype_cited": [
+        "versatile defensive back",
+        "athletic edge rusher"
+      ],
+      "gm_tendency_cited": [
+        "Brian Gutekunst late-round QB fliers acceptable",
+        "accumulate picks"
+      ]
+    },
+    "HOU": {
+      "scheme_cited": [
+        "C.J. Stroud offense / pocket integrity",
+        "DeMeco Ryans elite defense maintenance",
+        "odd-front defensive line",
+        "interior DL pocket collapse"
+      ],
+      "needs_cited": [
+        "offensive line stability",
+        "interior DT / nose tackle succession",
+        "Stroud weapons",
+        "guard stability"
+      ],
+      "archetype_cited": [
+        "top-ranked nose tackle enabling more odd fronts",
+        "athletic agile lineman",
+        "1,900+ snap interior lineman",
+        "pocket-collapsing interior push"
+      ],
+      "gm_tendency_cited": [
+        "Nick Caserio seeks development potential",
+        "size-priority approach (massive athlete)",
+        "build on defensive strength",
+        "no OL earned grade above 75.0 last season"
+      ]
+    },
+    "IND": {
+      "scheme_cited": [
+        "Shane Steichen offense",
+        "Lou Anarumo defensive scheme",
+        "pass-rush + front-seven depth"
+      ],
+      "needs_cited": [
+        "edge rusher immediate impact",
+        "linebacker coverage",
+        "RB late-round value"
+      ],
+      "archetype_cited": [
+        "undersized productive pass rusher",
+        "coverage linebacker",
+        "Anarumo scheme-versatile defender"
+      ],
+      "gm_tendency_cited": [
+        "Chris Ballard Day 2 building",
+        "willing to trade down"
+      ]
+    },
+    "JAX": {
+      "scheme_cited": [
+        "Liam Coen offense / Anthony Campanile defense",
+        "Super Bowl window urgency",
+        "high-motor front seven"
+      ],
+      "needs_cited": [
+        "pass catchers",
+        "right tackle stability",
+        "CB",
+        "high-IQ linemen"
+      ],
+      "archetype_cited": [
+        "John Mackey Award-caliber TE",
+        "high-motor defender",
+        "injury recovery CB gamble"
+      ],
+      "gm_tendency_cited": [
+        "James Gladstone aggressive 'window wide open' approach",
+        "11 total picks / capital accumulation"
+      ]
+    },
+    "KC": {
+      "scheme_cited": [
+        "Spagnuolo defensive preference for power edges",
+        "Mahomes offensive rebuild",
+        "aging skill-position depth",
+        "man-to-man Spagnuolo system"
+      ],
+      "needs_cited": [
+        "WR / CB after McDuffie-Watson-Williams",
+        "safety replacement after Bryan Cook",
+        "defensive line pass-rush depth",
+        "right tackle development investment"
+      ],
+      "archetype_cited": [
+        "densely built heavy-handed edge with alignment versatility",
+        "elite coverage cornerback / physical length",
+        "multi-year production CB",
+        "consistent multi-year pressure producer",
+        "former basketball player with rare movement"
+      ],
+      "gm_tendency_cited": [
+        "Brett Veach value-focused, risk-tolerant on character",
+        "top-receiver succession / skill position emphasis",
+        "aggressive trade-ups for elite talent",
+        "rare top-10 pick opportunity"
+      ]
+    },
+    "LAC": {
+      "scheme_cited": [
+        "Harbaugh/McDaniel mixed power-and-zone philosophy",
+        "run defense support",
+        "Jesse Minter zone-match secondary"
+      ],
+      "needs_cited": [
+        "guard upgrade over misfired first-rounders",
+        "edge rotation / future starter",
+        "DT",
+        "cornerback depth",
+        "versatile tough safety"
+      ],
+      "archetype_cited": [
+        "thickly built heavy-handed guard",
+        "zone-match processing corner",
+        "interior disruptor (run defense)",
+        "rangy coverage safety"
+      ],
+      "gm_tendency_cited": [
+        "Joe Hortiz interior line elevation priority",
+        "age considerations for defensive line",
+        "Penning/Strange redemption approach"
+      ]
+    },
+    "LAR": {
+      "scheme_cited": [
+        "Sean McVay win-now window (Stafford final years)",
+        "WR succession behind aging Adams",
+        "downhill/vertical run game anchor",
+        "Kevin Dotson duo-based scheme"
+      ],
+      "needs_cited": [
+        "WR depth / slot competition",
+        "right tackle replacement for Havenstein",
+        "future left tackle succession"
+      ],
+      "archetype_cited": [
+        "Jacobs Blocking Trophy-type anchor",
+        "reliable slot receiver",
+        "chain-moving receiver"
+      ],
+      "gm_tendency_cited": [
+        "Les Snead Super Bowl adjacent approach",
+        "long-term solution building",
+        "best-player-available strategy"
+      ]
+    },
+    "LV": {
+      "scheme_cited": [
+        "Chip Kelly / Kubiak-style system",
+        "Kirk Cousins mentorship model",
+        "vertical passing",
+        "offensive reset required"
+      ],
+      "needs_cited": [
+        "franchise QB",
+        "OL",
+        "WR2"
+      ],
+      "archetype_cited": [
+        "accurate mobile QB with NFL-ready decision-making",
+        "poised high-football-IQ signal-caller",
+        "large-armed resilient passer",
+        "foundational rebuild franchise player"
+      ],
+      "gm_tendency_cited": [
+        "John Spytek foundational rebuild after extended rebuild",
+        "Tom Brady minority owner influence",
+        "prioritize QB evaluation above all"
+      ]
+    },
+    "MIA": {
+      "scheme_cited": [
+        "Bobby Slowik zone-run philosophy",
+        "Jeff Hafley secondary-focused scheme",
+        "multiple looks",
+        "aggressive dual-WR first-round approach",
+        "tall receiver archetype complement"
+      ],
+      "needs_cited": [
+        "CB / DB",
+        "WR overhaul after Hill/Waddle",
+        "right tackle succession",
+        "DL / edge rusher pairing",
+        "playmaking safety"
+      ],
+      "archetype_cited": [
+        "Outland Trophy-type all-around blocker with positional flexibility",
+        "true X-receiver with contested catch",
+        "outside corner with coverage instinct",
+        "strong nasty point-of-attack RT",
+        "super-sized hard-hitting downhill safety"
+      ],
+      "gm_tendency_cited": [
+        "Chris Grier rebuild/capital accumulation",
+        "aggressive skill position reset",
+        "talent accumulation despite non-Power-Five background",
+        "upside-focused evaluation"
+      ]
+    },
+    "MIN": {
+      "scheme_cited": [
+        "Brian Flores exotic pressure scheme",
+        "havoc-creation safety role",
+        "cover-heavy coverage"
+      ],
+      "needs_cited": [
+        "safety succession after Harrison Smith",
+        "interior DL youth",
+        "cornerback"
+      ],
+      "archetype_cited": [
+        "instinctive playmaking safety (roof/robber)",
+        "press cornerback supporting aggressive blitz",
+        "quick disruptive three-technique"
+      ],
+      "gm_tendency_cited": [
+        "Kwesi Adofo-Mensah future planning",
+        "haven't had starting safety above 75.0 since 2021",
+        "multi-year pattern of safety-in-first-round"
+      ]
+    },
+    "NE": {
+      "scheme_cited": [
+        "Mike Vrabel defensive continuity",
+        "pressure generation",
+        "upside development",
+        "Drake Maye protection priority"
+      ],
+      "needs_cited": [
+        "edge rusher depth after free agency loss",
+        "interior OL utility",
+        "WR"
+      ],
+      "archetype_cited": [
+        "long instinctive rusher / athletically elite",
+        "upside risk tolerance / durability gamble",
+        "relentless SEC DPOY-type"
+      ],
+      "gm_tendency_cited": [
+        "Eliot Wolf invests in potential risers",
+        "value-focused despite technique questions",
+        "visit pool track record",
+        "asset accumulation via trade-backs"
+      ]
+    },
+    "NO": {
+      "scheme_cited": [
+        "Kellen Moore Robinson offense",
+        "Brandon Staley defensive backfield chess piece",
+        "polished man/zone CB system"
+      ],
+      "needs_cited": [
+        "edge depth",
+        "WR replacement after mid-season trades",
+        "safety upgrade",
+        "cornerback"
+      ],
+      "archetype_cited": [
+        "power/explosion edge",
+        "efficient receiver with route-running consistency",
+        "technical shutdown corner",
+        "#1 overall versatile defensive back"
+      ],
+      "gm_tendency_cited": [
+        "Mickey Loomis QB evaluation period (Shough)",
+        "youth infusion",
+        "persistent secondary improvement",
+        "no free agent WR additions planned"
+      ]
+    },
+    "NYG": {
+      "scheme_cited": [
+        "John Harbaugh chess-piece defense / Ray Lewis LB tradition",
+        "Harbaugh prefers excellent pass-blocking OL",
+        "elite linebackers anchoring defenses",
+        "multiple fronts",
+        "coverage-focused defense"
+      ],
+      "needs_cited": [
+        "secondary (safety especially)",
+        "OL / pass protection for Dart",
+        "LB pairing with Edmunds",
+        "receiver succession / WR2 with Nabers"
+      ],
+      "archetype_cited": [
+        "versatile smart safety (Kyle Hamilton-type)",
+        "instinctual / intelligent off-ball LB",
+        "reliable pass blocker with technique foundation",
+        "All-Pro caliber LB with long-term projection"
+      ],
+      "gm_tendency_cited": [
+        "Joe Schoen / Daboll infrastructure build",
+        "coach-driven Harbaugh preference",
+        "classic defensive team-building",
+        "Ohio State program ties / pro day attendance",
+        "only two top-100 picks limits options"
+      ]
+    },
+    "NYJ": {
+      "scheme_cited": [
+        "Aaron Glenn aggressive defensive scheme",
+        "pass rush heavy",
+        "hybrid defense with elite secondary",
+        "coverage-focused after Gardner trade"
+      ],
+      "needs_cited": [
+        "edge rusher / pass rush",
+        "WR for Justin Fields",
+        "cornerback depth after mid-season trade",
+        "LB depth / defensive identity",
+        "nose tackle / DL"
+      ],
+      "archetype_cited": [
+        "hybrid edge/LB chess-piece",
+        "athletic versatile defender with high upside",
+        "proven corner with ACL recovery trajectory",
+        "versatile matchup WR security blanket",
+        "production over potential"
+      ],
+      "gm_tendency_cited": [
+        "Darren Mougey canceled top-30 visits signal internal conviction",
+        "value-oriented after QB acquisition",
+        "prioritizing long-term scheme flexibility",
+        "two first-rounders afford high-upside gambling"
+      ]
+    },
+    "PHI": {
+      "scheme_cited": [
+        "Vic Fangio defense",
+        "Kellen Moore offense / run-blocking excellence",
+        "veteran-led offensive line culture"
+      ],
+      "needs_cited": [
+        "offensive tackle succession behind Lane Johnson",
+        "interior DL",
+        "guard maintenance",
+        "OT with development runway"
+      ],
+      "archetype_cited": [
+        "right-side starter / 54-start Clemson OT",
+        "most naturally gifted OL with variance",
+        "power guard with movement skills",
+        "premier interior disruptor"
+      ],
+      "gm_tendency_cited": [
+        "Howie Roseman: 'if OL sticks out on board, we take them'",
+        "elite line development priority",
+        "invest in youth over experience",
+        "proactive depth / risk-taking on upside"
+      ]
+    },
+    "PIT": {
+      "scheme_cited": [
+        "Arthur Smith offense / Rodgers protection",
+        "slot receiver opportunity with veteran coordinator",
+        "traditional linebacker scheme"
+      ],
+      "needs_cited": [
+        "interior offensive line / guard",
+        "WR depth",
+        "left tackle succession",
+        "LB"
+      ],
+      "archetype_cited": [
+        "physical explosive guard / drive blocker",
+        "Biletnikoff-type slot with RAC",
+        "developmental tackle with Pittsburgh connection",
+        "ball skills LB coverage-matched"
+      ],
+      "gm_tendency_cited": [
+        "Omar Khan values nasty streak",
+        "traditional approach emphasizing LB play",
+        "ranked fourth from last in WR receiving yards"
+      ]
+    },
+    "SEA": {
+      "scheme_cited": [
+        "Mike Macdonald defense integration",
+        "man coverage secondary",
+        "dynamic offense",
+        "speed-oriented pass rush"
+      ],
+      "needs_cited": [
+        "RB depth after Walker departure",
+        "cornerback replacement",
+        "edge rotation after Mafe",
+        "secondary overhaul post-Woolen/Bryant"
+      ],
+      "archetype_cited": [
+        "power runner / explosive backfield complement",
+        "pure coverage boundary corner",
+        "speed-oriented edge rusher",
+        "productive cover corner"
+      ],
+      "gm_tendency_cited": [
+        "John Schneider minimal picks strategy (4 picks)",
+        "secondary priority despite non-elite competition",
+        "patient board approach / trade-back opportunity",
+        "Super Bowl champions no immediate needs outside RB"
+      ]
+    },
+    "SF": {
+      "scheme_cited": [
+        "Kyle Shanahan pass-game architecture",
+        "cross-field/middle emphasis",
+        "long-term veteran replacement (Trent Williams)"
+      ],
+      "needs_cited": [
+        "offensive tackle succession for Williams",
+        "WR (Evans understudy / contested catch)",
+        "TE after injury absence"
+      ],
+      "archetype_cited": [
+        "sack-resistant tackle with clean tape",
+        "contested-catch back-shoulder specialist",
+        "athletic mismatch TE with versatility",
+        "quick YAC-dependent receiver"
+      ],
+      "gm_tendency_cited": [
+        "John Lynch veteran phase-out planning",
+        "aging QB consideration",
+        "targets schematic similarities to prior acquisitions"
+      ]
+    },
+    "TB": {
+      "scheme_cited": [
+        "Zac Robinson 12-personnel heavy system (from ATL)",
+        "two-TE package utility",
+        "Todd Bowles defensive identity"
+      ],
+      "needs_cited": [
+        "TE upgrade despite Otton retention",
+        "WR after Evans/Godwin",
+        "LB after Lavonte David",
+        "cornerback inexperienced after free agency"
+      ],
+      "archetype_cited": [
+        "elite athletic TE / blocking-plus-receiving",
+        "do-it-all wideout with national champion pedigree",
+        "tone-setting traditional LB",
+        "No.1 corner when healthy with 77\" wingspan"
+      ],
+      "gm_tendency_cited": [
+        "Jason Licht skill position investment",
+        "offensive coordinator alignment",
+        "elite linebacker tradition maintenance",
+        "addresses glaring need despite mock resistance"
+      ]
+    },
+    "TEN": {
+      "scheme_cited": [
+        "Bill Callahan offense / Cam Ward support",
+        "run-first offense / physical runner",
+        "new defensive-minded regime",
+        "elite talent regardless of position"
+      ],
+      "needs_cited": [
+        "offensive playmaker for Ward",
+        "edge rusher",
+        "versatile athlete",
+        "offensive line"
+      ],
+      "archetype_cited": [
+        "explosive home-run playmaker / Doak Walker winner",
+        "Saquon Barkley / Bijan Robinson impact",
+        "elite edge with lethal first step",
+        "elite offensive weapon with safest projection"
+      ],
+      "gm_tendency_cited": [
+        "Mike Borgonzi build around QB1 investment",
+        "nine free agent signings attempted",
+        "luxury pick after free agency",
+        "best-player-available with safest floor"
+      ]
+    },
+    "WAS": {
+      "scheme_cited": [
+        "Kliff Kingsbury high-octane skill-position attack",
+        "vertical passing attack",
+        "aggressive pass-rush rebuild",
+        "new system"
+      ],
+      "needs_cited": [
+        "edge rusher opposite veteran acquisition",
+        "WR1 / weapons for Jayden Daniels",
+        "LB youth / middle defense rebuild",
+        "cornerback"
+      ],
+      "archetype_cited": [
+        "clean route running WR with three-level ability",
+        "pressures leader from FBS level",
+        "versatile LB (Bobby Wagner replacement)",
+        "physical press corner"
+      ],
+      "gm_tendency_cited": [
+        "Adam Peters quality over quantity",
+        "maximizing young QB's weapons",
+        "multiple experienced edge signings",
+        "complement established OL investment",
+        "willing to trade up for targets"
+      ]
+    }
+  },
+  "prospect_reasoning": {
+    "Fernando Mendoza": {
+      "position": "QB",
+      "school": "Indiana",
+      "traits": [
+        "plus arm talent",
+        "72% completion, 41-48 TDs vs 6 INTs",
+        "calm poised pocket presence",
+        "accuracy / ball placement",
+        "decision-making / high football IQ",
+        "mobility / leg usage when pocket collapses",
+        "size 6-5/225",
+        "fast hands on quick throws",
+        "Heisman Trophy winner + Indiana national title"
+      ],
+      "comps": [
+        "Matt Ryan",
+        "Matthew Stafford",
+        "franchise-ready prototype",
+        "elite college QB elevated program"
+      ],
+      "scheme_fits": [
+        "modern spread offense",
+        "pro-style under-center system",
+        "timing-based quick game",
+        "Kubiak-style mentorship",
+        "all NFL systems"
+      ],
+      "risk": [
+        "occasionally holds ball too long hunting big plays",
+        "transition from RPO-heavy shotgun to under-center",
+        "limited sample of top play / 1-year elite production",
+        "SEC resume limited (Indiana schedule)",
+        "adversity / pressure situations data thin"
+      ],
+      "analyst_mention_count": 17
+    },
+    "Jeremiyah Love": {
+      "position": "RB",
+      "school": "Notre Dame",
+      "traits": [
+        "explosive home-run threat",
+        "1,372 rush yards, 18 TDs",
+        "6.9 YPC, 39 rushes of 10+ yards",
+        "214 lbs / receiving upside",
+        "Doak Walker winner",
+        "complete three-down back",
+        "elite vision and pass protection",
+        "10.4 yards per catch average"
+      ],
+      "comps": [
+        "Saquon Barkley / Bijan Robinson impact",
+        "Marshall Faulk-type skill set",
+        "Nick Chubb downhill",
+        "home-run hitter who expands playbook"
+      ],
+      "scheme_fits": [
+        "dynamic / fast-paced offense",
+        "zone-run + receiving",
+        "power run game",
+        "mismatch for linebackers"
+      ],
+      "risk": [
+        "non-premium position / early RB selection precedent",
+        "can get impatient, doesn't let plays develop",
+        "durability over extended workload",
+        "evaluated against elite SEC competition unclear"
+      ],
+      "analyst_mention_count": 16
+    },
+    "Sonny Styles": {
+      "position": "LB",
+      "school": "Ohio State",
+      "traits": [
+        "tall/long/rangy at 6-5",
+        "former safety convert",
+        "elite coverage ability",
+        "43.5\" vertical, 4.46 forty",
+        "quick to read and fill",
+        "explosive, 83 tackles"
+      ],
+      "comps": [
+        "Fred Warner",
+        "modern Mike linebacker archetype",
+        "future long-term LB anchor",
+        "All-Pro long-term contributor"
+      ],
+      "scheme_fits": [
+        "cover-heavy defensive systems",
+        "middle-coverage hybrid",
+        "multiple fronts",
+        "Harbaugh chess-piece role"
+      ],
+      "risk": [
+        "safety conversion history / position specialization",
+        "production projections",
+        "LB positional value tier"
+      ],
+      "analyst_mention_count": 15
+    },
+    "David Bailey": {
+      "position": "EDGE",
+      "school": "Texas Tech",
+      "traits": [
+        "14.5 sacks, 23 TFL",
+        "20.2% pressure rate",
+        "ultra-explosive first step",
+        "dip/rip move arsenal",
+        "lethal first step",
+        "polished technique / senior",
+        "35.5 career sacks"
+      ],
+      "comps": [
+        "elite pass-rush technician",
+        "best pure pass-rusher in draft",
+        "instant-impact edge"
+      ],
+      "scheme_fits": [
+        "aggressive pass-rush systems",
+        "3-4 edge / standup OLB",
+        "speed-based scheme"
+      ],
+      "risk": [
+        "short arms for position",
+        "needs consistency against run",
+        "can improve speed-to-power conversion"
+      ],
+      "analyst_mention_count": 16
+    },
+    "Arvell Reese": {
+      "position": "EDGE/LB",
+      "school": "Ohio State",
+      "traits": [
+        "6.5 sacks, 6-4/238",
+        "43.5\" vertical, 4.46 forty",
+        "violent hands, rare speed, great burst",
+        "sideline-to-sideline",
+        "positional versatility on/off ball",
+        "elite takeoff speed / 1.58s 10-yard split"
+      ],
+      "comps": [
+        "Micah Parsons-type project",
+        "Jalon Walker (2025 1st rd)",
+        "chess-piece defensive disruptor"
+      ],
+      "scheme_fits": [
+        "multiple front structures",
+        "off-ball/edge versatility",
+        "WILL linebacker projection"
+      ],
+      "risk": [
+        "lacks polished rush plan",
+        "sometimes late off snap",
+        "ceiling dependent / position specialization",
+        "limited freshman production"
+      ],
+      "analyst_mention_count": 15
+    },
+    "Caleb Downs": {
+      "position": "S",
+      "school": "Ohio State",
+      "traits": [
+        "versatile / outstanding instincts",
+        "68 tackles, 2 INTs, 6-0/205",
+        "physical with adequate speed",
+        "outstanding blitzer",
+        "elite football IQ",
+        "plug-and-play starter"
+      ],
+      "comps": [
+        "Eric Berry / Earl Thomas (top-15 picks)",
+        "multi-Pro Bowl trajectory",
+        "coverage safety anchor"
+      ],
+      "scheme_fits": [
+        "deep help / single high",
+        "flexible coverage schemes",
+        "Harbaugh chess piece",
+        "Flores scheme fit"
+      ],
+      "risk": [
+        "first safety top-5 since 2010",
+        "lacks wow traits",
+        "limited ball production at college level",
+        "size limitations"
+      ],
+      "analyst_mention_count": 15
+    },
+    "Carnell Tate": {
+      "position": "WR",
+      "school": "Ohio State",
+      "traits": [
+        "51 catches, 875 yards, 9 TDs",
+        "6-3/195, one drop last season",
+        "17.2 yards/catch",
+        "clean routes / reliable hands",
+        "tracks ball beautifully over shoulder"
+      ],
+      "comps": [
+        "reliable depth receiver",
+        "starting-caliber complement",
+        "route specialist"
+      ],
+      "scheme_fits": [
+        "vertical passing game",
+        "route-diversity offenses",
+        "complementary Z / boundary"
+      ],
+      "risk": [
+        "injury history consideration",
+        "not exceptionally dynamic with ball in hands",
+        "ceiling questions",
+        "overshadowed by elite teammates"
+      ],
+      "analyst_mention_count": 14
+    },
+    "Rueben Bain Jr.": {
+      "position": "EDGE",
+      "school": "Miami",
+      "traits": [
+        "thick square edge rusher",
+        "9.5 sacks, 6-3/275",
+        "violent at point of attack",
+        "leverage + power + polish",
+        "unrelenting motor",
+        "nasty chop/rip and hump moves"
+      ],
+      "comps": [
+        "Trent Cole",
+        "consistent pressure producer"
+      ],
+      "scheme_fits": [
+        "edge rotation",
+        "edge or three-tech",
+        "gap control"
+      ],
+      "risk": [
+        "short arms / sub-31-inch",
+        "lacks ideal speed and length",
+        "position flexibility question",
+        "off-field concerns noted"
+      ],
+      "analyst_mention_count": 13
+    },
+    "Mansoor Delane": {
+      "position": "CB",
+      "school": "LSU",
+      "traits": [
+        "27 pass breakups, 8 INTs / 11 PBUs recent",
+        "extremely consistent / fluid",
+        "press coverage adept",
+        "instinctual in zone",
+        "locates ball well",
+        "high-4.3 40 speed, 6-0/187"
+      ],
+      "comps": [
+        "true shutdown corner",
+        "physical press specialist",
+        "coverage technician"
+      ],
+      "scheme_fits": [
+        "man coverage heavy",
+        "aggressive disguise schemes",
+        "zone-match"
+      ],
+      "risk": [
+        "completion percentage vulnerability",
+        "long stretches without being challenged",
+        "limited targets sample"
+      ],
+      "analyst_mention_count": 13
+    },
+    "Francis Mauigoa": {
+      "position": "OT",
+      "school": "Miami",
+      "traits": [
+        "6-6/315-329",
+        "massive lower body / firm base",
+        "42 college starts",
+        "fierce run blocker",
+        "only 2 sacks allowed",
+        "patient punch / strong hands"
+      ],
+      "comps": [
+        "pro bowl ceiling",
+        "dominant anchor",
+        "right-tackle foundational"
+      ],
+      "scheme_fits": [
+        "run-heavy offense",
+        "right tackle or left",
+        "outside zone with screen-route versatility"
+      ],
+      "risk": [
+        "average foot quickness",
+        "pass protection refinement needed",
+        "elite competition variability",
+        "more one-track at second level"
+      ],
+      "analyst_mention_count": 13
+    },
+    "Kadyn Proctor": {
+      "position": "OT",
+      "school": "Alabama",
+      "traits": [
+        "enormous 6-7/352-358",
+        "excellent feet and agility for size",
+        "4.93 forty",
+        "explosive first step",
+        "sinks weight to stall bull rushers",
+        "5-star pedigree"
+      ],
+      "comps": [
+        "elite left tackle prospect / most upside of any OT",
+        "athletic tackle"
+      ],
+      "scheme_fits": [
+        "power run schemes",
+        "both tackle positions",
+        "left-side anchor"
+      ],
+      "risk": [
+        "weight management concerns",
+        "inconsistent tape",
+        "occasionally reacts late off snap",
+        "playoff struggles"
+      ],
+      "analyst_mention_count": 12
+    },
+    "Spencer Fano": {
+      "position": "OT/IOL",
+      "school": "Utah",
+      "traits": [
+        "6-6/310, fast athletic",
+        "five-position versatility",
+        "mean streak / nasty",
+        "24-plus career starts",
+        "rides rushers upfield",
+        "no sacks allowed 2025"
+      ],
+      "comps": [
+        "center/guard/tackle optionality",
+        "athletic tackle"
+      ],
+      "scheme_fits": [
+        "interior/edge swing",
+        "both tackle positions",
+        "zone-run scheme"
+      ],
+      "risk": [
+        "lacks ideal length for tackle",
+        "occasionally oversets",
+        "limited elite competition exposure",
+        "multi-position transition"
+      ],
+      "analyst_mention_count": 11
+    },
+    "Kenyon Sadiq": {
+      "position": "TE",
+      "school": "Oregon",
+      "traits": [
+        "4.39 forty at 241 lbs (record)",
+        "43.5\" vertical, 11'1\" broad (97th pctl)",
+        "51 catches, 560 yards",
+        "outstanding speed / explosive release",
+        "competitive tenacious blocker"
+      ],
+      "comps": [
+        "most explosive TE athletically",
+        "mismatch receiving weapon",
+        "Kyle Pitts trajectory"
+      ],
+      "scheme_fits": [
+        "two-TE sets / 12 personnel",
+        "pass-catching TE",
+        "seam attacker"
+      ],
+      "risk": [
+        "concentration drops",
+        "blocking limitations relative to size",
+        "combine-measurable dependent"
+      ],
+      "analyst_mention_count": 11
+    },
+    "Jordyn Tyson": {
+      "position": "WR",
+      "school": "Arizona State",
+      "traits": [
+        "61 catches, 711 yards",
+        "6-1/195, 21.4 YPC in 2022",
+        "explosive / wow plays",
+        "fluid creative releases",
+        "excellent deep catches"
+      ],
+      "comps": [
+        "big-play receiver",
+        "contested-ball specialist"
+      ],
+      "scheme_fits": [
+        "boundary / outside option",
+        "vertical passing"
+      ],
+      "risk": [
+        "durability concerns (1/3 games missed)",
+        "recurring injuries"
+      ],
+      "analyst_mention_count": 11
+    },
+    "Makai Lemon": {
+      "position": "WR",
+      "school": "USC",
+      "traits": [
+        "79 catches, 1,156 yards, 11 TDs",
+        "5-11/190 with LB temperament",
+        "10 catches/153 yds/TD vs Iowa",
+        "contested catches",
+        "ultra-competitive after catch"
+      ],
+      "comps": [
+        "Amon-Ra St. Brown",
+        "slot specialist"
+      ],
+      "scheme_fits": [
+        "underneath routes",
+        "slot competition (Adams complement)",
+        "quick-game slot"
+      ],
+      "risk": [
+        "size limitation",
+        "top-15 WR position value"
+      ],
+      "analyst_mention_count": 11
+    },
+    "Olaivavega Ioane": {
+      "position": "G",
+      "school": "Penn State",
+      "traits": [
+        "6-4/320-334",
+        "pure power / quick feet",
+        "explosive / physical nasty streak",
+        "redirects and stays attached",
+        "zero sacks allowed",
+        "All-American"
+      ],
+      "comps": [
+        "drive blocker",
+        "interior anchor / ultra-reliable"
+      ],
+      "scheme_fits": [
+        "power run game",
+        "phone-booth physical schemes",
+        "duo-based run"
+      ],
+      "risk": [
+        "limited tackle length",
+        "occasionally takes loss to pure speed"
+      ],
+      "analyst_mention_count": 11
+    },
+    "Peter Woods": {
+      "position": "DT",
+      "school": "Clemson",
+      "traits": [
+        "6-3/315",
+        "fabulous quickness / violent hands",
+        "thick square DT",
+        "holds point of attack",
+        "pushes pocket when lands hands first"
+      ],
+      "comps": [
+        "3-technique penetrator",
+        "interior disruptor"
+      ],
+      "scheme_fits": [
+        "aggressive defensive systems",
+        "pass-rush interior",
+        "pocket-collapsing"
+      ],
+      "risk": [
+        "struggles against down blocks",
+        "length issues",
+        "inconsistent game to game"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Monroe Freeling": {
+      "position": "OT",
+      "school": "Georgia",
+      "traits": [
+        "6-7/315, long arms (34 3/4\")",
+        "4.93 forty",
+        "ideal size bend agility",
+        "quick out of stance",
+        "playing best late season",
+        "18 starts experience"
+      ],
+      "comps": [
+        "developmental starter / left tackle projection"
+      ],
+      "scheme_fits": [
+        "left tackle",
+        "long-term blind-side"
+      ],
+      "risk": [
+        "18 starts entering 2025 / limited experience",
+        "gets tugged when chest exposed",
+        "needs more core strength"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Dillon Thieneman": {
+      "position": "S",
+      "school": "Oregon",
+      "traits": [
+        "8 INTs, versatile alignment",
+        "6-0/207",
+        "anticipates and ranges over top",
+        "instinctive eyes vs run",
+        "fluid pedal in slot"
+      ],
+      "comps": [
+        "chess-piece safety",
+        "Flores scheme fit"
+      ],
+      "scheme_fits": [
+        "multiple-look defenses",
+        "coverage creation",
+        "havoc defense"
+      ],
+      "risk": [
+        "occasionally fails to break down",
+        "fly-by missed tackles",
+        "scheme-dependent production"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Emmanuel McNeil-Warren": {
+      "position": "S",
+      "school": "Toledo",
+      "traits": [
+        "5 INTs, 9-10 forced fumbles",
+        "tall long safety",
+        "explosive / high energy",
+        "77 tackles in 2025",
+        "littered with big hits / plays on ball"
+      ],
+      "comps": [
+        "turnover generator",
+        "Pro Bowl potential / bouncy twitchy athlete"
+      ],
+      "scheme_fits": [
+        "free safety",
+        "roof / hash range"
+      ],
+      "risk": [
+        "small school production",
+        "consensus All-American premium"
+      ],
+      "analyst_mention_count": 9
+    },
+    "Denzel Boston": {
+      "position": "WR",
+      "school": "Washington",
+      "traits": [
+        "6-4/209, 11 TDs",
+        "boxing-out / contested-catch master",
+        "77% contested catch rate",
+        "exceptional ball skills",
+        "huge catch radius / red zone weapon"
+      ],
+      "comps": [
+        "Courtland Sutton",
+        "Drake London / Tet McMillan",
+        "dependable hands"
+      ],
+      "scheme_fits": [
+        "vertical passing",
+        "complementary X receiver"
+      ],
+      "risk": [
+        "relies more on physicality than finesse",
+        "size-dependent production"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Blake Miller": {
+      "position": "OT",
+      "school": "Clemson",
+      "traits": [
+        "6-6/310, 54 consecutive starts",
+        "3,500+ snaps / iron man",
+        "wrestler background",
+        "quickness covers speed rushers",
+        "good agility / balance"
+      ],
+      "comps": [
+        "developing tackle / right-side successor",
+        "safe prospect"
+      ],
+      "scheme_fits": [
+        "right side transition",
+        "tackle or guard positions"
+      ],
+      "risk": [
+        "strength / physicality development needed",
+        "struggles redirecting at second level",
+        "short-armed (32 1/8\")"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Jermod McCoy": {
+      "position": "CB",
+      "school": "Tennessee",
+      "traits": [
+        "6 INTs in two seasons / ball skills",
+        "outstanding press with one-hand jam",
+        "6-0/190, instinctive",
+        "always under control",
+        "capable tackler in space",
+        "4.4 speed / explosive athlete"
+      ],
+      "comps": [
+        "true CB1 when healthy",
+        "coverage specialist",
+        "possible top-5 pre-injury"
+      ],
+      "scheme_fits": [
+        "man-heavy secondaries",
+        "boundary corner",
+        "Spagnuolo system"
+      ],
+      "risk": [
+        "MAJOR: ACL recovery / missed entire 2025",
+        "lacks physicality against run",
+        "draft range unpredictable pending medical"
+      ],
+      "analyst_mention_count": 14
+    },
+    "Zion Young": {
+      "position": "EDGE",
+      "school": "Missouri",
+      "traits": [
+        "6-6/265, 6.5 sacks, 46 pressures, 18 TFLs",
+        "heavy hands jolting blockers",
+        "destroys TEs",
+        "good length",
+        "strong Senior Bowl"
+      ],
+      "comps": [
+        "developmental edge",
+        "pressure accumulator"
+      ],
+      "scheme_fits": [
+        "pressure generation",
+        "edge or inside over guards",
+        "Sweat complement"
+      ],
+      "risk": [
+        "herky-jerky mover",
+        "lacks elite get-off",
+        "top-50 edge gap since 2016 in draft"
+      ],
+      "analyst_mention_count": 9
+    },
+    "Keldric Faulk": {
+      "position": "EDGE/DL",
+      "school": "Auburn",
+      "traits": [
+        "6-6/270 power/speed rusher",
+        "ideal frame / length",
+        "loose fluid mover",
+        "stacks and holds point",
+        "scheme-versatile"
+      ],
+      "comps": [
+        "versatile DL / interior-edge hybrid",
+        "big-bodied edge defender"
+      ],
+      "scheme_fits": [
+        "gap control",
+        "Chubb pairing",
+        "Parker 3-4 base"
+      ],
+      "risk": [
+        "lacks ideal twitch and explosion",
+        "doesn't always have a plan",
+        "production regression 7 to 2 sacks",
+        "needs more ferocity"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Max Iheanachor": {
+      "position": "OT",
+      "school": "Arizona State",
+      "traits": [
+        "6-6/330",
+        "31 starts / 33.875\" arms",
+        "nasty / bullies / knock-back power",
+        "moves well on pulls",
+        "football novice pre-2022"
+      ],
+      "comps": [
+        "developmental timeline right tackle",
+        "run-heavy lineman"
+      ],
+      "scheme_fits": [
+        "downhill schemes",
+        "Williams eventual replacement"
+      ],
+      "risk": [
+        "often late to punch",
+        "raw tape / inconsistent pass protection",
+        "bend issues",
+        "Nigerian immigrant late to football"
+      ],
+      "analyst_mention_count": 9
+    },
+    "Akheem Mesidor": {
+      "position": "EDGE",
+      "school": "Miami",
+      "traits": [
+        "12.5 sacks, 58 pressures",
+        "6-2/281, relentless motor",
+        "shakes and bulls tackles",
+        "25 years old / supreme talent",
+        "21.3% pass-rush win rate"
+      ],
+      "comps": [
+        "better version of Nic Scourton",
+        "productive power pass-rusher"
+      ],
+      "scheme_fits": [
+        "aggressive schemes",
+        "pressure generation"
+      ],
+      "risk": [
+        "durability / injury history",
+        "limited height and length",
+        "age concern (25-year-old rookie)"
+      ],
+      "analyst_mention_count": 9
+    },
+    "Christen Miller": {
+      "position": "DT",
+      "school": "Georgia",
+      "traits": [
+        "ideal size / average length",
+        "quick first step",
+        "swipe and club moves",
+        "more disruptive than productive",
+        "chases with speed"
+      ],
+      "comps": [
+        "interior push / 3-tech"
+      ],
+      "scheme_fits": [
+        "Rankins pairing",
+        "interior rotation"
+      ],
+      "risk": [
+        "needs better feet/hands connection",
+        "balance issues occasionally"
+      ],
+      "analyst_mention_count": 7
+    },
+    "Colton Hood": {
+      "position": "CB",
+      "school": "Tennessee",
+      "traits": [
+        "17 pass breakups past two seasons",
+        "6-0/195, excellent play speed",
+        "patient in press",
+        "fluid mirror underneath",
+        "willing against run",
+        "complete player"
+      ],
+      "comps": [
+        "reliable corner / replacement talent"
+      ],
+      "scheme_fits": [
+        "multiple secondary systems",
+        "Watson substitute"
+      ],
+      "risk": [
+        "gets grabby when ball is in air",
+        "secondary room depletion dependency",
+        "role dependent on teammate injuries"
+      ],
+      "analyst_mention_count": 8
+    },
+    "Ty Simpson": {
+      "position": "QB",
+      "school": "Alabama",
+      "traits": [
+        "28 TDs/5 INTs, 15 game starts",
+        "sound mechanics / touch / accuracy",
+        "quick feet in setup",
+        "compact delivery",
+        "good athlete on designed boots"
+      ],
+      "comps": [
+        "mobile-accuracy developmental starter",
+        "Day 2-3 flier"
+      ],
+      "scheme_fits": [
+        "LaFleur system fit",
+        "modern spread",
+        "designed boot offense"
+      ],
+      "risk": [
+        "gets sped up when pocket collapses",
+        "limited starts (15)",
+        "battled injuries late season",
+        "experience minimalism"
+      ],
+      "analyst_mention_count": 10
+    },
+    "Omar Cooper Jr.": {
+      "position": "WR",
+      "school": "Indiana",
+      "traits": [
+        "937 yards, 13 TDs",
+        "loose fluid route runner",
+        "strong lower body through press",
+        "combat catches / 50/50 winner",
+        "power after catch"
+      ],
+      "comps": [
+        "volume producer",
+        "fearless slot/boundary",
+        "Deebo Samuel-type fearless middle-of-field"
+      ],
+      "scheme_fits": [
+        "deep threats needed",
+        "complementary to elite receiver",
+        "culture-building tough WR"
+      ],
+      "risk": [
+        "receiver class depth comparison",
+        "team receiving corps scheme dependency"
+      ],
+      "analyst_mention_count": 9
+    },
+    "KC Concepcion": {
+      "position": "WR",
+      "school": "Texas A&M",
+      "traits": [
+        "919 yards, 9 TDs",
+        "5-11/190, elusive",
+        "elite burst and speed",
+        "creates massive separation",
+        "explosive transition catch to run",
+        "return specialist",
+        "15.1 yards/catch average"
+      ],
+      "comps": [
+        "Zay Flowers",
+        "do-everything wideout / gadget"
+      ],
+      "scheme_fits": [
+        "slot / space creation",
+        "Olave complement"
+      ],
+      "risk": [
+        "inconsistent hands / concentration drops",
+        "size limitations"
+      ],
+      "analyst_mention_count": 8
+    },
+    "T.J. Parker": {
+      "position": "EDGE",
+      "school": "Clemson",
+      "traits": [
+        "114 pressures over 3 years",
+        "speed-to-power",
+        "rugged rusher with shake/bull",
+        "jolts blockers before separating",
+        "knock-back against run"
+      ],
+      "comps": [
+        "edge rotation / pressure specialist"
+      ],
+      "scheme_fits": [
+        "edge rotation",
+        "slide inside capability"
+      ],
+      "risk": [
+        "production dropped 11 to 5 sacks",
+        "lacks elite outside burst",
+        "Clemson program disappointment"
+      ],
+      "analyst_mention_count": 8
+    },
+    "Cashius Howell": {
+      "position": "EDGE",
+      "school": "Texas A&M",
+      "traits": [
+        "11.5 sacks, 16.5 TFLs",
+        "6-2/248, fast off edge",
+        "outstanding twitch / tenacity",
+        "multiple pass-rush moves",
+        "rolls hips to set edge"
+      ],
+      "comps": [
+        "energetic force off edge",
+        "consistency producer / Hendrickson replacement"
+      ],
+      "scheme_fits": [
+        "speed-based schemes",
+        "edge depth"
+      ],
+      "risk": [
+        "lacks ideal length / measurements",
+        "A&M edge skepticism",
+        "undersized"
+      ],
+      "analyst_mention_count": 7
+    },
+    "CJ Allen": {
+      "position": "LB",
+      "school": "Georgia",
+      "traits": [
+        "97 tackles, 3.5 sacks",
+        "6-1/235, plays bigger",
+        "productive / intelligent",
+        "explosive striker",
+        "outstanding blitzer"
+      ],
+      "comps": [
+        "three-down LB",
+        "traditional inside linebacker"
+      ],
+      "scheme_fits": [
+        "coverage LB",
+        "Davis age replacement"
+      ],
+      "risk": [
+        "tightness in coverage occasionally",
+        "year-to-year development pattern"
+      ],
+      "analyst_mention_count": 7
+    },
+    "Anthony Hill Jr.": {
+      "position": "LB",
+      "school": "Texas",
+      "traits": [
+        "4.51 forty, 238 lbs",
+        "coverage/rush versatility",
+        "elite change of direction",
+        "superb blitzer",
+        "outstanding closing speed"
+      ],
+      "comps": [
+        "upside/position flex LB"
+      ],
+      "scheme_fits": [
+        "Anarumo scheme",
+        "coverage linebacker"
+      ],
+      "risk": [
+        "uneven season / regression",
+        "not overly violent / more speed-reliant"
+      ],
+      "analyst_mention_count": 7
+    },
+    "Kayden McDonald": {
+      "position": "DT",
+      "school": "Ohio State",
+      "traits": [
+        "65 tackles, 3-3.5 sacks, 6-2/326",
+        "17 run stops",
+        "disruptive force / best vs run",
+        "violent torque / firm stout"
+      ],
+      "comps": [
+        "nose tackle upside",
+        "plugging interior"
+      ],
+      "scheme_fits": [
+        "run defense",
+        "odd fronts"
+      ],
+      "risk": [
+        "lacks lateral chase",
+        "lacks twitch as pass rusher",
+        "limited sack production"
+      ],
+      "analyst_mention_count": 7
+    },
+    "Chris Johnson": {
+      "position": "CB",
+      "school": "San Diego State",
+      "traits": [
+        "4.4 speed, 4 INTs, 9 PBUs",
+        "excellent height/bulk/movement",
+        "quick feet / fluid to open-run",
+        "excellent off-coverage eyes",
+        "strong combine"
+      ],
+      "comps": [
+        "starter-potential corner"
+      ],
+      "scheme_fits": [
+        "starter capability",
+        "non-Power-Four scheme fit"
+      ],
+      "risk": [
+        "mixed Senior Bowl week",
+        "Round 2 value projection"
+      ],
+      "analyst_mention_count": 7
+    },
+    "Germie Bernard": {
+      "position": "WR",
+      "school": "Alabama",
+      "traits": [
+        "862 yards, 7 TDs",
+        "strong sturdy WR / multiple alignments",
+        "quickness as weapon",
+        "separates underneath / strong hands",
+        "tough competitive blocker"
+      ],
+      "comps": [
+        "versatile possession WR",
+        "800-yard rookie projection"
+      ],
+      "scheme_fits": [
+        "slot / slow-up system",
+        "Hill/Waddle loss volume replacement"
+      ],
+      "risk": [
+        "good but not elite speed",
+        "lacks home-run gear"
+      ],
+      "analyst_mention_count": 7
+    },
+    "R Mason Thomas": {
+      "position": "EDGE",
+      "school": "Oklahoma",
+      "traits": [
+        "15.5 sacks, 25 TFLs past two",
+        "instinctive / physical edge",
+        "multiple ways to win",
+        "widen/bull + swipe-and-rip",
+        "maniacal energy / effort"
+      ],
+      "comps": [
+        "pressure source / firm point of attack"
+      ],
+      "scheme_fits": [
+        "edge depth",
+        "penetrating pass-rush systems"
+      ],
+      "risk": [
+        "lacks ideal height/length/bulk",
+        "stiff in coverage drops"
+      ],
+      "analyst_mention_count": 6
+    },
+    "Avieon Terrell": {
+      "position": "CB",
+      "school": "Clemson",
+      "traits": [
+        "8 forced fumbles two years",
+        "undersized / tremendous quickness",
+        "feisty competitive",
+        "quick feet matching slot",
+        "stellar blitzer"
+      ],
+      "comps": [
+        "ideal nickel starter Day 1"
+      ],
+      "scheme_fits": [
+        "nickel / slot",
+        "man coverage"
+      ],
+      "risk": [
+        "lacks size on go balls",
+        "walled off by bigger receivers",
+        "hamstring injury consideration"
+      ],
+      "analyst_mention_count": 6
+    },
+    "Keylan Rutledge": {
+      "position": "G",
+      "school": "Georgia Tech",
+      "traits": [
+        "43 starts, 2 sacks allowed",
+        "excellent awareness run game",
+        "eliminates LBs at second level",
+        "firm anchor pass pro",
+        "nasty / toughness"
+      ],
+      "comps": [
+        "interior anchor / Linderbaum pair"
+      ],
+      "scheme_fits": [
+        "run game / fit-and-finish",
+        "interior depth"
+      ],
+      "risk": [
+        "positional value timing"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Chase Bisontis": {
+      "position": "G",
+      "school": "Texas A&M",
+      "traits": [
+        "1,300 snaps, 6-5/315",
+        "interior power"
+      ],
+      "comps": [
+        "interior power / Ersery follow-up"
+      ],
+      "scheme_fits": [
+        "power run game"
+      ],
+      "risk": [
+        "positional value timing"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Treydan Stukes": {
+      "position": "S",
+      "school": "Arizona",
+      "traits": [
+        "4 INTs, opportunistic defense",
+        "6th-year senior / twitchy explosive",
+        "outside/slot/single-high versatility",
+        "tied broad jump lead, 3rd-fastest 40 at combine"
+      ],
+      "comps": [
+        "rangy versatile DB"
+      ],
+      "scheme_fits": [
+        "takeaway culture",
+        "multi-alignment DB"
+      ],
+      "risk": [
+        "older / sixth-year senior",
+        "limited experience variance"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Caleb Lomu": {
+      "position": "OT",
+      "school": "Utah",
+      "traits": [
+        "ideal frame / room to add strength",
+        "stays square",
+        "reworks hands",
+        "excellent feel vs stunts",
+        "run-block pop"
+      ],
+      "comps": [
+        "developmental tackle / swing potential"
+      ],
+      "scheme_fits": [
+        "depth contingency",
+        "Ekwonu insurance"
+      ],
+      "risk": [
+        "plays upright",
+        "lacks knock-back power in run game",
+        "needs core strength"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Zachariah Branch": {
+      "position": "WR",
+      "school": "Georgia",
+      "traits": [
+        "5-9/177, quick-game specialist",
+        "elite burst"
+      ],
+      "comps": [
+        "slot receiver"
+      ],
+      "scheme_fits": [
+        "Rodgers quick release",
+        "slot role"
+      ],
+      "risk": [
+        "height limitations",
+        "undersized"
+      ],
+      "analyst_mention_count": 4
+    },
+    "Oscar Delp": {
+      "position": "TE",
+      "school": "Georgia",
+      "traits": [
+        "20 catches, 261 yards",
+        "succession-planning potential"
+      ],
+      "comps": [
+        "developmental TE"
+      ],
+      "scheme_fits": [
+        "Goedert timeline"
+      ],
+      "risk": [
+        "modest production projections"
+      ],
+      "analyst_mention_count": 4
+    },
+    "Lee Hunter": {
+      "position": "DT",
+      "school": "Texas Tech",
+      "traits": [
+        "52 run stops, 33.5 TFLs three years",
+        "thick wide-bodied DT",
+        "dominant run defender",
+        "outstanding lateral range"
+      ],
+      "comps": [
+        "run-stopping specialist / gap filler"
+      ],
+      "scheme_fits": [
+        "run-first systems",
+        "interior help"
+      ],
+      "risk": [
+        "raw as pass rusher",
+        "plays upright peeks"
+      ],
+      "analyst_mention_count": 6
+    },
+    "Eli Stowers": {
+      "position": "TE",
+      "school": "Vanderbilt",
+      "traits": [
+        "146 catches over 3 years",
+        "769 yards",
+        "volume tight end"
+      ],
+      "comps": [
+        "Andrews succession"
+      ],
+      "scheme_fits": [
+        "receiving TE"
+      ],
+      "risk": [
+        "Andrews age timeline uncertainty"
+      ],
+      "analyst_mention_count": 4
+    },
+    "Jacob Rodriguez": {
+      "position": "LB",
+      "school": "Texas Tech",
+      "traits": [
+        "252 tackles two years",
+        "dominant against run",
+        "excellent lateral range",
+        "TFL machine / 13 career FFs",
+        "best as zone dropper"
+      ],
+      "comps": [
+        "tackle elite LB / instincts-driven"
+      ],
+      "scheme_fits": [
+        "zone coverage LB",
+        "David replacement"
+      ],
+      "risk": [
+        "issues in man coverage",
+        "inside linebacker reliance"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Jaishawn Barham": {
+      "position": "LB",
+      "school": "Michigan",
+      "traits": [
+        "4 sacks, 23 pressures",
+        "edge depth"
+      ],
+      "comps": [
+        "edge rotation"
+      ],
+      "scheme_fits": [
+        "edge rotation"
+      ],
+      "risk": [
+        "accumulation strategy"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Gabe Jacas": {
+      "position": "EDGE",
+      "school": "Illinois",
+      "traits": [
+        "11 sacks",
+        "depth solution"
+      ],
+      "comps": [
+        "rotation edge"
+      ],
+      "scheme_fits": [
+        "Bosa/Williams injury insurance"
+      ],
+      "risk": [
+        "lowest team sack total"
+      ],
+      "analyst_mention_count": 3
+    },
+    "D'Angelo Ponds": {
+      "position": "CB",
+      "school": "Indiana",
+      "traits": [
+        "7 INTs three years / 32 PBUs",
+        "5-8.6/182 outlier size",
+        "always in phase at all levels",
+        "plays bigger at catch point",
+        "leaping ability led CBs at Combine"
+      ],
+      "comps": [
+        "Aaron Glenn"
+      ],
+      "scheme_fits": [
+        "slot / nickel projection",
+        "Pitre complement"
+      ],
+      "risk": [
+        "size limitation",
+        "slot cornerback role only"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Malachi Lawrence": {
+      "position": "EDGE",
+      "school": "UCF",
+      "traits": [
+        "ideal size / length / twitch",
+        "explodes off line",
+        "rips through outside arm",
+        "shock in hands"
+      ],
+      "comps": [
+        "creates short corners to passer"
+      ],
+      "scheme_fits": [
+        "edge rotation"
+      ],
+      "risk": [
+        "inconsistent shed vs run",
+        "less effective underneath inside shoulder of OT"
+      ],
+      "analyst_mention_count": 4
+    },
+    "Caleb Banks": {
+      "position": "DT",
+      "school": "Florida",
+      "traits": [
+        "6-6/327, interior disruption"
+      ],
+      "comps": [
+        "talent-injury gap"
+      ],
+      "scheme_fits": [
+        "run stopping"
+      ],
+      "risk": [
+        "repeat foot injury concerns"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Chris Brazzell II": {
+      "position": "WR",
+      "school": "Tennessee",
+      "traits": [
+        "4.37 forty, 6-4/198",
+        "1,017 yards, 16.4 yards/catch",
+        "physical producer"
+      ],
+      "comps": [
+        "vertical boundary receiver"
+      ],
+      "scheme_fits": [
+        "Maye development"
+      ],
+      "risk": [
+        "A.J. Brown trade speculation noise"
+      ],
+      "analyst_mention_count": 4
+    },
+    "Malik Muhammad": {
+      "position": "CB",
+      "school": "Texas",
+      "traits": [
+        "4.42 speed",
+        "10 PBUs 2024"
+      ],
+      "comps": [
+        "rotational prospect"
+      ],
+      "scheme_fits": [
+        "Woolen replacement"
+      ],
+      "risk": [
+        "minimal four-pick plan context"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Derrick Moore": {
+      "position": "EDGE",
+      "school": "Michigan",
+      "traits": [
+        "10 sacks / Michigan connection"
+      ],
+      "comps": [
+        "edge depth"
+      ],
+      "scheme_fits": [
+        "Hutchinson pairing"
+      ],
+      "risk": [
+        "local draft tendency"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Jadarian Price": {
+      "position": "RB",
+      "school": "Notre Dame",
+      "traits": [
+        "6.0 YPC, 11 TDs on 113 carries",
+        "compact / terrific vision and balance",
+        "patient runner",
+        "reliable hands",
+        "quick to identify blitzers",
+        "home-run kickoff returner"
+      ],
+      "comps": [
+        "class #2 RB / power runner"
+      ],
+      "scheme_fits": [
+        "mobility offense",
+        "Walker replacement"
+      ],
+      "risk": [
+        "fumble issues (3 inside 10 in 2025)",
+        "overshadowed by teammate Love"
+      ],
+      "analyst_mention_count": 5
+    },
+    "Josiah Trotter": {
+      "position": "LB",
+      "school": "Missouri",
+      "traits": [
+        "183 tackles two years"
+      ],
+      "comps": [
+        "linebacker depth"
+      ],
+      "scheme_fits": [
+        "Landman pairing"
+      ],
+      "risk": [
+        "round-3 value"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Emmanuel Pregnon": {
+      "position": "G",
+      "school": "Oregon",
+      "traits": [
+        "blocks sustainably, 6-5/315",
+        "interior mover"
+      ],
+      "comps": [
+        "interior mover / guard projection"
+      ],
+      "scheme_fits": [
+        "guard projection"
+      ],
+      "risk": [
+        "five total picks limitation"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Brandon Cisse": {
+      "position": "CB",
+      "school": "South Carolina",
+      "traits": [
+        "12 PBUs, zero INTs season",
+        "fast / twitchy cover corner",
+        "plays with vision / elite closure speed",
+        "loose fluid athlete"
+      ],
+      "comps": [
+        "coverage technician"
+      ],
+      "scheme_fits": [
+        "man pairing",
+        "zone with back turned"
+      ],
+      "risk": [
+        "not physical in press",
+        "focus issues vs run"
+      ],
+      "analyst_mention_count": 4
+    },
+    "Logan Jones": {
+      "position": "C",
+      "school": "Iowa",
+      "traits": [
+        "51 games at center"
+      ],
+      "comps": [
+        "positional continuity"
+      ],
+      "scheme_fits": [
+        "Bradbury succession"
+      ],
+      "risk": [
+        "Dalman retirement insurance"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Mike Washington Jr.": {
+      "position": "RB",
+      "school": "Arkansas",
+      "traits": [
+        "4.33 speed, 1,070 rush yards, 28 receptions"
+      ],
+      "comps": [
+        "multi-purpose back"
+      ],
+      "scheme_fits": [
+        "mobility offense"
+      ],
+      "risk": [
+        "Jones/Mason expiration context"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Cade Klubnik": {
+      "position": "QB",
+      "school": "Clemson",
+      "traits": [
+        "developmental QB"
+      ],
+      "comps": [
+        "Day 2-3 flier"
+      ],
+      "scheme_fits": [
+        "backup mentality"
+      ],
+      "risk": [
+        "backup projection"
+      ],
+      "analyst_mention_count": 3
+    },
+    "Bud Clark": {
+      "position": "S",
+      "school": "TCU",
+      "traits": [
+        "safety prospect"
+      ],
+      "comps": [
+        "coverage safety"
+      ],
+      "scheme_fits": [
+        "secondary depth"
+      ],
+      "risk": [
+        "Day 2 projection"
+      ],
+      "analyst_mention_count": 2
+    },
+    "Malachi Fields": {
+      "position": "WR",
+      "school": "Notre Dame",
+      "traits": [
+        "receiver prospect"
+      ],
+      "comps": [
+        "Day 2 WR"
+      ],
+      "scheme_fits": [
+        "boundary / slot"
+      ],
+      "risk": [
+        "second-tier evaluation"
+      ],
+      "analyst_mention_count": 2
+    },
+    "Caleb Tiernan": {
+      "position": "OT",
+      "school": "Northwestern",
+      "traits": [
+        "offensive tackle"
+      ],
+      "comps": [
+        "depth OT"
+      ],
+      "scheme_fits": [
+        "developmental"
+      ],
+      "risk": [
+        "Day 2 value projection"
+      ],
+      "analyst_mention_count": 2
+    },
+    "Antonio Williams": {
+      "position": "WR",
+      "school": "Clemson",
+      "traits": [
+        "receiver prospect"
+      ],
+      "comps": [
+        "Day 2 WR"
+      ],
+      "scheme_fits": [
+        "slot / boundary"
+      ],
+      "risk": [
+        "junior evaluation"
+      ],
+      "analyst_mention_count": 2
+    },
+    "Kyle Louis": {
+      "position": "LB",
+      "school": "Pittsburgh",
+      "traits": [
+        "off-ball LB"
+      ],
+      "comps": [
+        "LB depth"
+      ],
+      "scheme_fits": [
+        "off-ball LB"
+      ],
+      "risk": [
+        "Day 2 projection"
+      ],
+      "analyst_mention_count": 2
+    },
+    "Jake Golday": {
+      "position": "LB",
+      "school": "Cincinnati",
+      "traits": [
+        "linebacker prospect"
+      ],
+      "comps": [
+        "LB depth"
+      ],
+      "scheme_fits": [
+        "Day 2 LB"
+      ],
+      "risk": [
+        "Day 2 projection"
+      ],
+      "analyst_mention_count": 2
+    },
+    "Keionte Scott": {
+      "position": "CB",
+      "school": "Miami",
+      "traits": [
+        "senior cornerback"
+      ],
+      "comps": [
+        "CB depth"
+      ],
+      "scheme_fits": [
+        "Day 2 CB"
+      ],
+      "risk": [
+        "Day 2 projection"
+      ],
+      "analyst_mention_count": 2
+    }
+  }
+}

@@ -1,0 +1,27 @@
+# Market / analyst-aware benchmark configuration.
+#
+# This is the legacy path. Mirrors what stage2_game_theoretic.py consumes today.
+# Retained for post-draft comparison against mocks.
+mode: benchmark
+
+n_simulations: 500
+rng_seed: null
+
+allowed_inputs:
+  team_agents:          data/features/team_agents_2026.json
+  cap_context:          data/features/cap_context_2026.json
+  coaching_tree:        data/features/coaching_tree_2026.json
+  roster_context:       data/features/roster_context_2026.json
+  trade_empirical:      data/features/trade_empirical_2021_2025.json
+  prospects:            data/processed/prospects_2026_enriched.csv
+  team_context:         data/processed/team_context_2026_enriched.csv
+  # benchmark-only:
+  analyst_aggregate:    data/features/analyst_aggregate_2026.json
+  analyst_consensus:    data/features/analyst_consensus_2026.json
+  trade_scenarios:      data/features/trade_scenarios_expanded_2026.json
+  master_intel:         data/live/master_intel_latest.json
+
+outputs:
+  predictions_csv:          data/processed/predictions_2026_benchmark.csv
+  monte_carlo_csv:          data/processed/monte_carlo_2026_benchmark.csv
+  reasoning_json:           data/processed/model_reasoning_2026_benchmark.json

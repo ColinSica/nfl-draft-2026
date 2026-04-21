@@ -1,6 +1,6 @@
 {
   "meta": {
-    "n_sims": 100
+    "n_sims": 500
   },
   "picks": {
     "1": {
@@ -39,16 +39,44 @@
     },
     "2": {
       "team": "NYJ",
+      "player": "David Bailey",
+      "position": "EDGE",
+      "components": {
+        "bpa": 0.535,
+        "need": 0.562,
+        "visit": 0.0,
+        "intel": 0.0,
+        "pv_mult": 1.25,
+        "gm_affinity": 1.0,
+        "score_final": 1.485
+      },
+      "top_factors": [
+        {
+          "key": "team_need",
+          "magnitude": 0.5625,
+          "label": "EDGE is a top roster need",
+          "detail": "Need score contributed 0.56 to the total"
+        },
+        {
+          "key": "positional_value",
+          "magnitude": 0.25,
+          "label": "EDGE position premium",
+          "detail": "Position-value multiplier 1.25x (premium slot)"
+        }
+      ]
+    },
+    "3": {
+      "team": "ARI",
       "player": "Arvell Reese",
       "position": "LB",
       "components": {
         "bpa": 0.535,
         "need": 0.45,
         "visit": 0.0,
-        "intel": 0.3,
+        "intel": 0.0,
         "pv_mult": 0.612,
-        "gm_affinity": 1.0,
-        "score_final": 0.78
+        "gm_affinity": 0.8,
+        "score_final": 0.477
       },
       "top_factors": [
         {
@@ -64,50 +92,10 @@
           "detail": "Discounted 39% but still outscored alternatives"
         },
         {
-          "key": "intel",
-          "magnitude": 0.30000000000000004,
-          "label": "Analyst intel scripted this pick",
-          "detail": "Tier-1 analyst consensus pushed prob 0.30"
-        }
-      ]
-    },
-    "3": {
-      "team": "ARI",
-      "player": "David Bailey",
-      "position": "EDGE",
-      "components": {
-        "bpa": 0.535,
-        "need": 0.45,
-        "visit": 0.15,
-        "intel": 0.3,
-        "pv_mult": 1.25,
-        "gm_affinity": 1.25,
-        "score_final": 2.432
-      },
-      "top_factors": [
-        {
-          "key": "team_need",
-          "magnitude": 0.45,
-          "label": "EDGE is a top roster need",
-          "detail": "Need score contributed 0.45 to the total"
-        },
-        {
-          "key": "intel",
-          "magnitude": 0.30000000000000004,
-          "label": "Analyst intel scripted this pick",
-          "detail": "Tier-1 analyst consensus pushed prob 0.30"
-        },
-        {
-          "key": "positional_value",
-          "magnitude": 0.25,
-          "label": "EDGE position premium",
-          "detail": "Position-value multiplier 1.25x (premium slot)"
-        },
-        {
-          "key": "gm_affinity",
-          "magnitude": 0.25,
-          "label": "GM historically favors EDGE",
-          "detail": "Positional-affinity multiplier 1.25x"
+          "key": "gm_aversion",
+          "magnitude": 0.19999999999999996,
+          "label": "GM rarely drafts LB",
+          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
         }
       ]
     },
@@ -298,17 +286,17 @@
       ]
     },
     "10": {
-      "team": "CIN",
+      "team": "NYG",
       "player": "Mansoor Delane",
       "position": "CB",
       "components": {
         "bpa": 0.529,
         "need": 0.45,
-        "visit": 0.15,
+        "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.22,
-        "gm_affinity": 1.063,
-        "score_final": 1.944
+        "gm_affinity": 0.8,
+        "score_final": 1.218
       },
       "top_factors": [
         {
@@ -322,6 +310,12 @@
           "magnitude": 0.21999999999999997,
           "label": "CB position premium",
           "detail": "Position-value multiplier 1.22x (premium slot)"
+        },
+        {
+          "key": "gm_aversion",
+          "magnitude": 0.19999999999999996,
+          "label": "GM rarely drafts CB",
+          "detail": "Positional-affinity penalty 0.80x (model picked anyway)"
         }
       ]
     },
@@ -495,16 +489,16 @@
     },
     "17": {
       "team": "DET",
-      "player": "Kadyn Proctor",
+      "player": "Blake Miller",
       "position": "OT",
       "components": {
-        "bpa": 0.523,
+        "bpa": 0.516,
         "need": 0.0,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.1,
         "gm_affinity": 0.84,
-        "score_final": 0.469
+        "score_final": 0.463
       },
       "top_factors": [
         {
@@ -725,6 +719,21 @@
     },
     "25": {
       "team": "KC",
+      "player": "Kadyn Proctor",
+      "position": "OT",
+      "components": {
+        "bpa": 0.523,
+        "need": 0.216,
+        "visit": 0.0,
+        "intel": 0.0,
+        "pv_mult": 1.1,
+        "gm_affinity": 1.0,
+        "score_final": 0.828
+      },
+      "top_factors": []
+    },
+    "26": {
+      "team": "BUF",
       "player": "Kayden McDonald",
       "position": "DL",
       "components": {
@@ -733,30 +742,15 @@
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.05,
-        "gm_affinity": 1.0,
-        "score_final": 0.534
-      },
-      "top_factors": []
-    },
-    "26": {
-      "team": "BUF",
-      "player": "Cashius Howell",
-      "position": "EDGE",
-      "components": {
-        "bpa": 0.504,
-        "need": 0.36,
-        "visit": 0.0,
-        "intel": 0.0,
-        "pv_mult": 1.25,
-        "gm_affinity": 0.97,
-        "score_final": 1.07
+        "gm_affinity": 1.25,
+        "score_final": 0.668
       },
       "top_factors": [
         {
-          "key": "positional_value",
+          "key": "gm_affinity",
           "magnitude": 0.25,
-          "label": "EDGE position premium",
-          "detail": "Position-value multiplier 1.25x (premium slot)"
+          "label": "GM historically favors DL",
+          "detail": "Positional-affinity multiplier 1.25x"
         }
       ]
     },
@@ -798,17 +792,17 @@
       ]
     },
     "29": {
-      "team": "SEA",
+      "team": "PHI",
       "player": "Colton Hood",
       "position": "CB",
       "components": {
         "bpa": 0.512,
-        "need": 0.36,
+        "need": 0.0,
         "visit": 0.0,
         "intel": 0.0,
         "pv_mult": 1.22,
-        "gm_affinity": 1.0,
-        "score_final": 1.051
+        "gm_affinity": 1.063,
+        "score_final": 0.651
       },
       "top_factors": [
         {
@@ -843,16 +837,16 @@
     },
     "31": {
       "team": "NE",
-      "player": "Blake Miller",
-      "position": "OT",
+      "player": "C.J. Allen",
+      "position": "LB",
       "components": {
-        "bpa": 0.516,
+        "bpa": 0.493,
         "need": 0.0,
         "visit": 0.0,
         "intel": 0.0,
-        "pv_mult": 1.1,
+        "pv_mult": 1.02,
         "gm_affinity": 1.0,
-        "score_final": 0.578
+        "score_final": 0.483
       },
       "top_factors": []
     },

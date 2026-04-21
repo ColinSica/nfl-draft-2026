@@ -1,0 +1,1089 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-20T00:00:00+00:00",
+    "schema_version": "1.0",
+    "purpose": "Per-prospect analyst REASONING (strengths/weaknesses/comps/scheme fits/archetype/injury notes) aggregated across public big boards. NO rank numbers stored. Feeds team-agent profile enrichment, NOT direct picks.",
+    "prospect_count": 120,
+    "independence_note": "Model must not consume analyst_board_mentions as a rank proxy — field reflects source coverage frequency, useful only as a signal-strength heuristic for reasoning confidence."
+  },
+  "sources_scraped": [
+    "https://www.nfl.com/news/daniel-jeremiah-s-top-50-2026-nfl-draft-prospect-rankings-4-0",
+    "https://www.cbssports.com/nfl/draft/news/2026-nfl-draft-top-prospects-big-board-rankings/",
+    "https://www.espn.com/nfl/draft2026/story/_/id/48479903/2026-nfl-draft-jeff-legwold-ranking-top-100-prospects",
+    "https://www.espn.com/nfl/draft2026/story/_/id/46573669/2026-nfl-draft-rankings-mel-kiper-big-board-top-prospects-players-positions",
+    "https://www.espn.com/nfl/draft2026/story/_/id/48521984/2026-nfl-draft-mel-kiper-favorite-prospects-every-position-class-sleepers",
+    "https://www.nflmockdraftdatabase.com/big-boards/2026/the-athletic-2026-dane-brugler-big-board",
+    "https://www.pff.com/draft/big-board",
+    "https://www.nfl.com/news/lance-zierlein-2026-nfl-mock-draft-3-0-cowboys-hit-the-jackpot-at-no-12-plus-two-trades",
+    "https://www.chargers.com/news/dane-brugler-early-top-2026-nfl-draft-rankings",
+    "https://247sports.com/college/ohio-state/article/ohio-state-buckeyes-football-274344894/",
+    "https://walterfootball.com/scoutingreports2026carsonbeck.php",
+    "https://steelersdepot.com/2026/04/final-rankings-how-weve-graded-the-top-2026-nfl-draft-quarterbacks/",
+    "https://atozsports.com/nfl-draft/final-2026-nfl-draft-quarterback-rankings-ty-simpson-fernando-mendoza-garrett-nussmeier-drew-allar-taylen-green/",
+    "https://www.cbssports.com/nfl/draft/news/nfl-combine-2026-qb-grades-ty-simpson-carson-beck-garrett-nussmeier-drew-allar/"
+  ],
+  "prospect_reasoning": {
+    "Fernando Mendoza": {
+      "strengths": ["plus accuracy", "excellent size and toughness", "sufficient arm strength", "operates well from shotgun", "thrives on RPO and quick game", "velocity on third-and-long", "processing speed", "no red zone interceptions over past two seasons", "precision in big moments", "poise under pressure", "attacks defensive mistakes quickly", "25 TDs and only 4 INTs"],
+      "weaknesses": ["occasionally holds ball too long hunting big plays", "limited pocket mobility", "absorbs significant hits", "small elite-program sample at Indiana", "reluctance to throw over the middle noted by some evaluators"],
+      "comps": ["Matt Ryan", "Matthew Stafford", "Joe Burrow"],
+      "scheme_fits": ["spread", "quick-game", "RPO-heavy", "vertical passing", "timing-based West Coast"],
+      "archetype_tags": ["pocket passer", "processor", "clutch late-game", "day-one starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 14
+    },
+    "Ty Simpson": {
+      "strengths": ["sound mechanics and compact delivery", "touch and accuracy", "quick feet in setup", "marries feet to eyes staying on platform", "good athlete on designed boots and rollouts", "sharp pre-snap operator", "handles pressure well", "strong NFL Combine performance", "clean footwork"],
+      "weaknesses": ["slightly undersized (6'1\", 211)", "gets sped up when pocket collapses", "errant downfield balls under duress", "late-2025 play tailed off with injuries limiting practice", "only 15 career starts", "anticipation and pocket-holding issues", "accuracy wavered second half of season"],
+      "comps": ["Mac Jones"],
+      "scheme_fits": ["pro-style", "timing-based", "play-action", "quick-game"],
+      "archetype_tags": ["rhythm passer", "processor", "developmental starter", "system QB"],
+      "injury_notes": ["late-season 2025 injuries limited practice reps"],
+      "analyst_board_mentions": 10
+    },
+    "Drew Allar": {
+      "strengths": ["prototypical size", "excellent deep-ball thrower (15 TDs vs 2 INTs on 20+ yard throws last two seasons)", "effective on go balls, comebacks, fade routes", "strong arm talent", "experience in pro-style offense"],
+      "weaknesses": ["inconsistent footwork at times", "needs more intermediate-range accuracy", "errant throws on out routes", "sloppy early-game mechanics", "fighting lower body in footwork"],
+      "comps": ["Carson Wentz", "Brock Osweiler"],
+      "scheme_fits": ["pro-style", "play-action heavy", "vertical passing"],
+      "archetype_tags": ["pocket passer", "big-arm thrower", "developmental Day 2"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Carson Beck": {
+      "strengths": ["prototypical build", "arm talent", "experience in pro-style SEC offense", "can throw all levels"],
+      "weaknesses": ["tendency to get rattled under pressure", "decision-making inconsistency", "durability concerns after UCL surgery history", "ceiling may top out as backup"],
+      "comps": ["Kirk Cousins (lower-end)"],
+      "scheme_fits": ["pro-style", "play-action"],
+      "archetype_tags": ["pocket passer", "backup-to-starter developmental"],
+      "injury_notes": ["UCL surgery history", "previous elbow concerns"],
+      "analyst_board_mentions": 7
+    },
+    "Garrett Nussmeier": {
+      "strengths": ["gunslinger mentality", "quick release", "experience starting at LSU", "17 INTs over two starting seasons shows aggressiveness and risk tolerance"],
+      "weaknesses": ["undersized frame", "arm strength average", "pocket awareness lapses", "2025 abdominal injury (stabbing pain from fall camp) limited season to 1,927 yards and 12 TDs (vs 4,092 / 29 TDs in 2024)", "decision-making questions"],
+      "comps": ["Jake Browning", "Mason Rudolph"],
+      "scheme_fits": ["spread", "quick-game"],
+      "archetype_tags": ["gunslinger", "backup QB", "developmental"],
+      "injury_notes": ["2025 abdominal injury from fall camp severely limited production"],
+      "analyst_board_mentions": 5
+    },
+    "Dante Moore": {
+      "strengths": ["talent and arm", "Oregon system experience"],
+      "weaknesses": ["concerning inexperienced stretches", "declaration uncertain (two years eligibility remaining)"],
+      "comps": [],
+      "scheme_fits": ["spread", "West Coast"],
+      "archetype_tags": ["developmental", "decision-pending"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Cole Payton": {
+      "strengths": ["strong accuracy", "arm talent with rushing upside", "4.56 speed multi-dimensional athlete", "777 rushing yards and 31 career TDs at North Dakota State"],
+      "weaknesses": ["long delivery", "small-school competition level"],
+      "comps": ["Taysom Hill"],
+      "scheme_fits": ["gadget", "RPO"],
+      "archetype_tags": ["developmental", "gadget QB", "Swiss-Army role player"],
+      "injury_notes": [],
+      "analyst_board_mentions": 2
+    },
+    "Jeremiyah Love": {
+      "strengths": ["dynamic runner and receiver", "explodes through inside holes with lower-leg drive", "elite outside speed (4.36 40)", "makes defenders miss without gearing down", "electric spin move", "smooth route runner", "effective pass protector", "home-run hitter", "28 TDs on 303 carries", "elite forced missed tackles"],
+      "weaknesses": ["some route-running and receiving refinement needed", "durability concerns given explosive style"],
+      "comps": ["Saquon Barkley", "Bijan Robinson (lower-tier)"],
+      "scheme_fits": ["zone", "gap", "pass-game featured back", "every-down"],
+      "archetype_tags": ["three-down back", "home-run hitter", "explosive athlete", "playbook-expander"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Jadarian Price": {
+      "strengths": ["terrific vision and balance", "patient runner letting blocks develop", "runs low with supreme contact balance", "steps through low tackles", "reliable hands", "quick to identify blitzers", "kickoff return home-run ability", "21.2% of rushes gained 10+ yards"],
+      "weaknesses": ["fumble issues (three inside opponent's 10-yard line in 2025)", "split carries reduced volume sample", "overshadowed by Jeremiyah Love at Notre Dame"],
+      "comps": ["James Conner", "Devin Singletary"],
+      "scheme_fits": ["zone", "gap"],
+      "archetype_tags": ["patient runner", "rotational back", "return specialist"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "Emmett Johnson": {
+      "strengths": ["one-cut runner with explosive burst", "elite receiving production (85 catches over two seasons)", "fourth nationally in forced missed tackles (93)", "compact frame generates burst through the hole", "three-down capability"],
+      "weaknesses": ["undersized at 5'10\"", "not a power between-tackles threat"],
+      "comps": ["Chase Brown"],
+      "scheme_fits": ["zone", "spread", "pass-game RB"],
+      "archetype_tags": ["three-down back", "pass-catching RB"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Mike Washington Jr.": {
+      "strengths": ["size-speed combo", "rare improvement arc from 625 yards at Buffalo 2022 to 1,070 at Arkansas 2025", "physical runner", "developing receiving skills"],
+      "weaknesses": ["nine fumbles in two seasons concerning", "ball security red flag"],
+      "comps": [],
+      "scheme_fits": ["gap", "power"],
+      "archetype_tags": ["power back", "developmental"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Arvell Reese": {
+      "strengths": ["fluid explosive athlete", "deployable as chess piece (LB, EDGE, QB spy)", "elite speed and bend", "overpowers blockers with runway", "can match TEs and RBs in coverage", "22 pressures on 71 pass-rush snaps", "elite youth (won't turn 21 until August)"],
+      "weaknesses": ["lacks polished rush plan", "occasionally late off snap", "still learning position"],
+      "comps": ["Jalon Walker", "Micah Parsons (high-ceiling)"],
+      "scheme_fits": ["3-4 OLB", "4-3 SAM", "hybrid multiple"],
+      "archetype_tags": ["chess-piece defender", "edge/off-ball hybrid", "explosive athlete", "high-upside"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "David Bailey": {
+      "strengths": ["ultra-explosive edge", "elite first step off line", "dip/rip move before flattening", "flashes speed-to-power conversion", "creates exceptional short corners to QB", "21.6% pressure rate since 2023", "leads college football in pressure and sack production"],
+      "weaknesses": ["needs run-defense consistency and physicality", "relies heavily on raw athleticism", "developing rush plan"],
+      "comps": ["Von Miller (speed archetype)", "Haason Reddick"],
+      "scheme_fits": ["4-3 DE", "3-4 OLB", "wide-9", "speed-rush role"],
+      "archetype_tags": ["speed rusher", "bend-and-burst", "designated pass rusher"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Rueben Bain Jr.": {
+      "strengths": ["thick square build", "game tape full of disruption and dominance", "wins with leverage, power and polish", "launches from four-point stance", "uproots tackles", "nasty chop/rip", "nifty Euro-step", "ragdolls tight ends", "unrelenting motor", "44 pressures this season", "best collegiate DE season since Aidan Hutchinson"],
+      "weaknesses": ["lacks elite get-off", "shorter-than-ideal arms", "DT-ish build for edge", "not cookie-cutter measurables"],
+      "comps": ["Trent Cole", "Aidan Hutchinson (production archetype)"],
+      "scheme_fits": ["4-3 DE", "base end", "power rusher role", "can kick inside on obvious pass"],
+      "archetype_tags": ["power rusher", "run-stuffing edge", "every-down DE"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "T.J. Parker": {
+      "strengths": ["versatile (edge and interior)", "rugged pass rusher", "powerful shake/bull move", "jolts blockers with hands", "generates knock-back power", "strong Senior Bowl week", "11 sacks in 2024"],
+      "weaknesses": ["production dropped to 5 sacks in 2025", "lacks elite edge burst", "quickness plays better inside"],
+      "comps": ["Larry Ogunjobi", "Arik Armstead"],
+      "scheme_fits": ["4-3 base end", "3-4 DE", "inside-outside hybrid"],
+      "archetype_tags": ["power rusher", "versatile front player"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Akheem Mesidor": {
+      "strengths": ["highly productive", "ideal frame with relentless motor", "pass-rush instincts", "shakes and bulls OTs", "knocks hands off pushing/pulling for pressures", "corners and bends after separation", "wins rushing inside over guards", "never stops working hands", "powerful edge-setting base", "35.5 career sacks"],
+      "weaknesses": ["history of foot surgery", "prior injury concerns", "not purely speed-based"],
+      "comps": ["Nic Scourton (better version)", "Anthony Nelson"],
+      "scheme_fits": ["4-3 DE", "3-4 DE", "power-rush role"],
+      "archetype_tags": ["power rusher", "three-down edge", "motor defender"],
+      "injury_notes": ["foot surgery history", "prior injury concerns"],
+      "analyst_board_mentions": 9
+    },
+    "Cashius Howell": {
+      "strengths": ["outstanding twitch and tenacity", "SEC Defensive Player of the Year with 11.5 sacks", "wins multiple ways (speed, power, instincts)", "nice blend of violence and awareness", "rolls hips setting edge", "bursts through making plays behind LOS", "energetic force"],
+      "weaknesses": ["undersized", "lacks ideal length/arms", "length limitations against tackles"],
+      "comps": ["Haason Reddick (undersized archetype)", "Boye Mafe"],
+      "scheme_fits": ["3-4 OLB", "stand-up edge", "speed-rush specialist"],
+      "archetype_tags": ["undersized speed rusher", "twitchy edge"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Keldric Faulk": {
+      "strengths": ["versatile DL with ideal frame and length", "aligned up and down front", "loose fluid mover", "wins with swooping arm-over or steady pocket push", "stacks and holds point of attack", "coaches rave about character and work ethic", "youngest prospect (turns 21 in September)"],
+      "weaknesses": ["lacks ideal twitch/explosion", "doesn't always have a plan", "inconsistent production"],
+      "comps": ["Chase Young (frame)", "Calais Campbell (versatile frame)"],
+      "scheme_fits": ["multi-front", "5-tech DE", "3-4 DE", "interior pass rusher in nickel"],
+      "archetype_tags": ["versatile DL", "kick-inside candidate", "long-term ascending talent"],
+      "injury_notes": [],
+      "analyst_board_mentions": 9
+    },
+    "Matayo Uiagalelei": {
+      "strengths": ["young (won't turn 21 until next summer)", "consistent year-over-year improvement", "25 pressures this season"],
+      "weaknesses": ["still developing", "needs technical refinement"],
+      "comps": [],
+      "scheme_fits": ["4-3 DE", "3-4 DE"],
+      "archetype_tags": ["developmental edge", "high-ceiling"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "R Mason Thomas": {
+      "strengths": ["instinctive and physical", "covers ground in first three steps", "widen/bull-rush and swipe-and-rip favorite moves", "draws extra blocker attention", "maniacal energy and effort", "22 TFLs and 15.5 sacks over final 23 games"],
+      "weaknesses": ["lacks ideal height/length/bulk", "stiff in coverage change-of-direction", "not prototype"],
+      "comps": ["Uchenna Nwosu", "Josh Sweat"],
+      "scheme_fits": ["3-4 OLB", "stand-up edge", "sub-package rusher"],
+      "archetype_tags": ["undersized edge", "motor rusher", "valuable starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Zion Young": {
+      "strengths": ["big powerful rusher with length", "herky-jerky mover with heavy hands", "destroys TEs assigned to block", "knack for finishing at rush top", "can slide inside in sub-packages", "firm run-defender", "strong Senior Bowl"],
+      "weaknesses": ["lacks elite get-off", "DWI arrest off-field concern"],
+      "comps": ["Yannick Ngakoue (power archetype)"],
+      "scheme_fits": ["4-3 base end", "inside-outside in sub"],
+      "archetype_tags": ["power rusher", "three-down edge"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Malachi Lawrence": {
+      "strengths": ["ideal size/length/twitch", "explodes off line ripping through outside arm", "shock in hands uprooting blockers", "flattens at rush top", "chase-down speed", "array of counters", "28 TFLs and 20 sacks in three seasons"],
+      "weaknesses": ["less effective aligned inside shoulder of OT", "inconsistent setting edge on front side", "consistency questions"],
+      "comps": ["Carl Granderson"],
+      "scheme_fits": ["wide-9", "stand-up edge"],
+      "archetype_tags": ["speed rusher", "backside chase artist"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Joshua Josephs": {
+      "strengths": ["long arms (83⅞\" wingspan) winning at lighter weight", "toughness against tackles", "sets firm edge", "26 pressures (career high)"],
+      "weaknesses": ["rush-counter portfolio needs expansion", "light-frame concerns"],
+      "comps": [],
+      "scheme_fits": ["3-4 OLB", "4-3 DE"],
+      "archetype_tags": ["length-based edge", "developmental pass rusher"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Quincy Rhodes Jr.": {
+      "strengths": ["ideal 6-6, 275 NFL-versatile build", "Arkansas breakout"],
+      "weaknesses": ["only single starter season", "declaration timing uncertain", "limited sample"],
+      "comps": [],
+      "scheme_fits": ["multi-front"],
+      "archetype_tags": ["developmental edge", "frame-based upside"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Gabe Jacas": {
+      "strengths": ["multidimensional defender", "11 sacks, 34 pressures, 12.5 TFLs", "seals edge and drops into coverage", "physical finisher with six forced fumbles in two seasons", "four-year starter with consistent play strength"],
+      "weaknesses": ["pass-rush refinement needed"],
+      "comps": [],
+      "scheme_fits": ["3-4 OLB", "4-3 SAM"],
+      "archetype_tags": ["versatile edge", "coverage-capable LB/edge hybrid"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Dani Dennis-Sutton": {
+      "strengths": ["elite combine testing (39.5\" vertical, 10'11\" broad)", "back-to-back 8.5-sack years", "7 forced fumbles"],
+      "weaknesses": ["flexibility limitation", "struggles with outside-shoulder"],
+      "comps": [],
+      "scheme_fits": ["4-3 DE", "3-4 DE"],
+      "archetype_tags": ["explosive athlete", "developmental edge"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Romello Height": {
+      "strengths": ["tenacious", "creates effective pass-rush production", "late-season 11.5 TFLs, 10 sacks, 2 FFs"],
+      "weaknesses": ["sub-240 frame", "older age profile", "four-school transfer (Auburn, USC, Georgia Tech, Texas Tech)"],
+      "comps": [],
+      "scheme_fits": ["3-4 OLB", "sub-package rusher"],
+      "archetype_tags": ["undersized edge", "late bloomer"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Derrick Moore": {
+      "strengths": ["power-length combination (81.25\" wingspan)", "early pass-rush impact potential"],
+      "weaknesses": ["hamstring prevented combine/pro-day testing", "consistency questions"],
+      "comps": [],
+      "scheme_fits": ["4-3 DE", "base end"],
+      "archetype_tags": ["power edge", "developmental"],
+      "injury_notes": ["hamstring injury limited pre-draft testing"],
+      "analyst_board_mentions": 4
+    },
+    "Keyron Crawford": {
+      "strengths": ["career-best 9.5 TFLs", "two-point-stance flexibility", "corner-around promise"],
+      "weaknesses": ["limited organized football background before senior high school", "raw"],
+      "comps": [],
+      "scheme_fits": ["3-4 OLB"],
+      "archetype_tags": ["raw high-upside edge"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "LT Overton": {
+      "strengths": ["power-effort-reliability combination", "back-to-back 42-tackle seasons for Alabama"],
+      "weaknesses": ["lacks initial edge explosiveness"],
+      "comps": [],
+      "scheme_fits": ["3-4 DE", "5-tech"],
+      "archetype_tags": ["power edge", "run-stuffing base end"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Darrell Jackson Jr.": {
+      "strengths": ["massive 86-inch wingspan", "power flashes"],
+      "weaknesses": ["untapped potential (7 TFLs, 4.5 sacks in two seasons)", "spotty technique", "plays too high"],
+      "comps": [],
+      "scheme_fits": ["3-4 DE", "5-tech"],
+      "archetype_tags": ["developmental length-based edge"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Peter Woods": {
+      "strengths": ["thick square DT with fabulous quickness", "violent hands", "holds point of attack", "leverages lower-body strength", "lateral range outside tackle box", "chase effort", "nasty club/rip", "powerful true junior who won't turn 21 until near draft"],
+      "weaknesses": ["struggles against down blocks", "wiped downline occasionally", "length limitations as pass rusher", "plays too upright peeking"],
+      "comps": ["Christian Barmore"],
+      "scheme_fits": ["3-tech", "1-tech in base", "multiple-front"],
+      "archetype_tags": ["disruptive interior", "penetrator", "high-ceiling DT"],
+      "injury_notes": [],
+      "analyst_board_mentions": 10
+    },
+    "Dallas Woods": {
+      "strengths": ["powerful true junior DT", "on scouting radars since true freshman", "disruptive beyond Clemson's defensive system"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["3-tech", "multi-front"],
+      "archetype_tags": ["powerful interior", "ascending talent"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Kayden McDonald": {
+      "strengths": ["excellent size/strength", "presses out blocks with violent torque", "very firm/stout", "best FBS run-stop rate (7.8%)"],
+      "weaknesses": ["limited lateral chase", "lacks twitch/polish as pass rusher", "needs pass-rush development", "only one high-production season"],
+      "comps": ["Linval Joseph"],
+      "scheme_fits": ["1-tech", "nose tackle", "two-gap"],
+      "archetype_tags": ["run-stuffer", "early-down NT"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "Caleb Banks": {
+      "strengths": ["tall, long, athletic DT", "85.75\" wingspan", "impressive 2024 tape", "twitchy feet and hands", "quick club move", "collapses pocket with power", "back-side range"],
+      "weaknesses": ["played just 3 games in 2025 (broken foot)", "struggles finishing with production", "long dry stretches hanging on blocks", "multiple foot injuries limit recent evaluation"],
+      "comps": ["Larry Ogunjobi"],
+      "scheme_fits": ["3-tech", "multi-front"],
+      "archetype_tags": ["upside interior rusher", "length-based DT"],
+      "injury_notes": ["multiple foot injuries including broken foot limiting 2025 to 3 games"],
+      "analyst_board_mentions": 6
+    },
+    "Lee Hunter": {
+      "strengths": ["thick wide-bodied DT", "dominant run defender at Texas Tech", "bends and leverages single blocks", "defeats cut-off blocks", "outstanding lateral range", "late-season surge (10.5 TFLs in final 6 games)", "impactful Orange Bowl (7 tackles, 2 TFLs)"],
+      "weaknesses": ["raw pass-rush skills", "plays too upright peeking"],
+      "comps": [],
+      "scheme_fits": ["1-tech", "nose tackle", "run-stopping DT"],
+      "archetype_tags": ["run-stuffer", "late bloomer"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Christen Miller": {
+      "strengths": ["24 starts over three seasons", "powerful point-of-attack winner", "eyes on play", "blocker-shedding ability"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["3-tech", "multi-front"],
+      "archetype_tags": ["solid interior rotation"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Domonique Orange": {
+      "strengths": ["rare power manhandling double-teams", "50-game career participation", "wins snap-to-snap"],
+      "weaknesses": ["pass-rush limitation"],
+      "comps": [],
+      "scheme_fits": ["1-tech", "nose tackle"],
+      "archetype_tags": ["run-stopping NT"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "DeMonte Capehart": {
+      "strengths": ["length and power interior prospect", "Clemson disruptor"],
+      "weaknesses": ["inconsistency"],
+      "comps": [],
+      "scheme_fits": ["3-tech"],
+      "archetype_tags": ["rotation interior"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Chris McClellan": {
+      "strengths": ["versatile front player", "plus athletic traits"],
+      "weaknesses": ["inconsistent production"],
+      "comps": [],
+      "scheme_fits": ["3-tech", "multi-front"],
+      "archetype_tags": ["rotational interior"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Gracen Halton": {
+      "strengths": ["snap quickness with early-rush wins", "gap-attack specialty", "25 pressures from DT (11th FBS)"],
+      "weaknesses": ["never started more than 7 games at Oklahoma"],
+      "comps": [],
+      "scheme_fits": ["3-tech", "sub-package penetrator"],
+      "archetype_tags": ["interior disruptor", "sub-package DT"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Zxavian Harris": {
+      "strengths": ["immediate run-defense impact", "six blocked kicks in career"],
+      "weaknesses": ["right-foot surgery", "DUI 2023 and domestic-violence 2024 arrests under investigation"],
+      "comps": [],
+      "scheme_fits": ["NT", "1-tech"],
+      "archetype_tags": ["run-stuffing NT"],
+      "injury_notes": ["right-foot surgery (combine-flagged)"],
+      "analyst_board_mentions": 3
+    },
+    "Sonny Styles": {
+      "strengths": ["tall rangy LB transitioned from safety", "quick to key and fill", "outstanding lateral range", "firm tackler with stopping power", "exceptional in coverage carrying receivers downfield", "mirrors TEs", "explosive blitzer", "elite instincts + speed combination", "combine star"],
+      "weaknesses": ["still learning LB position", "size-position fit questions"],
+      "comps": ["Fred Warner", "Isaiah Simmons"],
+      "scheme_fits": ["MIKE in nickel", "hybrid safety/LB", "pattern-match coverage"],
+      "archetype_tags": ["coverage LB", "chess piece", "three-down defender"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Anthony Hill Jr.": {
+      "strengths": ["fluid mover with outstanding size and speed", "excellent closing speed from backside", "outstanding change-of-direction in coverage", "burst making tackles underneath", "matches athletic TEs", "superb blitzer", "3-missed-tackle rate on 70 attempts", "17 sacks and 8 FFs over three years"],
+      "weaknesses": ["not physical taking on blockers"],
+      "comps": ["Devin White (athleticism)", "Roquan Smith"],
+      "scheme_fits": ["MIKE", "WILL", "pattern-match", "cover-2"],
+      "archetype_tags": ["three-down LB", "coverage LB", "athletic playmaker"],
+      "injury_notes": [],
+      "analyst_board_mentions": 10
+    },
+    "Jacob Rodriguez": {
+      "strengths": ["outstanding instincts and playmaking", "dominant vs run sorting through muddy box", "TFL machine", "excellent lateral range", "zone-drop awareness", "unique punch-away tackling with 13 career forced fumbles (7 last season)", "intangibles"],
+      "weaknesses": ["issues in man coverage (stop/start, mirror)"],
+      "comps": ["Fred Warner (instincts)", "Bobby Wagner (lower-tier)"],
+      "scheme_fits": ["MIKE", "zone-heavy defenses"],
+      "archetype_tags": ["instinctive LB", "ball-forcing tackler"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "CJ Allen": {
+      "strengths": ["productive intelligent playmaker", "plays bigger than size", "good instincts vs run", "thuds off guards", "flies around with outstanding effort", "explosive striker", "instinctive zone dropper", "6.8% career tackle-miss rate", "leadership"],
+      "weaknesses": ["some tightness in coverage", "coverage limitations in man-to-man"],
+      "comps": ["Logan Wilson"],
+      "scheme_fits": ["MIKE", "zone defenses"],
+      "archetype_tags": ["enforcer LB", "leader", "run-thumper"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Kyle Louis": {
+      "strengths": ["diagnoses-reacts-finishes rapidly", "elite Senior Bowl coverage work", "10 sacks, 6 INTs, 24 TFLs", "ultra-versatile (box, LB, slot, deep)", "A-plus instincts", "183 tackles, 24.5 TFLs, 10 sacks, 6 INTs over two seasons"],
+      "weaknesses": ["position versatility can blur fit"],
+      "comps": ["Kyle Hamilton (position-flex)"],
+      "scheme_fits": ["hybrid S/LB", "big-nickel"],
+      "archetype_tags": ["chess piece", "positionless defender"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "Jake Golday": {
+      "strengths": ["edge-rusher size with safety athleticism", "explosive play-to-play production (105 tackles)", "immediate special teams contributor", "coverage-capable drop LB"],
+      "weaknesses": ["still developing off-ball polish"],
+      "comps": [],
+      "scheme_fits": ["WILL", "SAM", "coverage LB"],
+      "archetype_tags": ["hybrid LB/edge", "three-down LB"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Josiah Trotter": {
+      "strengths": ["high-energy tackle producer", "13 TFLs last season"],
+      "weaknesses": ["knee injury history (2023 ACL tear, arthroscopic)", "medical evaluation required"],
+      "comps": [],
+      "scheme_fits": ["MIKE", "zone defenses"],
+      "archetype_tags": ["instinctive LB", "legacy pedigree"],
+      "injury_notes": ["2023 ACL tear", "arthroscopic knee procedure"],
+      "analyst_board_mentions": 5
+    },
+    "Jimmy Rolder": {
+      "strengths": ["rapid development from backup to defensive leader", "versatile deployment", "blitzing speed + coverage prowess", "69 tackles, 6.5 TFLs, 2 sacks, 10 run stops"],
+      "weaknesses": ["only 11 career starts"],
+      "comps": [],
+      "scheme_fits": ["MIKE", "WILL"],
+      "archetype_tags": ["ascending LB", "versatile second-level"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Jaishawn Barham": {
+      "strengths": ["potential-over-production evaluation", "four sacks pass-rush glimpses"],
+      "weaknesses": ["off-ball play-time uncertain", "interior future possibility"],
+      "comps": [],
+      "scheme_fits": ["SAM", "hybrid"],
+      "archetype_tags": ["potential-based LB"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Bryce Boettcher": {
+      "strengths": ["solid tackler", "run-defense profile"],
+      "weaknesses": ["average athletic traits"],
+      "comps": [],
+      "scheme_fits": ["MIKE"],
+      "archetype_tags": ["backup/rotational LB"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Caleb Downs": {
+      "strengths": ["versatile safety with outstanding instincts", "smooth mover using eyes", "closes windows", "physical with speed to mirror TEs", "outstanding blitzer", "excels vs run", "plug-and-play starter", "elite football IQ", "understanding of offensive concepts", "quality tackler"],
+      "weaknesses": ["limited ball production (not challenged much)", "some question whether elite traits match instincts"],
+      "comps": ["Minkah Fitzpatrick", "Kyle Hamilton"],
+      "scheme_fits": ["single-high FS", "big nickel", "quarters", "positionless"],
+      "archetype_tags": ["positionless defender", "elite IQ", "plug-and-play starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Emmanuel McNeil-Warren": {
+      "strengths": ["tall long safety with fantastic production", "big hits and ball production", "very explosive", "ranges off hash making sideline plays", "drives on throws in front", "fluid change of direction", "aggressive alley-filler", "bouncy twitchy athlete", "best box safety in class with 11 career forced fumbles"],
+      "weaknesses": ["can be space-and-cover limited for deep responsibilities"],
+      "comps": ["Jamal Adams (enforcer archetype)"],
+      "scheme_fits": ["strong safety", "box safety", "big-nickel"],
+      "archetype_tags": ["enforcer safety", "box defender", "Pro Bowl potential"],
+      "injury_notes": [],
+      "analyst_board_mentions": 9
+    },
+    "Dillon Thieneman": {
+      "strengths": ["versatile chess piece (box, deep half, over slot)", "anticipates and ranges", "excellent closing speed", "takes good routes", "fluid pedal in slot", "quick to plant/drive", "reliable tackler", "trusts eyes", "95+ tackles annually across three seasons", "multiple INTs and PBUs"],
+      "weaknesses": ["occasionally fails to break down"],
+      "comps": ["Brandon Jones", "Talanoa Hufanga"],
+      "scheme_fits": ["quarters", "big-nickel", "FS in two-high"],
+      "archetype_tags": ["versatile safety", "high-production", "consistent"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "A.J. Haulcy": {
+      "strengths": ["visible tape presence with four 10-tackle games", "24-tackle true freshman performance", "88 tackles for LSU", "3 INTs led team"],
+      "weaknesses": ["physical traits questioned"],
+      "comps": [],
+      "scheme_fits": ["box safety", "in-the-box SS"],
+      "archetype_tags": ["run-supporting safety", "tackle producer"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Bud Clark": {
+      "strengths": ["six-college-season veteran", "slot-receiver and deep coverage capability", "15 INTs and 21 PBUs in four seasons", "captain history"],
+      "weaknesses": ["24 years old", "older age profile"],
+      "comps": [],
+      "scheme_fits": ["FS", "big-nickel", "deep-half"],
+      "archetype_tags": ["veteran safety", "ball-hawk"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Treydan Stukes": {
+      "strengths": ["walk-on recovery from torn right ACL", "10-game 2025 starter with 54 tackles and 4 INTs", "game awareness in interviews"],
+      "weaknesses": ["injury recovery"],
+      "comps": [],
+      "scheme_fits": ["FS", "centerfielder"],
+      "archetype_tags": ["ball-hawk safety"],
+      "injury_notes": ["torn right ACL recovery"],
+      "analyst_board_mentions": 3
+    },
+    "Jalon Kilgore": {
+      "strengths": ["'Star' position coverage versatility", "slot agility + run-defense physicality", "21 PBUs in 33 starts", "elite combine (10'10\" broad)"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["big-nickel", "slot-safety hybrid"],
+      "archetype_tags": ["sub-package chess piece", "nickel safety"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Keionte Scott": {
+      "strengths": ["excellent force player and blitzer", "energy provider", "quick feet and ball skills in underneath coverage", "speed and fluidity", "burst + want-to + block avoidance generating negative plays", "timing as blitzer", "phenomenal pro day", "leadership raves", "sure tackler"],
+      "weaknesses": ["aggressive approach leads to fly-by misses in space", "25 years old"],
+      "comps": ["Desmond King"],
+      "scheme_fits": ["nickel CB", "big-nickel safety", "blitz package"],
+      "archetype_tags": ["nickel defender", "energy/physical", "immediate contributor"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Mansoor Delane": {
+      "strengths": ["most consistent players in class", "extremely loose and fluid", "adept at press coverage", "re-routes and mirrors", "instincts and awareness in zone", "makes plays on ball when attacked", "physical reliable tackler", "matches every style of receiver", "only 8 catches allowed on 25 targets"],
+      "weaknesses": ["doesn't have high-end timed athleticism"],
+      "comps": ["Patrick Surtain II (technique archetype)"],
+      "scheme_fits": ["press-man", "cover-3", "cover-1", "any scheme"],
+      "archetype_tags": ["shutdown cornerback", "scheme-flex CB1", "plug-and-play starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Jermod McCoy": {
+      "strengths": ["outstanding 2024 season", "best in press (one-hand jam maintaining hip-mirror)", "sets traps in zone", "impressive ball elevation", "capable tackler in space", "elite athleticism and ball skills (6 INTs, 16 PBUs in 25 games)"],
+      "weaknesses": ["missed entire 2025 campaign with ACL tear", "lacks physicality and effort vs run", "Ohio State playoff loss blemish"],
+      "comps": ["Antonio Cromartie (medical trajectory)"],
+      "scheme_fits": ["press-man", "cover-1"],
+      "archetype_tags": ["press-man CB", "ball-skills corner"],
+      "injury_notes": ["full-season 2025 ACL tear — medical sensitivity and rehab watch"],
+      "analyst_board_mentions": 12
+    },
+    "Colton Hood": {
+      "strengths": ["average size but excellent play speed and toughness", "patient in press", "fluid turning and mirroring", "speed carrying verticals", "trusts eyes in off coverage", "complete player", "Senior Bowl standout", "physical matchup CB", "only 17/37 targets allowed after Tennessee transfer"],
+      "weaknesses": ["gets grabby when ball in air"],
+      "comps": ["Kenny Moore II (well-rounded)"],
+      "scheme_fits": ["cover-3", "press-match", "any scheme"],
+      "archetype_tags": ["complete corner", "immediate starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Chris Johnson": {
+      "strengths": ["excellent height/bulk/movement", "quick feet and fluid open-and-run", "mixes bail technique", "best in off coverage", "natural finding ball", "extremely tough and aggressive vs run", "dependable tackler", "character/toughness raved about", "returned 2 INTs for TDs", "13 PBUs"],
+      "weaknesses": ["doesn't use hands rerouting in press"],
+      "comps": ["A.J. Terrell (frame)"],
+      "scheme_fits": ["off-zone", "cover-3", "quarters"],
+      "archetype_tags": ["off-corner", "run-supporter", "zone CB1"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "Avieon Terrell": {
+      "strengths": ["tremendous quickness and instincts", "feisty competitive play", "quick feet and smooth change of direction", "matches up in slot", "excellent eyes and closing speed underneath", "aggressive vs run", "stellar blitzer", "14 PBUs and 6 FFs over two seasons"],
+      "weaknesses": ["undersized (180 lbs)", "less effective outside where size shows on go balls", "hamstring-limited 4.58 forty"],
+      "comps": ["A.J. Terrell (brother, comp style)"],
+      "scheme_fits": ["nickel CB", "slot", "big-nickel"],
+      "archetype_tags": ["nickel corner", "blitz-capable slot"],
+      "injury_notes": ["hamstring affected pre-draft testing"],
+      "analyst_board_mentions": 8
+    },
+    "Brandon Cisse": {
+      "strengths": ["fast twitchy cover corner", "usually played with back to sideline", "elite speed closing space", "loose fluid athlete"],
+      "weaknesses": ["not physical in press", "carries hands low", "needs more run aggression", "gave up plays — focus issue"],
+      "comps": [],
+      "scheme_fits": ["cover-3", "bail technique"],
+      "archetype_tags": ["speed corner", "developmental"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "D'Angelo Ponds": {
+      "strengths": ["compact slot (5'9\", 182)", "elite explosion (43.5\" vertical)", "7 INTs, 27 PBUs over three seasons", "led national champions with 10 PBUs", "big-moment DNA (Rose Bowl/Peach Bowl DMVP)", "outside-slot versatility"],
+      "weaknesses": ["size limitations"],
+      "comps": ["Brandon Stephens (undersized)", "Kenny Moore II"],
+      "scheme_fits": ["nickel", "slot-heavy"],
+      "archetype_tags": ["ball-hawking nickel", "big-moment player"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Chandler Rivers": {
+      "strengths": ["four-year corner (5'10\", 185)", "plant-and-drive ball skills at 4.4 speed", "7 INTs, 23 PBUs", "effective kick-block contributor"],
+      "weaknesses": ["size limits outside matchups"],
+      "comps": ["Chidobe Awuzie (route-focused)"],
+      "scheme_fits": ["cover-3", "off-zone"],
+      "archetype_tags": ["technician corner"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Davison Igbinosun": {
+      "strengths": ["availability king (53 career starts)", "run-defense involvement", "fleet-receiver matchups"],
+      "weaknesses": ["16 penalties in 2024"],
+      "comps": [],
+      "scheme_fits": ["press-match", "cover-1"],
+      "archetype_tags": ["experienced CB", "penalty-prone"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Tacario Davis": {
+      "strengths": ["260+ press-coverage snaps over three seasons", "cornerback pedigree"],
+      "weaknesses": ["seven-game 2025 start due to rib and hamstring injuries", "limited 2025 sample (2 INTs, 3 PBUs, 19 tackles)"],
+      "comps": [],
+      "scheme_fits": ["press-man"],
+      "archetype_tags": ["length corner", "press-man CB"],
+      "injury_notes": ["rib and hamstring injuries limited 2025 to 7 games"],
+      "analyst_board_mentions": 4
+    },
+    "Malik Muhammad": {
+      "strengths": ["27 starts past two years", "smooth pattern-matching coverage", "elite COD"],
+      "weaknesses": ["strength against bigger receivers needed for zone-team fit"],
+      "comps": [],
+      "scheme_fits": ["pattern-match", "zone"],
+      "archetype_tags": ["pattern-match CB"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Keith Abney II": {
+      "strengths": ["down-to-down competitiveness", "outside-slot versatility", "21 PBUs and 5 INTs over two seasons"],
+      "weaknesses": ["penalty-tendency issue"],
+      "comps": [],
+      "scheme_fits": ["nickel", "outside-slot hybrid"],
+      "archetype_tags": ["versatile corner", "nickel-capable"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Daylen Everette": {
+      "strengths": ["SEC pedigree", "press experience"],
+      "weaknesses": ["inconsistent ball production"],
+      "comps": [],
+      "scheme_fits": ["press-man"],
+      "archetype_tags": ["press CB"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Carnell Tate": {
+      "strengths": ["tall wideout with better play-speed than timed speed", "outstanding production", "excellent suddenness defeating press", "covers ground with long stride", "strong reliable hands in traffic", "tracks ball beautifully over shoulder", "loose athlete on back-shoulder", "immediate vertical impact", "rare 84.8% catch rate averaging 18.2 YPR", "polished route runner"],
+      "weaknesses": ["not exceptionally dynamic after catch", "4.53 forty"],
+      "comps": ["Chris Olave", "Michael Thomas (frame)"],
+      "scheme_fits": ["X receiver", "vertical passing", "West Coast"],
+      "archetype_tags": ["polished WR1", "vertical X", "plug-and-play starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Makai Lemon": {
+      "strengths": ["RB body + LB temperament", "best in slot", "wins with quickness off line", "tempos routes", "wins in traffic", "doesn't waste steps", "explodes in/out of breaks", "plays bigger than size on 50/50 balls", "ultra-competitive after catch", "one drop in 1,000-yard season", "4.53 forty"],
+      "weaknesses": ["limited as pure X receiver"],
+      "comps": ["Amon-Ra St. Brown", "Cooper Kupp"],
+      "scheme_fits": ["slot-heavy", "West Coast", "motion-heavy"],
+      "archetype_tags": ["slot WR1", "Swiss-Army WR", "high-target-share"],
+      "injury_notes": [],
+      "analyst_board_mentions": 12
+    },
+    "Jordyn Tyson": {
+      "strengths": ["explosive receiver with lots of wow plays", "fluid with variety of releases", "suddenness off line and out of breaks", "weaves getting corners off balance", "incredible deep-ball tracking", "hovering ability in air", "wiggle + speed after catch", "628 yards, 8 TDs", "modern No. 1 receiver profile"],
+      "weaknesses": ["durability concerns throughout college career", "torn ACL/MCL/PCL history limits evaluation"],
+      "comps": ["Tee Higgins (traits)", "Jaylen Waddle (bursty archetype)"],
+      "scheme_fits": ["vertical passing", "spread", "play-action"],
+      "archetype_tags": ["vertical WR1", "big-play receiver"],
+      "injury_notes": ["torn ACL/MCL/PCL history — major medical flag"],
+      "analyst_board_mentions": 11
+    },
+    "Omar Cooper Jr.": {
+      "strengths": ["strong reliable explosive receiver", "uses lower-body strength through press", "loose fluid route runner", "plays without fear in middle", "combat catch ability", "plucks ball grounded on crossers", "can elevate above rim", "break tackles + pull away speed", "makeup/competitiveness raves", "FBS leader with 17 broken tackles on 46 catches", "RB-like build"],
+      "weaknesses": [],
+      "comps": ["Terry McLaurin (frame)", "Michael Pittman Jr. (YAC)"],
+      "scheme_fits": ["X receiver", "vertical", "play-action"],
+      "archetype_tags": ["YAC receiver", "physical X", "immediate starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 10
+    },
+    "Denzel Boston": {
+      "strengths": ["big-framed wideout", "exceptional ball skills and production", "lines up outside and slot", "upper-body strength through press", "long strider walling off defenders", "ball winner with huge catch radius", "red-zone rim playing", "outstanding catches", "20 TDs in two seasons"],
+      "weaknesses": ["relies on physicality rather than finesse after catch", "limited on-field evaluation (ACL recovery, declined drills)"],
+      "comps": ["Courtland Sutton", "Mike Williams (size)"],
+      "scheme_fits": ["X receiver", "red-zone target", "contested-catch offense"],
+      "archetype_tags": ["big-bodied X", "red-zone winner"],
+      "injury_notes": ["ACL recovery led to declined combine drills"],
+      "analyst_board_mentions": 8
+    },
+    "Chris Brazzell II": {
+      "strengths": ["unique deep threat (6'5\", 198)", "real vertical speed (4.37)", "catch-point Moss ability", "wide catch radius", "62 receptions, 1,017 yards, 9 TDs at 16.4 YPR", "nine TDs at 14.34 air yards/target", "minimal drops (2 in 2025)"],
+      "weaknesses": ["potentially one-dimensional deep value"],
+      "comps": ["DK Metcalf (frame+speed)"],
+      "scheme_fits": ["vertical passing", "downfield offense"],
+      "archetype_tags": ["deep-threat X", "contested-catch winner"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "KC Concepcion": {
+      "strengths": ["elite burst", "speed jumps off screen", "quick jab step exploding downfield", "creates massive separation", "dynamic after catch", "immediate catch-to-run transition", "punt-return contributor", "nimble route-runner"],
+      "weaknesses": ["inconsistent hands (concentration drops)", "9.3% career drop rate", "seven drops last season"],
+      "comps": ["Tank Dell", "Rondale Moore"],
+      "scheme_fits": ["slot", "quick-game", "RPO"],
+      "archetype_tags": ["slot burner", "return specialist"],
+      "injury_notes": ["March knee scope — teams unconcerned"],
+      "analyst_board_mentions": 7
+    },
+    "Antonio Williams": {
+      "strengths": ["outstanding short-area quickness", "ball skills and YAC", "quick choppy steps setting up defenders", "twitchy", "excels on pivot routes", "feels soft zones", "plays bigger than size when ball in air", "ideal slot WR with high-volume upside", "2024 season 75 catches 11 TDs"],
+      "weaknesses": ["slightly undersized", "2025 dip amid Clemson struggles"],
+      "comps": ["Tyler Lockett", "Rashee Rice (slot)"],
+      "scheme_fits": ["slot", "West Coast", "quick-game"],
+      "archetype_tags": ["slot WR", "high-volume target"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Germie Bernard": {
+      "strengths": ["strong sturdy wideout", "variety of alignments", "quickness weapon off line and route top", "separates underneath", "strong hands attacking ball", "tracks deep ball well", "quick/elusive/strong YAC", "toughness/blocking competitiveness", "40 FB-down receptions", "complete route tree"],
+      "weaknesses": ["speed good not elite", "lacks home-run gear"],
+      "comps": ["Josh Reynolds"],
+      "scheme_fits": ["slot", "Z receiver", "pro-style"],
+      "archetype_tags": ["all-around WR2/3", "quality starting slot"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Eric Singleton Jr.": {
+      "strengths": ["explosive athleticism", "strong all-around traits"],
+      "weaknesses": ["limited deep-threat opportunities (5.6-yard aDOT) after Georgia Tech transfer"],
+      "comps": [],
+      "scheme_fits": ["slot", "quick-game"],
+      "archetype_tags": ["slot athlete", "YAC WR"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Ja'Kobi Lane": {
+      "strengths": ["basketball frame", "excels in red zone (17 of 76 career TDs)"],
+      "weaknesses": ["red-zone-specialized profile"],
+      "comps": ["Allen Lazard"],
+      "scheme_fits": ["X receiver", "red-zone target"],
+      "archetype_tags": ["red-zone winner", "jump-ball specialist"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Zachariah Branch": {
+      "strengths": ["elite separator (4.35)", "exceptional after-catch ability", "sure hands", "return-game versatility", "636 of 811 receiving yards after catch", "Zay Flowers archetype"],
+      "weaknesses": ["undersized (5'9\", 177)", "rough route edges requiring smoothing"],
+      "comps": ["Zay Flowers", "Jaylen Waddle"],
+      "scheme_fits": ["slot", "jet motion", "RPO"],
+      "archetype_tags": ["slot burner", "return specialist", "YAC weapon"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Skyler Bell": {
+      "strengths": ["top-three FBS rankings in receptions/yards/TDs/YPG/YAC", "elite acceleration"],
+      "weaknesses": ["drop-improvement trajectory needed"],
+      "comps": [],
+      "scheme_fits": ["slot", "quick-game"],
+      "archetype_tags": ["high-volume slot", "YAC WR"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Malachi Fields": {
+      "strengths": ["contested-catch winner in tight spaces", "boundary comfort", "33 of 64 targets contested"],
+      "weaknesses": ["limited separation"],
+      "comps": [],
+      "scheme_fits": ["X receiver", "contested-catch offense"],
+      "archetype_tags": ["contested-catch X"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "De'Zhaun Stribling": {
+      "strengths": ["back-to-back 800-yard seasons", "field-deep adept", "NFL-ready blocking"],
+      "weaknesses": ["2023 wrist injury history"],
+      "comps": [],
+      "scheme_fits": ["Z receiver", "outside"],
+      "archetype_tags": ["possession WR"],
+      "injury_notes": ["2023 wrist injury"],
+      "analyst_board_mentions": 4
+    },
+    "Bryce Lance": {
+      "strengths": ["first Bison with back-to-back 1,000-yard seasons", "top-tier speed", "25 TDs total", "17 TDs in 2024"],
+      "weaknesses": ["needs precise route development"],
+      "comps": [],
+      "scheme_fits": ["vertical", "Z receiver"],
+      "archetype_tags": ["small-school speedster"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Elijah Sarratt": {
+      "strengths": ["13 red-zone targets show Mendoza trust", "second-most Big Ten end-zone targets"],
+      "weaknesses": ["separation questions", "relies on contested catches"],
+      "comps": [],
+      "scheme_fits": ["red-zone role"],
+      "archetype_tags": ["red-zone target", "body-catcher"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Deion Burks": {
+      "strengths": ["advanced footwork", "route precision", "57 receptions despite inconsistent offense"],
+      "weaknesses": ["2024 injury recovery", "needs aggressive catch-point development"],
+      "comps": [],
+      "scheme_fits": ["slot", "motion-heavy"],
+      "archetype_tags": ["slot technician"],
+      "injury_notes": ["2024 injury recovery"],
+      "analyst_board_mentions": 3
+    },
+    "Ted Hurst": {
+      "strengths": ["speed and YAC potential", "size", "tied FBS contested-catch lead (32% of 71 receptions)"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["outside"],
+      "archetype_tags": ["contested-catch WR"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Chris Bell": {
+      "strengths": ["size/ball skills"],
+      "weaknesses": ["November ACL tear preventing on-field work"],
+      "comps": [],
+      "scheme_fits": [],
+      "archetype_tags": ["developmental WR"],
+      "injury_notes": ["November ACL tear; expected clearance for rookie year"],
+      "analyst_board_mentions": 3
+    },
+    "Kenyon Sadiq": {
+      "strengths": ["short muscled-up TE with outstanding speed/athleticism", "primarily attached or slot", "explosive in release with vertical separation", "dynamic on quick screens", "competitive/tenacious blocker", "well-rounded route tree", "size advantage over coverage defenders"],
+      "weaknesses": ["too many drops in 2025 (seven in two seasons)", "pass-catching polish"],
+      "comps": ["George Kittle (athletic profile)", "Evan Engram"],
+      "scheme_fits": ["move TE", "Y in 12 personnel", "play-action offense"],
+      "archetype_tags": ["athletic TE", "movement TE"],
+      "injury_notes": [],
+      "analyst_board_mentions": 9
+    },
+    "Max Klare": {
+      "strengths": ["best route-running in class", "natural separation ability", "passing-game impact specialist", "slot athleticism", "high-end YAC potential"],
+      "weaknesses": ["limited 210-yard production", "seven drops in two seasons"],
+      "comps": ["Brock Bowers (lower-tier)", "Dallas Goedert"],
+      "scheme_fits": ["flex TE", "pass-heavy offense"],
+      "archetype_tags": ["route-running TE", "slot TE"],
+      "injury_notes": [],
+      "analyst_board_mentions": 6
+    },
+    "Michael Trigg": {
+      "strengths": ["most productive TE nationally", "40 catches for 607 yards", "absurd highlights", "seven-foot wingspan catch radius"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["move TE", "red-zone target"],
+      "archetype_tags": ["catch-radius TE", "pass-catcher"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Eli Stowers": {
+      "strengths": ["former QB-WR now TE", "immediate receiving threat", "length + athleticism (45.5\" vertical)", "386 YAC second among FBS TEs"],
+      "weaknesses": ["still learning blocking craft after position switch"],
+      "comps": ["Jonnu Smith (athleticism)"],
+      "scheme_fits": ["move TE", "flex"],
+      "archetype_tags": ["athletic move TE"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Justin Joly": {
+      "strengths": ["back-to-back 43+ reception seasons", "move-TE projection", "physical catch-point unbothered by contact", "immediate red-zone target"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["move TE", "Y"],
+      "archetype_tags": ["move TE", "red-zone target"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Eli Raridon": {
+      "strengths": ["versatile move TE (6'6\", 245)", "tough catches downfield", "H-back alignment potential", "frame-filling opportunity"],
+      "weaknesses": ["role-player trajectory", "needs frame development"],
+      "comps": [],
+      "scheme_fits": ["H-back", "move TE"],
+      "archetype_tags": ["H-back/TE hybrid"],
+      "injury_notes": [],
+      "analyst_board_mentions": 3
+    },
+    "Francis Mauigoa": {
+      "strengths": ["big powerful RT", "massive lower body", "firm base in pass pro", "bends knees to anchor", "fluid mover with patient punch", "strong hands to steer and control", "uproots/displaces in run game", "1.1% pressure rate — elite pass-pro efficiency", "intelligent"],
+      "weaknesses": ["average foot quickness"],
+      "comps": ["Penei Sewell (power archetype)", "Lane Johnson (lower-tier)"],
+      "scheme_fits": ["gap", "power run scheme", "pro-style"],
+      "archetype_tags": ["plug-and-play RT", "dominant run blocker", "long-term starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 13
+    },
+    "Spencer Fano": {
+      "strengths": ["five-position versatility", "took center snaps at Combine", "openness to position change", "excellent strength + quickness", "quick stance covering speed rushers", "stalls bull rushers with core strength", "explosive people mover", "zone-scheme fit"],
+      "weaknesses": ["short arms for tackle", "occasionally oversets losing to inside counters"],
+      "comps": ["Zack Martin (guard projection)"],
+      "scheme_fits": ["zone scheme", "wide-zone", "interior OL"],
+      "archetype_tags": ["versatile OL", "plug-and-play guard", "zone blocker"],
+      "injury_notes": [],
+      "analyst_board_mentions": 12
+    },
+    "Olaivavega Ioane": {
+      "strengths": ["dominant LG", "thick proportioned build", "outstanding strength/power", "bends and redirects in pass game", "easily handles power", "aware on stunts", "latches and finishes in run game", "tremendous upper torque", "takes proper second-level angles", "anchors with temperament/toughness", "only one pressure all season", "32 starts"],
+      "weaknesses": ["occasionally takes loss against pure speed"],
+      "comps": ["Quenton Nelson (lower-tier)"],
+      "scheme_fits": ["gap", "power", "zone"],
+      "archetype_tags": ["plug-and-play guard", "mauler interior", "top true guard in class"],
+      "injury_notes": [],
+      "analyst_board_mentions": 12
+    },
+    "Kadyn Proctor": {
+      "strengths": ["enormous tackle prospect", "excellent feet/agility for size", "explosive first step", "sinks weight vs bull rushers", "uncoils hips on contact", "excels on down blocks", "skill-player feel on quick screens", "rare size-movement combo"],
+      "weaknesses": ["occasionally reacts late off snap", "weight management (360+ in-season)", "pass-protection limits likely kick inside", "technique refinement needed"],
+      "comps": ["Trent Williams (size)", "Andrew Thomas (frame)"],
+      "scheme_fits": ["gap", "power run scheme", "guard-possibility in NFL"],
+      "archetype_tags": ["enormous mauler", "kick-inside candidate", "elite run blocker"],
+      "injury_notes": ["weight management concerns"],
+      "analyst_board_mentions": 10
+    },
+    "Monroe Freeling": {
+      "strengths": ["ideal size/bend/agility", "quick stance bending smoothly vs counter rushers", "steers and controls defenders", "rolls hips + latches in run game", "excellent on combo blocks", "played best late battling injuries", "rare physical traits", "rapid pass-pro improvement"],
+      "weaknesses": ["gives up chest getting tugged/pulled", "needs more core strength", "only 13 career starts"],
+      "comps": ["Andre Dillard (athletic tackle)"],
+      "scheme_fits": ["zone", "outside-zone", "wide-zone"],
+      "archetype_tags": ["athletic LT", "developmental starter"],
+      "injury_notes": ["late-season injury battled through"],
+      "analyst_board_mentions": 8
+    },
+    "Caleb Lomu": {
+      "strengths": ["ideal frame and room for strength additions", "little upright but consistently stays square", "nice reworking hands", "excellent feel/awareness vs stunts", "fits cleanly staying attached in run game", "proper second-level angles", "refined pass-pro technique", "1.7% pressure rate"],
+      "weaknesses": ["average foot quickness", "lacks knock-back run-game power", "needs core strength"],
+      "comps": ["Tristan Wirfs (lower-tier technique)"],
+      "scheme_fits": ["zone", "outside-zone", "pass-heavy offense"],
+      "archetype_tags": ["technique LT", "immediate starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Blake Miller": {
+      "strengths": ["high school wrestler background", "started 54 games at Clemson (iron-man streak)", "ideal size/length/strength for RT", "quickness covering speed rushers", "length + strong hands to latch", "sinks weight and anchors", "aware on twists/stunts", "generates movement on down blocks", "toughness + awareness offsetting technique concerns"],
+      "weaknesses": ["upright pad issues vs pro rushers", "struggles in space"],
+      "comps": ["Mike McGlinchey"],
+      "scheme_fits": ["gap", "power run scheme"],
+      "archetype_tags": ["plug-and-play RT", "iron-man durable", "technician"],
+      "injury_notes": [],
+      "analyst_board_mentions": 8
+    },
+    "Max Iheanachor": {
+      "strengths": ["exceptional trajectory despite late football start (2022)", "6'6, 321 with 33.875\" arms + 4.91 forty", "31 starts vs quality competition", "jumps out of stance staying square", "strength to absorb and anchor", "very athletic to redirect", "knock-back run-game power", "could end up best OL in class"],
+      "weaknesses": ["often late to punch exposing chest", "raw"],
+      "comps": ["Amarius Mims (late-bloomer)"],
+      "scheme_fits": ["zone", "long-term developmental"],
+      "archetype_tags": ["high-upside RT", "athletic-trait tackle"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "Trevor Goosby": {
+      "strengths": ["more prototypical build and athletic profile than recent Longhorn OL draftees", "solid movement and space ability"],
+      "weaknesses": ["first-year-starter rawness"],
+      "comps": [],
+      "scheme_fits": ["zone"],
+      "archetype_tags": ["developmental OT"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Caleb Tiernan": {
+      "strengths": ["43 of 52 career starts at both tackle spots", "confident locked-on strength"],
+      "weaknesses": ["potential guard projection if taller-rusher management doesn't improve"],
+      "comps": [],
+      "scheme_fits": ["gap", "power"],
+      "archetype_tags": ["OT/OG swing", "developmental starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Gennings Dunker": {
+      "strengths": ["37 of 38 starts at RT", "no sack-resulting pressures", "guard transition potential"],
+      "weaknesses": ["strength-addition need"],
+      "comps": [],
+      "scheme_fits": ["gap", "power"],
+      "archetype_tags": ["RT-to-G swing"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Trey Zuhn III": {
+      "strengths": ["48 LT starts with 2 center snaps", "mature hand comfort", "pass-protection footwork"],
+      "weaknesses": ["many see guard-center projection"],
+      "comps": [],
+      "scheme_fits": ["versatile OL"],
+      "archetype_tags": ["versatile OL", "interior-kick candidate"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Emmanuel Pregnon": {
+      "strengths": ["physically imposing IOL", "dramatic improvement (18 pressures allowed last year to 2 this season)", "walk-in contributor", "heavy hands", "51 career starts (39 LG, 12 RG)", "Iowa tape (261 rushing yards, 7.3 YPC behind him)", "7 sacks across 3,087 snaps"],
+      "weaknesses": [],
+      "comps": ["Landon Dickerson (frame)"],
+      "scheme_fits": ["gap", "power", "zone"],
+      "archetype_tags": ["plug-and-play guard", "veteran starter"],
+      "injury_notes": [],
+      "analyst_board_mentions": 7
+    },
+    "Chase Bisontis": {
+      "strengths": ["multi-position starter (LG, RG, RT)", "power/technique/effort trio", "effective vs speed and power", "poise maintenance"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["gap", "power"],
+      "archetype_tags": ["versatile IOL"],
+      "injury_notes": [],
+      "analyst_board_mentions": 5
+    },
+    "Keylan Rutledge": {
+      "strengths": ["excellent size/length", "great awareness fitting up and straining to finish", "eliminates LBs climbing", "firm pass-pro anchor", "nastiness to play demeanor", "toughness + intensity endearing to OL coaches", "plug-and-play starter at guard"],
+      "weaknesses": ["car-crash recovery to 13 starts in 2024-25", "pass-set improvement potential"],
+      "comps": ["Aaron Banks"],
+      "scheme_fits": ["gap", "power"],
+      "archetype_tags": ["plug-and-play guard", "finisher"],
+      "injury_notes": ["recovery from car accident"],
+      "analyst_board_mentions": 5
+    },
+    "Connor Lew": {
+      "strengths": ["best-center prospect despite October ACL tear", "strength and flexibility", "pro awareness demonstrated"],
+      "weaknesses": ["limited 25 starts in three seasons", "October ACL tear"],
+      "comps": ["Creed Humphrey (lower-tier)"],
+      "scheme_fits": ["zone", "gap"],
+      "archetype_tags": ["center prospect"],
+      "injury_notes": ["October 2025 ACL tear"],
+      "analyst_board_mentions": 5
+    },
+    "Jake Slaughter": {
+      "strengths": ["battle-tested SEC veteran (33 starts, 2,000+ snaps)", "minimal pressure allowed (6 pressures, 3 sacks)", "good lateral agility and footwork", "awareness on stunts"],
+      "weaknesses": [],
+      "comps": [],
+      "scheme_fits": ["zone", "gap"],
+      "archetype_tags": ["plug-and-play center"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Logan Jones": {
+      "strengths": ["DL-to-OL conversion", "52 center-starting games", "high-effort technical soundness"],
+      "weaknesses": ["pass-protection NFL adjustment needed"],
+      "comps": [],
+      "scheme_fits": ["zone"],
+      "archetype_tags": ["veteran center"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    },
+    "Kade Pieper": {
+      "strengths": ["most athletic college football lineman", "Iowa future likely at center"],
+      "weaknesses": ["first-year-starter status", "still developing"],
+      "comps": [],
+      "scheme_fits": ["zone"],
+      "archetype_tags": ["athletic IOL", "developmental"],
+      "injury_notes": [],
+      "analyst_board_mentions": 4
+    }
+  }
+}

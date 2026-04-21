@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "generated": "2026-04-20",
+    "purpose": "Analyst-stated CAUSAL reasons for R1 ranks — feeds matcher premium tags, not picks",
+    "sources_primary": ["Kiper ESPN Big Board", "Jeremiah NFL.com Top-50 v4.0", "Brugler The Beast / Top-100", "PFF 2026 Draft Guide", "CBS Sports", "Bleacher Report Scouting Dept", "Walter Football", "The Ringer"]
+  },
+  "Arvell Reese": {
+    "why_high": [
+      "Chess-piece versatility — Ohio State aligned him off-ball LB, on-edge rusher, and QB spy in same game",
+      "Elite testing: 4.46 forty at 244 lbs tied fastest LB at the combine",
+      "Rare length/size combo — 6-5, 244 with closing burst of an edge rusher",
+      "Young prospect (DOB 8/30/2005), turns 21 August; Micah Parsons / Owusu-Koramoah comp grades",
+      "Two-steps-ahead mental processing & recognition stack up with best LBs in recent years",
+      "Inexperienced but high football IQ — developmental ceiling uncommonly high"
+    ],
+    "causal_traits": ["chess_piece_versatility", "elite_athleticism", "rare_size_speed_combo", "elite_youth", "edge_convert_upside", "high_football_iq", "positional_scarcity_hybrid", "parsons_comp_ceiling"],
+    "primary_analyst_quote": "Jeremiah: ranked No. 5 overall Top-50 v4.0 — 'chess piece'; Brugler Top-100 No. 1 — 'most physically impressive LB in class, closing burst of an edge rusher'",
+    "floor_concern": "Only 1 sack in 2025 stat line, inexperienced as full-time starter",
+    "sources": [
+      "https://www.espn.com/nfl/draft2026/story/_/id/46573669/",
+      "https://bleacherreport.com/articles/25261843-nfl-draft-2026-scouting-report-ohio-state-lb-arvell-reese",
+      "https://www.elevenwarriors.com/ohio-state-football/2026/02/161703/",
+      "https://sports.yahoo.com/articles/ohio-state-lb-arvell-reese-110711247.html"
+    ]
+  },
+  "Carnell Tate": {
+    "why_high": [
+      "Route-running technician — runs every branch of the route tree, manipulates DBs at stem",
+      "Soft reliable hands — plucks away from frame, best hands in WR class",
+      "Large catch radius + body control — 'The Great Adjuster', wins 50/50 balls",
+      "Proven X-WR profile — sideline wins, contested catches, true boundary receiver at 6-2 3/4",
+      "George Pickens comp with better hands — OROY upside per CBS",
+      "Smart coverage-reader — understands route concepts and defensive structures"
+    ],
+    "causal_traits": ["route_running_technician", "elite_hands", "large_catch_radius", "contested_catch_winner", "x_receiver_profile", "high_football_iq", "body_control_adjuster", "pickens_comp"],
+    "primary_analyst_quote": "CBS Sports: 'George Pickens-type skill set but with better hands'; Brugler/Jeremiah grade as top-10 WR1",
+    "floor_concern": "Average separation speed — not a true burner, 875 yds on 51 catches suggests volume not dominance",
+    "sources": [
+      "https://www.cbssports.com/college-football/news/carnell-tate-scouting-report-nfl-draft-2026/",
+      "https://bleacherreport.com/articles/25252853-nfl-draft-2026-scouting-report-ohio-state-wr-carnell-tate",
+      "https://www.sportsinfosolutions.com/2026/03/10/nfl-draft-carnell-tate-scouting-report/"
+    ]
+  },
+  "Rueben Bain": {
+    "why_high": [
+      "Best raw strength in the EDGE class — puts lone blockers on skates, holds up vs doubles",
+      "Twitchy explosiveness despite compact 6-2, 263 stocky build",
+      "Integrated hands/footwork — masterful stutter and euro-step pacing manipulation",
+      "Three-year production: 24 TFL / 14 sacks over past 2+ seasons, ACC DROY freshman",
+      "PFF rates him EDGE1 in class — power-rusher archetype that translates immediately",
+      "Run defense floor — elite POA anchor rare for edge"
+    ],
+    "causal_traits": ["elite_play_strength", "power_rusher_archetype", "hand_technique_advanced", "elite_explosiveness", "three_year_production", "run_defense_floor", "pff_top_grade", "freshman_production"],
+    "primary_analyst_quote": "PFF: 'the No. 1 EDGE defender in the 2026 NFL Draft'; CBS: 'plays like a potential No. 1 pick' despite non-prototype build",
+    "floor_concern": "Arm length bottom 1% for EDGE — will fall below most teams' length thresholds; tackle radius limited",
+    "sources": [
+      "https://www.pff.com/news/draft-scouting-rueben-bain-jr-the-no-1-edge-defender-in-the-2026-nfl-draft",
+      "https://www.cbssports.com/nfl/draft/news/rueben-bain-jr-nfl-draft-profile-edge-2026/",
+      "https://bleacherreport.com/articles/25249523-nfl-draft-2026-scouting-report-miami-edge-rueben-bain-jr"
+    ]
+  },
+  "Olaivavega Ioane": {
+    "why_high": [
+      "Top pure guard in class — clear G1, likely first IOL off the board",
+      "Elite POA power — halts bull rushes, creates displacement, compresses LOS",
+      "Pass pro dominance: 0 sacks, 0 QB hits, 4 pressures allowed in 2025",
+      "Firm anchor with patience & balance — tone-setter run blocker in gap/zone",
+      "Two-year starter at Penn State LG, All-Big Ten 2nd team",
+      "Plug-and-play Week 1 starter floor — lowest-bust-risk IOL"
+    ],
+    "causal_traits": ["top_position_grade", "elite_anchor", "pass_pro_dominance", "plug_and_play_starter", "elite_play_strength", "tone_setter_run_blocker", "pressure_rate_elite", "positional_scarcity_guard"],
+    "primary_analyst_quote": "Brugler/PFF: 'clear top interior offensive line prospect in the 2026 class'; B/R: 'strong candidate to be first guard selected'",
+    "floor_concern": "Below-average arms (32 3/4) and movement skills — struggles in space vs quicker 3-techs",
+    "sources": [
+      "https://bleacherreport.com/articles/25258484-nfl-draft-2026-scouting-report-penn-state-iol-olaivavega-ioane",
+      "https://www.readoptional.com/p/2026-nfl-draft-scouting-report-olaivavega",
+      "https://www.bigblueview.com/nfl-draft-scouting-report-profiles/155860/"
+    ]
+  },
+  "Kenyon Sadiq": {
+    "why_high": [
+      "Record-breaking athlete — 4.39 forty at 241 lbs shattered all-time TE combine record",
+      "Rare dual-skill TE — elite in-line blocker AND receiving threat, not a move-TE only",
+      "Explosive YAC + 3-level receiving threat with first-round WR speed",
+      "Tenacious physical blocker — dominates off-ball LBs, can match up with edge defenders",
+      "Consensus TE1 — Big Ten Kwalick-Clark TE of the Year, 560 yds / 8 TDs as junior",
+      "Positional scarcity — TE1 in weak TE class, no other Day-1 TE threatens his grade"
+    ],
+    "causal_traits": ["record_breaking_athleticism", "dual_skill_tight_end", "elite_yac", "tenacious_blocker", "positional_scarcity_te", "explosive_speed_size", "three_level_receiver", "consensus_position_1"],
+    "primary_analyst_quote": "PFF / Brugler: 'consensus TE1'; Ravens scout comp to Mark Andrews; 'rare explosiveness at the tight end position'",
+    "floor_concern": "10.5% drop rate, inconsistent catch mechanics, raw route-running nuance",
+    "sources": [
+      "https://www.pff.com/news/draft-pff-2026-nfl-draft-guide-kenyon-sadiq-oregon",
+      "https://bleacherreport.com/articles/25248486-nfl-draft-2026-scouting-report-oregon-te-kenyon-sadiq",
+      "https://www.baltimoreravens.com/news/kenyon-sadiq-draft-profile-tight-ends-oregon-mark-andrews"
+    ]
+  },
+  "Emmanuel McNeil-Warren": {
+    "why_high": [
+      "Rare centerfield range — 'arguably the best range in the class' patrolling middle third",
+      "Prototype size at safety — 6-3, 201 with 4.52 speed, length uncommon for position",
+      "Elite production: 206 tackles, 13 PBUs, 5 INTs, 8 FFs across 35 starts",
+      "Physical tone-setter — downhill trigger + hitting mentality",
+      "Three-year starter ball production — FF/INT combo scouts love",
+      "Small-school riser — Toledo tape evaluates like Power-5 first-rounder"
+    ],
+    "causal_traits": ["elite_range", "prototype_size_safety", "three_year_starter", "ball_production", "physical_tone_setter", "small_school_riser", "centerfield_archetype", "length_plus_speed"],
+    "primary_analyst_quote": "Ringer/Bleacher Report: 'true centerfielder with arguably the best range in the class'; Yahoo: top-25 first-rounder",
+    "floor_concern": "Stiff hips, limited man-coverage utility vs WRs/TEs, long speed questions",
+    "sources": [
+      "https://bleacherreport.com/articles/25253200-nfl-draft-2026-scouting-report-toledo-s-emmanuel-mcneil-warren",
+      "https://theringer.com/todd-mcshay/players/emmanuel-mcneil-warren",
+      "https://247sports.com/nfl/chicago-bears/article/2026-nfl-draft-scouting-report-s-emmanuel-mcneil-warren-toledo-277100152/"
+    ]
+  },
+  "KC Concepcion": {
+    "why_high": [
+      "Elite YAC / run-after-catch creator — among college football's most explosive with ball in hands",
+      "Expansive route tree — proven three-level receiver, not gadget-limited anymore",
+      "Breakout Texas A&M season reset narrative from 'gimmick' to 'first-rounder'",
+      "Development arc: 3-star recruit to All-American — ascending trajectory",
+      "Scheme-versatile — wins from slot, motion, jet sweeps, outside",
+      "Dynamic do-it-all weapon fit in modern NFL spread offenses"
+    ],
+    "causal_traits": ["elite_yac", "scheme_versatile_weapon", "ascending_trajectory", "expansive_route_tree", "three_level_separator", "breakout_senior_season", "gadget_plus_true_wr", "modern_offense_fit"],
+    "primary_analyst_quote": "Bleacher Report: 'fits the mold as a dynamic do-it-all, run-after-catch receiver in today's NFL'; Rams prospect preview: late-R1 grade",
+    "floor_concern": "Focus drops, some teams pigeonhole as slot-only, sub-6-foot height",
+    "sources": [
+      "https://bleacherreport.com/articles/25293025-nfl-draft-2026-scouting-report-texas-am-wr-kc-concepcion",
+      "https://www.therams.com/news/prospect-preview-kc-concepcion",
+      "https://www.fantasylife.com/articles/nfl-draft/kc-concepcion-nfl-draft-scouting-report-from-three-star-to-all-a"
+    ]
+  },
+  "Peter Woods": {
+    "why_high": [
+      "Top DT prospect in class — consensus DT1 in a down interior-DL year",
+      "Elite get-off / first-step explosion — wins leverage before blockers react",
+      "Powerful POA anchor — rarely moved in run game, locks down interior gaps",
+      "Young prospect — will be 21 at draft, 3-year starter as 4-star recruit",
+      "Synced hands/feet — sheds blocks quickly, high technical ceiling",
+      "High upside with frame still filling out — developmental ceiling as pass rusher"
+    ],
+    "causal_traits": ["top_position_grade", "elite_first_step", "run_defense_floor", "elite_youth", "technical_upside", "three_year_starter", "leverage_winner", "positional_scarcity_dt"],
+    "primary_analyst_quote": "B/R: 'top defensive tackle prospect in the 2026 NFL draft class'; Walter Football: high upside, 21 at draft",
+    "floor_concern": "Short arms (31.25), inconsistent pad level, limited pass-rush plan/win rate — more run-stuffer than disruptor",
+    "sources": [
+      "https://bleacherreport.com/articles/25248167-nfl-draft-2026-scouting-report-clemson-dl-peter-woods",
+      "https://walterfootball.com/scoutingreports2026pwoods.php",
+      "https://247sports.com/article/2026-nfl-draft-scouting-report-dt-peter-woods-clemson--276633425/"
+    ]
+  },
+  "Max Iheanachor": {
+    "why_high": [
+      "Elite physical tools — 6-5 7/8, 321 lbs, 33 7/8 arms, 4.91 forty, 25 bench reps",
+      "Twitchy pass-set explosiveness — 'small, twitchy movement skills of top NFL tackles'",
+      "Massive ceiling / 'mystery box' — raw traits evaluators project to elite starter",
+      "Zone-scheme fit — athletic profile perfect for outside-zone offenses",
+      "Late-bloomer story — didn't play football until 2021, pure trait bet",
+      "Nigerian immigrant, basketball/soccer background drives athletic fluidity"
+    ],
+    "causal_traits": ["elite_physical_tools", "mystery_box_upside", "zone_scheme_fit", "late_bloomer_trait_bet", "elite_length", "pass_set_twitch", "developmental_ceiling", "rare_measurables"],
+    "primary_analyst_quote": "PFF: 'ceiling through the roof'; Yahoo: 'has every physical tool in the book'; Packers reportedly eyeing him late R1",
+    "floor_concern": "Lower floor than peers — technical inconsistency, pitter-patter pass sets, speed-to-power gets him on heels",
+    "sources": [
+      "https://www.pff.com/news/draft-pff-2026-nfl-draft-guide-max-iheanachor-arizona-state",
+      "https://sports.yahoo.com/articles/2026-nfl-draft-scouting-report-185529958.html",
+      "https://eu.packersnews.com/story/sports/nfl/packers/2026/04/20/packers-eyeing-rising-offensive-tackle-prospect-as-draft-nears/89699396007/",
+      "https://jonledyard.substack.com/p/2026-nfl-draft-scouting-report-arizona-863"
+    ]
+  }
+}

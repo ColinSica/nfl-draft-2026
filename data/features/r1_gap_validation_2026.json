@@ -1,0 +1,364 @@
+{
+  "date": "2026-04-20",
+  "methodology": "Cross-referenced each prospect across Kiper Top-25 (ESPN), Jeremiah Top-50 4.0 (NFL.com), Brugler Top-100 (The Athletic), PFF big board, NFL Mock Draft Database consensus, Tankathon, Bleacher Report NFL Scouting Dept, and The Ringer/McShay. 'actual_analyst_range' reflects the min-max observed across tier-1 sources in April 2026.",
+  "validations": [
+    {
+      "player": "Arvell Reese",
+      "position": "LB/EDGE",
+      "our_rank": 16,
+      "consensus_rank": 2,
+      "actual_analyst_range": "2-14",
+      "source_citations": {
+        "NFLDraftBuzz": "#2 overall, 89.0 grade",
+        "Bleacher_Report_NFL_Scouting": "Top-5 pick projection, 8.83 grade (Impact Starter)",
+        "Kiper_Top25": "not in top 25 (likely 26-40 range)",
+        "ReadOptional": "projected top-5 EDGE",
+        "NFLMocks": "top landing spots piece implies top-15"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Internet boards (NFLDraftBuzz, B/R) have him top-5, but Kiper left him OUT of his top 25 entirely. Significant disagreement driven by projection risk (LB/EDGE hybrid, modest production vs elite athleticism).",
+      "trait_justification_for_ours": "Our #16 is actually close to Kiper's implicit rank (~26) and DJ's likely slot (rookie junior, 6.5 sacks). Length-speed profile is elite but LBs rarely go top-5 in modern drafts. Our model is arguably MORE realistic than the aggregated #2.",
+      "true_target_rank": "8-15",
+      "recommendation": "MODEL_VALID",
+      "action": "Hold. Consider minor bump to ~#12 by adding 'elite_athleticism' and 'position_versatility' tags, but do NOT chase the #2 aggregate — it's distorted by non-tier-1 boards.",
+      "confidence": "medium"
+    },
+    {
+      "player": "Carnell Tate",
+      "position": "WR",
+      "our_rank": 17,
+      "consensus_rank": 7,
+      "actual_analyst_range": "6-10",
+      "source_citations": {
+        "Tankathon": "#9 overall, WR1",
+        "BR_NFL_Scouting": "#8 overall, top WR",
+        "DraftTek": "#10 overall",
+        "CBS_Prisco": "#6 overall to CLE (WR1 off board)",
+        "CBS_Renner": "#8 overall to NO",
+        "NFLDraftBuzz": "88.4 grade, WR2"
+      },
+      "consensus_stable": true,
+      "analyst_disagreement_note": "Tight cluster 6-10. Essentially unanimous he is WR1 or WR2. Our #17 has no support from any tier-1 source.",
+      "trait_justification_for_ours": "Our model likely penalizes contested-catch athlete with modest YAC. But size + hands + 5-year first-round WR streak from Ohio State make #17 unsupportable. Ohio State pipeline bias may be underweighted.",
+      "true_target_rank": "7-10",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "Bump ~7-8 slots. Add tags: 'pro_ready', 'WR1_class', 'ohio_state_pipeline', 'contested_catch'. Verify Ohio State WR archetype multiplier.",
+      "confidence": "high"
+    },
+    {
+      "player": "Makai Lemon",
+      "position": "WR",
+      "our_rank": 24,
+      "consensus_rank": 12,
+      "actual_analyst_range": "10-25",
+      "source_citations": {
+        "PFF_BigBoard": "#15 overall",
+        "Biletnikoff_Award": "2025 winner",
+        "Steelers_Pre_Draft": "top-15 trade-up candidate (BVM)",
+        "AtoZ_Sports": "top WR tier, analyst-split",
+        "Cover1": "top-50 grade, slot-only concerns"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Actually split. PFF top-15, but many evaluators have slot-size concerns keeping him near #20-25. A to Z Sports explicitly calls the Lemon evaluation 'semi-controversial'.",
+      "trait_justification_for_ours": "Our #24 falls within the observed range (10-25) and matches the more conservative slot-only evaluations. Combine interview concerns also weigh down tier-1 boards. Defensible but slightly too low — consensus centers ~15-17.",
+      "true_target_rank": "15-20",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "Moderate bump ~4-6 slots. Add tags: 'biletnikoff_winner', 'elite_route_runner', 'slot_specialist'. Don't overshoot to top-12 — slot size concerns are real.",
+      "confidence": "medium"
+    },
+    {
+      "player": "Jermod McCoy",
+      "position": "CB",
+      "our_rank": 27,
+      "consensus_rank": 15,
+      "actual_analyst_range": "8-28",
+      "source_citations": {
+        "Kiper_Top25": "#16 overall",
+        "ESPN_scouts_mock": "#8 overall",
+        "RockyTop_mock": "#15 to TB",
+        "RockyTop_ESPN_final": "NYJ #16",
+        "Tankathon": "CB2 on big board",
+        "PFF": "scouting profile first-round grade"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Very wide range due to medical (ACL rehab, missed 2025). Healthy scouts rank top-10; medically-adjusted boards push to 20s-30s. Kiper #16 is the fair midpoint.",
+      "trait_justification_for_ours": "Our #27 reflects the medical discount aggressively. Per memory note, McCoy medical multiplier is 0.50 and targeting 50-60% R1 landings — current setting may be slightly too punitive. Kiper #16 with full injury info says the midpoint is #15-18.",
+      "true_target_rank": "15-20",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "Bump ~7-10 slots. Soften medical penalty from 0.50 to ~0.65, OR add 'elite_man_cover', 'best_tape_CB_class' tags. Target center: #17.",
+      "confidence": "medium"
+    },
+    {
+      "player": "Emmanuel McNeil-Warren",
+      "position": "S",
+      "our_rank": 33,
+      "consensus_rank": 23,
+      "actual_analyst_range": "16-40",
+      "source_citations": {
+        "Jeremiah_Top50": "#16 overall",
+        "Kiper_Top25": "#24 overall (NR previously)",
+        "Matt_Miller_ESPN": "#20 overall, S3",
+        "Edholm_NFL": "#26 overall",
+        "BR_profile": "projected round 1-2 hybrid"
+      },
+      "consensus_stable": true,
+      "analyst_disagreement_note": "Tight cluster 16-26 across tier-1. DJ aggressive at #16, Kiper #24. Our #33 is below the lowest tier-1 estimate.",
+      "trait_justification_for_ours": "6-4 safety frame with coverage upside — rare archetype. Our penalty likely from small-school (Toledo) and modest combine (4.52 40). But tape is tier-1 and DJ/Kiper/Miller all have him R1. Our #33 is too low.",
+      "true_target_rank": "20-26",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "Bump ~8 slots. Add tags: 'rare_size_safety', 'box_safety_coverage_upside', 'ball_production'. Reduce small-school discount.",
+      "confidence": "high"
+    },
+    {
+      "player": "Dillon Thieneman",
+      "position": "S",
+      "our_rank": 25,
+      "consensus_rank": 18,
+      "actual_analyst_range": "17-41",
+      "source_citations": {
+        "Jeremiah_Top50": "#17 overall (S2 after Downs)",
+        "Kiper_Top25": "#22 overall",
+        "LWOS": "#41, early R2",
+        "NFL_media": "late R1 projection",
+        "Cowboys_watch": "#20 fit"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "DJ/Kiper have him R1 (17-22); LWOS and others have late R1/early R2. Real split around R1-R2 bubble.",
+      "trait_justification_for_ours": "Our #25 is the median of the split. Defensible — falls between DJ #17 and LWOS #41. Not a clear model error.",
+      "true_target_rank": "18-25",
+      "recommendation": "MODEL_VALID",
+      "action": "Minor bump 3-5 slots optional. Add tags: 'elite_PFF_coverage', 'ball_hawk'. Current rank is within defensible range.",
+      "confidence": "medium"
+    },
+    {
+      "player": "Rueben Bain Jr.",
+      "position": "EDGE",
+      "our_rank": 15,
+      "consensus_rank": 9,
+      "actual_analyst_range": "7-15",
+      "source_citations": {
+        "Kiper_Top25": "#15 overall",
+        "Tankathon": "#7 overall, EDGE3",
+        "MDDB_consensus": "#12 overall, EDGE2",
+        "Jordan_Reid_ESPN": "EDGE2 overall",
+        "ESPN_Yates_mock": "pick #10 to CIN",
+        "NFL_Mike_Band_mock": "first round to DAL"
+      },
+      "consensus_stable": true,
+      "analyst_disagreement_note": "Tight range 7-15. Kiper at the bottom of the range (#15) matches our rank exactly. Slight upside to #12 is justifiable.",
+      "trait_justification_for_ours": "Our #15 = Kiper #15 exactly. Short arms (30 7/8) are a real flag. Top-7 boards are optimistic; our rank is defensible.",
+      "true_target_rank": "10-15",
+      "recommendation": "MODEL_VALID",
+      "action": "Optional minor bump to #12. Current rank matches Kiper's final big board. No action required.",
+      "confidence": "high"
+    },
+    {
+      "player": "Peter Woods",
+      "position": "DL/DT",
+      "our_rank": 6,
+      "consensus_rank": 28,
+      "actual_analyst_range": "13-28",
+      "source_citations": {
+        "Kiper_Top25": "#19 overall, DT1",
+        "Kiper_earlier": "#13 overall (pre-combine)",
+        "Bears_mocks": "#25 to CHI",
+        "BR_NFL_Scouting": "top DT",
+        "NBC_Chris_Simms": "#1 DT rankings"
+      },
+      "consensus_stable": true,
+      "analyst_disagreement_note": "Universally DT1, but range is #13 (Kiper pre-combine) to #28 (late mocks). NO analyst has him top-10. 6'3 300 is undersized for elite DT.",
+      "trait_justification_for_ours": "Our #6 is wildly out of range. Even the most optimistic Kiper rank (#13) is 7 slots below ours. Undersized DT without elite pass-rush production — top-10 is unsupportable.",
+      "true_target_rank": "15-22",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "DROP ~13 slots to ~#18. Investigate position multiplier for DT — model is over-rewarding run-defense DTs. Remove any 'elite_pass_rusher' tag if present.",
+      "confidence": "high"
+    },
+    {
+      "player": "T.J. Parker",
+      "position": "EDGE",
+      "our_rank": 14,
+      "consensus_rank": 29,
+      "actual_analyst_range": "21-35",
+      "source_citations": {
+        "Tankathon": "#31 overall, EDGE6",
+        "MDDB": "#26 overall",
+        "Schrager_mock": "#21 to PIT",
+        "Maiocco_mock": "#27 to SF",
+        "POD_mock": "second-round",
+        "Heavy_sports": "late R1 to R2"
+      },
+      "consensus_stable": true,
+      "analyst_disagreement_note": "Tight cluster 21-35. Stock fell from preseason top-10 to late R1/early R2. No tier-1 source has him top-20.",
+      "trait_justification_for_ours": "Our #14 is 7+ slots above the HIGHEST tier-1 rank (Schrager #21). Parker's stock collapsed due to disappointing 2025. Model is likely anchoring to preseason hype.",
+      "true_target_rank": "22-30",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "DROP ~10 slots to ~#24. Remove preseason hype tags. Add 'stock_down_2025', 'limited_bend', 'power_rusher_only'.",
+      "confidence": "high"
+    },
+    {
+      "player": "Omar Cooper Jr.",
+      "position": "WR",
+      "our_rank": 9,
+      "consensus_rank": 22,
+      "actual_analyst_range": "13-30",
+      "source_citations": {
+        "Brugler_Athletic": "#22 overall",
+        "CBS_Sports": "#17 overall, WR2",
+        "Renner_mock": "#30 to DEN",
+        "NFL_com_mock": "#13 to LAR",
+        "PFSN_Infante": "#27 to SF",
+        "McShay_mock": "WAS first round"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Wide range 13-30 — YAC traits have some evaluators excited (NFL.com #13) but most have him #20-30. CBS middle ground at #17.",
+      "trait_justification_for_ours": "Our #9 is above EVERY tier-1 rank. Even NFL.com's optimistic #13 is 4 slots below us. Cooper is a YAC weapon but not a top-10 prospect. Model likely over-weighting YAC/drop-rate metrics.",
+      "true_target_rank": "15-22",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "DROP ~8-10 slots to ~#18. Audit YAC multiplier. Add 'size_concerns' or 'not_X_receiver' tag.",
+      "confidence": "high"
+    },
+    {
+      "player": "Keldric Faulk",
+      "position": "EDGE",
+      "our_rank": 8,
+      "consensus_rank": 20,
+      "actual_analyst_range": "1-32",
+      "source_citations": {
+        "Kiper_Top25": "#23 overall",
+        "Jeremiah_Top50": "#32 overall",
+        "Tankathon": "#20 overall, EDGE4",
+        "BR_NFL_Scouting": "#1 EDGE, 8.0 grade",
+        "Jordan_Reid_ESPN": "EDGE3 (after Bain, Bailey)",
+        "Patriots_profile": "sky-high ceiling"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Huge split. B/R has him EDGE1 overall, but DJ/Kiper have him #23-32. Elite size (6'6, 276, 34 3/8 arms) vs production-talent gap.",
+      "trait_justification_for_ours": "Our #8 aligns with B/R's elite-ceiling view but ignores that production didn't match talent in 2025. Kiper/DJ at #23-32 are more credible. However, our #8 is defensible on pure tools and elite-ceiling archetype.",
+      "true_target_rank": "15-22",
+      "recommendation": "ADJUST_TOWARD_CONSENSUS",
+      "action": "DROP ~8-10 slots to ~#17. Keep 'elite_size', 'rare_length' tags but add 'production_gap_2025'.",
+      "confidence": "medium"
+    },
+    {
+      "player": "Max Iheanachor",
+      "position": "OT",
+      "our_rank": 19,
+      "consensus_rank": 30,
+      "actual_analyst_range": "17-40",
+      "source_citations": {
+        "Jeremiah_Top50": "#35 overall",
+        "Kiper": "top-5 OT in class (implied ~22-28)",
+        "CBS_Sports": "#7 OT, mock to NE #31",
+        "PFN_TJ_Randall": "#17 overall to DET",
+        "Bleeding_Green": "#23 to PHI",
+        "Ringer_board": "listed, late R1/early R2"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Highly split — 'mystery box' prospect. PFN has him #17, DJ has him #35. Ceiling-vs-floor is the cleanest single-prospect divergence in the class.",
+      "trait_justification_for_ours": "Our #19 falls at the top end of the plausible range and matches PFN's #17. Defensible for a ceiling-bet, but risky — DJ at #35 suggests floor is R2. Within range.",
+      "true_target_rank": "22-30",
+      "recommendation": "MODEL_VALID",
+      "action": "Optional drop ~3-5 slots to ~#23. Our #19 is aggressive but not indefensible given the split. Add 'boom_bust', 'developmental_ceiling' tags for honesty.",
+      "confidence": "medium"
+    },
+    {
+      "player": "Kenyon Sadiq",
+      "position": "TE",
+      "our_rank": 10,
+      "consensus_rank": 17,
+      "actual_analyst_range": "12-22",
+      "source_citations": {
+        "Kiper_Top25": "#12 overall",
+        "MDDB": "#17 overall",
+        "Mock_Ravens": "#14",
+        "Yahoo_Sports_mock": "#13",
+        "ESPN_mocks": "#13",
+        "NFL_combine": "#1 TE combine score (93)"
+      },
+      "consensus_stable": true,
+      "analyst_disagreement_note": "Tight cluster 12-22. Kiper top-12, others 13-17. Elite athletic TE with first-round grade.",
+      "trait_justification_for_ours": "Our #10 is 2 slots above Kiper's #12 — basically within model error. Elite combine performance (93 combine score, #1 TE) supports aggression. Very close to consensus top.",
+      "true_target_rank": "12-15",
+      "recommendation": "MODEL_VALID",
+      "action": "Optional drop 2-3 slots to #12-13 to match Kiper exactly. Our rank is essentially defensible.",
+      "confidence": "high"
+    },
+    {
+      "player": "Caleb Lomu",
+      "position": "OT",
+      "our_rank": 21,
+      "consensus_rank": 26,
+      "actual_analyst_range": "13-35",
+      "source_citations": {
+        "Yahoo_mock": "#13 to LAR",
+        "POD_community_mock": "#27 to SF",
+        "BR_scouting": "R1 grade",
+        "NFL_com_profile": "top-40 projection",
+        "PFF_guide": "R1 grade, 9.88 RAS",
+        "Deseret_roundup": "likely R1 pick"
+      },
+      "consensus_stable": false,
+      "analyst_disagreement_note": "Wide 13-35 range. Redshirt soph with 9.88 RAS but development-stage technique.",
+      "trait_justification_for_ours": "Our #21 is the midpoint of the plausible range. Defensible. Consensus center is ~#23-26.",
+      "true_target_rank": "20-26",
+      "recommendation": "MODEL_VALID",
+      "action": "No action required. Optional drop 2-3 slots. Current rank aligns with the median of tier-1 projections.",
+      "confidence": "medium"
+    }
+  ],
+  "summary": {
+    "total_adjust_toward_consensus": 7,
+    "total_model_valid": 7,
+    "top_5_priority_fixes": [
+      {
+        "rank": 1,
+        "player": "Peter Woods",
+        "issue": "Our #6 unsupported by any tier-1 source (range #13-28). Undersized DT.",
+        "action": "DROP ~13 slots to #18. Audit DT position multiplier — likely over-rewarding run-defense interior DL."
+      },
+      {
+        "rank": 2,
+        "player": "T.J. Parker",
+        "issue": "Our #14 is 7 slots above highest tier-1 rank (Schrager #21). Stock collapsed 2025.",
+        "action": "DROP ~10 slots to #24. Remove preseason-hype anchoring. Add stock_down_2025 tag."
+      },
+      {
+        "rank": 3,
+        "player": "Omar Cooper Jr.",
+        "issue": "Our #9 above every tier-1 rank. YAC metric over-weighted.",
+        "action": "DROP ~8 slots to #18. Audit YAC multiplier; add size_concerns tag."
+      },
+      {
+        "rank": 4,
+        "player": "Keldric Faulk",
+        "issue": "Our #8 aligns only with B/R; Kiper/DJ have him #23-32. Production-talent gap.",
+        "action": "DROP ~9 slots to #17. Add production_gap_2025 tag while keeping elite_size."
+      },
+      {
+        "rank": 5,
+        "player": "Carnell Tate",
+        "issue": "Our #17 has no support — every tier-1 source has him top-10 WR1/WR2.",
+        "action": "BUMP ~8 slots to #9. Add pro_ready, WR1_class, ohio_state_pipeline tags. Verify Ohio State WR archetype."
+      }
+    ],
+    "secondary_fixes": [
+      {
+        "player": "Jermod McCoy",
+        "action": "Bump ~8 slots (from #27 to ~#18). Soften medical multiplier from 0.50 to ~0.65."
+      },
+      {
+        "player": "Emmanuel McNeil-Warren",
+        "action": "Bump ~8 slots (from #33 to ~#24). Reduce small-school (Toledo) discount."
+      }
+    ],
+    "defensible_as_is": [
+      "Arvell Reese (#16 — Kiper omitted from top 25; aggregate #2 is inflated by non-tier-1 boards)",
+      "Rueben Bain (#15 matches Kiper exactly)",
+      "Dillon Thieneman (#25 at median of R1/R2 split)",
+      "Max Iheanachor (#19 matches PFN's aggressive projection; mystery-box archetype)",
+      "Kenyon Sadiq (#10 is 2 slots above Kiper #12; within error)",
+      "Caleb Lomu (#21 at median of 13-35 range)",
+      "Makai Lemon (partially — some adjustment warranted toward #15-18)"
+    ]
+  }
+}

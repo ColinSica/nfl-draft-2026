@@ -1,0 +1,1193 @@
+{
+  "_meta": {
+    "generated": "2026-04-20",
+    "purpose": "Scheme-fit taxonomy, post-FA roster-room scores, and trade mechanics for 2026 NFL Draft agent simulation",
+    "coverage": {
+      "pillar1_scheme_taxonomy": 32,
+      "pillar2_roster_composition": 32,
+      "pillar3_trade_mechanics": "charts 1-32 + tendencies for all 32 + 2026 comp picks"
+    },
+    "rules": "Every fact cites a URL. Post-free-agency April 2026 snapshot. No analyst mocks referenced.",
+    "primary_sources": [
+      "https://www.pff.com/news/nfl-team-scheme",
+      "https://www.pro-football-reference.com/teams/",
+      "https://sumersports.com/teams/",
+      "https://www.sharpfootballanalysis.com/",
+      "https://overthecap.com/",
+      "https://www.spotrac.com/",
+      "https://www.footballoutsiders.com/",
+      "https://www.harvardsportsanalysis.org/"
+    ]
+  },
+
+  "pillar1_scheme_taxonomy": {
+    "ARI": {
+      "oc_scheme": {
+        "base_concept": "Drew Petzing wide-zone/duo hybrid with heavy 12 personnel and designed QB movement",
+        "rb_archetype": "one-cut zone back with power-gap flex, ability to hit duo crease",
+        "wr_archetype": "vertical X + separator Z, Harrison Jr. drives contested-catch design but slot/YAC still needed",
+        "ol_archetype": "athletic zone blockers, mobile center, tackles who can climb",
+        "te_archetype": "dual-threat Y, inline block + seam stretch (Trey McBride model)",
+        "qb_archetype": "movement/RPO QB (Kyler) — boot, sprint-out, off-platform arm talent"
+      },
+      "dc_scheme": {
+        "base_concept": "Nick Rallis 3-4 hybrid with Fangio-influence 2-high shells, late rotation",
+        "edge_archetype": "convertible 3-4 OLB / 4-3 DE, 255-265 lb, bend + power",
+        "dt_archetype": "3-tech penetrator plus stout 0/1-tech (Nolen fit)",
+        "lb_archetype": "stack LB with coverage range, communicator MIKE",
+        "cb_archetype": "zone-match long CBs, pattern-read boundary",
+        "s_archetype": "two-high capable safeties, versatile robber/post (Budda Baker template)"
+      },
+      "sources": [
+        "https://www.pff.com/news/nfl-arizona-cardinals-scheme-fit-2025",
+        "https://sumersports.com/teams/cardinals/",
+        "https://www.azcardinals.com/news/"
+      ]
+    },
+
+    "ATL": {
+      "oc_scheme": {
+        "base_concept": "Zac Robinson McVay-tree outside-zone with heavy play-action and condensed splits",
+        "rb_archetype": "decisive one-cut back who can press the line (Bijan role)",
+        "wr_archetype": "route-tree separators, deep Z, contested X, YAC slot",
+        "ol_archetype": "wide-zone OL, athletic OT, mobile guards",
+        "te_archetype": "move Y (Kyle Pitts flex) + in-line blocker",
+        "qb_archetype": "rhythm passer with play-action boot chops (Penix Jr. skillset)"
+      },
+      "dc_scheme": {
+        "base_concept": "Jeff Ulbrich aggressive 4-3 under with Seahawks/Jets simulated pressures",
+        "edge_archetype": "speed-first edge rusher, 250-260 lb bender",
+        "dt_archetype": "1-gap penetrators, interior pass-rush prioritized",
+        "lb_archetype": "rangy WILL/MIKE, cover-capable",
+        "cb_archetype": "press-man and Cover-3 hybrid boundary CB",
+        "s_archetype": "deep half + box hybrid, box-safety/nickel convertibility"
+      },
+      "sources": [
+        "https://www.atlantafalcons.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-atlanta-falcons-scheme",
+        "https://www.sharpfootballanalysis.com/betting/2025-atlanta-falcons-preview/"
+      ]
+    },
+
+    "BAL": {
+      "oc_scheme": {
+        "base_concept": "Todd Monken gap/power + heavy RPO + designed QB run, widest personnel variety in NFL",
+        "rb_archetype": "physical downhill back with receiving chops (Henry/Hill split)",
+        "wr_archetype": "big-body X contested winner + vertical Z, slot with YAC",
+        "ol_archetype": "people-movers, gap-power OL, athletic C for climb blocks",
+        "te_archetype": "Y inline POA blocker plus receiving move-TE (Andrews/Likely)",
+        "qb_archetype": "dual-threat, Lamar-specific — arm talent + elite mobility"
+      },
+      "dc_scheme": {
+        "base_concept": "Zach Orr 3-4 / Wink-legacy disguised coverage with heavy simulated pressure",
+        "edge_archetype": "length + power 3-4 OLB, Van Noy/Oweh hybrid",
+        "dt_archetype": "2-gap nose + penetrating 3-tech mix (Madubuike core)",
+        "lb_archetype": "instinctual MIKE (Roquan-type), coverage SAM",
+        "cb_archetype": "long zone-match CBs, ball production priority",
+        "s_archetype": "split-safety Cover-2/quarters, Hamilton-style chess piece"
+      },
+      "sources": [
+        "https://www.baltimoreravens.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-baltimore-ravens-scheme-2025",
+        "https://overthecap.com/team/baltimore-ravens"
+      ]
+    },
+
+    "BUF": {
+      "oc_scheme": {
+        "base_concept": "Joe Brady spread/pistol, quick-game plus designed Allen runs and shot plays",
+        "rb_archetype": "committee zone/gap back with pass-pro and receiving",
+        "wr_archetype": "YAC-separator slot, vertical X, contested red-zone big body (post-Diggs restructure)",
+        "ol_archetype": "athletic pass-pro OTs, power interior",
+        "te_archetype": "move TE seam threat (Kincaid) + Y blocker (Knox)",
+        "qb_archetype": "Josh Allen — arm + legs. Backup needs mobility to run offense"
+      },
+      "dc_scheme": {
+        "base_concept": "Bobby Babich (McDermott tree) Cover-2/Tampa-2 with disguise",
+        "edge_archetype": "length edge with bend, 260+ lb",
+        "dt_archetype": "gap-control 1-tech + 3-tech pass-rusher (Oliver)",
+        "lb_archetype": "rangy Tampa-2 MIKE/WILL with hook-curl range",
+        "cb_archetype": "zone-match boundary, long-arm press",
+        "s_archetype": "deep-half processors, Poyer/Hyde lineage"
+      },
+      "sources": [
+        "https://www.buffalobills.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-buffalo-bills-scheme",
+        "https://sumersports.com/teams/bills/"
+      ]
+    },
+
+    "CAR": {
+      "oc_scheme": {
+        "base_concept": "Dave Canales outside-zone / condensed-splits / middle-of-field bootleg (Shanahan-adjacent via Pete Carroll)",
+        "rb_archetype": "one-cut zone back, Lynch/Etienne hybrid",
+        "wr_archetype": "contested X + quick-separator slot, emphasis on possession route-runners",
+        "ol_archetype": "athletic zone OL, light OTs, mobile C",
+        "te_archetype": "Y move TE, inline+flex",
+        "qb_archetype": "rhythm passer with play-action command (Bryce Young development)"
+      },
+      "dc_scheme": {
+        "base_concept": "Ejiro Evero 3-4 with 2-high Vic Fangio shells",
+        "edge_archetype": "3-4 OLB convert, 255-265 lb length/power",
+        "dt_archetype": "2-gap 0/1-tech plus interior rusher",
+        "lb_archetype": "coverage stack LB, QB of defense",
+        "cb_archetype": "zone-match Cover-6 CB, length priority",
+        "s_archetype": "interchangeable 2-high safeties, Fangio quarters-match"
+      },
+      "sources": [
+        "https://www.panthers.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-carolina-panthers-scheme",
+        "https://sharpfootballanalysis.com/betting/2025-carolina-panthers-preview/"
+      ]
+    },
+
+    "CHI": {
+      "oc_scheme": {
+        "base_concept": "Ben Johnson Lions-tree gap-scheme with pre-snap motion, condensed splits, RPO, heavy 12/13",
+        "rb_archetype": "gap-scheme downhill back with juice, plus receiving 3rd-down back",
+        "wr_archetype": "Alpha X (Moore), deep Z, YAC slot — motion-friendly route runners",
+        "ol_archetype": "powerful gap-power OL, vertical drivers, athletic-enough for zone mix",
+        "te_archetype": "dual Y who can move and block inline (Kmet + receiving TE)",
+        "qb_archetype": "Caleb Williams — creation ability + pre-snap processor"
+      },
+      "dc_scheme": {
+        "base_concept": "Dennis Allen 4-3 with Saints-lineage multiple front, simulated pressure",
+        "edge_archetype": "4-3 DE with first-step quickness, 260-270 lb",
+        "dt_archetype": "3-tech penetrator priority (Jarrett-type), pairs with 1-tech anchor",
+        "lb_archetype": "downhill MIKE + coverage WILL",
+        "cb_archetype": "press-match boundary, long CBs",
+        "s_archetype": "box safety/nickel hybrid plus deep-half centerfielder"
+      },
+      "sources": [
+        "https://www.chicagobears.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-ben-johnson-scheme-chicago-bears-2025",
+        "https://sumersports.com/teams/bears/"
+      ]
+    },
+
+    "CIN": {
+      "oc_scheme": {
+        "base_concept": "Dan Pitcher Burrow-tailored quick-game, 11 personnel, vertical shot plays on play-action",
+        "rb_archetype": "receiving-capable zone back (Chase Brown lineage)",
+        "wr_archetype": "elite route-runner X (Chase), contested Z (Higgins departure creates need), slot separator",
+        "ol_archetype": "pass-pro first OTs with upside (Amarius Mims), athletic interior",
+        "te_archetype": "Y/H hybrid move TE with YAC",
+        "qb_archetype": "Burrow — quick-processor, pocket-based rhythm"
+      },
+      "dc_scheme": {
+        "base_concept": "Al Golden Lou Anarumo-successor multi-coverage disguise, Cover-2/quarters",
+        "edge_archetype": "Trey Hendrickson mold — bend + hand usage, 260 lb",
+        "dt_archetype": "3-tech penetrator, interior rush priority",
+        "lb_archetype": "coverage MIKE with sideline range",
+        "cb_archetype": "zone-match outside, nickel matchup slot",
+        "s_archetype": "two-high interchangeable, robber safeties"
+      },
+      "sources": [
+        "https://www.bengals.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-cincinnati-bengals-scheme-2025",
+        "https://sharpfootballanalysis.com/betting/2025-cincinnati-bengals-preview/"
+      ]
+    },
+
+    "CLE": {
+      "oc_scheme": {
+        "base_concept": "Tommy Rees / Kevin Stefanski Shanahan-tree wide-zone, bootleg, condensed splits",
+        "rb_archetype": "one-cut decisive back, Chubb heir",
+        "wr_archetype": "separator-first Z + contested X, YAC slot (Jeudy role)",
+        "ol_archetype": "athletic zone OL, Bitonio lineage interior",
+        "te_archetype": "Y/H combo, Njoku inline + move",
+        "qb_archetype": "play-action boot passer with mobility"
+      },
+      "dc_scheme": {
+        "base_concept": "Jim Schwartz wide-9 4-3 attack front",
+        "edge_archetype": "wide-9 DE — speed-first, 245-260 lb, pure rusher (Garrett mold)",
+        "dt_archetype": "1-gap penetrator 3-tech, plus space-eater 1-tech",
+        "lb_archetype": "two-gap clean-up LBs, speed WILL priority",
+        "cb_archetype": "Cover-3 boundary / zone-match, Ward-type ball-skill",
+        "s_archetype": "single-high FS + box SS split"
+      },
+      "sources": [
+        "https://www.clevelandbrowns.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-cleveland-browns-scheme-2025",
+        "https://sumersports.com/teams/browns/"
+      ]
+    },
+
+    "DAL": {
+      "oc_scheme": {
+        "base_concept": "Brian Schottenheimer gap/power with Shanahan-influence zone mix, 11 personnel heavy",
+        "rb_archetype": "three-down back with pass-pro, physical contact balance",
+        "wr_archetype": "CeeDee Lamb #1 + vertical Z (Pickens), possession slot",
+        "ol_archetype": "gap-power interior (Booker), athletic OT",
+        "te_archetype": "Y inline blocker + seam threat",
+        "qb_archetype": "Dak — rhythm pocket passer with RPO IQ"
+      },
+      "dc_scheme": {
+        "base_concept": "Matt Eberflus 4-3 Cover-2/Tampa-2 with one-gap penetration",
+        "edge_archetype": "4-3 DE wide-9 speed (Parsons, Odighizuwa)",
+        "dt_archetype": "one-gap 3-tech pass-rusher plus penetrating nose (Kenny Clark)",
+        "lb_archetype": "Tampa-2 MIKE with sideline-to-sideline range",
+        "cb_archetype": "zone-match Cover-2/3, Diggs/Bland-type ball hawk",
+        "s_archetype": "deep-half + box split, run-support SS"
+      },
+      "sources": [
+        "https://www.dallascowboys.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-dallas-cowboys-scheme-eberflus-2025",
+        "https://overthecap.com/team/dallas-cowboys"
+      ]
+    },
+
+    "DEN": {
+      "oc_scheme": {
+        "base_concept": "Sean Payton WCO gap-scheme with heavy play-action, condensed splits, designed QB sprint-out",
+        "rb_archetype": "three-down back, pass-pro + receiving (Payton Kamara-model)",
+        "wr_archetype": "route-technician X + Z, slot over-the-middle receiver",
+        "ol_archetype": "gap-power + pass-pro, Bolles lineage LT",
+        "te_archetype": "Y inline blocker + move TE flex",
+        "qb_archetype": "Bo Nix — anticipation thrower with mobility"
+      },
+      "dc_scheme": {
+        "base_concept": "Vance Joseph 3-4 hybrid with heavy blitz, aggressive 1-gap front",
+        "edge_archetype": "3-4 OLB, length + bend, Nik Bonitto mold",
+        "dt_archetype": "penetrating 3-tech + space-eater 0/1",
+        "lb_archetype": "downhill MIKE, Dre Greenlaw role",
+        "cb_archetype": "press-man boundary (Surtain lineage), physical",
+        "s_archetype": "single-high rangy FS + box SS, Moss/Simmons roles"
+      },
+      "sources": [
+        "https://www.denverbroncos.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-denver-broncos-scheme-2025",
+        "https://sharpfootballanalysis.com/betting/2025-denver-broncos-preview/"
+      ]
+    },
+
+    "DET": {
+      "oc_scheme": {
+        "base_concept": "John Morton (post-Ben Johnson) continuing Lions gap-power + motion + play-action, condensed splits",
+        "rb_archetype": "1-2 punch — physical gap back (Gibbs/Montgomery template), receiving chops",
+        "wr_archetype": "Alpha X (St. Brown), vertical Z, YAC slot — motion-friendly",
+        "ol_archetype": "gap-power maulers, Sewell/Ragnow model, athletic enough for zone mix",
+        "te_archetype": "Y inline blocker + receiving move-TE (Laporta)",
+        "qb_archetype": "Goff — rhythm pocket passer with pre-snap command"
+      },
+      "dc_scheme": {
+        "base_concept": "Kelvin Sheppard (post-Glenn) continuing AG-legacy aggressive 4-3 with 2-high shells",
+        "edge_archetype": "powerful 4-3 DE, Hutchinson mold, 265+ lb",
+        "dt_archetype": "3-tech penetrator priority",
+        "lb_archetype": "downhill MIKE + coverage WILL, Campbell style",
+        "cb_archetype": "zone-match boundary, physical press",
+        "s_archetype": "box SS + deep-half FS, Branch hybrid"
+      },
+      "sources": [
+        "https://www.detroitlions.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-detroit-lions-scheme-2025",
+        "https://sumersports.com/teams/lions/"
+      ]
+    },
+
+    "GB": {
+      "oc_scheme": {
+        "base_concept": "Matt LaFleur Shanahan-tree wide-zone + play-action bootleg, condensed splits, 11 personnel",
+        "rb_archetype": "one-cut zone back, Josh Jacobs + receiving back",
+        "wr_archetype": "separator Z + contested X, YAC-first personnel (young room Reed/Wicks/Watson)",
+        "ol_archetype": "athletic zone OL, Bakhtiari-lineage pass-pro LT",
+        "te_archetype": "Y move TE + inline blocker (Kraft/Musgrave)",
+        "qb_archetype": "Jordan Love — rhythm play-action passer with boot chops"
+      },
+      "dc_scheme": {
+        "base_concept": "Jeff Hafley Fangio-tree 2-high quarters-match, multiple fronts",
+        "edge_archetype": "3-4/4-3 hybrid OLB, length priority (Van Ness)",
+        "dt_archetype": "versatile 3-4 DE/3-tech Clark/Wyatt mold",
+        "lb_archetype": "coverage stack LB, two-high communicator",
+        "cb_archetype": "zone-match boundary, long CBs with ball production",
+        "s_archetype": "two-high interchangeable, McKinney role"
+      },
+      "sources": [
+        "https://www.packers.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-green-bay-packers-hafley-scheme-2025",
+        "https://sharpfootballanalysis.com/betting/2025-green-bay-packers-preview/"
+      ]
+    },
+
+    "HOU": {
+      "oc_scheme": {
+        "base_concept": "Nick Caley (post-Slowik) Rams/Patriots hybrid — play-action heavy, condensed splits, 12 personnel",
+        "rb_archetype": "one-cut zone back with receiving",
+        "wr_archetype": "contested X (Diggs-lineage), vertical Z (Collins), YAC slot",
+        "ol_archetype": "athletic pass-pro priority (major FA/draft investment)",
+        "te_archetype": "Y move TE seam threat (Schultz)",
+        "qb_archetype": "C.J. Stroud — rhythm pocket passer, clean mechanics priority"
+      },
+      "dc_scheme": {
+        "base_concept": "Matt Burke (post-Ryans) 4-3 wide-9 attack front with heavy two-high",
+        "edge_archetype": "speed-first wide-9 edge, Hunter/Anderson mold",
+        "dt_archetype": "1-gap 3-tech penetrator priority",
+        "lb_archetype": "rangy WILL + thumper MIKE",
+        "cb_archetype": "press-man boundary (Stingley), physical",
+        "s_archetype": "two-high interchangeable, Pitre box hybrid"
+      },
+      "sources": [
+        "https://www.houstontexans.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-houston-texans-scheme-2025",
+        "https://sumersports.com/teams/texans/"
+      ]
+    },
+
+    "IND": {
+      "oc_scheme": {
+        "base_concept": "Shane Steichen gap/power + designed QB run, RPO, spread element from Eagles roots",
+        "rb_archetype": "explosive gap back (Taylor lineage) + receiving",
+        "wr_archetype": "vertical Z + contested X, slot YAC",
+        "ol_archetype": "gap-power maulers (Nelson/Smith core), athletic LT",
+        "te_archetype": "Y inline blocker + move TE",
+        "qb_archetype": "dual-threat with arm (Richardson/Jones pocket mix)"
+      },
+      "dc_scheme": {
+        "base_concept": "Lou Anarumo (ex-CIN) disguised coverage with multiple fronts",
+        "edge_archetype": "bend + power 4-3/3-4 hybrid edge (Paye)",
+        "dt_archetype": "3-tech penetrator (Buckner lineage) + anchor nose",
+        "lb_archetype": "coverage MIKE, two-high communicator",
+        "cb_archetype": "zone-match boundary",
+        "s_archetype": "two-high + box hybrid"
+      },
+      "sources": [
+        "https://www.colts.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-indianapolis-colts-anarumo-2025",
+        "https://sharpfootballanalysis.com/betting/2025-indianapolis-colts-preview/"
+      ]
+    },
+
+    "JAX": {
+      "oc_scheme": {
+        "base_concept": "Liam Coen (now HC) / Grant Udinski Shanahan-Rams tree wide-zone with heavy play-action",
+        "rb_archetype": "one-cut zone back with receiving (Etienne lineage / Bigsby)",
+        "wr_archetype": "separator Z (Thomas Jr.), contested X, YAC slot (Kirk role)",
+        "ol_archetype": "athletic zone OL, light OT, mobile C",
+        "te_archetype": "Y move TE + inline blocker (Engram)",
+        "qb_archetype": "Trevor Lawrence — boot/movement chops, quick-game processor"
+      },
+      "dc_scheme": {
+        "base_concept": "Anthony Campanile aggressive 4-3 multiple fronts, Vic Fangio 2-high shells",
+        "edge_archetype": "length + bend edge (Walker/Hines-Allen), 260+ lb",
+        "dt_archetype": "1-gap 3-tech penetrator priority",
+        "lb_archetype": "rangy WILL + coverage MIKE",
+        "cb_archetype": "zone-match boundary, physical press",
+        "s_archetype": "two-high interchangeable safeties"
+      },
+      "sources": [
+        "https://www.jaguars.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-jacksonville-jaguars-liam-coen-2025",
+        "https://sumersports.com/teams/jaguars/"
+      ]
+    },
+
+    "KC": {
+      "oc_scheme": {
+        "base_concept": "Andy Reid WCO + spread + Mahomes-bespoke design — motion, mesh, dagger, heavy 11 personnel",
+        "rb_archetype": "receiving-capable zone/gap back, pass-pro priority (Pacheco)",
+        "wr_archetype": "elite YAC-separator + vertical field stretchers (Worthy/Brown), possession slot",
+        "ol_archetype": "Thuney/Humphrey-model athletic interior + Taylor/Suamataia OT",
+        "te_archetype": "Kelce lineage — receiving Y move + blocking in-line",
+        "qb_archetype": "Mahomes unique — off-platform arm talent + mobility"
+      },
+      "dc_scheme": {
+        "base_concept": "Steve Spagnuolo multiple front with heavy simulated pressure / Cover-2 and man blitz",
+        "edge_archetype": "versatile edge, bend + hand-fighting (Karlaftis/Anudike)",
+        "dt_archetype": "3-tech penetrator priority (Jones/Nnadi core aging)",
+        "lb_archetype": "MIKE coverage + downhill SAM (Tranquill)",
+        "cb_archetype": "press-man boundary (McDuffie/Watson), nickel matchup",
+        "s_archetype": "two-high + box, Bryan Cook role"
+      },
+      "sources": [
+        "https://www.chiefs.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-kansas-city-chiefs-scheme-2025",
+        "https://sumersports.com/teams/chiefs/"
+      ]
+    },
+
+    "LV": {
+      "oc_scheme": {
+        "base_concept": "Chip Kelly Pete Carroll-era spread + gap-power with heavy condensed splits and motion",
+        "rb_archetype": "physical gap-power back (Ashton Jeanty fit) + receiving back",
+        "wr_archetype": "vertical X + YAC slot, Meyers/Bowers centric",
+        "ol_archetype": "gap-power maulers, athletic LT",
+        "te_archetype": "Bowers-centric move TE + inline Y",
+        "qb_archetype": "rhythm passer with mobility (Geno Smith)"
+      },
+      "dc_scheme": {
+        "base_concept": "Patrick Graham multiple-front 3-4 hybrid, disguised coverage",
+        "edge_archetype": "bend + length 3-4 OLB (Crosby), 265 lb",
+        "dt_archetype": "2-gap nose + 3-tech penetrator mix",
+        "lb_archetype": "coverage-capable MIKE",
+        "cb_archetype": "zone-match boundary",
+        "s_archetype": "two-high interchangeable, box SS"
+      },
+      "sources": [
+        "https://www.raiders.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-las-vegas-raiders-pete-carroll-chip-kelly-2025",
+        "https://sharpfootballanalysis.com/betting/2025-las-vegas-raiders-preview/"
+      ]
+    },
+
+    "LAC": {
+      "oc_scheme": {
+        "base_concept": "Greg Roman gap/power + heavy play-action boot + 12/13 personnel (Harbaugh/Roman philosophy)",
+        "rb_archetype": "physical downhill gap back (Dobbins/Edwards model), receiving 3rd-down back",
+        "wr_archetype": "vertical X + contested Z (McConkey slot YAC)",
+        "ol_archetype": "gap-power maulers (Alt/Slater core) — people movers",
+        "te_archetype": "blocking Y inline + move TE, multiple TE sets",
+        "qb_archetype": "Justin Herbert — play-action boot chops + arm talent"
+      },
+      "dc_scheme": {
+        "base_concept": "Jesse Minter Michigan-legacy multiple front with heavy 2-high quarters-match (Fangio adjacent)",
+        "edge_archetype": "length + bend hybrid edge (Bosa/Mack mold), 260+ lb",
+        "dt_archetype": "3-tech penetrator + space-eater nose",
+        "lb_archetype": "coverage MIKE + downhill SAM (Henley)",
+        "cb_archetype": "zone-match boundary, long press CBs",
+        "s_archetype": "two-high interchangeable (Hart), box SS"
+      },
+      "sources": [
+        "https://www.chargers.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-los-angeles-chargers-harbaugh-roman-minter-2025",
+        "https://sumersports.com/teams/chargers/"
+      ]
+    },
+
+    "LAR": {
+      "oc_scheme": {
+        "base_concept": "Sean McVay wide-zone + play-action + condensed splits — the Shanahan-tree prototype",
+        "rb_archetype": "one-cut decisive zone back (Kyren Williams), 3rd-down back receiving",
+        "wr_archetype": "separator Z (Nacua), contested X (Kupp departure creates X need), YAC slot",
+        "ol_archetype": "athletic zone OL, light OTs, mobile C",
+        "te_archetype": "Y move TE + inline blocker (Higbee)",
+        "qb_archetype": "Stafford — anticipation rhythm passer, boot chops"
+      },
+      "dc_scheme": {
+        "base_concept": "Chris Shula Vic Fangio-Raheem Morris 3-4 hybrid with 2-high shells",
+        "edge_archetype": "3-4 OLB length/bend (Young/Verse), 255-265 lb",
+        "dt_archetype": "3-4 DE 2-gap + 3-tech interior penetrator (Aaron Donald legacy)",
+        "lb_archetype": "rangy coverage MIKE",
+        "cb_archetype": "zone-match boundary, length priority",
+        "s_archetype": "two-high interchangeable, deep-half"
+      },
+      "sources": [
+        "https://www.therams.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-los-angeles-rams-scheme-2025",
+        "https://sharpfootballanalysis.com/betting/2025-los-angeles-rams-preview/"
+      ]
+    },
+
+    "MIA": {
+      "oc_scheme": {
+        "base_concept": "Mike McDaniel Shanahan-tree outside-zone + condensed splits + motion (most motion in NFL)",
+        "rb_archetype": "one-cut zone back with elite speed (De'Von Achane model)",
+        "wr_archetype": "vertical speed-first Z (Hill), contested X (Waddle), YAC slot",
+        "ol_archetype": "athletic zone OL, light OTs, mobile C",
+        "te_archetype": "Y move TE flex + inline blocker",
+        "qb_archetype": "Tua — quick-game rhythm passer with anticipation"
+      },
+      "dc_scheme": {
+        "base_concept": "Anthony Weaver (Fangio-coached) 3-4 hybrid with 2-high quarters-match",
+        "edge_archetype": "3-4 OLB length + bend (Chubb/Phillips injury risks), 260 lb",
+        "dt_archetype": "2-gap nose + 3-tech penetrator (Wilkins departure, Grant/Davis)",
+        "lb_archetype": "coverage MIKE, rangy SAM",
+        "cb_archetype": "press-man boundary (Ramsey/Smith), physical",
+        "s_archetype": "two-high interchangeable, Fitzpatrick-lineage"
+      },
+      "sources": [
+        "https://www.miamidolphins.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-miami-dolphins-scheme-2025",
+        "https://sumersports.com/teams/dolphins/"
+      ]
+    },
+
+    "MIN": {
+      "oc_scheme": {
+        "base_concept": "Kevin O'Connell Shanahan-McVay tree wide-zone + play-action + condensed splits",
+        "rb_archetype": "one-cut zone back (Jones/Mason), receiving 3rd-down back",
+        "wr_archetype": "Alpha X (Jefferson), separator Z (Addison), YAC slot",
+        "ol_archetype": "athletic zone OL, Darrisaw LT, Fries/Ingram interior",
+        "te_archetype": "Y move TE (Hockenson receiving) + inline blocker",
+        "qb_archetype": "J.J. McCarthy — play-action boot, quick game, RPO chops"
+      },
+      "dc_scheme": {
+        "base_concept": "Brian Flores Patriots-legacy multiple pressure, highest blitz rate in NFL, Cover-0",
+        "edge_archetype": "versatile edge, 3-4 OLB power (Van Ginkel / Greenard)",
+        "dt_archetype": "1-gap penetrator + 2-gap nose mix (Hargrave/Allen)",
+        "lb_archetype": "blitzing MIKE + coverage SAM (Cashman)",
+        "cb_archetype": "press-man + zone-match hybrid (Murphy/Rodgers)",
+        "s_archetype": "box safety/nickel blitzer (Cine/Bynum), deep FS"
+      },
+      "sources": [
+        "https://www.vikings.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-minnesota-vikings-flores-scheme-2025",
+        "https://sharpfootballanalysis.com/betting/2025-minnesota-vikings-preview/"
+      ]
+    },
+
+    "NE": {
+      "oc_scheme": {
+        "base_concept": "Josh McDaniels (returned 2025) WCO + Erhardt-Perkins legacy, pro-style with condensed splits",
+        "rb_archetype": "receiving-capable three-down back (Henderson/Stevenson)",
+        "wr_archetype": "separator Z (Diggs FA addition), contested X, possession slot",
+        "ol_archetype": "gap-power + pass-pro priority (massive investment needed, Campbell LT)",
+        "te_archetype": "Y inline blocker + move TE (Henry FA)",
+        "qb_archetype": "Drake Maye — rhythm pocket passer with mobility"
+      },
+      "dc_scheme": {
+        "base_concept": "Terrell Williams Belichick-successor multiple front 3-4/4-3 with heavy disguise",
+        "edge_archetype": "2-gap 3-4 DE + setter OLB mix (Gonzalez / Chaisson)",
+        "dt_archetype": "2-gap nose + 3-tech rusher (Barmore)",
+        "lb_archetype": "communicator MIKE + coverage SAM",
+        "cb_archetype": "press-man boundary (Gonzalez), matchup CB",
+        "s_archetype": "deep-half + box hybrid"
+      },
+      "sources": [
+        "https://www.patriots.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-new-england-patriots-scheme-2025",
+        "https://sumersports.com/teams/patriots/"
+      ]
+    },
+
+    "NO": {
+      "oc_scheme": {
+        "base_concept": "Kellen Moore WCO + shot plays with heavy 11 personnel (Dallas/Philly/LAC lineage)",
+        "rb_archetype": "three-down receiving-capable back (Kamara lineage)",
+        "wr_archetype": "vertical Z (Olave), contested X, YAC slot (Shaheed)",
+        "ol_archetype": "athletic pass-pro OT priority (Penning/Fuaga), mobile interior",
+        "te_archetype": "Y move TE + inline blocker",
+        "qb_archetype": "pocket passer with quick-game anticipation (Carr/Rattler)"
+      },
+      "dc_scheme": {
+        "base_concept": "Brandon Staley Fangio-tree 3-4 with 2-high quarters-match",
+        "edge_archetype": "3-4 OLB length + bend (Jordan legacy, Young)",
+        "dt_archetype": "2-gap nose + 3-tech penetrator (Bresee/Davenport)",
+        "lb_archetype": "coverage MIKE, communicator",
+        "cb_archetype": "zone-match boundary (Lattimore, Taylor)",
+        "s_archetype": "two-high interchangeable (Mathieu retired, major need)"
+      },
+      "sources": [
+        "https://www.neworleanssaints.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-new-orleans-saints-staley-moore-2025",
+        "https://sharpfootballanalysis.com/betting/2025-new-orleans-saints-preview/"
+      ]
+    },
+
+    "NYG": {
+      "oc_scheme": {
+        "base_concept": "Mike Kafka Reid/Andy-tree WCO with spread elements and motion",
+        "rb_archetype": "receiving-capable three-down back + physical RB1 (Tracy)",
+        "wr_archetype": "Alpha X (Nabers), vertical Z, YAC slot",
+        "ol_archetype": "pass-pro OT priority (Thomas/Neal injury history), athletic interior",
+        "te_archetype": "Y inline blocker + move TE flex",
+        "qb_archetype": "mobility + arm talent (Dart development, Wilson backup)"
+      },
+      "dc_scheme": {
+        "base_concept": "Shane Bowen 3-4 hybrid with simulated pressure and blitz",
+        "edge_archetype": "3-4 OLB power + bend (Thibodeaux / Burns), 265 lb",
+        "dt_archetype": "2-gap nose + 3-tech penetrator (Lawrence)",
+        "lb_archetype": "coverage MIKE + downhill SAM",
+        "cb_archetype": "zone-match boundary (Banks), physical press",
+        "s_archetype": "two-high interchangeable, box hybrid (McKinney departure)"
+      },
+      "sources": [
+        "https://www.giants.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-new-york-giants-scheme-2025",
+        "https://sumersports.com/teams/giants/"
+      ]
+    },
+
+    "NYJ": {
+      "oc_scheme": {
+        "base_concept": "Tanner Engstrand (Glenn/Johnson Lions-tree) gap-scheme with motion, 12 personnel heavy",
+        "rb_archetype": "gap-scheme downhill back + receiving 3rd-down back (Hall)",
+        "wr_archetype": "contested X (Wilson), separator Z, YAC slot (Reynolds)",
+        "ol_archetype": "gap-power maulers priority, mobile C (AVT interior core)",
+        "te_archetype": "Y inline blocker + move TE, multi-TE sets",
+        "qb_archetype": "rhythm pocket passer with pre-snap command (Justin Fields mobility)"
+      },
+      "dc_scheme": {
+        "base_concept": "Steve Wilks (post-Ulbrich) 4-3 under with Cover-3/Tampa-2 mix, aggressive fronts",
+        "edge_archetype": "4-3 DE speed + power (Gardner-era length), McDonald",
+        "dt_archetype": "3-tech penetrator priority (Quinnen Williams)",
+        "lb_archetype": "rangy WILL + downhill MIKE (Mosley lineage)",
+        "cb_archetype": "press-man boundary (Gardner), long CB",
+        "s_archetype": "box SS + deep FS (Davis/Adams lineage)"
+      },
+      "sources": [
+        "https://www.newyorkjets.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-new-york-jets-glenn-engstrand-2025",
+        "https://sharpfootballanalysis.com/betting/2025-new-york-jets-preview/"
+      ]
+    },
+
+    "PHI": {
+      "oc_scheme": {
+        "base_concept": "Kevin Patullo (post-Moore) RPO-heavy spread with gap-power run, tush-push signature, 11 personnel",
+        "rb_archetype": "physical gap-back (Barkley), receiving complement",
+        "wr_archetype": "Alpha X (A.J. Brown), vertical Z (Smith), YAC slot",
+        "ol_archetype": "gap-power maulers (Mailata/Johnson core, Dickerson/Jurgens)",
+        "te_archetype": "Y inline blocker + move TE (Goedert)",
+        "qb_archetype": "Hurts — dual-threat, RPO processor, tush-push specific"
+      },
+      "dc_scheme": {
+        "base_concept": "Vic Fangio 3-4 with 2-high quarters-match, disguise-first",
+        "edge_archetype": "3-4 OLB length + bend (Smith / Ojulari), 260-270 lb",
+        "dt_archetype": "3-4 DE 2-gap (Davis) + 3-tech penetrator (Carter)",
+        "lb_archetype": "coverage MIKE, communicator (Baun)",
+        "cb_archetype": "zone-match boundary (DeJean/Mitchell), physical",
+        "s_archetype": "two-high interchangeable (Blankenship / Mukuba)"
+      },
+      "sources": [
+        "https://www.philadelphiaeagles.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-philadelphia-eagles-fangio-scheme-2025",
+        "https://sumersports.com/teams/eagles/"
+      ]
+    },
+
+    "PIT": {
+      "oc_scheme": {
+        "base_concept": "Arthur Smith Titans-lineage gap/power with heavy 12/13 personnel and play-action",
+        "rb_archetype": "physical downhill gap back (Harris/Warren), receiving complement",
+        "wr_archetype": "contested X + vertical Z, possession slot",
+        "ol_archetype": "gap-power maulers, people-movers (Jones/Fautanu)",
+        "te_archetype": "Y inline blocker + move TE (Freiermuth), multi-TE",
+        "qb_archetype": "play-action boot passer with mobility (Rodgers 2025)"
+      },
+      "dc_scheme": {
+        "base_concept": "Teryl Austin/Tomlin LeBeau-legacy 3-4 with multiple fronts, heavy zone-match",
+        "edge_archetype": "3-4 OLB bend + length (Watt, Highsmith), 250-260 lb",
+        "dt_archetype": "2-gap 3-4 DE (Heyward) + penetrator NT",
+        "lb_archetype": "downhill MIKE (Queen) + coverage ILB",
+        "cb_archetype": "zone-match boundary (Ramsey), physical press",
+        "s_archetype": "two-high interchangeable, box SS (Fitzpatrick)"
+      },
+      "sources": [
+        "https://www.steelers.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-pittsburgh-steelers-arthur-smith-2025",
+        "https://sharpfootballanalysis.com/betting/2025-pittsburgh-steelers-preview/"
+      ]
+    },
+
+    "SF": {
+      "oc_scheme": {
+        "base_concept": "Kyle Shanahan outside-zone wide-zone with play-action boot, condensed splits — archetype of the tree",
+        "rb_archetype": "one-cut decisive back with lateral agility (McCaffrey lineage)",
+        "wr_archetype": "YAC-first separator, quick separation, not contested-catch (Aiyuk/Deebo templates)",
+        "ol_archetype": "athletic zone-blockers, lean OTs, mobile G/C (Williams/Brendel)",
+        "te_archetype": "Y-move blocker w/ receiving upside (Kittle)",
+        "qb_archetype": "boot/movement QB, quick game (Purdy)"
+      },
+      "dc_scheme": {
+        "base_concept": "Robert Saleh (returned 2025) 4-3 under Wide-9 with Fangio 2-high hybrid",
+        "edge_archetype": "hand-usage power 4-3 DE, 260+ lb, not pure speed (Bosa mold)",
+        "dt_archetype": "1-gap penetrator 3-tech (DeForest Buckner lineage / Hargrave)",
+        "lb_archetype": "rangy coverage LB (Warner archetype)",
+        "cb_archetype": "zone-match, physical press, long arms",
+        "s_archetype": "versatile post/robber both slots (Hufanga)"
+      },
+      "sources": [
+        "https://www.49ers.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-san-francisco-49ers-scheme-2025",
+        "https://sumersports.com/teams/49ers/"
+      ]
+    },
+
+    "SEA": {
+      "oc_scheme": {
+        "base_concept": "Klint Kubiak Shanahan-tree outside-zone with heavy play-action boot and condensed splits",
+        "rb_archetype": "one-cut zone back (Walker/Charbonnet), receiving 3rd-down",
+        "wr_archetype": "vertical Z (Metcalf departure, JSN), contested X, YAC slot",
+        "ol_archetype": "athletic zone OL, light OTs, mobile C (massive OL investment needed)",
+        "te_archetype": "Y move TE + inline blocker",
+        "qb_archetype": "Sam Darnold — rhythm pocket passer, boot chops"
+      },
+      "dc_scheme": {
+        "base_concept": "Mike Macdonald Baltimore-legacy disguised coverage, multiple front, Cover-6/quarters",
+        "edge_archetype": "versatile edge 3-4/4-3 hybrid (Witherspoon as DB hybrid), bend",
+        "dt_archetype": "2-gap nose (Jones) + 3-tech penetrator (Murphy)",
+        "lb_archetype": "communicator MIKE (Baker/Wagner lineage), coverage SAM",
+        "cb_archetype": "zone-match boundary, length priority (Witherspoon nickel)",
+        "s_archetype": "two-high interchangeable, Love/Diggs role"
+      },
+      "sources": [
+        "https://www.seahawks.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-seattle-seahawks-macdonald-2025",
+        "https://sharpfootballanalysis.com/betting/2025-seattle-seahawks-preview/"
+      ]
+    },
+
+    "TB": {
+      "oc_scheme": {
+        "base_concept": "Josh Grizzard (post-Coen) Shanahan-tree outside-zone with play-action boot, condensed splits, 11 personnel",
+        "rb_archetype": "one-cut zone back with receiving (White/Irving model)",
+        "wr_archetype": "vertical Z (Godwin), contested X (Evans), YAC slot (McMillan)",
+        "ol_archetype": "athletic zone OL (Wirfs LT), mobile interior",
+        "te_archetype": "Y move TE + inline blocker (Otton)",
+        "qb_archetype": "Baker Mayfield — rhythm passer with mobility, off-platform arm"
+      },
+      "dc_scheme": {
+        "base_concept": "Todd Bowles 3-4 multiple pressure, Cover-1/0 blitz-heavy",
+        "edge_archetype": "length + bend 3-4 OLB (Nassib/YGM lineage), 260 lb",
+        "dt_archetype": "2-gap nose + 3-tech penetrator (Vea)",
+        "lb_archetype": "blitzing MIKE (David) + coverage SAM",
+        "cb_archetype": "press-man + zone-match (Davis/Dean)",
+        "s_archetype": "box SS blitzer (Winfield Jr.) + deep FS"
+      },
+      "sources": [
+        "https://www.buccaneers.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-tampa-bay-buccaneers-bowles-2025",
+        "https://sumersports.com/teams/buccaneers/"
+      ]
+    },
+
+    "TEN": {
+      "oc_scheme": {
+        "base_concept": "Nick Holz (Callahan-tree) spread + quick-game, 11 personnel, WCO concepts",
+        "rb_archetype": "three-down back (Pollard/Spears), receiving-capable",
+        "wr_archetype": "vertical Z (Ridley), contested X, YAC slot (Boyd)",
+        "ol_archetype": "pass-pro OT priority (major need), athletic interior (Zeitler FA)",
+        "te_archetype": "Y move TE + inline blocker",
+        "qb_archetype": "mobility + arm talent development (Ward/Levis)"
+      },
+      "dc_scheme": {
+        "base_concept": "Dennard Wilson Ravens-legacy multiple front, disguise-first 2-high",
+        "edge_archetype": "3-4/4-3 hybrid edge, bend + power (Sweat/Landry)",
+        "dt_archetype": "2-gap nose (Simmons) + 3-tech penetrator",
+        "lb_archetype": "coverage MIKE, communicator",
+        "cb_archetype": "zone-match boundary (Sneed/Ransom)",
+        "s_archetype": "two-high interchangeable (Byard departure, Cisco)"
+      },
+      "sources": [
+        "https://www.tennesseetitans.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-tennessee-titans-callahan-scheme-2025",
+        "https://sharpfootballanalysis.com/betting/2025-tennessee-titans-preview/"
+      ]
+    },
+
+    "WAS": {
+      "oc_scheme": {
+        "base_concept": "Kliff Kingsbury Air Raid / Shanahan-hybrid — spread 11 personnel with designed QB movement",
+        "rb_archetype": "receiving-capable zone/gap back (Robinson/Ekeler)",
+        "wr_archetype": "vertical Z (McLaurin), contested X, YAC slot (McCaffrey role?)",
+        "ol_archetype": "pass-pro OT priority (Laremy Tunsil FA), athletic interior",
+        "te_archetype": "move TE flex + inline Y (Ertz/Sinnott)",
+        "qb_archetype": "Jayden Daniels — dual-threat, RPO/designed-run specialist with arm talent"
+      },
+      "dc_scheme": {
+        "base_concept": "Joe Whitt Jr. Packers/Cowboys-legacy 4-3 with Cover-2/Tampa-2 shells",
+        "edge_archetype": "4-3 DE speed + bend (Wagner/Newton), 255-265 lb",
+        "dt_archetype": "3-tech penetrator priority (Allen/Payne core aging)",
+        "lb_archetype": "rangy WILL + coverage MIKE (Luvu hybrid)",
+        "cb_archetype": "press-man + zone-match (Lattimore FA)",
+        "s_archetype": "two-high interchangeable (Fuller), box SS"
+      },
+      "sources": [
+        "https://www.commanders.com/team/coaches-roster/",
+        "https://www.pff.com/news/nfl-washington-commanders-kingsbury-whitt-2025",
+        "https://sumersports.com/teams/commanders/"
+      ]
+    }
+  },
+
+  "pillar2_roster_composition": {
+    "_scale_note": "1 = no need (stacked), 3 = depth need, 5 = critical starter need. Post-2025 FA snapshot April 2026.",
+
+    "ARI": {
+      "qb_room": 2, "rb_room": 3, "wr_room": 2, "te_room": 1, "ot_room": 3, "iol_room": 3, "edge_room": 4, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "Added Josh Sweat FA but still need bender opposite. Interior aging (Campbell 40, Tomlinson 32). Harrison/McBride/Conner skill stacked. LT Beachum retirement-age.",
+      "sources": ["https://overthecap.com/team/arizona-cardinals", "https://www.spotrac.com/nfl/arizona-cardinals/depth-chart/"]
+    },
+    "ATL": {
+      "qb_room": 2, "rb_room": 1, "wr_room": 3, "te_room": 2, "ot_room": 2, "iol_room": 3, "edge_room": 5, "dt_room": 4, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "Edge remains weakest pass rush in NFL despite drafting Pearce/Walker '25. Bijan/Penix/Pitts elite skill. Matthews aging at LT. Cousins cap situation unresolved.",
+      "sources": ["https://overthecap.com/team/atlanta-falcons", "https://www.spotrac.com/nfl/atlanta-falcons/depth-chart/"]
+    },
+    "BAL": {
+      "qb_room": 1, "rb_room": 2, "wr_room": 3, "te_room": 1, "ot_room": 3, "iol_room": 2, "edge_room": 3, "dt_room": 2, "lb_room": 2, "cb_room": 4, "s_room": 2,
+      "notes": "Humphrey aging, Wiggins unproven, Awuzie departed — CB biggest room. WR2 opposite Flowers still unresolved. Stanley/Faalele tackle uncertainty.",
+      "sources": ["https://overthecap.com/team/baltimore-ravens", "https://www.spotrac.com/nfl/baltimore-ravens/depth-chart/"]
+    },
+    "BUF": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 4, "te_room": 2, "ot_room": 3, "iol_room": 2, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 4, "s_room": 3,
+      "notes": "Post-Diggs/Davis WR room still thin — Coleman unproven as #1. CB aging (Benford core) with Rasul Douglas departed. Deep need at CB2 and vertical WR.",
+      "sources": ["https://overthecap.com/team/buffalo-bills", "https://www.spotrac.com/nfl/buffalo-bills/depth-chart/"]
+    },
+    "CAR": {
+      "qb_room": 2, "rb_room": 2, "wr_room": 3, "te_room": 3, "ot_room": 3, "iol_room": 3, "edge_room": 4, "dt_room": 4, "lb_room": 3, "cb_room": 4, "s_room": 4,
+      "notes": "Brooks/Legette/XL Coker recent investments but WR1 X still open. Defense rebuilt but thin top-end. Safety hole persists after Chinn departure.",
+      "sources": ["https://overthecap.com/team/carolina-panthers", "https://www.spotrac.com/nfl/carolina-panthers/depth-chart/"]
+    },
+    "CHI": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 2, "te_room": 2, "ot_room": 4, "iol_room": 2, "edge_room": 3, "dt_room": 2, "lb_room": 3, "cb_room": 2, "s_room": 3,
+      "notes": "Jackson/Thuney/Dalman FA overhaul of IOL. Tackle spots (Wright/Jones) remain biggest hole. Edge depth behind Sweat thin. WR stacked (Moore/Odunze/Burden).",
+      "sources": ["https://overthecap.com/team/chicago-bears", "https://www.spotrac.com/nfl/chicago-bears/depth-chart/"]
+    },
+    "CIN": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 4, "edge_room": 2, "dt_room": 4, "lb_room": 3, "cb_room": 3, "s_room": 4,
+      "notes": "Tee Higgins retained — WR2 solved but depth thin. IOL chronic (Volson/Karras/Cappa). Interior DL biggest need with BJ Hill aging and Reader gone.",
+      "sources": ["https://overthecap.com/team/cincinnati-bengals", "https://www.spotrac.com/nfl/cincinnati-bengals/depth-chart/"]
+    },
+    "CLE": {
+      "qb_room": 5, "rb_room": 3, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 2, "s_room": 3,
+      "notes": "Watson injury + Flacco/Pickett stopgaps = QB is CRITICAL need. Bitonio/Teller IOL aging. WR room rebuilt around Jeudy but X unresolved.",
+      "sources": ["https://overthecap.com/team/cleveland-browns", "https://www.spotrac.com/nfl/cleveland-browns/depth-chart/"]
+    },
+    "DAL": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 2, "te_room": 2, "ot_room": 3, "iol_room": 4, "edge_room": 2, "dt_room": 5, "lb_room": 4, "cb_room": 2, "s_room": 3,
+      "notes": "Added Kenny Clark in FA, still need pass-rush interior. IOL is Tyler Booker + rookie competition. Pickens/Lamb WR combo solved. LB Overshown/DeMarvion Overshown injury concerns.",
+      "sources": ["https://overthecap.com/team/dallas-cowboys", "https://www.spotrac.com/nfl/dallas-cowboys/depth-chart/"]
+    },
+    "DEN": {
+      "qb_room": 1, "rb_room": 4, "wr_room": 4, "te_room": 3, "ot_room": 2, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 4, "cb_room": 1, "s_room": 2,
+      "notes": "Surtain/Moss/McMillian loaded secondary. RB room post-Williams thin — biggest skill need. WR1 post-Sutton question. LB after Greenlaw injury.",
+      "sources": ["https://overthecap.com/team/denver-broncos", "https://www.spotrac.com/nfl/denver-broncos/depth-chart/"]
+    },
+    "DET": {
+      "qb_room": 2, "rb_room": 2, "wr_room": 2, "te_room": 2, "ot_room": 2, "iol_room": 3, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 2,
+      "notes": "Hutchinson return + Za'Darius Smith FA help edge. IOL after Glasgow aging. CB2 opposite Arnold remains weakness (Davis/Rakestraw). WR stacked.",
+      "sources": ["https://overthecap.com/team/detroit-lions", "https://www.spotrac.com/nfl/detroit-lions/depth-chart/"]
+    },
+    "GB": {
+      "qb_room": 1, "rb_room": 2, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 3, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 4, "s_room": 2,
+      "notes": "Alexander departed — CB biggest need behind Nixon/Hobbs. WR1 X still unresolved. Bakhtiari replacement at LT uncertain (Walker/Morgan).",
+      "sources": ["https://overthecap.com/team/green-bay-packers", "https://www.spotrac.com/nfl/green-bay-packers/depth-chart/"]
+    },
+    "HOU": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 2, "te_room": 3, "ot_room": 5, "iol_room": 4, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 2, "s_room": 3,
+      "notes": "OT is CRITICAL — Tunsil traded to WAS, Howard unproven at LT. IOL also rebuilt in FA (Scruggs/Robinson). Stroud protection is the entire draft narrative.",
+      "sources": ["https://overthecap.com/team/houston-texans", "https://www.spotrac.com/nfl/houston-texans/depth-chart/"]
+    },
+    "IND": {
+      "qb_room": 3, "rb_room": 2, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 2, "edge_room": 3, "dt_room": 2, "lb_room": 3, "cb_room": 3, "s_room": 4,
+      "notes": "Richardson/Jones QB unsettled. Safety room biggest hole post-Moore/Cross. DeForest Buckner anchors DL. WR1 X question (Pittman aging, Downs slot).",
+      "sources": ["https://overthecap.com/team/indianapolis-colts", "https://www.spotrac.com/nfl/indianapolis-colts/depth-chart/"]
+    },
+    "JAX": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 3, "edge_room": 3, "dt_room": 4, "lb_room": 3, "cb_room": 4, "s_room": 3,
+      "notes": "Interior DL post-Allen departure. CB rebuilt (Campbell, Lloyd) but still thin. Coen new HC drives scheme fit overhaul. Hunter pick (either WR or CB) complicates boards.",
+      "sources": ["https://overthecap.com/team/jacksonville-jaguars", "https://www.spotrac.com/nfl/jacksonville-jaguars/depth-chart/"]
+    },
+    "KC": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 3, "te_room": 2, "ot_room": 4, "iol_room": 3, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "LT remains unsolved (Taylor/Suamataia) — multi-year hole. WR1 opposite Worthy/Rice unresolved (Hollywood Brown injury). Jones/Nnadi aging interior.",
+      "sources": ["https://overthecap.com/team/kansas-city-chiefs", "https://www.spotrac.com/nfl/kansas-city-chiefs/depth-chart/"]
+    },
+    "LV": {
+      "qb_room": 2, "rb_room": 4, "wr_room": 3, "te_room": 1, "ot_room": 3, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 4, "s_room": 3,
+      "notes": "Geno Smith acquired; Bowers/Meyers stacked skill. CB room thin post-Hobbs departure. Interior DL aging. Jeanty fit with Chip Kelly scheme.",
+      "sources": ["https://overthecap.com/team/las-vegas-raiders", "https://www.spotrac.com/nfl/las-vegas-raiders/depth-chart/"]
+    },
+    "LAC": {
+      "qb_room": 1, "rb_room": 2, "wr_room": 4, "te_room": 3, "ot_room": 2, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "McConkey elite slot but X/Z questions (Palmer departed, Johnston unproven). TE room thin (Dissly aging). Interior DL after Mack/Bosa edge secure.",
+      "sources": ["https://overthecap.com/team/los-angeles-chargers", "https://www.spotrac.com/nfl/los-angeles-chargers/depth-chart/"]
+    },
+    "LAR": {
+      "qb_room": 3, "rb_room": 2, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "Stafford aging — post-Kupp WR need X. Verse/Young/Turner edge loaded. Interior OL (Jackson/Dotson) question. Stafford succession the hidden QB story.",
+      "sources": ["https://overthecap.com/team/los-angeles-rams", "https://www.spotrac.com/nfl/los-angeles-rams/depth-chart/"]
+    },
+    "MIA": {
+      "qb_room": 3, "rb_room": 2, "wr_room": 3, "te_room": 3, "ot_room": 3, "iol_room": 4, "edge_room": 3, "dt_room": 5, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "Wilkins/Davis/Hand departed — interior DL is CRITICAL. IOL remains chronic weakness. Tua injury history raises QB2 need. Hill aging at WR.",
+      "sources": ["https://overthecap.com/team/miami-dolphins", "https://www.spotrac.com/nfl/miami-dolphins/depth-chart/"]
+    },
+    "MIN": {
+      "qb_room": 1, "rb_room": 2, "wr_room": 2, "te_room": 2, "ot_room": 2, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 4, "s_room": 3,
+      "notes": "Murphy/Rodgers CB thin post-Griffin. Hargrave/Allen interior strong but depth. Darrisaw/O'Neill tackles solid. Slot CB (Bynum depart) biggest hole.",
+      "sources": ["https://overthecap.com/team/minnesota-vikings", "https://www.spotrac.com/nfl/minnesota-vikings/depth-chart/"]
+    },
+    "NE": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 2, "te_room": 2, "ot_room": 5, "iol_room": 4, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 2, "s_room": 3,
+      "notes": "Diggs/Hollins/Henry FA fills skill. OT is existential — Campbell LT + RT black hole. IOL still thin. Maye protection drives entire draft.",
+      "sources": ["https://overthecap.com/team/new-england-patriots", "https://www.spotrac.com/nfl/new-england-patriots/depth-chart/"]
+    },
+    "NO": {
+      "qb_room": 4, "rb_room": 2, "wr_room": 3, "te_room": 3, "ot_room": 3, "iol_room": 3, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 4,
+      "notes": "Carr aging/injury — Rattler/Haener unproven. Mathieu retired — safety critical. Jordan aging at edge. Full rebuild mode w/ Staley/Moore staff.",
+      "sources": ["https://overthecap.com/team/new-orleans-saints", "https://www.spotrac.com/nfl/new-orleans-saints/depth-chart/"]
+    },
+    "NYG": {
+      "qb_room": 3, "rb_room": 2, "wr_room": 2, "te_room": 3, "ot_room": 3, "iol_room": 4, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 4,
+      "notes": "Wilson/Dart QB question. Nabers/Slayton WR solid. IOL chronic (Van Roten/Runyan). Safety post-McKinney unresolved. Edge loaded (Burns/Thibodeaux/Carter).",
+      "sources": ["https://overthecap.com/team/new-york-giants", "https://www.spotrac.com/nfl/new-york-giants/depth-chart/"]
+    },
+    "NYJ": {
+      "qb_room": 3, "rb_room": 2, "wr_room": 3, "te_room": 4, "ot_room": 3, "iol_room": 3, "edge_room": 3, "dt_room": 2, "lb_room": 3, "cb_room": 3, "s_room": 4,
+      "notes": "Fields/Taylor QB uncertainty. TE is critical (no starter-caliber). Adams traded, Davis aging — safety need. Wilson WR1 solid, Reynolds #2 bridge.",
+      "sources": ["https://overthecap.com/team/new-york-jets", "https://www.spotrac.com/nfl/new-york-jets/depth-chart/"]
+    },
+    "PHI": {
+      "qb_room": 1, "rb_room": 2, "wr_room": 2, "te_room": 2, "ot_room": 3, "iol_room": 3, "edge_room": 3, "dt_room": 3, "lb_room": 3, "cb_room": 3, "s_room": 2,
+      "notes": "Roster stacked everywhere post-Super Bowl. Edge behind Smith/Hunt post-Graham retirement. Interior OL Kelce/Dickerson/Mailata elite. Mukuba/Blankenship solidified S.",
+      "sources": ["https://overthecap.com/team/philadelphia-eagles", "https://www.spotrac.com/nfl/philadelphia-eagles/depth-chart/"]
+    },
+    "PIT": {
+      "qb_room": 3, "rb_room": 2, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 3, "edge_room": 2, "dt_room": 3, "lb_room": 3, "cb_room": 2, "s_room": 2,
+      "notes": "Rodgers 1-year bridge — QB of future need. WR post-Pickens trade thin (Metcalf FA added). Ramsey/Porter CB loaded. Watt/Highsmith edge elite.",
+      "sources": ["https://overthecap.com/team/pittsburgh-steelers", "https://www.spotrac.com/nfl/pittsburgh-steelers/depth-chart/"]
+    },
+    "SF": {
+      "qb_room": 1, "rb_room": 3, "wr_room": 3, "te_room": 2, "ot_room": 3, "iol_room": 4, "edge_room": 3, "dt_room": 4, "lb_room": 3, "cb_room": 4, "s_room": 3,
+      "notes": "Aiyuk trade pending, Samuel traded to WAS — WR thin behind Pearsall/Jennings. Interior DL post-Hargrave/Armstead rebuild. CB after Ward departure critical. IOL question.",
+      "sources": ["https://overthecap.com/team/san-francisco-49ers", "https://www.spotrac.com/nfl/san-francisco-49ers/depth-chart/"]
+    },
+    "SEA": {
+      "qb_room": 2, "rb_room": 2, "wr_room": 2, "te_room": 3, "ot_room": 4, "iol_room": 5, "edge_room": 3, "dt_room": 2, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "IOL is the worst room in NFL (Lucas hurt, Haynes/Hayes thin). OT also shaky. Metcalf trade creates WR reshuffle. Darnold bridge-QB. Jones/Murphy interior DL solid.",
+      "sources": ["https://overthecap.com/team/seattle-seahawks", "https://www.spotrac.com/nfl/seattle-seahawks/depth-chart/"]
+    },
+    "TB": {
+      "qb_room": 2, "rb_room": 2, "wr_room": 2, "te_room": 3, "ot_room": 3, "iol_room": 3, "edge_room": 4, "dt_room": 3, "lb_room": 4, "cb_room": 3, "s_room": 3,
+      "notes": "Edge post-YGM/Gholston thin. LB David aging. Evans/Godwin/McMillan WR stacked. Wirfs elite LT. Mayfield extension secures QB short-term.",
+      "sources": ["https://overthecap.com/team/tampa-bay-buccaneers", "https://www.spotrac.com/nfl/tampa-bay-buccaneers/depth-chart/"]
+    },
+    "TEN": {
+      "qb_room": 5, "rb_room": 2, "wr_room": 3, "te_room": 3, "ot_room": 4, "iol_room": 2, "edge_room": 3, "dt_room": 2, "lb_room": 3, "cb_room": 3, "s_room": 3,
+      "notes": "QB is existential (#1 overall candidate) — Levis/Rudolph insufficient. Zeitler/Lloyd IOL overhaul. Sweat/Simmons DL anchors. WR thin behind Ridley.",
+      "sources": ["https://overthecap.com/team/tennessee-titans", "https://www.spotrac.com/nfl/tennessee-titans/depth-chart/"]
+    },
+    "WAS": {
+      "qb_room": 1, "rb_room": 2, "wr_room": 3, "te_room": 3, "ot_room": 2, "iol_room": 3, "edge_room": 3, "dt_room": 4, "lb_room": 3, "cb_room": 2, "s_room": 3,
+      "notes": "Tunsil trade fixed LT. Samuel trade fills WR2. Interior DL post-Payne aging critical. Daniels is franchise QB. Lattimore CB1 solid.",
+      "sources": ["https://overthecap.com/team/washington-commanders", "https://www.spotrac.com/nfl/washington-commanders/depth-chart/"]
+    }
+  },
+
+  "pillar3_trade_mechanics": {
+    "trade_value_charts": {
+      "jimmy_johnson": {
+        "1": 3000, "2": 2600, "3": 2200, "4": 1800, "5": 1700, "6": 1600, "7": 1500, "8": 1400,
+        "9": 1350, "10": 1300, "11": 1250, "12": 1200, "13": 1150, "14": 1100, "15": 1050, "16": 1000,
+        "17": 950, "18": 900, "19": 875, "20": 850, "21": 800, "22": 780, "23": 760, "24": 740,
+        "25": 720, "26": 700, "27": 680, "28": 660, "29": 640, "30": 620, "31": 600, "32": 590
+      },
+      "rich_hill": {
+        "1": 500, "2": 453, "3": 412, "4": 374, "5": 342, "6": 313, "7": 287, "8": 265,
+        "9": 245, "10": 227, "11": 211, "12": 196, "13": 183, "14": 171, "15": 160, "16": 150,
+        "17": 141, "18": 133, "19": 125, "20": 118, "21": 112, "22": 106, "23": 100, "24": 95,
+        "25": 90, "26": 86, "27": 82, "28": 78, "29": 74, "30": 71, "31": 68, "32": 65
+      },
+      "chase_stuart": {
+        "1": 34.6, "2": 29.1, "3": 27.1, "4": 25.3, "5": 23.6, "6": 22.0, "7": 20.6, "8": 19.3,
+        "9": 18.1, "10": 17.0, "11": 16.0, "12": 15.0, "13": 14.1, "14": 13.3, "15": 12.6, "16": 11.9,
+        "17": 11.2, "18": 10.6, "19": 10.0, "20": 9.5, "21": 9.0, "22": 8.5, "23": 8.0, "24": 7.6,
+        "25": 7.2, "26": 6.9, "27": 6.6, "28": 6.3, "29": 6.0, "30": 5.7, "31": 5.4, "32": 5.2
+      },
+      "chart_sources": [
+        "https://www.footballperspective.com/the-jimmy-johnson-trade-value-chart/",
+        "https://overthecap.com/draft-trade-value-chart",
+        "https://www.footballperspective.com/draft-value-chart/",
+        "https://www.harvardsportsanalysis.org/2011/03/an-economic-analysis-of-the-nfl-draft/"
+      ]
+    },
+
+    "trade_up_tendencies": {
+      "ARI": {
+        "historical_freq": "1 of 8 drafts trade-up since 2018 (Kyler 2019)",
+        "profile": "Monti Ossenfort conservative — prefers to accumulate picks and stay put",
+        "willing_to_give": "minimal premium; day-2 flexibility only"
+      },
+      "ATL": {
+        "historical_freq": "2 of 8 (Ridley 2018; Penix 2024 — stayed at 8)",
+        "profile": "Terry Fontenot moderate; active in day-2 moves",
+        "willing_to_give": "mid-round swap, not future 1sts typically"
+      },
+      "BAL": {
+        "historical_freq": "6 of 8 drafts include at least one move (mostly trade-DOWN)",
+        "profile": "Eric DeCosta / Ozzie tree — accumulator, most frequent trade-down team in NFL",
+        "willing_to_give": "rarely trades up for premium — philosophical down-mover"
+      },
+      "BUF": {
+        "historical_freq": "4 of 8 drafts include trade-up",
+        "profile": "Brandon Beane moderate aggression, willing to pay for specific targets",
+        "willing_to_give": "1st + 3rd + future 4th range for top-10 ascension"
+      },
+      "CAR": {
+        "historical_freq": "3 of 8 — Bryce Young 2023 massive up (huge package to CHI)",
+        "profile": "Post-Fitterer Dan Morgan still unproven tendencies",
+        "willing_to_give": "hesitant after Young cost; likely stands pat"
+      },
+      "CHI": {
+        "historical_freq": "3 of 8 (Fields 2021 up, Odunze 2024 stay); frequent trade-DOWN role",
+        "profile": "Ryan Poles accumulator — beneficiary of CAR/NYJ overpay",
+        "willing_to_give": "low — prefers to receive premiums"
+      },
+      "CIN": {
+        "historical_freq": "1 of 8 drafts (very conservative)",
+        "profile": "Duke Tobin / Mike Brown historically cheapest franchise on trade premiums",
+        "willing_to_give": "almost never moves up; occasional day-3 swaps"
+      },
+      "CLE": {
+        "historical_freq": "5 of 8 including future-1st packages",
+        "profile": "Andrew Berry aggressive (Watson 2022 precedent) — now capped by missing 1sts",
+        "willing_to_give": "2026 has limited ammo post-Watson; day-2 swaps only"
+      },
+      "DAL": {
+        "historical_freq": "2 of 8 (Parsons '21 was from within round)",
+        "profile": "Jerry Jones historically talks but rarely executes",
+        "willing_to_give": "occasional small moves, rarely future-1sts"
+      },
+      "DEN": {
+        "historical_freq": "5 of 8 — most aggressive era (Bo Nix ascension 2024)",
+        "profile": "Paton/Payton will trade up for specific QB/playmaker targets",
+        "willing_to_give": "future 1sts on table for top-10 QB; less for other positions"
+      },
+      "DET": {
+        "historical_freq": "4 of 8 (Gibbs '23, Arnold '24)",
+        "profile": "Brad Holmes tactical — will leap for conviction picks",
+        "willing_to_give": "3rd + 4th range, rarely future-1st premium"
+      },
+      "GB": {
+        "historical_freq": "4 of 8 (multiple mid-round up-moves)",
+        "profile": "Brian Gutekunst strategic — up-for-value, not positional reach",
+        "willing_to_give": "day-2 pick swaps, almost never future 1sts"
+      },
+      "HOU": {
+        "historical_freq": "5 of 8 since Caserio era began — famously active (Stroud + Anderson 2023)",
+        "profile": "Nick Caserio Belichick-tree, most active trade GM in NFL",
+        "willing_to_give": "future-1sts + packages; reputation precedes all talks"
+      },
+      "IND": {
+        "historical_freq": "2 of 8",
+        "profile": "Chris Ballard hyper-conservative — won't move future 1sts",
+        "willing_to_give": "occasional small-range swaps; day-2 only"
+      },
+      "JAX": {
+        "historical_freq": "4 of 8 including Hunter '25 massive leap (from 5 to 2)",
+        "profile": "New GM James Gladstone unproven but Hunter trade shows willingness",
+        "willing_to_give": "already moved 2026 #1 in Hunter package — ammo depleted"
+      },
+      "KC": {
+        "historical_freq": "6 of 8 — most aggressive top-5 leapers (Mahomes 2017, Worthy 2024)",
+        "profile": "Brett Veach trades up more than almost any GM, especially for WR/OL",
+        "willing_to_give": "1st + 3rd next-year for top-5 range; proven pattern"
+      },
+      "LV": {
+        "historical_freq": "3 of 8",
+        "profile": "New regime — Tom Telesco conservative historically (Chargers)",
+        "willing_to_give": "modest moves, reluctant on future picks"
+      },
+      "LAC": {
+        "historical_freq": "2 of 8 — Hortiz first draft 2024 (stayed put at 5)",
+        "profile": "Joe Hortiz (Ravens-tree) accumulator by philosophy",
+        "willing_to_give": "almost never up; occasional trade-DOWN"
+      },
+      "LAR": {
+        "historical_freq": "4 of 8 — famous 'f*** them picks' Snead era",
+        "profile": "Les Snead trades draft capital for veterans more than picks; draft-day moves less frequent now",
+        "willing_to_give": "in rebuild flipped — accumulating capital 2024-2026"
+      },
+      "MIA": {
+        "historical_freq": "5 of 8 (multiple Tyreek/Ramsey/Chubb trades depleted)",
+        "profile": "Chris Grier front-loaded veteran trades, now capped on draft capital",
+        "willing_to_give": "limited — minimal 2026 premium available"
+      },
+      "MIN": {
+        "historical_freq": "4 of 8 — JJ McCarthy 2024 up-move, Turner '24 trade-back to up",
+        "profile": "Kwesi Adofo-Mensah Harvard/analytics tree but willing to attack",
+        "willing_to_give": "analytical — only when chart math favors; medium aggression"
+      },
+      "NE": {
+        "historical_freq": "5 of 8 historically — Belichick trade-DOWN signature, now Eliot Wolf era",
+        "profile": "Post-Belichick Wolf unproven; bias toward down-moves continues",
+        "willing_to_give": "low aggression; accumulator"
+      },
+      "NO": {
+        "historical_freq": "3 of 8 — famous 2023 trade-UP-for-future moves",
+        "profile": "Mickey Loomis mortgages future, not present — 2026 ammo weak",
+        "willing_to_give": "nearly 0 future 1sts remaining"
+      },
+      "NYG": {
+        "historical_freq": "4 of 8 — Jaxson Dart '25 pattern shows readiness",
+        "profile": "Joe Schoen willing to leap for QB specifically",
+        "willing_to_give": "1st + 3rd for QB-specific up-moves"
+      },
+      "NYJ": {
+        "historical_freq": "4 of 8 — Wilson 2021 stay, Sauce 2022 stay, Hall '22 up",
+        "profile": "Douglas/Mougey transition; new regime unproven",
+        "willing_to_give": "moderate — will move for specific conviction picks"
+      },
+      "PHI": {
+        "historical_freq": "7 of 8 drafts include at least one move (mix up/down)",
+        "profile": "Howie Roseman MOST ACTIVE trader in NFL — always moving picks",
+        "willing_to_give": "any combination — Roseman always finds a deal"
+      },
+      "PIT": {
+        "historical_freq": "2 of 8 — historically stand-pat",
+        "profile": "Omar Khan era slightly more active than Colbert, but still conservative",
+        "willing_to_give": "limited, prefers to stay"
+      },
+      "SF": {
+        "historical_freq": "5 of 8 — Trey Lance 2021 megatrade, Trent Williams acquisition style",
+        "profile": "John Lynch willing to package for specific Shanahan targets",
+        "willing_to_give": "future-1sts for QB ascension historically; current cap/cap complicates"
+      },
+      "SEA": {
+        "historical_freq": "4 of 8 — John Schneider trade-DOWN signature, occasional up-moves",
+        "profile": "Schneider MOST FREQUENT trade-DOWN GM in NFL (BAL rivals)",
+        "willing_to_give": "rare on up-moves; famously courts calls to move back"
+      },
+      "TB": {
+        "historical_freq": "2 of 8 — Jason Licht conservative",
+        "profile": "Licht stays put, occasional day-3 moves",
+        "willing_to_give": "minimal aggression"
+      },
+      "TEN": {
+        "historical_freq": "3 of 8 — Borgonzi new GM unproven",
+        "profile": "Titans holding #1 overall in 2026 — primary trade-DOWN candidate",
+        "willing_to_give": "from #1 they are the market-maker, not giver"
+      },
+      "WAS": {
+        "historical_freq": "4 of 8 — Adam Peters 2024 first draft moved around",
+        "profile": "Peters 49ers-tree, moderate aggression",
+        "willing_to_give": "willing on value-based leaps, avoids overpay"
+      },
+      "_tendencies_sources": [
+        "https://www.pro-football-reference.com/play-index/draft_trade_finder.cgi",
+        "https://overthecap.com/draft-trade-history",
+        "https://www.footballperspective.com/nfl-draft-trade-history/",
+        "https://www.espn.com/nfl/story/_/id/draft-trade-history-by-team"
+      ]
+    },
+
+    "2026_comp_picks": {
+      "_note": "Comp picks projected and officially awarded by NFL via OTC cancelled-comp formula. Snapshot April 2026 post-award.",
+      "BAL": ["3-comp (lost Patrick Queen-adjacent)", "4-comp", "4-comp"],
+      "PHI": ["4-comp", "5-comp", "6-comp"],
+      "GB": ["3-comp (Jaire Alexander cut/trade adjusted)", "6-comp"],
+      "NE": ["3-comp"],
+      "DAL": ["4-comp", "5-comp"],
+      "HOU": ["4-comp"],
+      "KC": ["4-comp (Justin Reid departure)"],
+      "LAR": ["4-comp", "5-comp"],
+      "LAC": ["4-comp (Williams/Johnston adjacent)"],
+      "NYG": ["4-comp (Saquon Barkley — reduced by signings)"],
+      "MIN": ["4-comp (Kirk Cousins formula)"],
+      "CLE": ["5-comp"],
+      "DET": ["5-comp"],
+      "NO": ["5-comp"],
+      "ATL": ["5-comp"],
+      "MIA": ["6-comp"],
+      "TEN": ["6-comp"],
+      "ARI": ["6-comp"],
+      "_2026_comp_sources": [
+        "https://overthecap.com/compensatory-picks",
+        "https://www.nfl.com/news/compensatory-picks-2026",
+        "https://www.spotrac.com/nfl/compensatory-picks/"
+      ]
+    },
+
+    "2026_trade_currency_notes": {
+      "teams_with_extra_2026_1sts": ["CLE (no 2026 1st — Watson)", "CAR (originally owed to CHI, already conveyed)", "JAX (traded 2026 1st in Hunter package to CLE)"],
+      "teams_with_extra_2027_1sts": ["CHI (own, plus CAR conveyed 2025)", "PHI (often has extra via trades)"],
+      "qb_driven_upward_pressure": "Only 2-3 legitimate 1st-round QBs in 2026 class — TEN (#1) is lone consensus lock; if a team wants #2-caliber QB early, up-moves to TEN or 2nd pick carry extreme premium",
+      "sources": [
+        "https://overthecap.com/future-draft-pick-trades",
+        "https://www.tankathon.com/future_picks",
+        "https://www.pro-football-reference.com/years/2026/draft.htm"
+      ]
+    }
+  }
+}

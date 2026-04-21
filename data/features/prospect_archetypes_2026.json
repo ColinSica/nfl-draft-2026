@@ -1,0 +1,4063 @@
+{
+  "meta": {
+    "n_tagged": 393
+  },
+  "archetypes": {
+    "Fernando Mendoza": [
+      "accurate_QB",
+      "pocket_QB"
+    ],
+    "Arvell Reese": [
+      "athletic_rusher",
+      "coverage_LB",
+      "downhill_LB"
+    ],
+    "David Bailey": [
+      "athletic_rusher",
+      "production_rusher",
+      "standup_EDGE"
+    ],
+    "Sonny Styles": [
+      "coverage_LB",
+      "downhill_LB"
+    ],
+    "Francis Mauigoa": [
+      "movement_tackle",
+      "power_tackle"
+    ],
+    "Caleb Downs": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Mansoor Delane": [
+      "man_corner",
+      "press_corner",
+      "zone_corner"
+    ],
+    "Jermod McCoy": [
+      "man_corner",
+      "press_corner",
+      "zone_corner"
+    ],
+    "Olaivavega Ioane": [
+      "athletic_interior",
+      "interior_OL"
+    ],
+    "Kenyon Sadiq": [
+      "inline_TE",
+      "move_TE"
+    ],
+    "Dillon Thieneman": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Kadyn Proctor": [
+      "power_tackle"
+    ],
+    "Emmanuel McNeil-Warren": [
+      "split_safety"
+    ],
+    "Peter Woods": [
+      "penetrating_IDL",
+      "run_stuffing_IDL"
+    ],
+    "Avieon Terrell": [
+      "zone_corner"
+    ],
+    "Kayden McDonald": [
+      "run_stuffing_IDL"
+    ],
+    "Max Iheanachor": [
+      "movement_tackle",
+      "power_tackle"
+    ],
+    "Cashius Howell": [
+      "athletic_rusher",
+      "production_rusher",
+      "standup_EDGE"
+    ],
+    "Ty Simpson": [
+      "accurate_QB",
+      "pocket_QB"
+    ],
+    "Colton Hood": [
+      "man_corner",
+      "press_corner",
+      "zone_corner"
+    ],
+    "C.J. Allen": [
+      "coverage_LB",
+      "downhill_LB"
+    ],
+    "Chris Johnson": [
+      "press_corner",
+      "man_corner"
+    ],
+    "Caleb Banks": [
+      "run_stuffing_IDL"
+    ],
+    "Chase Bisontis": [
+      "interior_OL"
+    ],
+    "Emmanuel Pregnon": [
+      "athletic_interior",
+      "interior_OL"
+    ],
+    "Malachi Lawrence": [
+      "standup_EDGE"
+    ],
+    "Brandon Cisse": [
+      "zone_corner"
+    ],
+    "Jacob Rodriguez": [
+      "downhill_LB"
+    ],
+    "Christen Miller": [
+      "penetrating_IDL",
+      "run_stuffing_IDL"
+    ],
+    "Anthony Hill Jr.": [
+      "coverage_LB",
+      "downhill_LB"
+    ],
+    "Lee Hunter": [
+      "run_stuffing_IDL"
+    ],
+    "D'angelo Ponds": [
+      "zone_corner"
+    ],
+    "Eli Stowers": [
+      "inline_TE",
+      "move_TE"
+    ],
+    "Gabe Jacas": [
+      "production_rusher"
+    ],
+    "Chris Brazzell": [
+      "vertical_stretcher"
+    ],
+    "Jake Golday": [
+      "downhill_LB"
+    ],
+    "Treydan Stukes": [
+      "press_corner",
+      "man_corner"
+    ],
+    "Keylan Rutledge": [
+      "interior_OL"
+    ],
+    "A.J. Haulcy": [
+      "box_safety"
+    ],
+    "Derrick Moore": [
+      "standup_EDGE"
+    ],
+    "Josiah Trotter": [
+      "downhill_LB"
+    ],
+    "Keionte Scott": [
+      "zone_corner",
+      "man_corner"
+    ],
+    "Mike Washington Jr.": [
+      "power_back",
+      "home_run_hitter"
+    ],
+    "Domonique Orange": [
+      "run_stuffing_IDL"
+    ],
+    "Connor Lew": [
+      "interior_OL",
+      "athletic_interior"
+    ],
+    "Keith Abney II": [
+      "zone_corner"
+    ],
+    "Dani Dennis-Sutton": [
+      "standup_EDGE",
+      "athletic_rusher"
+    ],
+    "Malachi Fields": [
+      "X_receiver"
+    ],
+    "Elijah Sarratt": [
+      "X_receiver"
+    ],
+    "Antonio Williams": [
+      "slot_separator"
+    ],
+    "Gracen Halton": [
+      "penetrating_IDL"
+    ],
+    "Davison Igbinosun": [
+      "press_corner"
+    ],
+    "Garrett Nussmeier": [
+      "accurate_QB",
+      "pocket_QB"
+    ],
+    "Sam Hecht": [
+      "interior_OL"
+    ],
+    "Skyler Bell": [
+      "YAC_slot"
+    ],
+    "Jaishawn Barham": [
+      "downhill_LB"
+    ],
+    "Darrell Jackson Jr.": [
+      "run_stuffing_IDL"
+    ],
+    "Kamari Ramsey": [
+      "split_safety"
+    ],
+    "Bud Clark": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Bryce Lance": [
+      "X_receiver"
+    ],
+    "Jalon Kilgore": [
+      "box_safety"
+    ],
+    "Jonah Coleman": [
+      "power_back",
+      "pass_catching_back"
+    ],
+    "Malik Muhammad": [
+      "press_corner"
+    ],
+    "Zakee Wheatley": [
+      "split_safety"
+    ],
+    "Julian Neal": [
+      "press_corner"
+    ],
+    "Genesis Smith": [
+      "split_safety"
+    ],
+    "Logan Jones": [
+      "interior_OL"
+    ],
+    "Drew Allar": [
+      "pocket_QB"
+    ],
+    "Devin Moore": [
+      "zone_corner"
+    ],
+    "Chandler Rivers": [
+      "man_corner",
+      "press_corner",
+      "zone_corner"
+    ],
+    "Jalen Farmer": [
+      "interior_OL"
+    ],
+    "Jake Slaughter": [
+      "interior_OL"
+    ],
+    "Daylen Everette": [
+      "press_corner",
+      "man_corner"
+    ],
+    "Ja'Kobi Lane": [
+      "X_receiver"
+    ],
+    "De'Zhaun Stribling": [
+      "X_receiver"
+    ],
+    "Markel Bell": [
+      "power_tackle"
+    ],
+    "Sam Roush": [
+      "inline_TE"
+    ],
+    "L.T. Overton": [
+      "hand_in_dirt_EDGE"
+    ],
+    "Emmett Johnson": [
+      "pass_catching_back"
+    ],
+    "Kaleb Proctor": [
+      "penetrating_IDL"
+    ],
+    "Will Lee III": [
+      "zone_corner"
+    ],
+    "Chris McClellan": [
+      "run_stuffing_IDL"
+    ],
+    "Zxavian Harris": [
+      "run_stuffing_IDL"
+    ],
+    "VJ Payne": [
+      "split_safety"
+    ],
+    "Cole Payton": [
+      "mobile_QB"
+    ],
+    "Billy Schrauth": [
+      "interior_OL"
+    ],
+    "Carson Beck": [
+      "pocket_QB"
+    ],
+    "Tacario Davis": [
+      "zone_corner"
+    ],
+    "Keyshaun Elliott": [
+      "downhill_LB"
+    ],
+    "Dontay Corleone": [
+      "run_stuffing_IDL"
+    ],
+    "Kaleb Elarms-Orr": [
+      "downhill_LB"
+    ],
+    "Tyler Onyedim": [
+      "penetrating_IDL"
+    ],
+    "Zane Durant": [
+      "penetrating_IDL"
+    ],
+    "Ephesians Prysock": [
+      "zone_corner"
+    ],
+    "Rayshaun Benny": [
+      "penetrating_IDL"
+    ],
+    "DeMonte Capehart": [
+      "run_stuffing_IDL"
+    ],
+    "Caden Curry": [
+      "production_rusher"
+    ],
+    "Tim Keenan III": [
+      "run_stuffing_IDL"
+    ],
+    "Hezekiah Masses": [
+      "press_corner"
+    ],
+    "Taylen Green": [
+      "mobile_QB"
+    ],
+    "Bryce Boettcher": [
+      "downhill_LB"
+    ],
+    "Beau Stephens": [
+      "interior_OL"
+    ],
+    "Aiden Fisher": [
+      "downhill_LB"
+    ],
+    "Travis Burke": [
+      "power_tackle"
+    ],
+    "Jadon Canady": [
+      "zone_corner"
+    ],
+    "Charles Demmings": [
+      "press_corner"
+    ],
+    "Nick Barrett": [
+      "run_stuffing_IDL"
+    ],
+    "Jimmy Rolder": [
+      "downhill_LB"
+    ],
+    "Keagen Trost": [
+      "interior_OL"
+    ],
+    "Michael Taaffe": [
+      "split_safety"
+    ],
+    "Jakobe Thomas": [
+      "ball_hawk_S",
+      "box_safety"
+    ],
+    "Jeremiah Wright": [
+      "interior_OL"
+    ],
+    "Jager Burton": [
+      "interior_OL"
+    ],
+    "Parker Brailsford": [
+      "interior_OL"
+    ],
+    "TJ Hall": [
+      "press_corner"
+    ],
+    "Cade Klubnik": [
+      "pocket_QB"
+    ],
+    "Matt Gulbin": [
+      "interior_OL"
+    ],
+    "Jack Kelly": [
+      "downhill_LB"
+    ],
+    "Diego Pounds": [
+      "power_tackle"
+    ],
+    "Adam Randall": [
+      "power_back",
+      "pass_catching_back"
+    ],
+    "Albert Regis": [
+      "penetrating_IDL"
+    ],
+    "Anez Cooper": [
+      "interior_OL"
+    ],
+    "Nadame Tucker": [
+      "production_rusher"
+    ],
+    "Red Murdock": [
+      "downhill_LB"
+    ],
+    "Domani Jackson": [
+      "press_corner"
+    ],
+    "Febechi Nwaiwu": [
+      "interior_OL"
+    ],
+    "Jalen Huskey": [
+      "press_corner"
+    ],
+    "Landon Robinson": [
+      "penetrating_IDL"
+    ],
+    "Wesley Williams": [
+      "penetrating_IDL"
+    ],
+    "Ar'maj Reed-Adams": [
+      "interior_OL"
+    ],
+    "Robert Spears-Jennings": [
+      "split_safety"
+    ],
+    "Louis Moore": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "J'Mari Taylor": [
+      "pass_catching_back"
+    ],
+    "Thaddeus Dixon": [
+      "press_corner"
+    ],
+    "Seth McGowan": [
+      "power_back"
+    ],
+    "Pat Coogan": [
+      "interior_OL"
+    ],
+    "Bishop Fitzgerald": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Dalton Johnson": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Devon Marshall": [
+      "zone_corner"
+    ],
+    "Lorenzo Styles Jr.": [
+      "zone_corner",
+      "man_corner"
+    ],
+    "Andre Fuller": [
+      "press_corner"
+    ],
+    "Rene Konga": [
+      "penetrating_IDL"
+    ],
+    "Lander Barton": [
+      "downhill_LB"
+    ],
+    "Collin Wright": [
+      "press_corner"
+    ],
+    "Cole Wisniewski": [
+      "split_safety"
+    ],
+    "J.Michael Sturdivant": [
+      "X_receiver"
+    ],
+    "David Gusta": [
+      "penetrating_IDL"
+    ],
+    "Logan Taylor": [
+      "interior_OL"
+    ],
+    "Brandon Cleveland": [
+      "penetrating_IDL"
+    ],
+    "Colbie Young": [
+      "X_receiver"
+    ],
+    "Skyler Gill-Howard": [
+      "penetrating_IDL"
+    ],
+    "Cameron Ball": [
+      "run_stuffing_IDL"
+    ],
+    "Jordan van den Berg": [
+      "penetrating_IDL"
+    ],
+    "Kendal Daniels": [
+      "box_safety"
+    ],
+    "D.J. Campbell": [
+      "interior_OL"
+    ],
+    "Bryson Eason": [
+      "run_stuffing_IDL"
+    ],
+    "Toriano Pride": [
+      "zone_corner",
+      "man_corner"
+    ],
+    "Sawyer Robertson": [
+      "pocket_QB"
+    ],
+    "Fernando Carmona": [
+      "interior_OL"
+    ],
+    "Avery Smith": [
+      "zone_corner"
+    ],
+    "Latrell McCutchin": [
+      "press_corner"
+    ],
+    "Haynes King": [
+      "mobile_QB"
+    ],
+    "Michael Heldman": [
+      "production_rusher"
+    ],
+    "DeShon Singleton": [
+      "split_safety"
+    ],
+    "Joe Fagnano": [
+      "pocket_QB"
+    ],
+    "Xavier Nwankpa": [
+      "split_safety"
+    ],
+    "Deven Eastern": [
+      "run_stuffing_IDL"
+    ],
+    "Micah Morris": [
+      "interior_OL"
+    ],
+    "Karson Sharar": [
+      "downhill_LB"
+    ],
+    "Aaron Graves": [
+      "penetrating_IDL"
+    ],
+    "Luke Altmyer": [
+      "pocket_QB"
+    ],
+    "Evan Beerntsen": [
+      "interior_OL"
+    ],
+    "Jaeden Roberts": [
+      "interior_OL"
+    ],
+    "Alan Herron": [
+      "interior_OL"
+    ],
+    "Ahmari Harvey": [
+      "zone_corner"
+    ],
+    "Ceyair Wright": [
+      "zone_corner"
+    ],
+    "Wade Woodaz": [
+      "downhill_LB"
+    ],
+    "Chase Roberts": [
+      "X_receiver"
+    ],
+    "Marcus Allen": [
+      "press_corner"
+    ],
+    "Max Bredeson": [
+      "power_back"
+    ],
+    "James Thompson Jr.": [
+      "penetrating_IDL"
+    ],
+    "Jalon Daniels": [
+      "mobile_QB"
+    ],
+    "Diego Pavia": [
+      "mobile_QB"
+    ],
+    "Cole Brevard": [
+      "penetrating_IDL"
+    ],
+    "Gary Smith III": [
+      "run_stuffing_IDL"
+    ],
+    "Jalen Stroman": [
+      "split_safety"
+    ],
+    "Kobe Baynes": [
+      "interior_OL"
+    ],
+    "Josh Moten": [
+      "zone_corner"
+    ],
+    "DJ Rogers": [
+      "inline_TE"
+    ],
+    "Wydett Williams Jr.": [
+      "split_safety"
+    ],
+    "Anterio Thompson": [
+      "penetrating_IDL"
+    ],
+    "Dean Connors": [
+      "pass_catching_back"
+    ],
+    "Behren Morton": [
+      "pocket_QB"
+    ],
+    "Austin Brown": [
+      "split_safety"
+    ],
+    "C.J. Donaldson": [
+      "power_back"
+    ],
+    "James Brockermeyer": [
+      "interior_OL"
+    ],
+    "Joshua Braun": [
+      "interior_OL"
+    ],
+    "Uar Bernard": [
+      "penetrating_IDL"
+    ],
+    "Ahmaad Moses": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Kolbey Taylor": [
+      "zone_corner"
+    ],
+    "Damonic Williams": [
+      "penetrating_IDL"
+    ],
+    "Jaylon Guilbeau": [
+      "zone_corner"
+    ],
+    "Joey Aguilar": [
+      "pocket_QB"
+    ],
+    "Bobby Jamison-Travis": [
+      "run_stuffing_IDL"
+    ],
+    "Bryce Phillips": [
+      "zone_corner"
+    ],
+    "Josh Gesky": [
+      "interior_OL"
+    ],
+    "Jacob Thomas": [
+      "split_safety"
+    ],
+    "Brent Austin": [
+      "zone_corner"
+    ],
+    "Athan Kaliakmanis": [
+      "pocket_QB"
+    ],
+    "Miles Scott": [
+      "split_safety"
+    ],
+    "Mark Gronowski": [
+      "mobile_QB"
+    ],
+    "Skyler Thomas": [
+      "split_safety"
+    ],
+    "Aaron Hall": [
+      "penetrating_IDL"
+    ],
+    "Chris Adams": [
+      "interior_OL"
+    ],
+    "David Blay": [
+      "penetrating_IDL"
+    ],
+    "Jack Strand": [
+      "pocket_QB"
+    ],
+    "Jeffrey M'ba": [
+      "penetrating_IDL"
+    ],
+    "Tomas Rimac": [
+      "interior_OL"
+    ],
+    "Bryce Foster": [
+      "interior_OL"
+    ],
+    "Josh Thompson": [
+      "interior_OL"
+    ],
+    "Miller Moss": [
+      "pocket_QB"
+    ],
+    "Jamal Haynes": [
+      "pass_catching_back"
+    ],
+    "Jeadyn Lukus": [
+      "zone_corner"
+    ],
+    "Delby Lemieux": [
+      "interior_OL"
+    ],
+    "Donaven Mcculley": [
+      "X_receiver"
+    ],
+    "Kapena Gushiken": [
+      "split_safety"
+    ],
+    "Dillon Wade": [
+      "interior_OL"
+    ],
+    "Tony Grimes": [
+      "zone_corner"
+    ],
+    "Devonta Smith": [
+      "zone_corner"
+    ],
+    "Devan Boykin": [
+      "split_safety"
+    ],
+    "Ricardo Hallman": [
+      "zone_corner"
+    ],
+    "Jalen Catalon": [
+      "split_safety"
+    ],
+    "Tyreek Chappell": [
+      "zone_corner"
+    ],
+    "Jalen Jones": [
+      "zone_corner"
+    ],
+    "Jaren Kump": [
+      "interior_OL"
+    ],
+    "James Neal": [
+      "interior_OL"
+    ],
+    "Nick Andersen": [
+      "split_safety"
+    ],
+    "Isaiah Nwokobia": [
+      "split_safety"
+    ],
+    "TJ Quinn": [
+      "split_safety"
+    ],
+    "Tamarion Crumpley": [
+      "zone_corner"
+    ],
+    "Jarod Washington": [
+      "zone_corner"
+    ],
+    "Gunner Maldonado": [
+      "split_safety"
+    ],
+    "Giovanni El-Hadi": [
+      "interior_OL"
+    ],
+    "Connor Tollison": [
+      "interior_OL"
+    ],
+    "Nick Dawkins": [
+      "interior_OL"
+    ],
+    "Jalen McMurray": [
+      "zone_corner"
+    ],
+    "Tanner Wall": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Clay Patterson": [
+      "penetrating_IDL"
+    ],
+    "Cam Miller": [
+      "zone_corner"
+    ],
+    "Rodney Shelley": [
+      "zone_corner"
+    ],
+    "Kaidon Salter": [
+      "pocket_QB"
+    ],
+    "Al'zillion Hamilton": [
+      "zone_corner"
+    ],
+    "Davion Carter": [
+      "interior_OL"
+    ],
+    "Gavin Gerhardt": [
+      "interior_OL"
+    ],
+    "Hunter Zambrano": [
+      "interior_OL"
+    ],
+    "Fred Davis II": [
+      "zone_corner"
+    ],
+    "Gabriel Rubio": [
+      "penetrating_IDL"
+    ],
+    "Kam Dewberry": [
+      "interior_OL"
+    ],
+    "Zaylin Wood": [
+      "penetrating_IDL"
+    ],
+    "Jackie Marshall": [
+      "penetrating_IDL"
+    ],
+    "Rashad Battle": [
+      "zone_corner"
+    ],
+    "Nyzier Fourqurean": [
+      "zone_corner"
+    ],
+    "Walker Parks": [
+      "interior_OL"
+    ],
+    "Austin Leausa": [
+      "interior_OL"
+    ],
+    "D.Q. Smith": [
+      "split_safety"
+    ],
+    "Eli Blakey": [
+      "split_safety"
+    ],
+    "Bernard Gooden": [
+      "penetrating_IDL"
+    ],
+    "Preston Hodge": [
+      "zone_corner"
+    ],
+    "Rocco Spindler": [
+      "interior_OL"
+    ],
+    "Pete Nygra": [
+      "interior_OL"
+    ],
+    "Jalen Logan-Redding": [
+      "penetrating_IDL"
+    ],
+    "DJ Harvey": [
+      "zone_corner"
+    ],
+    "Karon Prunty": [
+      "zone_corner"
+    ],
+    "Keeshawn Silver": [
+      "penetrating_IDL"
+    ],
+    "Jake Retzlaff": [
+      "mobile_QB"
+    ],
+    "Kyron Drones": [
+      "mobile_QB"
+    ],
+    "Thomas Castellanos": [
+      "mobile_QB"
+    ],
+    "Maverick McIvor": [
+      "pocket_QB"
+    ],
+    "Dequan Finn": [
+      "pocket_QB"
+    ],
+    "Myles Rowser": [
+      "split_safety"
+    ],
+    "Dontae Balfour": [
+      "zone_corner"
+    ],
+    "Terry Webb": [
+      "penetrating_IDL"
+    ],
+    "Blake Cotton": [
+      "zone_corner"
+    ],
+    "Ka'ena Decambra": [
+      "interior_OL"
+    ],
+    "Jakari Foster": [
+      "ball_hawk_S",
+      "split_safety"
+    ],
+    "Joshua Padilla": [
+      "interior_OL"
+    ],
+    "Jason Moore": [
+      "penetrating_IDL"
+    ],
+    "Jaylon Braxton": [
+      "zone_corner"
+    ],
+    "Makari Vickers": [
+      "zone_corner"
+    ],
+    "Calvin Simpson-Hunt": [
+      "zone_corner"
+    ],
+    "Markee Anderson": [
+      "interior_OL"
+    ],
+    "Bravion Rogers": [
+      "zone_corner"
+    ],
+    "Brenan Vernon": [
+      "penetrating_IDL"
+    ],
+    "James Durand": [
+      "interior_OL"
+    ],
+    "Grayson Loftis": [
+      "pocket_QB"
+    ],
+    "A'Marion McCoy": [
+      "zone_corner"
+    ],
+    "Denver Harris": [
+      "zone_corner"
+    ],
+    "Travis Shaw": [
+      "penetrating_IDL"
+    ],
+    "Jamari Lyons": [
+      "penetrating_IDL"
+    ],
+    "Zion Branch": [
+      "split_safety"
+    ],
+    "Khurtiss Perry": [
+      "penetrating_IDL"
+    ],
+    "Jacolby Spells": [
+      "zone_corner"
+    ],
+    "J.Q. Hardaway": [
+      "zone_corner"
+    ],
+    "Cole Hutson": [
+      "interior_OL"
+    ],
+    "Maalik Murphy": [
+      "pocket_QB"
+    ],
+    "Julian Armella": [
+      "interior_OL"
+    ],
+    "Nate Johnson": [
+      "pocket_QB"
+    ],
+    "Eddie Kelly": [
+      "penetrating_IDL"
+    ],
+    "John Bock II": [
+      "interior_OL"
+    ],
+    "Jeremiah Earby": [
+      "zone_corner"
+    ],
+    "Malik Spencer": [
+      "split_safety"
+    ],
+    "Deshaun Lee": [
+      "zone_corner"
+    ],
+    "Pichon Wimbley": [
+      "interior_OL"
+    ],
+    "Braxton Fely": [
+      "penetrating_IDL"
+    ],
+    "Jerry Wilson": [
+      "zone_corner"
+    ],
+    "Van Wells": [
+      "interior_OL"
+    ],
+    "Wendell Moe Jr.": [
+      "interior_OL"
+    ],
+    "Owen McCown": [
+      "pocket_QB"
+    ],
+    "Cade McConnell": [
+      "interior_OL"
+    ],
+    "Gavin Gibson": [
+      "zone_corner"
+    ],
+    "Omar Aigbedion": [
+      "interior_OL"
+    ],
+    "Liam Becher": [
+      "interior_OL"
+    ],
+    "Quinten Christensen": [
+      "interior_OL"
+    ],
+    "Damon Payne": [
+      "penetrating_IDL"
+    ],
+    "Sage Ryan": [
+      "split_safety"
+    ],
+    "Preston Stone": [
+      "pocket_QB"
+    ],
+    "Avante Dickerson": [
+      "zone_corner"
+    ],
+    "Kelvin Gilliam": [
+      "penetrating_IDL"
+    ],
+    "Marcus Burris": [
+      "penetrating_IDL"
+    ],
+    "Savion Byrd": [
+      "interior_OL"
+    ],
+    "David Daniel-Sisavanh": [
+      "split_safety"
+    ],
+    "Elliot Donald": [
+      "penetrating_IDL"
+    ],
+    "Nyland Green": [
+      "zone_corner"
+    ],
+    "Bryce Carter": [
+      "penetrating_IDL"
+    ],
+    "Raheem Anderson": [
+      "interior_OL"
+    ],
+    "Jonathan Jefferson": [
+      "penetrating_IDL"
+    ],
+    "Tywone Malone": [
+      "penetrating_IDL"
+    ],
+    "Damarius McGhee": [
+      "zone_corner"
+    ],
+    "Bram Walden": [
+      "interior_OL"
+    ],
+    "Terrence Ferguson II": [
+      "interior_OL"
+    ],
+    "Jaylin Davies": [
+      "zone_corner"
+    ],
+    "J.P. Benzschawel": [
+      "interior_OL"
+    ],
+    "Jordan Favors": [
+      "split_safety"
+    ],
+    "Darian Chestnut": [
+      "zone_corner"
+    ],
+    "Tiaoalii Savea": [
+      "penetrating_IDL"
+    ],
+    "Shyheim Brown": [
+      "split_safety"
+    ],
+    "Daylan Carnell": [
+      "split_safety"
+    ],
+    "Cade Zimmerly": [
+      "interior_OL"
+    ],
+    "Kamryn Waites": [
+      "interior_OL"
+    ],
+    "Ashton Grable": [
+      "interior_OL"
+    ],
+    "Aki Ogunbiyi": [
+      "interior_OL"
+    ],
+    "Chad Lindberg": [
+      "interior_OL"
+    ],
+    "Tyler Van Dyke": [
+      "pocket_QB"
+    ],
+    "Jeff Sims": [
+      "mobile_QB"
+    ],
+    "Xavion Alford": [
+      "split_safety"
+    ],
+    "Drew Pyne": [
+      "pocket_QB"
+    ],
+    "Turner Corcoran": [
+      "interior_OL"
+    ],
+    "Zykeivous Walker": [
+      "penetrating_IDL"
+    ],
+    "Key Lawrence": [
+      "zone_corner"
+    ],
+    "Malcolm Greene": [
+      "split_safety"
+    ],
+    "Devin Neal": [
+      "split_safety"
+    ],
+    "Xavier Hill": [
+      "interior_OL"
+    ],
+    "Jordan White": [
+      "interior_OL"
+    ],
+    "D.J. Graham": [
+      "zone_corner"
+    ],
+    "Luke Petitbon": [
+      "interior_OL"
+    ],
+    "Payton Zdroik": [
+      "penetrating_IDL"
+    ],
+    "Jahmeer Carter": [
+      "penetrating_IDL"
+    ],
+    "Tyree Skipper": [
+      "split_safety"
+    ],
+    "Sabastian Harsh": [
+      "penetrating_IDL"
+    ],
+    "Tay Yanta II": [
+      "interior_OL"
+    ],
+    "Matthew Sluka": [
+      "pocket_QB"
+    ],
+    "Cade McNamara": [
+      "pocket_QB"
+    ],
+    "Zach Calzada": [
+      "pocket_QB"
+    ],
+    "Antonio Clary": [
+      "split_safety"
+    ],
+    "Isheem Young": [
+      "split_safety"
+    ],
+    "Ben Coleman": [
+      "interior_OL"
+    ],
+    "Jeremiyah Love": [
+      "home_run_hitter",
+      "pass_catching_back",
+      "power_back"
+    ],
+    "Carnell Tate": [
+      "X_receiver",
+      "vertical_stretcher"
+    ],
+    "Rueben Bain": [
+      "athletic_rusher",
+      "hand_in_dirt_EDGE"
+    ],
+    "Akheem Mesidor": [
+      "athletic_rusher",
+      "hand_in_dirt_EDGE"
+    ],
+    "Makai Lemon": [
+      "YAC_slot",
+      "slot_separator"
+    ],
+    "Jordyn Tyson": [
+      "X_receiver",
+      "vertical_stretcher"
+    ],
+    "Spencer Fano": [
+      "movement_tackle",
+      "power_tackle"
+    ],
+    "Caleb Lomu": [
+      "movement_tackle",
+      "power_tackle"
+    ],
+    "Monroe Freeling": [
+      "movement_tackle"
+    ],
+    "Blake Miller": [
+      "power_tackle"
+    ],
+    "Keldric Faulk": [
+      "hand_in_dirt_EDGE"
+    ],
+    "Zion Young": [
+      "hand_in_dirt_EDGE"
+    ],
+    "T.J. Parker": [
+      "athletic_rusher",
+      "standup_EDGE"
+    ],
+    "Omar Cooper Jr.": [
+      "X_receiver",
+      "vertical_stretcher"
+    ],
+    "K.C. Concepcion": [
+      "YAC_slot",
+      "slot_separator"
+    ],
+    "Denzel Boston": [
+      "X_receiver"
+    ],
+    "Max Klare": [
+      "move_TE"
+    ]
+  },
+  "Fernando Mendoza": {
+    "tags": [
+      "25_tds_and_only_4_ints",
+      "72_completion_4148_tds_vs_6_ints",
+      "accuracy__ball_placement",
+      "all_nfl_systems",
+      "attacks_defensive_mistakes_quickly",
+      "calm_poised_pocket_presence",
+      "clutch_late_game",
+      "day_one_starter",
+      "decisionmaking__high_football_iq",
+      "elite_arm_talent",
+      "excellent_size_and_toughness",
+      "fast_hands_on_quick_throws",
+      "heisman_trophy_winner__indiana_national_title",
+      "kubiakstyle_mentorship",
+      "mobility__leg_usage_when_pocket_collapses",
+      "modern_spread_offense",
+      "no_red_zone_interceptions_over_past_two_seasons",
+      "operates_well_from_shotgun",
+      "plus_accuracy",
+      "plus_arm_talent",
+      "plus_processor",
+      "pocket_passer",
+      "poise_under_pressure",
+      "precision_in_big_moments",
+      "processing_speed",
+      "processor",
+      "prostyle_undercenter_system",
+      "quick_game",
+      "rpo_heavy",
+      "size_65225",
+      "spread",
+      "sufficient_arm_strength",
+      "thrives_on_rpo_and_quick_game",
+      "timing_based_west_coast",
+      "timingbased_quick_game",
+      "velocity_on_third_and_long",
+      "vertical_passing"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 17
+  },
+  "Ty Simpson": {
+    "tags": [
+      "28_tds5_ints_15_game_starts",
+      "anticipation_thrower",
+      "clean_footwork",
+      "compact_delivery",
+      "designed_boot_offense",
+      "developmental_starter",
+      "first_year_starter_bama",
+      "footwork_tied_to_progressions",
+      "good_athlete_on_designed_boots",
+      "good_athlete_on_designed_boots_and_rollouts",
+      "handles_pressure_well",
+      "lafleur_system_fit",
+      "low_int_production",
+      "marries_feet_to_eyes_staying_on_platform",
+      "modern_spread",
+      "play_action",
+      "play_action_system_fit",
+      "plus_arm_talent",
+      "pocket_passer",
+      "pro_style",
+      "pro_style_fit",
+      "processor",
+      "quick_feet_in_setup",
+      "quick_game",
+      "rhythm_passer",
+      "sharp_pre_snap_operator",
+      "sound_mechanics__touch__accuracy",
+      "sound_mechanics_and_compact_delivery",
+      "strong_nfl_combine_performance",
+      "system_qb",
+      "timing_based",
+      "touch_and_accuracy",
+      "touch_passer",
+      "west_coast_fit"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Drew Allar": {
+    "tags": [
+      "effective_on_go_balls,_comebacks,_fade_routes",
+      "prototypical_size",
+      "strong_arm_talent",
+      "pro_style",
+      "big_arm_thrower",
+      "pocket_passer",
+      "developmental_day_2",
+      "vertical_passing",
+      "play_action_heavy",
+      "excellent_deep_ball_thrower_(15_tds_vs_2_ints_on_20+_yard_throws_last_two_seasons)",
+      "experience_in_pro_style_offense"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Carson Beck": {
+    "tags": [
+      "pro_style",
+      "pocket_passer",
+      "play_action",
+      "backup_to_starter_developmental",
+      "arm_talent",
+      "prototypical_build",
+      "can_throw_all_levels",
+      "experience_in_pro_style_sec_offense"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Garrett Nussmeier": {
+    "tags": [
+      "17_ints_over_two_starting_seasons_shows_aggressiveness_and_risk_tolerance",
+      "air_raid_roots",
+      "anticipation_thrower",
+      "backup_qb",
+      "developmental",
+      "experience_starting_at_lsu",
+      "field_stretcher",
+      "gunslinger",
+      "gunslinger_mentality",
+      "high_volume_production",
+      "off_platform_accuracy",
+      "play_action_system_fit",
+      "quick_game",
+      "quick_release",
+      "spread",
+      "spread_qb_fit",
+      "streaky_decisionmaker",
+      "two_year_starter_lsu"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Dante Moore": {
+    "tags": [
+      "spread",
+      "decision_pending",
+      "developmental",
+      "west_coast",
+      "oregon_system_experience",
+      "talent_and_arm"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Cole Payton": {
+    "tags": [
+      "arm_talent_with_rushing_upside",
+      "777_rushing_yards_and_31_career_tds_at_north_dakota_state",
+      "developmental",
+      "rpo",
+      "gadget_qb",
+      "strong_accuracy",
+      "4.56_speed_multi_dimensional_athlete",
+      "gadget",
+      "swiss_army_role_player"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 2
+  },
+  "Jeremiyah Love": {
+    "tags": [
+      "104_yards_per_catch_average",
+      "1372_rush_yards_18_tds",
+      "214_lbs__receiving_upside",
+      "28_tds_on_303_carries",
+      "69_ypc_39_rushes_of_10_yards",
+      "complete_threedown_back",
+      "doak_walker_winner",
+      "dynamic__fastpaced_offense",
+      "dynamic_runner_and_receiver",
+      "effective_pass_protector",
+      "electric_spin_move",
+      "elite_burst",
+      "elite_forced_missed_tackles",
+      "elite_outside_speed_(4.36_40)",
+      "elite_vision_and_pass_protection",
+      "every_down",
+      "explodes_through_inside_holes_with_lower_leg_drive",
+      "explosive_athlete",
+      "explosive_homerun_threat",
+      "gap",
+      "home_run_hitter",
+      "makes_defenders_miss_without_gearing_down",
+      "mismatch_for_linebackers",
+      "pass_game_featured_back",
+      "playbook_expander",
+      "plus_vision",
+      "power_run_game",
+      "smooth_route_runner",
+      "three_down_back",
+      "versatile",
+      "zone",
+      "zonerun__receiving"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 16
+  },
+  "Jadarian Price": {
+    "tags": [
+      "21.2%_of_rushes_gained_10+_yards",
+      "60_ypc_11_tds_on_113_carries",
+      "brugler_day_3_rb",
+      "change_of_pace_back_fit",
+      "compact__terrific_vision_and_balance",
+      "gap",
+      "gap_scheme_fit",
+      "homerun_kickoff_returner",
+      "kickoff_return_home_run_ability",
+      "mobility_offense",
+      "notre_dame_rotational_producer",
+      "one_cut_runner",
+      "patient_runner",
+      "patient_runner_letting_blocks_develop",
+      "pff_broken_tackle_rate",
+      "plus_contact_balance",
+      "press_crease_finisher",
+      "quick_to_identify_blitzers",
+      "reliable_hands",
+      "return_specialist",
+      "rotational_back",
+      "runs_low_with_supreme_contact_balance",
+      "stacks_creases_in_zone",
+      "steps_through_low_tackles",
+      "terrific_vision_and_balance",
+      "walker_replacement",
+      "wide_zone_fit",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Emmett Johnson": {
+    "tags": [
+      "spread",
+      "three_down_capability",
+      "pass_game_rb",
+      "fourth_nationally_in_forced_missed_tackles_(93)",
+      "compact_frame_generates_burst_through_the_hole",
+      "zone",
+      "three_down_back",
+      "elite_receiving_production_(85_catches_over_two_seasons)",
+      "pass_catching_rb",
+      "one_cut_runner_with_explosive_burst"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Mike Washington Jr.": {
+    "tags": [
+      "433_speed_1070_rush_yards_28_receptions",
+      "developing_receiving_skills",
+      "developmental",
+      "gap",
+      "mobility_offense",
+      "physical_runner",
+      "power",
+      "power_back",
+      "rare_improvement_arc_from_625_yards_at_buffalo_2022_to_1,070_at_arkansas_2025",
+      "size_speed_combo"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Arvell Reese": {
+    "tags": [
+      "22_pressures_on_71_pass_rush_snaps",
+      "3_4_olb",
+      "435_vertical_446_forty",
+      "4_3_sam",
+      "65_sacks_64238",
+      "can_match_tes_and_rbs_in_coverage",
+      "chess_piece_defender",
+      "chess_piece_versatility",
+      "deployable_as_chess_piece_(lb,_edge,_qb_spy)",
+      "edge/off_ball_hybrid",
+      "edge_convert_upside",
+      "elite_athleticism",
+      "elite_speed_and_bend",
+      "elite_takeoff_speed__158s_10yard_split",
+      "elite_youth",
+      "elite_youth_(won't_turn_21_until_august)",
+      "explosive_athlete",
+      "fluid_explosive_athlete",
+      "high_football_iq",
+      "high_upside",
+      "hybrid_multiple",
+      "multiple_front_structures",
+      "offballedge_versatility",
+      "overpowers_blockers_with_runway",
+      "parsons_comp_ceiling",
+      "positional_scarcity_hybrid",
+      "positional_versatility_onoff_ball",
+      "rare_size_speed_combo",
+      "sidelinetosideline",
+      "versatile",
+      "violent_hands_rare_speed_great_burst",
+      "will_linebacker_projection"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 15
+  },
+  "David Bailey": {
+    "tags": [
+      "145_sacks_23_tfl",
+      "202_pressure_rate",
+      "21.6%_pressure_rate_since_2023",
+      "34_edge__standup_olb",
+      "355_career_sacks",
+      "3_4_olb",
+      "4_3_de",
+      "aggressive_passrush_systems",
+      "allamerican",
+      "bend_and_burst",
+      "creates_exceptional_short_corners_to_qb",
+      "designated_pass_rusher",
+      "dip/rip_move_before_flattening",
+      "diprip_move_arsenal",
+      "elite_athleticism",
+      "elite_bend",
+      "elite_first_step_off_line",
+      "explosive_athlete",
+      "flashes_speed_to_power_conversion",
+      "leads_college_football_in_pressure_and_sack_production",
+      "lethal_first_step",
+      "plus_hand_usage",
+      "polished_technique__senior",
+      "speed_rush_role",
+      "speed_rusher",
+      "speedbased_scheme",
+      "ultra_explosive_edge",
+      "ultraexplosive_first_step",
+      "versatile",
+      "wide_9"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 16
+  },
+  "T.J. Parker": {
+    "tags": [
+      "114_pressures_over_3_years",
+      "11_sacks_in_2024",
+      "3_4_de",
+      "4_3_base_end",
+      "edge_rotation",
+      "elite_bend",
+      "generates_knock_back_power",
+      "jolts_blockers_before_separating",
+      "jolts_blockers_with_hands",
+      "knockback_against_run",
+      "plus_power",
+      "power_rusher",
+      "powerful_shake/bull_move",
+      "rugged_pass_rusher",
+      "rugged_rusher_with_shakebull",
+      "slide_inside_capability",
+      "speedtopower",
+      "strong_senior_bowl_week"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Akheem Mesidor": {
+    "tags": [
+      "125_sacks_58_pressures",
+      "213_passrush_win_rate",
+      "25_years_old__supreme_talent",
+      "35.5_career_sacks",
+      "3_4_de",
+      "4_3_de",
+      "62281_relentless_motor",
+      "aggressive_schemes",
+      "corners_and_bends_after_separation",
+      "highly_productive",
+      "ideal_frame_with_relentless_motor",
+      "knocks_hands_off_pushing/pulling_for_pressures",
+      "motor_defender",
+      "never_stops_working_hands",
+      "pass_rush_instincts",
+      "power_rush_role",
+      "power_rusher",
+      "powerful_edge_setting_base",
+      "pressure_generation",
+      "shakes_and_bulls_ots",
+      "shakes_and_bulls_tackles",
+      "three_down_edge",
+      "wins_rushing_inside_over_guards"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 9
+  },
+  "Cashius Howell": {
+    "tags": [
+      "115_sacks_165_tfls",
+      "3_4_olb",
+      "3_4_olb_fit",
+      "62248_fast_off_edge",
+      "bend_around_edge",
+      "bursts_through_making_plays_behind_los",
+      "counter_move_arsenal",
+      "edge_depth",
+      "energetic_force",
+      "multiple_passrush_moves",
+      "nice_blend_of_violence_and_awareness",
+      "outstanding_twitch__tenacity",
+      "outstanding_twitch_and_tenacity",
+      "rolls_hips_setting_edge",
+      "rolls_hips_to_set_edge",
+      "sec_defensive_player_of_the_year_with_11.5_sacks",
+      "speed_rush_specialist",
+      "speedbased_schemes",
+      "stand_up_edge",
+      "standup_edge_fit",
+      "sub_rusher_fit",
+      "twitchy_edge",
+      "undersized_edge_frame",
+      "undersized_speed_rusher",
+      "wins_multiple_ways_(speed,_power,_instincts)"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Keldric Faulk": {
+    "tags": [
+      "3_4_de",
+      "5_tech_de",
+      "66270_powerspeed_rusher",
+      "aligned_up_and_down_front",
+      "allamerican",
+      "chubb_pairing",
+      "coaches_rave_about_character_and_work_ethic",
+      "gap_control",
+      "ideal_frame__length",
+      "interior_pass_rusher_in_nickel",
+      "kick_inside_candidate",
+      "long_term_ascending_talent",
+      "loose_fluid_mover",
+      "multi_front",
+      "parker_34_base",
+      "plus_power",
+      "stacks_and_holds_point",
+      "stacks_and_holds_point_of_attack",
+      "wins_with_swooping_arm_over_or_steady_pocket_push",
+      "youngest_prospect_(turns_21_in_september)"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Matayo Uiagalelei": {
+    "tags": [
+      "young_(won't_turn_21_until_next_summer)",
+      "4_3_de",
+      "high_ceiling",
+      "developmental_edge",
+      "consistent_year_over_year_improvement",
+      "3_4_de",
+      "25_pressures_this_season"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "R Mason Thomas": {
+    "tags": [
+      "155_sacks_25_tfls_past_two",
+      "22_tfls_and_15.5_sacks_over_final_23_games",
+      "3_4_olb",
+      "covers_ground_in_first_three_steps",
+      "draws_extra_blocker_attention",
+      "edge_depth",
+      "instinctive__physical_edge",
+      "instinctive_and_physical",
+      "maniacal_energy__effort",
+      "maniacal_energy_and_effort",
+      "motor_rusher",
+      "multiple_ways_to_win",
+      "penetrating_passrush_systems",
+      "stand_up_edge",
+      "sub_package_rusher",
+      "undersized_edge",
+      "valuable_starter",
+      "widen/bull_rush_and_swipe_and_rip_favorite_moves",
+      "widenbull__swipeandrip"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Zion Young": {
+    "tags": [
+      "4_3_base_end",
+      "4_3_strongside_de_fit",
+      "5_tech_fit",
+      "66265_65_sacks_46_pressures_18_tfls",
+      "bear_front_end_fit",
+      "big_powerful_rusher_with_length",
+      "can_slide_inside_in_sub_packages",
+      "destroys_tes",
+      "destroys_tes_assigned_to_block",
+      "edge_or_inside_over_guards",
+      "firm_run_defender",
+      "good_length",
+      "heavy_hands_at_pop",
+      "heavy_hands_jolting_blockers",
+      "herky_jerky_mover_with_heavy_hands",
+      "inside_outside_in_sub",
+      "knack_for_finishing_at_rush_top",
+      "long_arm_rush",
+      "msu_senior_producer",
+      "pff_pressure_count_rising",
+      "power_rusher",
+      "pressure_generation",
+      "senior_bowl_standout",
+      "sets_hard_edge_vs_run",
+      "strong_senior_bowl",
+      "sweat_complement",
+      "three_down_edge",
+      "two_gap_capable_edge"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 9
+  },
+  "Malachi Lawrence": {
+    "tags": [
+      "28_tfls_and_20_sacks_in_three_seasons",
+      "4_3_base_end_fit",
+      "4_3_loeo_fit",
+      "array_of_counters",
+      "backside_chase_artist",
+      "bend_around_arc",
+      "brugler_day_2_edge",
+      "chase_down_speed",
+      "cross_chop_finisher",
+      "edge_rotation",
+      "explodes_off_line",
+      "explodes_off_line_ripping_through_outside_arm",
+      "first_step_quickness",
+      "flat_arc_at_top",
+      "flattens_at_rush_top",
+      "get_off_timing",
+      "ghost_move_counter",
+      "hand_usage_developing",
+      "ideal_size/length/twitch",
+      "ideal_size__length__twitch",
+      "liberty_sack_producer",
+      "pff_true_pass_set_win_rate",
+      "power_convert_speed_to_power",
+      "rips_through_outside_arm",
+      "rising_production_edge",
+      "shock_in_hands",
+      "shock_in_hands_uprooting_blockers",
+      "speed_rusher",
+      "stand_up_edge",
+      "standup_edge_fit",
+      "sub_pass_rusher_fit",
+      "wide_9",
+      "wide_9_fit"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Joshua Josephs": {
+    "tags": [
+      "3_4_olb",
+      "4_3_de",
+      "developmental_pass_rusher",
+      "long_arms_(83â…ž\"_wingspan)_winning_at_lighter_weight",
+      "length_based_edge",
+      "sets_firm_edge",
+      "26_pressures_(career_high)",
+      "toughness_against_tackles"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Quincy Rhodes Jr.": {
+    "tags": [
+      "frame_based_upside",
+      "ideal_6_6,_275_nfl_versatile_build",
+      "developmental_edge",
+      "arkansas_breakout",
+      "multi_front"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Gabe Jacas": {
+    "tags": [
+      "11_sacks",
+      "11_sacks,_34_pressures,_12.5_tfls",
+      "3_4_olb",
+      "4_3_sam",
+      "bosawilliams_injury_insurance",
+      "depth_solution",
+      "four_year_starter_with_consistent_play_strength",
+      "multidimensional_defender",
+      "physical_finisher_with_six_forced_fumbles_in_two_seasons",
+      "seals_edge_and_drops_into_coverage"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Dani Dennis-Sutton": {
+    "tags": [
+      "4_3_de",
+      "back_to_back_8.5_sack_years",
+      "elite_combine_testing_(39.5\"_vertical,_10'11\"_broad)",
+      "developmental_edge",
+      "explosive_athlete",
+      "7_forced_fumbles",
+      "3_4_de"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Romello Height": {
+    "tags": [
+      "sub_package_rusher",
+      "creates_effective_pass_rush_production",
+      "late_bloomer",
+      "late_season_11.5_tfls,_10_sacks,_2_ffs",
+      "3_4_olb",
+      "undersized_edge",
+      "tenacious"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Derrick Moore": {
+    "tags": [
+      "10_sacks__michigan_connection",
+      "4_3_de",
+      "base_end",
+      "developmental",
+      "early_pass_rush_impact_potential",
+      "hutchinson_pairing",
+      "power_edge",
+      "power_length_combination_(81.25\"_wingspan)"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Keyron Crawford": {
+    "tags": [
+      "career_best_9.5_tfls",
+      "3_4_olb",
+      "raw_high_upside_edge",
+      "two_point_stance_flexibility",
+      "corner_around_promise"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "LT Overton": {
+    "tags": [
+      "run_stuffing_base_end",
+      "power_edge",
+      "5_tech",
+      "power_effort_reliability_combination",
+      "back_to_back_42_tackle_seasons_for_alabama",
+      "3_4_de"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Darrell Jackson Jr.": {
+    "tags": [
+      "developmental_length_based_edge",
+      "5_tech",
+      "power_flashes",
+      "3_4_de",
+      "massive_86_inch_wingspan"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Peter Woods": {
+    "tags": [
+      "1_tech_in_base",
+      "3_tech",
+      "63315",
+      "aggressive_defensive_systems",
+      "chase_effort",
+      "disruptive_interior",
+      "fabulous_quickness__violent_hands",
+      "high_ceiling_dt",
+      "holds_point_of_attack",
+      "lateral_range_outside_tackle_box",
+      "leverages_lower_body_strength",
+      "multiple_front",
+      "nasty_club/rip",
+      "passrush_interior",
+      "plus_first_step",
+      "pocketcollapsing",
+      "powerful_true_junior_who_won't_turn_21_until_near_draft",
+      "pushes_pocket_when_lands_hands_first",
+      "thick_square_dt",
+      "thick_square_dt_with_fabulous_quickness",
+      "violent_hands"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Dallas Woods": {
+    "tags": [
+      "disruptive_beyond_clemson's_defensive_system",
+      "3_tech",
+      "ascending_talent",
+      "on_scouting_radars_since_true_freshman",
+      "powerful_interior",
+      "powerful_true_junior_dt",
+      "multi_front"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Kayden McDonald": {
+    "tags": [
+      "17_run_stops",
+      "1_tech",
+      "65_tackles_335_sacks_62326",
+      "best_fbs_run_stop_rate_(7.8%)",
+      "disruptive_force__best_vs_run",
+      "early_down_nt",
+      "elite_run_defense",
+      "excellent_size/strength",
+      "nose_tackle",
+      "odd_fronts",
+      "plus_power",
+      "presses_out_blocks_with_violent_torque",
+      "run_defense",
+      "run_stuffer",
+      "two_gap",
+      "very_firm/stout",
+      "violent_torque__firm_stout"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Caleb Banks": {
+    "tags": [
+      "3_4_defensive_end_fit",
+      "3_tech",
+      "66327_interior_disruption",
+      "85.75\"_wingspan",
+      "back_side_range",
+      "collapses_pocket_with_power",
+      "even_front_3_tech_fit",
+      "flashes_pass_rush_juice",
+      "florida_three_year_starter",
+      "impressive_2024_tape",
+      "lateral_chase_for_size",
+      "length_based_dt",
+      "long_arm_extension",
+      "multi_front",
+      "multi_year_starter_florida",
+      "nose_tackle_build",
+      "nose_tackle_fit",
+      "odd_front_4i_fit",
+      "pff_rising_pass_rush_grade",
+      "plus_length_dline",
+      "power_at_point_of_attack",
+      "push_pocket_bull",
+      "quick_club_move",
+      "run_stopping",
+      "run_stuffing_idl",
+      "senior_bowl_invite",
+      "sub_rusher_fit",
+      "swat_to_shed",
+      "tall,_long,_athletic_dt",
+      "twitchy_feet_and_hands",
+      "two_gap_capable",
+      "upside_interior_rusher"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Lee Hunter": {
+    "tags": [
+      "0_tech_fit",
+      "1_tech",
+      "1_tech_fit",
+      "52_run_stops_335_tfls_three_years",
+      "anchor_vs_double_team",
+      "bends_and_leverages_single_blocks",
+      "brugler_nose_tackle_board",
+      "defeats_cut_off_blocks",
+      "dominant_run_defender",
+      "dominant_run_defender_at_texas_tech",
+      "hand_replace_shedding",
+      "impactful_orange_bowl_(7_tackles,_2_tfls)",
+      "interior_help",
+      "late_bloomer",
+      "late_season_surge_(10.5_tfls_in_final_6_games)",
+      "nose_tackle",
+      "outstanding_lateral_range",
+      "pff_high_run_stop_grade",
+      "run_down_specialist_fit",
+      "run_stopping_dt",
+      "run_stuffer",
+      "runfirst_systems",
+      "snap_timing_quickness",
+      "squeezes_down_blocks",
+      "thick_wide_bodied_dt",
+      "thick_widebodied_dt",
+      "ucf_production_3_yrs"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Christen Miller": {
+    "tags": [
+      "24_starts_over_three_seasons",
+      "3_tech",
+      "3_tech_fit",
+      "4i_in_odd_front_fit",
+      "arm_over_counter",
+      "blocker_shedding_ability",
+      "chase_redirect",
+      "chases_with_speed",
+      "eyes_on_play",
+      "gap_penetrator",
+      "georgia_rotational_producer",
+      "ideal_size__average_length",
+      "interior_rotation",
+      "kiper_day_2_idl",
+      "more_disruptive_than_productive",
+      "multi_front",
+      "nickel_rush_idl_fit",
+      "pff_pass_rush_win_rate",
+      "powerful_point_of_attack_winner",
+      "quick_first_step",
+      "rankins_pairing",
+      "snap_jump_off_line",
+      "solid_interior_rotation",
+      "swipe_and_club_moves"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Domonique Orange": {
+    "tags": [
+      "run_stopping_nt",
+      "nose_tackle",
+      "wins_snap_to_snap",
+      "rare_power_manhandling_double_teams",
+      "1_tech",
+      "50_game_career_participation"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "DeMonte Capehart": {
+    "tags": [
+      "3_tech",
+      "clemson_disruptor",
+      "rotation_interior",
+      "length_and_power_interior_prospect"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Chris McClellan": {
+    "tags": [
+      "3_tech",
+      "rotational_interior",
+      "versatile_front_player",
+      "plus_athletic_traits",
+      "multi_front"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Gracen Halton": {
+    "tags": [
+      "3_tech",
+      "interior_disruptor",
+      "25_pressures_from_dt_(11th_fbs)",
+      "snap_quickness_with_early_rush_wins",
+      "gap_attack_specialty",
+      "sub_package_dt",
+      "sub_package_penetrator"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Zxavian Harris": {
+    "tags": [
+      "run_stuffing_nt",
+      "nt",
+      "six_blocked_kicks_in_career",
+      "immediate_run_defense_impact",
+      "1_tech"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Sonny Styles": {
+    "tags": [
+      "435_vertical_446_forty",
+      "allamerican",
+      "chess_piece",
+      "chess_piece_defender",
+      "combine_star",
+      "coverage_lb",
+      "coverheavy_defensive_systems",
+      "elite_athleticism",
+      "elite_coverage_ability",
+      "elite_instincts_+_speed_combination",
+      "exceptional_in_coverage_carrying_receivers_downfield",
+      "explosive_83_tackles",
+      "explosive_blitzer",
+      "firm_tackler_with_stopping_power",
+      "former_safety_convert",
+      "harbaugh_chesspiece_role",
+      "hybrid_role",
+      "hybrid_safety/lb",
+      "middlecoverage_hybrid",
+      "mike_in_nickel",
+      "mirrors_tes",
+      "multiple_fronts",
+      "outstanding_lateral_range",
+      "pattern_match_coverage",
+      "quick_to_key_and_fill",
+      "quick_to_read_and_fill",
+      "tall_rangy_lb_transitioned_from_safety",
+      "talllongrangy_at_65",
+      "three_down_defender",
+      "versatile"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 15
+  },
+  "Anthony Hill Jr.": {
+    "tags": [
+      "17_sacks_and_8_ffs_over_three_years",
+      "3_4_ilb_fit",
+      "3_missed_tackle_rate_on_70_attempts",
+      "451_forty_238_lbs",
+      "a_gap_blitz_timing",
+      "anarumo_scheme",
+      "athletic_playmaker",
+      "brugler_top_lb_board",
+      "burst_making_tackles_underneath",
+      "clean_run_fits",
+      "cover_2",
+      "coverage_lb",
+      "coverage_linebacker",
+      "coveragerush_versatility",
+      "elite_change_of_direction",
+      "excellent_closing_speed_from_backside",
+      "fluid_mover_with_outstanding_size_and_speed",
+      "match_coverage_on_backs",
+      "matches_athletic_tes",
+      "mike",
+      "nickel_dime_fit",
+      "outstanding_change_of_direction_in_coverage",
+      "outstanding_closing_speed",
+      "pattern_match",
+      "pff_high_coverage_grade",
+      "range_on_outside_zone",
+      "superb_blitzer",
+      "tampa_2_mike_fit",
+      "texas_two_year_producer",
+      "three_down_lb",
+      "will"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Jacob Rodriguez": {
+    "tags": [
+      "252_tackles_two_years",
+      "4_3_will_fit",
+      "ball_forcing_tackler",
+      "best_as_zone_dropper",
+      "brugler_day_2_lb",
+      "cover_3_buzz_fit",
+      "david_replacement",
+      "dominant_against_run",
+      "dominant_vs_run_sorting_through_muddy_box",
+      "excellent_lateral_range",
+      "filling_vs_iso",
+      "instinctive_lb",
+      "intangibles",
+      "mike",
+      "outstanding_instincts_and_playmaking",
+      "pff_ff_rate_high",
+      "punch_out_tackler",
+      "read_and_react_instincts",
+      "scrape_over_blockers",
+      "stack_lb_fit",
+      "texas_tech_tfl_producer",
+      "tfl_machine",
+      "tfl_machine__13_career_ffs",
+      "unique_punch_away_tackling_with_13_career_forced_fumbles_(7_last_season)",
+      "zone_coverage_lb",
+      "zone_drop_awareness",
+      "zone_heavy_defenses"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "CJ Allen": {
+    "tags": [
+      "6.8%_career_tackle_miss_rate",
+      "61235_plays_bigger",
+      "97_tackles_35_sacks",
+      "coverage_lb",
+      "davis_age_replacement",
+      "enforcer_lb",
+      "explosive_striker",
+      "flies_around_with_outstanding_effort",
+      "good_instincts_vs_run",
+      "instinctive_zone_dropper",
+      "leader",
+      "leadership",
+      "mike",
+      "outstanding_blitzer",
+      "plays_bigger_than_size",
+      "productive__intelligent",
+      "productive_intelligent_playmaker",
+      "run_thumper",
+      "thuds_off_guards",
+      "zone_defenses"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Kyle Louis": {
+    "tags": [
+      "10_sacks,_6_ints,_24_tfls",
+      "183_tackles,_24.5_tfls,_10_sacks,_6_ints_over_two_seasons",
+      "a_plus_instincts",
+      "big_nickel",
+      "chess_piece",
+      "diagnoses_reacts_finishes_rapidly",
+      "elite_senior_bowl_coverage_work",
+      "hybrid_s/lb",
+      "offball_lb",
+      "positionless_defender",
+      "ultra_versatile_(box,_lb,_slot,_deep)"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Jake Golday": {
+    "tags": [
+      "4_3_mike_fit",
+      "blitz_threat",
+      "block_deconstructor",
+      "coverage_capable_drop_lb",
+      "coverage_lb",
+      "day_2_lb",
+      "downhill_trigger",
+      "edge_rusher_size_with_safety_athleticism",
+      "immediate_special_teams_contributor",
+      "linebacker_prospect",
+      "run_and_hit_lb",
+      "run_stopping_lb",
+      "sam",
+      "stack_and_shed",
+      "stack_lb_fit",
+      "three_down_lb",
+      "three_year_tackling_production",
+      "will"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Josiah Trotter": {
+    "tags": [
+      "13_tfls_last_season",
+      "183_tackles_two_years",
+      "high_energy_tackle_producer",
+      "instinctive_lb",
+      "landman_pairing",
+      "legacy_pedigree",
+      "mike",
+      "zone_defenses"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Jimmy Rolder": {
+    "tags": [
+      "blitzing_speed_+_coverage_prowess",
+      "69_tackles,_6.5_tfls,_2_sacks,_10_run_stops",
+      "mike",
+      "ascending_lb",
+      "versatile_second_level",
+      "versatile_deployment",
+      "rapid_development_from_backup_to_defensive_leader",
+      "will"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Jaishawn Barham": {
+    "tags": [
+      "4_sacks_23_pressures",
+      "edge_depth",
+      "edge_rotation",
+      "four_sacks_pass_rush_glimpses",
+      "hybrid",
+      "potential_based_lb",
+      "potential_over_production_evaluation",
+      "sam"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Bryce Boettcher": {
+    "tags": [
+      "solid_tackler",
+      "backup/rotational_lb",
+      "run_defense_profile",
+      "mike"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Caleb Downs": {
+    "tags": [
+      "68_tackles_2_ints_60205",
+      "allamerican",
+      "big_nickel",
+      "chess_piece_defender",
+      "closes_windows",
+      "deep_help__single_high",
+      "elite_athleticism",
+      "elite_football_iq",
+      "elite_iq",
+      "excels_vs_run",
+      "flexible_coverage_schemes",
+      "flores_scheme_fit",
+      "harbaugh_chess_piece",
+      "outstanding_blitzer",
+      "physical_with_adequate_speed",
+      "physical_with_speed_to_mirror_tes",
+      "plug_and_play_starter",
+      "plugandplay_starter",
+      "positionless",
+      "positionless_defender",
+      "quality_tackler",
+      "quarters",
+      "single_high_fs",
+      "smooth_mover_using_eyes",
+      "understanding_of_offensive_concepts",
+      "versatile",
+      "versatile__outstanding_instincts",
+      "versatile_safety_with_outstanding_instincts"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 15
+  },
+  "Emmanuel McNeil-Warren": {
+    "tags": [
+      "5_ints_910_forced_fumbles",
+      "77_tackles_in_2025",
+      "aggressive_alley_filler",
+      "best_box_safety_in_class_with_11_career_forced_fumbles",
+      "big_hits_and_ball_production",
+      "big_nickel",
+      "bouncy_twitchy_athlete",
+      "box_defender",
+      "box_safety",
+      "drives_on_throws_in_front",
+      "enforcer_safety",
+      "explosive__high_energy",
+      "fluid_change_of_direction",
+      "free_safety",
+      "littered_with_big_hits__plays_on_ball",
+      "plus_coverage",
+      "pro_bowl_potential",
+      "ranges_off_hash_making_sideline_plays",
+      "roof__hash_range",
+      "strong_safety",
+      "tall_long_safety",
+      "tall_long_safety_with_fantastic_production",
+      "very_explosive"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 9
+  },
+  "Dillon Thieneman": {
+    "tags": [
+      "60207",
+      "8_ints_versatile_alignment",
+      "95+_tackles_annually_across_three_seasons",
+      "allamerican",
+      "anticipates_and_ranges",
+      "anticipates_and_ranges_over_top",
+      "big_nickel",
+      "consistent",
+      "coverage_creation",
+      "elite_production",
+      "excellent_closing_speed",
+      "fluid_pedal_in_slot",
+      "fs_in_two_high",
+      "havoc_defense",
+      "high_production",
+      "instinctive_eyes_vs_run",
+      "multiple_ints_and_pbus",
+      "multiplelook_defenses",
+      "plus_range",
+      "quarters",
+      "quick_to_plant/drive",
+      "reliable_tackler",
+      "takes_good_routes",
+      "trusts_eyes",
+      "versatile_chess_piece_(box,_deep_half,_over_slot)",
+      "versatile_safety"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "A.J. Haulcy": {
+    "tags": [
+      "24_tackle_true_freshman_performance",
+      "3_ints_led_team",
+      "88_tackles_for_lsu",
+      "alley_fill_defender",
+      "ball_production",
+      "big_hitter_safety",
+      "box_safety",
+      "box_safety_fit",
+      "brugler_top_safety_board",
+      "closing_speed",
+      "coverage_zone_eyes",
+      "downhill_trigger_on_run",
+      "houston_nm_tackle_producer",
+      "in_the_box_ss",
+      "multi_year_starter_houston_nm",
+      "pff_high_run_defense_grade",
+      "physical_tackler",
+      "point_of_attack_striker",
+      "post_safety_fit",
+      "range_on_deep_middle",
+      "robber_role_fit",
+      "run_supporting_safety",
+      "single_high_fit",
+      "split_safety_fit",
+      "split_two_high_fit",
+      "tackle_producer",
+      "visible_tape_presence_with_four_10_tackle_games"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Bud Clark": {
+    "tags": [
+      "15_ints_and_21_pbus_in_four_seasons",
+      "ball_hawk",
+      "big_nickel",
+      "captain_history",
+      "deep_half",
+      "fs",
+      "safety_prospect",
+      "secondary_depth",
+      "six_college_season_veteran",
+      "slot_receiver_and_deep_coverage_capability",
+      "veteran_safety"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Treydan Stukes": {
+    "tags": [
+      "10_game_2025_starter_with_54_tackles_and_4_ints",
+      "4_ints_opportunistic_defense",
+      "ball_hawk_safety",
+      "centerfielder",
+      "fs",
+      "game_awareness_in_interviews",
+      "multialignment_db",
+      "outsideslotsinglehigh_versatility",
+      "takeaway_culture",
+      "tied_broad_jump_lead_3rdfastest_40_at_combine",
+      "walk_on_recovery_from_torn_right_acl"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Jalon Kilgore": {
+    "tags": [
+      "'star'_position_coverage_versatility",
+      "21_pbus_in_33_starts",
+      "big_nickel",
+      "big_nickel_fit",
+      "box_safety_fit",
+      "downhill_trigger",
+      "elite_combine_(10'10\"_broad)",
+      "fills_alleys",
+      "hybrid_safety_nickel",
+      "nickel_safety",
+      "physical_run_support",
+      "plus_tackling_box",
+      "slot_agility_+_run_defense_physicality",
+      "slot_safety_hybrid",
+      "strong_safety_fit",
+      "sub_package_chess_piece",
+      "two_year_starter_sc"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Keionte Scott": {
+    "tags": [
+      "big_nickel_safety",
+      "blitz_package",
+      "burst_+_want_to_+_block_avoidance_generating_negative_plays",
+      "day_2_cb",
+      "energy/physical",
+      "energy_provider",
+      "excellent_force_player_and_blitzer",
+      "immediate_contributor",
+      "leadership_raves",
+      "nickel_cb",
+      "nickel_defender",
+      "phenomenal_pro_day",
+      "quick_feet_and_ball_skills_in_underneath_coverage",
+      "senior_cornerback",
+      "speed_and_fluidity",
+      "sure_tackler",
+      "timing_as_blitzer"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Mansoor Delane": {
+    "tags": [
+      "27_pass_breakups_8_ints__11_pbus_recent",
+      "adept_at_press_coverage",
+      "aggressive_disguise_schemes",
+      "any_scheme",
+      "cover_1",
+      "cover_3",
+      "elite_technique",
+      "extremely_consistent__fluid",
+      "extremely_loose_and_fluid",
+      "high43_40_speed_60187",
+      "instincts_and_awareness_in_zone",
+      "instinctual_in_zone",
+      "locates_ball_well",
+      "makes_plays_on_ball_when_attacked",
+      "man_coverage_heavy",
+      "matches_every_style_of_receiver",
+      "most_consistent_players_in_class",
+      "only_8_catches_allowed_on_25_targets",
+      "physical_reliable_tackler",
+      "plug_and_play_starter",
+      "plus_ball_skills",
+      "plus_instincts",
+      "press_coverage_adept",
+      "press_man",
+      "re_routes_and_mirrors",
+      "scheme_flex_cb1",
+      "shutdown_cornerback",
+      "versatile",
+      "zonematch"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 13
+  },
+  "Jermod McCoy": {
+    "tags": [
+      "44_speed__explosive_athlete",
+      "60190_instinctive",
+      "6_ints_in_two_seasons__ball_skills",
+      "allamerican",
+      "always_under_control",
+      "ball_skills_corner",
+      "best_in_press_(one_hand_jam_maintaining_hip_mirror)",
+      "boundary_corner",
+      "capable_tackler_in_space",
+      "cover_1",
+      "elite_athleticism",
+      "elite_athleticism_and_ball_skills_(6_ints,_16_pbus_in_25_games)",
+      "impressive_ball_elevation",
+      "manheavy_secondaries",
+      "outstanding_2024_season",
+      "outstanding_press_with_onehand_jam",
+      "plus_ball_skills",
+      "press_man",
+      "press_man_cb",
+      "sets_traps_in_zone",
+      "spagnuolo_system",
+      "versatile"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 14
+  },
+  "Colton Hood": {
+    "tags": [
+      "17_pass_breakups_past_two_seasons",
+      "60195_excellent_play_speed",
+      "any_scheme",
+      "average_size_but_excellent_play_speed_and_toughness",
+      "complete_corner",
+      "complete_player",
+      "cover_3",
+      "fluid_mirror_underneath",
+      "fluid_turning_and_mirroring",
+      "immediate_starter",
+      "multiple_secondary_systems",
+      "only_17/37_targets_allowed_after_tennessee_transfer",
+      "patient_in_press",
+      "physical_matchup_cb",
+      "press_match",
+      "senior_bowl_standout",
+      "speed_carrying_verticals",
+      "trusts_eyes_in_off_coverage",
+      "watson_substitute",
+      "willing_against_run"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Chris Johnson": {
+    "tags": [
+      "13_pbus",
+      "44_speed_4_ints_9_pbus",
+      "best_in_off_coverage",
+      "character/toughness_raved_about",
+      "cover_3",
+      "dependable_tackler",
+      "excellent_height/bulk/movement",
+      "excellent_heightbulkmovement",
+      "excellent_offcoverage_eyes",
+      "extremely_tough_and_aggressive_vs_run",
+      "mixes_bail_technique",
+      "natural_finding_ball",
+      "nonpowerfour_scheme_fit",
+      "off_corner",
+      "off_zone",
+      "quarters",
+      "quick_feet__fluid_to_openrun",
+      "quick_feet_and_fluid_open_and_run",
+      "returned_2_ints_for_tds",
+      "run_supporter",
+      "starter_capability",
+      "strong_combine",
+      "zone_cb1"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Avieon Terrell": {
+    "tags": [
+      "14_pbus_and_6_ffs_over_two_seasons",
+      "8_forced_fumbles_two_years",
+      "aggressive_vs_run",
+      "allamerican",
+      "big_nickel",
+      "blitz_capable_slot",
+      "excellent_eyes_and_closing_speed_underneath",
+      "feisty_competitive",
+      "feisty_competitive_play",
+      "man_coverage",
+      "matches_up_in_slot",
+      "nickel__slot",
+      "nickel_cb",
+      "nickel_corner",
+      "press_man",
+      "quick_feet_and_smooth_change_of_direction",
+      "quick_feet_matching_slot",
+      "slot",
+      "stellar_blitzer",
+      "tremendous_quickness_and_instincts",
+      "undersized__tremendous_quickness"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Brandon Cisse": {
+    "tags": [
+      "12_pbus_zero_ints_season",
+      "bail_technique",
+      "cover_3",
+      "developmental",
+      "fast__twitchy_cover_corner",
+      "fast_twitchy_cover_corner",
+      "loose_fluid_athlete",
+      "man_pairing",
+      "speed_corner",
+      "usually_played_with_back_to_sideline",
+      "zone_with_back_turned"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "D'Angelo Ponds": {
+    "tags": [
+      "586182_outlier_size",
+      "7_ints,_27_pbus_over_three_seasons",
+      "7_ints_three_years__32_pbus",
+      "always_in_phase_at_all_levels",
+      "ball_hawking_nickel",
+      "big_moment_dna_(rose_bowl/peach_bowl_dmvp)",
+      "big_moment_player",
+      "big_nickel_rotation_fit",
+      "brugler_nickel_board",
+      "compact_slot_(5'9\",_182)",
+      "elite_explosion_(43.5\"_vertical)",
+      "indiana_multi_year_producer",
+      "leaping_ability_led_cbs_at_combine",
+      "led_national_champions_with_10_pbus",
+      "nickel",
+      "nickel_slot_fit",
+      "off_man_pedal",
+      "outside_slot_versatility",
+      "pff_slot_coverage_grade",
+      "pitre_complement",
+      "plays_bigger_at_catch_point",
+      "plays_through_upfield_hip",
+      "route_anticipation_slot",
+      "slot__nickel_projection",
+      "slot_heavy",
+      "trigger_to_flats",
+      "zone_match_nickel_fit"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Chandler Rivers": {
+    "tags": [
+      "effective_kick_block_contributor",
+      "cover_3",
+      "four_year_corner_(5'10\",_185)",
+      "technician_corner",
+      "plant_and_drive_ball_skills_at_4.4_speed",
+      "off_zone",
+      "7_ints,_23_pbus"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Davison Igbinosun": {
+    "tags": [
+      "availability_king_(53_career_starts)",
+      "experienced_cb",
+      "fleet_receiver_matchups",
+      "press_match",
+      "cover_1",
+      "penalty_prone",
+      "run_defense_involvement"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Tacario Davis": {
+    "tags": [
+      "press_man",
+      "cornerback_pedigree",
+      "length_corner",
+      "260+_press_coverage_snaps_over_three_seasons",
+      "press_man_cb"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Malik Muhammad": {
+    "tags": [
+      "10_pbus_2024",
+      "27_starts_past_two_years",
+      "442_speed",
+      "elite_cod",
+      "pattern_match",
+      "pattern_match_cb",
+      "smooth_pattern_matching_coverage",
+      "woolen_replacement",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Keith Abney II": {
+    "tags": [
+      "outside_slot_versatility",
+      "versatile_corner",
+      "outside_slot_hybrid",
+      "down_to_down_competitiveness",
+      "nickel_capable",
+      "nickel",
+      "21_pbus_and_5_ints_over_two_seasons"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Daylen Everette": {
+    "tags": [
+      "press_experience",
+      "press_man",
+      "sec_pedigree",
+      "press_cb"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Carnell Tate": {
+    "tags": [
+      "172_yardscatch",
+      "51_catches_875_yards_9_tds",
+      "63195_one_drop_last_season",
+      "allamerican",
+      "body_control_adjuster",
+      "clean_routes__reliable_hands",
+      "complementary_z__boundary",
+      "contested_catch_winner",
+      "covers_ground_with_long_stride",
+      "elite_hands",
+      "excellent_suddenness_defeating_press",
+      "high_football_iq",
+      "immediate_vertical_impact",
+      "large_catch_radius",
+      "loose_athlete_on_back_shoulder",
+      "outstanding_production",
+      "pickens_comp",
+      "plug_and_play_starter",
+      "plus_separation",
+      "polished_route_runner",
+      "polished_wr1",
+      "rare_84.8%_catch_rate_averaging_18.2_ypr",
+      "route_running_technician",
+      "routediversity_offenses",
+      "strong_reliable_hands_in_traffic",
+      "tall_wideout_with_better_play_speed_than_timed_speed",
+      "tracks_ball_beautifully_over_shoulder",
+      "versatile",
+      "vertical_passing",
+      "vertical_passing_game",
+      "vertical_x",
+      "west_coast",
+      "x_receiver",
+      "x_receiver_profile"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 14
+  },
+  "Makai Lemon": {
+    "tags": [
+      "10_catches153_ydstd_vs_iowa",
+      "4.53_forty",
+      "511190_with_lb_temperament",
+      "79_catches_1156_yards_11_tds",
+      "allamerican",
+      "best_in_slot",
+      "contested_catches",
+      "doesn't_waste_steps",
+      "elite_route_running",
+      "elite_separation",
+      "explodes_in/out_of_breaks",
+      "explosive_athlete",
+      "high_target_share",
+      "motion_heavy",
+      "one_drop_in_1,000_yard_season",
+      "plays_bigger_than_size_on_50/50_balls",
+      "plus_separation",
+      "plus_yac",
+      "quickgame_slot",
+      "rb_body_+_lb_temperament",
+      "slot_competition_adams_complement",
+      "slot_heavy",
+      "slot_wr1",
+      "swiss_army_wr",
+      "tempos_routes",
+      "ultra_competitive_after_catch",
+      "ultracompetitive_after_catch",
+      "underneath_routes",
+      "west_coast",
+      "wins_in_traffic",
+      "wins_with_quickness_off_line"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 12
+  },
+  "Jordyn Tyson": {
+    "tags": [
+      "61195_214_ypc_in_2022",
+      "61_catches_711_yards",
+      "628_yards,_8_tds",
+      "allamerican",
+      "big_play_receiver",
+      "boundary__outside_option",
+      "elite_hands",
+      "elite_route_running",
+      "excellent_deep_catches",
+      "explosive__wow_plays",
+      "explosive_receiver_with_lots_of_wow_plays",
+      "fluid_creative_releases",
+      "fluid_with_variety_of_releases",
+      "hovering_ability_in_air",
+      "incredible_deep_ball_tracking",
+      "modern_no._1_receiver_profile",
+      "play_action",
+      "plus_separation",
+      "spread",
+      "suddenness_off_line_and_out_of_breaks",
+      "versatile",
+      "vertical_passing",
+      "vertical_wr1",
+      "weaves_getting_corners_off_balance",
+      "wiggle_+_speed_after_catch"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 11
+  },
+  "Omar Cooper Jr.": {
+    "tags": [
+      "937_yards_13_tds",
+      "allamerican",
+      "break_tackles_+_pull_away_speed",
+      "can_elevate_above_rim",
+      "combat_catch_ability",
+      "combat_catches__5050_winner",
+      "complementary_to_elite_receiver",
+      "culturebuilding_tough_wr",
+      "deep_threats_needed",
+      "fbs_leader_with_17_broken_tackles_on_46_catches",
+      "immediate_starter",
+      "loose_fluid_route_runner",
+      "makeup/competitiveness_raves",
+      "physical_x",
+      "play_action",
+      "plays_without_fear_in_middle",
+      "plucks_ball_grounded_on_crossers",
+      "power_after_catch",
+      "rb_like_build",
+      "strong_lower_body_through_press",
+      "strong_reliable_explosive_receiver",
+      "uses_lower_body_strength_through_press",
+      "vertical",
+      "x_receiver",
+      "yac_receiver"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Denzel Boston": {
+    "tags": [
+      "20_tds_in_two_seasons",
+      "64209_11_tds",
+      "77_contested_catch_rate",
+      "ball_winner_with_huge_catch_radius",
+      "big_bodied_x",
+      "big_framed_wideout",
+      "boxingout__contestedcatch_master",
+      "complementary_x_receiver",
+      "contested_catch_offense",
+      "exceptional_ball_skills",
+      "exceptional_ball_skills_and_production",
+      "huge_catch_radius__red_zone_weapon",
+      "lines_up_outside_and_slot",
+      "long_strider_walling_off_defenders",
+      "outstanding_catches",
+      "red_zone_rim_playing",
+      "red_zone_target",
+      "red_zone_winner",
+      "upper_body_strength_through_press",
+      "vertical_passing",
+      "x_receiver"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "KC Concepcion": {
+    "tags": [
+      "151_yardscatch_average",
+      "511190_elusive",
+      "919_yards_9_tds",
+      "ascending_trajectory",
+      "breakout_senior_season",
+      "creates_massive_separation",
+      "dynamic_after_catch",
+      "elite_burst_and_speed",
+      "elite_yac",
+      "expansive_route_tree",
+      "explosive_transition_catch_to_run",
+      "gadget_plus_true_wr",
+      "immediate_catch_to_run_transition",
+      "modern_offense_fit",
+      "nimble_route_runner",
+      "olave_complement",
+      "punt_return_contributor",
+      "quick_game",
+      "quick_jab_step_exploding_downfield",
+      "return_specialist",
+      "rpo",
+      "scheme_versatile_weapon",
+      "slot",
+      "slot__space_creation",
+      "slot_burner",
+      "speed_jumps_off_screen",
+      "three_level_separator"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Antonio Williams": {
+    "tags": [
+      "2024_season_75_catches_11_tds",
+      "ball_skills_and_yac",
+      "brugler_slot_wr_board",
+      "clemson_three_year_producer",
+      "excels_on_pivot_routes",
+      "feels_soft_zones",
+      "find_grass_vs_zone",
+      "high_volume_target",
+      "ideal_slot_wr_with_high_volume_upside",
+      "mesh_concept_fit",
+      "motion_jet_fit",
+      "motion_sweep_fit",
+      "option_route_feel",
+      "outstanding_short_area_quickness",
+      "pff_slot_yprr",
+      "plays_bigger_than_size_when_ball_in_air",
+      "quick_choppy_steps_setting_up_defenders",
+      "quick_game",
+      "quick_game_fit",
+      "receiver_prospect",
+      "releases_vs_press",
+      "reliable_slot_hands",
+      "separation_creator",
+      "sharp_route_tree",
+      "short_area_burst",
+      "slot",
+      "slot__boundary",
+      "slot_fit",
+      "slot_receiver_fit",
+      "slot_wr",
+      "smaller_frame",
+      "stem_at_top_of_routes",
+      "twitchy",
+      "two_year_producer_clemson",
+      "west_coast"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Germie Bernard": {
+    "tags": [
+      "40_fb_down_receptions",
+      "862_yards_7_tds",
+      "after_catch_strength",
+      "all_around_wr2/3",
+      "chain_mover",
+      "complete_route_tree",
+      "condensed_formation_fit",
+      "hillwaddle_loss_volume_replacement",
+      "plus_run_blocking_wr",
+      "pro_style",
+      "quality_starting_slot",
+      "quick/elusive/strong_yac",
+      "quickness_as_weapon",
+      "quickness_weapon_off_line_and_route_top",
+      "separates_underneath",
+      "separates_underneath__strong_hands",
+      "slot",
+      "slot__slowup_system",
+      "slot_outside_flex",
+      "slot_receiver_fit",
+      "strong_hands_attacking_ball",
+      "strong_sturdy_wideout",
+      "strong_sturdy_wr__multiple_alignments",
+      "tough_competitive_blocker",
+      "tough_competitor",
+      "toughness/blocking_competitiveness",
+      "tracks_deep_ball_well",
+      "two_year_starter_washington",
+      "variety_of_alignments",
+      "west_coast_offense_fit",
+      "z_receiver"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Eric Singleton Jr.": {
+    "tags": [
+      "yac_wr",
+      "explosive_athleticism",
+      "slot",
+      "strong_all_around_traits",
+      "quick_game",
+      "slot_athlete"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Ja'Kobi Lane": {
+    "tags": [
+      "excels_in_red_zone_(17_of_76_career_tds)",
+      "basketball_frame",
+      "jump_ball_specialist",
+      "red_zone_target",
+      "red_zone_winner",
+      "x_receiver"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Zachariah Branch": {
+    "tags": [
+      "59177_quickgame_specialist",
+      "636_of_811_receiving_yards_after_catch",
+      "elite_burst",
+      "elite_separator_(4.35)",
+      "exceptional_after_catch_ability",
+      "jet_motion",
+      "return_game_versatility",
+      "return_specialist",
+      "rodgers_quick_release",
+      "rpo",
+      "slot",
+      "slot_burner",
+      "slot_role",
+      "sure_hands",
+      "yac_weapon",
+      "zay_flowers_archetype"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Skyler Bell": {
+    "tags": [
+      "elite_acceleration",
+      "four_year_producer_wisconsin",
+      "high_volume_slot",
+      "motion_gadget_fit",
+      "quick_game",
+      "reliable_hands",
+      "separation_quickness",
+      "sharp_route_breaks",
+      "slot",
+      "slot_receiver_fit",
+      "top_three_fbs_rankings_in_receptions/yards/tds/ypg/yac",
+      "undersized_slot",
+      "west_coast_slot_fit",
+      "yac_creator",
+      "yac_wr"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Malachi Fields": {
+    "tags": [
+      "33_of_64_targets_contested",
+      "boundary__slot",
+      "boundary_comfort",
+      "contested_catch_offense",
+      "contested_catch_winner_in_tight_spaces",
+      "contested_catch_x",
+      "receiver_prospect",
+      "x_receiver"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "De'Zhaun Stribling": {
+    "tags": [
+      "back_to_back_800_yard_seasons",
+      "z_receiver",
+      "possession_wr",
+      "nfl_ready_blocking",
+      "field_deep_adept",
+      "outside"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Bryce Lance": {
+    "tags": [
+      "17_tds_in_2024",
+      "25_tds_total",
+      "X_receiver_fit",
+      "big_frame_target",
+      "contested_catch_winner",
+      "fcs_production",
+      "first_bison_with_back_to_back_1,000_yard_seasons",
+      "fluid_route_runner",
+      "nfl_bloodlines",
+      "plus_body_control",
+      "red_zone_weapon",
+      "small_school_speedster",
+      "top_tier_speed",
+      "vertical",
+      "vertical_boundary_fit",
+      "z_receiver"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Elijah Sarratt": {
+    "tags": [
+      "red_zone_role",
+      "body_catcher",
+      "13_red_zone_targets_show_mendoza_trust",
+      "second_most_big_ten_end_zone_targets",
+      "red_zone_target"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Deion Burks": {
+    "tags": [
+      "route_precision",
+      "motion_heavy",
+      "advanced_footwork",
+      "slot_technician",
+      "slot",
+      "57_receptions_despite_inconsistent_offense"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Ted Hurst": {
+    "tags": [
+      "contested_catch_wr",
+      "size",
+      "tied_fbs_contested_catch_lead_(32%_of_71_receptions)",
+      "speed_and_yac_potential",
+      "outside"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Chris Bell": {
+    "tags": [
+      "12_personnel_x_fit",
+      "back_shoulder_winner",
+      "boundary_body_catch",
+      "boundary_x_fit",
+      "developmental_wr",
+      "kiper_day_3_wr",
+      "louisville_multi_year_producer",
+      "pff_contested_catch_rate",
+      "physical_stalk_blocker",
+      "red_zone_target_fit",
+      "short_area_contested_ability",
+      "size/ball_skills"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Kenyon Sadiq": {
+    "tags": [
+      "435_vertical_111_broad_97th_pctl",
+      "439_forty_at_241_lbs_record",
+      "51_catches_560_yards",
+      "athletic_te",
+      "competitive/tenacious_blocker",
+      "competitive_tenacious_blocker",
+      "consensus_position_1",
+      "dual_skill_tight_end",
+      "dynamic_on_quick_screens",
+      "elite_athleticism",
+      "elite_yac",
+      "explosive_in_release_with_vertical_separation",
+      "explosive_release",
+      "explosive_speed_size",
+      "move_te",
+      "movement_te",
+      "outstanding_speed__explosive_release",
+      "passcatching_te",
+      "play_action_offense",
+      "positional_scarcity_te",
+      "primarily_attached_or_slot",
+      "record_breaking_athleticism",
+      "seam_attacker",
+      "short_muscled_up_te_with_outstanding_speed/athleticism",
+      "size_advantage_over_coverage_defenders",
+      "tenacious_blocker",
+      "three_level_receiver",
+      "twote_sets__12_personnel",
+      "well_rounded_route_tree",
+      "y_in_12_personnel"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 11
+  },
+  "Max Klare": {
+    "tags": [
+      "slot_athleticism",
+      "route_running_te",
+      "high_end_yac_potential",
+      "slot_te",
+      "best_route_running_in_class",
+      "passing_game_impact_specialist",
+      "pass_heavy_offense",
+      "natural_separation_ability",
+      "flex_te"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 6
+  },
+  "Michael Trigg": {
+    "tags": [
+      "move_te",
+      "most_productive_te_nationally",
+      "pass_catcher",
+      "absurd_highlights",
+      "40_catches_for_607_yards",
+      "catch_radius_te",
+      "seven_foot_wingspan_catch_radius",
+      "red_zone_target"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Eli Stowers": {
+    "tags": [
+      "12_personnel_fit",
+      "146_catches_over_3_years",
+      "386_yac_second_among_fbs_tes",
+      "769_yards",
+      "athletic_move_te",
+      "boundary_winner_vs_zone",
+      "contested_catch_hands",
+      "flex",
+      "former_qb_wr_now_te",
+      "immediate_receiving_threat",
+      "kiper_te2_range",
+      "length_+_athleticism_(45.5\"_vertical)",
+      "middle_of_field_option",
+      "move_te",
+      "pff_top_te_receiving_grade",
+      "play_action_seam_fit",
+      "receiving_te",
+      "seam_stretcher",
+      "vandy_breakout_producer",
+      "volume_tight_end",
+      "y_iso_fit"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Justin Joly": {
+    "tags": [
+      "move_te",
+      "physical_catch_point_unbothered_by_contact",
+      "immediate_red_zone_target",
+      "back_to_back_43+_reception_seasons",
+      "move_te_projection",
+      "y",
+      "red_zone_target"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Eli Raridon": {
+    "tags": [
+      "h_back",
+      "tough_catches_downfield",
+      "move_te",
+      "h_back_alignment_potential",
+      "versatile_move_te_(6'6\",_245)",
+      "h_back/te_hybrid",
+      "frame_filling_opportunity"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 3
+  },
+  "Francis Mauigoa": {
+    "tags": [
+      "1.1%_pressure_rate_â€”_elite_pass_pro_efficiency",
+      "42_college_starts",
+      "66315329",
+      "allamerican",
+      "bends_knees_to_anchor",
+      "big_powerful_rt",
+      "dominant_run_blocker",
+      "elite_pass_pro",
+      "explosive_athlete",
+      "fierce_run_blocker",
+      "firm_base_in_pass_pro",
+      "fluid_mover_with_patient_punch",
+      "gap",
+      "hybrid_ot_g",
+      "intelligent",
+      "long_term_starter",
+      "massive_lower_body",
+      "massive_lower_body__firm_base",
+      "only_2_sacks_allowed",
+      "outside_zone_with_screenroute_versatility",
+      "patient_punch__strong_hands",
+      "plug_and_play_rt",
+      "plus_power",
+      "plus_power_run",
+      "plus_size",
+      "power_run_scheme",
+      "pro_style",
+      "right_tackle_or_left",
+      "runheavy_offense",
+      "strong_hands_to_steer_and_control",
+      "uproots/displaces_in_run_game",
+      "versatile"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 13
+  },
+  "Spencer Fano": {
+    "tags": [
+      "24plus_career_starts",
+      "66310_fast_athletic",
+      "allamerican",
+      "both_tackle_positions",
+      "elite_pass_pro",
+      "excellent_strength_+_quickness",
+      "explosive_people_mover",
+      "five_position_versatility",
+      "fiveposition_versatility",
+      "interior_ol",
+      "interioredge_swing",
+      "mean_streak__nasty",
+      "no_sacks_allowed_2025",
+      "openness_to_position_change",
+      "plug_and_play_guard",
+      "plug_and_play_lt",
+      "plus_athletic",
+      "plus_technique",
+      "quick_stance_covering_speed_rushers",
+      "rides_rushers_upfield",
+      "stalls_bull_rushers_with_core_strength",
+      "took_center_snaps_at_combine",
+      "versatile",
+      "versatile_ol",
+      "wide_zone",
+      "zone_blocker",
+      "zone_scheme",
+      "zone_scheme_fit",
+      "zonerun_scheme"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 12
+  },
+  "Olaivavega Ioane": {
+    "tags": [
+      "32_starts",
+      "64320334",
+      "allamerican",
+      "anchors_with_temperament/toughness",
+      "aware_on_stunts",
+      "bends_and_redirects_in_pass_game",
+      "dominant_lg",
+      "duobased_run",
+      "easily_handles_power",
+      "elite_anchor",
+      "elite_play_strength",
+      "explosive__physical_nasty_streak",
+      "gap",
+      "latches_and_finishes_in_run_game",
+      "only_one_pressure_all_season",
+      "outstanding_strength/power",
+      "pass_pro_dominance",
+      "phonebooth_physical_schemes",
+      "plug_and_play_guard",
+      "plug_and_play_starter",
+      "plus_pass_pro",
+      "positional_scarcity_guard",
+      "power",
+      "power_run_game",
+      "pressure_rate_elite",
+      "pure_power__quick_feet",
+      "redirects_and_stays_attached",
+      "takes_proper_second_level_angles",
+      "thick_proportioned_build",
+      "tone_setter_run_blocker",
+      "top_position_grade",
+      "top_true_guard_in_class",
+      "tremendous_upper_torque",
+      "versatile",
+      "zero_sacks_allowed",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 12
+  },
+  "Kadyn Proctor": {
+    "tags": [
+      "493_forty",
+      "5star_pedigree",
+      "both_tackle_positions",
+      "elite_run_blocker",
+      "elite_size",
+      "enormous_67352358",
+      "enormous_mauler",
+      "enormous_tackle_prospect",
+      "excellent_feet/agility_for_size",
+      "excellent_feet_and_agility_for_size",
+      "excels_on_down_blocks",
+      "explosive_first_step",
+      "gap",
+      "guard_possibility_in_nfl",
+      "kick_inside_candidate",
+      "leftside_anchor",
+      "plug_and_play_lt",
+      "power_run_scheme",
+      "power_run_schemes",
+      "rare_size_movement_combo",
+      "sinks_weight_to_stall_bull_rushers",
+      "sinks_weight_vs_bull_rushers",
+      "skill_player_feel_on_quick_screens",
+      "uncoils_hips_on_contact",
+      "versatile"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 12
+  },
+  "Monroe Freeling": {
+    "tags": [
+      "18_starts_experience",
+      "493_forty",
+      "67315_long_arms_34_34",
+      "athletic_lt",
+      "developmental_starter",
+      "excellent_on_combo_blocks",
+      "ideal_size/bend/agility",
+      "ideal_size_bend_agility",
+      "left_tackle",
+      "longterm_blindside",
+      "outside_zone",
+      "played_best_late_battling_injuries",
+      "playing_best_late_season",
+      "quick_out_of_stance",
+      "quick_stance_bending_smoothly_vs_counter_rushers",
+      "rapid_pass_pro_improvement",
+      "rare_physical_traits",
+      "rolls_hips_+_latches_in_run_game",
+      "steers_and_controls_defenders",
+      "wide_zone",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Caleb Lomu": {
+    "tags": [
+      "1.7%_pressure_rate",
+      "allamerican",
+      "depth_contingency",
+      "ekwonu_insurance",
+      "elite_pass_pro",
+      "elite_technique",
+      "excellent_feel/awareness_vs_stunts",
+      "excellent_feel_vs_stunts",
+      "fits_cleanly_staying_attached_in_run_game",
+      "ideal_frame__room_to_add_strength",
+      "ideal_frame_and_room_for_strength_additions",
+      "immediate_starter",
+      "little_upright_but_consistently_stays_square",
+      "nice_reworking_hands",
+      "outside_zone",
+      "pass_heavy_offense",
+      "proper_second_level_angles",
+      "refined_pass_pro_technique",
+      "reworks_hands",
+      "runblock_pop",
+      "stays_square",
+      "technique_lt",
+      "versatile",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 8
+  },
+  "Blake Miller": {
+    "tags": [
+      "3500_snaps__iron_man",
+      "66310_54_consecutive_starts",
+      "aware_on_twists/stunts",
+      "elite_durability",
+      "explosive_athlete",
+      "gap",
+      "generates_movement_on_down_blocks",
+      "good_agility__balance",
+      "high_school_wrestler_background",
+      "ideal_size/length/strength_for_rt",
+      "iron_man_durable",
+      "length_+_strong_hands_to_latch",
+      "plug_and_play_rt",
+      "plug_and_play_starter",
+      "power_run_scheme",
+      "quickness_covering_speed_rushers",
+      "quickness_covers_speed_rushers",
+      "right_side_transition",
+      "sinks_weight_and_anchors",
+      "started_54_games_at_clemson_(iron_man_streak)",
+      "tackle_or_guard_positions",
+      "technician",
+      "toughness_+_awareness_offsetting_technique_concerns",
+      "versatile",
+      "wrestler_background"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 10
+  },
+  "Max Iheanachor": {
+    "tags": [
+      "31_starts__33875_arms",
+      "31_starts_vs_quality_competition",
+      "6'6,_321_with_33.875\"_arms_+_4.91_forty",
+      "66330",
+      "athletic_trait_tackle",
+      "could_end_up_best_ol_in_class",
+      "downhill_schemes",
+      "elite_length",
+      "elite_physical_tools",
+      "exceptional_trajectory_despite_late_football_start_(2022)",
+      "football_novice_pre2022",
+      "high_upside_ol",
+      "high_upside_rt",
+      "jumps_out_of_stance_staying_square",
+      "knock_back_run_game_power",
+      "long_term_developmental",
+      "moves_well_on_pulls",
+      "nasty__bullies__knockback_power",
+      "strength_to_absorb_and_anchor",
+      "versatile",
+      "very_athletic_to_redirect",
+      "williams_eventual_replacement",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 9
+  },
+  "Trevor Goosby": {
+    "tags": [
+      "more_prototypical_build_and_athletic_profile_than_recent_longhorn_ol_draftees",
+      "developmental_ot",
+      "solid_movement_and_space_ability",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Caleb Tiernan": {
+    "tags": [
+      "43_of_52_career_starts_at_both_tackle_spots",
+      "balanced_pass_set",
+      "climb_angle_to_backer",
+      "confident_locked_on_strength",
+      "developmental",
+      "developmental_starter",
+      "developmental_tackle",
+      "duo_scheme_fit",
+      "gap",
+      "gap_pulling_tackle_fit",
+      "hand_reset_ability",
+      "kiper_day_2_ot",
+      "left_tackle_projection",
+      "long_arms_tackle",
+      "mirror_anchor_vs_power",
+      "northwestern_three_year_starter",
+      "offensive_tackle",
+      "ot/og_swing",
+      "outside_zone_fit",
+      "outside_zone_tackle_fit",
+      "pff_pass_block_grade",
+      "power",
+      "punch_timing_in_pass_set",
+      "quick_kick_slide",
+      "three_year_starter_northwestern",
+      "wide_zone_fit",
+      "zone_run_mover"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Gennings Dunker": {
+    "tags": [
+      "guard_transition_potential",
+      "37_of_38_starts_at_rt",
+      "gap",
+      "rt_to_g_swing",
+      "no_sack_resulting_pressures",
+      "power"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Trey Zuhn III": {
+    "tags": [
+      "interior_kick_candidate",
+      "versatile_ol",
+      "pass_protection_footwork",
+      "mature_hand_comfort",
+      "48_lt_starts_with_2_center_snaps"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Emmanuel Pregnon": {
+    "tags": [
+      "51_career_starts_(39_lg,_12_rg)",
+      "7_sacks_across_3,087_snaps",
+      "blocks_sustainably_65315",
+      "brugler_day_2_iol",
+      "climb_to_second_level",
+      "dramatic_improvement_(18_pressures_allowed_last_year_to_2_this_season)",
+      "duo_scheme_fit",
+      "gap",
+      "gap_puller_fit",
+      "guard_projection",
+      "heavy_hands",
+      "interior_mover",
+      "iowa_tape_(261_rushing_yards,_7.3_ypc_behind_him)",
+      "kick_out_puller",
+      "outside_zone_guard_fit",
+      "pff_pass_block_efficiency",
+      "physically_imposing_iol",
+      "plug_and_play_guard",
+      "power",
+      "reach_block_athleticism",
+      "usc_multi_year_starter",
+      "veteran_starter",
+      "walk_in_contributor",
+      "wide_set_base_in_pass_pro",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  },
+  "Chase Bisontis": {
+    "tags": [
+      "1300_snaps_65315",
+      "effective_vs_speed_and_power",
+      "gap",
+      "gap_scheme_fit",
+      "guard_center_flex",
+      "heavy_hands_interior",
+      "interior_power",
+      "multi_position_starter_(lg,_rg,_rt)",
+      "multi_year_starter_texas_am",
+      "poise_maintenance",
+      "power",
+      "power/technique/effort_trio",
+      "power_blocking_fit",
+      "power_run_game",
+      "strong_anchor_pass_pro"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Keylan Rutledge": {
+    "tags": [
+      "43_starts_2_sacks_allowed",
+      "eliminates_lbs_at_second_level",
+      "eliminates_lbs_climbing",
+      "excellent_awareness_run_game",
+      "excellent_size/length",
+      "finisher",
+      "firm_anchor_pass_pro",
+      "firm_pass_pro_anchor",
+      "gap",
+      "great_awareness_fitting_up_and_straining_to_finish",
+      "interior_depth",
+      "nastiness_to_play_demeanor",
+      "nasty__toughness",
+      "plug_and_play_guard",
+      "plug_and_play_starter_at_guard",
+      "power",
+      "run_game__fitandfinish",
+      "toughness_+_intensity_endearing_to_ol_coaches"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Connor Lew": {
+    "tags": [
+      "center_prospect",
+      "strength_and_flexibility",
+      "best_center_prospect_despite_october_acl_tear",
+      "zone",
+      "pro_awareness_demonstrated",
+      "gap"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 5
+  },
+  "Jake Slaughter": {
+    "tags": [
+      "minimal_pressure_allowed_(6_pressures,_3_sacks)",
+      "good_lateral_agility_and_footwork",
+      "awareness_on_stunts",
+      "plug_and_play_center",
+      "battle_tested_sec_veteran_(33_starts,_2,000+_snaps)",
+      "zone",
+      "gap"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Logan Jones": {
+    "tags": [
+      "51_games_at_center",
+      "52_center_starting_games",
+      "bradbury_succession",
+      "dl_to_ol_conversion",
+      "high_effort_technical_soundness",
+      "veteran_center",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Kade Pieper": {
+    "tags": [
+      "developmental",
+      "athletic_iol",
+      "iowa_future_likely_at_center",
+      "most_athletic_college_football_lineman",
+      "zone"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 4
+  },
+  "Oscar Delp": {
+    "tags": [
+      "12_personnel_fit",
+      "20_catches_261_yards",
+      "goedert_timeline",
+      "inline_TE_fit",
+      "inline_blocker",
+      "multi_year_uga_starter",
+      "play_action_pop_pass_fit",
+      "plus_blocking_effort",
+      "reliable_hands",
+      "seam_threat_te",
+      "successionplanning_potential",
+      "y_tight_end"
+    ],
+    "_source": "mock_reasoning",
+    "_board_mention_count": 4
+  },
+  "Cade Klubnik": {
+    "tags": [
+      "backup_mentality",
+      "developmental_qb"
+    ],
+    "_source": "mock_reasoning",
+    "_board_mention_count": 3
+  },
+  "Rueben Bain": {
+    "tags": [
+      "44_pressures_this_season",
+      "4_3_de",
+      "95_sacks_63275",
+      "base_end",
+      "best_collegiate_de_season_since_aidan_hutchinson",
+      "can_kick_inside_on_obvious_pass",
+      "edge_or_threetech",
+      "edge_rotation",
+      "elite_bend",
+      "elite_explosiveness",
+      "elite_play_strength",
+      "every_down_de",
+      "explosive_athlete",
+      "freshman_production",
+      "game_tape_full_of_disruption_and_dominance",
+      "gap_control",
+      "hand_technique_advanced",
+      "launches_from_four_point_stance",
+      "leverage__power__polish",
+      "nasty_chop/rip",
+      "nasty_choprip_and_hump_moves",
+      "nifty_euro_step",
+      "pff_top_grade",
+      "plus_power",
+      "power_rusher",
+      "power_rusher_archetype",
+      "power_rusher_role",
+      "ragdolls_tight_ends",
+      "run_defense_floor",
+      "run_stuffing_edge",
+      "thick_square_build",
+      "thick_square_edge_rusher",
+      "three_year_production",
+      "unrelenting_motor",
+      "uproots_tackles",
+      "violent_at_point_of_attack",
+      "wins_with_leverage,_power_and_polish"
+    ],
+    "_source": "curated_premium"
+  },
+  "C.J. Allen": {
+    "tags": [
+      "4_3_mike_fit",
+      "blitz_timing",
+      "brugler_day_2_lb",
+      "cbs_top_100_board",
+      "cover_3_hook_fit",
+      "downhill_thumper",
+      "fills_a_gap_quickly",
+      "green_dog_blitzer",
+      "instinctive_run_defender",
+      "mike_lb_fit",
+      "pff_top_30_lb_grade",
+      "plus_tackle_production",
+      "plus_tackling_form",
+      "sideline_to_sideline_range",
+      "stack_shed_vs_guards",
+      "three_year_starter_uga",
+      "trigger_downhill",
+      "two_high_zone_fit",
+      "zone_match_underneath"
+    ],
+    "_source": "scouting_tag_gap_fill_2026_04_20"
+  },
+  "Zakee Wheatley": {
+    "tags": [
+      "angles_to_the_ball",
+      "ball_production",
+      "brugler_day_3_safety",
+      "click_and_close",
+      "cover_4_quarter_fit",
+      "deep_half_reader",
+      "downhill_run_trigger",
+      "field_awareness",
+      "free_safety_fit",
+      "multi_year_starter_psu",
+      "penn_state_three_year_starter",
+      "pff_coverage_grade",
+      "plus_tackling_safety",
+      "range_on_hashes",
+      "single_high_capable",
+      "split_field_safety_fit",
+      "split_safety_fit",
+      "two_high_post_safety",
+      "zone_eyes_on_qb"
+    ],
+    "_source": "scouting_tag_gap_fill_2026_04_20"
+  },
+  "Devin Moore": {
+    "tags": [
+      "boundary_cb_projection",
+      "fluid_hips",
+      "multi_year_starter_kansas_state",
+      "plus_long_speed",
+      "press_bail_technique",
+      "press_man_cb",
+      "recovery_speed",
+      "sticky_downfield_coverage",
+      "zone_corner_fit"
+    ],
+    "_source": "scouting_tag_gap_fill_2026_04_20"
+  },
+  "R. Mason Thomas": {
+    "tags": [
+      "3_4_olb_fit",
+      "bend_at_ankle",
+      "cbs_day_2_edge",
+      "cross_chop_counter",
+      "dip_and_rip_arc",
+      "oklahoma_multi_year_producer",
+      "pff_pass_rush_win_rate",
+      "quick_first_step",
+      "sub_package_rusher",
+      "wide_9_fit"
+    ]
+  },
+  "Keyshaun Elliott": {
+    "tags": [
+      "appstate_multi_year_starter",
+      "boundary_cb_fit",
+      "cover_3_sky_fit",
+      "kiper_day_3_cb",
+      "length_at_catch_point",
+      "pff_coverage_grade_climbing",
+      "plants_and_drives_on_comebacks",
+      "press_man_fit",
+      "press_mirror",
+      "tight_trail_technique"
+    ]
+  },
+  "Chris Brazzell": {
+    "tags": [
+      "1017_yards_164_yardscatch",
+      "437_forty_64198",
+      "62_receptions,_1,017_yards,_9_tds_at_16.4_ypr",
+      "X_receiver_fit",
+      "big_play_threat",
+      "brugler_top_wr_board",
+      "catch_point_moss_ability",
+      "contested_catch_winner",
+      "deep_threat_x",
+      "downfield_offense",
+      "high_point_skills",
+      "iso_x_fit",
+      "late_hands_on_fades",
+      "legwold_day_2_wr",
+      "linear_release",
+      "long_strider",
+      "maye_development",
+      "minimal_drops_(2_in_2025)",
+      "nine_tds_at_14.34_air_yards/target",
+      "physical_producer",
+      "play_action_boundary_fit",
+      "play_action_deep_threat",
+      "real_vertical_speed_(4.37)",
+      "shot_play_offense_fit",
+      "stacks_corners_at_top_of_route",
+      "tennessee_portal_producer",
+      "tracks_ball_over_shoulder",
+      "transfer_portal_producer",
+      "unique_deep_threat_(6'5\",_198)",
+      "vertical_passing",
+      "vertical_speed",
+      "vertical_stretch_offense",
+      "wide_catch_radius"
+    ],
+    "_source": "big_board_reasoning",
+    "_board_mention_count": 7
+  }
+}

@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-04-18",
-  "n_scenarios": 62,
+  "n_scenarios": 61,
   "notes": "Scenarios compiled from April 2026 mock-draft universe (Kiper, Brugler, McShay, Jeremiah, Barnwell, PFF, Reuter, CBS/Trapasso/Wilson, OutKick, Walter, B/R, Draft Labs) plus GM historical patterns. empirical_rate is a calibrated probability the specific mocked deal (or any close variant) actually occurs on draft night, derived from (a) times_mocked across the tracked mock universe weighted by analyst tier and (b) GM-pattern base rates. Rates calibrated so top-of-list cluster (CLE->DAL top-10 swap; ARI jump for Simpson) sit at the empirical ceiling ~0.25 given Round-1 trade-night base rate ~0.30-0.35.",
   "scenarios": [
     {
@@ -702,20 +702,6 @@
       "notes": "Iyer SN; lower probability because fights SEA's trade-back tendency.",
       "source": "analyst_consensus_2026.json",
       "archetype": "RB_elite_jump"
-    },
-    {
-      "pick": 6,
-      "up_team": "CIN",
-      "down_team": "CLE",
-      "target_player": "Sonny Styles / Arvell Reese",
-      "target_position": "LB/EDGE",
-      "times_mocked": 1,
-      "tier1_credible": true,
-      "empirical_rate": 0.04,
-      "trade_reason": "Bengals 'leap into top 5' per NFL.com \u2014 Burrow publicly frustrated with defense (parallel: 2023 PHI\u2192CHI #9 for Jalen Carter \u2014 pounce on slid elite defensive prospect)",
-      "notes": "NFL.com 'six trades'. In-state Ohio State prospects add appeal.",
-      "source": "https://www.nfl.com/news/2026-nfl-draft-six-potential-trades-that-could-rock-round-1",
-      "archetype": "elite_slide_DE"
     },
     {
       "pick": 8,

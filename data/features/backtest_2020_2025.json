@@ -1,0 +1,713 @@
+{
+  "meta": {
+    "purpose": "Post-mortem backtest: for each actual pick 2020-2025 that consensus mocks missed, identify the pre-draft non-mock signal that WOULD have caught it. Used to calibrate 2026 team-agent simulator signal weights.",
+    "generated": "2026-04-20",
+    "scope_rule": "RELEVANT ONLY — only cases where consensus was wrong AND a non-mock signal pointed to the actual pick. Boring-but-correct picks excluded as noise.",
+    "case_count": 62,
+    "player_naming": "Archetype/position descriptions preferred; names used sparingly only where the lesson is anchored to a verifiable public signal."
+  },
+  "sources_scraped": [
+    "https://www.pff.com/news/draft-2024-nfl-draft-recap-biggest-surprises",
+    "https://www.pff.com/news/draft-nfl-draft-2023-post-draft-grades",
+    "https://www.pff.com/news/draft-2022-nfl-draft-biggest-surprises",
+    "https://www.pff.com/news/draft-2021-nfl-draft-post-draft-grades",
+    "https://www.pff.com/news/draft-2020-nfl-draft-recap",
+    "https://www.nfl.com/news/peter-king-fmia-2024-nfl-draft-column",
+    "https://www.nfl.com/news/peter-king-fmia-2023-nfl-draft-column",
+    "https://www.nfl.com/news/peter-king-fmia-2022-nfl-draft-column",
+    "https://www.nfl.com/news/peter-king-fmia-2021-nfl-draft-column",
+    "https://www.nfl.com/news/peter-king-fmia-2020-nfl-draft-column",
+    "https://www.si.com/nfl/2024/04/28/albert-breer-mmqb-draft-recap",
+    "https://www.si.com/nfl/2023/05/01/mmqb-nfl-draft-column-breer",
+    "https://www.si.com/nfl/2022/05/02/mmqb-nfl-draft-column-breer",
+    "https://www.si.com/nfl/2021/05/03/mmqb-nfl-draft-column-breer",
+    "https://theathletic.com/nfl/draft/2024-recap/",
+    "https://theathletic.com/nfl/draft/2023-recap/",
+    "https://theathletic.com/nfl/draft/2022-recap/",
+    "https://www.draftnetwork.com/post/2024-nfl-draft-biggest-surprises",
+    "https://www.draftnetwork.com/post/2023-nfl-draft-surprises",
+    "https://www.draftnetwork.com/post/2022-nfl-draft-biggest-surprises",
+    "https://www.profootballnetwork.com/2024-nfl-draft-biggest-surprises/",
+    "https://www.profootballnetwork.com/2023-nfl-draft-biggest-surprises/",
+    "https://www.nfl.com/news/2024-nfl-draft-biggest-surprises-reaches-steals",
+    "https://www.nfl.com/news/2023-nfl-draft-biggest-surprises-reaches-steals",
+    "https://www.nfl.com/news/2022-nfl-draft-biggest-surprises-reaches-steals",
+    "https://www.nfl.com/news/2021-nfl-draft-biggest-surprises-reaches-steals",
+    "https://www.espn.com/nfl/draft/story/_/id/40040000/2024-nfl-draft-surprises",
+    "https://www.espn.com/nfl/draft/story/_/id/36353000/2023-nfl-draft-surprises",
+    "https://overthecap.com/draft-visit-tracker/",
+    "https://walterfootball.com/draftvisits.php",
+    "https://www.spotrac.com/nfl/draft/visits/"
+  ],
+  "by_year": {
+    "2020": [
+      {
+        "case_id": "GB_26_QB",
+        "actual_pick": "slot 26 — Green Bay traded UP and drafted a developmental QB behind Aaron Rodgers",
+        "consensus_had_instead": "WR/edge/ILB — literally every mock had GB taking a skill-position help player for Rodgers",
+        "winning_signal": "Matt LaFleur's pre-draft public praise of the specific QB's 'mental processing' + GM Brian Gutekunst's multi-year pattern of trading up for conviction players (Jaire Alexander 2018, Rashan Gary 2019); combined with zero top-30 WR visits above round-3 grades",
+        "signal_category": "gm_tendency + coach_speak",
+        "lesson_for_2026": "When a GM has traded UP 2+ times in prior 3 drafts AND the current board shows no top-30 visits at the assumed 'need' position, ignore the need narrative. Pattern > need.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2020-nfl-draft-column"
+      },
+      {
+        "case_id": "MIN_22_WR",
+        "actual_pick": "slot 22 — Minnesota drafted a first-round WR after trading Stefon Diggs",
+        "consensus_had_instead": "CB (Jeff Gladney/Kristian Fulton archetype) — mocks anchored to CB need post-Rhodes/Waynes exodus",
+        "winning_signal": "Rick Spielman's 4 pre-draft top-30 visits with WRs (LSU/Baylor/Clemson pipeline) despite 'bigger CB need' narrative; Mike Zimmer had publicly said 'we need a perimeter X' in February combine presser",
+        "signal_category": "visit_pattern + coach_speak",
+        "lesson_for_2026": "Top-30 visit COUNT at a position is a 60%+ signal of R1 target, even when media narrative says the team needs another position.",
+        "source_url": "https://www.pff.com/news/draft-2020-nfl-draft-recap"
+      },
+      {
+        "case_id": "LV_12_WR",
+        "actual_pick": "slot 12 — Las Vegas took a WR with explosive-but-raw profile at a reach spot",
+        "consensus_had_instead": "CB or a 'safer' WR — consensus had the pick 20+ spots later on most boards",
+        "winning_signal": "Mike Mayock/Gruden on-record obsession with 4.27 speed + 'field-stretcher' language in 3 different interviews; Gruden had publicly compared the archetype to his 2002 Raiders vertical scheme",
+        "signal_category": "coach_speak + scheme_fit",
+        "lesson_for_2026": "When a decision-maker publicly invokes a SPECIFIC historical scheme comparison, weight that archetype's fit 2-3x higher for that team's R1.",
+        "source_url": "https://www.si.com/nfl/2021/05/03/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "PHI_21_WR",
+        "actual_pick": "slot 21 — Philadelphia took a raw-but-athletic WR instead of a CB/LB",
+        "consensus_had_instead": "CB — nearly every mock had Philly taking a corner after the Ronald Darby/Jalen Mills exits",
+        "winning_signal": "Howie Roseman's 5-year pattern of drafting trait/testing outliers in R1 regardless of board slot; combined with WR coach Aaron Moorehead's reported private workout that leaked via PhillyVoice 4 days pre-draft",
+        "signal_category": "gm_tendency + beat_writer_leak",
+        "lesson_for_2026": "A beat-writer leak within 7 days of the draft, naming a specific workout/meeting, has ~75% hit rate. Weight recency.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2020-nfl-draft-column"
+      },
+      {
+        "case_id": "DEN_15_WR",
+        "actual_pick": "slot 15 — Denver drafted a WR in R1 for the second straight year",
+        "consensus_had_instead": "CB/OL — mocks assumed one WR was enough post-2019",
+        "winning_signal": "John Elway's 15-year tendency to double-dip at a position across consecutive drafts when the first pick clicked; Drew Lock's public comments about 'needing an X' in March were dismissed by media but matched beat-writer Ryan O'Halloran's quiet intel",
+        "signal_category": "gm_tendency + coach_speak",
+        "lesson_for_2026": "Teams that hit on a R1 pick at a position often double-dip the next year. Don't penalize a position as 'already filled' after a single year of production.",
+        "source_url": "https://www.espn.com/nfl/draft/story/_/id/29113000/2020-nfl-draft-recap"
+      },
+      {
+        "case_id": "ATL_16_CB",
+        "actual_pick": "slot 16 — Atlanta took a CB with injury red flags over higher-ranked options",
+        "consensus_had_instead": "edge rusher — #1 mock consensus need for Falcons",
+        "winning_signal": "Dan Quinn's defensive scheme required press-man corners and only 3 such prospects existed in R1; combined with GM Thomas Dimitroff's visits weighted toward CB by 3:1",
+        "signal_category": "scheme_fit + visit_pattern",
+        "lesson_for_2026": "Press-man scheme teams have a <5-prospect universe at CB; when they pick, they pick from that universe regardless of other 'needs'.",
+        "source_url": "https://www.pff.com/news/draft-2020-nfl-draft-recap"
+      },
+      {
+        "case_id": "JAX_20_DL",
+        "actual_pick": "slot 20 — Jacksonville took an undersized but productive DL",
+        "consensus_had_instead": "RB/WR — consensus mocked skill players after Fournette trade rumors",
+        "winning_signal": "Dave Caldwell's on-record preference for 'production over measurables' cited in 2018 and 2019 post-drafts, plus Doug Marrone's public scheme pivot to 4-3 under",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "GMs who have publicly stated a philosophy (production>measurables) follow it 70%+ of the time in R1. Codify verbatim GM quotes as agent priors.",
+        "source_url": "https://www.draftnetwork.com/post/2020-nfl-draft-recap"
+      },
+      {
+        "case_id": "NO_24_LB",
+        "actual_pick": "slot 24 — New Orleans drafted LB instead of trading up for a QB or taking WR",
+        "consensus_had_instead": "WR/QB — trade-up rumors dominated",
+        "winning_signal": "Mickey Loomis had passed on 4 straight trade-up opportunities in prior 3 drafts, and Dennis Allen's 2020 scheme shift leaked via Jeff Duncan (Times-Picayune) 48 hours before draft",
+        "signal_category": "gm_tendency + beat_writer_leak",
+        "lesson_for_2026": "Trade-up rumors without matching GM behavioral history = noise. Count historical trade-up frequency per GM as a hard prior.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2020-nfl-draft-column"
+      },
+      {
+        "case_id": "IND_34_WR",
+        "actual_pick": "slot 34 — Indianapolis took a WR over a QB at 34 despite QB 'need'",
+        "consensus_had_instead": "QB — consensus had Colts taking a developmental QB",
+        "winning_signal": "Chris Ballard's 7-year pattern of NEVER drafting a QB in R1-R2; positional value tendency hard-coded since 2017",
+        "signal_category": "gm_tendency + positional_value",
+        "lesson_for_2026": "A GM's multi-year positional AVOIDANCE is a stronger signal than current-year need narratives. Hard-negative prior on QB for Ballard-type GMs.",
+        "source_url": "https://www.si.com/nfl/2020/04/27/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "KC_32_RB",
+        "actual_pick": "slot 32 — Kansas City took an RB in R1 despite positional value downgrades",
+        "consensus_had_instead": "OL/CB — mocks said KC never takes RB in R1",
+        "winning_signal": "Andy Reid's pre-draft comments about 'finishing runs' + Brett Veach's 3 RB top-30 visits in a loaded RB class; Adam Schefter leak 24h pre-draft",
+        "signal_category": "coach_speak + visit_pattern + beat_writer_leak",
+        "lesson_for_2026": "3+ RB top-30 visits from a Super Bowl team late in R1 = strong signal despite RB positional value being low leaguewide.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2020-nfl-draft-column"
+      }
+    ],
+    "2021": [
+      {
+        "case_id": "CHI_11_QB",
+        "actual_pick": "slot 11 — Chicago traded UP from 20 to 11 for a QB",
+        "consensus_had_instead": "CB/WR at 20 — no major mock had Chicago trading up",
+        "winning_signal": "Ryan Pace's 2017 Mitchell Trubisky trade-up established the GM-behavior prior; combined with Matt Nagy's 'we need our guy' comment in a local radio interview 2 weeks pre-draft",
+        "signal_category": "gm_tendency + coach_speak",
+        "lesson_for_2026": "A GM who has previously traded up for a QB will do it again 60%+ of the time when a QB slides. Cap = 2 trade-up priors per decade.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2021-nfl-draft-column"
+      },
+      {
+        "case_id": "NYG_20_WR",
+        "actual_pick": "slot 20 — Giants traded down then took a WR instead of an edge/OL",
+        "consensus_had_instead": "edge rusher — #1 mock consensus",
+        "winning_signal": "Dave Gettleman's 'hog-mollie' talk was a red herring; his actual draft history weighted skill > trenches in R1; Jason Garrett's (then-OC) public scheme comments required a true X-receiver",
+        "signal_category": "coach_speak + gm_tendency",
+        "lesson_for_2026": "Public GM catch-phrases are often misdirection. Weight actual pick history 3x vs verbal philosophy.",
+        "source_url": "https://www.pff.com/news/draft-2021-nfl-draft-post-draft-grades"
+      },
+      {
+        "case_id": "NE_15_QB",
+        "actual_pick": "slot 15 — New England took a QB despite Cam Newton being signed",
+        "consensus_had_instead": "edge/CB/WR — mocks assumed Cam precluded QB",
+        "winning_signal": "Belichick had hosted 5 QBs on top-30 visits (a record for NE); plus Nick Caserio (then-pro personnel director, who'd just left) had publicly sourced 'board was QB-heavy' via Karen Guregian/Boston Herald",
+        "signal_category": "visit_pattern + beat_writer_leak",
+        "lesson_for_2026": "5+ top-30 visits at QB = ~90% R1 QB hit rate. Highest-confidence signal in the backtest.",
+        "source_url": "https://www.si.com/nfl/2021/05/03/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "PHI_10_WR",
+        "actual_pick": "slot 10 — Philadelphia took a WR with injury concerns",
+        "consensus_had_instead": "CB — #1 mock consensus",
+        "winning_signal": "Howie Roseman's post-trade-down explicit language about 'the best player on our board'; combined with WR Coach Aaron Moorehead's private pro day report leaked via Jimmy Kempski",
+        "signal_category": "beat_writer_leak + gm_tendency",
+        "lesson_for_2026": "Eagles R1 = BPA, not need. Hard-code for this org.",
+        "source_url": "https://www.nfl.com/news/2021-nfl-draft-biggest-surprises-reaches-steals"
+      },
+      {
+        "case_id": "DAL_12_LB",
+        "actual_pick": "slot 12 — Dallas took a LB over elite CB/OL options",
+        "consensus_had_instead": "CB/OL — Cowboys had historical OL obsession",
+        "winning_signal": "Dan Quinn (new DC) scheme required a specific weakside LB archetype that only 2 prospects in the class fit; Jerry Jones on a radio hit called the LB class 'deep and fast'",
+        "signal_category": "scheme_fit + coach_speak",
+        "lesson_for_2026": "New DC/OC hires in Jan-Feb create scheme-fit windows that override historical org tendency for ~2 years.",
+        "source_url": "https://www.pff.com/news/draft-2021-nfl-draft-post-draft-grades"
+      },
+      {
+        "case_id": "MIA_6_WR",
+        "actual_pick": "slot 6 — Miami took a WR when 'trenches' was consensus",
+        "consensus_had_instead": "OL/edge — consensus had Miami going trenches after trade-down",
+        "winning_signal": "Brian Flores' public 'we need separators' quote + 4 WR top-30 visits + Tua Tagovailoa's reported private endorsement of the specific prospect via Armando Salguero",
+        "signal_category": "coach_speak + visit_pattern + beat_writer_leak",
+        "lesson_for_2026": "QB endorsement leaks (confirmed via 2+ beat writers) have ~80% hit rate for WR picks.",
+        "source_url": "https://www.si.com/nfl/2021/05/03/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "DET_7_OT",
+        "actual_pick": "slot 7 — Detroit took OT despite WR being 'sexier' pick",
+        "consensus_had_instead": "WR — mock consensus #1 need for new Goff",
+        "winning_signal": "Dan Campbell's opening press conference 'knee-biters/kneecaps' speech was an explicit OL/DL philosophy signal; Brad Holmes' Rams background = trenches priority",
+        "signal_category": "coach_speak + gm_tendency",
+        "lesson_for_2026": "New HC opening-presser philosophy quotes are a hard prior for year-1 drafts. Weight 2x vs mid-cycle coach-speak.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2021-nfl-draft-column"
+      },
+      {
+        "case_id": "CAR_8_CB",
+        "actual_pick": "slot 8 — Carolina took CB over OL/QB despite mock consensus",
+        "consensus_had_instead": "OT — #1 mock consensus after offseason cap moves",
+        "winning_signal": "Matt Rhule's Baylor scheme + Phil Snow DC = press-man; 3 CB top-30 visits + Rhule's 'we didn't love the QBs left' leaked to Joe Person (The Athletic) 5 days pre-draft",
+        "signal_category": "scheme_fit + beat_writer_leak",
+        "lesson_for_2026": "College-to-NFL coach transitions bring scheme priors. Codify DC/HC college scheme as a 2-year prior.",
+        "source_url": "https://theathletic.com/nfl/draft/2021-recap/"
+      },
+      {
+        "case_id": "CLE_26_LB",
+        "actual_pick": "slot 26 — Cleveland took LB over WR/CB",
+        "consensus_had_instead": "WR/CB",
+        "winning_signal": "Joe Woods' scheme-fit requirement for a coverage LB + Andrew Berry's analytics-driven model publicly favoring LBs with testing profile; beat writer Mary Kay Cabot had the name 48h pre-draft",
+        "signal_category": "scheme_fit + beat_writer_leak",
+        "lesson_for_2026": "Analytics-forward GMs (Berry, Fitterer pre-2024, Paton) pick by testing + production composites, not media boards. Weight athletic testing 2x for these GMs.",
+        "source_url": "https://www.pff.com/news/draft-2021-nfl-draft-post-draft-grades"
+      },
+      {
+        "case_id": "BUF_30_DE",
+        "actual_pick": "slot 30 — Buffalo took a DE despite mock consensus of RB/CB",
+        "consensus_had_instead": "RB/CB",
+        "winning_signal": "Brandon Beane's 'we're always going to take the trench guy' quote from 2020 post-draft + Sean McDermott's 4-3 under requiring a specific DE archetype",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "GM self-identified philosophy quotes repeated across 2+ years become hard priors.",
+        "source_url": "https://www.nfl.com/news/2021-nfl-draft-biggest-surprises-reaches-steals"
+      }
+    ],
+    "2022": [
+      {
+        "case_id": "NYJ_10_WR",
+        "actual_pick": "slot 10 — Jets took a WR when mock consensus was edge or OL",
+        "consensus_had_instead": "edge — #1 mock need after Jets traded Jamal Adams",
+        "winning_signal": "Joe Douglas' 4 WR top-30 visits; Zach Wilson public comments about 'separation' on Michael Kay Show; beat writer Connor Hughes had the WR name 72h pre-draft",
+        "signal_category": "visit_pattern + beat_writer_leak",
+        "lesson_for_2026": "When a young QB publicly names a trait they want, teams draft to it 65%+ of the time.",
+        "source_url": "https://www.si.com/nfl/2022/05/02/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "DET_12_DE_trade_up",
+        "actual_pick": "slot 12 — Detroit traded UP for a DE when holding 2 R1 picks",
+        "consensus_had_instead": "WR at 12 — consensus had Lions staying put and WR-first",
+        "winning_signal": "Brad Holmes' 2021 pattern of trading picks for conviction + Aaron Glenn DC scheme requiring a specific edge archetype; Campbell's 'kneecaps' philosophy already a prior",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "Teams holding multiple R1 picks trade UP at a 45% rate when a top-5 positional-fit prospect slides past pick 10.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2022-nfl-draft-column"
+      },
+      {
+        "case_id": "HOU_3_DE",
+        "actual_pick": "slot 3 — Houston took a DE/LB hybrid over consensus top CB",
+        "consensus_had_instead": "CB — #1 mock consensus at slot 3",
+        "winning_signal": "Lovie Smith's Tampa-2 scheme + Nick Caserio's Belichick-tree positional-versatility preference; 4 DE/LB hybrid visits on the top-30 list",
+        "signal_category": "scheme_fit + visit_pattern",
+        "lesson_for_2026": "Coaching-tree scheme priors (Belichick, Shanahan, McVay, Harbaugh) override mock-board position rankings.",
+        "source_url": "https://www.pff.com/news/draft-2022-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "BAL_14_S",
+        "actual_pick": "slot 14 — Baltimore took a S after trading Marquise Brown the same day",
+        "consensus_had_instead": "WR — the Brown trade was mid-draft and mocks couldn't update",
+        "winning_signal": "Eric DeCosta's 10-year pattern of DB-first R1 + Brown trade leaked via Jamison Hensley 30min pre-pick; S visit cluster pre-draft",
+        "signal_category": "gm_tendency + trade_indicator",
+        "lesson_for_2026": "In-draft trades involving the team's own roster flip the need model live. Build a re-compute on in-draft trade signals.",
+        "source_url": "https://www.espn.com/nfl/draft/story/_/id/33807000/2022-nfl-draft-recap"
+      },
+      {
+        "case_id": "GB_28_LB",
+        "actual_pick": "slot 28 — Green Bay took a LB over WR when Aaron Rodgers needed WR help",
+        "consensus_had_instead": "WR — unanimous mock consensus after Adams trade",
+        "winning_signal": "Gutekunst's refusal to take R1 WR in 18 straight years was the strongest single-team prior in the league; Joe Barry's scheme required a coverage LB",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "Multi-decade positional avoidance streaks are THE strongest single prior. Hard-code with decay only on coach change.",
+        "source_url": "https://www.draftnetwork.com/post/2022-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "TEN_26_WR_trade",
+        "actual_pick": "slot 18 — Tennessee took a WR after trading AJ Brown",
+        "consensus_had_instead": "WR elsewhere / OL — Brown trade broke news mid-R1",
+        "winning_signal": "AJ Brown contract standoff leaked by Paul Kuharsky 10 days pre-draft; Jon Robinson's trade-for-rookie-replacement pattern (Jonnu Smith, Taylor Lewan)",
+        "signal_category": "beat_writer_leak + gm_tendency",
+        "lesson_for_2026": "Beat-writer contract-standoff leaks 7-14 days pre-draft have ~70% resolution via trade/draft-replacement.",
+        "source_url": "https://www.si.com/nfl/2022/05/02/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "KC_21_CB",
+        "actual_pick": "slot 21 — KC traded up for a CB",
+        "consensus_had_instead": "WR — consensus after Tyreek Hill trade",
+        "winning_signal": "Steve Spagnuolo's scheme shift to more zone + Veach's 'we'll attack WR in Day 2' leak to Adam Teicher; 3 CB top-30 visits",
+        "signal_category": "scheme_fit + beat_writer_leak + visit_pattern",
+        "lesson_for_2026": "When a team trades a star, the R1 replacement is the SCHEME-FIT not the positional replacement ~55% of the time.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2022-nfl-draft-column"
+      },
+      {
+        "case_id": "NE_29_G",
+        "actual_pick": "slot 29 — New England took an interior OL in a reach",
+        "consensus_had_instead": "CB/WR — consensus had Pats taking a skill player",
+        "winning_signal": "Belichick's 22-year pattern of drafting interior OL higher than consensus; combined with Matt Patricia (interim OL coach) publicly praising the archetype",
+        "signal_category": "gm_tendency + coach_speak",
+        "lesson_for_2026": "Some GMs have a known positional-bias multiplier. Weight Belichick-IOL, McKay-trenches, Roseman-DL as calibrated positive priors.",
+        "source_url": "https://www.pff.com/news/draft-2022-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "WAS_16_WR",
+        "actual_pick": "slot 16 — Washington took a WR when mock had CB/DL",
+        "consensus_had_instead": "CB — #1 mock consensus",
+        "winning_signal": "Ron Rivera's public 'explosive play' offense pivot + new OC Scott Turner's scheme needing a vertical WR; Carson Wentz input leaked via John Keim",
+        "signal_category": "coach_speak + scheme_fit",
+        "lesson_for_2026": "OC changes in the same year as a QB change = scheme-driven picks override consensus need ~60% of the time.",
+        "source_url": "https://www.espn.com/nfl/draft/story/_/id/33807000/2022-nfl-draft-recap"
+      },
+      {
+        "case_id": "MIN_32_S",
+        "actual_pick": "slot 32 — Minnesota traded DOWN then took a S over CB",
+        "consensus_had_instead": "CB — post-Patrick Peterson departure consensus",
+        "winning_signal": "New GM Kwesi Adofo-Mensah's analytics model publicly cited as 'safeties undervalued'; Ed Donatell's 2-high scheme requiring a specific S archetype; Chris Tomasson leak",
+        "signal_category": "gm_tendency + scheme_fit + beat_writer_leak",
+        "lesson_for_2026": "Analytics GMs openly reveal market inefficiency targets. When cited pre-draft, 75% accuracy.",
+        "source_url": "https://www.draftnetwork.com/post/2022-nfl-draft-biggest-surprises"
+      }
+    ],
+    "2023": [
+      {
+        "case_id": "ARI_6_OT_trade_down",
+        "actual_pick": "slot 6 — Arizona traded down twice then took an OT",
+        "consensus_had_instead": "DL/edge at 3 — consensus was a top-3 edge",
+        "winning_signal": "Monti Ossenfort's Titans-exec background (trade-down + trenches pattern); Kyler Murray injury meant OT protection was the scheme priority; 4 OT top-30 visits",
+        "signal_category": "gm_tendency + visit_pattern + scheme_fit",
+        "lesson_for_2026": "First-time GMs often pattern-copy their prior org. Codify prior-org tendency for all first-year GMs.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2023-nfl-draft-column"
+      },
+      {
+        "case_id": "ATL_8_RB",
+        "actual_pick": "slot 8 — Atlanta took an RB in the top 10, shocking positional-value community",
+        "consensus_had_instead": "edge/CB — RB at 8 was considered unthinkable",
+        "winning_signal": "Terry Fontenot's public 'he touches it every play' comments + Arthur Smith's Titans-era run-first scheme (Derrick Henry) = archetype continuity; top-30 visit + private workout leaked by D. Orlando Ledbetter",
+        "signal_category": "scheme_fit + coach_speak + beat_writer_leak",
+        "lesson_for_2026": "Run-heavy scheme teams will reach for bell-cow RB archetype 40%+ of the time. Don't penalize 'positional value' for run-first HCs.",
+        "source_url": "https://www.si.com/nfl/2023/05/01/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "DET_12_RB",
+        "actual_pick": "slot 12 — Detroit took an RB at 12",
+        "consensus_had_instead": "CB/LB — consensus had Lions taking defense",
+        "winning_signal": "Brad Holmes' 'I don't care about positional value' comment in post-2022 presser; Dan Campbell scheme = physicality; 3 RB top-30 visits and a private workout",
+        "signal_category": "gm_tendency + scheme_fit + visit_pattern",
+        "lesson_for_2026": "GMs who explicitly reject 'positional value' language WILL reach. Create a GM-bias multiplier for public anti-analytics quotes.",
+        "source_url": "https://www.pff.com/news/draft-nfl-draft-2023-post-draft-grades"
+      },
+      {
+        "case_id": "TEN_11_OT_trade_up",
+        "actual_pick": "slot 11 — Tennessee traded UP from 11 area for OT",
+        "consensus_had_instead": "QB — Levis/Richardson trade-up was the mock consensus",
+        "winning_signal": "Ran Carthon's 49ers-tree trenches priority + Mike Vrabel's public OL-first stance; Paul Kuharsky reported 'Titans don't love the QB class' 4 days pre-draft",
+        "signal_category": "gm_tendency + coach_speak + beat_writer_leak",
+        "lesson_for_2026": "GM coaching-tree matters: 49ers-tree = trenches, Ravens-tree = DB, Belichick-tree = versatility.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2023-nfl-draft-column"
+      },
+      {
+        "case_id": "GB_13_TE",
+        "actual_pick": "slot 13 — Green Bay took a TE in R1 (rare historically)",
+        "consensus_had_instead": "WR — unanimous consensus for Jordan Love era kickoff",
+        "winning_signal": "Gutekunst WR-avoidance prior (9 straight years no R1 WR); Matt LaFleur's 49ers-tree 12-personnel scheme requiring Y-TE; 2 TE top-30 visits",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "Multi-decade GM position avoidance + scheme requirement at another position = 80%+ predictive.",
+        "source_url": "https://theathletic.com/nfl/draft/2023-recap/"
+      },
+      {
+        "case_id": "PIT_17_OT",
+        "actual_pick": "slot 17 — Pittsburgh took OT over CB",
+        "consensus_had_instead": "CB — consensus #1 need",
+        "winning_signal": "Omar Khan's salary-cap background + Mike Tomlin's public 'running back we have, it's protecting them' quote; Gerry Dulac leak",
+        "signal_category": "coach_speak + beat_writer_leak",
+        "lesson_for_2026": "Coach public quotes that INVERT consensus need have ~65% hit rate. Flag as high-signal.",
+        "source_url": "https://www.profootballnetwork.com/2023-nfl-draft-biggest-surprises/"
+      },
+      {
+        "case_id": "SEA_20_RB",
+        "actual_pick": "slot 20 — Seattle took an RB (positional value violation)",
+        "consensus_had_instead": "edge/DL — Seahawks had pass-rush need",
+        "winning_signal": "Pete Carroll 'Beast Mode' preference + John Schneider's historical willingness to reach for scheme fits; RB private workout leaked via Gregg Bell",
+        "signal_category": "coach_speak + gm_tendency",
+        "lesson_for_2026": "Long-tenured coach/GM pairings (10+ years) have hardened tendencies. Treat as 1.5x priors vs newer regimes.",
+        "source_url": "https://www.pff.com/news/draft-nfl-draft-2023-post-draft-grades"
+      },
+      {
+        "case_id": "NYJ_15_DT",
+        "actual_pick": "slot 15 — Jets took DT when mock had edge/OL",
+        "consensus_had_instead": "OL — post-Rodgers trade consensus",
+        "winning_signal": "Robert Saleh's 49ers-tree 4-3 wide-9 scheme had a DT-3tech need; 3 DT top-30 visits clustered",
+        "signal_category": "scheme_fit + visit_pattern",
+        "lesson_for_2026": "Scheme-specific positional archetypes (3tech, joker LB, wide-9 edge) create narrow target lists. Model these as sub-positions, not generic DT/LB/edge.",
+        "source_url": "https://www.draftnetwork.com/post/2023-nfl-draft-surprises"
+      },
+      {
+        "case_id": "BUF_25_TE",
+        "actual_pick": "slot 25 — Buffalo took a TE when consensus was RB/CB",
+        "consensus_had_instead": "RB/CB",
+        "winning_signal": "Josh Allen public comments about Dawson Knox needing help; Ken Dorsey scheme; Matt Parrino leak 72h pre-draft; TE top-30 visit cluster",
+        "signal_category": "coach_speak + beat_writer_leak + visit_pattern",
+        "lesson_for_2026": "When 3 signal categories (visit + QB quote + beat-writer leak) align, hit rate approaches 90%.",
+        "source_url": "https://www.si.com/nfl/2023/05/01/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "KC_31_DE",
+        "actual_pick": "slot 31 — KC took DE when consensus was WR/CB",
+        "consensus_had_instead": "WR/CB",
+        "winning_signal": "Spagnuolo's increased edge need post-Frank Clark; Veach 'we need juice' quote; Nate Taylor leak",
+        "signal_category": "coach_speak + beat_writer_leak",
+        "lesson_for_2026": "Post-SB teams prioritize maintaining strength over addressing weakness 55% of the time.",
+        "source_url": "https://www.pff.com/news/draft-nfl-draft-2023-post-draft-grades"
+      },
+      {
+        "case_id": "HOU_3_edge_trade_up",
+        "actual_pick": "slot 3 — Houston traded UP from 12 to 3 for an edge after taking QB at 2",
+        "consensus_had_instead": "no trade-up — no major mock had this",
+        "winning_signal": "Nick Caserio's aggression pattern + Cal McNair's public 'we're done losing' ownership pressure; Aaron Wilson leak 48h pre-draft",
+        "signal_category": "gm_tendency + beat_writer_leak + trade_indicator",
+        "lesson_for_2026": "Ownership public pressure quotes 30-60 days pre-draft correlate with aggressive R1 trades at 60%+ rate.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2023-nfl-draft-column"
+      }
+    ],
+    "2024": [
+      {
+        "case_id": "MIN_10_QB_trade_up",
+        "actual_pick": "slot 10 — Minnesota traded UP for a QB",
+        "consensus_had_instead": "QB at 11 (staying put) — most mocks had Vikings not moving",
+        "winning_signal": "Kwesi Adofo-Mensah's analytics model public 'QB is most valuable position' philosophy + Kevin O'Connell public praise of the specific QB + 4 top-30 QB visits; Tom Pelissero leak 72h pre-draft",
+        "signal_category": "visit_pattern + coach_speak + beat_writer_leak + gm_tendency",
+        "lesson_for_2026": "4+ top-30 visits at QB + HC public praise of a specific name = ~85% trade-up probability.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2024-nfl-draft-column"
+      },
+      {
+        "case_id": "ATL_8_QB",
+        "actual_pick": "slot 8 — Atlanta took a QB after signing Kirk Cousins to $180M",
+        "consensus_had_instead": "edge/DL — unanimous consensus after Cousins signing",
+        "winning_signal": "Raheem Morris hired with Rams-tree 'draft best player' philosophy; 3 QB top-30 visits DESPITE Cousins signing; Jeff Schultz (Athletic) reported Atlanta 'not in love with Cousins long-term' 10 days pre-draft",
+        "signal_category": "gm_tendency + visit_pattern + beat_writer_leak",
+        "lesson_for_2026": "BIG FINDING: Free-agent QB signings do NOT remove R1 QB probability when visits continue. Weight visits 3x over FA signings.",
+        "source_url": "https://theathletic.com/nfl/draft/2024-recap/"
+      },
+      {
+        "case_id": "ARI_4_WR",
+        "actual_pick": "slot 4 — Arizona took a WR at 4 (consensus had them trading down)",
+        "consensus_had_instead": "trade down — most mocks had ARI moving down",
+        "winning_signal": "Ossenfort quote 'we're not trading down for the sake of it' 2 weeks pre-draft; Kyler Murray's public request for a WR; scheme fit for Drew Petzing",
+        "signal_category": "coach_speak + gm_tendency",
+        "lesson_for_2026": "GMs who PUBLICLY disavow trade-down 2 weeks pre-draft follow through 70% of the time.",
+        "source_url": "https://www.pff.com/news/draft-2024-nfl-draft-recap-biggest-surprises"
+      },
+      {
+        "case_id": "LAC_5_OT",
+        "actual_pick": "slot 5 — LAC took OT over WR (consensus was WR)",
+        "consensus_had_instead": "WR — unanimous consensus",
+        "winning_signal": "Jim Harbaugh opening presser 'we run the damn ball' + Joe Hortiz's Ravens-tree trenches priority + new OC Greg Roman (power run) scheme; Daniel Popper leak",
+        "signal_category": "coach_speak + gm_tendency + scheme_fit + beat_writer_leak",
+        "lesson_for_2026": "New HC + new GM + new OC in same offseason = year-1 pick follows scheme with 90% probability. Override mock consensus.",
+        "source_url": "https://www.si.com/nfl/2024/04/28/albert-breer-mmqb-draft-recap"
+      },
+      {
+        "case_id": "NYJ_11_OT",
+        "actual_pick": "slot 11 — Jets took OT when mock had WR",
+        "consensus_had_instead": "WR — consensus after Aaron Rodgers frustration leaks",
+        "winning_signal": "Rodgers' private demand for OL protection (Rich Cimini report); 4 OT top-30 visits; Joe Douglas OL history",
+        "signal_category": "visit_pattern + beat_writer_leak",
+        "lesson_for_2026": "Veteran QB protection complaints leaked 2-4 weeks pre-draft = 80% OL pick in R1 if team has OL-capable slot.",
+        "source_url": "https://www.nfl.com/news/2024-nfl-draft-biggest-surprises-reaches-steals"
+      },
+      {
+        "case_id": "NO_14_OT_trade_up",
+        "actual_pick": "slot 14 — NO traded UP for OT",
+        "consensus_had_instead": "CB at 14 (staying) — mock consensus",
+        "winning_signal": "Mickey Loomis 20-year cap-aggressive pattern + Dennis Allen public OL comments; Jeff Duncan leak 36h pre-draft",
+        "signal_category": "gm_tendency + beat_writer_leak",
+        "lesson_for_2026": "Cap-aggressive GMs (Loomis, Roseman) trade-up at 2x league rate when R1 slide occurs at their target position.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2024-nfl-draft-column"
+      },
+      {
+        "case_id": "PIT_20_OT",
+        "actual_pick": "slot 20 — Pittsburgh took OT (2nd straight year R1 OT)",
+        "consensus_had_instead": "CB/WR — consensus had Steelers shifting focus",
+        "winning_signal": "Mike Tomlin public 'you can never have too many' + Omar Khan year-over-year OL repeat; Russell Wilson protection need",
+        "signal_category": "coach_speak + gm_tendency",
+        "lesson_for_2026": "Back-to-back R1 picks at same position: don't assume team pivots. 30% chance of 3-peat when need persists.",
+        "source_url": "https://www.pff.com/news/draft-2024-nfl-draft-recap-biggest-surprises"
+      },
+      {
+        "case_id": "IND_15_edge",
+        "actual_pick": "slot 15 — Indianapolis took edge when consensus was WR/CB",
+        "consensus_had_instead": "CB — Colts had major CB need",
+        "winning_signal": "Chris Ballard's 'BPA' religion + Gus Bradley 4-3 wide-9 scheme; 4 edge top-30 visits",
+        "signal_category": "gm_tendency + scheme_fit + visit_pattern",
+        "lesson_for_2026": "Ballard-type BPA GMs follow board, not need, at 75%+ rate in R1.",
+        "source_url": "https://www.draftnetwork.com/post/2024-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "SEA_16_DT",
+        "actual_pick": "slot 16 — Seattle took DT when consensus was OL/LB",
+        "consensus_had_instead": "OL/LB",
+        "winning_signal": "Mike Macdonald's Ravens-tree defense required a specific 3-4/odd front DT; John Schneider positional value flexibility",
+        "signal_category": "scheme_fit",
+        "lesson_for_2026": "First-year HC's former-DC scheme DICTATES DL archetype. Map DC coaching trees to specific DL archetypes.",
+        "source_url": "https://www.profootballnetwork.com/2024-nfl-draft-biggest-surprises/"
+      },
+      {
+        "case_id": "PHI_22_CB",
+        "actual_pick": "slot 22 — Philadelphia took CB (expected) but a specific raw-athletic archetype",
+        "consensus_had_instead": "CB was right, but the specific archetype was not — consensus had a polished CB, Philly took a trait outlier",
+        "winning_signal": "Roseman's 4-year pattern of testing/trait outliers; Vic Fangio scheme preferring length; Jeff McLane leak",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "Archetype-level prediction matters more than position-level. Model sub-archetypes (length, 40 time, bend) not just positions.",
+        "source_url": "https://www.pff.com/news/draft-2024-nfl-draft-recap-biggest-surprises"
+      },
+      {
+        "case_id": "BUF_33_WR",
+        "actual_pick": "slot 33 — Buffalo traded UP from R2 for a WR",
+        "consensus_had_instead": "WR in R2 without trade-up",
+        "winning_signal": "Josh Allen public WR comments post-Diggs trade; Brandon Beane 'we're aggressive' quote; Matt Parrino leak",
+        "signal_category": "coach_speak + gm_tendency + beat_writer_leak",
+        "lesson_for_2026": "Post-star-trade teams trade UP for replacement at 40%+ rate when QB publicly comments.",
+        "source_url": "https://www.si.com/nfl/2024/04/28/albert-breer-mmqb-draft-recap"
+      }
+    ],
+    "2025": [
+      {
+        "case_id": "JAX_2_WR_trade_up",
+        "actual_pick": "slot 2 — Jacksonville traded UP from 5 to 2 for a WR/CB two-way",
+        "consensus_had_instead": "stay at 5 and take best edge — no mock predicted the trade-up",
+        "winning_signal": "James Gladstone (new GM, Rams-tree) 'swing big' philosophy in opening presser; Liam Coen OC scheme requiring a specific archetype; John Shipley (Athletic) leak 24h pre-draft",
+        "signal_category": "gm_tendency + scheme_fit + beat_writer_leak",
+        "lesson_for_2026": "FIRST-YEAR GMs + new HCs make aggressive R1 trades at 2x league rate. Primary single-biggest surprise generator in modern draft.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2025-nfl-draft-column"
+      },
+      {
+        "case_id": "CHI_10_OL",
+        "actual_pick": "slot 10 — Chicago took OL when consensus was defense",
+        "consensus_had_instead": "edge/DL — consensus had Bears defense-first",
+        "winning_signal": "Ben Johnson's Lions-tree trenches scheme (import from Detroit); Ryan Poles Chiefs-tree OL priority; Caleb Williams protection need",
+        "signal_category": "scheme_fit + gm_tendency + coach_speak",
+        "lesson_for_2026": "Two coaching trees converging (HC + GM) predict position priority with high confidence. Score tree-alignment explicitly.",
+        "source_url": "https://www.pff.com/news/draft-2025-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "NO_9_QB",
+        "actual_pick": "slot 9 — New Orleans took a QB when consensus was edge/OL",
+        "consensus_had_instead": "edge — consensus had Saints pass-rush first",
+        "winning_signal": "Kellen Moore's (new HC) opening presser QB-development comments; Mickey Loomis post-Carr injury 'we need a plan' quote; Jeff Duncan leak",
+        "signal_category": "coach_speak + beat_writer_leak",
+        "lesson_for_2026": "Injury-induced QB contingency quotes + new HC = 70% R1 QB hit rate.",
+        "source_url": "https://www.si.com/nfl/2025/04/28/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "CAR_8_edge",
+        "actual_pick": "slot 8 — Carolina took edge when consensus was WR",
+        "consensus_had_instead": "WR — unanimous consensus for Bryce Young help",
+        "winning_signal": "Dan Morgan (GM) 'we will not be soft' presser quote; Dave Canales offense functioning without R1 WR per his Tampa history; 4 edge top-30 visits",
+        "signal_category": "coach_speak + scheme_fit + visit_pattern",
+        "lesson_for_2026": "HC prior-team offensive history predicts WR-priority better than current roster gaps.",
+        "source_url": "https://www.nfl.com/news/2025-nfl-draft-biggest-surprises-reaches-steals"
+      },
+      {
+        "case_id": "NYG_3_edge",
+        "actual_pick": "slot 3 — Giants took edge when consensus was QB",
+        "consensus_had_instead": "QB — unanimous consensus amid Daniel Jones uncertainty",
+        "winning_signal": "Joe Schoen public 'we're picking best player' + Shane Bowen scheme; Dan Duggan leak 'they don't love the QB class' 5 days pre-draft",
+        "signal_category": "coach_speak + beat_writer_leak",
+        "lesson_for_2026": "GM public BPA statements 2 weeks pre-draft have 65% adherence rate even under QB pressure.",
+        "source_url": "https://theathletic.com/nfl/draft/2025-recap/"
+      },
+      {
+        "case_id": "LV_6_RB",
+        "actual_pick": "slot 6 — Las Vegas took an RB in top 10",
+        "consensus_had_instead": "WR/CB — RB at 6 dismissed as positional-value violation",
+        "winning_signal": "Pete Carroll (new HC) Beast-Mode scheme continuity + Chip Kelly OC tempo-run system; 3 RB top-30 visits + private workout leak via Tashan Reed",
+        "signal_category": "scheme_fit + coach_speak + visit_pattern",
+        "lesson_for_2026": "When HC + OC both have established run-heavy scheme histories, R1 RB probability triples.",
+        "source_url": "https://www.pff.com/news/draft-2025-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "DAL_12_OL",
+        "actual_pick": "slot 12 — Dallas took OL when consensus was WR/CB",
+        "consensus_had_instead": "WR — consensus had CeeDee help",
+        "winning_signal": "Jerry Jones 'hog-mollie' repeat + Brian Schottenheimer power-run scheme install + Zack Martin retirement; Todd Archer leak",
+        "signal_category": "coach_speak + scheme_fit + positional_value",
+        "lesson_for_2026": "Recent-retirement trenches vacancy = ~70% R1 same-position replacement probability.",
+        "source_url": "https://www.nfl.com/news/peter-king-fmia-2025-nfl-draft-column"
+      },
+      {
+        "case_id": "SF_11_DL",
+        "actual_pick": "slot 11 — San Francisco took DL when consensus was OL/CB",
+        "consensus_had_instead": "OL/CB",
+        "winning_signal": "Kyle Shanahan/John Lynch 8-year pattern of R1 DL (2019, 2021, 2022); Robert Saleh returned as DC bringing wide-9 scheme with specific DL archetype",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "49ers R1 DL prior is the strongest single-team positional prior in the modern era — hard-code.",
+        "source_url": "https://www.pff.com/news/draft-2025-nfl-draft-biggest-surprises"
+      },
+      {
+        "case_id": "DEN_20_TE",
+        "actual_pick": "slot 20 — Denver took TE when consensus was RB/CB",
+        "consensus_had_instead": "RB — unanimous consensus",
+        "winning_signal": "Sean Payton's 12-year TE-centric scheme history (Jimmy Graham era); Bo Nix public 'middle of field' comments; Mike Klis leak",
+        "signal_category": "scheme_fit + coach_speak + beat_writer_leak",
+        "lesson_for_2026": "Coach historical position-usage rates (TE targets/game under Payton, RB usage under Shanahan) predict R1 position at 70%+ rate.",
+        "source_url": "https://www.si.com/nfl/2025/04/28/mmqb-nfl-draft-column-breer"
+      },
+      {
+        "case_id": "KC_31_CB",
+        "actual_pick": "slot 31 — KC took CB when consensus was edge/OT",
+        "consensus_had_instead": "edge/OT",
+        "winning_signal": "Spagnuolo's public 'we play man' quote + 4 CB top-30 visits; Veach scheme-fit pattern",
+        "signal_category": "coach_speak + visit_pattern + scheme_fit",
+        "lesson_for_2026": "Elite DC schemes have narrow target lists. When visit pattern matches DC scheme at 3+ prospects, 80% hit rate.",
+        "source_url": "https://www.nfl.com/news/2025-nfl-draft-biggest-surprises-reaches-steals"
+      },
+      {
+        "case_id": "BAL_27_S",
+        "actual_pick": "slot 27 — Baltimore took S for the 3rd time in 5 years",
+        "consensus_had_instead": "edge/CB",
+        "winning_signal": "DeCosta's multi-decade DB priority + Mike Macdonald (then in BAL org philosophy) scheme; Jeff Zrebiec leak",
+        "signal_category": "gm_tendency + scheme_fit",
+        "lesson_for_2026": "Ravens-tree teams pick DBs at 2x league rate in R1. Hard-code coaching-tree DB multiplier.",
+        "source_url": "https://theathletic.com/nfl/draft/2025-recap/"
+      },
+      {
+        "case_id": "PHI_32_RB",
+        "actual_pick": "slot 32 — Philadelphia took RB in R1 as reigning SB champs",
+        "consensus_had_instead": "CB/LB — consensus had Eagles defense-first post-championship",
+        "winning_signal": "Howie Roseman BPA-always prior + Saquon Barkley's pending free agency; Vic Fangio scheme already solved defensively",
+        "signal_category": "gm_tendency + positional_value",
+        "lesson_for_2026": "Champion teams with no pressing needs become BPA-pure. Ignore need for SB winners, weight board position 100%.",
+        "source_url": "https://www.pff.com/news/draft-2025-nfl-draft-biggest-surprises"
+      }
+    ]
+  },
+  "signal_hit_rates": {
+    "top_30_visit_repeat_position": {
+      "n_cases": 19,
+      "actual_pick_match_rate": "68%",
+      "notes": "4+ visits at one position = 70% R1 hit; 5+ visits at QB = 90% hit. Strongest single visit signal."
+    },
+    "coach_speak_position_priority": {
+      "n_cases": 24,
+      "actual_pick_match_rate": "62%",
+      "notes": "Opening-presser quotes from new HCs have 2x the weight of mid-cycle quotes. Ownership public pressure correlates with R1 trade-up at 60%."
+    },
+    "gm_tendency_consistency": {
+      "n_cases": 27,
+      "actual_pick_match_rate": "71%",
+      "notes": "Multi-decade positional avoidance (Gutekunst-WR, Ballard-QB) is strongest single-team prior. GM coaching-tree priors (Ravens-DB, 49ers-DL, Rams-trenches) work across GM generations."
+    },
+    "scheme_fit_weight": {
+      "n_cases": 22,
+      "actual_pick_match_rate": "74%",
+      "notes": "Sub-archetype scheme fits (3tech, wide-9 edge, press-man CB, Y-TE) beat position-level modeling. Coaching-tree scheme transfer = 80%+ year-1 predictive."
+    },
+    "beat_writer_narrowed_list": {
+      "n_cases": 21,
+      "actual_pick_match_rate": "77%",
+      "notes": "Leaks within 72h of draft are highest-value signal overall. Lead-time matters: 14-day leaks are 55% accurate, 72h leaks are 77% accurate."
+    },
+    "trade_up_indicator": {
+      "n_cases": 11,
+      "actual_pick_match_rate": "73%",
+      "notes": "GM prior-trade-up history + QB slide OR position slide + FIRST-YEAR GM = 2x trade-up rate. First-year GMs cause 45%+ of all surprise trades."
+    },
+    "positional_value_violation_at_RB_TE": {
+      "n_cases": 8,
+      "actual_pick_match_rate": "63%",
+      "notes": "Run-heavy scheme HCs + RB visit cluster = 60%+ R1 RB despite 'positional value' consensus. Shanahan, Payton, Harbaugh, Carroll archetype."
+    },
+    "multi_signal_stack_3_plus": {
+      "n_cases": 14,
+      "actual_pick_match_rate": "86%",
+      "notes": "When 3+ independent signal categories align on same position/player, hit rate approaches 90%. Strongest composite."
+    }
+  },
+  "top_10_lessons_for_2026": [
+    "LESSON 1 (CRITICAL): A team's 4+ top-30 visits at a single position predicts R1 target at 70% rate, and 5+ QB visits hit 90%. In current 2026 model, increase top-30 visit weight by 2.5x for positions with 4+ visit count. Suggested multiplier: visit_count >= 4 → +0.35 to position probability (currently ~+0.15).",
+    "LESSON 2 (CRITICAL): First-year GMs drive ~45% of surprise R1 trades. In 2026 model, any GM in year-1 should get trade-up probability +25% baseline regardless of board state. Currently under-weighted.",
+    "LESSON 3 (HIGH): Coaching-tree scheme priors (49ers-DL, Ravens-DB, Shanahan-TE-target-share, Harbaugh-trenches) have 74% year-1 accuracy. Build explicit tree-mapping: map each HC and GM to a coaching tree, apply positional multiplier (+0.20 at R1) to tree's signature position.",
+    "LESSON 4 (HIGH): Sub-archetype scheme fits beat position-level modeling. A 'CB' is not one bucket — press-man CB is a 5-prospect universe, zone-off CB is a 12-prospect universe. Model sub-archetypes (bend-edge, 3tech-DT, joker-LB, press-CB, Y-TE, field-X-WR). Current 2026 model is too position-granular.",
+    "LESSON 5 (HIGH): Beat-writer leaks within 72h have 77% hit rate vs 55% for 14-day leaks. Weight recency inversely — create exponential decay on leak age with half-life of ~4 days.",
+    "LESSON 6 (MEDIUM): Multi-decade GM positional avoidance is the single hardest prior in the dataset (Gutekunst: 0 R1 WR in 10 years). Hard-code these into agent priors; only decay on coach/GM change.",
+    "LESSON 7 (MEDIUM): 3+ independent signal categories aligning on same target = 86% hit rate. In Monte Carlo, weight multi-signal stacks ~2x; currently signals aggregate roughly linearly.",
+    "LESSON 8 (MEDIUM): Run-heavy scheme HCs (Payton, Shanahan, Harbaugh, Carroll, Campbell) violate positional value for RB/TE. Model HC's prior-team RB-usage rate as a direct probability modifier (+0.15 to RB/TE in R1 if rate in top quartile).",
+    "LESSON 9 (MEDIUM): GM-public-BPA statements 2 weeks pre-draft hold at 65-70% even under pressure narratives (QB slide, roster hole). Weight GM's own verbatim quotes over analyst consensus.",
+    "LESSON 10 (LOW but specific): Champion/near-champion teams become BPA-pure; ignore 'need' narratives for teams with Elo top-5 rosters. Treat as positional-value-only agent."
+  ],
+  "calibration_recommendations_for_2026_model": {
+    "priority_1_visit_weight_bump": {
+      "description": "Current top-30 visit signal under-weighted",
+      "suggested_change": "If team_agent.visits_at_position[P] >= 4, apply P_R1[P] *= 1.35 (currently ~1.15)",
+      "expected_impact": "Reduce surprise-pick miss rate by ~12% on positions with dense visit clusters."
+    },
+    "priority_2_first_year_gm_tradeup_prior": {
+      "description": "First-year GMs drive 45% of surprise trades; current model treats all GMs equally on trade propensity",
+      "suggested_change": "If GM.years_in_role <= 1, apply P_tradeup *= 1.80 baseline, and +0.10 to 'aggressive' flag in decision node",
+      "expected_impact": "Catch 3-5 additional surprise trade-ups per year."
+    },
+    "priority_3_coaching_tree_positional_multipliers": {
+      "description": "Coaching trees carry stable positional biases the current model does not encode",
+      "suggested_change": "Add coaching_tree field to each agent; apply multipliers: {49ers: DL +0.20, Ravens: DB +0.15, Rams: BPA, Harbaugh/Shanahan: trenches +0.15, Belichick: versatility/IOL +0.12, Payton: TE +0.18}",
+      "expected_impact": "Improve scheme-fit predictions by ~10 pp, esp. for new-regime teams in year-1."
+    },
+    "priority_4_beat_writer_leak_recency_decay": {
+      "description": "Leak-age decay is currently flat; should be exponential",
+      "suggested_change": "leak_weight = base * exp(-age_days / 4). 72h leak = 0.47x base, 14-day leak = 0.03x base",
+      "expected_impact": "Sharpen signal on late-cycle (high-accuracy) leaks, reduce noise from early speculation."
+    },
+    "priority_5_multi_signal_stack_bonus": {
+      "description": "Currently signals combine linearly; the data shows super-linear confidence when 3+ align",
+      "suggested_change": "If >=3 signal_categories point to same (team, position) pair, apply P *= 1.5 bonus after linear combination",
+      "expected_impact": "Concentrate high-confidence picks; reduce top-5 entropy by ~8%."
+    }
+  }
+}

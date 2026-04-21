@@ -52,8 +52,19 @@ STATIC_DIR = Path(__file__).parent / "static"
 TEAM_AGENTS_JSON = FEATURES / "team_agents_2026.json"
 ANALYST_AGG_JSON = FEATURES / "analyst_aggregate_2026.json"
 ANALYST_CONSENSUS_JSON = FEATURES / "analyst_consensus_2026.json"
-MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026.json"
-MC_CSV = PROCESSED / "monte_carlo_2026_v12.csv"
+
+# DRAFT_MODE (env var) selects which model's outputs the API surfaces.
+#   "benchmark"   (default) — legacy analyst-aware pipeline
+#   "independent"           — analyst-free team-agent simulator (Sections A-H)
+DRAFT_MODE = os.environ.get("DRAFT_MODE", "benchmark").lower()
+if DRAFT_MODE == "independent":
+    MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026_independent.json"
+    MC_CSV = PROCESSED / "monte_carlo_2026_independent.csv"
+    PREDICTIONS_CSV = PROCESSED / "predictions_2026_independent_picks.csv"
+else:
+    MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026.json"
+    MC_CSV = PROCESSED / "monte_carlo_2026_v12.csv"
+    PREDICTIONS_CSV = PROCESSED / "predictions_2026.csv"
 MC_TRADES_JSON = PROCESSED / "monte_carlo_trades_2026.json"
 TEAM_CTX_CSV = PROCESSED / "team_context_2026_enriched.csv"
 
@@ -68,7 +79,6 @@ def _original_pick_owners() -> dict[int, str]:
     df = pd.read_csv(TEAM_CTX_CSV)
     r1 = df[df["round"] == 1][["pick_number", "team"]]
     return {int(r.pick_number): r.team for _, r in r1.iterrows()}
-PREDICTIONS_CSV = PROCESSED / "predictions_2026.csv"
 PROSPECTS_CSV = PROCESSED / "prospects_2026_enriched.csv"
 
 app = FastAPI(title="NFL Draft Predictor 2026", version="2.0")
@@ -178,6 +188,7 @@ def meta() -> dict:
             "token_required": bool(AUTH_TOKEN),
             "max_sims":       MAX_SIMS,
         },
+        "draft_mode": DRAFT_MODE,  # "benchmark" (default) or "independent"
         "files_present": {
             "team_agents":       TEAM_AGENTS_JSON.exists(),
             "analyst_aggregate": ANALYST_AGG_JSON.exists(),

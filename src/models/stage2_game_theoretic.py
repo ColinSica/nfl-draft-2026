@@ -1249,15 +1249,10 @@ def determine_trades(rng: np.random.Generator) -> dict:
             trades["DAL_traded"] = True
             trades["DAL_trade_scenario"] = "B"
 
-    # CIN trade up to 5: REMOVED. Analyst consensus data (20 mocks from
-    # 2026 Mock Draft Data.xlsx) shows ZERO mocks for this scenario. The
-    # original 15% was a PDF-hint guess, not data-supported. Tobin/CIN is
-    # famously a rarely-trades GM per PDF narrative AND empirical data.
-    # Keep a tiny residual for model-breaking scenarios only.
-    if rng.random() < 0.03:
-        trades[5] = "CIN"
-        trades[10] = "NYG"
-        trades["CIN_traded"] = True
+    # CIN trade up to 5: IMPOSSIBLE post-Lawrence trade (4/18/26). CIN sent
+    # their R1 #10 to NYG for Dexter Lawrence; they have no Rd1 capital
+    # remaining and cannot plausibly package Day 2 picks + future 1st to
+    # jump all the way to #5. Zeroed out (was 3% residual).
 
     # PHI trade up: analyst data shows 2 non-tier-1 mocks (PHI up for
     # Thieneman at P17, PHI up for Miller at P19). Lowered from 20% to 10%

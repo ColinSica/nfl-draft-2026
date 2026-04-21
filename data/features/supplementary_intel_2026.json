@@ -1,0 +1,641 @@
+{
+  "generated_at": "2026-04-20",
+  "purpose": "Enrich team-agent draft simulator with signals that are NOT analyst picks or consensus ranks. Includes late-breaking visits, medical updates, insider-only trade rumors, and coach/GM tendency profiles that inform scheme-fit and behavioral weights.",
+  "agent_note": "Per model philosophy: analyst content feeds team PROFILES only, never picks directly. Entries here should map to profile weights (scheme-fit, GM archetype, trade propensity), not to pick overrides.",
+  "sources_scraped": [
+    {"name": "Walter Football Visit Tracker", "url": "https://walterfootball.com/ProspectMeetingsByTeam2026.php", "last_accessed": "2026-04-20"},
+    {"name": "NFLTradeRumors Visit Tracker", "url": "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/", "last_accessed": "2026-04-20"},
+    {"name": "CBS Sports Visits Tracker", "url": "https://www.cbssports.com/nfl/news/nfl-draft-top-30-visits-tracker-2026/", "last_accessed": "2026-04-20"},
+    {"name": "ESPN Schefter 2026 Draft Intel", "url": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades", "last_accessed": "2026-04-20"},
+    {"name": "NFL.com IQ Trade Trends", "url": "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft", "last_accessed": "2026-04-20"},
+    {"name": "ESPN Solak 32-team breakdown", "url": "https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak", "last_accessed": "2026-04-20"},
+    {"name": "CBS Sports McCoy medical", "url": "https://www.cbssports.com/nfl/news/jermod-mccoy-injury-nfl-draft-projections-tennessee-pro-day/", "last_accessed": "2026-04-20"},
+    {"name": "CBS Sports Tyson workout", "url": "https://www.cbssports.com/nfl/news/2026-nfl-draft-jordyn-tyson-workout/", "last_accessed": "2026-04-20"},
+    {"name": "ESPN Branch arrest", "url": "https://www.espn.com/nfl/story/_/id/48532665/nfl-draft-prospect-zachariah-branch-arrested-georgia", "last_accessed": "2026-04-20"},
+    {"name": "NFL.com Giants-Bengals Lawrence trade", "url": "https://www.nfl.com/news/nfl-network-giants-trading-dt-dexter-lawrence-to-bengals-in-exchange-for-2026-no-10-overall-pick", "last_accessed": "2026-04-20"},
+    {"name": "Clutchpoints Love to ARI (Schefter)", "url": "https://clutchpoints.com/nfl/nfl-stories/nfl-rumors-jeremiyah-love-cardinals-but-watch-for-no-3-pick-trade", "last_accessed": "2026-04-20"},
+    {"name": "Heavy / Rapoport Cowboys trade up", "url": "https://heavy.com/sports/nfl/dallas-cowboys/nfl-draft-trade-rumors-sonny-styles/", "last_accessed": "2026-04-20"},
+    {"name": "Clutchpoints Schefter Browns No.6", "url": "https://clutchpoints.com/nfl/cleveland-browns/browns-rumors-adam-schefter-fuel-no-6-pick-trade-fire", "last_accessed": "2026-04-20"},
+    {"name": "NYJ Jets QB workout report", "url": "https://www.newyorkjets.com/news/jets-nfl-draft-preview-quarterbacks-ty-simpson-drew-allar-04-17-2026", "last_accessed": "2026-04-20"},
+    {"name": "ESPN Patriots intel", "url": "https://www.espn.com/nfl/draft2026/story/_/id/48423365/2026-nfl-draft-new-england-patriots-updates-buzz-intel-picks-positions", "last_accessed": "2026-04-20"},
+    {"name": "ESPN Eagles intel", "url": "https://www.espn.com/nfl/story/_/id/48429936/2026-nfl-draft-philadelphia-eagles-updates-buzz-intel-picks-positions", "last_accessed": "2026-04-20"},
+    {"name": "KSHB Brett Veach presser", "url": "https://www.kshb.com/sports/football/chiefs/chiefs-gm-brett-veach-eyes-make-or-break-draft-as-kansas-city-aims-to-rebound", "last_accessed": "2026-04-20"},
+    {"name": "Baltimore Banner DeCosta BPA", "url": "https://www.thebanner.com/sports/ravens-nfl/baltimore-ravens-2026-nfl-draft-eric-decosta-jesse-minter-ALS7ZRBYJRCYTH6S7ZRUQGPYNQ/", "last_accessed": "2026-04-20"}
+  ],
+
+  "late_breaking_intel": {
+    "private_visits_since_april_17": {
+      "_note": "Top-30 visit window closed April 15, but late private workouts and final-week meetings continue. Entries below are confirmed with date >= 2026-04-17 or reported in post-4/17 articles. Most tracker entries lack exact dates; we include only those we can attribute.",
+      "ALL_TEAMS_JORDYN_TYSON_WORKOUT": [
+        {"player": "Jordyn Tyson", "position": "WR", "school": "Arizona State", "date": "2026-04-17", "event": "private workout open to all NFL teams, ~25 routes, 1 drop", "source": "https://www.cbssports.com/nfl/news/2026-nfl-draft-jordyn-tyson-workout/", "significance": "Teams now comfortable with hamstring/injury history; Matt Miller reports floor 5, ceiling 16."}
+      ],
+      "NE": [
+        {"player": "Emmanuel Pregnon", "position": "G", "school": "Oregon", "date": "2026-04-18", "source": "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/", "type": "pre-draft visit"}
+      ],
+      "DAL": [
+        {"player": "De'Zhaun Stribling", "position": "WR", "school": "Ole Miss", "date": "2026-04-17-or-later", "source": "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/", "type": "private workout"}
+      ],
+      "NO": [
+        {"player": "De'Zhaun Stribling", "position": "WR", "school": "Ole Miss", "date": "2026-04-17-or-later", "source": "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/", "type": "private workout"}
+      ],
+      "visit_tracker_multi_team_signals": [
+        {"player": "Oscar Delp", "position": "TE", "school": "Georgia", "teams_visiting": ["BAL", "CAR", "CLE"], "source": "https://walterfootball.com/ProspectMeetingsByTeam2026.php", "significance": "Three-team TE-needy pattern implies Day 2 consensus; all three teams have legitimate TE demand."},
+        {"player": "Carson Beck", "position": "QB", "school": "Miami", "teams_visiting": ["ARI", "PIT"], "source": "https://walterfootball.com/ProspectMeetingsByTeam2026.php", "significance": "PIT visit reinforces McCarthy QB-whisperer positioning; ARI is trade-down leverage or fallback."},
+        {"player": "Drew Allar", "position": "QB", "school": "Penn State", "teams_visiting": ["ARI", "IND", "NYJ"], "source": "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/", "significance": "Confirmed Day 2 QB cluster; IND interest aligns with Richardson trade rumor."},
+        {"player": "Caleb Downs", "position": "S", "school": "Ohio State", "teams_visiting": ["DAL"], "source": "https://walterfootball.com/ProspectMeetingsByTeam2026.php", "significance": "DAL hosting Downs while simultaneously rumored trading up for Styles is notable — suggests multiple Ohio State defender pathways."},
+        {"player": "David Bailey", "position": "DE", "school": "Texas Tech", "teams_visiting": ["KC"], "source": "https://walterfootball.com/ProspectMeetingsByTeam2026.php", "significance": "Confirms Veach public comment about bringing in nearly every draftable edge."}
+      ]
+    },
+
+    "medical_updates": {
+      "Jermod McCoy": {
+        "status": "cleared",
+        "detail": "Ran 4.38 at Tennessee pro day 2026-03-31; medically cleared mid-season 2025 but declined return. 'No limits' at pro day per McCoy. Right ACL suffered Jan 2025.",
+        "date": "2026-03-31",
+        "source": "https://www.cbssports.com/nfl/news/jermod-mccoy-injury-nfl-draft-projections-tennessee-pro-day/",
+        "profile_weight_note": "Consistent with current model's 0.50 medical multiplier being appropriate — cleared but teams still discount for 2025 lost season and lack of 2025 tape."
+      },
+      "Jordyn Tyson": {
+        "status": "unchanged-but-reassured",
+        "detail": "Held all-teams workout 2026-04-17 at ~25 routes, 1 drop. Did not complete combine or ASU pro day due to hamstring. Matt Miller (ESPN): 'conversation starts at 5, off board no later than 16.' ACL/MCL/PCL history from 2022 Colorado season plus hamstring reaggravation remain in file.",
+        "date": "2026-04-17",
+        "source": "https://www.cbssports.com/nfl/news/2026-nfl-draft-jordyn-tyson-workout/",
+        "profile_weight_note": "Existing reduction (per repo feedback 'Tyson already reduced') still defensible; the 4/17 workout limits further slide but does not move him back to top-10 consensus on durability alone."
+      },
+      "Zachariah Branch": {
+        "status": "red_flag",
+        "detail": "Arrested 2026-04-19 in Athens GA on two misdemeanors (obstruction of sidewalk, obstruction of law enforcement). Booked 1:26a, released 3:44a on $39 bond. Projected Round 2 pre-incident.",
+        "date": "2026-04-19",
+        "source": "https://www.espn.com/nfl/story/_/id/48532665/nfl-draft-prospect-zachariah-branch-arrested-georgia",
+        "profile_weight_note": "Character-concern multiplier should apply for teams with known character sensitivity (PIT, BAL, NE post-Vrabel). Four days pre-draft with no formal team statements yet — do NOT drop him off boards entirely; apply modest slide (half to full round)."
+      }
+    },
+
+    "trade_rumors": [
+      {
+        "teams": ["DAL", "CLE"],
+        "direction": "DAL_up_to_6",
+        "slot_tier": "top-6-to-15",
+        "targets": ["Sonny Styles", "Rueben Bain Jr."],
+        "source": "https://heavy.com/sports/nfl/dallas-cowboys/nfl-draft-trade-rumors-sonny-styles/",
+        "credibility": "insider",
+        "attribution": "Ian Rapoport on Rich Eisen Show / The Insiders, pre-4/20"
+      },
+      {
+        "teams": ["CLE", "MULTIPLE"],
+        "direction": "CLE_open_to_moving_down_from_6",
+        "slot_tier": "top-6-to-15",
+        "source": "https://clutchpoints.com/nfl/cleveland-browns/browns-rumors-adam-schefter-fuel-no-6-pick-trade-fire",
+        "credibility": "insider",
+        "attribution": "Adam Schefter — CLE 'taking calls', 9 total picks, Andrew Berry public 'maximize the asset' quote."
+      },
+      {
+        "teams": ["ARI", "MULTIPLE"],
+        "direction": "ARI_exploratory_trade_down_from_3",
+        "slot_tier": "top-5",
+        "targets_if_stay": ["Jeremiyah Love"],
+        "source": "https://clutchpoints.com/nfl/nfl-stories/nfl-rumors-jeremiyah-love-cardinals-but-watch-for-no-3-pick-trade",
+        "credibility": "insider",
+        "attribution": "Adam Schefter — Love 'very much in play' at 3; Cardinals prefer trade partner wanting Love."
+      },
+      {
+        "teams": ["NYG", "CIN"],
+        "direction": "COMPLETED_NYG_sends_Dexter_Lawrence_to_CIN_for_pick_10",
+        "slot_tier": "top-6-to-15",
+        "source": "https://www.nfl.com/news/nfl-network-giants-trading-dt-dexter-lawrence-to-bengals-in-exchange-for-2026-no-10-overall-pick",
+        "credibility": "insider",
+        "attribution": "Ian Rapoport / NFL Network — completed ~2026-04-18/19. Giants now hold picks 5 and 10. Bengals gave Lawrence 1-yr $28M extension.",
+        "model_impact": "CRITICAL — NYG now has two top-10 picks; CIN's original pick 10 is now NYG's. Team-agent turn order and board depletion must reflect this."
+      },
+      {
+        "teams": ["DEN", "MIA"],
+        "direction": "COMPLETED_DEN_sends_pick_30_for_Jaylen_Waddle",
+        "slot_tier": "16-32",
+        "source": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+        "credibility": "insider",
+        "attribution": "Adam Schefter (ESPN)"
+      },
+      {
+        "teams": ["PHI"],
+        "direction": "PHI_plotting_draft_weekend_deal_direction_unknown",
+        "slot_tier": "16-32",
+        "targets": ["Jonathan Greenard (via MIN, Day-2-premium)"],
+        "source": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+        "credibility": "insider",
+        "attribution": "Adam Schefter — Roseman 'plotting' per league sources; PHI has historically preferred future capital (2027-2028 picks)."
+      },
+      {
+        "teams": ["SEA"],
+        "direction": "SEA_could_trade_down_out_of_round_1",
+        "slot_tier": "16-32",
+        "source": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+        "credibility": "insider",
+        "attribution": "Schefter intel — SEA has only 4 total picks, incentivized to stockpile."
+      },
+      {
+        "teams": ["MARKET"],
+        "direction": "fewer_R1_trades_than_recent_years",
+        "slot_tier": "all",
+        "source": "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades",
+        "credibility": "insider",
+        "attribution": "Schefter — more teams want down than up; no blockbuster expected. Apply damping to team-agent trade propensity this cycle."
+      }
+    ]
+  },
+
+  "coach_gm_tendencies": {
+    "ARI": {
+      "hc": "Jonathan Gannon",
+      "gm": "Monti Ossenfort",
+      "oc_scheme": "play-action / Shanahan-lite",
+      "dc_scheme": "multiple / hybrid with single-high and 2-high rotations",
+      "gm_historical_tendencies": [
+        "Heavy trade-down preference: 6 trade-downs vs 1 trade-up in two-year sample",
+        "Rebuild-mode: accumulates picks over star-chasing",
+        "Willing to take unique physical profiles (Paris Johnson Jr, Marvin Harrison Jr)"
+      ],
+      "recent_5yr_position_patterns": "Recent R1s skew toward high-athleticism trench/skill; prior WR/OT emphasis. Has drafted back-to-back QBs before (Rosen 2018, Murray 2019) per ESPN Solak.",
+      "sources": [
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft",
+        "https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"
+      ]
+    },
+    "ATL": {
+      "hc": "Raheem Morris",
+      "gm": "Terry Fontenot",
+      "oc_scheme": "Zac Robinson / Shanahan wide-zone",
+      "dc_scheme": "Jeff Ulbrich hybrid",
+      "gm_historical_tendencies": [
+        "GM publicly willing to 'listen' on Kyle Pitts offers (Schefter)",
+        "High-upside skill position grabs at top of R1 (Bijan, Penix)"
+      ],
+      "recent_5yr_position_patterns": "Top picks have leaned offense-heavy; ready to flip if edge/DT value at slot.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"]
+    },
+    "BAL": {
+      "hc": "John Harbaugh",
+      "gm": "Eric DeCosta",
+      "oc_scheme": "Todd Monken hybrid (pre-2026) / new OC — verify current role",
+      "dc_scheme": "Zach Orr multiple",
+      "gm_historical_tendencies": [
+        "BPA orientation: 'Best player available' stated publicly",
+        "Values players who 'do something specific very well' beyond R4",
+        "Has NOT traded first-rounder since 2019 (low trade-frequency on R1 assets)",
+        "Strong SEC/ACC scouting pipeline"
+      ],
+      "recent_5yr_position_patterns": "Multiple R1 edges/safeties; stays put at slot.",
+      "sources": [
+        "https://www.thebanner.com/sports/ravens-nfl/baltimore-ravens-2026-nfl-draft-eric-decosta-jesse-minter-ALS7ZRBYJRCYTH6S7ZRUQGPYNQ/",
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"
+      ]
+    },
+    "BUF": {
+      "hc": "Sean McDermott",
+      "gm": "Brandon Beane",
+      "oc_scheme": "Joe Brady (promoted HC per some 2026 reports — verify)",
+      "dc_scheme": "Bobby Babich / McDermott Tampa-2 derivative",
+      "gm_historical_tendencies": [
+        "Willing to trade UP in R1 (Kincaid, Elam)",
+        "Prefers athletic testing + production alignment"
+      ],
+      "recent_5yr_position_patterns": "Weapons for Josh Allen + secondary rotation.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"]
+    },
+    "CAR": {
+      "hc": "Dave Canales",
+      "gm": "Dan Morgan",
+      "oc_scheme": "Brad Idzik / Canales play-action",
+      "dc_scheme": "Ejiro Evero single-high zone",
+      "gm_historical_tendencies": [
+        "Invest in Bryce Young playmaker support",
+        "Morgan first full cycle; skew toward TE/WR/LB athletes",
+        "Hosted Oscar Delp (GA TE) visit"
+      ],
+      "recent_5yr_position_patterns": "Offense-first the last two drafts.",
+      "sources": [
+        "https://walterfootball.com/ProspectMeetingsByTeam2026.php",
+        "https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"
+      ]
+    },
+    "CHI": {
+      "hc": "Ben Johnson",
+      "gm": "Ryan Poles",
+      "oc_scheme": "Ben Johnson play-action / motion-heavy (Detroit-derived)",
+      "dc_scheme": "Dennis Allen single-high pressure",
+      "gm_historical_tendencies": [
+        "Protect Caleb Williams first — OL premium",
+        "Poles targets strong-safety/enforcer types to fill Brisker gap",
+        "Willing to trade within top-10 (Fields trade 2024)"
+      ],
+      "recent_5yr_position_patterns": "OL + secondary priority.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"]
+    },
+    "CIN": {
+      "hc": "Zac Taylor",
+      "gm": "Duke Tobin",
+      "oc_scheme": "Dan Pitcher / McVay-tree",
+      "dc_scheme": "Al Golden multiple — pressure-heavy post-Lawrence-add",
+      "gm_historical_tendencies": [
+        "Extremely low trade activity — 1.4 trades/draft, no R1 pick moves in 5 yrs (NFL IQ)",
+        "Now traded pick 10 to NYG for Dexter Lawrence (2026-04-18/19) — out of R1 entirely",
+        "Historically draft Day-3 contributors heavily"
+      ],
+      "recent_5yr_position_patterns": "WR + DL heavy.",
+      "sources": [
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft",
+        "https://www.nfl.com/news/nfl-network-giants-trading-dt-dexter-lawrence-to-bengals-in-exchange-for-2026-no-10-overall-pick"
+      ]
+    },
+    "CLE": {
+      "hc": "Kevin Stefanski",
+      "gm": "Andrew Berry",
+      "oc_scheme": "Stefanski wide-zone",
+      "dc_scheme": "Jim Schwartz Wide-9",
+      "gm_historical_tendencies": [
+        "High trade frequency: 5.2 picks/draft (NFL IQ)",
+        "Openly 'maximizing the asset' at No. 6 — Schefter confirms taking calls",
+        "9 total picks in 2026 — flexibility to accept trade-down package",
+        "Willing to move R1 equity (Watson precedent)"
+      ],
+      "recent_5yr_position_patterns": "DL premium + WR swings.",
+      "sources": [
+        "https://www.nfl.com/news/andrew-berry-browns-goal-no-6-pick-maximizing-the-asset-2026-draft",
+        "https://clutchpoints.com/nfl/cleveland-browns/browns-rumors-adam-schefter-fuel-no-6-pick-trade-fire"
+      ]
+    },
+    "DAL": {
+      "hc": "Brian Schottenheimer",
+      "gm": "Jerry Jones / Will McClay (personnel lead)",
+      "oc_scheme": "Klayton Adams play-action zone",
+      "dc_scheme": "Matt Eberflus 4-3 over / Tampa-2 derived",
+      "gm_historical_tendencies": [
+        "McClay values SEC pipeline heavily",
+        "Jerry Jones willing to swing big at R1; Rapoport labels DAL 'most likely trade-up team' for 2026",
+        "Targets per Rapoport: Sonny Styles (OSU LB), Rueben Bain Jr. (MIA EDGE), Akeem Mesidor"
+      ],
+      "recent_5yr_position_patterns": "Trenches + LB defense-heavy recent trend per NFL IQ.",
+      "sources": [
+        "https://heavy.com/sports/nfl/dallas-cowboys/nfl-draft-trade-rumors-sonny-styles/",
+        "https://www.cbssports.com/nfl/news/2026-nfl-draft-rumors-cowboys-defense-aaron-rodgers/"
+      ]
+    },
+    "DEN": {
+      "hc": "Sean Payton",
+      "gm": "George Paton",
+      "oc_scheme": "Payton West-Coast / play-action",
+      "dc_scheme": "Vance Joseph 3-4 pressure",
+      "gm_historical_tendencies": [
+        "Payton-led org traded pick 30 for Jaylen Waddle (confirmed Schefter) — no R1 pick",
+        "Historical preference for high-floor veterans + upside trench players"
+      ],
+      "recent_5yr_position_patterns": "DL + DB.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"]
+    },
+    "DET": {
+      "hc": "Dan Campbell",
+      "gm": "Brad Holmes",
+      "oc_scheme": "New OC post-Ben-Johnson (John Morton) — still Lions WCO",
+      "dc_scheme": "Kelvin Sheppard / Glenn-tree multiple",
+      "gm_historical_tendencies": [
+        "Traits + athletic testing — elite RAS scorers",
+        "Willing to trade-up (Gibbs, Arnold, Williams history)",
+        "Owner ongoing 'grit and dawg' profile preference"
+      ],
+      "recent_5yr_position_patterns": "Balanced O and D with clear athletic thresholds.",
+      "sources": ["https://www.yardbarker.com/nfl/articles/the_vikings_firing_kwesi_adofo_mensah_could_have_a_negative_effect_on_brad_holmes_and_the_lions/s1_17313_43415381"]
+    },
+    "GB": {
+      "hc": "Matt LaFleur",
+      "gm": "Brian Gutekunst",
+      "oc_scheme": "Adam Stenavich / Shanahan wide-zone",
+      "dc_scheme": "Jeff Hafley 4-3 quarters",
+      "gm_historical_tendencies": [
+        "Almost never drafts a WR in R1 until Reed/Watson era shift",
+        "Strong preference for Big Ten/ACC trench prospects",
+        "Age discipline — avoids older seniors at skill positions"
+      ],
+      "recent_5yr_position_patterns": "OL/DL/LB heavy.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"]
+    },
+    "HOU": {
+      "hc": "DeMeco Ryans",
+      "gm": "Nick Caserio",
+      "oc_scheme": "Nick Caley / Ryans hybrid",
+      "dc_scheme": "Matt Burke Wide-9 (Ryans 4-3)",
+      "gm_historical_tendencies": [
+        "Caserio aggressive trade-up history (Stroud, Anderson)",
+        "Values scheme-specific edge prospects",
+        "Hosted A.J. Haulcy (LSU CB) — secondary need signal"
+      ],
+      "recent_5yr_position_patterns": "Weapons for Stroud + secondary.",
+      "sources": ["https://walterfootball.com/ProspectMeetingsByTeam2026.php"]
+    },
+    "IND": {
+      "hc": "Shane Steichen",
+      "gm": "Chris Ballard",
+      "oc_scheme": "Steichen RPO / Eagles-tree",
+      "dc_scheme": "Lou Anarumo single-high (new)",
+      "gm_historical_tendencies": [
+        "Ballard trades DOWN more than up historically — accumulates picks",
+        "Prefers character/captain prospects",
+        "Hosted Drew Allar — Richardson trade rumor contingency plan"
+      ],
+      "recent_5yr_position_patterns": "Balanced; CB/LB emphasis recent.",
+      "sources": [
+        "https://walterfootball.com/ProspectMeetingsByTeam2026.php",
+        "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"
+      ]
+    },
+    "JAX": {
+      "hc": "Liam Coen",
+      "gm": "James Gladstone",
+      "oc_scheme": "Grant Udinski / Coen Shanahan-McVay",
+      "dc_scheme": "Anthony Campanile multiple (Vrabel-tree)",
+      "gm_historical_tendencies": [
+        "Gladstone (Rams-tree) first full cycle — expect Les Snead-style flexibility",
+        "Open to trade-downs"
+      ],
+      "recent_5yr_position_patterns": "New regime — limited 5yr signal.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"]
+    },
+    "KC": {
+      "hc": "Andy Reid",
+      "gm": "Brett Veach",
+      "oc_scheme": "Matt Nagy / Reid West-Coast",
+      "dc_scheme": "Steve Spagnuolo 4-3 pressure / high man-coverage rate (30.8% in 2025, 10th-highest)",
+      "gm_historical_tendencies": [
+        "All but one Veach R1 pick has been age 21 or younger",
+        "Trade frequency 5.8/draft — 15 trade-ups since 2017 (NFL IQ)",
+        "Publicly stated goal: 'edge rusher' — brought in ~12 draftable DEs this cycle",
+        "Values press-capable CBs for Spags man scheme",
+        "Three top-40 picks (9, 29, 40)"
+      ],
+      "recent_5yr_position_patterns": "Edge + CB + WR.",
+      "sources": [
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft",
+        "https://www.kshb.com/sports/football/chiefs/chiefs-gm-brett-veach-eyes-make-or-break-draft-as-kansas-city-aims-to-rebound"
+      ]
+    },
+    "LV": {
+      "hc": "Pete Carroll",
+      "gm": "John Spytek",
+      "oc_scheme": "Chip Kelly / Carroll tempo",
+      "dc_scheme": "Patrick Graham multiple",
+      "gm_historical_tendencies": [
+        "Spytek (Bucs-tree under Licht) — BPA tendencies",
+        "Carroll LEO/long-CB archetype bias"
+      ],
+      "recent_5yr_position_patterns": "DL + CB emphasis.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"]
+    },
+    "LAC": {
+      "hc": "Jim Harbaugh",
+      "gm": "Joe Hortiz",
+      "oc_scheme": "Greg Roman run-heavy / gap",
+      "dc_scheme": "Jesse Minter hybrid (Michigan-tree)",
+      "gm_historical_tendencies": [
+        "Lowest trade activity: 1.4 picks/draft (NFL IQ) — holds picks",
+        "Has not moved R1 in 5 yrs",
+        "Ravens-DNA (Hortiz from BAL) — BPA + trenches"
+      ],
+      "recent_5yr_position_patterns": "Trenches.",
+      "sources": ["https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"]
+    },
+    "LAR": {
+      "hc": "Sean McVay",
+      "gm": "Les Snead",
+      "oc_scheme": "McVay play-action bootleg",
+      "dc_scheme": "Chris Shula 3-4 hybrid",
+      "gm_historical_tendencies": [
+        "Trade frequency 5.8/draft — 25 trade-downs vs 15 trade-ups (NFL IQ)",
+        "Extremely flexible mid-round",
+        "2022-24: rebuilt via athletic testing + rookie contributors"
+      ],
+      "recent_5yr_position_patterns": "Defense trench-heavy recent.",
+      "sources": ["https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"]
+    },
+    "MIA": {
+      "hc": "Mike McDaniel",
+      "gm": "Jon-Eric Sullivan (new, post-Grier)",
+      "oc_scheme": "McDaniel outside-zone",
+      "dc_scheme": "Anthony Weaver (retained?) — verify post-Hafley",
+      "gm_historical_tendencies": [
+        "New regime under HC Jeff Hafley per NFL IQ — note some sources have conflicting HC info, verify",
+        "Cap/dead-money constrained — formula: big athletic press CB in R1",
+        "Just acquired pick 30 from DEN for Waddle"
+      ],
+      "recent_5yr_position_patterns": "Speed skill + CB.",
+      "sources": ["https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"]
+    },
+    "MIN": {
+      "hc": "Kevin O'Connell",
+      "gm": "Rob Brzezinski (interim, post-Adofo-Mensah firing)",
+      "oc_scheme": "O'Connell McVay-tree",
+      "dc_scheme": "Brian Flores exotic pressure / simulated blitzes",
+      "gm_historical_tendencies": [
+        "Interim GM — O'Connell + Flores likely dominant voices per Vikings beat reporting",
+        "Historically 5.8 trades/draft (NFL IQ) — flexibility persists",
+        "Flores scheme demands versatile hybrid DBs and LBs"
+      ],
+      "recent_5yr_position_patterns": "QB + DB + LB.",
+      "sources": [
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft",
+        "https://purpleptsd.com/2026/vikings/opinion/vikings-ranking-5-best-draft/"
+      ]
+    },
+    "NE": {
+      "hc": "Mike Vrabel",
+      "gm": "Eliot Wolf",
+      "oc_scheme": "Josh McDaniels (return) / Erhardt-Perkins",
+      "dc_scheme": "Terrell Williams (Vrabel-tree) multiple",
+      "gm_historical_tendencies": [
+        "Wolf publicly stated 2026 as BPA-cycle, not needs-based",
+        "Prioritizes OL + DL + WR strengths of the class",
+        "Wants edge-rusher SPEED specifically (stated: 'get faster')",
+        "'Open to anything' on trades — flexible",
+        "Tracking post-June-1 AJ Brown pursuit (Schefter)",
+        "Hosted Emmanuel Pregnon (Oregon G) on 2026-04-18 — interior OL interest"
+      ],
+      "recent_5yr_position_patterns": "Trenches + skill under Wolf.",
+      "sources": [
+        "https://www.nfl.com/news/patriots-eliot-wolf-2026-nfl-draft-class-not-historically-great-but-strong-at-o-line-d-line-wr",
+        "https://atozsports.com/nfl/eliot-wolf-peek-behind-curtain-new-england-patriots-thought-process-first-round-2026-nfl-draft/",
+        "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/"
+      ]
+    },
+    "NO": {
+      "hc": "Kellen Moore",
+      "gm": "Mickey Loomis",
+      "oc_scheme": "Moore Air Coryell / shot-play",
+      "dc_scheme": "Brandon Staley (new) 2-high Fangio-tree",
+      "gm_historical_tendencies": [
+        "EXTREME trade-up bias: 20 trade-ups, 0 trade-downs since 2011 (NFL IQ)",
+        "Mortgage future picks",
+        "Hosted Stribling private workout"
+      ],
+      "recent_5yr_position_patterns": "Skill + OL.",
+      "sources": [
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft",
+        "https://nfltraderumors.co/2026-nfl-draft-visit-tracker/"
+      ]
+    },
+    "NYG": {
+      "hc": "Brian Daboll",
+      "gm": "Joe Schoen",
+      "oc_scheme": "Mike Kafka / Daboll hybrid RPO",
+      "dc_scheme": "Shane Bowen multiple (Vrabel-tree)",
+      "gm_historical_tendencies": [
+        "Just traded Dexter Lawrence to CIN for pick 10 — now holds picks 5 AND 10 (2026-04-18/19)",
+        "Schoen trade-savvy; two top-10 picks opens trade-up or double-down",
+        "Willing to move veterans for picks",
+        "Hosted Lee Hunter (Texas Tech DT) — interior DL signal post-Lawrence loss"
+      ],
+      "recent_5yr_position_patterns": "OL + skill + pass-rush.",
+      "sources": [
+        "https://www.nfl.com/news/nfl-network-giants-trading-dt-dexter-lawrence-to-bengals-in-exchange-for-2026-no-10-overall-pick",
+        "https://walterfootball.com/ProspectMeetingsByTeam2026.php"
+      ]
+    },
+    "NYJ": {
+      "hc": "Aaron Glenn",
+      "gm": "Darren Mougey",
+      "oc_scheme": "Frank Reich / Erhardt-Perkins",
+      "dc_scheme": "Glenn multiple — '70% nickel, elements of 4-3 AND 3-4' (Glenn quote)",
+      "gm_historical_tendencies": [
+        "4 picks in top 44 (2, 16, 33, 44) — heavy capital",
+        "Glenn stated: 'If he's best player on board, we draft him' — BPA",
+        "Worked out full QB board (Simpson, Allar, Beck, Nussmeier)",
+        "Mougey first cycle (Broncos-tree) — expect Paton-like discipline"
+      ],
+      "recent_5yr_position_patterns": "New regime.",
+      "sources": [
+        "https://www.newyorkjets.com/news/jets-nfl-draft-preview-quarterbacks-ty-simpson-drew-allar-04-17-2026",
+        "https://jetsxfactor.com/2026/03/31/ny-jets-aaron-glenn-reveal-qb-approach-nfl-draft/"
+      ]
+    },
+    "PHI": {
+      "hc": "Nick Sirianni",
+      "gm": "Howie Roseman",
+      "oc_scheme": "Kevin Patullo (post-Moore) / Sirianni shot-play",
+      "dc_scheme": "Vic Fangio 2-high / now post-Fangio — verify 2026 DC",
+      "gm_historical_tendencies": [
+        "Trades 5.6/draft (NFL IQ); among most active",
+        "Roseman 'plotting a deal' per Schefter for this weekend",
+        "Prefers future capital (2027-2028) over current year",
+        "Premium-positions-only in R1: QB, OT, EDGE, WR — almost never LB/S/RB in R1",
+        "Trenches-first org philosophy; majority of pre-draft visits are OL",
+        "SEC/Georgia pipeline is explicit",
+        "Jeff Stoutland departed — OL preferences may shift"
+      ],
+      "recent_5yr_position_patterns": "Trenches-first near-exclusively.",
+      "sources": [
+        "https://www.espn.com/nfl/story/_/id/48429936/2026-nfl-draft-philadelphia-eagles-updates-buzz-intel-picks-positions",
+        "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"
+      ]
+    },
+    "PIT": {
+      "hc": "Mike McCarthy (new 2026)",
+      "gm": "Omar Khan",
+      "oc_scheme": "McCarthy West-Coast (calling plays) / Brian Angelichio detail",
+      "dc_scheme": "Teryl Austin (retained?) fire-zone — verify",
+      "gm_historical_tendencies": [
+        "12 picks + 5 in top 100 — first time since 1999",
+        "Khan trade-active; likely aggressive this cycle per Steeler Nation",
+        "McCarthy QB-whisperer reputation — multiple QB visits (Beck, Allar reported at PIT-tier)",
+        "Traditional PIT character-screen still applies (Rooney-rules org)"
+      ],
+      "recent_5yr_position_patterns": "OL + DL + CB.",
+      "sources": [
+        "https://www.steelernation.com/2026/04/19/steelers-mystery-mike-mccarthy-nfl-draft",
+        "https://walterfootball.com/ProspectMeetingsByTeam2026.php"
+      ]
+    },
+    "SF": {
+      "hc": "Kyle Shanahan",
+      "gm": "John Lynch",
+      "oc_scheme": "Shanahan outside-zone",
+      "dc_scheme": "Robert Saleh (return) Wide-9",
+      "gm_historical_tendencies": [
+        "Specific scheme-fit archetypes: zone-runner RBs, undersized-leverage WRs (Aiyuk/Deebo/Lemon-type)",
+        "Willing to trade premium capital for QB swings (Lance)",
+        "Monitoring trade market on Aiyuk + Mac Jones (Schefter)"
+      ],
+      "recent_5yr_position_patterns": "WR/OL/DL — scheme fit weighted higher than pure board.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"]
+    },
+    "SEA": {
+      "hc": "Mike Macdonald",
+      "gm": "John Schneider",
+      "oc_scheme": "Klint Kubiak (2025) — verify 2026 OC",
+      "dc_scheme": "Aden Durde / Macdonald BAL-tree hybrid",
+      "gm_historical_tendencies": [
+        "Only 4 total picks in 2026 — incentivized to trade DOWN from 32 (Schefter)",
+        "Historically aggressive on CBs and trenches",
+        "Schneider length-thresholds on CBs (32+ arm)"
+      ],
+      "recent_5yr_position_patterns": "Trenches + CB.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"]
+    },
+    "TB": {
+      "hc": "Todd Bowles",
+      "gm": "Jason Licht",
+      "oc_scheme": "Josh Grizzard / Canales-tree play-action",
+      "dc_scheme": "Bowles 3-4 Psycho / heavy simulated pressure",
+      "gm_historical_tendencies": [
+        "Strong BPA — 'even if not biggest need on surface' (NFL IQ)",
+        "SEC + Power 5 preference",
+        "Stable R1 pick-holder"
+      ],
+      "recent_5yr_position_patterns": "OL + WR + LB.",
+      "sources": ["https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"]
+    },
+    "TEN": {
+      "hc": "Brian Callahan",
+      "gm": "Mike Borgonzi (new)",
+      "oc_scheme": "Nick Holz / Callahan Shanahan-tree",
+      "dc_scheme": "Dennard Wilson / Flores-tree — verify",
+      "gm_historical_tendencies": [
+        "Borgonzi (KC-tree) first full cycle — expect Veach-like age discipline",
+        "Levis trade rumors active (Schefter list)"
+      ],
+      "recent_5yr_position_patterns": "Regime change — discount old patterns.",
+      "sources": ["https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"]
+    },
+    "WAS": {
+      "hc": "Dan Quinn",
+      "gm": "Adam Peters",
+      "oc_scheme": "Kliff Kingsbury Air-Raid / RPO",
+      "dc_scheme": "Joe Whitt Jr. single-high (Quinn-tree)",
+      "gm_historical_tendencies": [
+        "Peters (SF-tree) scheme-fit focus",
+        "Solak analyst note: 'trade back to score an extra pick'",
+        "Jeremiyah Love floor is No. 7 WAS per Schefter intel",
+        "Daronte Jones (Flores influence) adds exotic-pressure DB demand"
+      ],
+      "recent_5yr_position_patterns": "DL + LB + OL under prior regime — Peters era will skew trait-weighted.",
+      "sources": [
+        "https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak",
+        "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"
+      ]
+    }
+  },
+
+  "methodology_notes": [
+    "Agent-based sims gain accuracy from EXPLICIT scheme-fit weights per team (e.g., KC applies +bonus to press-man CBs because Spagnuolo runs 30.8% man, top-10 in NFL). Without this, agents default to positional need and miss archetype mismatches.",
+    "Visit coverage is an ACCESS signal, not a pick signal. A player on 5+ visit lists has wide-market interest; a player visiting only 1-2 teams may have a specific landing spot. Weight this as demand distribution, not team preference override.",
+    "GM trade frequency buckets (5.2+/draft = active, 1.4-/draft = conservative per NFL IQ data) should drive each agent's trade-propensity prior. CLE/KC/LAR/MIN/PHI/NO should fire trade branches more often; LAC/CIN/BAL rarely.",
+    "Completed trades (NYG-CIN Lawrence, DEN-MIA Waddle) change both draft order AND team need profiles. A simulator that doesn't re-propagate need vectors after trades will produce stale picks — this is a more impactful bug than analyst-divergence on any single player.",
+    "Late-breaking character flags (Branch arrest 4/19) should apply a team-specific multiplier based on each team's historical character-sensitivity (PIT, NE, BAL high; LAR, SF low). Uniform penalty across all teams is wrong — it flattens the agent population.",
+    "Medical clearances that happen AFTER the Combine (Tyson 4/17 workout, McCoy 3/31 pro day) reduce variance but do not reverse the prior injury discount. The correct adjustment is to NARROW each player's distribution, not to raise its mean to pre-injury consensus.",
+    "When analyst consensus heavily agrees (Kiper + McShay + Brugler all on DAL-trade-up-for-Styles), that is a team-PROFILE signal — the market has decoded DAL's need + McClay preferences. This should firm DAL's defense-first agent prior, NOT cause the sim to hard-code the Styles pick.",
+    "Independent model divergence from consensus is diagnostic: if our team-agent picks a different player than consensus for the same team, the question is whether our PROFILE is wrong (fix it) or whether consensus is groupthink (verify against primary sources). Per user feedback in MEMORY.md: 'divergence from consensus is a quality failure' — but the fix is always richer profiles, never loosening independence."
+  ],
+
+  "high_impact_findings_summary": [
+    "NYG-CIN Lawrence trade (4/18-19, insider-confirmed) gives NYG picks 5 AND 10 — cascades through top-10 ordering; CIN is OUT of R1 entirely. Most impactful data point in this batch.",
+    "DAL trade-up to 6 (Rapoport + triple-consensus of Kiper/McShay/Brugler on Sonny Styles) is the most-telegraphed R1 move; DAL agent needs defense-first + LB/EDGE prior weighted higher than mock-normal.",
+    "ARI exploring trade-down from 3 with Jeremiyah Love as fallback (Schefter). If no trade partner, Love-to-ARI at 3 becomes base case — this should raise RB-top-3 probability materially.",
+    "Branch arrest 4/19 at Athens is a live character red-flag 4 days pre-draft; apply team-sensitivity-weighted slide, not uniform drop.",
+    "Schefter market-read: FEWER R1 trades than recent years (more teams want down than up). Trade-propensity parameter should be damped this cycle across the simulator."
+  ]
+}

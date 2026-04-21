@@ -1,0 +1,54 @@
+# Independent team-agent draft-prediction configuration.
+#
+# The runner enforces banned_inputs at load time; any attempt by code in
+# src/models/independent/ to read a banned column or import a banned module
+# causes the run to fail fast.
+mode: independent
+
+n_simulations: 500
+rng_seed: null  # null = OS entropy; set an int for reproducibility
+
+# Inputs the independent engine is ALLOWED to read.
+# Paths are relative to repo root.
+allowed_inputs:
+  team_agents:          data/features/team_agents_2026.json
+  cap_context:          data/features/cap_context_2026.json
+  coaching_tree:        data/features/coaching_tree_2026.json
+  roster_context:       data/features/roster_context_2026.json
+  trade_empirical:      data/features/trade_empirical_2021_2025.json  # structural trade rates
+  prospects:            data/processed/prospects_2026_enriched.csv
+  team_context:         data/processed/team_context_2026_enriched.csv
+  historical_drafts:    data/raw/historical_drafts_2011_2025.csv
+  # analyst content is allowed ONLY as reasoning signals (to be produced in Section E):
+  reasoning_signals:    data/features/team_reasoning_signals_2026.json   # will be created
+
+# Columns that must NEVER be read from prospects_2026_enriched.csv.
+# Enforced by the independence guard.
+banned_prospect_columns:
+  - consensus_rank
+  - rank
+  - market_consensus_score          # derived from consensus
+  - model_consensus_divergence
+  - model_consensus_divergence_flag
+  - confidence_tier                 # derived against consensus
+  - kiper_rank
+  - mcshay_rank
+  - pff_rank
+  - any_analyst_rank
+
+# Files the independent engine must NEVER load.
+banned_files:
+  - data/features/analyst_aggregate_2026.json
+  - data/features/analyst_consensus_2026.json
+  - data/features/trade_scenarios_expanded_2026.json  # mock-derived
+
+# Python modules the independent engine must NEVER import.
+banned_imports:
+  - src.models.benchmark
+  - src.data.ingest_analyst_mocks
+
+outputs:
+  predictions_csv:          data/processed/predictions_2026_independent.csv
+  monte_carlo_csv:          data/processed/monte_carlo_2026_independent.csv
+  reasoning_json:           data/processed/model_reasoning_2026_independent.json
+  independence_audit_log:   data/processed/independence_audit_2026.json
