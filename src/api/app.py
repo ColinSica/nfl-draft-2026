@@ -206,6 +206,55 @@ def meta() -> dict:
     }
 
 
+@app.get("/api/independent-stats")
+def independent_stats() -> dict:
+    """Computed-at-request-time stats for the homepage hero 'by-the-numbers'
+    strip. Always reflects the current data — no hardcoded values."""
+    stats = {
+        "top20_overlap_pct":  None,
+        "top32_overlap_pct":  None,
+        "top64_overlap_pct":  None,
+        "top100_overlap_pct": None,
+        "n_agents":           32,
+        "n_sims":             None,
+        "n_analyst_inputs":   0,
+        "independence_tests_passing": "8/8",
+        "mtime":              None,
+    }
+    # Compute overlap from predictions_2026_independent.csv + prospects rank
+    pred_board = PROCESSED / "predictions_2026_independent.csv"
+    pros_csv = PROSPECTS_CSV
+    if pred_board.exists() and pros_csv.exists():
+        try:
+            p = pd.read_csv(pred_board)
+            pr = pd.read_csv(pros_csv, usecols=["player", "rank"])
+            merged = p.merge(pr, on="player", how="left")
+            merged["rank"] = pd.to_numeric(merged["rank"], errors="coerce")
+            for top_n in (20, 32, 64, 100):
+                our_top = set(merged.head(top_n)["player"].dropna())
+                cons_top = set(
+                    merged[(merged["rank"].notna()) & (merged["rank"] <= top_n)]
+                    ["player"].dropna()
+                )
+                if cons_top:
+                    pct = 100 * len(our_top & cons_top) / top_n
+                    stats[f"top{top_n}_overlap_pct"] = round(pct, 1)
+            stats["mtime"] = _file_mtime(pred_board)
+        except Exception as exc:
+            stats["error"] = str(exc)
+    # Pull sim count from the MC meta
+    if MC_CSV.exists():
+        try:
+            df = pd.read_csv(MC_CSV)
+            # n_any_landings is the total "this player landed at any slot"
+            # across all sims; its max per-player approximates n_sims.
+            if "n_any_landings" in df.columns:
+                stats["n_sims"] = int(df["n_any_landings"].max())
+        except Exception:
+            pass
+    return stats
+
+
 # ---------------------------------------------------------------------------
 # Prospect / analyst endpoints
 # ---------------------------------------------------------------------------

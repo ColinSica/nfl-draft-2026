@@ -34,6 +34,30 @@ function Row({ label, iso }: { label: string; iso?: string | null }) {
   );
 }
 
+/**
+ * Inline stale-while-revalidate badge — drop alongside data points
+ * to signal freshness in-context. e.g., "Showing cached result from 2h ago".
+ */
+export function StaleBadge({ iso }: { iso?: string | null }) {
+  const s = freshnessState(iso);
+  const palette: Record<'fresh' | 'stale' | 'missing', string> = {
+    fresh:   'bg-state-fresh/12 text-state-fresh border-state-fresh/40',
+    stale:   'bg-state-stale/15 text-state-stale border-state-stale/50',
+    missing: 'bg-state-broken/10 text-state-broken border-state-broken/40',
+  };
+  const label = s === 'fresh'
+    ? 'Live'
+    : s === 'stale'
+    ? 'Cached'
+    : 'Awaiting refresh';
+  return (
+    <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 caps-tight border text-[0.65rem] ${palette[s]}`}>
+      <span className={`w-1 h-1 rounded-full ${dotClass[s]}`} />
+      {label} · {relTime(iso)}
+    </span>
+  );
+}
+
 export function FreshnessPanel({ data, compact }: { data: FreshnessInput; compact?: boolean }) {
   if (compact) {
     return (

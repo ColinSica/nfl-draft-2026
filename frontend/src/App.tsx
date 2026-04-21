@@ -7,6 +7,7 @@ import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
 import { AboutModal } from './components/AboutModal';
+import { MobileModeBar } from './components/MobileModeBar';
 import { ModeProvider, useMode, MODE_META } from './lib/mode';
 import { api, type MetaInfo } from './lib/api';
 import { cn } from './lib/format';
@@ -188,6 +189,7 @@ function AppInner() {
         meta={meta}
         onAbout={() => setAboutOpen(true)}
       />
+      <MobileModeBar />
       <main className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 sm:py-10 flex-1">
         <Routes>
           <Route path="/" element={<Home />} />

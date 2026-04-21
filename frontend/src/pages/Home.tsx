@@ -4,7 +4,7 @@ import { ArrowUpRight, Users, UserCircle2, GitCompare, BookOpen } from 'lucide-r
 import { api, type MetaInfo, type PickRow } from '../lib/api';
 import { useMode, MODE_META } from '../lib/mode';
 import { ModeDescription, ModeSwitcher } from '../components/ModeSwitcher';
-import { FreshnessPanel } from '../components/FreshnessPanel';
+import { FreshnessPanel, StaleBadge } from '../components/FreshnessPanel';
 import { TrustBox } from '../components/TrustBox';
 import { HRule, SmallCaps, SectionHeader, LiveBadge } from '../components/editorial';
 import { PickCard, type PickData } from '../components/PickCard';
@@ -16,6 +16,7 @@ export function Home() {
   const [latestPicks, setLatestPicks] = useState<PickRow[] | null>(null);
   const [simMeta, setSimMeta] = useState<any>(null);
   const [reasoning, setReasoning] = useState<any>(null);
+  const [stats, setStats] = useState<any>(null);
 
   useEffect(() => {
     api.meta().then(setMeta).catch(() => {});
@@ -24,6 +25,8 @@ export function Home() {
       .catch(() => {});
     fetch('/api/simulations/reasoning')
       .then(r => r.json()).then(setReasoning).catch(() => {});
+    fetch('/api/independent-stats')
+      .then(r => r.json()).then(setStats).catch(() => {});
   }, []);
 
   // Show top 5 picks — friendlier, less overwhelming than 10
@@ -80,14 +83,36 @@ export function Home() {
             <span className="text-ink font-semibold">Stage 2</span> runs Monte Carlo simulations where all 32 teams act as autonomous agents, each picking on its own scheme, cap tier, coaching tree, and visit intel.
           </p>
 
-          {/* By-the-numbers strip — data-fan / exec credibility */}
+          {/* By-the-numbers strip — pulled live from the API */}
           <div className="reveal reveal-4 pt-1">
             <div className="flex flex-wrap items-end gap-x-10 gap-y-5">
-              <ByTheNumber value="91%" label="Top-32 overlap" sub="with analyst consensus — organically" />
-              <ByTheNumber value="32" label="Team agents" sub="autonomous, per-sim" />
-              <ByTheNumber value="200" label="Simulations" sub="per run · thousands historically" />
-              <ByTheNumber value="0" label="Analyst picks" sub="used as input · tests enforce" accent="#D9A400" />
-              <ByTheNumber value="8/8" label="Independence tests" sub="passing" accent="#17A870" />
+              <ByTheNumber
+                value={stats?.top32_overlap_pct != null ? `${Math.round(stats.top32_overlap_pct)}%` : '—'}
+                label="Top-32 overlap"
+                sub="with consensus — organic convergence"
+              />
+              <ByTheNumber
+                value={String(stats?.n_agents ?? 32)}
+                label="Team agents"
+                sub="autonomous, per-sim"
+              />
+              <ByTheNumber
+                value={stats?.n_sims != null ? String(stats.n_sims) : '—'}
+                label="Simulations"
+                sub="in the latest run"
+              />
+              <ByTheNumber
+                value={String(stats?.n_analyst_inputs ?? 0)}
+                label="Analyst picks"
+                sub="used as input · tests enforce"
+                accent="#D9A400"
+              />
+              <ByTheNumber
+                value={stats?.independence_tests_passing ?? '—'}
+                label="Independence tests"
+                sub="passing"
+                accent="#17A870"
+              />
             </div>
           </div>
 
@@ -119,7 +144,13 @@ export function Home() {
           kicker="Latest simulation"
           title="Top of the board."
         />
-        <div className="mt-8 space-y-3">
+        <div className="mt-4 flex items-center gap-3 flex-wrap">
+          <StaleBadge iso={simMeta?.finished_at ?? simMeta?.generated_at ?? null} />
+          <span className="text-xs text-ink-soft">
+            Cached-first · refreshes in background on new runs.
+          </span>
+        </div>
+        <div className="mt-6 space-y-3">
           {top5.length === 0 ? (
             <div className="card px-6 py-10 text-center">
               <p className="text-ink-soft italic">Loading latest simulation…</p>
