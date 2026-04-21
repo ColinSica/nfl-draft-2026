@@ -93,7 +93,7 @@ def _round_for_slot(slot: int) -> int:
 
 
 def _softmax_pick(scores: pd.Series, rng: np.random.Generator,
-                  temperature: float = 0.05, top_k: int = 12) -> int:
+                  temperature: float = 0.12, top_k: int = 10) -> int:
     """Soft-argmax over the top-K candidates. Lower temperature = closer to
     argmax. Returns the DataFrame index of the chosen prospect."""
     ranked = scores.sort_values(ascending=False).head(top_k)

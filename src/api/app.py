@@ -329,6 +329,69 @@ def simulation_reasoning() -> dict:
     }
 
 
+# Market-implied probability lookup, loaded lazily on first use. Used as the
+# primary source of "will this pick actually happen" probability on the UI —
+# Kalshi prices are real money on the outcome, which is more meaningful than
+# our sim's raw frequency (which only measures model conviction).
+_MARKET_LANDING_CACHE: dict[str, dict[str, float]] | None = None
+
+
+def _load_market_landings() -> dict[str, dict[str, float]]:
+    """{player: {team_code: normalized_prob}} from Kalshi team-landing markets."""
+    global _MARKET_LANDING_CACHE
+    if _MARKET_LANDING_CACHE is not None:
+        return _MARKET_LANDING_CACHE
+    try:
+        import sys as _sys
+        _sys.path.insert(0, str(ROOT))
+        from src.models.independent.odds_anchor import build_team_landing_priors
+        priors = build_team_landing_priors()
+        _MARKET_LANDING_CACHE = {
+            p: dict(d.get("team_probs") or {}) for p, d in priors.items()
+        }
+    except Exception:
+        _MARKET_LANDING_CACHE = {}
+    return _MARKET_LANDING_CACHE
+
+
+def _displayed_probability(raw_sim_prob: float,
+                            player: str | None = None,
+                            team: str | None = None,
+                            slot: int | None = None) -> float:
+    """Return the probability to SHOW on the UI for a pick.
+
+    Priority:
+      1. Kalshi team-landing market for this (player, team) — real money
+         on "will team X draft player Y" is the most honest estimate of
+         actual draft-day probability.
+      2. If no market: apply epistemic haircut to the sim frequency,
+         recognizing the model can't capture everything.
+
+    Raw sim frequency alone overstates certainty — even a 100/100 modal
+    pick in our sim isn't certain in reality (last-minute trades, private
+    intel, medical news, draft-day surprises).
+    """
+    # Priority 1: direct market-implied probability
+    if player and team:
+        landings = _load_market_landings()
+        market_prob = (landings.get(player) or {}).get(team)
+        if market_prob is not None and market_prob > 0:
+            return round(float(market_prob), 3)
+
+    # Priority 2: haircut the raw sim frequency
+    if raw_sim_prob <= 0.20:
+        return round(raw_sim_prob, 3)
+    base_discount = 0.15
+    if slot and slot > 5:
+        base_discount += min(0.08, (slot - 5) * 0.005)
+    calibrated = raw_sim_prob * (1.0 - base_discount)
+    return round(min(0.88, calibrated), 3)
+
+
+# Back-compat alias so existing call sites keep working.
+_calibrate_probability = _displayed_probability
+
+
 def _merge_consensus_rank(df: pd.DataFrame) -> pd.DataFrame:
     """MC CSV lacks consensus_rank; merge it in from prospects_2026_enriched.csv
     (rank column) so downstream consumers see it correctly."""
@@ -368,7 +431,10 @@ def prospect_landings() -> dict:
             {
                 "slot":        int(r[slot_col]),
                 "team":        r.get(team_col),
-                "probability": float(r["probability"] or 0),
+                "probability": _displayed_probability(
+                    float(r["probability"] or 0),
+                    player=player, team=r.get(team_col),
+                    slot=int(r[slot_col])),
             }
             for _, r in grp.iterrows()
         ]
@@ -461,7 +527,9 @@ def latest_simulation() -> dict:
             modal_player = canonical["player"]
             modal_position = canonical["position"]
             modal_team = canonical["team"]
-            modal_prob = canonical["probability"]
+            modal_prob = _displayed_probability(
+                canonical["probability"], player=modal_player,
+                team=modal_team, slot=pn)
             modal_school = canonical.get("school")
             # Find the MC row for this player-slot to get consensus_rank
             mc_match = next((r for r in mc_rows
@@ -475,7 +543,9 @@ def latest_simulation() -> dict:
             modal_player = getattr(top, "player", None)
             modal_position = getattr(top, "position", None)
             modal_team = getattr(top, team_col, None)
-            modal_prob = float(getattr(top, "probability", 0) or 0)
+            modal_prob = _displayed_probability(
+                float(getattr(top, "probability", 0) or 0),
+                player=modal_player, team=modal_team, slot=pn)
             modal_school = getattr(top, "college", None) or getattr(top, "school", None)
             modal_cons_rank = (int(getattr(top, "consensus_rank"))
                                if pd.notna(getattr(top, "consensus_rank", None))
@@ -492,7 +562,11 @@ def latest_simulation() -> dict:
                 "player":          getattr(r, "player", None),
                 "position":        getattr(r, "position", None),
                 "college":         getattr(r, "college", None) or getattr(r, "school", None),
-                "probability":     float(getattr(r, "probability", 0) or 0),
+                "probability":     _displayed_probability(
+                    float(getattr(r, "probability", 0) or 0),
+                    player=getattr(r, "player", None),
+                    team=getattr(r, team_col, None),
+                    slot=pn),
                 "team":            getattr(r, team_col, None),
                 "consensus_rank":  (int(getattr(r, "consensus_rank"))
                                      if pd.notna(getattr(r, "consensus_rank", None))
