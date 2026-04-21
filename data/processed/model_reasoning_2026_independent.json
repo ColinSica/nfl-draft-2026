@@ -1,0 +1,2293 @@
+{
+  "meta": {
+    "n_sims": 5
+  },
+  "picks": {
+    "1": {
+      "team": "LV",
+      "player": "Fernando Mendoza",
+      "position": "QB",
+      "fit_score": 2.581,
+      "independent_grade": -16.71,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.162
+    },
+    "2": {
+      "team": "NYJ",
+      "player": "David Bailey",
+      "position": "EDGE",
+      "fit_score": 2.356,
+      "independent_grade": -4.22,
+      "probability": 1.0,
+      "trade_down_p_structural": 0.148
+    },
+    "3": {
+      "team": "ARI",
+      "player": "Rueben Bain",
+      "position": "EDGE",
+      "fit_score": 2.637,
+      "independent_grade": -10.85,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.195
+    },
+    "4": {
+      "team": "TEN",
+      "player": "Carnell Tate",
+      "position": "WR",
+      "fit_score": 2.449,
+      "independent_grade": -0.75,
+      "probability": 1.0,
+      "trade_down_p_structural": 0.247
+    },
+    "5": {
+      "team": "NYG",
+      "player": "Olaivavega Ioane",
+      "position": "IOL",
+      "fit_score": 2.566,
+      "independent_grade": 2.95,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.425
+    },
+    "6": {
+      "team": "CLE",
+      "player": "Spencer Fano",
+      "position": "OT",
+      "fit_score": 2.945,
+      "independent_grade": 3.5,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.281
+    },
+    "7": {
+      "team": "WAS",
+      "player": "Mansoor Delane",
+      "position": "CB",
+      "fit_score": 2.224,
+      "independent_grade": 1.69,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.195
+    },
+    "8": {
+      "team": "NO",
+      "player": "Jordyn Tyson",
+      "position": "WR",
+      "fit_score": 2.743,
+      "independent_grade": 22.45,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.083
+    },
+    "9": {
+      "team": "KC",
+      "player": "Makai Lemon",
+      "position": "WR",
+      "fit_score": 2.161,
+      "independent_grade": 6.65,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.303
+    },
+    "10": {
+      "team": "NYG",
+      "player": "Chase Bisontis",
+      "position": "IOL",
+      "fit_score": 2.413,
+      "independent_grade": 72.17,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.255
+    },
+    "11": {
+      "team": "MIA",
+      "player": "Ty Simpson",
+      "position": "QB",
+      "fit_score": 2.4,
+      "independent_grade": 21.69,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.288
+    },
+    "12": {
+      "team": "DAL",
+      "player": "Arvell Reese",
+      "position": "LB",
+      "fit_score": 2.507,
+      "independent_grade": -13.58,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.165
+    },
+    "13": {
+      "team": "LAR",
+      "player": "Omar Cooper Jr.",
+      "position": "WR",
+      "fit_score": 2.718,
+      "independent_grade": 50.84,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.595
+    },
+    "14": {
+      "team": "SF",
+      "player": "Francis Mauigoa",
+      "position": "OT",
+      "fit_score": 2.71,
+      "independent_grade": -9.28,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.21
+    },
+    "15": {
+      "team": "TB",
+      "player": "Sonny Styles",
+      "position": "LB",
+      "fit_score": 2.203,
+      "independent_grade": -6.28,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.375
+    },
+    "16": {
+      "team": "NYJ",
+      "player": "Kenyon Sadiq",
+      "position": "TE",
+      "fit_score": 2.113,
+      "independent_grade": 7.42,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.198
+    },
+    "17": {
+      "team": "DET",
+      "player": "Akheem Mesidor",
+      "position": "EDGE",
+      "fit_score": 2.608,
+      "independent_grade": 26.21,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.385
+    },
+    "18": {
+      "team": "MIA",
+      "player": "Emmanuel McNeil-Warren",
+      "position": "S",
+      "fit_score": 2.291,
+      "independent_grade": 17.51,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.288
+    },
+    "19": {
+      "team": "CAR",
+      "player": "Keldric Faulk",
+      "position": "EDGE",
+      "fit_score": 2.172,
+      "independent_grade": 35.61,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.24
+    },
+    "20": {
+      "team": "DAL",
+      "player": "Caleb Banks",
+      "position": "DL",
+      "fit_score": 2.275,
+      "independent_grade": 54.26,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.165
+    },
+    "21": {
+      "team": "LAR",
+      "player": "KC Concepcion",
+      "position": "WR",
+      "fit_score": 2.578,
+      "independent_grade": 52.61,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.595
+    },
+    "23": {
+      "team": "PHI",
+      "player": "Caleb Downs",
+      "position": "S",
+      "fit_score": 2.209,
+      "independent_grade": -5.34,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.473
+    },
+    "24": {
+      "team": "CLE",
+      "player": "Kadyn Proctor",
+      "position": "OT",
+      "fit_score": 2.719,
+      "independent_grade": 20.52,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.383
+    },
+    "25": {
+      "team": "CHI",
+      "player": "Dillon Thieneman",
+      "position": "S",
+      "fit_score": 2.727,
+      "independent_grade": 4.32,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.288
+    },
+    "26": {
+      "team": "BUF",
+      "player": "Jermod McCoy",
+      "position": "CB",
+      "fit_score": 2.4,
+      "independent_grade": 12.29,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.258
+    },
+    "27": {
+      "team": "BAL",
+      "player": "Cashius Howell",
+      "position": "EDGE",
+      "fit_score": 2.529,
+      "independent_grade": 53.1,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.346
+    },
+    "28": {
+      "team": "HOU",
+      "player": "Caleb Lomu",
+      "position": "OT",
+      "fit_score": 2.011,
+      "independent_grade": 41.52,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.284
+    },
+    "29": {
+      "team": "KC",
+      "player": "Colton Hood",
+      "position": "CB",
+      "fit_score": 1.864,
+      "independent_grade": 75.47,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.199
+    },
+    "30": {
+      "team": "MIN",
+      "player": "Avieon Terrell",
+      "position": "CB",
+      "fit_score": 2.228,
+      "independent_grade": 38.62,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.245
+    },
+    "31": {
+      "team": "NE",
+      "player": "Max Iheanachor",
+      "position": "OT",
+      "fit_score": 2.193,
+      "independent_grade": 41.95,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.242
+    },
+    "32": {
+      "team": "SEA",
+      "player": "Emmanuel Pregnon",
+      "position": "IOL",
+      "fit_score": 1.808,
+      "independent_grade": 64.83,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.22
+    },
+    "33": {
+      "team": "NYJ",
+      "player": "Malachi Lawrence",
+      "position": "EDGE",
+      "fit_score": 1.838,
+      "independent_grade": 47.3,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.127
+    },
+    "34": {
+      "team": "ARI",
+      "player": "R Mason Thomas",
+      "position": "EDGE",
+      "fit_score": 1.989,
+      "independent_grade": 67.75,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.157
+    },
+    "35": {
+      "team": "TEN",
+      "player": "Zion Young",
+      "position": "EDGE",
+      "fit_score": 1.75,
+      "independent_grade": 59.97,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.127
+    },
+    "36": {
+      "team": "LV",
+      "player": "Sawyer Robertson",
+      "position": "QB",
+      "fit_score": 1.99,
+      "independent_grade": 120.51,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "37": {
+      "team": "NYG",
+      "player": "Keylan Rutledge",
+      "position": "IOL",
+      "fit_score": 2.105,
+      "independent_grade": 77.96,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.199
+    },
+    "38": {
+      "team": "HOU",
+      "player": "Blake Miller",
+      "position": "OT",
+      "fit_score": 1.828,
+      "independent_grade": 46.3,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "39": {
+      "team": "CLE",
+      "player": "Monroe Freeling",
+      "position": "OT",
+      "fit_score": 2.342,
+      "independent_grade": 79.88,
+      "probability": 1.0,
+      "trade_down_p_structural": 0.219
+    },
+    "40": {
+      "team": "KC",
+      "player": "Chris Johnson",
+      "position": "CB",
+      "fit_score": 1.656,
+      "independent_grade": 93.53,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "41": {
+      "team": "CIN",
+      "player": "Anthony Hill Jr.",
+      "position": "LB",
+      "fit_score": 1.868,
+      "independent_grade": 61.6,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.069
+    },
+    "42": {
+      "team": "NO",
+      "player": "Elijah Sarratt",
+      "position": "WR",
+      "fit_score": 1.895,
+      "independent_grade": 104.42,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.058
+    },
+    "43": {
+      "team": "MIA",
+      "player": "Kayden McDonald",
+      "position": "DL",
+      "fit_score": 1.86,
+      "independent_grade": 59.42,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.189
+    },
+    "44": {
+      "team": "NYJ",
+      "player": "Dani Dennis-Sutton",
+      "position": "EDGE",
+      "fit_score": 1.696,
+      "independent_grade": 92.14,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.127
+    },
+    "45": {
+      "team": "BAL",
+      "player": "Keionte Scott",
+      "position": "CB",
+      "fit_score": 1.851,
+      "independent_grade": 99.93,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "46": {
+      "team": "TB",
+      "player": "C.J. Allen",
+      "position": "LB",
+      "fit_score": 1.863,
+      "independent_grade": 63.49,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.147
+    },
+    "47": {
+      "team": "IND",
+      "player": "Skyler Bell",
+      "position": "WR",
+      "fit_score": 1.731,
+      "independent_grade": 77.5,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.21
+    },
+    "48": {
+      "team": "ATL",
+      "player": "Gabe Jacas",
+      "position": "EDGE",
+      "fit_score": 1.838,
+      "independent_grade": 74.39,
+      "probability": 1.0,
+      "trade_down_p_structural": 0.126
+    },
+    "49": {
+      "team": "MIN",
+      "player": "Treydan Stukes",
+      "position": "CB",
+      "fit_score": 1.697,
+      "independent_grade": 99.78,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.196
+    },
+    "50": {
+      "team": "DET",
+      "player": "Keyron Crawford",
+      "position": "EDGE",
+      "fit_score": 1.48,
+      "independent_grade": 131.83,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "51": {
+      "team": "CAR",
+      "player": "Jeremiyah Love",
+      "position": "RB",
+      "fit_score": 1.708,
+      "independent_grade": -14.68,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "52": {
+      "team": "GB",
+      "player": "Christen Miller",
+      "position": "DL",
+      "fit_score": 1.739,
+      "independent_grade": 60.44,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.173
+    },
+    "53": {
+      "team": "PIT",
+      "player": "Carson Beck",
+      "position": "QB",
+      "fit_score": 2.068,
+      "independent_grade": 110.38,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.189
+    },
+    "54": {
+      "team": "PHI",
+      "player": "Kyle Louis",
+      "position": "LB",
+      "fit_score": 1.606,
+      "independent_grade": 50.98,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.25
+    },
+    "55": {
+      "team": "LAC",
+      "player": "Denzel Boston",
+      "position": "WR",
+      "fit_score": 1.775,
+      "independent_grade": 93.0,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.059
+    },
+    "56": {
+      "team": "JAX",
+      "player": "Peter Woods",
+      "position": "DL",
+      "fit_score": 1.651,
+      "independent_grade": 44.17,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "57": {
+      "team": "CHI",
+      "player": "Jalon Kilgore",
+      "position": "S",
+      "fit_score": 1.712,
+      "independent_grade": 55.67,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "58": {
+      "team": "SF",
+      "player": "Caleb Tiernan",
+      "position": "OT",
+      "fit_score": 1.908,
+      "independent_grade": 92.85,
+      "probability": 1.0,
+      "trade_down_p_structural": 0.136
+    },
+    "59": {
+      "team": "HOU",
+      "player": "Connor Lew",
+      "position": "IOL",
+      "fit_score": 1.698,
+      "independent_grade": 102.45,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.15
+    },
+    "60": {
+      "team": "CHI",
+      "player": "Bud Clark",
+      "position": "S",
+      "fit_score": 1.741,
+      "independent_grade": 103.23,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.157
+    },
+    "61": {
+      "team": "LAR",
+      "player": "Chris Brazzell",
+      "position": "WR",
+      "fit_score": 2.11,
+      "independent_grade": 99.71,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.399
+    },
+    "62": {
+      "team": "DEN",
+      "player": "Jadarian Price",
+      "position": "RB",
+      "fit_score": 2.871,
+      "independent_grade": 58.05,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.157
+    },
+    "63": {
+      "team": "NE",
+      "player": "Parker Brailsford",
+      "position": "IOL",
+      "fit_score": 1.479,
+      "independent_grade": 99.2,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "64": {
+      "team": "SEA",
+      "player": "Eli Stowers",
+      "position": "TE",
+      "fit_score": 1.199,
+      "independent_grade": 77.71,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.185
+    },
+    "65": {
+      "team": "ARI",
+      "player": "Derrick Moore",
+      "position": "EDGE",
+      "fit_score": 1.563,
+      "independent_grade": 137.15,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "66": {
+      "team": "TEN",
+      "player": "Zachariah Branch",
+      "position": "WR",
+      "fit_score": 1.536,
+      "independent_grade": 89.7,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.127
+    },
+    "67": {
+      "team": "LV",
+      "player": "Drew Allar",
+      "position": "QB",
+      "fit_score": 1.878,
+      "independent_grade": 123.76,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "68": {
+      "team": "PHI",
+      "player": "Zakee Wheatley",
+      "position": "S",
+      "fit_score": 1.509,
+      "independent_grade": 82.15,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "69": {
+      "team": "HOU",
+      "player": "A.J. Haulcy",
+      "position": "S",
+      "fit_score": 1.449,
+      "independent_grade": 97.65,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "70": {
+      "team": "CLE",
+      "player": "Jacob Rodriguez",
+      "position": "LB",
+      "fit_score": 1.576,
+      "independent_grade": 92.63,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.219
+    },
+    "71": {
+      "team": "WAS",
+      "player": "Chris McClellan",
+      "position": "DL",
+      "fit_score": 1.737,
+      "independent_grade": 92.91,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.157
+    },
+    "72": {
+      "team": "CIN",
+      "player": "Jake Golday",
+      "position": "LB",
+      "fit_score": 1.569,
+      "independent_grade": 93.47,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.069
+    },
+    "73": {
+      "team": "NO",
+      "player": "Germie Bernard",
+      "position": "WR",
+      "fit_score": 1.796,
+      "independent_grade": 81.29,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.058
+    },
+    "74": {
+      "team": "KC",
+      "player": "Chandler Rivers",
+      "position": "CB",
+      "fit_score": 1.524,
+      "independent_grade": 162.51,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.15
+    },
+    "75": {
+      "team": "MIA",
+      "player": "Garrett Nussmeier",
+      "position": "QB",
+      "fit_score": 1.688,
+      "independent_grade": 104.24,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "76": {
+      "team": "PIT",
+      "player": "Cole Payton",
+      "position": "QB",
+      "fit_score": 1.866,
+      "independent_grade": 160.99,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.189
+    },
+    "77": {
+      "team": "TB",
+      "player": "Keyshaun Elliott",
+      "position": "LB",
+      "fit_score": 1.544,
+      "independent_grade": 90.09,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.147
+    },
+    "78": {
+      "team": "IND",
+      "player": "Chris Bell",
+      "position": "WR",
+      "fit_score": 1.696,
+      "independent_grade": 94.53,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.21
+    },
+    "79": {
+      "team": "ATL",
+      "player": "Caden Curry",
+      "position": "EDGE",
+      "fit_score": 1.398,
+      "independent_grade": 158.6,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.126
+    },
+    "80": {
+      "team": "BAL",
+      "player": "Brandon Cisse",
+      "position": "CB",
+      "fit_score": 1.816,
+      "independent_grade": 105.75,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "81": {
+      "team": "JAX",
+      "player": "Gracen Halton",
+      "position": "DL",
+      "fit_score": 1.39,
+      "independent_grade": 109.71,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "82": {
+      "team": "MIN",
+      "player": "D'angelo Ponds",
+      "position": "CB",
+      "fit_score": 1.618,
+      "independent_grade": 114.81,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.196
+    },
+    "83": {
+      "team": "CAR",
+      "player": "Logan Fano",
+      "position": "EDGE",
+      "fit_score": 1.373,
+      "independent_grade": 148.52,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "84": {
+      "team": "GB",
+      "player": "Rayshaun Benny",
+      "position": "DL",
+      "fit_score": 1.291,
+      "independent_grade": 140.74,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.173
+    },
+    "85": {
+      "team": "PIT",
+      "player": "Joey Aguilar",
+      "position": "QB",
+      "fit_score": 1.816,
+      "independent_grade": 138.13,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "86": {
+      "team": "LAC",
+      "player": "Antonio Williams",
+      "position": "WR",
+      "fit_score": 1.612,
+      "independent_grade": 102.67,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.059
+    },
+    "87": {
+      "team": "MIA",
+      "player": "Miller Moss",
+      "position": "QB",
+      "fit_score": 1.344,
+      "independent_grade": 195.7,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "89": {
+      "team": "CHI",
+      "player": "Kamari Ramsey",
+      "position": "S",
+      "fit_score": 1.546,
+      "independent_grade": 119.41,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "90": {
+      "team": "MIA",
+      "player": "Taylen Green",
+      "position": "QB",
+      "fit_score": 1.483,
+      "independent_grade": 172.73,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "91": {
+      "team": "BUF",
+      "player": "Julian Neal",
+      "position": "CB",
+      "fit_score": 1.681,
+      "independent_grade": 167.3,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.136
+    },
+    "92": {
+      "team": "DAL",
+      "player": "Wesley Williams",
+      "position": "DL",
+      "fit_score": 1.942,
+      "independent_grade": 122.0,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.104
+    },
+    "93": {
+      "team": "LAR",
+      "player": "Malachi Fields",
+      "position": "WR",
+      "fit_score": 1.82,
+      "independent_grade": 148.61,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.399
+    },
+    "94": {
+      "team": "MIA",
+      "player": "Athan Kaliakmanis",
+      "position": "QB",
+      "fit_score": 1.447,
+      "independent_grade": 177.47,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "95": {
+      "team": "NE",
+      "player": "Jude Bowry",
+      "position": "OT",
+      "fit_score": 1.358,
+      "independent_grade": 145.99,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "96": {
+      "team": "SEA",
+      "player": "Logan Jones",
+      "position": "IOL",
+      "fit_score": 1.231,
+      "independent_grade": 159.06,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.185
+    },
+    "97": {
+      "team": "MIN",
+      "player": "Malik Muhammad",
+      "position": "CB",
+      "fit_score": 1.453,
+      "independent_grade": 146.36,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.196
+    },
+    "98": {
+      "team": "PHI",
+      "player": "Josiah Trotter",
+      "position": "LB",
+      "fit_score": 1.395,
+      "independent_grade": 91.32,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "99": {
+      "team": "PIT",
+      "player": "Diego Pavia",
+      "position": "QB",
+      "fit_score": 1.633,
+      "independent_grade": 173.26,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "100": {
+      "team": "JAX",
+      "player": "Emmett Johnson",
+      "position": "RB",
+      "fit_score": 1.252,
+      "independent_grade": 88.25,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "101": {
+      "team": "TEN",
+      "player": "Joshua Josephs",
+      "position": "EDGE",
+      "fit_score": 1.101,
+      "independent_grade": 148.78,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "102": {
+      "team": "LV",
+      "player": "Haynes King",
+      "position": "QB",
+      "fit_score": 1.384,
+      "independent_grade": 181.88,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "103": {
+      "team": "NYJ",
+      "player": "Max Klare",
+      "position": "TE",
+      "fit_score": 1.413,
+      "independent_grade": 89.54,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.127
+    },
+    "104": {
+      "team": "ARI",
+      "player": "Romello Height",
+      "position": "EDGE",
+      "fit_score": 1.249,
+      "independent_grade": 160.72,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "105": {
+      "team": "NYG",
+      "player": "Sam Hecht",
+      "position": "IOL",
+      "fit_score": 1.448,
+      "independent_grade": 162.03,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.199
+    },
+    "106": {
+      "team": "HOU",
+      "player": "Jaishawn Barham",
+      "position": "LB",
+      "fit_score": 1.175,
+      "independent_grade": 118.22,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "108": {
+      "team": "DEN",
+      "player": "Mike Washington Jr.",
+      "position": "RB",
+      "fit_score": 2.052,
+      "independent_grade": 109.36,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.157
+    },
+    "109": {
+      "team": "KC",
+      "player": "Davison Igbinosun",
+      "position": "CB",
+      "fit_score": 1.031,
+      "independent_grade": 169.64,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "110": {
+      "team": "CIN",
+      "player": "Lorenzo Styles Jr.",
+      "position": "CB",
+      "fit_score": 1.037,
+      "independent_grade": 170.37,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.069
+    },
+    "111": {
+      "team": "DEN",
+      "player": "Jonah Coleman",
+      "position": "RB",
+      "fit_score": 2.003,
+      "independent_grade": 135.96,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.157
+    },
+    "112": {
+      "team": "DAL",
+      "player": "Domonique Orange",
+      "position": "DL",
+      "fit_score": 1.324,
+      "independent_grade": 157.09,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.104
+    },
+    "113": {
+      "team": "IND",
+      "player": "Josh Cameron",
+      "position": "WR",
+      "fit_score": 1.039,
+      "independent_grade": 168.4,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.21
+    },
+    "114": {
+      "team": "PHI",
+      "player": "Louis Moore",
+      "position": "S",
+      "fit_score": 0.937,
+      "independent_grade": 195.5,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "115": {
+      "team": "BAL",
+      "player": "Mikail Kamara",
+      "position": "EDGE",
+      "fit_score": 1.15,
+      "independent_grade": 171.62,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "116": {
+      "team": "TB",
+      "player": "Taurean York",
+      "position": "LB",
+      "fit_score": 1.015,
+      "independent_grade": 173.61,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.147
+    },
+    "117": {
+      "team": "LV",
+      "player": "Cade Klubnik",
+      "position": "QB",
+      "fit_score": 1.22,
+      "independent_grade": 186.11,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "118": {
+      "team": "DET",
+      "player": "L.T. Overton",
+      "position": "EDGE",
+      "fit_score": 1.266,
+      "independent_grade": 169.41,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.25
+    },
+    "119": {
+      "team": "CAR",
+      "player": "Max Llewellyn",
+      "position": "EDGE",
+      "fit_score": 1.142,
+      "independent_grade": 163.62,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "120": {
+      "team": "GB",
+      "player": "Keith Abney II",
+      "position": "CB",
+      "fit_score": 1.144,
+      "independent_grade": 162.93,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.173
+    },
+    "121": {
+      "team": "PIT",
+      "player": "Joe Fagnano",
+      "position": "QB",
+      "fit_score": 1.366,
+      "independent_grade": 173.15,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "122": {
+      "team": "ATL",
+      "player": "Tyler Onyedim",
+      "position": "DL",
+      "fit_score": 1.188,
+      "independent_grade": 164.95,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.126
+    },
+    "123": {
+      "team": "LAC",
+      "player": "Ja'Kobi Lane",
+      "position": "WR",
+      "fit_score": 1.114,
+      "independent_grade": 188.25,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.059
+    },
+    "124": {
+      "team": "JAX",
+      "player": "Nick Singleton",
+      "position": "RB",
+      "fit_score": 0.992,
+      "independent_grade": 142.93,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "125": {
+      "team": "NE",
+      "player": "Travis Burke",
+      "position": "OT",
+      "fit_score": 1.067,
+      "independent_grade": 204.31,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "126": {
+      "team": "BUF",
+      "player": "Devin Moore",
+      "position": "CB",
+      "fit_score": 1.26,
+      "independent_grade": 172.25,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.136
+    },
+    "127": {
+      "team": "SF",
+      "player": "Aamil Wagner",
+      "position": "OT",
+      "fit_score": 1.138,
+      "independent_grade": 200.0,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.136
+    },
+    "128": {
+      "team": "DET",
+      "player": "Patrick Payton",
+      "position": "EDGE",
+      "fit_score": 1.134,
+      "independent_grade": 169.05,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "129": {
+      "team": "CHI",
+      "player": "Robert Spears-Jennings",
+      "position": "S",
+      "fit_score": 1.28,
+      "independent_grade": 168.24,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.157
+    },
+    "130": {
+      "team": "MIA",
+      "player": "Cyrus Allen",
+      "position": "WR",
+      "fit_score": 1.052,
+      "independent_grade": 189.71,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "131": {
+      "team": "NE",
+      "player": "Fernando Carmona",
+      "position": "IOL",
+      "fit_score": 1.039,
+      "independent_grade": 173.75,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.189
+    },
+    "132": {
+      "team": "NO",
+      "player": "Eric McAlister",
+      "position": "WR",
+      "fit_score": 1.068,
+      "independent_grade": 186.55,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.058
+    },
+    "133": {
+      "team": "SF",
+      "player": "Brian Parker II",
+      "position": "OT",
+      "fit_score": 1.2,
+      "independent_grade": 187.69,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.136
+    },
+    "134": {
+      "team": "LV",
+      "player": "Behren Morton",
+      "position": "QB",
+      "fit_score": 1.283,
+      "independent_grade": 188.96,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "135": {
+      "team": "PIT",
+      "player": "Luke Altmyer",
+      "position": "QB",
+      "fit_score": 1.312,
+      "independent_grade": 182.59,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "136": {
+      "team": "NO",
+      "player": "Colbie Young",
+      "position": "WR",
+      "fit_score": 1.013,
+      "independent_grade": 203.06,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.058
+    },
+    "137": {
+      "team": "PHI",
+      "player": "Dalton Johnson",
+      "position": "S",
+      "fit_score": 1.01,
+      "independent_grade": 189.54,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "138": {
+      "team": "SF",
+      "player": "Uar Bernard",
+      "position": "DL",
+      "fit_score": 1.043,
+      "independent_grade": 189.0,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.136
+    },
+    "139": {
+      "team": "SF",
+      "player": "Kage Casey",
+      "position": "OT",
+      "fit_score": 1.089,
+      "independent_grade": 209.77,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.136
+    },
+    "140": {
+      "team": "NYJ",
+      "player": "Justin Joly",
+      "position": "TE",
+      "fit_score": 1.226,
+      "independent_grade": 125.86,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.127
+    },
+    "141": {
+      "team": "HOU",
+      "player": "Micah Morris",
+      "position": "IOL",
+      "fit_score": 0.981,
+      "independent_grade": 169.59,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "142": {
+      "team": "TEN",
+      "player": "George Gumbs Jr.",
+      "position": "EDGE",
+      "fit_score": 0.976,
+      "independent_grade": 174.99,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "143": {
+      "team": "ARI",
+      "player": "Jack Pyburn",
+      "position": "EDGE",
+      "fit_score": 1.198,
+      "independent_grade": 169.81,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "144": {
+      "team": "TEN",
+      "player": "Michael Trigg",
+      "position": "TE",
+      "fit_score": 0.963,
+      "independent_grade": 124.57,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "145": {
+      "team": "NYG",
+      "player": "Logan Taylor",
+      "position": "IOL",
+      "fit_score": 1.351,
+      "independent_grade": 186.43,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.199
+    },
+    "146": {
+      "team": "CLE",
+      "player": "Markel Bell",
+      "position": "OT",
+      "fit_score": 1.136,
+      "independent_grade": 211.58,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.219
+    },
+    "147": {
+      "team": "WAS",
+      "player": "DeMonte Capehart",
+      "position": "DL",
+      "fit_score": 1.177,
+      "independent_grade": 166.78,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "148": {
+      "team": "KC",
+      "player": "Daylen Everette",
+      "position": "CB",
+      "fit_score": 0.994,
+      "independent_grade": 186.11,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "149": {
+      "team": "CLE",
+      "player": "Bryce Boettcher",
+      "position": "LB",
+      "fit_score": 0.968,
+      "independent_grade": 171.51,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.219
+    },
+    "150": {
+      "team": "NO",
+      "player": "De'Zhaun Stribling",
+      "position": "WR",
+      "fit_score": 1.117,
+      "independent_grade": 201.8,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.058
+    },
+    "151": {
+      "team": "MIA",
+      "player": "Mark Gronowski",
+      "position": "QB",
+      "fit_score": 1.114,
+      "independent_grade": 200.17,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "152": {
+      "team": "DAL",
+      "player": "Skyler Gill-Howard",
+      "position": "DL",
+      "fit_score": 1.241,
+      "independent_grade": 171.64,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.104
+    },
+    "153": {
+      "team": "GB",
+      "player": "Will Lee III",
+      "position": "CB",
+      "fit_score": 1.164,
+      "independent_grade": 181.31,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.173
+    },
+    "154": {
+      "team": "BAL",
+      "player": "Trey Moore",
+      "position": "EDGE",
+      "fit_score": 1.249,
+      "independent_grade": 176.27,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "155": {
+      "team": "TB",
+      "player": "Zach Durfee",
+      "position": "EDGE",
+      "fit_score": 0.95,
+      "independent_grade": 180.92,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.147
+    },
+    "156": {
+      "team": "IND",
+      "player": "Reggie Virgil",
+      "position": "WR",
+      "fit_score": 0.835,
+      "independent_grade": 201.72,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.21
+    },
+    "157": {
+      "team": "DET",
+      "player": "Tyreak Sapp",
+      "position": "EDGE",
+      "fit_score": 1.157,
+      "independent_grade": 180.58,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.25
+    },
+    "158": {
+      "team": "CAR",
+      "player": "Anthony Lucas",
+      "position": "EDGE",
+      "fit_score": 1.084,
+      "independent_grade": 173.87,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "159": {
+      "team": "CAR",
+      "player": "Cian Slone",
+      "position": "EDGE",
+      "fit_score": 0.943,
+      "independent_grade": 189.44,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "160": {
+      "team": "GB",
+      "player": "Bobby Jamison-Travis",
+      "position": "DL",
+      "fit_score": 1.085,
+      "independent_grade": 178.43,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.173
+    },
+    "161": {
+      "team": "PIT",
+      "player": "Jack Strand",
+      "position": "QB",
+      "fit_score": 1.232,
+      "independent_grade": 190.14,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "162": {
+      "team": "BAL",
+      "player": "Domani Jackson",
+      "position": "CB",
+      "fit_score": 1.288,
+      "independent_grade": 182.71,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "163": {
+      "team": "MIN",
+      "player": "Ephesians Prysock",
+      "position": "CB",
+      "fit_score": 1.095,
+      "independent_grade": 180.62,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.196
+    },
+    "164": {
+      "team": "JAX",
+      "player": "Zane Durant",
+      "position": "DL",
+      "fit_score": 0.984,
+      "independent_grade": 174.69,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "165": {
+      "team": "BUF",
+      "player": "Latrell McCutchin",
+      "position": "CB",
+      "fit_score": 1.27,
+      "independent_grade": 185.31,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.136
+    },
+    "166": {
+      "team": "JAX",
+      "player": "Cole Brevard",
+      "position": "DL",
+      "fit_score": 0.906,
+      "independent_grade": 185.71,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "167": {
+      "team": "HOU",
+      "player": "Jake Slaughter",
+      "position": "IOL",
+      "fit_score": 0.967,
+      "independent_grade": 172.43,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "168": {
+      "team": "BUF",
+      "player": "Andre Fuller",
+      "position": "CB",
+      "fit_score": 1.251,
+      "independent_grade": 193.87,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.136
+    },
+    "169": {
+      "team": "KC",
+      "player": "Toriano Pride",
+      "position": "CB",
+      "fit_score": 0.948,
+      "independent_grade": 187.23,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "170": {
+      "team": "DEN",
+      "player": "Kaelon Black",
+      "position": "RB",
+      "fit_score": 1.613,
+      "independent_grade": 203.68,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.157
+    },
+    "171": {
+      "team": "NE",
+      "player": "Keagen Trost",
+      "position": "IOL",
+      "fit_score": 0.968,
+      "independent_grade": 177.77,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "172": {
+      "team": "NO",
+      "player": "Mason Reiger",
+      "position": "EDGE",
+      "fit_score": 0.926,
+      "independent_grade": 178.77,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.058
+    },
+    "173": {
+      "team": "BAL",
+      "player": "Nyjalik Kelly",
+      "position": "EDGE",
+      "fit_score": 1.159,
+      "independent_grade": 178.07,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "174": {
+      "team": "BAL",
+      "player": "Ethan Burke",
+      "position": "EDGE",
+      "fit_score": 1.17,
+      "independent_grade": 181.43,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "175": {
+      "team": "LV",
+      "player": "Maalik Murphy",
+      "position": "QB",
+      "fit_score": 1.24,
+      "independent_grade": 195.7,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "176": {
+      "team": "KC",
+      "player": "Charles Demmings",
+      "position": "CB",
+      "fit_score": 0.947,
+      "independent_grade": 188.84,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.15
+    },
+    "177": {
+      "team": "DAL",
+      "player": "Anterio Thompson",
+      "position": "DL",
+      "fit_score": 1.348,
+      "independent_grade": 182.01,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.104
+    },
+    "178": {
+      "team": "PHI",
+      "player": "Aaron Graves",
+      "position": "DL",
+      "fit_score": 0.837,
+      "independent_grade": 182.3,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "179": {
+      "team": "NYJ",
+      "player": "Joe Royer",
+      "position": "TE",
+      "fit_score": 1.107,
+      "independent_grade": 133.59,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "180": {
+      "team": "DAL",
+      "player": "Brandon Cleveland",
+      "position": "DL",
+      "fit_score": 1.024,
+      "independent_grade": 182.4,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.104
+    },
+    "181": {
+      "team": "DET",
+      "player": "Michael Heldman",
+      "position": "EDGE",
+      "fit_score": 0.978,
+      "independent_grade": 186.43,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "182": {
+      "team": "BUF",
+      "player": "Dontay Corleone",
+      "position": "DL",
+      "fit_score": 0.901,
+      "independent_grade": 188.43,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.136
+    },
+    "183": {
+      "team": "ARI",
+      "player": "Derion Gullette",
+      "position": "EDGE",
+      "fit_score": 0.886,
+      "independent_grade": 190.02,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "184": {
+      "team": "TEN",
+      "player": "Nadame Tucker",
+      "position": "EDGE",
+      "fit_score": 0.951,
+      "independent_grade": 179.41,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "185": {
+      "team": "LV",
+      "player": "Jalon Daniels",
+      "position": "QB",
+      "fit_score": 1.036,
+      "independent_grade": 189.97,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "186": {
+      "team": "NYG",
+      "player": "Jaeden Roberts",
+      "position": "IOL",
+      "fit_score": 1.102,
+      "independent_grade": 186.07,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.199
+    },
+    "187": {
+      "team": "WAS",
+      "player": "Eli Raridon",
+      "position": "TE",
+      "fit_score": 0.865,
+      "independent_grade": 177.99,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "188": {
+      "team": "SEA",
+      "player": "Beau Stephens",
+      "position": "IOL",
+      "fit_score": 0.897,
+      "independent_grade": 175.88,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.185
+    },
+    "189": {
+      "team": "CIN",
+      "player": "Genesis Smith",
+      "position": "S",
+      "fit_score": 0.82,
+      "independent_grade": 171.53,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.069
+    },
+    "190": {
+      "team": "NO",
+      "player": "Tyren Montgomery",
+      "position": "WR",
+      "fit_score": 0.888,
+      "independent_grade": 201.34,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.058
+    },
+    "191": {
+      "team": "NE",
+      "player": "Pat Coogan",
+      "position": "IOL",
+      "fit_score": 0.858,
+      "independent_grade": 177.66,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "192": {
+      "team": "NYG",
+      "player": "Febechi Nwaiwu",
+      "position": "IOL",
+      "fit_score": 1.189,
+      "independent_grade": 179.5,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.199
+    },
+    "193": {
+      "team": "NYG",
+      "player": "Jaren Kump",
+      "position": "IOL",
+      "fit_score": 1.059,
+      "independent_grade": 182.83,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.199
+    },
+    "194": {
+      "team": "TEN",
+      "player": "Bryan Thomas Jr.",
+      "position": "EDGE",
+      "fit_score": 0.841,
+      "independent_grade": 187.55,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.127
+    },
+    "195": {
+      "team": "TB",
+      "player": "Dayon Hayes",
+      "position": "EDGE",
+      "fit_score": 0.848,
+      "independent_grade": 188.25,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.147
+    },
+    "196": {
+      "team": "MIN",
+      "player": "Devonta Smith",
+      "position": "CB",
+      "fit_score": 0.927,
+      "independent_grade": 194.99,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.196
+    },
+    "197": {
+      "team": "PHI",
+      "player": "VJ Payne",
+      "position": "S",
+      "fit_score": 0.867,
+      "independent_grade": 183.78,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "198": {
+      "team": "NE",
+      "player": "Ar'maj Reed-Adams",
+      "position": "IOL",
+      "fit_score": 0.836,
+      "independent_grade": 181.95,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "199": {
+      "team": "CIN",
+      "player": "Aiden Fisher",
+      "position": "LB",
+      "fit_score": 0.837,
+      "independent_grade": 180.8,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.069
+    },
+    "200": {
+      "team": "CAR",
+      "player": "Jayden Virgin-Morgan",
+      "position": "EDGE",
+      "fit_score": 0.873,
+      "independent_grade": 197.73,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "201": {
+      "team": "GB",
+      "player": "Avery Smith",
+      "position": "CB",
+      "fit_score": 0.797,
+      "independent_grade": 212.67,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.173
+    },
+    "202": {
+      "team": "NE",
+      "player": "Anez Cooper",
+      "position": "IOL",
+      "fit_score": 0.852,
+      "independent_grade": 178.78,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "203": {
+      "team": "JAX",
+      "player": "David Blay",
+      "position": "DL",
+      "fit_score": 0.757,
+      "independent_grade": 192.95,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "204": {
+      "team": "LAC",
+      "player": "Malik Benson",
+      "position": "WR",
+      "fit_score": 0.799,
+      "independent_grade": 202.55,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.059
+    },
+    "205": {
+      "team": "DET",
+      "player": "Tyre West",
+      "position": "EDGE",
+      "fit_score": 0.974,
+      "independent_grade": 188.39,
+      "probability": 0.8,
+      "trade_down_p_structural": 0.25
+    },
+    "206": {
+      "team": "CLE",
+      "player": "Matt Gulbin",
+      "position": "IOL",
+      "fit_score": 0.782,
+      "independent_grade": 181.42,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.219
+    },
+    "207": {
+      "team": "LAR",
+      "player": "Ayden Williams",
+      "position": "WR",
+      "fit_score": 0.864,
+      "independent_grade": 209.64,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.399
+    },
+    "208": {
+      "team": "LV",
+      "player": "Jake Retzlaff",
+      "position": "QB",
+      "fit_score": 1.074,
+      "independent_grade": 193.22,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "209": {
+      "team": "WAS",
+      "player": "Damonic Williams",
+      "position": "DL",
+      "fit_score": 0.955,
+      "independent_grade": 183.23,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "210": {
+      "team": "KC",
+      "player": "TJ Hall",
+      "position": "CB",
+      "fit_score": 0.794,
+      "independent_grade": 198.59,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.15
+    },
+    "211": {
+      "team": "BAL",
+      "player": "Jackson Kuwatch",
+      "position": "EDGE",
+      "fit_score": 1.047,
+      "independent_grade": 199.19,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "212": {
+      "team": "NE",
+      "player": "Kendal Daniels",
+      "position": "S",
+      "fit_score": 0.8,
+      "independent_grade": 186.63,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "213": {
+      "team": "DET",
+      "player": "Jaybron Harvey",
+      "position": "EDGE",
+      "fit_score": 0.963,
+      "independent_grade": 188.5,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.25
+    },
+    "214": {
+      "team": "IND",
+      "player": "Lewis Bond",
+      "position": "WR",
+      "fit_score": 0.77,
+      "independent_grade": 205.03,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.21
+    },
+    "215": {
+      "team": "ATL",
+      "player": "Aidan Hubbard",
+      "position": "EDGE",
+      "fit_score": 0.94,
+      "independent_grade": 186.06,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.126
+    },
+    "216": {
+      "team": "PIT",
+      "player": "Thomas Castellanos",
+      "position": "QB",
+      "fit_score": 1.085,
+      "independent_grade": 196.62,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "217": {
+      "team": "ARI",
+      "player": "Eric O'Neill",
+      "position": "EDGE",
+      "fit_score": 0.988,
+      "independent_grade": 189.99,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "218": {
+      "team": "DAL",
+      "player": "Tim Keenan III",
+      "position": "DL",
+      "fit_score": 1.024,
+      "independent_grade": 182.38,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.104
+    },
+    "219": {
+      "team": "LV",
+      "player": "Kaidon Salter",
+      "position": "QB",
+      "fit_score": 0.923,
+      "independent_grade": 207.39,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "220": {
+      "team": "BUF",
+      "player": "Jaylon Guilbeau",
+      "position": "CB",
+      "fit_score": 0.835,
+      "independent_grade": 204.48,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.136
+    },
+    "221": {
+      "team": "CIN",
+      "player": "Jimmy Rolder",
+      "position": "LB",
+      "fit_score": 0.904,
+      "independent_grade": 181.96,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.069
+    },
+    "222": {
+      "team": "DET",
+      "player": "Jameial Lyons",
+      "position": "EDGE",
+      "fit_score": 0.829,
+      "independent_grade": 190.99,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.25
+    },
+    "223": {
+      "team": "WAS",
+      "player": "Jordan van den Berg",
+      "position": "DL",
+      "fit_score": 0.976,
+      "independent_grade": 187.72,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "224": {
+      "team": "PIT",
+      "player": "Grayson Loftis",
+      "position": "QB",
+      "fit_score": 1.031,
+      "independent_grade": 204.82,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "225": {
+      "team": "TEN",
+      "player": "Vincent Anthony Jr.",
+      "position": "EDGE",
+      "fit_score": 0.824,
+      "independent_grade": 182.61,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "226": {
+      "team": "CIN",
+      "player": "Collin Wright",
+      "position": "CB",
+      "fit_score": 0.873,
+      "independent_grade": 199.56,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.069
+    },
+    "227": {
+      "team": "MIA",
+      "player": "Deven Eastern",
+      "position": "DL",
+      "fit_score": 0.818,
+      "independent_grade": 184.84,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "228": {
+      "team": "NYJ",
+      "player": "Khordae Sydnor",
+      "position": "EDGE",
+      "fit_score": 0.799,
+      "independent_grade": 190.19,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.127
+    },
+    "229": {
+      "team": "TB",
+      "player": "Deontae Lawson",
+      "position": "LB",
+      "fit_score": 0.832,
+      "independent_grade": 183.38,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.147
+    },
+    "230": {
+      "team": "PIT",
+      "player": "Tyler Van Dyke",
+      "position": "QB",
+      "fit_score": 1.031,
+      "independent_grade": 204.82,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.189
+    },
+    "231": {
+      "team": "ATL",
+      "player": "Gabriel Rubio",
+      "position": "DL",
+      "fit_score": 0.833,
+      "independent_grade": 192.09,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.126
+    },
+    "232": {
+      "team": "LAR",
+      "player": "Deion Burks",
+      "position": "WR",
+      "fit_score": 0.934,
+      "independent_grade": 208.04,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.399
+    },
+    "233": {
+      "team": "JAX",
+      "player": "Jeffrey M'ba",
+      "position": "DL",
+      "fit_score": 0.754,
+      "independent_grade": 193.61,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "234": {
+      "team": "MIN",
+      "player": "Jack Kelly",
+      "position": "LB",
+      "fit_score": 0.82,
+      "independent_grade": 186.15,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.196
+    },
+    "235": {
+      "team": "MIN",
+      "player": "Tyreek Chappell",
+      "position": "CB",
+      "fit_score": 0.842,
+      "independent_grade": 208.03,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.196
+    },
+    "236": {
+      "team": "GB",
+      "player": "Kolbey Taylor",
+      "position": "CB",
+      "fit_score": 0.756,
+      "independent_grade": 208.84,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.173
+    },
+    "237": {
+      "team": "PIT",
+      "player": "Kyron Drones",
+      "position": "QB",
+      "fit_score": 1.029,
+      "independent_grade": 205.22,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "238": {
+      "team": "MIA",
+      "player": "Jalen Stroman",
+      "position": "S",
+      "fit_score": 0.811,
+      "independent_grade": 195.85,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "239": {
+      "team": "CHI",
+      "player": "Cole Wisniewski",
+      "position": "S",
+      "fit_score": 0.978,
+      "independent_grade": 191.59,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.157
+    },
+    "240": {
+      "team": "JAX",
+      "player": "Albert Regis",
+      "position": "DL",
+      "fit_score": 0.835,
+      "independent_grade": 184.3,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.139
+    },
+    "241": {
+      "team": "CHI",
+      "player": "Jakobe Thomas",
+      "position": "S",
+      "fit_score": 1.0,
+      "independent_grade": 189.35,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "242": {
+      "team": "NYJ",
+      "player": "Lake McRee",
+      "position": "TE",
+      "fit_score": 0.8,
+      "independent_grade": 188.5,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.127
+    },
+    "243": {
+      "team": "HOU",
+      "player": "Tomas Rimac",
+      "position": "IOL",
+      "fit_score": 0.873,
+      "independent_grade": 179.68,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.15
+    },
+    "244": {
+      "team": "MIN",
+      "player": "Jalen Huskey",
+      "position": "CB",
+      "fit_score": 0.853,
+      "independent_grade": 199.45,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.196
+    },
+    "245": {
+      "team": "JAX",
+      "player": "Bernard Gooden",
+      "position": "DL",
+      "fit_score": 0.74,
+      "independent_grade": 196.57,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.139
+    },
+    "246": {
+      "team": "DEN",
+      "player": "Kaytron Allen",
+      "position": "RB",
+      "fit_score": 1.3,
+      "independent_grade": 187.49,
+      "probability": 0.6,
+      "trade_down_p_structural": 0.157
+    },
+    "247": {
+      "team": "NE",
+      "player": "Nick Dawkins",
+      "position": "IOL",
+      "fit_score": 0.775,
+      "independent_grade": 184.68,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "248": {
+      "team": "CLE",
+      "player": "Owen Heinecke",
+      "position": "LB",
+      "fit_score": 0.809,
+      "independent_grade": 186.29,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.219
+    },
+    "249": {
+      "team": "IND",
+      "player": "Ethan Hurkett",
+      "position": "EDGE",
+      "fit_score": 0.685,
+      "independent_grade": 191.48,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.21
+    },
+    "250": {
+      "team": "BAL",
+      "player": "Joshua Weru",
+      "position": "EDGE",
+      "fit_score": 0.993,
+      "independent_grade": 191.92,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "251": {
+      "team": "LAR",
+      "player": "Max Tomzcak",
+      "position": "WR",
+      "fit_score": 0.968,
+      "independent_grade": 210.22,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.399
+    },
+    "252": {
+      "team": "LAR",
+      "player": "Dane Key",
+      "position": "WR",
+      "fit_score": 0.964,
+      "independent_grade": 210.9,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.399
+    },
+    "253": {
+      "team": "BAL",
+      "player": "TJ Guy",
+      "position": "EDGE",
+      "fit_score": 1.048,
+      "independent_grade": 194.01,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.189
+    },
+    "254": {
+      "team": "IND",
+      "player": "E.J. Williams",
+      "position": "WR",
+      "fit_score": 0.687,
+      "independent_grade": 212.8,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.21
+    },
+    "255": {
+      "team": "GB",
+      "player": "Thaddeus Dixon",
+      "position": "CB",
+      "fit_score": 0.839,
+      "independent_grade": 200.74,
+      "probability": 0.2,
+      "trade_down_p_structural": 0.173
+    },
+    "256": {
+      "team": "DEN",
+      "player": "Chip Trayanum",
+      "position": "RB",
+      "fit_score": 1.247,
+      "independent_grade": 204.46,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    },
+    "257": {
+      "team": "DEN",
+      "player": "Jaydn Ott",
+      "position": "RB",
+      "fit_score": 1.223,
+      "independent_grade": 207.81,
+      "probability": 0.4,
+      "trade_down_p_structural": 0.157
+    }
+  }
+}

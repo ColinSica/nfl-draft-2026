@@ -22,6 +22,7 @@ models/*.pkl
 # dashboard serves so the cloud deploy works without re-running the
 # entire pipeline.
 data/processed/*
+# Legacy benchmark outputs (kept for Benchmark mode)
 !data/processed/monte_carlo_2026_v12.csv
 !data/processed/model_reasoning_2026.json
 !data/processed/predictions_2026.csv
@@ -30,6 +31,11 @@ data/processed/*
 !data/processed/team_context_2026.csv
 !data/processed/team_needs_2026.csv
 !data/processed/gm_positional_allocation.csv
+# Independent pipeline outputs (the product default — MUST ship to server)
+!data/processed/monte_carlo_2026_independent.csv
+!data/processed/model_reasoning_2026_independent.json
+!data/processed/predictions_2026_independent.csv
+!data/processed/predictions_2026_independent_picks.csv
 
 # Frontend node_modules / build artifacts (build is re-run on deploy)
 frontend/node_modules/
