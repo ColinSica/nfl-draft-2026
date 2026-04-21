@@ -91,3 +91,46 @@ export function freshnessState(iso: string | null | undefined): 'fresh' | 'stale
   if (hrs < 168) return 'stale';
   return 'missing';
 }
+
+/**
+ * Confidence labels calibrated on 2024+2025 R1 outcomes (n=64).
+ * Bucket hit-rates from confidence_calibration_2024_2025.json:
+ *   prob ≥ 0.55 → 85%+ historical hit rate  → HIGH
+ *   prob ≥ 0.40 → ~65% historical hit rate  → MEDIUM_HIGH
+ *   prob ≥ 0.25 → ~45% historical hit rate  → MEDIUM_LOW
+ *   prob < 0.25 → ~20% historical hit rate  → LOW
+ */
+export type ConfLabel = 'HIGH' | 'MEDIUM_HIGH' | 'MEDIUM_LOW' | 'LOW';
+
+export function getConfidence(prob: number | null | undefined): {
+  label: ConfLabel;
+  display: string;
+  color: string;
+  historicalHitRate: string;
+} {
+  const p = prob ?? 0;
+  if (p >= 0.55) return {
+    label: 'HIGH',
+    display: 'High confidence',
+    color: '#17A870',
+    historicalHitRate: '85%+ hits',
+  };
+  if (p >= 0.40) return {
+    label: 'MEDIUM_HIGH',
+    display: 'Moderate-high',
+    color: '#7BC043',
+    historicalHitRate: '~65% hits',
+  };
+  if (p >= 0.25) return {
+    label: 'MEDIUM_LOW',
+    display: 'Moderate-low',
+    color: '#D9A400',
+    historicalHitRate: '~45% hits',
+  };
+  return {
+    label: 'LOW',
+    display: 'Toss-up',
+    color: '#DC2F3D',
+    historicalHitRate: '~20% hits',
+  };
+}

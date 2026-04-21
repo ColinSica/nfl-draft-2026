@@ -45,7 +45,7 @@ export function Home() {
         probability: pri?.probability ?? null,
         consensusRank: pri?.consensus_rank ?? null,
         grade: null,
-        confidence: pri ? (pri.probability >= 0.6 ? 'HIGH' : pri.probability >= 0.35 ? 'MEDIUM' : 'LOW') : null,
+        confidence: null, // PickCard derives calibrated label from probability
         whySummary: modelReasoning?.reasoning_summary
           ?? (pri ? buildWhyHint(pri.player, pri.position, pri.probability) : 'Awaiting latest simulation.'),
         accent: meta_.accent,

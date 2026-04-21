@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import { displayNum, displayValue } from '../lib/display';
+import { displayNum, displayValue, getConfidence, type ConfLabel } from '../lib/display';
 import { teamColor } from '../lib/teamColors';
 
 export type PickData = {
@@ -16,14 +16,15 @@ export type PickData = {
   consensusRank?: number | null;
   whySummary?: string | null;
   whyDetail?: ReactNode | null;
-  confidence?: 'HIGH' | 'MEDIUM' | 'LOW' | null;
+  confidence?: ConfLabel | 'HIGH' | 'MEDIUM' | 'LOW' | null;
   accent?: string;
 };
 
-const conf: Record<string, { color: string; label: string }> = {
-  HIGH:   { color: '#17A870', label: 'High confidence' },
-  MEDIUM: { color: '#D9A400', label: 'Medium confidence' },
-  LOW:    { color: '#DC2F3D', label: 'Low confidence' },
+// Legacy aliases kept for back-compat with any call sites still passing old labels
+const LEGACY_TO_NEW: Record<string, ConfLabel> = {
+  HIGH:   'HIGH',
+  MEDIUM: 'MEDIUM_HIGH',
+  LOW:    'LOW',
 };
 
 export function PickCard({ data, expanded: initialExpanded = false }: {
@@ -35,7 +36,17 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
   const tc = teamColor(data.team);
   const prob = data.probability ?? null;
   const cons = data.consensusRank ?? null;
-  const c = data.confidence ? conf[data.confidence] : null;
+  // Prefer prob-based calibrated label. Fall back to explicit confidence prop (mapped via legacy).
+  const c = prob !== null
+    ? getConfidence(prob)
+    : (data.confidence
+        ? (() => {
+            const key = LEGACY_TO_NEW[data.confidence as string] ?? (data.confidence as ConfLabel);
+            return getConfidence(
+              key === 'HIGH' ? 0.7 : key === 'MEDIUM_HIGH' ? 0.45 : key === 'MEDIUM_LOW' ? 0.3 : 0.15
+            );
+          })()
+        : null);
 
   const style: React.CSSProperties = {
     ['--team-primary' as any]: tc.primary,
@@ -148,9 +159,16 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
               </span>
             )}
             {c && (
-              <span className="inline-flex items-center gap-1.5 ml-auto" style={{ color: c.color }}>
+              <span
+                className="inline-flex items-center gap-1.5 ml-auto"
+                style={{ color: c.color }}
+                title={`Calibrated against 2024+2025 R1 outcomes — ${c.historicalHitRate}`}
+              >
                 <span className="w-1.5 h-1.5 rounded-full" style={{ background: c.color }} />
-                <span className="caps-tight">{c.label}</span>
+                <span className="caps-tight">{c.display}</span>
+                <span className="text-[0.6rem] text-ink-soft/60 font-normal normal-case tracking-normal">
+                  ({c.historicalHitRate})
+                </span>
               </span>
             )}
           </div>

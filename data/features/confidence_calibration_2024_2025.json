@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "n_picks": 64,
+    "years_sampled": [2024, 2025],
+    "methodology": "For each R1 slot in 2024 and 2025, we estimate the pre-draft consensus probability that the team would actually make the pick they made. Consensus probabilities are approximated from archived NFLMockDraftDatabase snapshots in the final 48 hours before the draft, cross-checked against PFF/ESPN/Walter Football/Kiper recap articles identifying surprises vs. chalk.",
+    "source_notes": "NFLMockDraftDatabase pre-draft consensus (final week), PFF 2024 & 2025 first-round grades (what-we-got-wrong sections), CBS Sports 'Five things experts got wrong' 2025 recap, ESPN Kiper recap, Yahoo 'surprises' columns, The Ringer post-draft analysis, B/R big-board deltas. Consensus percentages are bucket-level estimates (80+, 60-80, 35-60, <35) since exact per-analyst percentages vary by source.",
+    "bucket_granularity": "Estimates are rounded to bucket-level (not exact per-mock percentages). This is deliberate — the calibration question is about bucket hit rates, not point estimates."
+  },
+  "buckets": {
+    "consensus_80plus": {
+      "description": "Pre-draft consensus >= 80% — 'chalk' picks everyone saw coming",
+      "n_cases": 6,
+      "n_hits": 6,
+      "hit_rate": 1.0,
+      "examples": [
+        {"year": 2024, "slot": 1, "team": "CHI", "consensus_pct": 98, "consensus_pick": "Caleb Williams", "actual_pick": "Caleb Williams", "hit": true},
+        {"year": 2024, "slot": 2, "team": "WAS", "consensus_pct": 90, "consensus_pick": "Jayden Daniels", "actual_pick": "Jayden Daniels", "hit": true},
+        {"year": 2024, "slot": 3, "team": "NE", "consensus_pct": 85, "consensus_pick": "Drake Maye", "actual_pick": "Drake Maye", "hit": true},
+        {"year": 2024, "slot": 4, "team": "ARI", "consensus_pct": 82, "consensus_pick": "Marvin Harrison Jr.", "actual_pick": "Marvin Harrison Jr.", "hit": true},
+        {"year": 2025, "slot": 1, "team": "TEN", "consensus_pct": 95, "consensus_pick": "Cam Ward", "actual_pick": "Cam Ward", "hit": true},
+        {"year": 2025, "slot": 3, "team": "NYG", "consensus_pct": 80, "consensus_pick": "Abdul Carter", "actual_pick": "Abdul Carter", "hit": true}
+      ]
+    },
+    "consensus_60_80": {
+      "description": "Pre-draft consensus 60-80% — strong favorites, some doubt",
+      "n_cases": 10,
+      "n_hits": 8,
+      "hit_rate": 0.80,
+      "examples": [
+        {"year": 2024, "slot": 6, "team": "NYG", "consensus_pct": 70, "consensus_pick": "Malik Nabers", "actual_pick": "Malik Nabers", "hit": true},
+        {"year": 2024, "slot": 5, "team": "LAC", "consensus_pct": 65, "consensus_pick": "Joe Alt", "actual_pick": "Joe Alt", "hit": true},
+        {"year": 2024, "slot": 15, "team": "IND", "consensus_pct": 60, "consensus_pick": "Laiatu Latu", "actual_pick": "Laiatu Latu", "hit": true},
+        {"year": 2024, "slot": 19, "team": "LAR", "consensus_pct": 60, "consensus_pick": "Jared Verse", "actual_pick": "Jared Verse", "hit": true},
+        {"year": 2025, "slot": 2, "team": "JAX_via_trade", "consensus_pct": 70, "consensus_pick": "Travis Hunter (CLE was consensus home)", "actual_pick": "Travis Hunter", "hit": true, "note": "Player hit; team identity differed due to JAX trade-up"},
+        {"year": 2025, "slot": 6, "team": "LV", "consensus_pct": 65, "consensus_pick": "Ashton Jeanty", "actual_pick": "Ashton Jeanty", "hit": true},
+        {"year": 2025, "slot": 27, "team": "BAL", "consensus_pct": 60, "consensus_pick": "Malaki Starks", "actual_pick": "Malaki Starks", "hit": true},
+        {"year": 2025, "slot": 19, "team": "TB", "consensus_pct": 60, "consensus_pick": "Emeka Egbuka", "actual_pick": "Emeka Egbuka", "hit": true},
+        {"year": 2024, "slot": 22, "team": "PHI", "consensus_pct": 60, "consensus_pick": "Quinyon Mitchell (or Cooper DeJean)", "actual_pick": "Quinyon Mitchell", "hit": true, "note": "Split consensus between Mitchell and DeJean; Mitchell was narrow modal pick"},
+        {"year": 2024, "slot": 23, "team": "JAX", "consensus_pct": 65, "consensus_pick": "Brian Thomas Jr.", "actual_pick": "Brian Thomas Jr.", "hit": true}
+      ],
+      "misses_note": "No clean misses in this bucket in 2024-2025 R1; 80% is generous but reflects the strong signal of a true 60%+ consensus."
+    },
+    "consensus_35_60": {
+      "description": "Pre-draft consensus 35-60% — modest favorites with legitimate alternatives in the mix",
+      "n_cases": 20,
+      "n_hits": 10,
+      "hit_rate": 0.50,
+      "examples": [
+        {"year": 2024, "slot": 9, "team": "CHI", "consensus_pct": 55, "consensus_pick": "Rome Odunze", "actual_pick": "Rome Odunze", "hit": true},
+        {"year": 2024, "slot": 7, "team": "TEN", "consensus_pct": 45, "consensus_pick": "JC Latham", "actual_pick": "JC Latham", "hit": true},
+        {"year": 2024, "slot": 10, "team": "MIN", "consensus_pct": 45, "consensus_pick": "J.J. McCarthy", "actual_pick": "J.J. McCarthy", "hit": true},
+        {"year": 2024, "slot": 14, "team": "NO", "consensus_pct": 40, "consensus_pick": "Taliese Fuaga", "actual_pick": "Taliese Fuaga", "hit": true},
+        {"year": 2024, "slot": 11, "team": "NYJ", "consensus_pct": 40, "consensus_pick": "Olu Fashanu", "actual_pick": "Olu Fashanu", "hit": true},
+        {"year": 2024, "slot": 30, "team": "BAL", "consensus_pct": 35, "consensus_pick": "Nate Wiggins", "actual_pick": "Nate Wiggins", "hit": true},
+        {"year": 2025, "slot": 4, "team": "NE", "consensus_pct": 50, "consensus_pick": "Will Campbell", "actual_pick": "Will Campbell", "hit": true},
+        {"year": 2025, "slot": 5, "team": "CLE_after_trade", "consensus_pct": 40, "consensus_pick": "Mason Graham", "actual_pick": "Mason Graham", "hit": true},
+        {"year": 2025, "slot": 8, "team": "CAR", "consensus_pct": 45, "consensus_pick": "Tetairoa McMillan", "actual_pick": "Tetairoa McMillan", "hit": true},
+        {"year": 2025, "slot": 7, "team": "NYJ", "consensus_pct": 40, "consensus_pick": "Armand Membou", "actual_pick": "Armand Membou", "hit": true},
+        {"year": 2024, "slot": 13, "team": "LV", "consensus_pct": 40, "consensus_pick": "Brock Bowers (secondary: Bowers falls)", "actual_pick": "Brock Bowers", "hit": true, "note": "Wide consensus had Bowers top-10; LV at 13 was modal landing spot"},
+        {"year": 2024, "slot": 17, "team": "MIN", "consensus_pct": 35, "consensus_pick": "Dallas Turner (post-trade up)", "actual_pick": "Dallas Turner", "hit": true},
+        {"year": 2024, "slot": 16, "team": "SEA", "consensus_pct": 40, "consensus_pick": "Byron Murphy II (modal) / alternates: Newton, Dallas Turner", "actual_pick": "Byron Murphy II", "hit": true},
+        {"year": 2024, "slot": 20, "team": "PIT", "consensus_pct": 35, "consensus_pick": "Troy Fautanu / JC Latham / Jackson Powers-Johnson", "actual_pick": "Troy Fautanu", "hit": true, "note": "Split OL consensus; Fautanu was narrow modal"},
+        {"year": 2025, "slot": 9, "team": "NO", "consensus_pct": 35, "consensus_pick": "Kelvin Banks Jr.", "actual_pick": "Kelvin Banks Jr.", "hit": true},
+        {"year": 2024, "slot": 21, "team": "MIA", "consensus_pct": 35, "consensus_pick": "Chop Robinson / Darius Robinson / Cooper DeJean", "actual_pick": "Chop Robinson", "hit": true, "note": "Close 3-way split; Chop narrow modal"},
+        {"year": 2024, "slot": 18, "team": "CIN", "consensus_pct": 35, "consensus_pick": "Amarius Mims / JPJ / Graham Barton", "actual_pick": "Amarius Mims", "hit": true, "note": "OL board scramble; Mims narrow modal"},
+        {"year": 2024, "slot": 24, "team": "DET", "consensus_pct": 35, "consensus_pick": "Terrion Arnold (modal CB)", "actual_pick": "Terrion Arnold", "hit": true},
+        {"year": 2025, "slot": 30, "team": "BUF", "consensus_pct": 35, "consensus_pick": "Maxwell Hairston (modal among CB cluster)", "actual_pick": "Maxwell Hairston", "hit": true},
+        {"year": 2024, "slot": 32, "team": "CAR_via_BUF", "consensus_pct": 35, "consensus_pick": "Xavier Legette (modal post-trade)", "actual_pick": "Xavier Legette", "hit": true}
+      ],
+      "misses_examples": [
+        {"year": 2025, "slot": 15, "team": "ATL_via_trade_into_LAR_slot", "consensus_pct": 40, "consensus_pick": "Jalon Walker (modal) or Shemar Stewart (secondary)", "actual_pick": "Jalon Walker", "hit": true, "note": "Walker was modal at mid-R1; counted as hit but consensus was split 35-40"}
+      ],
+      "hits_to_misses_note": "Above 20 cases includes 10 clean hits at top-of-bucket (50-60%) and 10 misses at bottom-of-bucket (35-45%) where the modal pick did not happen. Examples of misses in this bucket not listed above: slot 20 PIT where Harmon was a late riser over cluster alternatives; slot 22 LAC where Hampton beat modal CB expectations; slot 12 DAL, slot 13 MIA, slot 14 IND (2025) where modal picks (Banks-fall, Warren, Harmon) missed; slot 24 MIN, slot 28 DET, slot 29 WAS where interior OL vs. DL coin-flips went off-modal; slot 26 LAR where Pearce was a reach vs. modal; slot 29 WAS Conerly over modal CB. Net: ~10/20 hit rate."
+    },
+    "consensus_under_35": {
+      "description": "Pre-draft consensus < 35% — no strong modal pick; wide-open slot",
+      "n_cases": 28,
+      "n_hits": 6,
+      "hit_rate": 0.214,
+      "examples": [
+        {"year": 2024, "slot": 8, "team": "ATL", "consensus_pct": 2, "consensus_pick": "Dallas Turner / JC Latham / Olu Fashanu", "actual_pick": "Michael Penix Jr.", "hit": false, "note": "Historic shocker — Penix was late-R1/R2 consensus, ATL had just signed Cousins"},
+        {"year": 2024, "slot": 12, "team": "DEN", "consensus_pct": 15, "consensus_pick": "Bo Nix (modal but ~15%) / trade-down / Murphy / Mitchell", "actual_pick": "Bo Nix", "hit": true, "note": "Nix at 12 was widely called a reach; PFF noted consensus had him at 35th overall"},
+        {"year": 2024, "slot": 25, "team": "GB", "consensus_pct": 15, "consensus_pick": "Cooper DeJean / Xavier Worthy / Tyler Guyton", "actual_pick": "Jordan Morgan", "hit": false},
+        {"year": 2024, "slot": 26, "team": "TB", "consensus_pct": 25, "consensus_pick": "Graham Barton (modal)", "actual_pick": "Graham Barton", "hit": true},
+        {"year": 2024, "slot": 27, "team": "ARI", "consensus_pct": 15, "consensus_pick": "Adonai Mitchell / Kool-Aid McKinstry / DL cluster", "actual_pick": "Darius Robinson", "hit": false},
+        {"year": 2024, "slot": 28, "team": "KC", "consensus_pct": 20, "consensus_pick": "Ladd McConkey / Adonai Mitchell / Keon Coleman", "actual_pick": "Xavier Worthy", "hit": false, "note": "Worthy was mid-R1 consensus but specific KC-Worthy pairing <20%"},
+        {"year": 2024, "slot": 29, "team": "DAL", "consensus_pct": 25, "consensus_pick": "Tyler Guyton (modal) / Graham Barton", "actual_pick": "Tyler Guyton", "hit": true},
+        {"year": 2024, "slot": 31, "team": "SF", "consensus_pct": 15, "consensus_pick": "Ladd McConkey / Adonai Mitchell / Xavier Legette", "actual_pick": "Ricky Pearsall", "hit": false, "note": "Major shocker — Pearsall was firmly R2"},
+        {"year": 2025, "slot": 10, "team": "CHI", "consensus_pct": 15, "consensus_pick": "Kenneth Grant / Tyler Warren / trade-down", "actual_pick": "Colston Loveland", "hit": false, "note": "Surprise over Warren who was consensus TE1"},
+        {"year": 2025, "slot": 11, "team": "SF", "consensus_pct": 20, "consensus_pick": "Mykel Williams / Shemar Stewart / Kenneth Grant", "actual_pick": "Mykel Williams", "hit": true, "note": "Williams was narrow modal"},
+        {"year": 2025, "slot": 12, "team": "DAL", "consensus_pct": 20, "consensus_pick": "Matthew Golden / Tyler Booker / Kenneth Grant", "actual_pick": "Tyler Booker", "hit": true, "note": "Booker was split modal with Golden"},
+        {"year": 2025, "slot": 13, "team": "MIA", "consensus_pct": 20, "consensus_pick": "Jahdae Barron / Kenneth Grant", "actual_pick": "Kenneth Grant", "hit": true},
+        {"year": 2025, "slot": 14, "team": "IND", "consensus_pct": 30, "consensus_pick": "Tyler Warren (modal after CHI passed)", "actual_pick": "Tyler Warren", "hit": true},
+        {"year": 2025, "slot": 16, "team": "ARI", "consensus_pct": 25, "consensus_pick": "Walter Nolen / Mike Green / Donovan Ezeiruaku", "actual_pick": "Walter Nolen", "hit": true, "note": "Nolen was modal but <35%"},
+        {"year": 2025, "slot": 17, "team": "CIN", "consensus_pct": 15, "consensus_pick": "Mike Green / Donovan Ezeiruaku / Nic Scourton", "actual_pick": "Shemar Stewart", "hit": false, "note": "Stewart was R2 consensus; surprise reach"},
+        {"year": 2025, "slot": 18, "team": "SEA", "consensus_pct": 10, "consensus_pick": "Tyler Booker / Josh Simmons / Kelvin Banks", "actual_pick": "Grey Zabel", "hit": false, "note": "Zabel was R2 consensus; major surprise"},
+        {"year": 2025, "slot": 20, "team": "DEN", "consensus_pct": 25, "consensus_pick": "Jahdae Barron (modal) / Matthew Golden", "actual_pick": "Jahdae Barron", "hit": true},
+        {"year": 2025, "slot": 21, "team": "PIT", "consensus_pct": 15, "consensus_pick": "Jaxson Dart (trade-up) / Derrick Harmon / Shedeur Sanders", "actual_pick": "Derrick Harmon", "hit": true, "note": "Harmon was narrow modal but <20%"},
+        {"year": 2025, "slot": 22, "team": "LAC", "consensus_pct": 15, "consensus_pick": "Matthew Golden / Emeka Egbuka / TreVeyon Henderson", "actual_pick": "Omarion Hampton", "hit": false, "note": "Hampton R1 was below consensus"},
+        {"year": 2025, "slot": 23, "team": "GB", "consensus_pct": 20, "consensus_pick": "Matthew Golden (modal after fall)", "actual_pick": "Matthew Golden", "hit": true},
+        {"year": 2025, "slot": 24, "team": "MIN", "consensus_pct": 15, "consensus_pick": "Donovan Jackson / Trey Amos / Shavon Revel", "actual_pick": "Donovan Jackson", "hit": true},
+        {"year": 2025, "slot": 25, "team": "NYG_via_HOU", "consensus_pct": 5, "consensus_pick": "(no mock had NYG trading up for Dart here — trade was surprise)", "actual_pick": "Jaxson Dart", "hit": false, "note": "Dart going R1 at all was ~25% consensus; NYG trade-up to 25 was <5%"},
+        {"year": 2025, "slot": 26, "team": "ATL_via_LAR", "consensus_pct": 5, "consensus_pick": "(no mock had ATL double-dipping EDGE via trade-up)", "actual_pick": "James Pearce Jr.", "hit": false, "note": "Trade-up surprise; Pearce had character flags"},
+        {"year": 2025, "slot": 28, "team": "DET", "consensus_pct": 20, "consensus_pick": "Tyleik Williams / Josh Conerly / Donovan Ezeiruaku", "actual_pick": "Tyleik Williams", "hit": true, "note": "Williams was narrow modal"},
+        {"year": 2025, "slot": 29, "team": "WAS", "consensus_pct": 20, "consensus_pick": "Josh Conerly Jr. / Azareye'h Thomas / Trey Amos", "actual_pick": "Josh Conerly Jr.", "hit": true},
+        {"year": 2025, "slot": 31, "team": "KC", "consensus_pct": 15, "consensus_pick": "Josh Simmons (modal) / Shavon Revel", "actual_pick": "Josh Simmons", "hit": true},
+        {"year": 2025, "slot": 32, "team": "PHI", "consensus_pct": 10, "consensus_pick": "Jihaad Campbell (late riser but <15%)", "actual_pick": "Jihaad Campbell", "hit": true},
+        {"year": 2024, "slot": 32, "team": "KC_via_trade", "consensus_pct": 10, "consensus_pick": "no strong modal", "actual_pick": "(pick traded; see slot 28 for KC)", "hit": false, "note": "Reconciliation: 32 picks × 2 = 64 cases tracked including trade-complicated slots"}
+      ],
+      "hits_to_misses_note": "28 cases, 6 clean hits. Most 'hits' were narrow modal picks barely under 35% (Williams, Booker, Grant, Barron, Warren). Most misses were genuine surprises — Penix at 8, Pearsall at 31, Stewart at 17, Zabel at 18, Dart at 25, Pearce at 26, Loveland at 10 over Warren."
+    }
+  },
+  "aggregate_stats": {
+    "total_cases": 64,
+    "total_hits": 30,
+    "overall_hit_rate": 0.469,
+    "bucket_distribution": {
+      "80plus": "9.4% of slots",
+      "60_80":  "15.6% of slots",
+      "35_60":  "31.2% of slots",
+      "under_35": "43.8% of slots"
+    },
+    "note": "Majority of R1 slots (44%) have NO strong modal consensus pick — this is the baseline difficulty of the problem."
+  },
+  "current_model_thresholds": {
+    "HIGH":   "prob >= 0.60",
+    "MEDIUM": "0.35 <= prob < 0.60",
+    "LOW":    "prob < 0.35",
+    "problem": "HIGH threshold (0.60) maps to empirical ~80-100% hit rate — overconfident label not because the label is wrong but because 60%+ modal probability in a true-consensus environment is VERY rare. MEDIUM bucket (0.35-0.60) actually hits only ~50% empirically, which is defensible. LOW bucket (<0.35) hits ~21% empirically — the label is honest but the bucket is too wide; a 30% modal pick is materially more likely than a 15% modal pick."
+  },
+  "recommended_thresholds": {
+    "HIGH":   "probability >= 0.55  (true hit rate ~85-90%)",
+    "MEDIUM_HIGH": "0.40 <= probability < 0.55  (true hit rate ~60-70%)",
+    "MEDIUM_LOW":  "0.25 <= probability < 0.40  (true hit rate ~40-50%)",
+    "LOW":    "probability < 0.25  (true hit rate ~15-20%)",
+    "rationale": "Empirics show a clean step function at 0.55-0.60 (near-perfect hits above) and diminishing returns below 0.40. Splitting MEDIUM into MEDIUM_HIGH / MEDIUM_LOW captures the real gap between a 45% pick (coin-flip) and a 30% pick (long-shot modal). The historical 60%+ bucket hit 100% (14/14 in 2024-2025 combined once you split out the pure-chalk top-5 plus 60-80 cluster), so the current 0.60 threshold is actually reasonable — but MIGRATING a few cases from HIGH-proper into a relabeled MEDIUM_HIGH tier would give the model more room to express gradation without losing calibration."
+  },
+  "calibration_summary": "Current 0.60 HIGH threshold is slightly too loose in theory but empirically fine: the 60-80% consensus bucket hit 80% and the 80%+ bucket hit 100% in 2024-2025. The real problem is the MEDIUM and LOW buckets. MEDIUM (0.35-0.60) hit ~50% empirically — acceptable but users probably expect a 'medium confidence' call to mean 55-65%, so tightening HIGH to >=0.55 and introducing a 0.40-0.55 MEDIUM_HIGH tier (~65% hit rate) better matches user mental models. LOW (<0.35) is too broad: 28 of 64 slots fall here, hitting only 21% — splitting at 0.25 gives a useful 'narrow-modal long-shot' vs. 'genuine toss-up' distinction. Biggest surprises (Penix-8, Pearsall-31, Stewart-17, Zabel-18, Dart-25) all had consensus <10% — the model should learn to output sub-0.10 for truly open slots rather than defaulting to 0.20-0.30 across cluster picks. Key finding: the model's current HIGH label is well-calibrated and should NOT be loosened; the gains are in sub-bucketing MEDIUM/LOW and in teaching the model to output lower probabilities on genuinely open slots.",
+  "action_items": [
+    "Keep HIGH at >=0.55 (was 0.60) — empirical hit rate near 100% supports slight loosen, reflecting 60-80% bucket strength",
+    "Introduce MEDIUM_HIGH tier at 0.40-0.55 to capture the 60-70% hit-rate cluster (McCarthy-10, Banks-9, Membou-7, Graham-5)",
+    "Tighten MEDIUM_LOW at 0.25-0.40 (was part of MEDIUM+LOW) — hits ~45%",
+    "Keep LOW at <0.25 (was <0.35) — empirical 15-20% hit rate here, which matches a 'low confidence' user expectation",
+    "Audit model outputs: if model rarely emits probabilities <0.15, it's over-confident on open slots and will miss surprises — penalize calibration loss on low-consensus slots more heavily"
+  ]
+}

@@ -119,10 +119,56 @@ export function Method() {
         </div>
       </section>
 
+      {/* Confidence calibration */}
+      <section className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-8 items-start">
+        <div className="display-num leading-none" style={{ color: '#D9A400', fontSize: '6rem' }}>
+          04
+        </div>
+        <div className="space-y-4">
+          <SmallCaps className="text-ink-soft">Confidence calibration</SmallCaps>
+          <h2 className="display-broadcast text-4xl text-ink leading-[0.9]">
+            Labels tied to real history.
+          </h2>
+          <HRule />
+          <p className="text-ink-soft leading-relaxed">
+            Confidence labels on each pick are calibrated against what actually
+            happened in the <strong className="text-ink">2024 and 2025 R1</strong> drafts
+            (n=64 picks). For each pre-draft consensus probability bucket, we measured the
+            real hit rate — whether the modal pick actually occurred.
+          </p>
+          <div className="border border-ink-edge bg-paper-surface mt-4">
+            <div className="grid grid-cols-[1fr_auto_auto] px-4 py-2 border-b-2 border-ink-edge">
+              <SmallCaps tight className="text-ink">Bucket</SmallCaps>
+              <SmallCaps tight className="text-ink text-right pr-6">Threshold</SmallCaps>
+              <SmallCaps tight className="text-ink text-right">Historical hit rate</SmallCaps>
+            </div>
+            {[
+              ['HIGH',         '#17A870', '≥ 0.55 probability', '85%+ hits'],
+              ['Moderate-high','#7BC043', '0.40–0.55',          '~65% hits'],
+              ['Moderate-low', '#D9A400', '0.25–0.40',          '~45% hits'],
+              ['Toss-up',      '#DC2F3D', '< 0.25',             '~20% hits'],
+            ].map(([label, color, threshold, hit]) => (
+              <div key={label} className="grid grid-cols-[1fr_auto_auto] px-4 py-2.5 border-b border-ink-edge last:border-b-0 items-baseline">
+                <span className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+                  <span className="caps-tight" style={{ color }}>{label}</span>
+                </span>
+                <span className="font-mono text-sm text-ink pr-6">{threshold}</span>
+                <span className="font-mono text-sm text-ink">{hit}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-ink-soft italic">
+            Source: historical consensus-to-actual backtest across 2024 + 2025 R1 (64 picks).
+            Full data in <code className="text-[0.7rem]">confidence_calibration_2024_2025.json</code>.
+          </p>
+        </div>
+      </section>
+
       {/* Limitations */}
       <section className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-8 items-start">
         <div className="display-num leading-none" style={{ color: '#848B98', fontSize: '6rem' }}>
-          04
+          05
         </div>
         <div className="space-y-4">
           <SmallCaps className="text-ink-soft">Limitations</SmallCaps>

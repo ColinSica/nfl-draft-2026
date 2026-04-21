@@ -40,9 +40,7 @@ export function Simulate() {
         college: pri?.college ?? null,
         probability: pri?.probability ?? null,
         consensusRank: pri?.consensus_rank ?? null,
-        confidence: pri
-          ? (pri.probability >= 0.6 ? 'HIGH' : pri.probability >= 0.35 ? 'MEDIUM' : 'LOW')
-          : null,
+        confidence: null, // calibrated label derived from probability in PickCard
         whySummary: modelReasoning?.reasoning_summary
           ?? `Modal pick at slot ${p.pick_number}.`,
         whyDetail: modelReasoning?.top_factors
