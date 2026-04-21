@@ -372,26 +372,51 @@ def compute_team_fit(prospects: pd.DataFrame,
             + visit_bonus + narr_bonus)
 
     # Kalshi team-landing bonus. Markets price "Will X be drafted by team Y?"
-    # directly — this is the most-direct draft signal available. Applied as a
-    # large additive bonus gated at 3% (above uniform noise floor) so only
-    # meaningful market priors contribute.
+    # directly — the most-direct draft signal available. Gated at 3% (above
+    # uniform noise floor).
     team_code = team_profile.get("team") or ""
-    if team_code and _TEAM_LANDING_PRIORS:
+    if team_code and _TEAM_LANDING_PRIORS and "player" in prospects.columns:
         def _landing(player_name: str) -> float:
             probs = _TEAM_LANDING_PRIORS.get(player_name, {}) or {}
-            p = probs.get(team_code, 0.0)
-            return max(0.0, p - 0.03)
-        if "player" in prospects.columns:
-            landing_raw = prospects["player"].map(_landing).fillna(0.0)
-            # Weight 4.0 → 30% market landing = +1.08 fit bonus (~50% of a typical
-            # fit score). Strong but doesn't fully dominate need/BPA/scheme.
-            market_landing_bonus = landing_raw * 4.0
-        else:
-            market_landing_bonus = pd.Series(0.0, index=prospects.index)
+            return max(0.0, probs.get(team_code, 0.0) - 0.03)
+        landing_raw = prospects["player"].map(_landing).fillna(0.0)
+        # Weight 5.0 → 30% market landing = +1.35 fit bonus (enough to break
+        # near-ties on team need/BPA).
+        market_landing_bonus = landing_raw * 5.0
     else:
         market_landing_bonus = pd.Series(0.0, index=prospects.index)
 
-    base = base + market_landing_bonus
+    # Kalshi pick-slot-match bonus. If prospect's market P50 matches the
+    # current slot (±3), big boost; if slot is outside P10-P90, penalty.
+    # Prevents Sonny-Styles-at-slot-10 scenarios where market says 3-7.
+    slot = team_profile.get("_slot") or 0
+    if slot and _PICK_ANCHORS and "player" in prospects.columns:
+        def _slot_match(player_name: str) -> float:
+            a = _PICK_ANCHORS.get(player_name)
+            if not a or not a.get("p50"):
+                return 0.0
+            p10, p50, p90 = a["p10"], a["p50"], a["p90"]
+            if p50 <= 0:
+                return 0.0
+            conf = max(0.2, a.get("conf", 0.5))
+            # Inside P10-P90 band: Gaussian-like bonus peaking at P50
+            if p10 - 1 <= slot <= p90 + 1:
+                dist = abs(slot - p50)
+                return conf * max(0.0, 1.0 - dist / 8.0)   # up to +1.0*conf
+            # Outside the band — clear mismatch, small penalty
+            if slot < p10 - 2 or slot > p90 + 2:
+                out_by = min(slot - p90, p10 - slot) if slot > p90 else (p10 - slot)
+                return -conf * min(1.0, out_by / 10.0)      # up to -1.0*conf
+            return 0.0
+        slot_bonus_raw = prospects["player"].map(_slot_match).fillna(0.0)
+        # Weight 3.0 → conf=1.0 exact slot match adds +3.0 to fit; mismatch
+        # outside band subtracts up to -3.0. Strong enough to pull market
+        # P50 players into their expected slots.
+        market_slot_bonus = slot_bonus_raw * 3.0
+    else:
+        market_slot_bonus = pd.Series(0.0, index=prospects.index)
+
+    base = base + market_landing_bonus + market_slot_bonus
     return base * gm_mult * coach_mult * inj_mult
 
 
@@ -461,13 +486,31 @@ def _load_team_landing_priors() -> dict:
     return out
 
 
+def _load_pick_anchors() -> dict:
+    """{player: {p10, p50, p90}} — market-implied pick-position CDF per player.
+    Used to reward slot-aligned picks in team_fit."""
+    try:
+        from src.models.independent.odds_anchor import load_anchors
+        raw = load_anchors()
+    except Exception as exc:
+        print(f"[team_fit] pick anchors load failed: {exc}")
+        return {}
+    return {p: {"p10": float(d.get("pick_p10") or 0),
+                "p50": float(d.get("pick_p50") or 0),
+                "p90": float(d.get("pick_p90") or 0),
+                "conf": float(d.get("market_confidence") or 0)}
+            for p, d in raw.items()}
+
+
 _TEAM_LANDING_PRIORS = _load_team_landing_priors()
+_PICK_ANCHORS = _load_pick_anchors()
 
 
 def reload_market_signals():
     """Reload Kalshi market priors. Call after a fresh odds refresh."""
-    global _TEAM_LANDING_PRIORS
+    global _TEAM_LANDING_PRIORS, _PICK_ANCHORS
     _TEAM_LANDING_PRIORS = _load_team_landing_priors()
+    _PICK_ANCHORS = _load_pick_anchors()
 
 
 def _reasoning_position_boost(team_code: str) -> dict[str, float]:
