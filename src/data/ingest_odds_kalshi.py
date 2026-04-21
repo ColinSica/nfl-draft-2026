@@ -192,7 +192,9 @@ class KalshiClient:
 _PICK_TICKER_RE = re.compile(r"KXNFLDRAFTPICK-26-(\d+)-", re.IGNORECASE)
 _POS_RANK_RE = re.compile(r"KXNFLDRAFT(QB|WR|OL|RB|EDGE|DB|TE|LB|DT|CB|S)-26P(\d+)-", re.IGNORECASE)
 _CAT_RE = re.compile(r"KXNFLDRAFTCAT-26(\w+?)R1-(\d+)", re.IGNORECASE)
-_RULES_PLAYER_RE = re.compile(r"If\s+(.+?)\s+is\s+(?:selected|the|drafted)", re.IGNORECASE)
+_RULES_PLAYER_RE = re.compile(r"If\s+(.+?)\s+is\s+(?:selected|the|drafted|a\s+)", re.IGNORECASE)
+# KXNFLDRAFTTOP-26-{3|5|10|R1} — "Will X be drafted in top N?"
+_TOP_EVENT_RE = re.compile(r"KXNFLDRAFTTOP-26-(R?\d+)$", re.IGNORECASE)
 
 
 # Kalshi emits team names as city + single-letter disambiguator for the
@@ -347,6 +349,17 @@ def _parse_market(market: dict) -> dict | None:
             return None
         return {**base, "player_raw": player, "bound_type": "pos_rank",
                 "position": pos, "pos_rank": rank, "pick_bound": None}
+
+    # ---- TOP-N EVENTS: KXNFLDRAFTTOP-26-{3,5,10,R1} ----
+    m_top = _TOP_EVENT_RE.search(event)
+    if m_top:
+        tag = m_top.group(1).upper()
+        pick_bound = 32 if tag == "R1" else int(tag)
+        player = custom.get("Person") or market.get("yes_sub_title")
+        if not isinstance(player, str) or not player.strip():
+            return None
+        return {**base, "player_raw": player.strip(), "bound_type": "top_n",
+                "pick_bound": pick_bound}
 
     # ---- PICK-EXACT & OU (original handlers) ----
     player = custom.get("Person") or market.get("yes_sub_title")

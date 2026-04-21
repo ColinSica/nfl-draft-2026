@@ -128,24 +128,35 @@ def build_player_anchors(cache: dict | None = None) -> dict[str, dict]:
             continue
         by_player.setdefault(p, []).append(m)
 
+    # Liquidity reliability filter — require per-market OI threshold so we
+    # only trust market signals with real trading interest behind them.
+    # Markets below the floor are excluded from CDF construction; if a player
+    # has NO markets meeting the floor, the player is dropped entirely.
+    MIN_MARKET_OI = 50  # dollars of open interest + volume
     out: dict[str, dict] = {}
     for player, mkts in by_player.items():
+        # Filter to markets with enough liquidity
+        liquid = [m for m in mkts
+                  if (float(m.get("open_interest") or 0) + float(m.get("volume") or 0)) >= MIN_MARKET_OI]
+        if not liquid:
+            continue
         # Drop dust — players with only 1-cent quotes and no threshold coverage.
         # Require EITHER a top_n/over market (which pins the CDF shape) OR at
         # least one exact-pick market with yes_prob >= 3%.
-        has_threshold = any(m.get("bound_type") in ("top_n", "over") for m in mkts)
+        has_threshold = any(m.get("bound_type") in ("top_n", "over") for m in liquid)
         max_exact = max((float(m.get("yes_prob") or 0)
-                         for m in mkts if m.get("bound_type") == "exact"),
+                         for m in liquid if m.get("bound_type") == "exact"),
                         default=0.0)
         if not has_threshold and max_exact < 0.03:
             continue
 
-        pts = _build_cdf_points(mkts)
+        pts = _build_cdf_points(liquid)
         if not pts:
             continue
         cdf = _monotone_cdf(pts)
         if cdf[-1] < 0.10:
             continue
+        mkts = liquid  # use only liquid markets for volume aggregates
         volume = sum(float(m.get("volume") or 0) for m in mkts)
         oi = sum(float(m.get("open_interest") or 0) for m in mkts)
         out[player] = {

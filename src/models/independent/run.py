@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -396,24 +397,85 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
     reason_path.write_text(json.dumps(reasoning, indent=2), encoding="utf-8")
 
 
-def _build_reasoning(pick: dict, prob: float) -> tuple[str, list[dict]]:
-    """Synthesize a human-readable reasoning summary + top factors from
-    the team profile + pick data. Called during MC aggregation so the
-    frontend has a proper 'Why this pick?' explanation."""
-    team_code = pick.get("team")
-    player = pick.get("player")
-    position = pick.get("position") or ""
-    fit_score = pick.get("fit_score", 0) or 0
-    indep_grade = pick.get("independent_grade", 999) or 999
+_AGENTS_CACHE = None
+_ODDS_ANCHORS_CACHE = None
+_TEAM_LANDINGS_CACHE = None
+_RESEARCH_CACHE = None
 
-    # Load team profile for context
+
+def _load_reasoning_sources():
+    """One-time load of all data sources for reasoning construction."""
+    global _AGENTS_CACHE, _ODDS_ANCHORS_CACHE, _TEAM_LANDINGS_CACHE, _RESEARCH_CACHE
     try:
-        agents_path = ROOT / "data/features/team_agents_2026.json"
-        agents = json.loads(agents_path.read_text(encoding="utf-8")) if agents_path.exists() else {}
-        team = agents.get(team_code, {}) or {}
+        p = ROOT / "data/features/team_agents_2026.json"
+        _AGENTS_CACHE = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
     except Exception:
-        team = {}
+        _AGENTS_CACHE = {}
+    try:
+        from src.models.independent.odds_anchor import load_anchors, build_team_landing_priors
+        _ODDS_ANCHORS_CACHE = load_anchors()
+        _TEAM_LANDINGS_CACHE = build_team_landing_priors()
+    except Exception:
+        _ODDS_ANCHORS_CACHE = {}
+        _TEAM_LANDINGS_CACHE = {}
+    try:
+        rp = ROOT / "data/features/pick_reasoning_sources_2026.json"
+        _RESEARCH_CACHE = json.loads(rp.read_text(encoding="utf-8")) if rp.exists() else {}
+    except Exception:
+        _RESEARCH_CACHE = {}
 
+
+def _extract_player_note(narrative: dict, player: str) -> str | None:
+    """Find a player-specific analyst note in the team's narrative block.
+    Returns the first matching sentence from player_archetypes or other fields."""
+    pa = narrative.get("player_archetypes") or {}
+    if isinstance(pa, dict):
+        # player_archetypes often keys entries by slot number with prose
+        # containing the player's name. Walk all entries, find first match.
+        surname = player.rsplit(" ", 1)[-1] if " " in player else player
+        for key, val in pa.items():
+            if not isinstance(val, str):
+                continue
+            if surname.lower() in val.lower() or player.lower() in val.lower():
+                return val.strip()
+    # Fall back to roster_needs_tiered or context_2026 free-text searches
+    for k in ("roster_needs_tiered", "context_2026", "gm_fingerprint",
+              "uncertainty_flags", "trade_up_scenario"):
+        v = narrative.get(k)
+        if not isinstance(v, str):
+            continue
+        if player.lower() in v.lower():
+            # Extract the containing sentence
+            for sent in re.split(r"[.!?]\s+", v):
+                if player.lower() in sent.lower():
+                    return sent.strip()
+    return None
+
+
+def _build_reasoning(pick: dict, prob: float) -> tuple[str, list[dict]]:
+    """Build a data-cited reasoning explanation for a pick. Sources:
+      - Team narrative (PDF-parsed analyst commentary in team_agents_2026.json)
+      - External research cache (pick_reasoning_sources_2026.json) — ESPN,
+        CBS, The Ringer, PFN, NFL.com, Bleacher Report etc.
+      - Model factor math (need, scheme, coaching tree, fit score)
+
+    Intentionally does NOT surface Kalshi or any betting-market data in the
+    user-facing text. Markets drive picks (via anchor + team_fit bonus) but
+    are kept silent in the justification.
+    """
+    global _AGENTS_CACHE, _ODDS_ANCHORS_CACHE, _TEAM_LANDINGS_CACHE, _RESEARCH_CACHE
+    if _AGENTS_CACHE is None:
+        _load_reasoning_sources()
+
+    team_code = pick.get("team")
+    player = pick.get("player") or ""
+    position = pick.get("position") or ""
+    slot = int(pick.get("slot") or 0)
+    fit_score = float(pick.get("fit_score", 0) or 0)
+    indep_grade = float(pick.get("independent_grade", 999) or 999)
+
+    team = (_AGENTS_CACHE.get(team_code) or {}) if isinstance(_AGENTS_CACHE, dict) else {}
+    narrative = team.get("narrative", {}) or {}
     needs = team.get("roster_needs", {}) or {}
     need_weight = float(needs.get(position, 0.0))
     qb_urg = float(team.get("qb_urgency", 0.0) or 0.0)
@@ -422,76 +484,152 @@ def _build_reasoning(pick: dict, prob: float) -> tuple[str, list[dict]]:
     cap_tier = (team.get("cap_context") or {}).get("cap_tier") or team.get("cap_tier")
     predictability = team.get("predictability") or ""
 
-    # Factor contributions — ordered, each with approximate weight
     factors: list[dict] = []
+
+    # ---- Source 1: Need weight with analyst-narrative citation ----
+    rn_tier = narrative.get("roster_needs_tiered")
     if need_weight >= 4:
-        factors.append({"label": f"Critical need at {position} (weight {need_weight:.1f})", "weight": need_weight / 5})
+        lbl = f"Critical {position} need (weight {need_weight:.1f}/5)"
+        if isinstance(rn_tier, str) and position in rn_tier:
+            lbl += f" — analyst profile: \"{rn_tier.split(':')[0].strip()}\""
+        factors.append({"label": lbl, "weight": need_weight / 5, "source": "team_profile"})
     elif need_weight >= 2.5:
-        factors.append({"label": f"Roster need at {position} (weight {need_weight:.1f})", "weight": need_weight / 5})
+        factors.append({"label": f"Roster need at {position} (weight {need_weight:.1f}/5)",
+                        "weight": need_weight / 5, "source": "team_profile"})
     elif need_weight >= 1:
-        factors.append({"label": f"Moderate interest at {position}", "weight": need_weight / 5})
+        factors.append({"label": f"Moderate interest at {position}",
+                        "weight": need_weight / 5, "source": "team_profile"})
 
     if position == "QB" and qb_urg >= 0.8:
-        factors.append({"label": "QB urgency high — team rebuilding at the position", "weight": qb_urg})
+        qs = narrative.get("qb_situation")
+        lbl = f"QB urgency high (score {qb_urg:.2f})"
+        if isinstance(qs, str):
+            qs_short = qs.strip().split(".")[0][:140]
+            lbl += f" — {qs_short}"
+        factors.append({"label": lbl, "weight": qb_urg, "source": "qb_situation"})
 
-    # Board-value signal
+    # ---- Source 3: Board value ----
     if indep_grade < 20:
-        factors.append({"label": f"Top-of-board talent (independent grade {indep_grade:.1f})", "weight": 0.9})
+        factors.append({"label": f"Top-of-board talent (model grade {indep_grade:.1f})",
+                        "weight": 0.85, "source": "model"})
     elif indep_grade < 50:
-        factors.append({"label": f"Strong board value at this slot (grade {indep_grade:.1f})", "weight": 0.7})
+        factors.append({"label": f"Strong board value (grade {indep_grade:.1f})",
+                        "weight": 0.65, "source": "model"})
 
-    if fit_score >= 2.5:
-        factors.append({"label": f"Elite team-fit score ({fit_score:.2f})", "weight": min(fit_score / 3, 1)})
-    elif fit_score >= 1.8:
-        factors.append({"label": f"Strong team-fit score ({fit_score:.2f})", "weight": fit_score / 3})
-
+    # ---- Source 4: Scheme / coaching tree ----
     if scheme:
-        factors.append({"label": f"Aligns with {scheme} scheme", "weight": 0.5})
+        s_line = narrative.get("scheme_identity")
+        lbl = f"Aligns with {scheme} scheme"
+        if isinstance(s_line, str):
+            lbl += f" — {s_line.split('.')[0][:120]}"
+        factors.append({"label": lbl, "weight": 0.5, "source": "scheme"})
     if hc_tree and hc_tree not in ("None", ""):
-        factors.append({"label": f"Fits {hc_tree}-tree coaching tendencies", "weight": 0.4})
+        factors.append({"label": f"Fits {hc_tree}-tree coaching tendencies",
+                        "weight": 0.4, "source": "coaching_tree"})
 
+    # ---- Source 5: Player-specific analyst note ----
+    player_note = _extract_player_note(narrative, player)
+    if player_note:
+        short = player_note[:240].strip()
+        factors.append({"label": f"Analyst note: \"{short}\"",
+                        "weight": 0.7, "source": "team_profile_narrative"})
+
+    # ---- Source 6: GM fingerprint ----
+    gm_fp = narrative.get("gm_fingerprint")
+    if isinstance(gm_fp, str) and gm_fp.strip():
+        # Pull one sentence relevant to position type
+        for sent in re.split(r"[.!?]\s+", gm_fp):
+            s = sent.strip()
+            if not s: continue
+            if (position.lower() in s.lower() or "premium" in s.lower()
+                or "trench" in s.lower() or "build" in s.lower()):
+                factors.append({"label": f"GM fingerprint: \"{s[:180]}\"",
+                                "weight": 0.45, "source": "gm_fingerprint"})
+                break
+
+    # ---- Source 7: Fit score (model) ----
+    if fit_score >= 2.5:
+        factors.append({"label": f"Elite team-fit score ({fit_score:.2f})",
+                        "weight": min(fit_score / 3, 1), "source": "model"})
+    elif fit_score >= 1.8:
+        factors.append({"label": f"Strong team-fit score ({fit_score:.2f})",
+                        "weight": fit_score / 3, "source": "model"})
+
+    # ---- Source 8: Team+player-specific analyst commentary ----
+    # v2 schema: cache is {player: {team_quotes: {TEAM_CODE: [...]}, general_quotes: [...]}}
+    # Prefer quotes tagged to THIS team. If none, fall back to general scouting.
+    if isinstance(_RESEARCH_CACHE, dict):
+        rec = _RESEARCH_CACHE.get(player) or {}
+        if isinstance(rec, dict):
+            tq = (rec.get("team_quotes") or {}) if isinstance(rec.get("team_quotes"), dict) else {}
+            team_specific = tq.get(team_code) or []
+            general = rec.get("general_quotes") or []
+            chosen: list = []
+            for q in team_specific[:2]:
+                if isinstance(q, dict) and q.get("text"):
+                    chosen.append(("team", q))
+            if not chosen:
+                # No team-specific quote — pull general scouting
+                for q in general[:1]:
+                    if isinstance(q, dict) and q.get("text"):
+                        chosen.append(("general", q))
+            for tag, q in chosen:
+                src = q.get("source") or "analyst"
+                txt = str(q.get("text") or "")[:240]
+                prefix = f"{src} on {team_code}-{player}:" if tag == "team" else f"{src} scouting report:"
+                factors.append({
+                    "label": f"{prefix} \"{txt}\"",
+                    "weight": 0.85 if tag == "team" else 0.6,
+                    "source": f"research:{src}",
+                    "team_tagged": tag == "team",
+                })
+            # Also surface into the summary so it reads as prose
+            if chosen:
+                _, q0 = chosen[0]
+                rec.setdefault("_last_cited", {})
+                rec["_last_cited"][team_code] = q0.get("text")
+
+    # ---- Sim-probability context ----
     if prob >= 0.8:
-        factors.append({"label": f"Dominant pick across sims ({int(prob*100)}%)", "weight": prob})
+        factors.append({"label": f"Dominant pick across sims ({int(prob*100)}%)",
+                        "weight": prob, "source": "model"})
     elif prob < 0.4:
-        factors.append({"label": f"Close call ({int(prob*100)}% modal vs competing paths)", "weight": 0.3})
+        factors.append({"label": f"Close call ({int(prob*100)}% modal vs alternates)",
+                        "weight": 0.3, "source": "model"})
 
-    # Narrative summary — 1-2 sentences
+    # ---- Build summary ----
     parts: list[str] = []
     if need_weight >= 4:
-        parts.append(f"{team_code} has a critical {position} need (weight {need_weight:.1f})")
+        parts.append(f"{team_code} has a critical {position} need")
     elif need_weight >= 2.5:
-        parts.append(f"{team_code} has a real {position} need here")
+        parts.append(f"{team_code} has a real {position} need")
     elif indep_grade < 20:
-        parts.append(f"{team_code} takes the board's top {position} on pure value")
+        parts.append(f"{team_code} takes the board's top {position} on value")
     else:
         parts.append(f"{team_code} addresses {position} at this slot")
 
     if scheme or hc_tree:
-        scheme_bit = scheme or f"{hc_tree} tree"
-        parts.append(f"{player}'s profile fits the {scheme_bit} scheme")
+        parts.append(f"{player} fits the {scheme or hc_tree+' tree'} scheme")
+
+    if player_note:
+        parts.append(f"scouting: \"{player_note[:140]}\"")
 
     if prob >= 0.8:
-        parts.append(f"the pick is a near-lock across {int(prob*100)}% of simulations")
+        parts.append(f"near-lock in {int(prob*100)}% of sims")
     elif prob >= 0.5:
-        parts.append(f"the pick carries in {int(prob*100)}% of sims")
-    else:
-        parts.append(f"it's a {int(prob*100)}% modal outcome with real alternate paths")
+        parts.append(f"{int(prob*100)}% modal outcome")
 
-    # Build into readable summary (preserve case for names/abbrs)
     summary = "; ".join(parts)
     if summary:
         summary = summary[0].upper() + summary[1:]
     summary = summary.rstrip(".") + "."
     if cap_tier:
-        summary += f" Cap posture: {cap_tier}."
+        summary += f" Cap: {cap_tier}."
     if predictability and predictability.lower() != "medium":
         summary += f" Predictability: {predictability.lower()}."
 
-    # Top 4 factors by weight
     factors.sort(key=lambda f: -float(f.get("weight", 0)))
-    top_factors = factors[:6]
-
-    return summary, top_factors
+    return summary, factors[:8]
 
 
 def main(argv: list[str] | None = None) -> int:

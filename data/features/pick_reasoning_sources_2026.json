@@ -1,0 +1,648 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-21T00:00:00Z",
+    "n_players": 10,
+    "note": "Compiled from named analyst articles for 2026 NFL Draft pick reasoning. Quotes trimmed to <=240 chars for UI.",
+    "schema": "v2_team_tagged"
+  },
+  "Fernando Mendoza": {
+    "sources": [
+      "The Ringer",
+      "NFL.com",
+      "ClutchPoints",
+      "FOX Sports",
+      "Yahoo Sports",
+      "PFF"
+    ],
+    "team_quotes": {
+      "LV": [
+        {
+          "source": "The Ringer",
+          "text": "Mendoza has built his reputation on elite processing, composure, and precision in the short-to-intermediate game after leading Indiana to a historic 16-0 national championship.",
+          "url": "https://www.theringer.com/2026/04/17/nfl/fernando-mendoza-film-study-nfl-draft-2026-no-1-overall-pick-las-vegas-raiders"
+        },
+        {
+          "source": "ClutchPoints",
+          "text": "The Raiders' non-negotiables are a level of mental and physical toughness and a passion for the game — and Mendoza checks every box the College Scouting Director wants.",
+          "url": "https://clutchpoints.com/nfl/las-vegas-raiders/raiders-news-fernando-mendoza-love-college-scouting-director-non-negotiables"
+        },
+        {
+          "source": "Raiders.com",
+          "text": "Vegas paved the way for Mendoza to start Day 1 — trading Geno Smith, signing Tyler Linderbaum, and pairing him with Klint Kubiak as play caller plus Cousins and Brady as mentors.",
+          "url": "https://www.raiders.com/news/raiders-2026-mock-draft-tracker-version-11-nfl-draft-april-23-pittsburgh-pennsylvania"
+        }
+      ],
+      "PIT": [
+        {
+          "source": "Raiders.com",
+          "text": "Vegas paved the way for Mendoza to start Day 1 — trading Geno Smith, signing Tyler Linderbaum, and pairing him with Klint Kubiak as play caller plus Cousins and Brady as mentors.",
+          "url": "https://www.raiders.com/news/raiders-2026-mock-draft-tracker-version-11-nfl-draft-april-23-pittsburgh-pennsylvania"
+        }
+      ],
+      "NYJ": [
+        {
+          "source": "FOX Sports",
+          "text": "Rob Rang: Mendoza isn't the no-brainer franchise QB that leads off a draft class, but his prototypical size, mobility, lightning-quick release and leadership make him this year's surest thing at the game's most important position.",
+          "url": "https://www.foxsports.com/stories/nfl/2026-nfl-mock-draft-should-heisman-trophy-favorite-fernando-mendoza-go-no-1"
+        },
+        {
+          "source": "Yahoo Sports",
+          "text": "Mendoza has spoken with the Jets, Cardinals and Browns — the teams at No. 2, 3 and 6 that could be in the market for a new franchise QB behind Vegas.",
+          "url": "https://sports.yahoo.com/articles/nfl-draft-rumors-fernando-mendoza-214401058.html"
+        }
+      ],
+      "ARI": [
+        {
+          "source": "PFF",
+          "text": "The Cardinals draft their quarterback of the future in Mendoza — a rhythm passer with pinpoint accuracy and touch whose mistake-free football and clutch playmaking fit what a QB-needy Arizona roster desperately needs.",
+          "url": "https://www.pff.com/news/draft-arizona-cardinals-mock-draft-arizona-cardinals-quarterback-fernando-mendoza"
+        },
+        {
+          "source": "Arizona Sports",
+          "text": "Mendoza became an option atop a weak QB class for QB-needy teams behind the Raiders, with the Cardinals at No. 3 firmly in the mix after their meetings with the Heisman winner.",
+          "url": "https://arizonasports.com/nfl/arizona-cardinals/fernando-mendoza/3609460/"
+        }
+      ]
+    },
+    "general_quotes": []
+  },
+  "Arvell Reese": {
+    "sources": [
+      "ESPN",
+      "Bleacher Report",
+      "NY Sports Day",
+      "ClutchPoints",
+      "Sports Illustrated",
+      "Silver and Black Pride",
+      "Heavy.com"
+    ],
+    "team_quotes": {
+      "NYJ": [
+        {
+          "source": "ESPN",
+          "text": "Matt Miller: I have the Jets opting for the upside of Reese over the proven production of David Bailey. Reese has double-digit sack potential and can be a versatile piece for Aaron Glenn.",
+          "url": "https://www.newyorkjets.com/news/nfl-draft-jets-have-their-pick-edge-defenders-arvell-reese-david-bailey-rueben-bain-04-16-2026"
+        },
+        {
+          "source": "NY Sports Day",
+          "text": "At 6'4\" and 241 pounds, Reese's Micah Parsons-style versatility is why the Jets view him as the cornerstone of Aaron Glenn's hybrid front at No. 2.",
+          "url": "https://www.nysportsday.com/2026/04/21/ny-jets-2026-nfl-draft-arvell-reese-micah-parsons-comparison/"
+        }
+      ],
+      "ARI": [
+        {
+          "source": "ClutchPoints",
+          "text": "Reese's 4.47 at 241 pounds with 32½\" arms checks virtually every box NFL teams covet — Arizona finished 28th in sack rate, and his flexibility as off-ball LB and edge is what Cardinals' front seven desperately needs.",
+          "url": "https://clutchpoints.com/nfl/arizona-cardinals/why-arvell-reese-perfect-fit-cardinals-2026-nfl-draft-combine"
+        },
+        {
+          "source": "Sports Illustrated",
+          "text": "Reese poses a challenging decision for the Cardinals at No. 3 — he's one of three edge defenders in play alongside David Bailey and Rueben Bain if that's the direction Arizona targets.",
+          "url": "https://www.si.com/nfl/cardinals/onsi/arvell-reese-poses-challenging-nfl-draft-decision-arizona-cardinals"
+        }
+      ],
+      "LV": [
+        {
+          "source": "Silver and Black Pride",
+          "text": "Reese and Sonny Styles headline the best linebacker class in years — a Raiders front that lacks Maxx Crosby support could pair Reese's edge versatility with Crosby to transform the pass rush.",
+          "url": "https://www.silverandblackpride.com/nfl-draft/117595/las-vegas-raiders-2026-nfl-draft-arvell-reese-sonny-styles"
+        },
+        {
+          "source": "Heavy.com",
+          "text": "Raiders predicted to pair Maxx Crosby with Arvell Reese — Reese's athletic profile and double-digit sack ceiling give Vegas a second true rush threat opposite Crosby.",
+          "url": "https://heavy.com/sports/nfl/las-vegas-raiders/arvell-reese-mock-draft-ohio-state/"
+        }
+      ]
+    },
+    "general_quotes": [
+      {
+        "source": "Bleacher Report",
+        "text": "Matt Holder: Reese is the most physically impressive linebacker in the 2026 draft class — rare athletic profile to rush the edge while keeping fluid hips to drop into coverage.",
+        "url": "https://bleacherreport.com/articles/25415927-arvell-reese-trending-no-2-pick-which-defender-will-be-next-2026-nfl-draft"
+      }
+    ]
+  },
+  "David Bailey": {
+    "sources": [
+      "Sportsnaut",
+      "Bleacher Report",
+      "Revenge of the Birds",
+      "ESPN",
+      "New York Jets",
+      "FOX Sports"
+    ],
+    "team_quotes": {
+      "ARI": [
+        {
+          "source": "Sportsnaut",
+          "text": "Tony Pauline: The Cardinals' GM 'wants' Texas Tech edge rusher David Bailey. If he's no longer available, the front office will 'work hard' to trade down in the first round.",
+          "url": "https://sportsnaut.com/nfl/arizona-cardinals-draft-rumors-david-bailey-no-3-pick-2026-nfl-draft"
+        },
+        {
+          "source": "Revenge of the Birds",
+          "text": "Arizona finished 29th in PFF pass-rush grade and 28th in sack rate — Bailey's 14.5 sacks and elite get-off are exactly the fix Jonathan Gannon's defense has been missing.",
+          "url": "https://www.revengeofthebirds.com/arizona-cardinals-draft/89544/cardinals-rough-draft-edge-david-bailey"
+        }
+      ],
+      "NYJ": [
+        {
+          "source": "ESPN",
+          "text": "Matt Miller: Texas Tech edge David Bailey is the 'perfect fit' for the Jets at No. 2 — the best pure edge rusher in the class with FBS-leading 14.5 sacks and a 21.3% pressure rate.",
+          "url": "https://www.newyorkjets.com/news/perfect-fit-jets-draft-david-bailey-texas-tech-espn-04-13-2026"
+        },
+        {
+          "source": "New York Jets",
+          "text": "The addition of 365-pound nose tackle T'Vondre Sweat makes Bailey a more palatable pick — he can be aggressive off the edge without killing the structure of Aaron Glenn's defense.",
+          "url": "https://www.newyorkjets.com/news/jets-mock-draft-roundup-13-olaivavega-ioane-david-bailey-espn-peter-schrager-04-09-2026"
+        }
+      ],
+      "LV": [
+        {
+          "source": "FOX Sports",
+          "text": "Bailey is considered by many league observers the best pure edge rusher in the 2026 draft — a one-year Texas Tech transfer whose 81 pressures and 19.5 TFLs translate anywhere, including as Maxx Crosby's bookend.",
+          "url": "https://www.foxsports.com/stories/nfl/2026-nfl-draft-texas-tech-edge-david-bailey"
+        }
+      ]
+    },
+    "general_quotes": [
+      {
+        "source": "Bleacher Report",
+        "text": "Bailey's speed-to-power rushes combined with upper-body strength give him a bull rush that takes tackles by surprise — making him a tough rusher to defend at the next level.",
+        "url": "https://bleacherreport.com/articles/25258657-nfl-draft-2026-scouting-report-texas-tech-edge-david-bailey"
+      }
+    ]
+  },
+  "Jeremiyah Love": {
+    "sources": [
+      "NFL.com",
+      "ESPN",
+      "CBS Sports",
+      "Arizona Sports",
+      "Revenge of the Birds",
+      "Sports Illustrated"
+    ],
+    "team_quotes": {
+      "TEN": [
+        {
+          "source": "NFL.com",
+          "text": "Titans GM Mike Borgonzi: 'I think he's a special player' — praising Love's speed and ability to do things out of the backfield as a receiver.",
+          "url": "https://www.nfl.com/news/titans-gm-mike-borgonzi-praises-jeremiyah-love-keeping-all-options-open-in-draft"
+        },
+        {
+          "source": "ESPN",
+          "text": "Mike Tannenbaum: Love is 'too unique to pass up' for the Titans or Giants in the top 10 — the kind of three-down, home-run runner that transforms a club's rushing attack.",
+          "url": "https://clutchpoints.com/nfl/nfl-stories/nfl-draft-news-ex-gm-jeremiyah-love-plea-titans-giants"
+        }
+      ],
+      "NYG": [
+        {
+          "source": "ESPN",
+          "text": "Mike Tannenbaum: Love is 'too unique to pass up' for the Titans or Giants in the top 10 — the kind of three-down, home-run runner that transforms a club's rushing attack.",
+          "url": "https://clutchpoints.com/nfl/nfl-stories/nfl-draft-news-ex-gm-jeremiyah-love-plea-titans-giants"
+        }
+      ],
+      "ARI": [
+        {
+          "source": "Arizona Sports",
+          "text": "There is growing chatter in league circles that Notre Dame RB Jeremiyah Love is in play with Arizona at No. 3 — he could become the first running back drafted in the top five since 2018.",
+          "url": "https://arizonasports.com/nfl/arizona-cardinals/jeremiyah-love-2/3618392/"
+        },
+        {
+          "source": "Revenge of the Birds",
+          "text": "Love piled up 2,882 yards and 36 rushing TDs at Notre Dame — 6.9 yards per carry and a 93.7 PFF rushing grade make him the top-three talent Arizona can't ignore if they keep the pick.",
+          "url": "https://www.revengeofthebirds.com/nfl-draft/89989/arizona-cardinals-jeremiyah-love-running-back-with-third-overall-pick"
+        }
+      ],
+      "LAR": [
+        {
+          "source": "Sports Illustrated",
+          "text": "Conor Orr: The Rams make a massive move into the top five, sending picks 13, 61, 93 and a 2027 first to Tennessee for No. 4 — pairing Love with Puka Nacua and Davante Adams makes LA an instant Super Bowl frontrunner.",
+          "url": "https://www.si.com/nfl/mock-draft-2026-conor-orr"
+        },
+        {
+          "source": "Sports Illustrated",
+          "text": "Sean McVay could make sweet music with Love — the most talented back he'd have since 2017 OPOY Todd Gurley. If Love gets past Washington at 7, LA could call to acquire the draft's best player.",
+          "url": "https://www.si.com/nfl/rams/onsi/ramss-draft-all-in-trade-jeremiyah-love"
+        }
+      ]
+    },
+    "general_quotes": [
+      {
+        "source": "CBS Sports",
+        "text": "Love is a three-down back with elite playing speed — his 4.36 forty at the Combine confirmed he's a big-play creator who belongs in the top 10.",
+        "url": "https://www.cbssports.com/nfl/news/jeremiyah-love-2026-nfl-draft-rb-notre-dame/"
+      }
+    ]
+  },
+  "Sonny Styles": {
+    "sources": [
+      "Big Blue View",
+      "Pro Football Network",
+      "CBS Sports",
+      "ClutchPoints",
+      "The Washington Stand",
+      "Sports Illustrated"
+    ],
+    "team_quotes": {
+      "NYG": [
+        {
+          "source": "Pro Football Network",
+          "text": "Albert Breer: Harbaugh has a history with battleship-commander middle linebackers — Ray Lewis, C.J. Mosley, Roquan Smith — and sees Styles fitting that role in the Giants defense.",
+          "url": "https://www.profootballnetwork.com/new-york-giants-john-harbaugh-sonny-styles-april-2026/"
+        },
+        {
+          "source": "Big Blue View",
+          "text": "Styles is the prototype modern hybrid defender — a former safety at 6'5\"/245 with a 4.46 forty who Harbaugh can use as a chess piece like Kyle Hamilton in Baltimore.",
+          "url": "https://www.bigblueview.com/new-york-giants-draft/155453/ny-giants-2026-nfl-draft-scouting-report-sonny-styles-lb-ohio-state"
+        }
+      ],
+      "BAL": [
+        {
+          "source": "Big Blue View",
+          "text": "Styles is the prototype modern hybrid defender — a former safety at 6'5\"/245 with a 4.46 forty who Harbaugh can use as a chess piece like Kyle Hamilton in Baltimore.",
+          "url": "https://www.bigblueview.com/new-york-giants-draft/155453/ny-giants-2026-nfl-draft-scouting-report-sonny-styles-lb-ohio-state"
+        }
+      ],
+      "KC": [
+        {
+          "source": "CBS Sports",
+          "text": "Styles posted elite coverage grades and elite run-defense grades in 2025 with just a 2 percent missed-tackle rate — range, length, and versatility at every level.",
+          "url": "https://www.cbssports.com/nfl/draft/news/2026-nfl-mock-draft-chiefs-trade-up-twice/"
+        }
+      ],
+      "TEN": [
+        {
+          "source": "ClutchPoints",
+          "text": "Under new HC Robert Saleh, Tennessee is building a defensive identity around speed, versatility, and disruption — Styles can rush off the edge or play hybrid LB/S in sub-packages, fixing the Titans' biggest weaknesses.",
+          "url": "https://clutchpoints.com/nfl/tennessee-titans/why-sonny-styles-perfect-fit-titans-2026-nfl-draft-combine"
+        },
+        {
+          "source": "PFF",
+          "text": "Titans take Styles at No. 4 — with Cam Ward already in place, Saleh pairs him with a rare blend of intelligence, 6'5\" size, 80⅞\" wingspan, 4.46 speed and record-setting combine athleticism.",
+          "url": "https://sports.yahoo.com/articles/titans-sonny-styles-no-4-123057058.html"
+        }
+      ],
+      "DAL": [
+        {
+          "source": "NFL.com",
+          "text": "Eric Edholm: Cowboys make a bold choice at LB — Styles is one of the best prospects in the entire class at a position of dire need for Dallas, with Jerry Jones possibly having to move up from 12 to secure him.",
+          "url": "https://www.nfl.com/news/eric-edholm-2026-nfl-mock-draft-3-0-giants-double-down-on-buckeyes-cowboys-make-bold-choice-at-lb"
+        }
+      ],
+      "WAS": [
+        {
+          "source": "The Washington Stand Network",
+          "text": "Todd McShay: Styles is the player Dan Quinn wants most if he's available at No. 7 — 'Styles is going seven to Washington if he's on the board.'",
+          "url": "https://twsn.net/2026/04/20/nfl-draft-expert-reveals-the-washington-commanders-favorite-2026-nfl-draft-prospect/"
+        },
+        {
+          "source": "Sports Illustrated",
+          "text": "Styles' versatility, physicality and ability to play multiple defensive roles fit exactly the fast, aggressive identity Quinn wants — he can play LB, box, space, and set the physical tone.",
+          "url": "https://www.si.com/nfl/commanders/onsi/commanders-expected-prioritize-defense-no-7-pick-caleb-downs-sonny-styles-rueben-bain-"
+        }
+      ]
+    },
+    "general_quotes": []
+  },
+  "Carnell Tate": {
+    "sources": [
+      "ESPN",
+      "The Ringer",
+      "Bleacher Report",
+      "Big Blue View",
+      "Pro Football Network",
+      "New Orleans Saints"
+    ],
+    "team_quotes": {
+      "WAS": [
+        {
+          "source": "ESPN",
+          "text": "Mina Kimes: 'Carnell Tate would be such a great pairing with Terry McLaurin. I think, at minimum, he is an excellent 1B. I love him with McLaurin.'",
+          "url": "https://www.commanders.com/news/commanders-2026-mock-draft-madness-12-0"
+        },
+        {
+          "source": "The Ringer",
+          "text": "Todd McShay: The Commanders are 'absolutely' in on Ohio State's Carnell Tate over Jordyn Tyson if he's on the board at No. 7 — they prefer his clean injury profile.",
+          "url": "https://bleacherreport.com/articles/25420130-new-nfl-draft-rumors-reveal-commanders-preference-wr-between-carnell-tate-jordyn-tyson"
+        },
+        {
+          "source": "ESPN",
+          "text": "Jeremy Fowler: Tate is considered the 'safest' receiver prospect this year, with landing spots ranging from the Titans at No. 4 to the Commanders at seven.",
+          "url": "https://bleacherreport.com/articles/25419469-new-carnell-tate-jordyn-tyson-rumors-landing-spots-and-teams-rankings-ahead-nfl-draft-2026"
+        }
+      ],
+      "TEN": [
+        {
+          "source": "ESPN",
+          "text": "Jeremy Fowler: Tate is considered the 'safest' receiver prospect this year, with landing spots ranging from the Titans at No. 4 to the Commanders at seven.",
+          "url": "https://bleacherreport.com/articles/25419469-new-carnell-tate-jordyn-tyson-rumors-landing-spots-and-teams-rankings-ahead-nfl-draft-2026"
+        }
+      ],
+      "NYG": [
+        {
+          "source": "Big Blue View",
+          "text": "Tate is a long, savvy, competitive, versatile WR at 6'2¾\" with 31¾\" arms — a 90.2 PFF grade with zero drops and 12-of-14 contested catches. A starting-caliber pairing for Jaxson Dart at No. 5.",
+          "url": "https://www.bigblueview.com/new-york-giants-draft/155643/ny-giants-2026-nfl-draft-scouting-report-carnell-tate-wr-ohio-state"
+        },
+        {
+          "source": "Sports Illustrated",
+          "text": "Adding Tate would provide immediate help for Dart in his second season — with young playmakers returning to full strength, New York would have a dynamic young core at the skill positions.",
+          "url": "https://www.si.com/nfl/giants/onsi/draft/giants-2026-nfl-draft-carnell-tate-ohio-state"
+        }
+      ],
+      "NO": [
+        {
+          "source": "ESPN",
+          "text": "Jordan Reid: The Saints would 'quickly' select Ohio State WR Carnell Tate with the 8th overall pick if he's still available — the most-mocked player to New Orleans this week.",
+          "url": "https://nationaltoday.com/us/la/new-orleans/news/2026/04/09/saints-would-quickly-draft-6-foot-3-ohio-state-wr-carnell-tate-with-no-8-pick/"
+        },
+        {
+          "source": "Pro Football Network",
+          "text": "Adding Tate to pair with Chris Olave gives Tyler Shough a true outside 14-TD receiver as the Saints evaluate him as the long-term answer — a 90.3 PFF grade (sixth of 679 qualified WRs) confirms it.",
+          "url": "https://www.profootballnetwork.com/saints-projected-carnell-tate-complement-chris-olave/"
+        }
+      ]
+    },
+    "general_quotes": []
+  },
+  "Jordyn Tyson": {
+    "sources": [
+      "Bleacher Report",
+      "Big Blue View",
+      "WalterFootball",
+      "Louisiana Sports",
+      "Pro Football Network",
+      "Arrowhead Pride",
+      "Jets X-Factor"
+    ],
+    "team_quotes": {
+      "ARI": [
+        {
+          "source": "Bleacher Report",
+          "text": "Tyson is a twitchy, dynamic playmaker with route-running traits to be an impact matchup receiver — arguably the best pure route runner in the class.",
+          "url": "https://bleacherreport.com/articles/25248631-nfl-draft-2026-scouting-report-arizona-state-wr-jordyn-tyson"
+        }
+      ],
+      "NYG": [
+        {
+          "source": "Big Blue View",
+          "text": "Talent-wise Tyson is the WR1 of this class, but an ACL/MCL/PCL in 2022, a 2024 broken collarbone, and 2025 hamstring make teams cautious — he could slide to the late teens.",
+          "url": "https://www.bigblueview.com/new-york-giants-draft/159902/ny-giants-2026-draft-is-wr-jordyn-tyson-worth-the-risk-with-no-5-pick"
+        }
+      ],
+      "NO": [
+        {
+          "source": "Louisiana Sports",
+          "text": "Tyson leads off a 7-round Saints mock — 3rd-Team AP All-American with 75 catches, 1,101 yards, 10 TDs in 2024; teams prefer him as the most well-rounded, pro-ready WR in the draft.",
+          "url": "https://www.louisianasports.net/2026/04/13/dominant-wr-jordyn-tyson-leads-off-7-round-saints-mock-draft/top-stories/"
+        },
+        {
+          "source": "NFL.com",
+          "text": "Daniel Jeremiah has Tyson at No. 17 overall and Bucky Brooks ranks him the top WR — an advanced release package and route tempo that make him the most pro-ready receiver for the Saints at 8.",
+          "url": "https://www.nfl.com/prospects/jordyn-tyson/32005459-5340-5541-5aaa-55c5f682cacc"
+        }
+      ],
+      "NYJ": [
+        {
+          "source": "Jets X-Factor",
+          "text": "Tyson has long been viewed as a likely candidate for the Jets' 16th pick — but scouts say it feels more unlikely he'll still be available as his stock rises into draft week.",
+          "url": "https://jetsxfactor.com/2026/04/18/jets-jordyn-tyson-push-away/"
+        }
+      ],
+      "KC": [
+        {
+          "source": "ESPN",
+          "text": "Mel Kiper Jr. and Pete Schrager both predicted the Chiefs take Tyson — pairing him with Rashee Rice, Xavier Worthy and Travis Kelce rounds out KC's passing attack as Mahomes returns from injury.",
+          "url": "https://heavy.com/sports/nfl/kansas-city-chiefs/jordyn-tyson-first-round-draft-slide/"
+        },
+        {
+          "source": "Pro Football Network",
+          "text": "Former NFL executive on Tyson to Chiefs: 'Perfect for them' — 23 TDs at Arizona State with the release package and route nuance KC's offense can weaponize on Day 1.",
+          "url": "https://www.profootballnetwork.com/nfl-executive-chiefs-jordyn-tyson-draft/"
+        }
+      ]
+    },
+    "general_quotes": [
+      {
+        "source": "WalterFootball",
+        "text": "Tyson subtly alters his pathing and bends stems to find voids in zone and beat man — quick in and out of breaks with the long speed to generate explosive plays.",
+        "url": "https://walterfootball.com/scoutingreports2026jtyson.php"
+      }
+    ]
+  },
+  "Caleb Downs": {
+    "sources": [
+      "NFL.com",
+      "ESPN",
+      "Sports Illustrated",
+      "Steeler Nation",
+      "Bleeding Green Nation"
+    ],
+    "team_quotes": {
+      "NO": [
+        {
+          "source": "ESPN",
+          "text": "Downs split snaps between free safety (920), box (865), and slot (574) — the positionless chess piece Saints DC Brandon Staley wants as the back end's signal caller.",
+          "url": "https://www.espn.com/nfl/draft2026/story/_/id/48495253/2026-nfl-draft-latest-buzz-steals-news-downs-tyson-sadiq-eagles-giants-steelers"
+        },
+        {
+          "source": "Sports Illustrated",
+          "text": "Downs allowed just 92 yards after the catch and zero coverage TDs last season while earning Big Ten Defensive Player of the Year — a plug-and-play safety for New Orleans at 8.",
+          "url": "https://www.si.com/nfl/saints/onsi/news/saints-could-address-safety-position-early-in-nfl-draft-arye3"
+        }
+      ],
+      "NYG": [
+        {
+          "source": "ESPN",
+          "text": "Downs split snaps between free safety (920), box (865), and slot (574) — the positionless chess piece Saints DC Brandon Staley wants as the back end's signal caller.",
+          "url": "https://www.espn.com/nfl/draft2026/story/_/id/48495253/2026-nfl-draft-latest-buzz-steals-news-downs-tyson-sadiq-eagles-giants-steelers"
+        }
+      ],
+      "PHI": [
+        {
+          "source": "Bleeding Green Nation",
+          "text": "Safety is one of the most urgent needs on the Eagles roster — Downs has outstanding awareness of play development and an attacking style closing on the line in the run game.",
+          "url": "https://www.bleedinggreennation.com/philadelphia-eagles-draft/173757/ranking-12-safety-prospects-in-the-2026-nfl-draft"
+        },
+        {
+          "source": "NBC Sports Philadelphia",
+          "text": "Barrett Brooks breaks down film on Caleb Downs and analyzes why he would be a good fit for the Eagles — the alpha signal-caller Howie Roseman needs in the back end.",
+          "url": "https://www.nbcsportsphiladelphia.com/video/nfl/philadelphia-eagles/eagles-videos/barretts-breakdown-caleb-downs-safety-ohio-state/727644/"
+        }
+      ],
+      "PIT": [
+        {
+          "source": "Steeler Nation",
+          "text": "If Downs falls out of the top 10, he could fascinate the Steelers — his instincts and football savvy would probably pay off for the franchise for years to come, as long as the medicals check out.",
+          "url": "https://www.steelernation.com/2026/04/06/steelers-espn-dolphins-trade-caleb-downs"
+        }
+      ]
+    },
+    "general_quotes": [
+      {
+        "source": "NFL.com",
+        "text": "Daniel Jeremiah has Downs at No. 9 overall and Bucky Brooks has him as his top safety — a three-year starter and alpha who brings immense juice on every snap.",
+        "url": "https://www.nfl.com/prospects/caleb-downs/3200444f-5766-2609-e99c-c3f1d8460a62"
+      }
+    ]
+  },
+  "Rueben Bain": {
+    "sources": [
+      "CBS Sports",
+      "Sports Illustrated",
+      "Bleacher Report",
+      "Packers News",
+      "NFL.com",
+      "Dallas Cowboys",
+      "ESPN"
+    ],
+    "team_quotes": {
+      "KC": [
+        {
+          "source": "Sports Illustrated",
+          "text": "The Chiefs are the most likely landing spot for Bain — Kansas City needs pass-rush help and Bain fits exactly what Steve Spagnuolo values: power, hand usage, and effort.",
+          "url": "https://www.si.com/betting/prediction-market/nfl/kansas-city-chiefs-positioned-to-add-miami-hurricanes-pass-rusher-in-2026-nfl-draft"
+        }
+      ],
+      "MIA": [
+        {
+          "source": "Sports Illustrated",
+          "text": "The Chiefs are the most likely landing spot for Bain — Kansas City needs pass-rush help and Bain fits exactly what Steve Spagnuolo values: power, hand usage, and effort.",
+          "url": "https://www.si.com/betting/prediction-market/nfl/kansas-city-chiefs-positioned-to-add-miami-hurricanes-pass-rusher-in-2026-nfl-draft"
+        }
+      ],
+      "GB": [
+        {
+          "source": "Packers News",
+          "text": "Pete Dougherty: Bain is one of at least five edges who has 'little chance of making it even near No. 52' for Green Bay — but if Gutekunst breaks from type and trades up, Bain is the kind of power rusher Packers covet.",
+          "url": "https://eu.packersnews.com/story/sports/nfl/packers/dougherty/2026/04/20/packers-gutekunst-may-take-advantage-of-deep-edge-rusher-draft-class/89540402007/"
+        }
+      ],
+      "CIN": [
+        {
+          "source": "ESPN",
+          "text": "Fields Yates predicts the Bengals select edge rusher Rueben Bain Jr. with the 10th overall pick — loose hips, violent hands, power-speed blend and 9.5 sacks in 2025 make him an immediate disruptor.",
+          "url": "https://nationaltoday.com/us/oh/cincinnati/news/2026/04/12/bengals-eye-miami-edge-rusher-rueben-bain-jr-in-2026-nfl-draft/"
+        },
+        {
+          "source": "Sports Illustrated",
+          "text": "The Bengals are locking in a pre-draft visit with projected top-10 pick Rueben Bain Jr. — Cincinnati needs the pass-rush reinforcement and Bain's Ted Hendricks pedigree fits.",
+          "url": "https://www.si.com/nfl/bengals/onsi/news/bengals-meeting-with-elite-edge-rusher-prospect-ahead-of-2026-nfl-draft-01knvvca0h6z"
+        }
+      ],
+      "DAL": [
+        {
+          "source": "Dallas Cowboys",
+          "text": "Bain's power-based game would give new DC Christian Parker a front-seven tone-setter who can rush outside and inside — the second-best pure edge rusher in the class and a steal at No. 12.",
+          "url": "https://www.dallascowboys.com/news/possible-pick-rueben-bain-jr-can-bring-havoc-to-cowboys-pass-rush"
+        },
+        {
+          "source": "ESPN",
+          "text": "Jordan Reid: Bain is one of two players 'believed' to be on Dallas' radar in a trade-up scenario — Jerry Jones' dream pick for a Cowboys defense that needs more bite.",
+          "url": "https://www.si.com/nfl/cowboys/onsi/dallas-cowboys-rueben-bain-dream-coming-closer-to-reality-2026-nfl-draft"
+        }
+      ],
+      "LV": [
+        {
+          "source": "NFL.com",
+          "text": "Mike Band mock 2.0 has Bain sliding past Vegas despite fit — his 92.8 PFF grade (second among P4 edges only to Bailey) gives the Raiders rush insurance if Mendoza isn't the pick at 1.",
+          "url": "https://www.nfl.com/news/mike-band-2026-nfl-mock-draft-2-0-cowboys-take-rueben-bain-jr-steelers-and-eagles-select-receivers"
+        }
+      ]
+    },
+    "general_quotes": [
+      {
+        "source": "CBS Sports",
+        "text": "Bain might not be built like a prototypical edge rusher, but he plays like a potential top-10 pick — destructive with his power and hands and a rare run-defending presence.",
+        "url": "https://www.cbssports.com/nfl/draft/news/rueben-bain-jr-nfl-draft-profile-edge-2026/"
+      },
+      {
+        "source": "Yardbarker",
+        "text": "One coach told Yardbarker Bain's arm length 'does scare them,' especially against long tackles — the sub-33\" arms are why some boards have him slipping out of the top 15.",
+        "url": "https://www.yardbarker.com/nfl/articles/coaches_voice_concerns_about_rueben_bain_jr_ahead_of_nfl_draft/s1_13132_43750221"
+      }
+    ]
+  },
+  "Francis Mauigoa": {
+    "sources": [
+      "ESPN",
+      "NBC Sports",
+      "Detroit News",
+      "New York Giants",
+      "Big Blue View",
+      "Arizona Sports",
+      "PrizePicks",
+      "ClutchPoints"
+    ],
+    "team_quotes": {
+      "MIA": [
+        {
+          "source": "ESPN",
+          "text": "Mel Kiper Jr. ranks Mauigoa as the No. 1 offensive tackle in the class — raw talent, speed, lateral movement, and quickness that labels him an elite top-five prospect.",
+          "url": "https://www.espn.com/college-football/story/_/id/47696233/miami-francis-mauigoa-top-ot-prospect-entering-nfl-draft"
+        },
+        {
+          "source": "NBC Sports",
+          "text": "Chris Simms: Mauigoa is a tone-setter with the physical mentality O-line coaches dream of installing — anchor and power that translate to the NFL on Day 1.",
+          "url": "https://www.nbcsports.com/watch/nfl/chris-simms-unbuttoned/nfl-draft-2026-offensive-tackle-rankings-francis-mauigoa-miami"
+        },
+        {
+          "source": "Detroit News",
+          "text": "At 6'5½\" and 329 pounds with elite hand strength, Mauigoa's Browns/Dolphins fit is about immediate LT stability — how far he'd slide is the question, not whether he starts Day 1.",
+          "url": "https://eu.detroitnews.com/story/sports/nfl/lions/2026/04/18/francis-mauigoa-nfl-draft-detroit-lions-miami-offensive-tackle-penei-sewell/89658338007/"
+        }
+      ],
+      "CLE": [
+        {
+          "source": "Detroit News",
+          "text": "At 6'5½\" and 329 pounds with elite hand strength, Mauigoa's Browns/Dolphins fit is about immediate LT stability — how far he'd slide is the question, not whether he starts Day 1.",
+          "url": "https://eu.detroitnews.com/story/sports/nfl/lions/2026/04/18/francis-mauigoa-nfl-draft-detroit-lions-miami-offensive-tackle-penei-sewell/89658338007/"
+        }
+      ],
+      "DET": [
+        {
+          "source": "Detroit News",
+          "text": "At 6'5½\" and 329 pounds with elite hand strength, Mauigoa's Browns/Dolphins fit is about immediate LT stability — how far he'd slide is the question, not whether he starts Day 1.",
+          "url": "https://eu.detroitnews.com/story/sports/nfl/lions/2026/04/18/francis-mauigoa-nfl-draft-detroit-lions-miami-offensive-tackle-penei-sewell/89658338007/"
+        }
+      ],
+      "NYG": [
+        {
+          "source": "New York Giants",
+          "text": "Mel Kiper final mock: Giants take Mauigoa at No. 10 — a consensus All-American and three-year RT starter who allowed just 15 pressures and 2 sacks in 2025 and lifts the line to the next level.",
+          "url": "https://www.giants.com/news/espn-mel-kiper-2026-nfl-mock-draft-two-rounds-caleb-downs-francis-mauigoa-kayden-mcdonald"
+        },
+        {
+          "source": "Big Blue View",
+          "text": "With the Giants' No. 10 pick acquired from the Dexter Lawrence trade, they'd be happy to see Mauigoa still on the board — he'd take the offensive line unit to the next level.",
+          "url": "https://www.bigblueview.com/new-york-giants-draft/159662/ny-giants-7-round-mock-draft-dexter-lawrence-trade-shakes-things-up"
+        }
+      ],
+      "ARI": [
+        {
+          "source": "Arizona Sports",
+          "text": "Right tackle is the most pressing void for Arizona entering the draft — Mauigoa allowed only two sacks during Miami's run to the national title game and would be an immediate replacement opposite Paris Johnson Jr.",
+          "url": "https://arizonasports.com/nfl/arizona-cardinals/potential-no-3-pick/3609474/"
+        },
+        {
+          "source": "PrizePicks",
+          "text": "Mauigoa is largely regarded as the best tackle prospect in the draft and has often been projected to the Cardinals at No. 3 — fierce run blocker with 33¼\" arms and an AP First-Team All-American resume.",
+          "url": "https://www.prizepicks.com/playbook-article/cardinals-2026-nfl-mock-draft-arizona-adds-to-offense-early"
+        }
+      ],
+      "BAL": [
+        {
+          "source": "ClutchPoints",
+          "text": "Mauigoa told teams he's willing to move from tackle to guard if that's the path to the field — fitting Baltimore's guard need and giving the Ravens elite versatility at No. 14.",
+          "url": "https://clutchpoints.com/nfl/baltimore-ravens/ravens-perfect-2026-nfl-draft-trade"
+        },
+        {
+          "source": "Baltimore Beatdown",
+          "text": "Mauigoa is a potential first-round pick for the Ravens who says he's willing to play guard — his Miami resume and physical tone fit Baltimore's AFC North trench demands.",
+          "url": "https://www.baltimorebeatdown.com/baltimore-ravens-nfl-draft/81567/the-case-for-and-against-the-ravens-drafting-ol-in-round-1"
+        }
+      ]
+    },
+    "general_quotes": []
+  }
+}
