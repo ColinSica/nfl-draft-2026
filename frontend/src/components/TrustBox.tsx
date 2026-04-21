@@ -17,7 +17,7 @@ export function TrustBox() {
                      flex items-center justify-center min-w-[160px]"
           style={{
             background: showIndieTrust
-              ? 'linear-gradient(135deg, rgba(217,164,0,0.16), rgba(217,164,0,0.02))'
+              ? 'linear-gradient(135deg, rgba(217,164,0,0.18), rgba(217,164,0,0.02))'
               : 'transparent',
           }}
         >
@@ -35,16 +35,21 @@ export function TrustBox() {
         <div className="px-6 md:px-8 py-6 space-y-3">
           <div className="flex items-center gap-2">
             <span className="live-dot" />
-            <h3 className="caps" style={{ color: '#D9A400' }}>The contract</h3>
+            <h3 className="caps" style={{ color: '#D9A400' }}>The independence contract</h3>
           </div>
           <p className="text-ink leading-relaxed text-lg">
-            This model <span className="display-broadcast text-2xl" style={{ color: '#D9A400' }}>does not copy analyst mocks.</span>
-            &nbsp;Analyst picks are never fed into the Independent engine.
+            <span className="display-broadcast text-2xl tracking-tight" style={{ color: '#D9A400' }}>
+              Analyst picks are not inputs to this model.
+            </span>
           </p>
           <p className="text-ink-soft leading-relaxed">
-            Analyst data appears only in <span className="caps-tight text-mode-bench">Benchmark</span> mode or as a comparison baseline.
-            Independent predictions come from tape grades, athletic testing, visit intel, scheme fit,
-            and team-agent simulation.
+            Every prediction is derived from tape grades, athletic testing, medicals, visit coverage,
+            team-agent profiles, and Monte Carlo simulation. A test suite enforces the contract — any
+            analyst rank column touching the independent pipeline fails the build.
+          </p>
+          <p className="text-ink-soft/80 text-sm">
+            Public analyst mocks appear only in <span className="caps-tight text-mode-bench">Benchmark</span> mode,
+            and only ever as a comparison baseline.
           </p>
         </div>
       </div>
