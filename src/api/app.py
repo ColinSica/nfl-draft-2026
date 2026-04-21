@@ -376,13 +376,14 @@ def _displayed_probability(raw_sim_prob: float,
     (the sim doesn't know draft-day surprises); after blending, the result
     is hard-capped at 92% since nothing about the draft is truly certain.
     """
-    # Model side — sim frequency with epistemic discount
+    # Model side — sim frequency with epistemic discount (our model can't
+    # observe everything: medical, war rooms, late trade talks, smokescreens).
     if raw_sim_prob <= 0.20:
-        model_prior = raw_sim_prob  # low-confidence sim already expresses uncertainty
+        model_prior = raw_sim_prob
     else:
-        discount = 0.15
+        discount = 0.20
         if slot and slot > 5:
-            discount += min(0.08, (slot - 5) * 0.005)
+            discount += min(0.12, (slot - 5) * 0.008)
         model_prior = raw_sim_prob * (1.0 - discount)
 
     # Market side — Kalshi team-landing probability (if covered)
@@ -391,16 +392,30 @@ def _displayed_probability(raw_sim_prob: float,
         landings = _load_market_landings()
         market_prob = (landings.get(player) or {}).get(team)
 
+    # Blend or use model-only
     if market_prob is None or market_prob <= 0:
-        return round(min(0.88, model_prior), 3)
+        blended = model_prior
+    else:
+        # 60% market / 40% model. Real money already aggregates expert
+        # consensus plus trader intel we don't see; we lean on it slightly
+        # more than our own sim, but our structural signals still carry
+        # weight because markets can under-price specific team-fit data.
+        blended = 0.60 * float(market_prob) + 0.40 * model_prior
 
-    # Blend. 55% market / 45% model — slight market tilt since real money
-    # aggregates a broader info set than our agents, but model weight is
-    # significant because it has structural signals the market may under-price.
-    w_market = 0.55
-    blended = w_market * float(market_prob) + (1.0 - w_market) * model_prior
+    # World-uncertainty haircut: whatever the signals say, the actual draft
+    # has slot-swap trades, last-minute calls from GMs, medical flags, and
+    # ego reaches. Bake a 10% epistemic discount into every pick, plus
+    # extra slot-depth volatility beyond pick 10 (cascade effects compound).
+    world_discount = 0.10
+    if slot:
+        if slot > 10: world_discount += min(0.08, (slot - 10) * 0.006)
+        if slot > 20: world_discount += 0.03
+    final = blended * (1.0 - world_discount)
 
-    return round(min(0.92, max(0.01, blended)), 3)
+    # Hard ceiling — even the most-certain pick of the draft (pick #1 when
+    # priced at -20000) historically only hits ~95%. We cap our displayed
+    # belief at 78% so the UI never claims certainty.
+    return round(min(0.78, max(0.01, final)), 3)
 
 
 # Back-compat alias so existing call sites keep working.

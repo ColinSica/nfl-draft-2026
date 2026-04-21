@@ -1,256 +1,258 @@
 pick,round,team,player,position,school,probability,independent_grade,fit_score,trade_down_p_structural
-1,1,LV,Fernando Mendoza,QB,Indiana,1.0,-20.23,5.131,0.065
-2,1,NYJ,David Bailey,EDGE,Texas Tech,1.0,-13.93,6.627,0.247
-3,1,ARI,Arvell Reese,LB,Ohio State,1.0,-16.46,6.833,0.135
-4,1,TEN,Jeremiyah Love,RB,Notre Dame,1.0,-17.08,7.503,0.247
-5,1,NYG,Sonny Styles,LB,Ohio State,1.0,-8.68,6.106,0.255
-6,1,CLE,Francis Mauigoa,OT,Miami (FL),1.0,-11.68,6.048,0.281
-7,1,WAS,Mansoor Delane,CB,LSU,1.0,-0.71,5.617,0.09
-8,1,NO,Jordyn Tyson,WR,Arizona State,1.0,16.06,6.981,0.083
-9,1,PIT,Spencer Fano,OT,Utah,1.0,1.1,5.839,0.234
-10,1,NYG,Rueben Bain,EDGE,Miami (FL),1.0,-5.22,5.765,0.255
-11,1,MIA,Carnell Tate,WR,Ohio State,0.4,-3.15,4.389,0.331
-12,1,DAL,Kenyon Sadiq,TE,Oregon,1.0,5.02,4.045,0.247
-13,1,SF,Olaivavega Ioane,IOL,Penn State,0.6,0.55,5.48,0.21
-14,1,BAL,Zxavian Harris,DL,Ohio State,0.15,-7.74,6.831,0.48
-15,1,TB,Dillon Thieneman,S,Oregon,0.6,0.49,4.133,0.375
-16,1,LAR,Makai Lemon,WR,USC,0.8,4.25,7.972,0.595
-17,1,DET,Keldric Faulk,EDGE,Auburn,0.4,13.44,4.624,0.385
-18,1,MIN,Kadyn Proctor,OT,Alabama,0.6,8.03,4.837,0.495
-19,1,CAR,Omar Cooper Jr.,WR,Indiana,0.4,18.04,3.954,0.24
-20,1,DAL,Akheem Mesidor,EDGE,Miami (FL),1.0,5.77,4.344,0.247
-21,1,KC,Max Iheanachor,OT,Arizona State,0.2,21.69,3.843,0.385
-22,1,LAC,KC Concepcion,WR,Texas A&M,0.8,24.12,5.372,0.16
-23,1,PHI,Denzel Boston,WR,Washington,0.6,25.5,4.248,0.473
-24,1,CLE,Blake Miller,OT,Clemson,0.2,23.75,6.465,0.383
-25,1,CHI,Chris Johnson,CB,San Diego State,0.8,17.86,5.464,0.288
-26,1,BUF,Colton Hood,CB,Tennessee,0.6,16.88,6.211,0.258
-27,1,LAR,Kayden McDonald,DL,Ohio State,0.4,15.32,5.534,0.675
-28,1,HOU,Jermod McCoy,CB,Tennessee,1.0,15.89,5.262,0.284
-29,1,KC,Chase Bisontis,IOL,Texas A&M,1.0,20.03,3.851,0.199
-30,1,MIA,Ty Simpson,QB,Alabama,0.4,18.5,5.179,0.272
-31,1,NE,Emmanuel McNeil-Warren,S,Toledo,0.6,18.39,5.042,0.242
-32,1,SEA,Peter Woods,DL,Clemson,0.4,29.18,3.709,0.186
-33,2,NYJ,Eli Raridon,TE,Michigan,0.15,72.31,2.97,0.127
-34,2,ARI,C.J. Donaldson,RB,Michigan,0.15,107.67,3.443,0.115
-35,2,TEN,Seth McGowan,RB,NC State,0.15,122.71,2.907,0.127
-36,2,LV,Kaytron Allen,RB,Mississippi,0.15,103.22,3.179,0.071
-37,2,NYG,Max Klare,TE,LSU,0.15,71.58,4.021,0.199
-38,2,HOU,Will Kacmarek,TE,Auburn,0.15,75.27,3.68,0.15
-39,2,CLE,Sam Roush,TE,Northwestern,0.15,102.38,3.974,0.219
-40,2,KC,Joe Royer,TE,Texas A&M,0.15,71.38,3.107,0.15
-41,2,CIN,Josh Cuevas,TE,Georgia,0.15,59.11,6.239,0.069
-42,2,NO,Lake McRee,TE,Boise State,0.15,159.5,3.588,0.058
-43,2,MIA,Taurean York,LB,South Carolina,0.15,15.55,3.767,0.219
-44,2,NYJ,Lander Barton,LB,Georgia,0.15,84.42,3.388,0.127
-45,2,BAL,Josiah Trotter,LB,USC,0.15,78.62,4.683,0.315
-46,2,TB,Owen Heinecke,LB,Penn State,0.15,76.39,3.199,0.147
-47,2,IND,Oscar Delp,TE,UConn,0.15,72.64,4.096,0.21
-48,2,ATL,Nick Singleton,RB,Texas A&M,0.15,81.36,3.702,0.126
-49,2,MIN,Michael Trigg,TE,Kansas State,0.15,137.92,4.215,0.327
-50,2,DET,Haynes King,QB,Iowa State,0.15,86.47,3.934,0.25
-51,2,CAR,Luke Altmyer,QB,USC,0.15,111.95,3.608,0.157
-52,2,GB,Chris Brazzell,WR,Texas A&M,0.15,149.45,3.795,0.289
-53,2,PIT,Mike Washington Jr.,RB,Clemson,0.15,121.99,4.113,0.189
-54,2,PHI,Emmett Johnson,RB,LSU,0.15,106.65,4.333,0.25
-55,2,LAC,Cole Payton,QB,Clemson,0.15,112.61,4.333,0.059
-56,2,JAX,Garrett Nussmeier,QB,Oregon,0.15,73.52,3.968,0.139
-57,2,CHI,Eli Stowers,TE,Indiana,0.15,88.41,4.691,0.157
-58,2,SF,Jonah Coleman,RB,Kansas State,0.15,109.26,4.505,0.136
-59,2,HOU,Demond Claiborne,RB,Miami (FL),0.15,143.04,4.221,0.15
-60,2,CHI,Keionte Scott,CB,Miami (FL),1.0,108.93,4.903,0.157
-61,2,LAR,Desmond Reid,RB,Ohio State,0.15,55.21,8.534,0.399
-62,2,DEN,Riley Nowakowski,TE,Oregon,0.15,174.85,5.087,0.157
-63,2,NE,Sawyer Robertson,QB,Alabama,0.15,137.2,4.109,0.189
-64,2,SEA,T.J. Parker,EDGE,Notre Dame,0.15,95.46,3.613,0.151
-65,3,ARI,Taylen Green,QB,Texas,0.15,78.32,5.068,0.115
-66,3,TEN,Cade Klubnik,QB,Stanford,0.15,82.77,5.287,0.127
-67,3,LV,Avieon Terrell,CB,NC State,0.15,146.67,4.793,0.071
-68,3,PHI,Joey Aguilar,QB,Oregon,0.15,125.54,5.226,0.25
-69,3,HOU,Zion Young,EDGE,Vanderbilt,0.15,57.77,5.313,0.15
-70,3,CLE,Keith Abney II,CB,Arizona State,0.6,133.12,5.75,0.219
-71,3,WAS,R Mason Thomas,EDGE,Texas A&M,0.15,136.36,5.505,0.084
-72,3,CIN,Cashius Howell,EDGE,Arizona,0.15,114.73,4.894,0.069
-73,3,NO,Elijah Sarratt,WR,Indiana,1.0,125.03,5.782,0.058
-74,3,KC,Gabe Jacas,EDGE,Baylor,0.15,140.06,4.727,0.15
-75,3,MIA,Jacob Rodriguez,LB,Missouri,0.15,176.32,5.378,0.219
-76,3,PIT,Keylan Rutledge,IOL,Georgia,0.15,60.04,7.993,0.189
-77,3,TB,Jadarian Price,RB,Michigan,0.15,143.43,4.898,0.147
-78,3,IND,Anthony Hill Jr.,LB,Oklahoma,0.15,160.95,5.883,0.21
-79,3,ATL,Brandon Cisse,CB,Cincinnati,0.15,146.58,4.75,0.126
-80,3,BAL,Christen Miller,DL,Oregon,0.15,151.04,6.868,0.315
-81,3,JAX,Caleb Banks,DL,Penn State,0.15,88.79,5.698,0.139
-82,3,MIN,Germie Bernard,WR,California,0.15,170.37,6.237,0.327
-83,3,CAR,Lee Hunter,DL,Notre Dame,0.15,127.18,5.394,0.157
-84,3,GB,Diego Pavia,QB,Iowa,0.15,162.88,5.127,0.289
-85,3,PIT,Jake Golday,LB,Baylor,0.15,130.9,4.386,0.189
-86,3,LAC,Gennings Dunker,OT,Penn State,0.15,142.54,5.412,0.059
-87,3,MIA,Carson Beck,QB,USC,0.15,170.87,5.816,0.219
-88,3,JAX,Chris Bell,WR,Alabama,0.15,160.58,5.792,0.139
-89,3,CHI,Drew Allar,QB,Texas,0.15,146.77,4.65,0.157
-90,3,MIA,Malachi Lawrence,EDGE,Tennessee,0.15,109.53,5.118,0.219
-91,3,BUF,Caleb Lomu,OT,Arkansas,0.15,68.81,10.729,0.136
-92,3,DAL,Josiah Trotter,LB,Missouri,0.6,73.43,5.53,0.162
-93,3,LAR,Emmett Johnson,RB,Nebraska,1.0,81.31,7.033,0.399
-94,3,MIA,J'Mari Taylor,RB,Virginia,0.4,173.89,5.482,0.219
-95,3,NE,Taurean York,LB,Texas A&M,0.4,146.41,5.142,0.189
-96,3,SEA,Adam Randall,RB,Clemson,0.2,176.03,5.759,0.151
-97,3,MIN,Lander Barton,LB,Utah,0.2,158.87,5.826,0.327
-98,3,PHI,Owen Heinecke,LB,Oklahoma,0.6,157.32,6.195,0.15
-99,3,PIT,Haynes King,QB,Georgia Tech,1.0,155.7,6.595,0.189
-100,3,JAX,Roman Hemby,RB,Indiana,0.2,179.1,5.767,0.139
-101,4,TEN,Will Kacmarek,TE,Ohio State,0.2,164.02,5.317,0.127
-102,4,LV,Lake McRee,TE,USC,0.2,157.47,5.463,0.071
-103,4,NYJ,Seth McGowan,RB,Kentucky,0.4,192.87,6.283,0.127
-104,4,ARI,Rahsul Faison,RB,South Carolina,0.4,201.47,4.353,0.115
-105,4,NYG,Luke Altmyer,QB,Illinois,1.0,155.83,5.615,0.199
-106,4,HOU,Nate Boerkircher,TE,Texas A&M,0.2,181.53,4.763,0.15
-107,4,CLE,Garrett Nussmeier,QB,LSU,1.0,83.42,9.172,0.219
-108,4,DEN,Cole Payton,QB,North Dakota State,1.0,75.66,10.354,0.157
-109,4,KC,Josh Cuevas,TE,Alabama,0.4,183.03,5.648,0.15
-111,4,DEN,C.J. Donaldson,RB,Ohio State,0.2,179.32,8.806,0.157
-112,4,DAL,Jonah Coleman,RB,Washington,1.0,88.92,7.094,0.162
-114,4,PHI,Jacob Rodriguez,LB,Texas Tech,0.6,101.63,3.706,0.25
-115,4,BAL,Desmond Reid,RB,Pittsburgh,1.0,193.9,4.918,0.315
-116,4,TB,Sawyer Robertson,QB,Baylor,1.0,144.21,4.784,0.147
-117,4,LV,Riley Nowakowski,TE,Indiana,0.8,180.38,4.992,0.071
-118,4,DET,Demond Claiborne,RB,Wake Forest,0.8,205.15,5.585,0.25
-119,4,CAR,Taylen Green,QB,Arkansas,1.0,83.4,9.772,0.157
-120,4,GB,Anthony Hill Jr.,LB,Texas,0.8,57.1,4.162,0.289
-121,4,PIT,Christen Miller,DL,Georgia,1.0,87.74,3.626,0.189
-122,4,ATL,Caleb Banks,DL,Florida,1.0,50.18,3.779,0.126
-123,4,LAC,Jadarian Price,RB,Notre Dame,0.8,53.79,3.151,0.059
-124,4,JAX,Brandon Cisse,CB,South Carolina,1.0,152.01,2.096,0.139
-125,4,NE,Caleb Lomu,OT,Utah,0.6,23.63,1.812,0.189
-126,4,BUF,T.J. Parker,EDGE,Clemson,1.0,32.43,2.225,0.136
-127,4,SF,Chris McClellan,DL,Missouri,0.4,60.88,1.733,0.136
-128,4,DET,Cade Klubnik,QB,Clemson,1.0,167.39,3.551,0.25
-129,4,CHI,Lee Hunter,DL,Texas Tech,0.8,72.94,2.029,0.157
-130,4,MIA,Germie Bernard,WR,Alabama,0.6,76.43,1.901,0.219
-131,4,NE,Joey Aguilar,QB,Tennessee,1.0,161.96,4.784,0.189
-132,4,NO,Gennings Dunker,OT,Iowa,1.0,186.96,2.383,0.058
-133,4,SF,Malachi Lawrence,EDGE,UCF,0.6,20.11,1.834,0.136
-134,4,LV,Diego Pavia,QB,Vanderbilt,0.8,173.54,3.056,0.071
-135,4,PIT,Carson Beck,QB,Miami (FL),0.8,168.3,3.762,0.189
-136,5,NO,Chris Bell,WR,Louisville,0.8,139.5,2.12,0.058
-137,5,PHI,Jake Golday,LB,Cincinnati,1.0,102.47,2.213,0.25
-138,5,SF,Zion Young,EDGE,Missouri,0.2,68.51,1.817,0.136
-139,5,SF,Drew Allar,QB,Penn State,1.0,114.66,2.138,0.136
-140,5,NYJ,Cashius Howell,EDGE,Texas A&M,0.6,67.67,1.73,0.127
-141,5,HOU,Avieon Terrell,CB,Clemson,0.6,35.62,1.779,0.15
-142,5,TEN,Dani Dennis-Sutton,EDGE,Penn State,0.6,72.14,1.71,0.127
-143,5,ARI,R Mason Thomas,EDGE,Oklahoma,0.4,76.38,1.986,0.115
-144,5,TEN,Keyron Crawford,EDGE,Auburn,0.8,73.31,1.713,0.127
-145,5,NYG,Joshua Josephs,EDGE,Tennessee,0.4,76.38,1.867,0.199
-146,5,CLE,Logan Jones,IOL,Iowa,0.6,115.5,1.634,0.219
-147,5,WAS,Tacario Davis,CB,Washington,0.2,65.99,1.515,0.084
-148,5,KC,Chandler Rivers,CB,Duke,0.6,102.68,1.645,0.15
-149,5,CLE,Romello Height,EDGE,Texas Tech,0.4,77.08,1.586,0.219
-150,5,NO,Bryce Lance,WR,North Dakota State,1.0,81.32,1.785,0.058
-151,5,MIA,Bud Clark,S,TCU,0.6,106.13,1.485,0.219
-152,5,DAL,Rayshaun Benny,DL,Michigan,0.8,125.74,1.869,0.162
-153,5,GB,Daylen Everette,CB,Georgia,0.4,59.43,1.604,0.173
-154,5,BAL,Devin Moore,CB,Florida,0.6,65.55,2.065,0.189
-155,5,TB,Julian Neal,CB,Arkansas,0.2,148.22,1.215,0.147
-156,5,IND,De'Zhaun Stribling,WR,Mississippi,0.8,110.43,1.394,0.21
-157,5,DET,Gabe Jacas,EDGE,Illinois,0.6,123.74,1.423,0.15
-158,5,CAR,Gracen Halton,DL,Oklahoma,0.4,143.71,1.336,0.157
-159,5,CAR,Caden Curry,EDGE,Ohio State,0.4,139.52,1.465,0.157
-160,5,GB,Darrell Jackson Jr.,DL,Florida State,0.6,104.82,1.465,0.173
-161,5,PIT,Athan Kaliakmanis,QB,Rutgers,0.8,171.47,1.448,0.189
-162,5,BAL,Davison Igbinosun,CB,Ohio State,0.2,109.26,1.656,0.189
-163,5,MIN,Genesis Smith,S,Arizona,0.4,152.45,1.455,0.196
-164,5,JAX,Keyshaun Elliott,LB,Arizona State,0.8,77.63,1.441,0.139
-165,5,BUF,Michael Taaffe,S,Texas,0.6,177.95,1.588,0.136
-166,5,JAX,Lorenzo Styles Jr.,CB,Ohio State,0.4,164.37,1.149,0.139
-167,5,HOU,Billy Schrauth,IOL,Notre Dame,1.0,126.54,1.352,0.15
-168,5,BUF,Zane Durant,DL,Penn State,0.2,155.61,1.356,0.136
-169,5,KC,Latrell McCutchin,CB,Houston,0.2,179.31,1.041,0.15
-170,5,DEN,Kaelon Black,RB,Indiana,1.0,197.68,1.653,0.157
-171,5,NE,Jake Slaughter,IOL,Florida,0.4,116.4,1.269,0.189
-172,5,NO,Jude Bowry,OT,Boston College,0.4,166.91,1.186,0.058
-173,5,BAL,Domani Jackson,CB,Alabama,0.6,176.71,1.327,0.189
-174,5,BAL,Max Llewellyn,EDGE,Iowa,0.2,144.54,1.364,0.189
-175,5,LV,Nate Johnson,QB,Utah,0.6,190.98,1.402,0.071
-176,5,KC,Logan Fano,EDGE,Utah,0.2,142.52,0.985,0.15
-177,5,DAL,Rene Konga,DL,Louisville,0.4,168.05,1.44,0.162
-178,6,PHI,Robert Spears-Jennings,S,Oklahoma,0.4,162.24,1.155,0.25
-179,6,NYJ,Cian Slone,EDGE,NC State,0.2,183.44,0.907,0.127
-180,6,DAL,Wesley Williams,DL,Duke,0.6,156.0,1.414,0.162
-181,6,DET,Mikail Kamara,EDGE,Indiana,0.4,165.62,1.13,0.25
-182,6,BUF,Ephesians Prysock,CB,Washington,0.4,161.54,1.1,0.136
-183,6,ARI,Patrick Payton,EDGE,LSU,1.0,163.05,1.173,0.115
-184,6,TEN,Nadame Tucker,EDGE,Western Michigan,0.2,173.41,0.977,0.127
-185,6,LV,Joe Fagnano,QB,UConn,0.4,167.15,1.144,0.071
-186,6,NYG,Beau Stephens,IOL,Iowa,0.2,156.8,1.23,0.199
-187,6,WAS,Skyler Gill-Howard,DL,Texas Tech,0.4,165.64,1.062,0.084
-188,6,SEA,Fernando Carmona,IOL,Arkansas,0.2,167.75,0.909,0.151
-189,6,CIN,Micah Morris,IOL,Georgia,0.2,163.59,0.918,0.069
-190,6,NO,Nick Barrett,DL,South Carolina,0.2,171.51,0.873,0.058
-191,6,NE,Keagen Trost,IOL,Missouri,0.4,171.77,1.001,0.189
-192,6,NYG,Febechi Nwaiwu,IOL,Oklahoma,0.2,173.5,1.333,0.199
-193,6,NYG,Tomas Rimac,IOL,Virginia Tech,0.4,173.68,1.318,0.199
-194,6,TEN,Anthony Lucas,EDGE,USC,0.4,154.79,0.968,0.127
-195,6,TB,Nyjalik Kelly,EDGE,UCF,0.2,172.07,0.883,0.147
-196,6,MIN,Kyle Louis,LB,Pittsburgh,0.4,154.8,1.077,0.196
-197,6,PHI,Dalton Johnson,S,Arizona,0.8,183.54,1.068,0.15
-198,6,NE,Travis Burke,OT,Memphis,0.2,185.23,1.002,0.189
-199,6,CIN,Josh Thompson,IOL,LSU,0.2,174.94,0.856,0.069
-200,6,CAR,Jack Pyburn,EDGE,LSU,0.2,163.81,1.039,0.157
-201,6,GB,Bobby Jamison-Travis,DL,Auburn,0.4,172.43,1.017,0.173
-202,6,NE,L.T. Overton,EDGE,Alabama,0.2,150.33,1.003,0.189
-203,6,JAX,Kaleb Elarms-Orr,LB,TCU,0.4,174.98,0.888,0.139
-204,6,LAC,Eric McAlister,WR,TCU,0.4,180.55,0.935,0.059
-205,6,DET,George Gumbs Jr.,EDGE,Florida,0.4,168.99,1.05,0.25
-206,6,CLE,Markel Bell,OT,Miami (FL),0.6,192.5,1.139,0.219
-207,6,LAR,Malik Benson,WR,Oregon,0.4,196.55,1.008,0.399
-208,6,LV,Jalon Daniels,QB,Kansas,0.2,183.97,1.064,0.071
-209,6,WAS,Anterio Thompson,DL,Washington,0.4,176.01,1.051,0.084
-210,6,KC,Toriano Pride,CB,Missouri,0.2,181.23,0.871,0.15
-211,6,BAL,Ethan Burke,EDGE,Texas,0.4,175.43,1.08,0.189
-212,6,NE,Nick Dawkins,IOL,Penn State,0.4,178.68,0.808,0.189
-213,6,DET,Tyreak Sapp,EDGE,Florida,0.6,174.58,1.108,0.25
-214,6,IND,Mason Reiger,EDGE,Wisconsin,0.2,172.77,0.801,0.21
-215,6,ATL,Trey Moore,EDGE,Texas,0.6,170.27,1.155,0.126
-216,6,PIT,Behren Morton,QB,Texas Tech,0.4,182.96,1.115,0.189
-217,6,ARI,Tyre West,EDGE,Tennessee,0.4,182.39,0.934,0.115
-218,6,DAL,Aaron Graves,DL,Iowa,0.4,176.3,1.117,0.162
-219,6,LV,Maalik Murphy,QB,Oregon State,0.2,189.7,1.012,0.071
-220,6,BUF,Dontay Corleone,DL,Cincinnati,0.6,169.35,1.118,0.136
-221,7,CIN,Charles Demmings,CB,Stephen F. Austin,0.2,182.84,0.897,0.069
-222,7,DET,Zach Durfee,EDGE,Washington,0.4,174.92,1.062,0.25
-223,7,WAS,Deven Eastern,DL,Minnesota,0.2,178.84,0.981,0.084
-224,7,PIT,Miller Moss,QB,Louisville,0.2,189.7,1.13,0.189
-225,7,TEN,Vincent Anthony Jr.,EDGE,Duke,0.4,176.61,0.855,0.127
-226,7,CIN,Ceyair Wright,CB,Nebraska,0.2,203.5,0.786,0.069
-227,7,MIA,Cole Wisniewski,S,Texas Tech,0.2,185.59,0.962,0.219
-228,7,NYJ,Andre Fuller,CB,Toledo,0.4,187.87,0.881,0.127
-229,7,TB,Devonta Smith,CB,Notre Dame,0.2,188.99,0.934,0.147
-230,7,PIT,Thomas Castellanos,QB,Florida State,0.4,190.62,1.124,0.189
-231,7,ATL,Damonic Williams,DL,Oklahoma,0.2,177.23,0.942,0.126
-232,7,LAR,Tyren Montgomery,WR,John Carroll,0.4,195.34,1.069,0.399
-233,7,JAX,Devon Marshall,CB,NC State,0.4,193.66,0.839,0.139
-234,7,MIN,Kolbey Taylor,CB,Vanderbilt,0.2,202.84,0.772,0.196
-235,7,MIN,Avery Smith,CB,Toledo,0.4,206.67,0.851,0.196
-236,7,GB,Tyreek Chappell,CB,Texas A&M,0.2,202.03,0.975,0.173
-237,7,PIT,Jack Strand,QB,Minnesota State-Moorhead,0.2,184.14,1.166,0.189
-238,7,MIA,Mark Gronowski,QB,Iowa,0.6,194.17,1.044,0.219
-239,7,CHI,Louis Moore,S,Indiana,0.8,189.5,1.195,0.157
-240,7,JAX,James Thompson Jr.,DL,Illinois,0.4,184.79,0.798,0.139
-241,7,CHI,Jakobe Thomas,S,Miami (FL),0.4,183.35,1.033,0.157
-242,7,NYJ,DJ Rogers,TE,TCU,0.2,187.83,0.804,0.127
-243,7,HOU,Pat Coogan,IOL,Indiana,0.4,171.66,0.872,0.15
-244,7,MIN,Collin Wright,CB,Stanford,0.2,193.56,0.889,0.196
-245,7,JAX,Uar Bernard,DL,Nigeria,0.2,183.0,0.807,0.139
-246,7,DEN,Chip Trayanum,RB,Toledo,0.6,198.46,1.29,0.157
-247,7,NE,Matt Gulbin,IOL,Michigan State,0.2,175.42,0.87,0.189
-248,7,CLE,Brian Parker II,OT,Duke,0.4,172.69,1.049,0.219
-249,7,IND,Romello Brinson,WR,SMU,0.4,197.64,0.709,0.21
-250,7,BAL,Jackson Kuwatch,EDGE,Miami (OH),0.4,193.19,1.089,0.189
-251,7,LAR,Colbie Young,WR,Georgia,0.4,197.06,1.121,0.399
-252,7,LAR,Reggie Virgil,WR,Texas Tech,0.2,195.72,1.103,0.239
-253,7,BAL,Michael Heldman,EDGE,Central Michigan,0.6,180.43,1.143,0.189
-254,7,IND,Lewis Bond,WR,Boston College,0.6,199.03,0.909,0.21
-255,7,GB,Jordan van den Berg,DL,Georgia Tech,0.2,181.72,0.891,0.173
-256,7,DEN,Jaydn Ott,RB,Oklahoma,0.6,201.81,1.266,0.157
-257,7,DEN,Jamarion Miller,RB,Alabama,0.6,211.16,1.285,0.157
+1,1,LV,Fernando Mendoza,QB,Indiana,1.0,-20.23,3.601,0.065
+2,1,NYJ,David Bailey,EDGE,Texas Tech,0.95,-13.93,4.326,0.247
+3,1,ARI,Arvell Reese,LB,Ohio State,0.95,-16.46,4.452,0.135
+4,1,TEN,Jeremiyah Love,RB,Notre Dame,1.0,-17.08,4.808,0.247
+5,1,NYG,Sonny Styles,LB,Ohio State,0.52,-8.68,4.028,0.255
+6,1,CLE,Francis Mauigoa,OT,Miami (FL),0.88,-11.68,4.7,0.281
+7,1,WAS,Keldric Faulk,EDGE,Auburn,0.99,13.44,4.186,0.09
+8,1,NO,Jordyn Tyson,WR,Arizona State,0.57,16.06,4.579,0.083
+9,1,KC,Mansoor Delane,CB,LSU,0.56,-0.71,3.586,0.303
+10,1,NYG,Spencer Fano,OT,Utah,0.4,1.1,4.223,0.255
+11,1,MIA,Makai Lemon,WR,USC,0.52,4.25,3.898,0.331
+12,1,DAL,Kayden McDonald,DL,Ohio State,0.7,15.32,3.882,0.247
+13,1,SF,Chase Bisontis,IOL,Texas A&M,0.11,20.03,4.014,0.21
+14,1,BAL,Akheem Mesidor,EDGE,Miami (FL),0.16,5.77,4.206,0.48
+15,1,PIT,Ty Simpson,QB,Alabama,0.14,18.5,4.329,0.288
+16,1,MIA,KC Concepcion,WR,Texas A&M,0.32,24.12,3.72,0.331
+17,1,DET,Malachi Lawrence,EDGE,UCF,0.24,20.11,3.971,0.385
+18,1,MIN,Dillon Thieneman,S,Oregon,0.59,0.49,4.093,0.495
+19,1,CAR,Kenyon Sadiq,TE,Oregon,0.39,5.02,3.701,0.24
+20,1,DAL,Peter Woods,DL,Clemson,0.57,29.18,3.827,0.247
+21,1,PIT,Omar Cooper Jr.,WR,Indiana,0.11,18.04,3.28,0.288
+22,1,LAC,Denzel Boston,WR,Washington,0.29,25.5,3.805,0.16
+23,1,PHI,Emmanuel McNeil-Warren,S,Toledo,0.58,18.39,3.784,0.473
+24,1,CLE,Blake Miller,OT,Clemson,0.29,23.75,4.529,0.383
+25,1,CHI,Avieon Terrell,CB,Clemson,0.44,35.62,3.431,0.48
+26,1,BUF,Colton Hood,CB,Tennessee,0.4,16.88,3.988,0.43
+27,1,TB,Jermod McCoy,CB,Tennessee,0.1,15.89,3.063,0.455
+28,1,HOU,Kadyn Proctor,OT,Alabama,0.38,8.03,3.506,0.284
+29,1,KC,Max Iheanachor,OT,Arizona State,0.3,21.69,3.125,0.199
+30,1,TB,T.J. Parker,EDGE,Clemson,0.11,32.43,2.885,0.319
+31,1,NE,Caleb Lomu,OT,Utah,0.21,23.63,3.262,0.242
+32,1,SEA,Jadarian Price,RB,Notre Dame,0.3,53.79,2.719,0.186
+33,2,NYJ,Eli Stowers,TE,Vanderbilt,0.41,57.77,2.812,0.127
+34,2,ARI,Zion Young,EDGE,Missouri,0.32,68.51,3.148,0.115
+35,2,TEN,Anthony Hill Jr.,LB,Texas,0.26,57.1,2.811,0.127
+36,2,LV,Caleb Banks,DL,Florida,0.25,50.18,2.746,0.071
+37,2,NYG,Chris McClellan,DL,Missouri,0.1,60.88,2.706,0.199
+38,2,HOU,Max Klare,TE,Ohio State,0.33,55.21,2.468,0.15
+39,2,CLE,Jacob Rodriguez,LB,Texas Tech,0.58,101.63,2.917,0.219
+40,2,KC,Christen Miller,DL,Georgia,0.09,87.74,2.015,0.15
+41,2,CIN,Jake Golday,LB,Cincinnati,0.22,102.47,2.033,0.069
+42,2,NO,Emmett Johnson,RB,Nebraska,0.16,81.31,2.096,0.058
+43,2,MIA,Lee Hunter,DL,Texas Tech,0.21,72.94,2.157,0.219
+44,2,NYJ,Oscar Delp,TE,Georgia,0.71,60.04,2.412,0.127
+45,2,BAL,R Mason Thomas,EDGE,Oklahoma,0.35,76.38,2.447,0.315
+46,2,TB,Dani Dennis-Sutton,EDGE,Penn State,0.23,72.14,1.825,0.245
+47,2,IND,Jonah Coleman,RB,Washington,0.38,88.92,1.958,0.35
+48,2,ATL,Gracen Halton,DL,Oklahoma,0.3,143.71,2.481,0.126
+49,2,MIN,Nick Singleton,RB,South Carolina,0.15,15.55,2.087,0.327
+50,2,DET,Mike Washington Jr.,RB,Arkansas,0.14,68.81,1.986,0.25
+51,2,CAR,Keyron Crawford,EDGE,Auburn,0.21,73.31,1.932,0.157
+52,2,GB,Gennings Dunker,OT,Iowa,0.15,186.96,1.759,0.289
+53,2,PIT,Carson Beck,QB,Miami (FL),0.67,168.3,3.155,0.189
+54,2,PHI,Gabe Jacas,EDGE,Texas Tech,0.28,77.08,1.899,0.25
+55,2,LAC,Chris Bell,WR,Louisville,0.37,139.5,2.052,0.059
+56,2,JAX,Haynes King,QB,Penn State,0.15,88.79,1.645,0.139
+57,2,CHI,Bud Clark,S,TCU,0.29,106.13,1.854,0.157
+58,2,SF,Chris Brazzell,WR,Auburn,0.15,75.27,2.028,0.136
+59,2,HOU,Garrett Nussmeier,QB,LSU,0.14,83.42,1.805,0.15
+60,2,CHI,Luke Altmyer,QB,USC,0.15,78.62,1.738,0.157
+61,2,LAR,Cole Payton,QB,Tennessee,0.15,109.53,2.242,0.399
+62,2,DEN,Germie Bernard,WR,Alabama,0.12,76.43,2.732,0.157
+63,2,NE,Connor Lew,IOL,Alabama,0.33,93.2,1.946,0.189
+64,2,SEA,Daylen Everette,CB,Georgia,0.07,59.43,1.482,0.151
+65,3,ARI,Drew Allar,QB,Penn State,0.26,114.66,1.992,0.115
+66,3,TEN,Bryce Lance,WR,North Dakota State,0.08,81.32,1.578,0.127
+67,3,LV,Taylen Green,QB,Arkansas,0.25,83.4,2.66,0.071
+68,3,PHI,Demond Claiborne,RB,Illinois,0.15,123.74,1.895,0.25
+69,3,HOU,Josiah Trotter,LB,Missouri,0.09,73.43,1.545,0.15
+70,3,CLE,Logan Jones,IOL,Iowa,0.13,115.5,1.655,0.219
+71,3,WAS,Michael Trigg,TE,Tennessee,0.27,76.38,1.997,0.084
+72,3,CIN,Riley Nowakowski,TE,Michigan,0.15,72.31,1.597,0.069
+73,3,NO,Sawyer Robertson,QB,Ohio State,0.15,-3.15,1.986,0.058
+74,3,KC,Chandler Rivers,CB,Duke,0.35,102.68,1.764,0.15
+75,3,MIA,Diego Pavia,QB,Vanderbilt,0.21,173.54,2.233,0.219
+76,3,PIT,Desmond Reid,RB,North Dakota State,0.15,75.66,2.867,0.189
+77,3,TB,Cade Klubnik,QB,LSU,0.15,71.58,1.54,0.147
+78,3,IND,Joey Aguilar,QB,UConn,0.15,72.64,1.519,0.21
+79,3,ATL,Cashius Howell,EDGE,Texas A&M,0.15,81.36,1.53,0.126
+80,3,BAL,Tacario Davis,CB,Washington,0.21,65.99,2.055,0.189
+81,3,JAX,Brandon Cisse,CB,South Carolina,0.11,152.01,1.467,0.139
+82,3,MIN,Keylan Rutledge,IOL,Penn State,0.15,76.39,1.696,0.196
+83,3,CAR,Lorenzo Styles Jr.,CB,Ohio State,0.13,164.37,1.537,0.157
+84,3,GB,Davison Igbinosun,CB,Ohio State,0.18,109.26,1.676,0.173
+85,3,PIT,Chris Johnson,CB,Baylor,0.15,144.21,2.145,0.189
+86,3,LAC,De'Zhaun Stribling,WR,Mississippi,0.24,110.43,1.684,0.059
+87,3,MIA,Joey Aguilar,QB,Tennessee,0.21,161.96,1.674,0.219
+88,3,JAX,Keyshaun Elliott,LB,Arizona State,0.25,77.63,1.397,0.139
+89,3,CHI,Keionte Scott,CB,Miami (FL),0.18,108.93,1.528,0.157
+90,3,MIA,Cade Klubnik,QB,Clemson,0.12,167.39,1.638,0.219
+91,3,BUF,Julian Neal,CB,Arkansas,0.17,148.22,2.059,0.136
+92,3,DAL,Rayshaun Benny,DL,Michigan,0.47,125.74,1.965,0.162
+93,3,LAR,Zachariah Branch,WR,Georgia,0.1,84.42,1.821,0.399
+94,3,MIA,Athan Kaliakmanis,QB,Rutgers,0.1,171.47,1.389,0.219
+95,3,NE,Emmanuel Pregnon,IOL,Oregon,0.24,73.52,1.507,0.189
+96,3,SEA,Sam Hecht,IOL,Kansas State,0.16,109.26,1.262,0.151
+97,3,MIN,D'angelo Ponds,CB,Indiana,0.14,88.41,1.707,0.196
+98,3,PHI,Genesis Smith,S,Arizona,0.12,152.45,1.329,0.25
+99,3,PIT,Joe Fagnano,QB,UConn,0.07,167.15,1.665,0.189
+100,3,JAX,Darrell Jackson Jr.,DL,Florida State,0.06,104.82,1.318,0.139
+101,4,TEN,Derrick Moore,EDGE,Michigan,0.13,107.67,1.232,0.127
+102,4,LV,Nate Johnson,QB,Utah,0.08,190.98,1.402,0.071
+103,4,NYJ,Eli Raridon,TE,Notre Dame,0.17,95.46,1.182,0.127
+104,4,ARI,Caden Curry,EDGE,Ohio State,0.17,139.52,1.562,0.115
+105,4,NYG,Caleb Downs,S,Ohio State,0.32,-7.74,1.719,0.199
+106,4,HOU,Billy Schrauth,IOL,Notre Dame,0.22,126.54,1.267,0.15
+107,4,CLE,Trey Zuhn III,OT,Texas A&M,0.28,71.38,1.542,0.219
+108,4,DEN,Antonio Williams,WR,Clemson,0.35,112.61,1.797,0.157
+109,4,KC,Treydan Stukes,CB,Arizona,0.23,114.73,1.26,0.15
+110,4,CIN,Rueben Bain,EDGE,Miami (FL),0.19,-5.22,1.395,0.069
+111,4,DEN,Kaytron Allen,RB,Penn State,0.16,142.54,1.599,0.157
+112,4,DAL,Wesley Williams,DL,Duke,0.12,156.0,1.46,0.162
+113,4,IND,Ja'Kobi Lane,WR,USC,0.27,111.95,1.146,0.21
+114,4,PHI,Robert Spears-Jennings,S,Oklahoma,0.11,162.24,1.144,0.25
+115,4,BAL,VJ Payne,S,Kansas State,0.08,137.92,1.39,0.189
+116,4,TB,Logan Fano,EDGE,Utah,0.11,142.52,1.147,0.147
+117,4,LV,Jake Retzlaff,QB,Tulane,0.12,187.22,1.279,0.071
+118,4,DET,L.T. Overton,EDGE,Alabama,0.22,150.33,1.388,0.25
+119,4,CAR,Max Llewellyn,EDGE,Iowa,0.13,144.54,1.436,0.157
+120,4,GB,Will Lee III,CB,Texas A&M,0.12,136.36,1.19,0.173
+121,4,PIT,Miller Moss,QB,Louisville,0.08,189.7,1.234,0.189
+122,4,ATL,Anthony Lucas,EDGE,USC,0.09,154.79,1.248,0.126
+123,4,LAC,Malachi Fields,WR,Notre Dame,0.2,127.18,1.24,0.059
+124,4,JAX,Bryce Boettcher,LB,Oregon,0.11,125.54,0.997,0.139
+125,4,NE,Jake Slaughter,IOL,Florida,0.19,116.4,1.269,0.189
+126,4,BUF,Zane Durant,DL,Penn State,0.1,155.61,1.257,0.136
+127,4,SF,Jude Bowry,OT,Boston College,0.19,166.91,1.305,0.136
+128,4,DET,Tyre West,EDGE,Tennessee,0.1,182.39,1.114,0.15
+129,4,CHI,Michael Taaffe,S,Texas,0.13,177.95,1.293,0.157
+130,4,MIA,A.J. Haulcy,S,LSU,0.1,106.65,1.194,0.219
+131,4,NE,Travis Burke,OT,Memphis,0.1,185.23,1.151,0.189
+132,4,NO,Elijah Sarratt,WR,Indiana,0.34,125.03,1.506,0.058
+133,4,SF,Brian Parker II,OT,Duke,0.16,172.69,1.189,0.136
+134,4,LV,Jack Strand,QB,Minnesota State-Moorhead,0.12,184.14,1.373,0.071
+135,4,PIT,Behren Morton,QB,Texas Tech,0.1,182.96,1.31,0.189
+136,5,NO,Josh Cameron,WR,Baylor,0.11,140.06,1.11,0.058
+137,5,PHI,Patrick Payton,EDGE,LSU,0.13,163.05,1.189,0.25
+138,5,SF,Kage Casey,OT,Boise State,0.08,159.5,1.146,0.136
+139,5,SF,Markel Bell,OT,Miami (FL),0.14,192.5,1.176,0.136
+140,5,NYJ,Sam Roush,TE,Stanford,0.16,82.77,1.108,0.127
+141,5,HOU,Fernando Carmona,IOL,Arkansas,0.06,167.75,0.953,0.15
+142,5,TEN,Nadame Tucker,EDGE,Western Michigan,0.08,173.41,1.01,0.127
+143,5,ARI,Mikail Kamara,EDGE,Indiana,0.1,165.62,1.286,0.115
+144,5,TEN,Jack Pyburn,EDGE,LSU,0.1,163.81,1.029,0.127
+145,5,NYG,Josh Thompson,IOL,LSU,0.13,174.94,1.359,0.199
+146,5,CLE,Monroe Freeling,OT,Georgia,0.23,15.91,1.419,0.219
+147,5,WAS,Zxavian Harris,DL,Mississippi,0.11,103.22,1.316,0.084
+148,5,KC,Justin Joly,TE,NC State,0.09,122.71,1.128,0.15
+149,5,CLE,Kyle Louis,LB,Pittsburgh,0.09,154.8,1.109,0.219
+150,5,NO,Tyren Montgomery,WR,John Carroll,0.07,195.34,0.972,0.058
+151,5,MIA,Mark Gronowski,QB,Iowa,0.09,194.17,1.144,0.219
+152,5,DAL,Rene Konga,DL,Louisville,0.16,168.05,1.337,0.162
+153,5,GB,Ephesians Prysock,CB,Washington,0.15,161.54,1.15,0.173
+154,5,BAL,Jackson Kuwatch,EDGE,Miami (OH),0.08,193.19,1.227,0.189
+155,5,TB,Jimmy Rolder,LB,Michigan,0.08,143.43,1.048,0.147
+156,5,IND,Eric McAlister,WR,TCU,0.11,180.55,0.964,0.21
+157,5,DET,Tyreak Sapp,EDGE,Florida,0.19,174.58,1.195,0.15
+158,5,CAR,Ethan Burke,EDGE,Texas,0.13,175.43,1.105,0.157
+159,5,CAR,Trey Moore,EDGE,Texas,0.1,170.27,1.191,0.157
+160,5,GB,Nyjalik Kelly,EDGE,UCF,0.09,172.07,1.093,0.173
+161,5,PIT,Maalik Murphy,QB,Oregon State,0.1,189.7,1.338,0.189
+162,5,BAL,Domani Jackson,CB,Alabama,0.09,176.71,1.213,0.189
+163,5,MIN,Latrell McCutchin,CB,Houston,0.07,179.31,1.056,0.196
+164,5,JAX,Jason Moore,DL,Ohio State,0.1,185.96,0.964,0.139
+165,5,BUF,Andre Fuller,CB,Toledo,0.1,187.87,1.371,0.136
+166,5,JAX,Devon Marshall,CB,NC State,0.1,193.66,1.11,0.139
+167,5,HOU,Beau Stephens,IOL,Iowa,0.13,156.8,1.044,0.15
+168,5,BUF,Charles Demmings,CB,Stephen F. Austin,0.1,182.84,1.122,0.136
+169,5,KC,TJ Hall,CB,Iowa,0.11,162.88,0.89,0.15
+170,5,DEN,Jaydn Ott,RB,Oklahoma,0.14,201.81,1.435,0.157
+171,5,NE,Joshua Padilla,IOL,Ohio State,0.11,181.65,0.965,0.189
+172,5,NO,Colbie Young,WR,Georgia,0.14,197.06,1.047,0.058
+173,5,BAL,Michael Heldman,EDGE,Central Michigan,0.07,180.43,1.163,0.189
+174,5,BAL,Zach Durfee,EDGE,Washington,0.06,174.92,1.38,0.189
+175,5,LV,Thomas Castellanos,QB,Florida State,0.08,190.62,1.263,0.071
+176,5,KC,Toriano Pride,CB,Missouri,0.14,181.23,0.898,0.15
+177,5,DAL,Anterio Thompson,DL,Washington,0.15,176.01,1.281,0.162
+178,6,PHI,Dalton Johnson,S,Arizona,0.18,183.54,0.978,0.25
+179,6,NYJ,Jack Endries,TE,Texas,0.05,146.77,0.832,0.127
+180,6,DAL,Damonic Williams,DL,Oklahoma,0.11,177.23,1.129,0.162
+181,6,DET,Mason Reiger,EDGE,Wisconsin,0.1,172.77,1.024,0.25
+182,6,BUF,Dontay Corleone,DL,Cincinnati,0.1,169.35,1.118,0.136
+183,6,ARI,Bryan Thomas Jr.,EDGE,South Carolina,0.1,181.55,0.94,0.115
+184,6,TEN,Vincent Anthony Jr.,EDGE,Duke,0.08,176.61,0.934,0.127
+185,6,LV,Jalon Daniels,QB,Kansas,0.11,183.97,1.064,0.071
+186,6,NYG,Logan Taylor,IOL,Boston College,0.19,180.43,1.192,0.199
+187,6,WAS,Albert Regis,DL,Texas A&M,0.09,149.45,0.941,0.084
+188,6,SEA,Walker Parks,IOL,Clemson,0.12,182.5,0.834,0.151
+189,6,CIN,Febechi Nwaiwu,IOL,Oklahoma,0.06,173.5,0.862,0.069
+190,6,NO,Chase Roberts,WR,BYU,0.13,219.02,0.847,0.058
+191,6,NE,Micah Morris,IOL,Georgia,0.08,163.59,0.933,0.189
+192,6,NYG,John Bock II,IOL,Tulane,0.07,194.0,1.204,0.199
+193,6,NYG,James Neal,IOL,Iowa State,0.1,177.46,1.207,0.199
+194,6,TEN,Dayon Hayes,EDGE,Texas A&M,0.08,182.25,0.782,0.127
+195,6,TB,Deontae Lawson,LB,Alabama,0.06,137.2,0.881,0.147
+196,6,MIN,Devonta Smith,CB,Notre Dame,0.12,188.99,0.966,0.196
+197,6,PHI,Louis Moore,S,Indiana,0.11,189.5,0.902,0.25
+198,6,NE,Pat Coogan,IOL,Indiana,0.11,171.66,0.89,0.189
+199,6,CIN,Collin Wright,CB,Stanford,0.08,193.56,0.823,0.069
+200,6,CAR,Aidan Hubbard,EDGE,Northwestern,0.12,180.06,0.938,0.157
+201,6,GB,Bobby Jamison-Travis,DL,Auburn,0.13,172.43,1.017,0.173
+202,6,NE,Tomas Rimac,IOL,Virginia Tech,0.08,173.68,0.926,0.189
+203,6,JAX,Brandon Cleveland,DL,NC State,0.09,146.67,0.843,0.139
+204,6,LAC,Jalen Farmer,IOL,Kentucky,0.22,192.94,0.914,0.059
+205,6,DET,Jaybron Harvey,EDGE,North Carolina,0.06,182.5,1.007,0.25
+206,6,CLE,Jack Kelly,LB,BYU,0.11,180.15,0.879,0.219
+207,6,LAR,Deion Burks,WR,Oklahoma,0.12,160.95,1.005,0.399
+208,6,LV,Kaidon Salter,QB,Colorado,0.06,201.39,0.953,0.071
+209,6,WAS,Aaron Graves,DL,Iowa,0.13,176.3,0.946,0.084
+210,6,KC,Jalen Huskey,CB,Maryland,0.11,193.45,0.743,0.15
+211,6,BAL,Eric O'Neill,EDGE,Rutgers,0.05,183.99,0.937,0.189
+212,6,NE,Kendal Daniels,S,Oklahoma,0.1,180.63,0.83,0.189
+213,6,DET,Ethan Hurkett,EDGE,Iowa,0.09,185.48,1.138,0.15
+214,6,IND,Ayden Williams,WR,Mississippi State,0.07,203.64,0.751,0.21
+215,6,ATL,Cian Slone,EDGE,NC State,0.09,183.44,1.007,0.126
+216,6,PIT,Tyler Van Dyke,QB,SMU,0.1,198.82,0.966,0.189
+217,6,ARI,Khordae Sydnor,EDGE,Vanderbilt,0.11,184.19,1.025,0.115
+218,6,DAL,Tim Keenan III,DL,Alabama,0.07,176.38,1.061,0.162
+219,6,LV,Owen McCown,QB,UTSA,0.11,200.96,0.955,0.071
+220,6,BUF,Hezekiah Masses,CB,California,0.09,170.37,0.944,0.136
+221,7,CIN,Kaleb Elarms-Orr,LB,TCU,0.11,174.98,0.788,0.069
+222,7,DET,Derion Gullette,EDGE,Mississippi State,0.08,184.02,0.996,0.25
+223,7,WAS,Nick Barrett,DL,South Carolina,0.1,171.51,1.026,0.084
+224,7,PIT,Preston Stone,QB,Northwestern,0.07,207.08,0.913,0.189
+225,7,TEN,Joshua Weru,EDGE,Kenya,0.08,185.92,0.762,0.127
+226,7,CIN,Aiden Fisher,LB,Indiana,0.08,174.8,0.788,0.069
+227,7,MIA,Cole Wisniewski,S,Texas Tech,0.08,185.59,0.962,0.219
+228,7,NYJ,Joe Royer,TE,Cincinnati,0.16,146.58,0.833,0.127
+229,7,TB,Taurean York,LB,Texas A&M,0.1,146.41,0.837,0.147
+230,7,PIT,Kyron Drones,QB,Virginia Tech,0.11,199.22,0.964,0.189
+231,7,ATL,Jordan van den Berg,DL,Georgia Tech,0.08,181.72,0.886,0.126
+232,7,LAR,Kevin Coleman Jr.,WR,Missouri,0.12,176.32,0.906,0.399
+233,7,JAX,Landon Robinson,DL,Navy,0.11,185.09,0.796,0.139
+234,7,MIN,Avery Smith,CB,Toledo,0.08,206.67,0.851,0.196
+235,7,MIN,Kolbey Taylor,CB,Vanderbilt,0.07,202.84,0.772,0.196
+236,7,GB,Thaddeus Dixon,CB,North Carolina,0.11,194.74,0.967,0.173
+237,7,PIT,Maverick McIvor,QB,Western Kentucky,0.06,207.51,0.91,0.189
+238,7,MIA,Jalen Stroman,S,Notre Dame,0.08,189.85,0.846,0.219
+239,7,CHI,Jakobe Thomas,S,Miami (FL),0.09,183.35,1.033,0.157
+240,7,JAX,David Blay,DL,Miami (FL),0.09,186.95,0.787,0.139
+241,7,CHI,Bishop Fitzgerald,S,USC,0.1,170.87,1.043,0.157
+242,7,NYJ,Jameial Lyons,EDGE,Penn State,0.04,184.99,0.826,0.127
+243,7,HOU,Keagen Trost,IOL,Missouri,0.15,171.77,0.871,0.15
+244,7,MIN,Jeadyn Lukus,CB,Clemson,0.09,204.52,0.865,0.196
+245,7,JAX,Gabriel Rubio,DL,Notre Dame,0.07,186.09,0.791,0.139
+246,7,DEN,Adam Randall,RB,Clemson,0.17,176.03,1.251,0.157
+247,7,NE,Austin Leausa,IOL,BYU,0.12,179.13,0.806,0.189
+248,7,CLE,Dametrious Crownover,OT,Texas A&M,0.12,194.35,0.902,0.219
+249,7,IND,E.J. Williams,WR,Indiana,0.08,206.8,0.729,0.21
+250,7,BAL,TJ Guy,EDGE,Michigan,0.08,188.01,1.09,0.189
+251,7,LAR,Donaven Mcculley,WR,Michigan,0.09,210.65,0.931,0.399
+252,7,LAR,Reggie Virgil,WR,Texas Tech,0.14,195.72,1.013,0.399
+253,7,BAL,Quintayvious Hutchins,EDGE,Boston College,0.05,187.68,0.972,0.189
+254,7,IND,Jerand Bradley,WR,Kansas State,0.16,229.59,0.794,0.21
+255,7,GB,Deven Eastern,DL,Minnesota,0.07,178.84,0.862,0.173
+256,7,DEN,Kaelon Black,RB,Indiana,0.13,197.68,1.257,0.157
+257,7,DEN,Jamarion Miller,RB,Alabama,0.08,211.16,1.171,0.157
