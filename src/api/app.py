@@ -358,34 +358,49 @@ def _displayed_probability(raw_sim_prob: float,
                             player: str | None = None,
                             team: str | None = None,
                             slot: int | None = None) -> float:
-    """Return the probability to SHOW on the UI for a pick.
+    """The MODEL's estimate of P(team drafts player at this slot in real life).
 
-    Priority:
-      1. Kalshi team-landing market for this (player, team) — real money
-         on "will team X draft player Y" is the most honest estimate of
-         actual draft-day probability.
-      2. If no market: apply epistemic haircut to the sim frequency,
-         recognizing the model can't capture everything.
+    Integrates two independent signals:
 
-    Raw sim frequency alone overstates certainty — even a 100/100 modal
-    pick in our sim isn't certain in reality (last-minute trades, private
-    intel, medical news, draft-day surprises).
+      - Model sim conviction — raw frequency from our MC. Encodes structural
+        info the market may under-price (team scheme, coaching tree, GM
+        affinity, visit signals, roster need, cap posture).
+      - Market prior — Kalshi team-landing price. Aggregates real money
+        across many traders, captures info our model may miss (locker-room
+        talk, private intel, late trade rumors).
+
+    Bayesian-style linear blend so neither signal dominates. Weights depend
+    on whether market coverage exists for this (player, team) pair.
+
+    Before blending, the model prior is haircut for epistemic uncertainty
+    (the sim doesn't know draft-day surprises); after blending, the result
+    is hard-capped at 92% since nothing about the draft is truly certain.
     """
-    # Priority 1: direct market-implied probability
+    # Model side — sim frequency with epistemic discount
+    if raw_sim_prob <= 0.20:
+        model_prior = raw_sim_prob  # low-confidence sim already expresses uncertainty
+    else:
+        discount = 0.15
+        if slot and slot > 5:
+            discount += min(0.08, (slot - 5) * 0.005)
+        model_prior = raw_sim_prob * (1.0 - discount)
+
+    # Market side — Kalshi team-landing probability (if covered)
+    market_prob = None
     if player and team:
         landings = _load_market_landings()
         market_prob = (landings.get(player) or {}).get(team)
-        if market_prob is not None and market_prob > 0:
-            return round(float(market_prob), 3)
 
-    # Priority 2: haircut the raw sim frequency
-    if raw_sim_prob <= 0.20:
-        return round(raw_sim_prob, 3)
-    base_discount = 0.15
-    if slot and slot > 5:
-        base_discount += min(0.08, (slot - 5) * 0.005)
-    calibrated = raw_sim_prob * (1.0 - base_discount)
-    return round(min(0.88, calibrated), 3)
+    if market_prob is None or market_prob <= 0:
+        return round(min(0.88, model_prior), 3)
+
+    # Blend. 55% market / 45% model — slight market tilt since real money
+    # aggregates a broader info set than our agents, but model weight is
+    # significant because it has structural signals the market may under-price.
+    w_market = 0.55
+    blended = w_market * float(market_prob) + (1.0 - w_market) * model_prior
+
+    return round(min(0.92, max(0.01, blended)), 3)
 
 
 # Back-compat alias so existing call sites keep working.
