@@ -629,15 +629,15 @@ def build_independent_board(config: dict) -> pd.DataFrame:
         # Applies to ALL prospects (PFF or no-PFF) with 12+ tags, scaled by
         # prem count. Removes binary threshold cliff.
         def _smooth_offset(prem_count, tag_total, has_pff_flag):
-            # Any prospect with 10+ tags gets SOME floor (coverage signal).
-            # Offset scales down with more premium tags.
-            if prem_count <= 0 and tag_total < 10:
+            # Require at least 1 premium tag OR 15+ tags for floor to engage
+            # (prevents R3-R4 enrichment from auto-promoting mid-tier prospects).
+            if prem_count <= 0 and tag_total < 15:
                 return None
-            base = {0: 45, 1: 30, 2: 18, 3: 10, 4: 6, 5: 4}.get(
+            base = {0: 60, 1: 30, 2: 18, 3: 10, 4: 6, 5: 4}.get(
                 min(int(prem_count), 5), 4)
             if not has_pff_flag: base += 6
             return base
-        floorable = tag_count >= 10
+        floorable = (tag_count >= 12) & ((prem_hits >= 1) | (tag_count >= 15))
         for idx in read.index[floorable]:
             prem = int(prem_hits.loc[idx] or 0)
             tt = int(tag_count.loc[idx] or 0)

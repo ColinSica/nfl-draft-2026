@@ -6,6 +6,7 @@ import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
+import { Positions } from './pages/Positions';
 import { Watchlist } from './pages/Watchlist';
 import { TeamCompare } from './pages/TeamCompare';
 import { AboutModal } from './components/AboutModal';
@@ -22,6 +23,7 @@ const NAV_LINKS = [
   { to: '/',          label: 'Home',        end: true },
   { to: '/teams',     label: 'Teams',       end: true },
   { to: '/prospects', label: 'Prospects',   end: true },
+  { to: '/positions', label: 'Positions',   end: true },
   { to: '/simulate',  label: 'First round', end: true },
   { to: '/compare',   label: 'Compare',     end: true },
   { to: '/method',    label: 'Method',      end: true },
@@ -241,6 +243,7 @@ function AppInner() {
           <Route path="/method" element={<Method />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/team-compare" element={<TeamCompare />} />
+          <Route path="/positions" element={<Positions />} />
         </Routes>
       </main>
       <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t border-ink-edge">

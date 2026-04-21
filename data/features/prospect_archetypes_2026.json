@@ -1329,17 +1329,26 @@
   },
   "Drew Allar": {
     "tags": [
+      "2024_cfp_experience",
+      "6_5_prototype_build",
+      "accuracy_inconsistent_intermediate",
+      "arm_talent_all_levels",
+      "big_arm_thrower",
+      "developmental_day_2",
       "effective_on_go_balls,_comebacks,_fade_routes",
+      "escapability_limited",
+      "excellent_deep_ball_thrower_(15_tds_vs_2_ints_on_20+_yard_throws_last_two_seasons)",
+      "experience_in_pro_style_offense",
+      "penn_state_multi_year_starter",
+      "play_action_heavy",
+      "pocket_passer",
+      "pocket_passer_profile",
+      "pro_style",
+      "pro_style_under_center",
+      "progression_reader_developing",
       "prototypical_size",
       "strong_arm_talent",
-      "pro_style",
-      "big_arm_thrower",
-      "pocket_passer",
-      "developmental_day_2",
-      "vertical_passing",
-      "play_action_heavy",
-      "excellent_deep_ball_thrower_(15_tds_vs_2_ints_on_20+_yard_throws_last_two_seasons)",
-      "experience_in_pro_style_offense"
+      "vertical_passing"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 8
@@ -1361,23 +1370,32 @@
   "Garrett Nussmeier": {
     "tags": [
       "17_ints_over_two_starting_seasons_shows_aggressiveness_and_risk_tolerance",
+      "17_ints_two_seasons",
+      "aggressive_risk_tolerance",
       "air_raid_roots",
+      "air_raid_system_fit",
       "anticipation_thrower",
       "backup_qb",
       "developmental",
+      "developmental_backup_qb",
       "experience_starting_at_lsu",
       "field_stretcher",
       "gunslinger",
       "gunslinger_mentality",
       "high_volume_production",
+      "lsu_multi_year_starter",
       "off_platform_accuracy",
+      "off_platform_throw_talent",
       "play_action_system_fit",
+      "pocket_movement_adequate",
       "quick_game",
       "quick_release",
       "spread",
       "spread_qb_fit",
       "streaky_decisionmaker",
-      "two_year_starter_lsu"
+      "two_year_starter_lsu",
+      "undersized_qb_frame",
+      "west_coast_system_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 5
@@ -1396,14 +1414,24 @@
   },
   "Cole Payton": {
     "tags": [
-      "arm_talent_with_rushing_upside",
-      "777_rushing_yards_and_31_career_tds_at_north_dakota_state",
-      "developmental",
-      "rpo",
-      "gadget_qb",
-      "strong_accuracy",
+      "31_career_rushing_tds",
       "4.56_speed_multi_dimensional_athlete",
+      "777_rushing_yards_and_31_career_tds_at_north_dakota_state",
+      "777_rushing_yards_career",
+      "arm_strength_flashes",
+      "arm_talent_with_rushing_upside",
+      "backup_qb_projection",
+      "development_nfl_jump_concerns",
+      "developmental",
+      "dual_threat_qb_profile",
+      "fcs_production_level",
       "gadget",
+      "gadget_qb",
+      "gadget_qb_package_fit",
+      "north_dakota_state_multi_year_starter",
+      "rpo",
+      "rpo_system_fit",
+      "strong_accuracy",
       "swiss_army_role_player"
     ],
     "_source": "big_board_reasoning",
@@ -1483,16 +1511,25 @@
   },
   "Emmett Johnson": {
     "tags": [
-      "spread",
-      "three_down_capability",
-      "pass_game_rb",
-      "fourth_nationally_in_forced_missed_tackles_(93)",
+      "big_ten_production_pedigree",
+      "compact_frame_burst",
       "compact_frame_generates_burst_through_the_hole",
-      "zone",
-      "three_down_back",
+      "contact_balance_plus",
       "elite_receiving_production_(85_catches_over_two_seasons)",
+      "forced_missed_tackles_93_2024",
+      "fourth_nationally_in_forced_missed_tackles_(93)",
+      "nebraska_multi_year_starter",
+      "one_cut_decisive_runner",
+      "one_cut_runner_with_explosive_burst",
       "pass_catching_rb",
-      "one_cut_runner_with_explosive_burst"
+      "pass_game_rb",
+      "pass_protection_developing",
+      "receiving_back_capable",
+      "spread",
+      "three_down_back",
+      "three_down_capability",
+      "zone",
+      "zone_scheme_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -1810,14 +1847,24 @@
   },
   "Joshua Josephs": {
     "tags": [
+      "26_pressures_(career_high)",
+      "3_4_5_tech_fit",
       "3_4_olb",
       "4_3_de",
+      "4_3_strongside_de_fit",
+      "bull_rush_developmental",
       "developmental_pass_rusher",
-      "long_arms_(83â…ž\"_wingspan)_winning_at_lighter_weight",
+      "edge_setter_run_game",
+      "inside_stunt_contributor",
       "length_based_edge",
+      "limited_bend_athlete",
+      "long_arms_(83â…ž\"_wingspan)_winning_at_lighter_weight",
+      "long_arms_83_wingspan",
+      "power_over_finesse_rusher",
       "sets_firm_edge",
-      "26_pressures_(career_high)",
-      "toughness_against_tackles"
+      "tennessee_multi_year_starter",
+      "toughness_against_tackles",
+      "two_gap_capable"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -1864,13 +1911,23 @@
   },
   "Romello Height": {
     "tags": [
-      "sub_package_rusher",
-      "creates_effective_pass_rush_production",
-      "late_bloomer",
-      "late_season_11.5_tfls,_10_sacks,_2_ffs",
       "3_4_olb",
+      "3_4_olb_fit",
+      "bend_around_the_arc",
+      "creates_effective_pass_rush_production",
+      "hand_fighter",
+      "inside_counter_spin",
+      "late_bloomer",
+      "late_bloomer_production_2025",
+      "late_season_11.5_tfls,_10_sacks,_2_ffs",
+      "stand_up_rusher",
+      "sub_package_rusher",
+      "sub_package_weapon",
+      "tenacious",
+      "texas_tech_transfer_production",
+      "underdeveloped_run_defense",
       "undersized_edge",
-      "tenacious"
+      "wide_9_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -1891,11 +1948,21 @@
   },
   "Keyron Crawford": {
     "tags": [
-      "career_best_9.5_tfls",
       "3_4_olb",
+      "3_4_olb_convert",
+      "ascending_rusher_trajectory",
+      "auburn_one_year_production",
+      "career_best_9.5_tfls",
+      "corner_around_promise",
+      "first_step_quickness",
+      "hand_usage_raw",
+      "long_levered_edge",
+      "processor_slow_vs_run",
       "raw_high_upside_edge",
+      "sub_package_rusher",
       "two_point_stance_flexibility",
-      "corner_around_promise"
+      "underdeveloped_counter_moves",
+      "wide_9_rotational_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -1914,11 +1981,21 @@
   },
   "Darrell Jackson Jr.": {
     "tags": [
-      "developmental_length_based_edge",
-      "5_tech",
-      "power_flashes",
       "3_4_de",
-      "massive_86_inch_wingspan"
+      "3_4_de_fit",
+      "5_tech",
+      "5_tech_projection",
+      "86_wingspan_length_edge",
+      "developmental_length_based_edge",
+      "florida_state_transfer",
+      "limited_pass_rush_moves",
+      "massive_86_inch_wingspan",
+      "power_anchor_developmental",
+      "power_flashes",
+      "rotational_starter_ceiling",
+      "run_defense_first_role",
+      "stack_and_shed_flashes",
+      "two_gap_capable"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -2102,9 +2179,19 @@
   "DeMonte Capehart": {
     "tags": [
       "3_tech",
+      "4_3_under_fit",
+      "block_shedder_developmental",
       "clemson_disruptor",
+      "clemson_multi_year_rotation",
+      "length_and_power_interior_prospect",
+      "one_gap_penetrator",
+      "pass_rush_flashes_2025",
+      "penetrating_3_tech",
       "rotation_interior",
-      "length_and_power_interior_prospect"
+      "rotational_interior_dl",
+      "run_defense_inconsistent",
+      "senior_bowl_invite",
+      "short_area_quickness"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -2112,10 +2199,20 @@
   "Chris McClellan": {
     "tags": [
       "3_tech",
-      "rotational_interior",
-      "versatile_front_player",
+      "3_tech_one_gap_fit",
+      "block_shedder_developing",
+      "flashes_pass_rush_upside",
+      "missouri_transfer_from_florida",
+      "multi_front",
+      "pad_level_inconsistent",
+      "pass_rush_juice_glimpses",
+      "penetrating_interior_rusher",
       "plus_athletic_traits",
-      "multi_front"
+      "rotational_interior",
+      "rotational_interior_dl",
+      "run_defense_adequate",
+      "short_area_quickness",
+      "versatile_front_player"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -2135,11 +2232,21 @@
   },
   "Zxavian Harris": {
     "tags": [
-      "run_stuffing_nt",
-      "nt",
-      "six_blocked_kicks_in_career",
+      "0_1_tech_fit",
+      "1_tech",
+      "3_4_nose_fit",
+      "base_down_run_defender",
+      "block_occupier",
       "immediate_run_defense_impact",
-      "1_tech"
+      "limited_pass_rush_ceiling",
+      "mississippi_multi_year_rotation",
+      "nose_tackle_build",
+      "nt",
+      "run_stuffer_first",
+      "run_stuffing_nt",
+      "six_blocked_kicks_in_career",
+      "special_teams_block_history",
+      "two_gap_anchor"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -2347,24 +2454,44 @@
   },
   "Jaishawn Barham": {
     "tags": [
+      "3_4_inside_lb_fit",
+      "4_3_will_lb_fit",
       "4_sacks_23_pressures",
+      "4_sacks_23_pressures_2024",
+      "angles_to_ball_inconsistent",
+      "blitz_package_weapon",
+      "coverage_processor_developing",
+      "downhill_trigger",
       "edge_depth",
       "edge_rotation",
       "four_sacks_pass_rush_glimpses",
       "hybrid",
+      "michigan_transfer_from_maryland",
+      "pass_rush_flashes_from_off_ball",
       "potential_based_lb",
       "potential_over_production_evaluation",
-      "sam"
+      "sam",
+      "tackle_wrap_physical"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
   },
   "Bryce Boettcher": {
     "tags": [
-      "solid_tackler",
+      "4_3_mike_fit",
       "backup/rotational_lb",
+      "blitz_package_contributor",
+      "coverage_zone_match",
+      "mike",
+      "oregon_multi_year_starter",
       "run_defense_profile",
-      "mike"
+      "run_fits_sound",
+      "sideline_to_sideline_range_questions",
+      "solid_tackler",
+      "special_teams_contributor",
+      "tackle_wrap_physical",
+      "tampa_2_mike_fit",
+      "walk_on_origin_story"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -2500,15 +2627,25 @@
   "Bud Clark": {
     "tags": [
       "15_ints_and_21_pbus_in_four_seasons",
+      "angles_to_the_ball",
       "ball_hawk",
+      "ball_hawk_15_career_ints",
       "big_nickel",
       "captain_history",
+      "cover_3_middle_fit",
+      "cover_4_quarter_fit",
       "deep_half",
+      "deep_half_reader",
+      "free_safety_profile",
       "fs",
+      "range_traits",
       "safety_prospect",
       "secondary_depth",
+      "single_high_rep_fit",
       "six_college_season_veteran",
       "slot_receiver_and_deep_coverage_capability",
+      "tcu_multi_year_starter",
+      "undersized_frame_concern",
       "veteran_safety"
     ],
     "_source": "big_board_reasoning",
@@ -2534,10 +2671,13 @@
   "Jalon Kilgore": {
     "tags": [
       "'star'_position_coverage_versatility",
+      "21_pbus_career_ball_production",
       "21_pbus_in_33_starts",
       "big_nickel",
       "big_nickel_fit",
+      "blitz_package_contributor",
       "box_safety_fit",
+      "cover_4_quarter_fit",
       "downhill_trigger",
       "elite_combine_(10'10\"_broad)",
       "fills_alleys",
@@ -2546,9 +2686,13 @@
       "physical_run_support",
       "plus_tackling_box",
       "slot_agility_+_run_defense_physicality",
+      "slot_defender_cross_train",
       "slot_safety_hybrid",
+      "south_carolina_multi_year_starter",
+      "star_position_versatility",
       "strong_safety_fit",
       "sub_package_chess_piece",
+      "tackle_wrap_physical",
       "two_year_starter_sc"
     ],
     "_source": "big_board_reasoning",
@@ -2774,37 +2918,66 @@
   },
   "Chandler Rivers": {
     "tags": [
-      "effective_kick_block_contributor",
+      "442_speed_underwhelming",
+      "7_ints,_23_pbus",
+      "acc_multi_year_production",
       "cover_3",
+      "cover_3_sky_fit",
+      "duke_four_year_starter",
+      "effective_kick_block_contributor",
       "four_year_corner_(5'10\",_185)",
-      "technician_corner",
-      "plant_and_drive_ball_skills_at_4.4_speed",
       "off_zone",
-      "7_ints,_23_pbus"
+      "off_zone_cb",
+      "plant_and_drive_ball_skills",
+      "plant_and_drive_ball_skills_at_4.4_speed",
+      "slot_cross_train_potential",
+      "special_teams_kick_block",
+      "technician_corner",
+      "technician_corner_traits",
+      "undersized_boundary_concern"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
   },
   "Davison Igbinosun": {
     "tags": [
+      "53_career_starts_durability",
       "availability_king_(53_career_starts)",
-      "experienced_cb",
-      "fleet_receiver_matchups",
-      "press_match",
+      "boundary_cb_projection",
       "cover_1",
+      "cover_1_press_fit",
+      "cover_3_sky_fit",
+      "experienced_cb",
+      "flag_prone_downfield",
+      "fleet_receiver_matchups",
+      "long_speed_questions",
+      "ohio_state_multi_year_starter",
       "penalty_prone",
-      "run_defense_involvement"
+      "physical_press_corner",
+      "press_bail_technique",
+      "press_match",
+      "run_defense_involvement",
+      "zone_off_snaps"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 5
   },
   "Tacario Davis": {
     "tags": [
-      "press_man",
-      "cornerback_pedigree",
-      "length_corner",
       "260+_press_coverage_snaps_over_three_seasons",
-      "press_man_cb"
+      "6_4_length_cb",
+      "boundary_cb_projection",
+      "cornerback_pedigree",
+      "cover_1_press_fit",
+      "length_corner",
+      "long_speed_adequate",
+      "physical_jam_at_line",
+      "press_man",
+      "press_man_cb",
+      "red_zone_matchup_corner",
+      "tight_hips_concerns",
+      "washington_transfer_from_arizona",
+      "zone_match_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -2814,12 +2987,20 @@
       "10_pbus_2024",
       "27_starts_past_two_years",
       "442_speed",
+      "boundary_cb_fit",
+      "change_of_direction_fluid",
+      "cover_1_press_fit",
       "elite_cod",
       "pattern_match",
       "pattern_match_cb",
+      "plant_and_drive_burst",
+      "slot_cross_train_snaps",
       "smooth_pattern_matching_coverage",
+      "texas_multi_year_starter",
+      "undersized_boundary_frame",
       "woolen_replacement",
-      "zone"
+      "zone",
+      "zone_off_triangle"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -2839,10 +3020,20 @@
   },
   "Daylen Everette": {
     "tags": [
+      "ball_skills_inconsistent",
+      "boundary_cb_projection",
+      "cover_1_press_fit",
+      "georgia_multi_year_rotation",
+      "long_frame_edge_corner",
+      "physical_at_line_of_scrimmage",
+      "press_bail_technique",
+      "press_cb",
       "press_experience",
       "press_man",
+      "press_man_snaps",
       "sec_pedigree",
-      "press_cb"
+      "sec_pedigree_development",
+      "zone_off_snaps"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -3138,12 +3329,21 @@
   },
   "Ja'Kobi Lane": {
     "tags": [
-      "excels_in_red_zone_(17_of_76_career_tds)",
       "basketball_frame",
+      "basketball_frame_target",
+      "contested_catch_winner",
+      "excels_in_red_zone_(17_of_76_career_tds)",
+      "high_point_catcher",
       "jump_ball_specialist",
+      "long_speed_questions",
+      "pac12_production_pedigree",
       "red_zone_target",
+      "red_zone_target_17_tds",
       "red_zone_winner",
-      "x_receiver"
+      "route_running_developing",
+      "usc_multi_year_starter",
+      "x_receiver",
+      "x_receiver_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -3208,32 +3408,49 @@
   "De'Zhaun Stribling": {
     "tags": [
       "back_to_back_800_yard_seasons",
-      "z_receiver",
-      "possession_wr",
-      "nfl_ready_blocking",
+      "contested_catch_winner",
       "field_deep_adept",
-      "outside"
+      "mississippi_transfer_from_washington_state",
+      "nfl_ready_blocking",
+      "nfl_ready_run_blocker",
+      "outside",
+      "outside_alignment_primary",
+      "possession_receiver_profile",
+      "possession_wr",
+      "route_running_refined",
+      "sec_production_pedigree",
+      "yards_after_catch_average",
+      "z_receiver",
+      "z_receiver_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
   },
   "Bryce Lance": {
     "tags": [
+      "17_tds_2024_season",
       "17_tds_in_2024",
       "25_tds_total",
       "X_receiver_fit",
       "big_frame_target",
       "contested_catch_winner",
       "fcs_production",
+      "fcs_production_level",
       "first_bison_with_back_to_back_1,000_yard_seasons",
       "fluid_route_runner",
+      "long_speed_questions",
       "nfl_bloodlines",
+      "nfl_ready_run_blocker",
+      "north_dakota_state_multi_year_starter",
       "plus_body_control",
+      "red_zone_target",
       "red_zone_weapon",
+      "route_running_developing",
       "small_school_speedster",
       "top_tier_speed",
       "vertical",
       "vertical_boundary_fit",
+      "x_receiver_fit",
       "z_receiver"
     ],
     "_source": "big_board_reasoning",
@@ -3252,12 +3469,20 @@
   },
   "Deion Burks": {
     "tags": [
-      "route_precision",
-      "motion_heavy",
+      "57_receptions_2023_season",
+      "57_receptions_despite_inconsistent_offense",
       "advanced_footwork",
-      "slot_technician",
+      "gadget_player_package_fit",
+      "injury_history_2024",
+      "motion_heavy",
+      "motion_heavy_usage",
+      "oklahoma_transfer_from_purdue",
+      "route_precision",
       "slot",
-      "57_receptions_despite_inconsistent_offense"
+      "slot_receiver_fit",
+      "slot_technician",
+      "undersized_frame_concern",
+      "yards_after_catch_traits"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -3344,14 +3569,24 @@
   },
   "Michael Trigg": {
     "tags": [
-      "move_te",
-      "most_productive_te_nationally",
-      "pass_catcher",
-      "absurd_highlights",
+      "11_personnel_fit",
       "40_catches_for_607_yards",
+      "absurd_highlights",
+      "baylor_transfer_from_mississippi",
+      "big_slot_alignment_potential",
       "catch_radius_te",
+      "catch_radius_wide",
+      "f_te_fit",
+      "inline_blocker_limited",
+      "most_productive_te_nationally",
+      "move_te",
+      "move_te_profile",
+      "pass_catcher",
+      "pass_catching_specialist",
+      "red_zone_target",
+      "route_running_refined",
       "seven_foot_wingspan_catch_radius",
-      "red_zone_target"
+      "yards_after_catch_traits"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 5
@@ -3385,26 +3620,45 @@
   },
   "Justin Joly": {
     "tags": [
-      "move_te",
-      "physical_catch_point_unbothered_by_contact",
-      "immediate_red_zone_target",
+      "11_personnel_fit",
+      "acc_production_pedigree",
       "back_to_back_43+_reception_seasons",
+      "contested_catch_winner",
+      "f_te_fit",
+      "immediate_red_zone_target",
+      "inline_blocker_willing",
+      "move_te",
+      "move_te_profile",
       "move_te_projection",
+      "nc_state_transfer_from_uconn",
+      "pass_catching_specialist",
+      "physical_catch_point_unbothered_by_contact",
+      "red_zone_target",
+      "red_zone_target_history",
       "y",
-      "red_zone_target"
+      "yards_after_catch_traits"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
   },
   "Eli Raridon": {
     "tags": [
+      "12_personnel_fit",
+      "big_frame_target",
+      "contested_catch_flashes",
+      "f_te_fit",
+      "frame_filling_opportunity",
       "h_back",
-      "tough_catches_downfield",
-      "move_te",
-      "h_back_alignment_potential",
-      "versatile_move_te_(6'6\",_245)",
       "h_back/te_hybrid",
-      "frame_filling_opportunity"
+      "h_back_alignment_potential",
+      "inline_blocker_willing",
+      "move_te",
+      "move_te_profile",
+      "notre_dame_multi_year_starter",
+      "route_running_developing",
+      "tough_catches_downfield",
+      "two_acl_injury_history",
+      "versatile_move_te_(6'6\",_245)"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 3
@@ -3729,11 +3983,20 @@
   },
   "Trey Zuhn III": {
     "tags": [
+      "48_left_tackle_starts",
+      "48_lt_starts_with_2_center_snaps",
+      "anchor_vs_bull_rush",
+      "body_control_redirecting",
+      "gap_scheme_guard_fit",
+      "hand_placement_refined",
       "interior_kick_candidate",
-      "versatile_ol",
-      "pass_protection_footwork",
       "mature_hand_comfort",
-      "48_lt_starts_with_2_center_snaps"
+      "pass_protection_footwork",
+      "sec_production_pedigree",
+      "senior_bowl_invite",
+      "texas_am_multi_year_starter",
+      "versatile_ol",
+      "wide_zone_tackle_fit"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -3828,13 +4091,22 @@
   },
   "Jake Slaughter": {
     "tags": [
-      "minimal_pressure_allowed_(6_pressures,_3_sacks)",
-      "good_lateral_agility_and_footwork",
       "awareness_on_stunts",
-      "plug_and_play_center",
       "battle_tested_sec_veteran_(33_starts,_2,000+_snaps)",
-      "zone",
-      "gap"
+      "combo_block_seals",
+      "florida_multi_year_starter_center",
+      "gap",
+      "gap_scheme_center_fit",
+      "good_lateral_agility_and_footwork",
+      "hand_placement_refined",
+      "minimal_pressure_allowed_(6_pressures,_3_sacks)",
+      "pass_pro_under_6_pressures",
+      "plug_and_play_center",
+      "sec_production_pedigree",
+      "second_level_climber",
+      "snap_accuracy_clean",
+      "wide_zone_center_fit",
+      "zone"
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 4
@@ -3843,10 +4115,20 @@
     "tags": [
       "51_games_at_center",
       "52_center_starting_games",
+      "anchor_vs_bull_rush_questions",
+      "big_ten_production_pedigree",
+      "bradbury_career_comp",
       "bradbury_succession",
+      "combo_block_seals",
       "dl_to_ol_conversion",
+      "dl_to_ol_conversion_history",
       "high_effort_technical_soundness",
+      "iowa_four_year_starter_at_center",
+      "second_level_climber",
+      "snap_accuracy_clean",
+      "undersized_center_frame",
       "veteran_center",
+      "wide_zone_center_fit",
       "zone"
     ],
     "_source": "big_board_reasoning",
@@ -3867,16 +4149,25 @@
     "tags": [
       "12_personnel_fit",
       "20_catches_261_yards",
+      "contested_catch_winner",
+      "georgia_multi_year_starter",
+      "goedert_career_comp",
       "goedert_timeline",
       "inline_TE_fit",
       "inline_blocker",
+      "inline_blocker_willing",
+      "inline_te_fit",
       "multi_year_uga_starter",
       "play_action_pop_pass_fit",
       "plus_blocking_effort",
       "reliable_hands",
+      "route_running_developing",
       "seam_threat_te",
+      "sec_production_pedigree",
       "successionplanning_potential",
-      "y_tight_end"
+      "y_te_projection",
+      "y_tight_end",
+      "yards_after_catch_limited"
     ],
     "_source": "mock_reasoning",
     "_board_mention_count": 4
@@ -3957,19 +4248,26 @@
     "tags": [
       "angles_to_the_ball",
       "ball_production",
+      "ball_production_career",
       "brugler_day_3_safety",
       "click_and_close",
+      "click_and_close_trigger",
+      "cover_3_middle_fit",
       "cover_4_quarter_fit",
       "deep_half_reader",
       "downhill_run_trigger",
       "field_awareness",
       "free_safety_fit",
+      "free_safety_profile",
       "multi_year_starter_psu",
+      "penn_state_multi_year_starter",
       "penn_state_three_year_starter",
       "pff_coverage_grade",
       "plus_tackling_safety",
       "range_on_hashes",
+      "range_to_cover_deep_third",
       "single_high_capable",
+      "single_high_rep_fit",
       "split_field_safety_fit",
       "split_safety_fit",
       "two_high_post_safety",
@@ -3979,15 +4277,25 @@
   },
   "Devin Moore": {
     "tags": [
+      "ball_skills_developing",
+      "boundary_cb_fit",
       "boundary_cb_projection",
+      "cover_1_press_fit",
+      "florida_transfer_from_kansas_state",
       "fluid_hips",
+      "hip_fluidity_clean",
+      "long_speed_442_flashes",
+      "man_heavy_scheme_fit",
       "multi_year_starter_kansas_state",
       "plus_long_speed",
+      "press_bail_fluid",
       "press_bail_technique",
       "press_man_cb",
       "recovery_speed",
       "sticky_downfield_coverage",
-      "zone_corner_fit"
+      "undersized_frame",
+      "zone_corner_fit",
+      "zone_off_capable"
     ],
     "_source": "scouting_tag_gap_fill_2026_04_20"
   },
@@ -4007,15 +4315,25 @@
   },
   "Keyshaun Elliott": {
     "tags": [
+      "3_4_inside_lb_fit",
+      "4_3_will_lb_fit",
+      "angles_to_ball_developing",
       "appstate_multi_year_starter",
+      "arizona_state_transfer",
+      "blitz_package_contributor",
       "boundary_cb_fit",
       "cover_3_sky_fit",
+      "coverage_zone_match",
+      "downhill_trigger",
       "kiper_day_3_cb",
       "length_at_catch_point",
       "pff_coverage_grade_climbing",
       "plants_and_drives_on_comebacks",
       "press_man_fit",
       "press_mirror",
+      "run_fits_sound",
+      "senior_bowl_invite",
+      "tackle_wrap_physical",
       "tight_trail_technique"
     ]
   },
@@ -4057,5 +4375,523 @@
     ],
     "_source": "big_board_reasoning",
     "_board_mention_count": 7
+  },
+  "L.T. Overton": {
+    "tags": [
+      "3_4_de_fit",
+      "4_3_strongside_de_fit",
+      "5_tech_body_type",
+      "alabama_rotational_starter",
+      "anchor_vs_double_teams",
+      "hand_length_at_strikes",
+      "power_base_at_the_point",
+      "stack_and_shed_developmental",
+      "two_gap_capable",
+      "underwhelming_sack_production"
+    ]
+  },
+  "Anthony Lucas": {
+    "tags": [
+      "3_4_olb_fit",
+      "4_3_de_fit",
+      "inside_counter_flashes",
+      "length_edge_setter",
+      "pass_rush_plan_developing",
+      "quick_twitch_off_snap",
+      "rotational_contributor",
+      "run_defense_physical_developing",
+      "senior_bowl_participant",
+      "usc_transfer_production"
+    ]
+  },
+  "Caden Curry": {
+    "tags": [
+      "3_4_base_de_fit",
+      "4_3_de_fit",
+      "4i_technique_snaps",
+      "average_get_off_burst",
+      "hand_usage_refined",
+      "high_motor_rusher",
+      "inside_outside_versatility",
+      "ohio_state_rotational_starter",
+      "run_fits_sound",
+      "senior_bowl_invite_consideration"
+    ]
+  },
+  "Max Llewellyn": {
+    "tags": [
+      "3_4_olb_fit",
+      "4_3_strongside_de_fit",
+      "effort_based_rusher",
+      "iowa_multi_year_starter",
+      "long_frame_edge",
+      "rotational_edge_projection",
+      "run_defense_functional",
+      "stand_up_rusher",
+      "technique_over_traits",
+      "underwhelming_athletic_testing"
+    ]
+  },
+  "Kaleb Proctor": {
+    "tags": [
+      "3_tech_projection",
+      "block_shedder_flashes",
+      "developmental_nfl_jump",
+      "level_of_competition_concerns",
+      "one_gap_shoot_the_gap",
+      "penetrating_interior_rusher",
+      "rotational_interior_fit",
+      "senior_bowl_measurables",
+      "small_school_fcs_production",
+      "southeastern_louisiana_standout"
+    ]
+  },
+  "Tyler Onyedim": {
+    "tags": [
+      "3_4_de_projection",
+      "5_tech_heavy_hands",
+      "gap_integrity_player",
+      "limited_pass_rush_production",
+      "long_armed_edge_setter",
+      "power_base_anchor",
+      "rotational_base_de",
+      "senior_bowl_invite",
+      "texas_am_transfer_from_iowa_state",
+      "two_gap_capable"
+    ]
+  },
+  "Dontay Corleone": {
+    "tags": [
+      "0_1_tech_nose_fit",
+      "3_4_nose_fit",
+      "base_down_run_defender",
+      "block_occupier_two_gap",
+      "blood_clot_2024_health_concern",
+      "cincinnati_multi_year_starter",
+      "interior_anchor",
+      "limited_pass_rush_snaps",
+      "power_base_at_the_point",
+      "run_stuffing_nt"
+    ]
+  },
+  "Zane Durant": {
+    "tags": [
+      "3_tech_one_gap_fit",
+      "4_3_under_fit",
+      "leverage_wins_underneath_pads",
+      "pass_rush_flashes_on_games",
+      "penetrating_interior_rusher",
+      "penn_state_rotational_starter",
+      "quick_off_the_snap",
+      "rotational_interior_dl",
+      "senior_bowl_participant",
+      "undersized_interior"
+    ]
+  },
+  "Rayshaun Benny": {
+    "tags": [
+      "3_4_de_fit",
+      "4i_5_tech_fit",
+      "base_de_projection",
+      "hand_usage_developing",
+      "long_armed_edge_setter",
+      "michigan_multi_year_rotation",
+      "pass_rush_developmental",
+      "rotational_base_de",
+      "run_defense_first_role",
+      "two_gap_capable"
+    ]
+  },
+  "Julian Neal": {
+    "tags": [
+      "arkansas_multi_year_starter",
+      "ball_skills_6_pbus_2025",
+      "boundary_cb_projection",
+      "cover_3_sky_fit",
+      "off_zone_cb",
+      "plant_and_drive_downhill",
+      "press_man_developmental",
+      "run_support_corner",
+      "tackle_wrap_physical",
+      "zone_heavy_scheme_fit"
+    ]
+  },
+  "Will Lee III": {
+    "tags": [
+      "442_speed_flashes",
+      "boundary_cb_projection",
+      "cover_1_press_fit",
+      "four_interceptions_career",
+      "hip_fluidity_clean",
+      "plant_and_drive_ball_skills",
+      "press_man_snaps",
+      "texas_am_transfer_from_kansas_state",
+      "undersized_frame_concern",
+      "zone_off_capable"
+    ]
+  },
+  "Ephesians Prysock": {
+    "tags": [
+      "6_4_length_cb",
+      "boundary_cb_projection",
+      "cover_1_press_fit",
+      "cover_3_sky_fit",
+      "long_frame_edge_corner",
+      "plant_and_drive_stiff",
+      "press_man_developmental",
+      "red_zone_matchup_corner",
+      "tight_hips_concerns",
+      "washington_transfer_from_arizona"
+    ]
+  },
+  "Kamari Ramsey": {
+    "tags": [
+      "big_nickel_fit",
+      "box_safety_snaps",
+      "cover_4_quarter_fit",
+      "downhill_trigger",
+      "multi_year_pac12_starter",
+      "nickel_safety_versatility",
+      "range_to_cover_deep_third_questions",
+      "single_high_rep_fit",
+      "tackle_wrap_physical",
+      "usc_transfer_from_ucla"
+    ]
+  },
+  "Genesis Smith": {
+    "tags": [
+      "arizona_multi_year_starter",
+      "big_nickel_fit",
+      "blitz_package_contributor",
+      "box_safety_profile",
+      "cover_3_buzz_fit",
+      "cover_4_quarter_fit",
+      "downhill_trigger",
+      "run_support_first_role",
+      "tackle_wrap_physical",
+      "undersized_box_safety"
+    ]
+  },
+  "VJ Payne": {
+    "tags": [
+      "big_12_defensive_production",
+      "big_nickel_fit",
+      "blitz_package_contributor",
+      "box_safety_fit",
+      "cover_4_quarter_fit",
+      "downhill_trigger",
+      "kansas_state_multi_year_starter",
+      "range_to_cover_deep_third_questions",
+      "senior_bowl_invite",
+      "tackle_wrap_physical"
+    ]
+  },
+  "Deontae Lawson": {
+    "tags": [
+      "3_4_mike_fit",
+      "4_3_mike_fit",
+      "alabama_multi_year_starter",
+      "coverage_zone_match",
+      "downhill_trigger",
+      "run_fits_sound",
+      "sec_production_pedigree",
+      "sideline_to_sideline_range_questions",
+      "tackle_wrap_physical",
+      "tampa_2_mike_fit"
+    ]
+  },
+  "Harold Perkins": {
+    "tags": [
+      "2024_acl_injury_recovery",
+      "3_4_olb_fit",
+      "blitz_package_weapon",
+      "coverage_range_traits",
+      "lsu_multi_year_starter",
+      "medical_red_flag",
+      "pass_rush_flashes_career",
+      "sec_production_pedigree",
+      "sub_package_rusher",
+      "weakside_lb_fit"
+    ]
+  },
+  "Kaleb Elarms-Orr": {
+    "tags": [
+      "3_4_inside_lb_fit",
+      "4_3_will_lb_fit",
+      "big_12_defensive_production",
+      "blitz_package_contributor",
+      "coverage_zone_match",
+      "downhill_trigger",
+      "range_traits",
+      "senior_bowl_invite",
+      "tackle_wrap_physical",
+      "tcu_multi_year_starter"
+    ]
+  },
+  "Taylen Green": {
+    "tags": [
+      "6_6_prototype_build",
+      "accuracy_inconsistent",
+      "arkansas_transfer_from_boise_state",
+      "arm_talent_flashes",
+      "developmental_backup_qb",
+      "dual_threat_qb_profile",
+      "gadget_qb_package_fit",
+      "pocket_passer_questions",
+      "rpo_system_fit",
+      "rushing_upside_qb"
+    ]
+  },
+  "Sam Hecht": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "big_12_production_pedigree",
+      "body_control_redirecting",
+      "combo_block_seals",
+      "gap_scheme_guard_fit",
+      "hand_placement_refined",
+      "interior_kick_candidate",
+      "kansas_state_multi_year_starter",
+      "second_level_climber",
+      "wide_zone_guard_fit"
+    ]
+  },
+  "Dametrious Crownover": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "body_control_redirecting",
+      "gap_scheme_guard_fit",
+      "hand_placement_developing",
+      "kick_to_guard_potential",
+      "left_tackle_experience",
+      "sec_production_pedigree",
+      "senior_bowl_invite",
+      "texas_am_multi_year_starter",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Jalen Farmer": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "combo_block_seals",
+      "gap_scheme_guard_fit",
+      "hand_placement_developing",
+      "interior_kick_candidate",
+      "kentucky_multi_year_starter",
+      "sec_production_pedigree",
+      "second_level_climber",
+      "senior_bowl_invite",
+      "wide_zone_guard_fit"
+    ]
+  },
+  "Markel Bell": {
+    "tags": [
+      "acc_production_pedigree",
+      "anchor_vs_bull_rush_questions",
+      "body_control_redirecting",
+      "gap_scheme_tackle_fit",
+      "hand_placement_developing",
+      "kick_slide_fluid",
+      "left_tackle_experience",
+      "miami_transfer_from_nc_state",
+      "senior_bowl_invite",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Brian Parker II": {
+    "tags": [
+      "acc_production_pedigree",
+      "anchor_vs_bull_rush",
+      "combo_block_seals",
+      "duke_multi_year_starter",
+      "gap_scheme_tackle_fit",
+      "hand_placement_developing",
+      "kick_to_guard_potential",
+      "left_tackle_experience",
+      "second_level_climber",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Austin Barber": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "combo_block_seals",
+      "florida_multi_year_starter",
+      "gap_scheme_tackle_fit",
+      "hand_placement_refined",
+      "kick_slide_fluid",
+      "left_tackle_experience",
+      "sec_production_pedigree",
+      "senior_bowl_invite",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Kage Casey": {
+    "tags": [
+      "anchor_vs_bull_rush_questions",
+      "body_control_redirecting",
+      "boise_state_multi_year_starter",
+      "gap_scheme_tackle_fit",
+      "hand_placement_developing",
+      "kick_to_guard_potential",
+      "left_tackle_experience",
+      "mountain_west_production_pedigree",
+      "senior_bowl_invite",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Jude Bowry": {
+    "tags": [
+      "acc_production_pedigree",
+      "anchor_vs_bull_rush",
+      "body_control_redirecting",
+      "boston_college_multi_year_starter",
+      "gap_scheme_tackle_fit",
+      "hand_placement_developing",
+      "kick_slide_fluid",
+      "kick_to_guard_potential",
+      "right_tackle_experience",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Billy Schrauth": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "combo_block_seals",
+      "gap_scheme_guard_fit",
+      "hand_placement_refined",
+      "interior_kick_candidate",
+      "notre_dame_multi_year_starter",
+      "power_scheme_fit",
+      "second_level_climber",
+      "senior_bowl_invite",
+      "wide_zone_guard_fit"
+    ]
+  },
+  "Isaiah World": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "body_control_redirecting",
+      "gap_scheme_tackle_fit",
+      "hand_placement_developing",
+      "kick_slide_fluid",
+      "left_tackle_experience",
+      "long_arm_edge_setter",
+      "oregon_transfer_from_nevada",
+      "senior_bowl_invite",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Beau Stephens": {
+    "tags": [
+      "anchor_vs_bull_rush",
+      "big_ten_production_pedigree",
+      "combo_block_seals",
+      "gap_scheme_guard_fit",
+      "hand_placement_developing",
+      "interior_kick_candidate",
+      "iowa_transfer_from_kansas_state",
+      "power_scheme_fit",
+      "second_level_climber",
+      "wide_zone_guard_fit"
+    ]
+  },
+  "Travis Burke": {
+    "tags": [
+      "aac_production_pedigree",
+      "anchor_vs_bull_rush",
+      "body_control_redirecting",
+      "gap_scheme_tackle_fit",
+      "hand_placement_developing",
+      "kick_to_guard_potential",
+      "left_tackle_experience",
+      "memphis_multi_year_starter",
+      "senior_bowl_invite",
+      "wide_zone_tackle_fit"
+    ]
+  },
+  "Brenen Thompson": {
+    "tags": [
+      "4_3_or_faster_speed_profile",
+      "deep_ball_win_rate",
+      "gadget_player_package_fit",
+      "mississippi_state_transfer_from_texas",
+      "motion_heavy_usage",
+      "route_running_developing",
+      "slot_cross_train_potential",
+      "undersized_frame_concern",
+      "vertical_speed_threat",
+      "z_receiver_fit"
+    ]
+  },
+  "Sam Roush": {
+    "tags": [
+      "12_personnel_fit",
+      "contested_catch_flashes",
+      "inline_blocker_willing",
+      "inline_te_fit",
+      "pac12_production_pedigree",
+      "route_running_developing",
+      "senior_bowl_invite",
+      "stanford_multi_year_starter",
+      "y_te_projection",
+      "yards_after_catch_limited"
+    ]
+  },
+  "Jack Endries": {
+    "tags": [
+      "11_personnel_fit",
+      "f_te_fit",
+      "inline_blocker_developing",
+      "move_te_profile",
+      "pass_catching_specialist",
+      "red_zone_target_developing",
+      "route_running_refined",
+      "senior_bowl_invite",
+      "texas_transfer_from_cal",
+      "yards_after_catch_traits"
+    ]
+  },
+  "Jonah Coleman": {
+    "tags": [
+      "compact_frame_power_back",
+      "contact_balance_plus",
+      "one_cut_decisive_runner",
+      "pac12_production_pedigree",
+      "pass_protection_developing",
+      "receiving_back_capable",
+      "three_down_capability",
+      "washington_transfer_from_arizona",
+      "yards_after_contact_traits",
+      "zone_scheme_fit"
+    ]
+  },
+  "Kaytron Allen": {
+    "tags": [
+      "between_the_tackles_runner",
+      "contact_balance_plus",
+      "gap_scheme_fit",
+      "pass_protection_willing",
+      "penn_state_multi_year_starter",
+      "power_back_profile",
+      "receiving_back_limited",
+      "short_yardage_specialist",
+      "two_back_committee_fit",
+      "yards_after_contact_traits"
+    ]
+  },
+  "Nick Singleton": {
+    "tags": [
+      "big_ten_production_pedigree",
+      "contact_balance_average",
+      "home_run_speed_threat",
+      "kick_return_experience",
+      "one_cut_decisive_runner",
+      "pass_protection_developing",
+      "penn_state_multi_year_starter",
+      "receiving_back_capable",
+      "two_back_committee_fit",
+      "zone_scheme_fit"
+    ]
   }
 }
