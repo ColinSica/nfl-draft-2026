@@ -45,7 +45,14 @@ export function TeamDetail() {
   const capCtx = data.cap_context ?? {};
   const coaching = data.coaching ?? {};
   const visits = (data.visit_signals?.confirmed_visits ?? []) as any[];
-  const latestNews = data._4_20_news ?? null;
+  // Find the most recent _MM_DD_news field (data is dated per source refresh)
+  const latestNews = (() => {
+    const newsKeys = Object.keys(data)
+      .filter(k => /^_\d+_\d+_news$/.test(k))
+      .sort();  // date suffix sorts lexicographically
+    const latest = newsKeys[newsKeys.length - 1];
+    return latest ? (data as any)[latest] : null;
+  })();
   const firstPick = data.r1_picks?.[0] ?? data.pick;
   const modelPick = firstPick && reasoning?.picks?.[String(firstPick)];
 

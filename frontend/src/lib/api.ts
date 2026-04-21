@@ -78,48 +78,11 @@ export type ProspectRow = {
   most_likely_team: string | null;
 };
 
-export type SimState = {
-  status: 'idle' | 'running' | 'complete' | 'error';
-  started_at: string | null;
-  finished_at: string | null;
-  n_simulations: number;
-  progress_current: number;
-  progress_pct: number;
-  log_tail: string[];
-  error: string | null;
-};
-
 async function getJson<T>(url: string): Promise<T> {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${url}`);
   return r.json();
 }
-
-async function postJson<T>(url: string, body: unknown, token?: string): Promise<T> {
-  const headers: Record<string, string> = {
-    'Content-Type': 'application/json',
-  };
-  if (token) headers['X-Auth-Token'] = token;
-  const r = await fetch(url, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(body),
-  });
-  if (!r.ok) {
-    const text = await r.text();
-    throw new Error(`${r.status} ${r.statusText}: ${text}`);
-  }
-  return r.json();
-}
-
-// Token persistence across page loads (localStorage). Only used when
-// /api/meta reports share_mode.token_required === true.
-const TOKEN_KEY = 'draft_dash_auth_token';
-export const tokenStore = {
-  get: () => localStorage.getItem(TOKEN_KEY) || '',
-  set: (t: string) => localStorage.setItem(TOKEN_KEY, t),
-  clear: () => localStorage.removeItem(TOKEN_KEY),
-};
 
 export const api = {
   teams: () => getJson<{ teams: TeamSummary[] }>('/api/teams'),
@@ -157,16 +120,4 @@ export const api = {
     getJson<{ picks: Record<string, any>; meta: any }>(
       '/api/simulations/reasoning',
     ),
-  simulateReplay: (forcedPicks: Record<number, string>, nSims = 10) =>
-    postJson<{ picks: PickRow[]; meta: any }>(
-      '/api/simulate/replay',
-      { forced_picks: forcedPicks, n_simulations: nSims },
-    ),
-  runSim: (n: number, token?: string) =>
-    postJson<{ status: string }>(
-      '/api/simulate',
-      { n_simulations: n },
-      token,
-    ),
-  simStatus: () => getJson<SimState>('/api/simulate/status'),
 };

@@ -18,21 +18,16 @@ One-command launch:
 
 from __future__ import annotations
 
-import asyncio
 import json
 import os
-import subprocess
-import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Optional
 
 import pandas as pd
-from fastapi import FastAPI, Header, HTTPException
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
 
 # Share-mode safety knobs (set by run_dashboard.py via env vars).
 # They are intentionally env-driven so re-launching with different flags
@@ -60,11 +55,17 @@ DRAFT_MODE = os.environ.get("DRAFT_MODE", "independent").lower()
 if DRAFT_MODE == "independent":
     MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026_independent.json"
     MC_CSV = PROCESSED / "monte_carlo_2026_independent.csv"
-    PREDICTIONS_CSV = PROCESSED / "predictions_2026_independent_picks.csv"
+    # PICKS_CSV: canonical post-clamp modal pick per R1 slot.
+    # BOARD_CSV: full prospect big board with independent_grade / tier / rank.
+    PICKS_CSV = PROCESSED / "predictions_2026_independent_picks.csv"
+    BOARD_CSV = PROCESSED / "predictions_2026_independent.csv"
+    PREDICTIONS_CSV = PICKS_CSV  # back-compat alias
 else:
     MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026.json"
     MC_CSV = PROCESSED / "monte_carlo_2026_v12.csv"
-    PREDICTIONS_CSV = PROCESSED / "predictions_2026.csv"
+    PICKS_CSV = PROCESSED / "predictions_2026.csv"
+    BOARD_CSV = PROCESSED / "predictions_2026.csv"
+    PREDICTIONS_CSV = PICKS_CSV
 MC_TRADES_JSON = PROCESSED / "monte_carlo_trades_2026.json"
 TEAM_CTX_CSV = PROCESSED / "team_context_2026_enriched.csv"
 
@@ -264,15 +265,14 @@ def prospects_summary(limit: int = 64) -> dict:
     if not PROSPECTS_CSV.exists():
         return {"prospects": []}
     df = pd.read_csv(PROSPECTS_CSV)
-    pred = pd.read_csv(PREDICTIONS_CSV) if PREDICTIONS_CSV.exists() else None
-    if pred is not None:
-        # Independent mode: predictions CSV has independent_grade + raw_model_pred
-        # (legacy names final_score/model_pred no longer exist post-refactor).
+    # Use BOARD_CSV (full big board: final_rank, independent_tier, confidence)
+    # rather than PICKS_CSV (slot mock only).
+    board = pd.read_csv(BOARD_CSV) if BOARD_CSV.exists() else None
+    if board is not None:
         pred_cols = [c for c in ["player", "independent_grade", "raw_model_pred",
                                   "independent_tier", "confidence", "final_rank"]
-                     if c in pred.columns]
-        df = df.merge(pred[pred_cols], how="left", on="player")
-        # Back-compat: UI expects "final_score" — alias independent_grade
+                     if c in board.columns]
+        df = df.merge(board[pred_cols], how="left", on="player")
         if "independent_grade" in df.columns and "final_score" not in df.columns:
             df["final_score"] = df["independent_grade"]
     keep = ["player", "position", "college", "rank", "final_score",
@@ -285,35 +285,6 @@ def prospects_summary(limit: int = 64) -> dict:
     return {
         "prospects": df.replace({float("nan"): None}).to_dict("records"),
         "count": int(len(df)),
-    }
-
-
-@app.get("/api/settings/defaults")
-def settings_defaults() -> dict:
-    """Return the model's default tunable parameters. Single source of
-    truth: pulled directly from stage2 module constants, so whenever the
-    code changes these, the 'Reset to defaults' button in the UI picks up
-    the new values.
-
-    Only exposes knobs safe for non-expert users to tweak without blowing
-    up the model. Trade and scoring internals remain code-configured."""
-    import sys as _sys
-    from pathlib import Path as _Path
-    _sys.path.insert(0, str(_Path(__file__).resolve().parents[2]))
-    from src.models import stage2_game_theoretic as s
-    return {
-        "reach_gap_threshold":          s.REACH_GAP_THRESHOLD,
-        "late_pick_reach_threshold":    s.LATE_PICK_REACH_THRESHOLD,
-        "elite_cons_rank_threshold":    s.ELITE_CONS_RANK_THRESHOLD,
-        "slider_boost_threshold":       s.SLIDER_BOOST_THRESHOLD,
-        "position_scarcity_gap":        s.POSITION_SCARCITY_GAP_THRESHOLD,
-        "position_scarcity_boost":      s.POSITION_SCARCITY_BOOST,
-        "predictability_score_sigma":   s.PREDICTABILITY_SCORE_SIGMA,
-        "post_combine_boosts":          dict(s.POST_COMBINE_BOOSTS),
-        "qb_cascade_window":            s.QB_CASCADE_WINDOW,
-        "tier_sizes":                   dict(s.TIER_SIZES),
-        # Position-value multipliers — the spine of positional scarcity
-        "pos_value_mult":               dict(s.POS_VALUE_MULT),
     }
 
 
@@ -341,10 +312,6 @@ def analyst_for_player(player: str) -> dict:
 # ---------------------------------------------------------------------------
 # Simulation endpoints
 # ---------------------------------------------------------------------------
-
-class SimulateRequest(BaseModel):
-    n_simulations: int = 500
-
 
 @app.get("/api/simulations/reasoning")
 def simulation_reasoning() -> dict:
@@ -461,54 +428,98 @@ def latest_simulation() -> dict:
     pick_col = "pick_slot" if "pick_slot" in df.columns else "pick_number"
     team_col = "most_likely_team" if "most_likely_team" in df.columns else "team"
 
-    # Group by slot with candidates sorted by probability desc.
+    # PICKS_CSV is the canonical post-clamp modal pick per R1 slot (written
+    # by independent/run.py _write_outputs + odds_clamp). MC_CSV carries the
+    # raw landing distribution and is used here ONLY for alternate candidates.
+    picks_canonical: dict[int, dict] = {}
+    if PICKS_CSV.exists():
+        pk = pd.read_csv(PICKS_CSV)
+        for _, r in pk.iterrows():
+            slot = int(r["pick"])
+            picks_canonical[slot] = {
+                "player":     r.get("player"),
+                "position":   r.get("position"),
+                "team":       r.get("team"),
+                "probability": float(r.get("probability") or 0),
+                "school":     r.get("school"),
+            }
+
+    # Group MC by slot for alternates.
     per_slot: dict[int, list] = {}
     for pn, sub in df.groupby(pick_col):
         sub = sub.sort_values("probability", ascending=False)
         per_slot[int(pn)] = list(sub.itertuples(index=False))
 
-    # Greedy top-1 assignment: walk slots in pick order, claim each slot's
-    # best-available player.
-    claimed: set[str] = set()
+    # Build R1 output from canonical picks CSV; fall back to MC if missing.
+    all_slots = sorted(set(picks_canonical.keys()) | set(per_slot.keys()))
     out_picks: list[dict] = []
-    for pn in sorted(per_slot.keys()):
-        rows = per_slot[pn]
-        top_idx = next(
-            (i for i, r in enumerate(rows)
-             if getattr(r, "player", None) not in claimed),
-            0,
-        )
-        ordered = [rows[top_idx]] + [r for i, r in enumerate(rows) if i != top_idx]
-        ordered = ordered[:4]
-        if getattr(ordered[0], "player", None):
-            claimed.add(ordered[0].player)
+    for pn in all_slots:
+        canonical = picks_canonical.get(pn)
+        mc_rows = per_slot.get(pn, [])
 
-        # Canonical owner = original draft order. most_likely_team is the
-        # team that actually held the slot in the majority of sims (post-
-        # trade), exposed separately so the UI can flag trade-altered slots.
+        if canonical and canonical.get("player"):
+            modal_player = canonical["player"]
+            modal_position = canonical["position"]
+            modal_team = canonical["team"]
+            modal_prob = canonical["probability"]
+            modal_school = canonical.get("school")
+            # Find the MC row for this player-slot to get consensus_rank
+            mc_match = next((r for r in mc_rows
+                             if getattr(r, "player", None) == modal_player), None)
+            modal_cons_rank = (int(getattr(mc_match, "consensus_rank"))
+                               if mc_match is not None
+                               and pd.notna(getattr(mc_match, "consensus_rank", None))
+                               else None)
+        elif mc_rows:
+            top = mc_rows[0]
+            modal_player = getattr(top, "player", None)
+            modal_position = getattr(top, "position", None)
+            modal_team = getattr(top, team_col, None)
+            modal_prob = float(getattr(top, "probability", 0) or 0)
+            modal_school = getattr(top, "college", None) or getattr(top, "school", None)
+            modal_cons_rank = (int(getattr(top, "consensus_rank"))
+                               if pd.notna(getattr(top, "consensus_rank", None))
+                               else None)
+        else:
+            continue
+
+        # Alternates from MC: top 3 OTHER players at this slot
+        alternates = []
+        for r in mc_rows:
+            if getattr(r, "player", None) == modal_player:
+                continue
+            alternates.append({
+                "player":          getattr(r, "player", None),
+                "position":        getattr(r, "position", None),
+                "college":         getattr(r, "college", None) or getattr(r, "school", None),
+                "probability":     float(getattr(r, "probability", 0) or 0),
+                "team":            getattr(r, team_col, None),
+                "consensus_rank":  (int(getattr(r, "consensus_rank"))
+                                     if pd.notna(getattr(r, "consensus_rank", None))
+                                     else None),
+                "variance_landing_pick": float(
+                    getattr(r, "variance_landing_pick", 0) or 0),
+            })
+            if len(alternates) >= 3:
+                break
+
+        candidates = [{
+            "player":         modal_player,
+            "position":       modal_position,
+            "college":        modal_school,
+            "probability":    modal_prob,
+            "team":           modal_team,
+            "consensus_rank": modal_cons_rank,
+            "variance_landing_pick": 0.0,
+        }, *alternates]
+
         original_team = original_owners.get(pn)
-        most_likely = getattr(ordered[0], team_col, None)
         out_picks.append({
             "pick_number":      pn,
-            "team":             original_team or most_likely,
+            "team":             original_team or modal_team,
             "original_team":    original_team,
-            "most_likely_team": most_likely,
-            "candidates": [
-                {
-                    "player":          getattr(r, "player", None),
-                    "position":        getattr(r, "position", None),
-                    "college":         getattr(r, "college", None),
-                    "probability":     float(getattr(r, "probability", 0) or 0),
-                    "team":            getattr(r, team_col, None),
-                    "consensus_rank":  (int(getattr(r, "consensus_rank"))
-                                         if pd.notna(getattr(r, "consensus_rank", None))
-                                         else None),
-                    "variance_landing_pick": float(
-                        getattr(r, "variance_landing_pick", 0) or 0
-                    ),
-                }
-                for r in ordered
-            ],
+            "most_likely_team": modal_team,
+            "candidates":       candidates,
         })
     return {
         "picks": out_picks,
@@ -517,250 +528,6 @@ def latest_simulation() -> dict:
             "mtime": _file_mtime(MC_CSV),
             "source": MC_CSV.name,
         },
-    }
-
-
-# Background sim state — a single in-memory job slot. Runs one sim at a time.
-_SIM_STATE: dict = {
-    "status": "idle",      # idle | running | complete | error
-    "started_at": None,
-    "finished_at": None,
-    "n_simulations": 0,
-    "progress_current": 0,   # N sims completed so far (parsed from stdout)
-    "progress_pct": 0.0,     # 0-100
-    "log_tail": [],
-    "error": None,
-}
-
-
-async def _run_simulation(n_sims: int) -> None:
-    """Spawn the stage2 simulator as a subprocess, capture stdout, push the
-    last N lines into _SIM_STATE.log_tail so the frontend can poll."""
-    _SIM_STATE.update({
-        "status": "running",
-        "started_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "finished_at": None,
-        "n_simulations": n_sims,
-        "progress_current": 0,
-        "progress_pct": 0.0,
-        "log_tail": [],
-        "error": None,
-    })
-    env = os.environ.copy()
-    env["PYTHONIOENCODING"] = "utf-8"
-    cmd = [
-        sys.executable, "-c",
-        f"import sys; sys.path.insert(0, r'{ROOT}'); "
-        f"import src.models.stage2_game_theoretic as s; "
-        f"s.N_SIMULATIONS = {int(n_sims)}; s.main()",
-    ]
-    try:
-        proc = await asyncio.create_subprocess_exec(
-            *cmd,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.STDOUT,
-            cwd=str(ROOT),
-            env=env,
-        )
-        assert proc.stdout is not None
-        # Filter patterns that should never reach the UI — they're noise
-        # (pandas/numpy warnings, internal paths, deprecation notices).
-        NOISE_PATTERNS = (
-            "PerformanceWarning",
-            "DataFrame is highly fragmented",
-            "Consider joining all columns",
-            "frame.copy()",
-            "DeprecationWarning",
-            "FutureWarning",
-            "UserWarning",
-        )
-        # Progress marker: stage2 prints "  ...N/M" every 100 sims. We extract
-        # current/total, convert to pct, and expose via sim_state for the UI
-        # progress bar.
-        import re as _re
-        PROGRESS_RX = _re.compile(r"^\s*\.\.\.(\d+)/(\d+)\s*$")
-        async for raw in proc.stdout:
-            line = raw.decode("utf-8", errors="replace").rstrip()
-            # Update progress counter before any filtering
-            pm = PROGRESS_RX.match(line)
-            if pm:
-                current = int(pm.group(1))
-                total = int(pm.group(2)) or 1
-                _SIM_STATE["progress_current"] = current
-                _SIM_STATE["progress_pct"] = round(100 * current / total, 1)
-            if any(p in line for p in NOISE_PATTERNS):
-                continue
-            if line.startswith("  ") and ("[" in line or ".py" in line or "pros[" in line):
-                continue
-            if not line.strip():
-                continue
-            _SIM_STATE["log_tail"].append(line)
-            if len(_SIM_STATE["log_tail"]) > 120:
-                _SIM_STATE["log_tail"] = _SIM_STATE["log_tail"][-120:]
-        rc = await proc.wait()
-        if rc != 0:
-            _SIM_STATE.update({"status": "error",
-                               "error": f"exit code {rc}"})
-        else:
-            _SIM_STATE.update({
-                "status": "complete",
-                "progress_pct": 100.0,
-                "progress_current": _SIM_STATE.get("n_simulations", 0),
-            })
-    except Exception as exc:  # pragma: no cover — surface to client
-        _SIM_STATE.update({"status": "error", "error": str(exc)})
-    finally:
-        _SIM_STATE["finished_at"] = datetime.now(timezone.utc).isoformat(
-            timespec="seconds")
-
-
-@app.post("/api/simulate")
-async def simulate(
-    req: SimulateRequest,
-    x_auth_token: Optional[str] = Header(default=None),
-) -> dict:
-    # Share-mode safety gates. When the launcher sets DRAFT_READ_ONLY=1 the
-    # whole endpoint is disabled; when DRAFT_AUTH_TOKEN is set the caller
-    # must present it as X-Auth-Token.
-    if READ_ONLY:
-        raise HTTPException(
-            status_code=403,
-            detail="Dashboard is running in read-only mode; simulation disabled",
-        )
-    if AUTH_TOKEN and x_auth_token != AUTH_TOKEN:
-        raise HTTPException(
-            status_code=401,
-            detail="Missing or invalid X-Auth-Token header",
-        )
-    if _SIM_STATE["status"] == "running":
-        raise HTTPException(
-            status_code=409,
-            detail="A simulation is already running; poll /api/simulate/status",
-        )
-    if req.n_simulations < 1 or req.n_simulations > MAX_SIMS:
-        raise HTTPException(
-            status_code=400,
-            detail=f"n_simulations must be between 1 and {MAX_SIMS}",
-        )
-    asyncio.create_task(_run_simulation(req.n_simulations))
-    return {"status": "started", "n_simulations": req.n_simulations}
-
-
-@app.get("/api/simulate/status")
-def simulate_status() -> dict:
-    return _SIM_STATE
-
-
-class ReplayRequest(BaseModel):
-    forced_picks: dict[int, str] = {}   # {pick_number: player_name}
-    n_simulations: int = 10
-
-
-@app.post("/api/simulate/replay")
-def simulate_replay(req: ReplayRequest) -> dict:
-    """Re-run the simulator with user-specified forced picks. Used by the
-    Mock Draft builder: when the user pins a pick, this endpoint returns
-    model predictions for the remaining slots given those constraints.
-
-    Runs in-process (not subprocess) because this is a short-lived request
-    that needs quick turnaround for interactive UX. Caps at 20 sims/request
-    to keep response time bounded."""
-    if READ_ONLY:
-        raise HTTPException(status_code=403, detail="Read-only mode")
-    n_sims = max(3, min(int(req.n_simulations), 20))
-    # Import the simulator lazily so the FastAPI startup isn't slowed by
-    # loading pandas+model artifacts.
-    import sys as _sys
-    from pathlib import Path as _Path
-    _sys.path.insert(0, str(_Path(__file__).resolve().parents[2]))
-    from src.models import stage2_game_theoretic as s
-    import numpy as np
-    from collections import Counter, defaultdict
-
-    pros, team_ctx, needs, top3_needs, qb_urgency_map = s.load_data()
-    s.GM_AFFINITY_CACHE = s.load_gm_affinity()
-    picks_template = [
-        {
-            "pick_number": int(row["pick_number"]),
-            "team":         row["team"],
-            "bpa_weight":   float(row.get("bpa_weight") or 0.5),
-            "need_weight":  float(row.get("need_weight") or 0.5),
-            "trade_up_rate":   float(row.get("trade_up_rate") or 0.35),
-            "trade_down_rate": float(row.get("trade_down_rate") or 0.30),
-            "pick_range_trade_rate": float(row.get("pick_range_trade_rate") or 0.30),
-            "round":        int(row.get("round") or 1),
-            "qb_urgency":   float(row.get("qb_urgency") or 0.0),
-        }
-        for _, row in team_ctx[team_ctx["round"] == 1].iterrows()
-    ]
-
-    rng = np.random.default_rng(int(hash(repr(req.forced_picks)) & 0xFFFFFFFF))
-    # Aggregate landings
-    landing: dict = defaultdict(lambda: Counter())
-    team_at_slot: dict = defaultdict(lambda: defaultdict(Counter))
-    for _ in range(n_sims):
-        history, _tl, picks_realised = s.simulate_one(
-            pros, picks_template, top3_needs, qb_urgency_map, rng,
-            forced_picks={int(k): v for k, v in req.forced_picks.items()},
-        )
-        pick_team_map = {p["pick_number"]: p["team"] for p in picks_realised}
-        for pn, player in history.items():
-            landing[player][pn] += 1
-            team_at_slot[player][pn][pick_team_map.get(pn, "?")] += 1
-
-    # Build per-slot top-4 with greedy assignment so a player never shows
-    # as top-1 at two different slots. Walk slots 1..32 in order and claim
-    # each slot's best-available unclaimed player.
-    claimed: set[str] = set()
-    out_picks: list[dict] = []
-    for pn in range(1, 33):
-        by_prob = [(player, slots.get(pn, 0))
-                   for player, slots in landing.items()
-                   if slots.get(pn, 0) > 0]
-        by_prob.sort(key=lambda t: -t[1])
-        if not by_prob:
-            continue
-        # Promote the first unclaimed player to top-1.
-        top_idx = next(
-            (i for i, (p, _) in enumerate(by_prob) if p not in claimed),
-            0,
-        )
-        ordered = [by_prob[top_idx]] + [
-            t for i, t in enumerate(by_prob) if i != top_idx
-        ]
-        ordered = ordered[:4]
-        claimed.add(ordered[0][0])
-        candidates = []
-        for player, count in ordered:
-            prow = pros[pros["player"] == player]
-            teams_here = team_at_slot[player][pn]
-            team = teams_here.most_common(1)[0][0] if teams_here else "?"
-            candidates.append({
-                "player":         player,
-                "position":       (prow["position"].iloc[0]
-                                    if not prow.empty else None),
-                "college":        (prow["college"].iloc[0]
-                                    if not prow.empty else None),
-                "consensus_rank": (int(prow["rank"].iloc[0])
-                                    if not prow.empty and pd.notna(prow["rank"].iloc[0]) else None),
-                "probability":    count / n_sims,
-                "team":           team,
-                # Keep shape parity with /api/simulations/latest so the
-                # frontend Candidate type holds across both endpoints.
-                "variance_landing_pick": 0,
-            })
-        out_picks.append({
-            "pick_number": pn,
-            "team":        candidates[0]["team"] if candidates else None,
-            "original_team": candidates[0]["team"] if candidates else None,
-            "most_likely_team": candidates[0]["team"] if candidates else None,
-            "candidates":  candidates,
-        })
-
-    return {
-        "picks": out_picks,
-        "meta":  {"n_sims": n_sims,
-                   "forced_picks_count": len(req.forced_picks)},
     }
 
 

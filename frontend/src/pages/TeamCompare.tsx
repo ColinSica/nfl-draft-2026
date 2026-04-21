@@ -140,14 +140,22 @@ function TeamPanel({ data }: { data: any }) {
           </div>
         </div>
 
-        {data._4_21_news && (
-          <div className="mt-3 p-3 text-xs" style={{ background: `${tc.primary}08`, borderLeft: `2px solid ${tc.primary}` }}>
-            <SmallCaps tight className="text-ink-soft block mb-0.5">Latest intel</SmallCaps>
-            <p className="text-ink leading-relaxed">
-              {Array.isArray(data._4_21_news) ? data._4_21_news.join(' · ') : data._4_21_news}
-            </p>
-          </div>
-        )}
+        {(() => {
+          const newsKeys = Object.keys(data ?? {})
+            .filter(k => /^_\d+_\d+_news$/.test(k))
+            .sort();
+          const latestKey = newsKeys[newsKeys.length - 1];
+          const latestNews = latestKey ? (data as any)[latestKey] : null;
+          if (!latestNews) return null;
+          return (
+            <div className="mt-3 p-3 text-xs" style={{ background: `${tc.primary}08`, borderLeft: `2px solid ${tc.primary}` }}>
+              <SmallCaps tight className="text-ink-soft block mb-0.5">Latest intel</SmallCaps>
+              <p className="text-ink leading-relaxed">
+                {Array.isArray(latestNews) ? latestNews.join(' · ') : latestNews}
+              </p>
+            </div>
+          );
+        })()}
       </div>
     </article>
   );
