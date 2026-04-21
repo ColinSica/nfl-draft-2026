@@ -4,10 +4,11 @@
  * Rebuilt for light theme.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { Search } from 'lucide-react';
+import { Search, Star } from 'lucide-react';
 import { teamColor } from '../lib/teamColors';
 import { SectionHeader, SmallCaps, MissingText, HRule } from '../components/editorial';
 import { displayValue } from '../lib/display';
+import { useWatchlist } from '../lib/watchlist';
 
 type Prospect = {
   player: string;
@@ -26,6 +27,8 @@ export function Prospects() {
   const [query, setQuery] = useState('');
   const [posFilter, setPosFilter] = useState<string>('ALL');
   const [selected, setSelected] = useState<string | null>(null);
+  const [onlyStarred, setOnlyStarred] = useState(false);
+  const wl = useWatchlist();
 
   useEffect(() => {
     fetch('/api/simulations/prospects')
@@ -44,6 +47,7 @@ export function Prospects() {
     if (!prospects) return [];
     const q = query.trim().toLowerCase();
     return prospects.filter(p => {
+      if (onlyStarred && !wl.has(p.player)) return false;
       if (posFilter !== 'ALL' && p.position !== posFilter) return false;
       if (!q) return true;
       return (
@@ -52,7 +56,7 @@ export function Prospects() {
         (p.position ?? '').toLowerCase().includes(q)
       );
     });
-  }, [prospects, query, posFilter]);
+  }, [prospects, query, posFilter, onlyStarred, wl]);
 
   const selectedProspect = filtered.find(p => p.player === selected) ?? null;
 
@@ -63,27 +67,46 @@ export function Prospects() {
         title="Prospects and landing spots."
       />
 
-      <div className="flex flex-wrap items-center gap-3">
-        <label className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md">
-          <Search size={16} className="text-ink-soft" />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search prospect, college, position…"
-            className="flex-1 bg-transparent outline-none text-sm text-ink placeholder:text-ink-soft/60"
-          />
-        </label>
-        <select
-          value={posFilter}
-          onChange={(e) => setPosFilter(e.target.value)}
-          className="px-3 py-2 bg-paper-surface border border-ink-edge text-sm text-ink font-mono"
-        >
-          {positions.map(p => <option key={p} value={p}>{p}</option>)}
-        </select>
-        <span className="ml-auto text-sm text-ink-soft">
-          {filtered.length} {filtered.length === 1 ? 'prospect' : 'prospects'}
-        </span>
+      <div className="space-y-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <label className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md">
+            <Search size={16} className="text-ink-soft" />
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search prospect, college, position…"
+              className="flex-1 bg-transparent outline-none text-sm text-ink placeholder:text-ink-soft/60"
+            />
+          </label>
+          <button
+            onClick={() => setOnlyStarred(!onlyStarred)}
+            className={`btn-ghost ${onlyStarred ? 'bg-mode-indie/15 border-mode-indie text-ink' : ''}`}
+          >
+            <Star size={14} style={onlyStarred ? { color: '#D9A400', fill: '#D9A400' } : undefined} />
+            <span>Watchlist ({wl.count})</span>
+          </button>
+          <span className="ml-auto text-sm text-ink-soft">
+            {filtered.length} {filtered.length === 1 ? 'prospect' : 'prospects'}
+          </span>
+        </div>
+
+        {/* Position tab strip */}
+        <div className="flex flex-wrap gap-0 border border-ink-edge bg-paper-surface overflow-x-auto">
+          {positions.map(p => (
+            <button
+              key={p}
+              onClick={() => setPosFilter(p)}
+              className={`px-3 py-2 caps-tight border-r border-ink-edge last:border-r-0 transition whitespace-nowrap ${
+                posFilter === p
+                  ? 'bg-ink text-paper'
+                  : 'text-ink-soft hover:text-ink hover:bg-paper-hover'
+              }`}
+            >
+              {p === 'ALL' ? 'All' : p}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-6">
@@ -95,35 +118,49 @@ export function Prospects() {
             <div className="card p-10 text-center text-ink-soft italic">No prospects match.</div>
           ) : (
             <div className="border border-ink-edge bg-paper-surface">
-              {filtered.slice(0, 120).map((p, i) => (
-                <button
-                  key={p.player + i}
-                  onClick={() => setSelected(p.player)}
-                  className={`w-full text-left flex items-baseline gap-4 px-4 py-3 border-b border-ink-edge last:border-b-0
-                    transition ${selected === p.player ? 'bg-mode-indie/12' : 'hover:bg-paper-hover'}
-                  `}
-                >
-                  <span className="display-num text-xl text-ink-soft w-8 shrink-0 text-right">
-                    {p.most_likely_slot || '·'}
-                  </span>
-                  <span className="flex-1 min-w-0">
-                    <div className="display-broadcast text-lg leading-none text-ink truncate">
-                      {p.player.toUpperCase()}
-                    </div>
-                    <div className="text-xs text-ink-soft mt-0.5 font-mono">
-                      {p.position} · {displayValue(p.college, '—')}
-                    </div>
-                  </span>
-                  <span className="text-right shrink-0 text-xs font-mono">
-                    {p.most_likely_team && (
-                      <>
-                        <span className="caps-tight text-ink-soft">to</span>{' '}
-                        <span className="text-ink font-bold">{p.most_likely_team}</span>
-                      </>
-                    )}
-                  </span>
-                </button>
-              ))}
+              {filtered.slice(0, 120).map((p, i) => {
+                const starred = wl.has(p.player);
+                return (
+                  <div
+                    key={p.player + i}
+                    className={`flex items-center gap-2 border-b border-ink-edge last:border-b-0 transition ${
+                      selected === p.player ? 'bg-mode-indie/12' : 'hover:bg-paper-hover'
+                    }`}
+                  >
+                    <button
+                      onClick={() => setSelected(p.player)}
+                      className="flex-1 text-left flex items-baseline gap-4 px-4 py-3 min-w-0"
+                    >
+                      <span className="display-num text-xl text-ink-soft w-8 shrink-0 text-right">
+                        {p.most_likely_slot || '·'}
+                      </span>
+                      <span className="flex-1 min-w-0">
+                        <div className="display-broadcast text-lg leading-none text-ink truncate">
+                          {p.player.toUpperCase()}
+                        </div>
+                        <div className="text-xs text-ink-soft mt-0.5 font-mono">
+                          {p.position} · {displayValue(p.college, '—')}
+                        </div>
+                      </span>
+                      <span className="text-right shrink-0 text-xs font-mono">
+                        {p.most_likely_team && (
+                          <>
+                            <span className="caps-tight text-ink-soft">to</span>{' '}
+                            <span className="text-ink font-bold">{p.most_likely_team}</span>
+                          </>
+                        )}
+                      </span>
+                    </button>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); wl.toggle(p.player, { slot: p.most_likely_slot, team: p.most_likely_team ?? undefined }); }}
+                      className="p-3 text-ink-soft hover:text-ink transition shrink-0"
+                      title={starred ? 'Remove from watchlist' : 'Add to watchlist'}
+                    >
+                      <Star size={16} style={{ color: starred ? '#D9A400' : undefined, fill: starred ? '#D9A400' : 'transparent' }} />
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           )}
           {filtered.length > 120 && (

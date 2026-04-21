@@ -6,8 +6,10 @@ import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
+import { Watchlist } from './pages/Watchlist';
 import { AboutModal } from './components/AboutModal';
 import { MobileModeBar } from './components/MobileModeBar';
+import { useWatchlist } from './lib/watchlist';
 import { ModeProvider, useMode, MODE_META } from './lib/mode';
 import { api, type MetaInfo } from './lib/api';
 import { cn } from './lib/format';
@@ -22,9 +24,11 @@ const NAV_LINKS = [
   { to: '/simulate',  label: 'First round', end: true },
   { to: '/compare',   label: 'Compare',     end: true },
   { to: '/method',    label: 'Method',      end: true },
+  { to: '/watchlist', label: 'Watchlist',   end: true },
 ];
 
 function Nav({ onNavigate }: { onNavigate?: () => void }) {
+  const wl = useWatchlist();
   return (
     <nav className="flex items-center gap-0 flex-wrap lg:flex-nowrap">
       {NAV_LINKS.map((l) => (
@@ -35,7 +39,7 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
           onClick={onNavigate}
           className={({ isActive }) =>
             cn(
-              'px-4 py-2 caps-tight transition-all ease-broadcast duration-150 border-b-2 whitespace-nowrap',
+              'px-4 py-2 caps-tight transition-all ease-broadcast duration-150 border-b-2 whitespace-nowrap inline-flex items-center gap-1.5',
               isActive
                 ? 'text-ink border-mode-indie'
                 : 'text-ink-soft hover:text-ink border-transparent',
@@ -43,6 +47,14 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
           }
         >
           {l.label}
+          {l.to === '/watchlist' && wl.count > 0 && (
+            <span
+              className="display-num text-[0.6rem] min-w-[18px] px-1 text-center"
+              style={{ background: '#D9A400', color: '#12151B' }}
+            >
+              {wl.count}
+            </span>
+          )}
         </NavLink>
       ))}
     </nav>
@@ -199,6 +211,7 @@ function AppInner() {
           <Route path="/prospects" element={<Prospects />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/method" element={<Method />} />
+          <Route path="/watchlist" element={<Watchlist />} />
         </Routes>
       </main>
       <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t border-ink-edge">
