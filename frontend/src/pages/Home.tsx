@@ -5,6 +5,7 @@ import { api, type MetaInfo, type PickRow } from '../lib/api';
 import { useMode, MODE_META } from '../lib/mode';
 import { ModeDescription, ModeSwitcher } from '../components/ModeSwitcher';
 import { FreshnessPanel, StaleBadge } from '../components/FreshnessPanel';
+import { DraftCountdown } from '../components/DraftCountdown';
 import { useMemo } from 'react';
 import { TrustBox } from '../components/TrustBox';
 import { HRule, SmallCaps, SectionHeader, LiveBadge } from '../components/editorial';
@@ -140,6 +141,9 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      {/* ───── COUNTDOWN ───── */}
+      <DraftCountdown />
 
       {/* ───── TRUST ───── */}
       <TrustBox />
