@@ -278,6 +278,35 @@ def _apply_structural_anchor(pros: pd.DataFrame) -> pd.DataFrame:
     total_penalty = age_penalty + yrs_penalty + conf_penalty + size_penalty + no_pff_penalty
     blended = blended + total_penalty
 
+    # ---- MARKET ANCHOR OVERRIDE (Kalshi draft odds) ----
+    # For prospects with live Kalshi market coverage, the market P50 is a
+    # better anchor than PFF + position. Markets already price in age,
+    # conference, size, injuries, visits. We blend based on market
+    # confidence (volume/OI) so thinly-traded markets don't fully override.
+    #   conf=1.0 -> 90% market, 10% blended_model
+    #   conf=0.3 -> 55% market, 45% blended_model
+    #   conf=0.0 -> 25% market, 75% blended_model (still trust directionally)
+    try:
+        from src.models.independent.odds_anchor import load_anchors as _load_odds
+        odds = _load_odds()
+    except Exception as exc:
+        odds = {}
+        print(f"[player_value] odds anchor load failed: {exc}")
+    if odds:
+        market_p50 = out["player"].map(
+            lambda p: odds.get(p, {}).get("pick_p50")).astype(float)
+        market_conf = out["player"].map(
+            lambda p: odds.get(p, {}).get("market_confidence", 0.0)).astype(float).fillna(0.0)
+        has_market = market_p50.notna()
+        # w_market ranges 0.25 (conf=0) to 0.90 (conf=1)
+        w_market = (0.25 + 0.65 * market_conf).clip(lower=0.25, upper=0.90)
+        override = w_market * market_p50 + (1.0 - w_market) * blended
+        blended = blended.where(~has_market, override)
+        n_market = int(has_market.sum())
+        print(f"[player_value] market anchor applied to {n_market} prospects")
+        out["_market_p50"] = market_p50
+        out["_market_confidence"] = market_conf
+
     out["_model_pred"] = blended
     out["_structural_anchor"] = anchor
     out["_pff_anchor"] = pff_anchor_pick

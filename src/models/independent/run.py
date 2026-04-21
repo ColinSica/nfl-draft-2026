@@ -583,7 +583,20 @@ def main(argv: list[str] | None = None) -> int:
         },
     }, indent=2), encoding="utf-8")
 
-    # (r1_clamp intentionally NOT invoked — model stays organic.)
+    # Apply post-processing clamp. If Kalshi market anchors are available,
+    # use the odds-based clamp (extends through R3, uses P10/P90 bands).
+    # Otherwise fall back to the legacy consensus-rank R1 clamp.
+    try:
+        from src.models.calibration import odds_clamp as _oc
+        _oc.apply_odds_clamp()
+    except Exception as exc:
+        print(f"[independent] odds_clamp failed: {exc}; falling back to r1_clamp",
+              file=sys.stderr)
+        try:
+            from src.models.calibration import r1_clamp as _rc
+            _rc.apply_r1_clamp()
+        except Exception as exc2:
+            print(f"[independent] r1_clamp also failed: {exc2}", file=sys.stderr)
 
     # Auto-export reviewer-friendly comparison CSVs so VS Code stays in sync.
     try:

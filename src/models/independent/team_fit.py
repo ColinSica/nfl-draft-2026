@@ -370,6 +370,28 @@ def compute_team_fit(prospects: pd.DataFrame,
             + need_w * need_total
             + college_bonus + scarcity + archetype_bonus
             + visit_bonus + narr_bonus)
+
+    # Kalshi team-landing bonus. Markets price "Will X be drafted by team Y?"
+    # directly — this is the most-direct draft signal available. Applied as a
+    # large additive bonus gated at 3% (above uniform noise floor) so only
+    # meaningful market priors contribute.
+    team_code = team_profile.get("team") or ""
+    if team_code and _TEAM_LANDING_PRIORS:
+        def _landing(player_name: str) -> float:
+            probs = _TEAM_LANDING_PRIORS.get(player_name, {}) or {}
+            p = probs.get(team_code, 0.0)
+            return max(0.0, p - 0.03)
+        if "player" in prospects.columns:
+            landing_raw = prospects["player"].map(_landing).fillna(0.0)
+            # Weight 4.0 → 30% market landing = +1.08 fit bonus (~50% of a typical
+            # fit score). Strong but doesn't fully dominate need/BPA/scheme.
+            market_landing_bonus = landing_raw * 4.0
+        else:
+            market_landing_bonus = pd.Series(0.0, index=prospects.index)
+    else:
+        market_landing_bonus = pd.Series(0.0, index=prospects.index)
+
+    base = base + market_landing_bonus
     return base * gm_mult * coach_mult * inj_mult
 
 
@@ -421,6 +443,31 @@ def _load_reasoning_signals() -> dict:
 
 
 _REASONING_SIGNALS = _load_reasoning_signals()
+
+
+def _load_team_landing_priors() -> dict:
+    """{player: {team: prob, ...}} — market-implied team landing probabilities
+    from Kalshi draft markets. Loaded once at import; refreshed via reload()."""
+    try:
+        from src.models.independent.odds_anchor import build_team_landing_priors
+        priors = build_team_landing_priors()
+    except Exception as exc:
+        print(f"[team_fit] market team-landing load failed: {exc}")
+        return {}
+    # Flatten to {player: {team: prob}} for hot-path lookup
+    out: dict[str, dict[str, float]] = {}
+    for p, d in priors.items():
+        out[p] = dict(d.get("team_probs") or {})
+    return out
+
+
+_TEAM_LANDING_PRIORS = _load_team_landing_priors()
+
+
+def reload_market_signals():
+    """Reload Kalshi market priors. Call after a fresh odds refresh."""
+    global _TEAM_LANDING_PRIORS
+    _TEAM_LANDING_PRIORS = _load_team_landing_priors()
 
 
 def _reasoning_position_boost(team_code: str) -> dict[str, float]:

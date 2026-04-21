@@ -21,6 +21,9 @@ allowed_inputs:
   historical_drafts:    data/raw/historical_drafts_2011_2025.csv
   # analyst content is allowed ONLY as reasoning signals (to be produced in Section E):
   reasoning_signals:    data/features/team_reasoning_signals_2026.json   # will be created
+  # Kalshi-sourced market-implied draft odds. Market prices are factual
+  # (not analyst opinion) so they're allowed as an anchor signal.
+  betting_odds:         data/features/betting_odds_2026.json
 
 # Columns that must NEVER be read from prospects_2026_enriched.csv.
 # Enforced by the independence guard.

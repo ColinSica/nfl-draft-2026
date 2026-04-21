@@ -7,3 +7,4 @@ pypdf
 fastapi
 uvicorn[standard]
 openpyxl
+cryptography
