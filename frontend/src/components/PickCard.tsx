@@ -21,9 +21,9 @@ export type PickData = {
 };
 
 const conf: Record<string, { color: string; label: string }> = {
-  HIGH:   { color: '#2EE09A', label: 'High confidence' },
-  MEDIUM: { color: '#FFD23F', label: 'Medium confidence' },
-  LOW:    { color: '#E63946', label: 'Low confidence' },
+  HIGH:   { color: '#17A870', label: 'High confidence' },
+  MEDIUM: { color: '#D9A400', label: 'Medium confidence' },
+  LOW:    { color: '#DC2F3D', label: 'Low confidence' },
 };
 
 export function PickCard({ data, expanded: initialExpanded = false }: {
@@ -31,7 +31,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
   expanded?: boolean;
 }) {
   const [expanded, setExpanded] = useState(initialExpanded);
-  const accent = data.accent ?? '#FFD23F';
+  const accent = data.accent ?? '#D9A400';
   const tc = teamColor(data.team);
   const prob = data.probability ?? null;
   const cons = data.consensusRank ?? null;
@@ -44,7 +44,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
 
   return (
     <article
-      className="card group hover:border-paper-muted transition-all ease-broadcast duration-200 flex"
+      className="card group hover:shadow-card-raised transition-all ease-broadcast duration-200 flex"
       style={style}
     >
       {/* Team color edge — sports identity */}
@@ -57,16 +57,15 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
           <div
             className="flex flex-col items-center justify-center px-5 py-4 border-r border-ink-edge min-w-[108px]"
             style={{
-              background: `linear-gradient(180deg, ${tc.primary}25 0%, ${tc.primary}05 100%)`,
+              background: `linear-gradient(180deg, ${tc.primary}18 0%, ${tc.primary}04 100%)`,
             }}
           >
-            <span className="caps-tight text-paper-subtle mb-0.5">Pick</span>
+            <span className="caps-tight text-ink-soft mb-0.5">Pick</span>
             <span
               className="display-num"
               style={{
-                color: '#F3F6FA',
+                color: tc.primary,
                 fontSize: 'clamp(2.75rem, 6vw, 3.75rem)',
-                textShadow: `0 0 20px ${tc.primary}40`,
               }}
             >
               {String(data.slot).padStart(2, '0')}
@@ -89,10 +88,10 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
                 {data.team}
               </span>
               <div className="min-w-0">
-                <div className="display-broadcast text-lg leading-none text-paper truncate">
+                <div className="display-broadcast text-lg leading-none text-ink truncate">
                   {tc.name}
                 </div>
-                <div className="text-[0.7rem] text-paper-subtle mono-label mt-0.5">
+                <div className="text-[0.7rem] text-ink-soft/70 mono-label mt-0.5">
                   {displayValue(data.teamName, `${data.team}`)}
                 </div>
               </div>
@@ -101,13 +100,13 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
             {prob !== null && (
               <div className="text-right shrink-0">
                 <div
-                  className="display-num"
-                  style={{ fontSize: '1.75rem', color: accent }}
+                  className="display-num text-ink"
+                  style={{ fontSize: '1.75rem' }}
                 >
                   {displayNum(prob * 100, { digits: 0 })}
-                  <span className="text-sm text-paper-muted font-normal ml-0.5">%</span>
+                  <span className="text-sm text-ink-soft/70 font-normal ml-0.5">%</span>
                 </div>
-                <div className="caps-tight text-paper-subtle text-[0.65rem]">Pick prob</div>
+                <div className="caps-tight text-ink-soft text-[0.65rem]">Pick prob</div>
               </div>
             )}
           </div>
@@ -116,38 +115,36 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
         <hr className="hrule" />
 
         {/* Player — the hero */}
-        <div className="px-5 py-4">
+        <div className="px-5 py-5">
           <div className="flex items-baseline justify-between gap-3 flex-wrap">
-            <h3 className="display-broadcast text-2xl md:text-3xl leading-none">
+            <h3 className="display-broadcast text-2xl md:text-3xl leading-none text-ink">
               {displayValue(data.player).toUpperCase()}
             </h3>
-            <div className="flex items-center gap-2.5 text-xs text-paper-muted font-mono">
+            <div className="flex items-center gap-2.5 text-xs text-ink-soft font-mono">
               <span
-                className="px-1.5 py-0.5"
+                className="px-1.5 py-0.5 font-bold"
                 style={{
-                  background: '#141A25',
-                  border: '1px solid #252D3D',
-                  color: '#F3F6FA',
-                  fontWeight: 700,
+                  background: '#12151B',
+                  color: '#F5F2EA',
                 }}
               >
                 {data.position}
               </span>
-              {data.college && <span className="text-paper-subtle">{data.college}</span>}
+              {data.college && <span className="text-ink-soft/80">{data.college}</span>}
             </div>
           </div>
 
           <div className="mt-3 flex items-center gap-4 text-xs font-mono flex-wrap">
             {data.grade !== null && data.grade !== undefined && (
-              <span className="text-paper-muted">
-                <span className="caps-tight mr-1.5 text-paper-subtle">Grade</span>
-                <span className="text-paper font-bold">{displayNum(data.grade, { digits: 1 })}</span>
+              <span className="text-ink-soft">
+                <span className="caps-tight mr-1.5 text-ink-soft/70">Grade</span>
+                <span className="text-ink font-bold">{displayNum(data.grade, { digits: 1 })}</span>
               </span>
             )}
             {cons !== null && (
-              <span className="text-paper-muted">
-                <span className="caps-tight mr-1.5 text-paper-subtle">Consensus</span>
-                <span className="text-paper font-bold">#{cons}</span>
+              <span className="text-ink-soft">
+                <span className="caps-tight mr-1.5 text-ink-soft/70">Consensus</span>
+                <span className="text-ink font-bold">#{cons}</span>
               </span>
             )}
             {c && (
@@ -171,9 +168,9 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
                 <span className="caps-tight shrink-0 mt-1" style={{ color: accent }}>
                   Why this pick?
                 </span>
-                <div className="flex-1 text-paper leading-relaxed text-sm">
+                <div className="flex-1 text-ink leading-relaxed text-sm">
                   {data.whySummary ?? (
-                    <span className="italic text-paper-subtle">
+                    <span className="italic text-ink-soft">
                       Reasoning not yet generated for this pick.
                     </span>
                   )}
@@ -181,13 +178,13 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
                 {data.whyDetail && (
                   <ChevronDown
                     size={16}
-                    className="shrink-0 mt-1 text-paper-subtle transition-transform duration-200"
+                    className="shrink-0 mt-1 text-ink-soft transition-transform duration-200"
                     style={{ transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
                   />
                 )}
               </button>
               {expanded && data.whyDetail && (
-                <div className="mt-3 pt-3 border-t border-ink-edge text-sm text-paper-muted leading-relaxed">
+                <div className="mt-3 pt-3 border-t border-ink-edge text-sm text-ink-soft leading-relaxed">
                   {data.whyDetail}
                 </div>
               )}

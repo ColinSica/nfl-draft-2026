@@ -44,14 +44,14 @@ export function Stat({
 }) {
   return (
     <div className="space-y-1">
-      <div className="caps-tight text-paper-subtle">{label}</div>
+      <div className="caps-tight text-ink-soft">{label}</div>
       <div
         className={big ? 'stat-big' : 'display-broadcast text-3xl'}
-        style={{ color: accent ?? '#F3F6FA' }}
+        style={{ color: accent ?? '#12151B' }}
       >
         {value}
       </div>
-      {sub && <div className="text-xs text-paper-muted">{sub}</div>}
+      {sub && <div className="text-xs text-ink-soft">{sub}</div>}
     </div>
   );
 }
@@ -71,13 +71,13 @@ export function SectionHeader({
     <header className={`space-y-3 ${className}`}>
       <div className="flex items-baseline gap-3">
         {number !== undefined && (
-          <span className="display-num font-mono text-sm text-paper-subtle">
+          <span className="display-num font-mono text-sm text-ink-soft">
             §{String(number).padStart(2, '0')}
           </span>
         )}
         {kicker && <span className="caps text-mode-indie">{kicker}</span>}
       </div>
-      <h2 className="display-broadcast text-4xl md:text-5xl tracking-tight">
+      <h2 className="display-broadcast text-4xl md:text-5xl tracking-tight text-ink">
         {title}
       </h2>
       <HRule accent className="rule-draw" />
@@ -87,13 +87,12 @@ export function SectionHeader({
 
 export function MissingText({ children = 'Not available' }: { children?: ReactNode }) {
   return (
-    <span className="italic text-paper-subtle text-sm">
+    <span className="italic text-ink-soft text-sm">
       {children}
     </span>
   );
 }
 
-/** Pulsing LIVE / ON THE CLOCK indicator */
 export function LiveBadge({ children = 'Live' }: { children?: ReactNode }) {
   return (
     <span className="inline-flex items-center gap-2 px-2.5 py-1 caps-tight bg-live/10 text-live border border-live/40">

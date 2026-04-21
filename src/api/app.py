@@ -54,9 +54,9 @@ ANALYST_AGG_JSON = FEATURES / "analyst_aggregate_2026.json"
 ANALYST_CONSENSUS_JSON = FEATURES / "analyst_consensus_2026.json"
 
 # DRAFT_MODE (env var) selects which model's outputs the API surfaces.
-#   "benchmark"   (default) — legacy analyst-aware pipeline
-#   "independent"           — analyst-free team-agent simulator (Sections A-H)
-DRAFT_MODE = os.environ.get("DRAFT_MODE", "benchmark").lower()
+#   "independent" (default) — analyst-free team-agent simulator (the product)
+#   "benchmark"             — legacy analyst-aware pipeline (for comparison)
+DRAFT_MODE = os.environ.get("DRAFT_MODE", "independent").lower()
 if DRAFT_MODE == "independent":
     MODEL_REASONING_JSON = PROCESSED / "model_reasoning_2026_independent.json"
     MC_CSV = PROCESSED / "monte_carlo_2026_independent.csv"

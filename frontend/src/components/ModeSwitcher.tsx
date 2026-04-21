@@ -19,7 +19,7 @@ export function ModeSwitcher({ compact = false }: { compact?: boolean }) {
     <div
       role="radiogroup"
       aria-label="Prediction mode"
-      className="inline-flex items-stretch border border-ink-edge bg-ink-raised"
+      className="inline-flex items-stretch border border-ink-edge bg-paper-surface shadow-card"
     >
       {ORDER.map((m) => {
         const meta = MODE_META[m];
@@ -30,11 +30,11 @@ export function ModeSwitcher({ compact = false }: { compact?: boolean }) {
             role="radio"
             aria-checked={active}
             onClick={() => setMode(m)}
-            className="relative px-4 py-2 caps-tight transition-all ease-editorial duration-200
+            className="relative px-4 py-2.5 caps-tight transition-all ease-broadcast duration-200
                        border-r border-ink-edge last:border-r-0"
             style={{
-              color: active ? meta.accent : 'var(--tw-paper-muted, #A29987)',
-              background: active ? `${meta.accent}15` : 'transparent',
+              color: active ? meta.accent : '#5B6370',
+              background: active ? `${meta.accent}14` : 'transparent',
             }}
           >
             <span className="flex items-center gap-2">
@@ -53,7 +53,7 @@ export function ModeDescription() {
   const { mode } = useMode();
   const meta = MODE_META[mode];
   return (
-    <p className="text-paper-muted text-sm leading-relaxed max-w-2xl">
+    <p className="text-ink-soft text-sm leading-relaxed max-w-2xl">
       <span className="caps-tight" style={{ color: meta.accent }}>
         {meta.caption}
       </span>

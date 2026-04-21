@@ -21,14 +21,14 @@ const stateLabel: Record<'fresh' | 'stale' | 'missing', string> = {
 function Row({ label, iso }: { label: string; iso?: string | null }) {
   const s = freshnessState(iso);
   return (
-    <div className="flex items-baseline justify-between gap-4 py-2.5 border-b border-ink-edge last:border-b-0">
+    <div className="flex items-baseline justify-between gap-4 py-3 border-b border-ink-edge last:border-b-0">
       <div className="flex items-center gap-2.5">
         <span className={`w-1.5 h-1.5 rounded-full ${dotClass[s]}`} />
-        <span className="caps-tight text-paper-muted">{label}</span>
+        <span className="caps-tight text-ink-soft">{label}</span>
       </div>
       <div className="flex items-baseline gap-3">
-        <span className="font-mono text-xs text-paper-subtle">[{stateLabel[s]}]</span>
-        <span className="font-mono text-sm text-paper">{relTime(iso)}</span>
+        <span className="font-mono text-xs text-ink-soft/70">[{stateLabel[s]}]</span>
+        <span className="font-mono text-sm text-ink">{relTime(iso)}</span>
       </div>
     </div>
   );
@@ -37,7 +37,7 @@ function Row({ label, iso }: { label: string; iso?: string | null }) {
 export function FreshnessPanel({ data, compact }: { data: FreshnessInput; compact?: boolean }) {
   if (compact) {
     return (
-      <div className="flex items-center gap-4 text-xs text-paper-muted">
+      <div className="flex items-center gap-4 text-xs text-ink-soft">
         <span>
           <span className="caps-tight mr-1.5">model</span>
           <span className="font-mono">{relTime(data.modelRefresh)}</span>
@@ -57,14 +57,14 @@ export function FreshnessPanel({ data, compact }: { data: FreshnessInput; compac
   }
 
   return (
-    <section aria-label="Data freshness" className="card-raised">
-      <header className="flex items-center justify-between px-4 py-3 border-b border-ink-edge">
-        <h2 className="caps-tight text-paper">Data freshness</h2>
-        <span className="font-mono text-[0.68rem] text-paper-subtle">
+    <section aria-label="Data freshness" className="card">
+      <header className="flex items-center justify-between px-5 py-3 border-b border-ink-edge">
+        <h2 className="caps-tight text-ink">Data freshness</h2>
+        <span className="font-mono text-[0.68rem] text-ink-soft/70">
           cached-first · stale-while-revalidate
         </span>
       </header>
-      <div className="px-4 py-1">
+      <div className="px-5 py-1">
         <Row label="Model refresh" iso={data.modelRefresh} />
         <Row label="Intel refresh" iso={data.intelRefresh} />
         <Row label="Latest simulation" iso={data.simRun} />

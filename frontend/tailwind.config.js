@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
+  // Light-first theme — the product is a LIGHT sports-media product now.
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        // Broadcast-authority condensed sans for pick numbers & headlines.
         display: ['"Barlow Condensed"', 'Oswald', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        // Body — the non-condensed sibling, clean and athletic.
         sans: ['"Barlow"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
@@ -17,91 +16,92 @@ export default {
         'display-md': ['clamp(1.875rem, 4vw, 3rem)', { lineHeight: '0.95', letterSpacing: '-0.01em' }],
       },
       colors: {
-        // Broadcast-authority palette: cool navy ink + stark white + saturated accents.
-        ink: {
-          DEFAULT: '#06080F',   // deep navy-black base
-          raised:  '#0E131D',   // raised surface
-          card:    '#141A25',   // card surface
-          hover:   '#1A2230',   // hover state
-          edge:    '#252D3D',   // edge/divider
-          rule:    '#36405A',   // stronger rule
-        },
-        // "Paper" now reads as stark white (broadcast)
+        // LIGHT THEME — warm newsprint base, crisp white cards, ink text.
+        // Reverse of the prior dark: paper is now the surface, ink is text.
         paper: {
-          DEFAULT: '#F3F6FA',
-          muted:   '#9FACC2',
-          subtle:  '#6B7A94',
-          faint:   '#3B4558',
+          DEFAULT: '#F5F2EA',   // warm newsprint
+          surface: '#FFFFFF',   // card surface
+          raised:  '#FBFAF5',   // very subtle raise
+          hover:   '#EBE7DB',   // hover
+          muted:   '#5B6370',   // muted text
+          subtle:  '#848B98',   // subtle text
+          faint:   '#B4B9C2',   // placeholders
         },
-        // MODE COLORS — broadcast saturated (yellow/blue/green)
+        ink: {
+          DEFAULT: '#12151B',   // near-black text
+          soft:    '#2A2E37',   // softer text
+          edge:    '#D9D4C7',   // borders on light bg
+          rule:    '#C3BDAE',   // stronger rules
+          // dark-ink surfaces for select hero/contrast sections
+          deep:    '#0F1218',
+          raised:  '#1B1F27',
+          card:    '#232832',
+          hover:   '#2E3440',
+        },
+        // MODE ACCENTS — saturated for light-bg contrast
         mode: {
-          indie:      '#FFD23F',  // Independent = broadcast yellow
-          indieDim:   '#8A6E1F',
-          bench:      '#4A9EFF',  // Benchmark = broadcast blue
-          benchDim:   '#26578F',
-          compare:    '#2EE09A',  // Compare = bright field green
-          compareDim: '#1A7D55',
+          indie:      '#D9A400',  // darkened broadcast yellow for readability on white
+          indieDim:   '#7A5D00',
+          indiePop:   '#FFD23F',  // bright variant for dark contexts
+          bench:      '#1F6FEB',  // bright broadcast blue
+          benchDim:   '#104399',
+          compare:    '#17A870',  // deeper field green on light
+          compareDim: '#0E6945',
         },
-        // Urgent / live state
-        live:      '#E63946',     // broadcast red for LIVE / urgent
-        liveDim:   '#7D1F26',
-        // State palette
+        // Urgent / LIVE
+        live:      '#DC2F3D',
+        liveDim:   '#7A1820',
         state: {
-          fresh:   '#2EE09A',
-          stale:   '#FFD23F',
-          broken:  '#E63946',
-          pending: '#9FACC2',
+          fresh:   '#17A870',
+          stale:   '#D9A400',
+          broken:  '#DC2F3D',
+          pending: '#848B98',
         },
-        // Tier palette
         tier: {
-          r1:   '#FFD23F',
-          r2:   '#4A9EFF',
-          r3:   '#2EE09A',
-          r4:   '#9FACC2',
-          udfa: '#6B7A94',
-          // legacy aliases for older components
-          high:  '#2EE09A',
-          midhi: '#4A9EFF',
-          mid:   '#FFD23F',
-          midlo: '#E6826A',
-          low:   '#E63946',
+          r1:   '#D9A400',
+          r2:   '#1F6FEB',
+          r3:   '#17A870',
+          r4:   '#848B98',
+          udfa: '#B4B9C2',
+          high:  '#17A870',
+          midhi: '#1F6FEB',
+          mid:   '#D9A400',
+          midlo: '#E68A6A',
+          low:   '#DC2F3D',
         },
-        // LEGACY aliases so existing pages don't break during transition
+        // LEGACY aliases (light defaults)
         bg: {
-          DEFAULT: '#06080F',
-          raised:  '#0E131D',
-          card:    '#141A25',
-          hover:   '#1A2230',
+          DEFAULT: '#F5F2EA',
+          raised:  '#FBFAF5',
+          card:    '#FFFFFF',
+          hover:   '#EBE7DB',
         },
         border: {
-          DEFAULT: '#252D3D',
-          strong:  '#36405A',
+          DEFAULT: '#D9D4C7',
+          strong:  '#C3BDAE',
         },
         text: {
-          DEFAULT: '#F3F6FA',
-          muted:   '#9FACC2',
-          subtle:  '#6B7A94',
+          DEFAULT: '#12151B',
+          muted:   '#5B6370',
+          subtle:  '#848B98',
         },
         accent: {
-          DEFAULT: '#FFD23F',
-          hover:   '#FFDD6B',
+          DEFAULT: '#D9A400',
+          hover:   '#B88A00',
         },
       },
       boxShadow: {
-        card:   '0 1px 0 rgba(243,246,250,0.04) inset, 0 12px 40px rgba(0,0,0,0.55)',
-        chip:   '0 0 0 1px rgba(243,246,250,0.08), 0 2px 10px rgba(0,0,0,0.35)',
-        rise:   '0 14px 48px -10px rgba(0,0,0,0.65)',
-        glow:   '0 0 0 1px rgba(255,210,63,0.35), 0 12px 32px rgba(255,210,63,0.18)',
+        card:   '0 1px 2px rgba(18,21,27,0.04), 0 4px 14px -2px rgba(18,21,27,0.05)',
+        'card-raised': '0 1px 2px rgba(18,21,27,0.05), 0 10px 28px -6px rgba(18,21,27,0.10)',
+        chip:   '0 1px 3px rgba(18,21,27,0.08)',
+        rise:   '0 20px 50px -12px rgba(18,21,27,0.18)',
+        glow:   '0 0 0 3px rgba(217,164,0,0.18), 0 6px 20px rgba(217,164,0,0.15)',
       },
       backgroundImage: {
-        // Stadium-style radial atmosphere — cool, energetic, not academic
+        // Subtle paper-texture atmosphere on light bg
         'stadium':
-          'radial-gradient(at 10% -10%, rgba(74,158,255,0.12) 0, transparent 50%), ' +
-          'radial-gradient(at 90% 110%, rgba(255,210,63,0.08) 0, transparent 40%), ' +
-          'radial-gradient(at 50% 50%, rgba(230,57,70,0.04) 0, transparent 70%)',
-        // Thin yard-line stripes for field texture
-        'field-lines':
-          'repeating-linear-gradient(90deg, transparent 0px, transparent 79px, rgba(243,246,250,0.025) 79px, rgba(243,246,250,0.025) 80px)',
+          'radial-gradient(at 10% -8%, rgba(31,111,235,0.05) 0, transparent 48%), ' +
+          'radial-gradient(at 90% 105%, rgba(217,164,0,0.05) 0, transparent 42%)',
       },
       letterSpacing: {
         'caps': '0.14em',
