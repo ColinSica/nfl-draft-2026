@@ -7,6 +7,7 @@ import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
 import { Watchlist } from './pages/Watchlist';
+import { TeamCompare } from './pages/TeamCompare';
 import { AboutModal } from './components/AboutModal';
 import { MobileModeBar } from './components/MobileModeBar';
 import { useWatchlist } from './lib/watchlist';
@@ -116,10 +117,13 @@ function Header({ onAbout }: {
           <ModePill />
 
           <div className="hidden md:flex items-center gap-1 pl-3 border-l border-ink-edge">
+            <span className="text-[0.65rem] text-ink-soft/70 font-mono mr-2 hidden lg:inline" title="Keyboard: / to search · ? for About">
+              / to search
+            </span>
             <button
               onClick={onAbout}
               className="p-2 hover:bg-paper-hover transition text-ink-soft hover:text-ink"
-              title="About this model"
+              title="About this model (?)"
               aria-label="About this model"
             >
               <Info size={16} />
@@ -193,6 +197,30 @@ function AppInner() {
 
   useEffect(() => {
     api.meta().then(setMeta).catch(() => {});
+    // Global keyboard shortcut: `/` focuses any search input on the page,
+    // or navigates to Prospects (which has a search) if none found.
+    const onKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement)?.tagName?.toLowerCase();
+      if (e.key === '/' && tag !== 'input' && tag !== 'textarea') {
+        e.preventDefault();
+        const search = document.querySelector<HTMLInputElement>(
+          'input[type="text"][placeholder*="Search" i], input[placeholder*="prospect" i]'
+        );
+        if (search) {
+          search.focus();
+          search.select();
+        } else if (window.location.pathname !== '/prospects') {
+          window.location.href = '/prospects';
+        }
+      }
+      // `?` opens About
+      if (e.key === '?' && tag !== 'input' && tag !== 'textarea') {
+        e.preventDefault();
+        setAboutOpen(true);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, []);
 
   return (
@@ -212,6 +240,7 @@ function AppInner() {
           <Route path="/compare" element={<Compare />} />
           <Route path="/method" element={<Method />} />
           <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/team-compare" element={<TeamCompare />} />
         </Routes>
       </main>
       <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t border-ink-edge">
