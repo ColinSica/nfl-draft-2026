@@ -235,21 +235,33 @@ def compute_team_fit(prospects: pd.DataFrame,
     # Canonical position — vectorized via map(dict)
     pos_canon = prospects["position"].fillna("").astype(str).str.upper().map(
         lambda s: POS_ALIASES.get(s.strip(), s.strip()))
+    # Flex position (hybrids) — e.g. Reese LB with EDGE flex, Styles LB with S flex.
+    # When present, take MAX of the primary and flex need scores so teams with
+    # high flex-position need can reach for hybrid prospects.
+    if "position_flex" in prospects.columns:
+        pos_flex = prospects["position_flex"].fillna("").astype(str).str.upper().map(
+            lambda s: POS_ALIASES.get(s.strip(), s.strip()) if s.strip() else "")
+    else:
+        pos_flex = pd.Series("", index=prospects.index)
     lookups = _build_position_lookups(team_profile)
 
     grade = pd.to_numeric(prospects["independent_grade"],
                           errors="coerce").fillna(260.0)
     bpa = (1.0 - (grade / 260.0)).clip(lower=0.0, upper=1.0)
 
-    need      = pos_canon.map(lookups["need"]).fillna(0.0)
-    latent    = pos_canon.map(lookups["latent"]).fillna(0.0)
-    scheme    = pos_canon.map(lookups["scheme"]).fillna(0.0)
+    def _max_with_flex(lookup_dict, damp=1.0):
+        primary = pos_canon.map(lookup_dict).fillna(0.0)
+        flex = pos_flex.map(lookup_dict).fillna(0.0) * damp
+        return pd.concat([primary, flex], axis=1).max(axis=1)
+
+    need      = _max_with_flex(lookups["need"])
+    latent    = _max_with_flex(lookups["latent"])
+    scheme    = _max_with_flex(lookups["scheme"])
     age_cliff = pos_canon.map(lookups["age_cliff"]).fillna(0.0)
     prior     = pos_canon.map(lookups["prior"]).fillna(0.0)
     gm_mult   = pos_canon.map(lookups["gm_mult"]).fillna(1.0)
     cap_mult  = pos_canon.map(lookups["cap_mult"]).fillna(1.0)
     coach_mult = pos_canon.map(lookups["coach_mult"]).fillna(1.0)
-    # Apply cap multiplier on the need side only (player quality is unchanged)
     need = need * cap_mult
 
     # College connection — vectorized over the stints list once.
