@@ -24,10 +24,13 @@ export function Simulate() {
   const [picks, setPicks] = useState<PickRow[] | null>(null);
   const [reasoning, setReasoning] = useState<any>(null);
   const [simMeta, setSimMeta] = useState<any>(null);
+  const [trades, setTrades] = useState<any>(null);
   const [filterTeam, setFilterTeam] = useState<string>('ALL');
   const [filterPos, setFilterPos] = useState<string>('ALL');
   const [filterConf, setFilterConf] = useState<ConfBucket>('ALL');
   const [onlyStarred, setOnlyStarred] = useState(false);
+  // Show original draft order (no trades) vs post-trade order.
+  const [showTrades, setShowTrades] = useState<boolean>(true);
   const wl = useWatchlist();
 
   useEffect(() => {
@@ -37,9 +40,28 @@ export function Simulate() {
     }).catch(() => setPicks([]));
     fetch('/api/simulations/reasoning')
       .then(r => r.json()).then(setReasoning).catch(() => {});
+    api.simulationTrades()
+      .then(setTrades).catch(() => {});
   }, []);
 
-  // Build full 32 picks
+  // Top 3-5 most-likely trades, filtered for realism (prob >= 30%).
+  // Rank by execution frequency in the Monte Carlo.
+  const topTrades = useMemo(() => {
+    if (!trades?.per_pick) return [];
+    const events: any[] = [];
+    for (const [slotStr, arr] of Object.entries(trades.per_pick)) {
+      for (const ev of (arr as any[])) {
+        if ((ev.prob ?? 0) >= 0.3) {
+          events.push({ ...ev, slot: parseInt(slotStr, 10) });
+        }
+      }
+    }
+    events.sort((a, b) => (b.prob ?? 0) - (a.prob ?? 0));
+    // Cap at 5, min 3 if we have them.
+    return events.slice(0, 5);
+  }, [trades]);
+
+  // Build full 32 picks — team label changes based on showTrades toggle.
   const all32: PickData[] = useMemo(() => {
     return (picks ?? [])
       .filter(p => p.pick_number <= 32)
@@ -47,9 +69,12 @@ export function Simulate() {
       .map(p => {
         const pri = p.candidates?.[0];
         const modelReasoning = reasoning?.picks?.[String(p.pick_number)];
+        const actualTeam = p.most_likely_team ?? p.team ?? '—';
+        const originalTeam = p.original_team ?? p.team ?? actualTeam;
+        const displayTeam = showTrades ? actualTeam : originalTeam;
         return {
           slot: p.pick_number,
-          team: p.most_likely_team ?? p.team ?? '—',
+          team: displayTeam,
           player: pri?.player ?? 'Pending',
           position: pri?.position ?? '',
           college: pri?.college ?? null,
@@ -132,6 +157,19 @@ export function Simulate() {
     });
   }, [all32, filterTeam, filterPos, filterConf, onlyStarred, wl]);
 
+  // Map slot -> whether the displayed team is different from the original owner
+  // (i.e., a trade happened at that slot in the MC)
+  const tradedSlots = useMemo(() => {
+    const s = new Set<number>();
+    (picks ?? []).forEach(p => {
+      if (p.pick_number <= 32 && p.original_team && p.most_likely_team
+          && p.original_team !== p.most_likely_team) {
+        s.add(p.pick_number);
+      }
+    });
+    return s;
+  }, [picks]);
+
   const clearFilters = () => {
     setFilterTeam('ALL');
     setFilterPos('ALL');
@@ -168,20 +206,83 @@ export function Simulate() {
       <div className="flex flex-wrap items-baseline gap-8 border-y border-ink py-4">
         <Metric label="Simulations" value={simMeta?.n_sims != null ? String(simMeta.n_sims) : '—'} />
         <Metric label="Picks shown" value={`${filtered.length} / ${all32.length}`} />
+        <Metric label="Trades modelled" value={String(tradedSlots.size)} />
         <Metric label="Watchlist" value={String(wl.count)} />
-        <button
-          onClick={() => downloadCsv('2026-r1-predictions.csv', all32.map(p => ({
-            slot: p.slot, team: p.team, player: p.player,
-            position: p.position, college: p.college ?? '',
-            probability: p.probability, consensus_rank: p.consensusRank ?? '',
-          })))}
-          className="btn-ghost ml-auto"
-          title="Download CSV"
-        >
-          <Download size={14} />
-          <span>Export CSV</span>
-        </button>
+
+        {/* Trades ON/OFF toggle */}
+        <div className="ml-auto flex items-center gap-2">
+          <SmallCaps tight className="text-ink-muted">Trades</SmallCaps>
+          <div className="inline-flex border border-ink-edge">
+            <button
+              onClick={() => setShowTrades(false)}
+              className={`caps-tight px-3 py-1.5 transition ${
+                !showTrades ? 'bg-ink text-paper' : 'text-ink-muted hover:text-ink'
+              }`}
+              title="Show original draft order — no trades"
+            >
+              Off
+            </button>
+            <button
+              onClick={() => setShowTrades(true)}
+              className={`caps-tight px-3 py-1.5 transition ${
+                showTrades ? 'bg-ink text-paper' : 'text-ink-muted hover:text-ink'
+              }`}
+              title="Show post-trade draft order — model's most-likely trade events applied"
+            >
+              On
+            </button>
+          </div>
+          <button
+            onClick={() => downloadCsv('2026-r1-predictions.csv', all32.map(p => ({
+              slot: p.slot, team: p.team, player: p.player,
+              position: p.position, college: p.college ?? '',
+              probability: p.probability, consensus_rank: p.consensusRank ?? '',
+            })))}
+            className="btn-ghost"
+            title="Download CSV"
+          >
+            <Download size={14} />
+            <span>CSV</span>
+          </button>
+        </div>
       </div>
+
+      {/* Trades panel — shown when Trades is ON */}
+      {showTrades && topTrades.length > 0 && (
+        <section className="border-y border-ink-edge bg-paper-raised p-5">
+          <div className="flex items-baseline justify-between gap-4 mb-3 flex-wrap">
+            <div className="flex items-center gap-3 flex-wrap">
+              <SmallCaps>Most-likely R1 trade events</SmallCaps>
+              <span className="caps-tight text-ink-muted">
+                {topTrades.length} trade{topTrades.length === 1 ? '' : 's'} projected · filtered to ≥30% MC freq.
+              </span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {topTrades.map((t: any, i: number) => (
+              <div key={i} className="border border-ink-edge bg-paper-surface p-3 space-y-1">
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="display-num text-sm text-accent-brass">Pick #{t.slot}</span>
+                  <span className="font-mono text-xs text-ink-muted">{Math.round(t.prob * 100)}% freq.</span>
+                </div>
+                <div className="flex items-center gap-2 font-mono text-xs">
+                  <span className="text-ink font-medium">{t.from_team ?? '?'}</span>
+                  <span className="text-accent-brass">→</span>
+                  <span className="text-ink font-medium">{t.to_team ?? '?'}</span>
+                </div>
+                {t.compensation && (
+                  <p className="text-xs text-ink-muted font-serif italic">
+                    {t.compensation}
+                  </p>
+                )}
+                {t.reason && !t.compensation && (
+                  <p className="text-xs text-ink-muted font-serif italic">{t.reason}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Filter controls */}
       <div className="card p-4 space-y-3">

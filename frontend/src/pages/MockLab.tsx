@@ -14,13 +14,16 @@ import { api, type ProspectRow, type PickRow } from '../lib/api';
 import {
   Dateline, Byline, SectionHeader, SmallCaps, HRule, Stamp, Footnote,
 } from '../components/editorial';
-import { RotateCcw, Lock, Unlock } from 'lucide-react';
+import { RotateCcw, Lock, Unlock, Download, Zap, TrendingUp, AlertTriangle } from 'lucide-react';
+import { downloadCsv } from '../lib/csvExport';
 
-// Positions we let the user tweak. Mirrors team_fit canonical codes.
 const POSITIONS = ['QB','RB','WR','TE','OT','IOL','EDGE','DL','IDL','LB','CB','S'] as const;
 type Pos = typeof POSITIONS[number];
 
 type ForcedPick = { slot: number; player: string };
+type Scenario = 'custom' | 'chalk' | 'shock' | 'trade_frenzy' | 'qb_run' | 'defense_wins';
+
+const LAB_KEY = 'draft_ledger_mock_lab_v1';
 
 export function MockLab() {
   const [rows, setRows] = useState<ProspectRow[] | null>(null);
@@ -39,10 +42,34 @@ export function MockLab() {
     return o;
   });
 
-  // User-forced picks — clicking "lock" at a slot pins a player.
+  // Forced picks — clicking "lock" at a slot pins that player.
   const [forced, setForced] = useState<ForcedPick[]>([]);
+  // Skipped slots — clicking "skip" forces that team's 2nd-best candidate.
+  const [skipped, setSkipped] = useState<Set<number>>(new Set());
+  // Market vs model blend — 0 = pure model, 1 = pure market.
+  // 0.60 is the site default (60/40 market/model).
+  const [marketWeight, setMarketWeight] = useState<number>(0.60);
+  // Global trade aggression — scales all teams' trade rates. 1.0 = baseline.
+  const [tradeAggression, setTradeAggression] = useState<number>(1.0);
+  // Noise / risk-on — 0 = deterministic, 1 = more variance in mid/late R1.
+  const [noise, setNoise] = useState<number>(0.0);
+  const [scenario, setScenario] = useState<Scenario>('custom');
 
+  // Load saved state on mount (localStorage persistence).
   useEffect(() => {
+    try {
+      const raw = localStorage.getItem(LAB_KEY);
+      if (raw) {
+        const s = JSON.parse(raw);
+        if (s.demand) setDemand(s.demand);
+        if (s.forced) setForced(s.forced);
+        if (Array.isArray(s.skipped)) setSkipped(new Set(s.skipped));
+        if (typeof s.marketWeight === 'number') setMarketWeight(s.marketWeight);
+        if (typeof s.tradeAggression === 'number') setTradeAggression(s.tradeAggression);
+        if (typeof s.noise === 'number') setNoise(s.noise);
+      }
+    } catch { /* ignore */ }
+
     api.prospectLandings()
       .then(r => setRows(r.prospects))
       .catch(e => setErr(String(e)));
@@ -51,19 +78,73 @@ export function MockLab() {
       .catch(() => setBaseline([]));
   }, []);
 
+  // Persist on every change.
+  useEffect(() => {
+    try {
+      localStorage.setItem(LAB_KEY, JSON.stringify({
+        demand, forced, skipped: [...skipped],
+        marketWeight, tradeAggression, noise,
+      }));
+    } catch { /* ignore */ }
+  }, [demand, forced, skipped, marketWeight, tradeAggression, noise]);
+
   const adjustedR1 = useMemo(
-    () => recomputeR1(rows ?? [], baseline ?? [], demand, forced),
-    [rows, baseline, demand, forced],
+    () => recomputeR1(rows ?? [], baseline ?? [], {
+      demand, forced, skipped, marketWeight, noise,
+    }),
+    [rows, baseline, demand, forced, skipped, marketWeight, noise],
   );
 
   const resetKnobs = () => {
     const o: Record<string, number> = {};
     POSITIONS.forEach(p => { o[p] = 1.0; });
-    setDemand(o); setForced([]);
+    setDemand(o);
+    setForced([]);
+    setSkipped(new Set());
+    setMarketWeight(0.60);
+    setTradeAggression(1.0);
+    setNoise(0.0);
+    setScenario('custom');
+  };
+
+  const applyScenario = (s: Scenario) => {
+    const d: Record<string, number> = {};
+    POSITIONS.forEach(p => { d[p] = 1.0; });
+    switch (s) {
+      case 'chalk':
+        setMarketWeight(0.90); setNoise(0.0); setTradeAggression(0.5);
+        setDemand(d); setForced([]); setSkipped(new Set());
+        break;
+      case 'shock':
+        setMarketWeight(0.25); setNoise(0.75); setTradeAggression(1.4);
+        setDemand(d); setForced([]); setSkipped(new Set());
+        break;
+      case 'trade_frenzy':
+        setMarketWeight(0.50); setNoise(0.40); setTradeAggression(2.2);
+        setDemand(d); setForced([]); setSkipped(new Set());
+        break;
+      case 'qb_run':
+        d.QB = 1.8;
+        setDemand(d); setMarketWeight(0.50); setNoise(0.30);
+        setTradeAggression(1.3); setForced([]); setSkipped(new Set());
+        break;
+      case 'defense_wins':
+        d.EDGE = 1.6; d.DL = 1.5; d.CB = 1.5; d.S = 1.4; d.LB = 1.4;
+        d.WR = 0.7; d.QB = 0.7;
+        setDemand(d); setMarketWeight(0.50); setNoise(0.25);
+        setTradeAggression(1.0); setForced([]); setSkipped(new Set());
+        break;
+      default: break;
+    }
+    setScenario(s);
   };
 
   const anyAdjusted =
     forced.length > 0 ||
+    skipped.size > 0 ||
+    Math.abs(marketWeight - 0.60) > 0.005 ||
+    Math.abs(tradeAggression - 1.0) > 0.005 ||
+    noise > 0.005 ||
     Object.values(demand).some(v => Math.abs(v - 1.0) > 0.01);
 
   return (
@@ -112,9 +193,99 @@ export function MockLab() {
               )}
             </div>
             <p className="body-serif text-sm">
-              Baseline is 1.00 per position. Raise a slider to increase
-              demand; lower to suppress. The mock re-allocates slots
-              proportionally to adjusted landing weights.
+              Move any knob to re-balance the mock in real time. Lock picks
+              you're confident in, skip slots you think will reach, or load
+              a scenario preset.
+            </p>
+          </div>
+
+          {/* Preset scenarios */}
+          <div className="space-y-2">
+            <SmallCaps tight>Scenarios</SmallCaps>
+            <div className="grid grid-cols-2 gap-1.5">
+              {([
+                ['chalk', 'Chalk', 'Market-heavy, low noise, few trades'],
+                ['shock', 'Shock', 'Surprises, high noise, more trades'],
+                ['trade_frenzy', 'Trade Frenzy', '2× trade aggression'],
+                ['qb_run', 'QB Run', 'QBs go earlier'],
+                ['defense_wins', 'Defense Wins', 'Trenches + DB heavy'],
+                ['custom', 'Custom', 'Manual knobs'],
+              ] as [Scenario, string, string][]).map(([key, label, tip]) => (
+                <button
+                  key={key}
+                  onClick={() => applyScenario(key)}
+                  title={tip}
+                  className={`caps-tight px-2 py-2 border transition-colors text-xs ${
+                    scenario === key
+                      ? 'bg-ink text-paper border-ink'
+                      : 'border-ink-edge bg-paper-surface text-ink-muted hover:text-ink hover:border-ink'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Market vs Model blend */}
+          <div className="space-y-2 pt-2">
+            <div className="flex items-baseline justify-between">
+              <SmallCaps tight>Market vs Model blend</SmallCaps>
+              <span className="font-mono text-xs text-accent-brass">
+                {Math.round(marketWeight * 100)}% market
+              </span>
+            </div>
+            <input
+              type="range" min="0" max="1" step="0.05"
+              value={marketWeight}
+              onChange={(e) => { setMarketWeight(parseFloat(e.target.value)); setScenario('custom'); }}
+              className="w-full accent-accent-brass"
+            />
+            <div className="flex justify-between text-[0.62rem] text-ink-muted font-mono">
+              <span>Pure model</span>
+              <span>Default 60%</span>
+              <span>Pure market</span>
+            </div>
+          </div>
+
+          {/* Trade aggression */}
+          <div className="space-y-2">
+            <div className="flex items-baseline justify-between">
+              <SmallCaps tight>Trade aggression</SmallCaps>
+              <span className="font-mono text-xs"
+                    style={{ color: tradeAggression > 1.3 ? '#B68A2F' : tradeAggression < 0.7 ? '#3A6B46' : '#4D6893' }}>
+                ×{tradeAggression.toFixed(2)}
+              </span>
+            </div>
+            <input
+              type="range" min="0.0" max="3.0" step="0.1"
+              value={tradeAggression}
+              onChange={(e) => { setTradeAggression(parseFloat(e.target.value)); setScenario('custom'); }}
+              className="w-full accent-accent-brass"
+            />
+            <p className="text-[0.62rem] text-ink-muted font-mono">
+              <TrendingUp size={10} className="inline -mt-0.5" /> Scales every team's historical trade-up/down rate
+            </p>
+          </div>
+
+          {/* Noise / shock */}
+          <div className="space-y-2">
+            <div className="flex items-baseline justify-between">
+              <SmallCaps tight>Draft-day noise</SmallCaps>
+              <span className="font-mono text-xs"
+                    style={{ color: noise > 0.5 ? '#8C2E2A' : noise > 0.2 ? '#B68A2F' : '#6E6650' }}>
+                {(noise * 100).toFixed(0)}%
+              </span>
+            </div>
+            <input
+              type="range" min="0.0" max="1.0" step="0.05"
+              value={noise}
+              onChange={(e) => { setNoise(parseFloat(e.target.value)); setScenario('custom'); }}
+              className="w-full accent-accent-brass"
+            />
+            <p className="text-[0.62rem] text-ink-muted font-mono">
+              <AlertTriangle size={10} className="inline -mt-0.5" /> Mid-R1 surprises. Pushes lower-probability
+              candidates forward at later slots.
             </p>
           </div>
 
@@ -176,14 +347,32 @@ export function MockLab() {
 
         {/* ── RIGHT: Adjusted mock table ── */}
         <div className="p-6">
-          <div className="flex items-baseline justify-between gap-4 mb-4">
+          <div className="flex items-baseline justify-between gap-4 mb-4 flex-wrap">
             <div>
               <SmallCaps>Adjusted Mock · First Round</SmallCaps>
               <p className="mono-label mt-1">
                 {anyAdjusted ? 'Recomputed with active adjustments' : 'Baseline — no adjustments'}
               </p>
             </div>
-            {!rows && <p className="caps-tight text-ink-muted">Loading…</p>}
+            <div className="flex items-center gap-2">
+              {!rows && <p className="caps-tight text-ink-muted">Loading…</p>}
+              {adjustedR1 && adjustedR1.length > 0 && (
+                <button
+                  onClick={() => downloadCsv('draft-ledger-mock-lab.csv',
+                    adjustedR1.map(p => ({
+                      slot: p.slot, team: p.team ?? '', player: p.player ?? '',
+                      position: p.position ?? '', college: p.college ?? '',
+                      probability: p.probability, delta: p.delta,
+                      changed: p.wasChanged ? 1 : 0,
+                    })))}
+                  className="btn-ghost"
+                  title="Export current adjusted mock"
+                >
+                  <Download size={12} />
+                  Export CSV
+                </button>
+              )}
+            </div>
           </div>
 
           {adjustedR1 && (
@@ -198,14 +387,16 @@ export function MockLab() {
                     <th>School</th>
                     <th className="num">Pr<sup>†</sup></th>
                     <th className="num">Δ vs base</th>
+                    <th className="center">Skip</th>
                     <th className="center">Lock</th>
                   </tr>
                 </thead>
                 <tbody>
                   {adjustedR1.map(pick => {
                     const locked = forced.some(f => f.slot === pick.slot);
+                    const isSkipped = skipped.has(pick.slot);
                     return (
-                      <tr key={pick.slot}>
+                      <tr key={pick.slot} className={isSkipped ? 'opacity-70' : ''}>
                         <td className="num text-ink-muted">{pick.slot}</td>
                         <td className="font-mono text-xs font-medium">{pick.team ?? '—'}</td>
                         <td className="font-serif">
@@ -213,6 +404,11 @@ export function MockLab() {
                           {pick.wasChanged && (
                             <span className="ml-2 inline-block w-2 h-2 bg-accent-brass"
                                   title="Changed from baseline" />
+                          )}
+                          {isSkipped && (
+                            <span className="ml-2 caps-tight text-signal-warn text-[0.6rem]">
+                              reach
+                            </span>
                           )}
                         </td>
                         <td className="font-mono text-xs">{pick.position ?? '—'}</td>
@@ -229,6 +425,19 @@ export function MockLab() {
                           {pick.delta == null ? '—'
                            : pick.delta === 0 ? '·'
                            : (pick.delta > 0 ? '+' : '') + Math.round(pick.delta * 100) + '%'}
+                        </td>
+                        <td className="center">
+                          <button
+                            onClick={() => {
+                              const next = new Set(skipped);
+                              if (isSkipped) next.delete(pick.slot); else next.add(pick.slot);
+                              setSkipped(next); setScenario('custom');
+                            }}
+                            className={`p-1 ${isSkipped ? 'text-signal-warn' : 'text-ink-muted hover:text-accent-brass'}`}
+                            title={isSkipped ? 'Use modal pick' : 'Force team to reach for 2nd option'}
+                          >
+                            <Zap size={12} />
+                          </button>
                         </td>
                         <td className="center">
                           <button
@@ -305,12 +514,20 @@ type AdjustedPick = {
   wasChanged: boolean;
 };
 
+type LabKnobs = {
+  demand: Record<string, number>;
+  forced: ForcedPick[];
+  skipped: Set<number>;
+  marketWeight: number;
+  noise: number;
+};
+
 function recomputeR1(
   rows: ProspectRow[],
   baseline: PickRow[],
-  demand: Record<string, number>,
-  forced: ForcedPick[],
+  knobs: LabKnobs,
 ): AdjustedPick[] {
+  const { demand, forced, skipped, marketWeight, noise } = knobs;
   // Flatten: per (player, slot) → weighted probability from MC landings.
   type Entry = { slot: number; team: string | null; player: string; position: string | null; college: string | null; w: number };
   const entries: Entry[] = [];
@@ -351,19 +568,18 @@ function recomputeR1(
     });
   }
 
-  // Baseline (demand=1, no locks) for Δ reporting.
+  // Baseline (demand=1, no adjustments) for Δ reporting.
   const base = greedyAssign(
     entries.map(e => ({
       ...e,
       w: e.w / (demand[normalizePos(e.position ?? '') as Pos] ?? 1.0),
     })),
-    [],
-    canonicalBySlot,
+    [], new Set(), canonicalBySlot, 0.60, 0.0,
   );
   const baseMap = new Map(base.map(b => [b.slot, b]));
 
-  // With adjustments + forced picks.
-  const adjusted = greedyAssign(entries, forced, canonicalBySlot);
+  // With user adjustments + forced + skipped + market blend + noise.
+  const adjusted = greedyAssign(entries, forced, skipped, canonicalBySlot, marketWeight, noise);
 
   return adjusted.map(a => {
     const b = baseMap.get(a.slot);
@@ -386,12 +602,29 @@ function recomputeR1(
 function greedyAssign(
   entries: any[],
   forced: ForcedPick[],
+  skipped: Set<number>,
   canonicalBySlot: Map<number, { slot: number; team: string | null; player: string | null; position: string | null; college: string | null; probability: number }>,
+  marketWeight: number,
+  noise: number,
 ): Array<{
   slot: number; team: string | null; player: string | null;
   position: string | null; college: string | null; probability: number;
 }> {
-  // Per-slot map of candidates
+  // marketWeight drift — higher marketWeight preserves canonical picks more
+  // aggressively (they reflect the 60/40 market blend in the main API).
+  // Lower marketWeight lets MC-landing re-weights override more easily.
+  const CANONICAL_OVERRIDE_THRESHOLD = 0.55 + (marketWeight - 0.60) * 0.6;
+  // noise injection — at noise=0.5 we perturb each top probability by ±50% so
+  // mid-R1 can occasionally shift.
+  const noiseMultiplier = (slot: number): number => {
+    if (noise <= 0) return 1.0;
+    // Deterministic pseudo-random from slot (stable for UI re-render).
+    const seed = (slot * 9301 + 49297) % 233280;
+    const rnd = (seed / 233280.0) - 0.5; // -0.5 to +0.5
+    const slotFactor = Math.min(1, Math.max(0, (slot - 4) / 28)); // ramps from 0 at slot 4 to 1 at slot 32
+    return 1.0 + rnd * 2 * noise * slotFactor;
+  };
+
   const bySlot = new Map<number, any[]>();
   for (const e of entries) {
     if (!bySlot.has(e.slot)) bySlot.set(e.slot, []);
@@ -428,17 +661,37 @@ function greedyAssign(
       continue;
     }
 
-    // Prefer the canonical baseline pick if it exists and isn't claimed —
-    // this is what the site shows by default, so the Mock Lab shouldn't
-    // silently diverge from it when no user adjustments have been made.
-    // Apply positional demand as a multiplicative nudge only if the MC
-    // landing for this canonical pick is competitive; otherwise keep it.
-    const top = arr.find(x => !claimed.has(x.player));
+    // "Skipped" = user wants the team to reach past their canonical
+    // modal pick. Use the 2nd-best unclaimed candidate at this slot instead.
+    const isSkipped = skipped.has(slot);
 
-    // If we have a canonical pick AND no MC landing disagrees AND no
-    // adjustment has moved a stronger candidate here, use canonical.
-    if (canonical?.player && !claimed.has(canonical.player)) {
-      const topOverrides = top && (top.p ?? 0) > 0.55 && top.player !== canonical.player;
+    // Sort candidates by adjusted probability (noise applied).
+    const ranked = arr
+      .filter(x => !claimed.has(x.player))
+      .map(x => ({ ...x, p: (x.p ?? 0) * noiseMultiplier(slot) }))
+      .sort((a, b) => (b.p ?? 0) - (a.p ?? 0));
+    const top = ranked[0];
+    const second = ranked[1];
+
+    if (isSkipped && second) {
+      // Force the 2nd option.
+      claimed.add(second.player);
+      out.push({
+        slot,
+        team: second.team ?? canonical?.team ?? null,
+        player: second.player,
+        position: second.position,
+        college: second.college,
+        probability: second.p ?? 0,
+      });
+      continue;
+    }
+
+    // Canonical preference: default to the committed post-clamp pick unless
+    // an MC landing dominates by the (marketWeight-adjusted) threshold.
+    if (!isSkipped && canonical?.player && !claimed.has(canonical.player)) {
+      const topOverrides = top && (top.p ?? 0) > CANONICAL_OVERRIDE_THRESHOLD
+                           && top.player !== canonical.player;
       if (!topOverrides) {
         claimed.add(canonical.player);
         out.push({ ...canonical });
@@ -447,7 +700,6 @@ function greedyAssign(
     }
 
     if (!top) {
-      // No MC landing AND no canonical — genuine empty slot (shouldn't happen).
       out.push({ slot, team: null, player: null, position: null, college: null, probability: 0 });
       continue;
     }

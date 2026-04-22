@@ -392,11 +392,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Mauigoa â ARI's OL needs immediate upgrade to protect Kyler."
+            "text": "Brugler: Mauigoa \u00e2\u0080\u0094 ARI's OL needs immediate upgrade to protect Kyler."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Mauigoa is a plug-and-play LT."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Mauigoa is a plug-and-play LT."
           },
           {
             "analyst": "ESPN Scouts",
@@ -404,7 +404,7 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Reese â if NYJ takes Bailey, ARI grabs remaining EDGE1."
+            "text": "Kiper: Reese \u00e2\u0080\u0094 if NYJ takes Bailey, ARI grabs remaining EDGE1."
           },
           {
             "analyst": "McShay 4.0",
@@ -412,11 +412,11 @@
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Reese â ARI's pass rush is the worst weakness on the roster."
+            "text": "Schrager: Reese \u00e2\u0080\u0094 ARI's pass rush is the worst weakness on the roster."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Mauigoa â OT1 for Kyler protection."
+            "text": "Reuter: Mauigoa \u00e2\u0080\u0094 OT1 for Kyler protection."
           },
           {
             "analyst": "Reuter 5rd",
@@ -451,7 +451,7 @@
         "wr_archetype": "vertical X + separator Z, Harrison Jr. drives contested-catch design but slot/YAC still needed",
         "ol_archetype": "athletic zone blockers, mobile center, tackles who can climb",
         "te_archetype": "dual-threat Y, inline block + seam stretch (Trey McBride model)",
-        "qb_archetype": "movement/RPO QB (Kyler) — boot, sprint-out, off-platform arm talent"
+        "qb_archetype": "movement/RPO QB (Kyler) \u2014 boot, sprint-out, off-platform arm talent"
       },
       "dc": {
         "base_concept": "Nick Rallis 3-4 hybrid with Fangio-influence 2-high shells, late rotation",
@@ -725,7 +725,7 @@
       "capital_abundance": "low"
     },
     "narrative": {
-      "leadership": "GM Ian Cunningham (NEW â from CHI asst GM, hired 2026) | HC Kevin Stefanski (NEW â from CLE, hired 2026-01-17) | OC Tommy Rees (NEW) | OL coach Bill Callahan (NEW) | DC Jeff Ulbrich (retained)",
+      "leadership": "GM Ian Cunningham (NEW \u00e2\u0080\u0094 from CHI asst GM, hired 2026) | HC Kevin Stefanski (NEW \u00e2\u0080\u0094 from CLE, hired 2026-01-17) | OC Tommy Rees (NEW) | OL coach Bill Callahan (NEW) | DC Jeff Ulbrich (retained)",
       "context_2025": "8-9. Penix Jr. took over and flashed but still raw. No R1 after Penix trade-up in\n2024.",
       "qb_situation": "COMPETITION. Penix (ACL, Week 1 TBD) + Tua ($1.3M min) compete. No R1 QB on roster pre-draft.",
       "offseason_moves": "Added: Tua Tagovailoa QB, Jahan Dotson WR, Olamide Zaccheaus WR, Christian Harris\nLB, Nick Folk K\nLost: Kaleb McGary OT (retired), James Pearce Jr. legal issues (draft pick from last year\nnow uncertain)\nNet effect: Offense repositioned around Tua/Penix competition; RT hole created by\nMcGary retirement.",
@@ -852,7 +852,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Kevin Stefanski",
@@ -1292,7 +1292,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Jesse Minter",
@@ -1348,11 +1348,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Sadiq â Mark Andrews aging; TE1 of class."
+            "text": "Brugler: Sadiq \u00e2\u0080\u0094 Mark Andrews aging; TE1 of class."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Sadiq."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Sadiq."
           },
           {
             "analyst": "ESPN Scouts",
@@ -1360,19 +1360,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Fano â OT need bigger than TE."
+            "text": "Kiper: Fano \u00e2\u0080\u0094 OT need bigger than TE."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Bain Jr. â EDGE depth."
+            "text": "McShay: Bain Jr. \u00e2\u0080\u0094 EDGE depth."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Sadiq â 'BAL front office loves him.'"
+            "text": "Schrager: Sadiq \u00e2\u0080\u0094 'BAL front office loves him.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Ioane (OG) â OL interior."
+            "text": "Reuter: Ioane (OG) \u00e2\u0080\u0094 OL interior."
           },
           {
             "analyst": "Reuter 5rd",
@@ -1394,7 +1394,7 @@
       "lb_room": 2,
       "cb_room": 4,
       "s_room": 2,
-      "notes": "Humphrey aging, Wiggins unproven, Awuzie departed — CB biggest room. WR2 opposite Flowers still unresolved. Stanley/Faalele tackle uncertainty.",
+      "notes": "Humphrey aging, Wiggins unproven, Awuzie departed \u2014 CB biggest room. WR2 opposite Flowers still unresolved. Stanley/Faalele tackle uncertainty.",
       "sources": [
         "https://overthecap.com/team/baltimore-ravens",
         "https://www.spotrac.com/nfl/baltimore-ravens/depth-chart/"
@@ -1407,7 +1407,7 @@
         "wr_archetype": "big-body X contested winner + vertical Z, slot with YAC",
         "ol_archetype": "people-movers, gap-power OL, athletic C for climb blocks",
         "te_archetype": "Y inline POA blocker plus receiving move-TE (Andrews/Likely)",
-        "qb_archetype": "dual-threat, Lamar-specific — arm talent + elite mobility"
+        "qb_archetype": "dual-threat, Lamar-specific \u2014 arm talent + elite mobility"
       },
       "dc": {
         "base_concept": "Zach Orr 3-4 / Wink-legacy disguised coverage with heavy simulated pressure",
@@ -1421,7 +1421,7 @@
     "coach_gm_research": {
       "hc": "John Harbaugh",
       "gm": "Eric DeCosta",
-      "oc_scheme": "Todd Monken hybrid (pre-2026) / new OC — verify current role",
+      "oc_scheme": "Todd Monken hybrid (pre-2026) / new OC \u2014 verify current role",
       "dc_scheme": "Zach Orr multiple",
       "gm_historical_tendencies": [
         "BPA orientation: 'Best player available' stated publicly",
@@ -1849,7 +1849,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Joe Brady",
@@ -1906,11 +1906,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Lawrence â EDGE depth."
+            "text": "Brugler: Lawrence \u00e2\u0080\u0094 EDGE depth."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Lawrence."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Lawrence."
           },
           {
             "analyst": "ESPN Scouts",
@@ -1918,23 +1918,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Faulk â EDGE."
+            "text": "Kiper: Faulk \u00e2\u0080\u0094 EDGE."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Faulk â EDGE."
+            "text": "McShay: Faulk \u00e2\u0080\u0094 EDGE."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: McDonald â CB."
+            "text": "Schrager: McDonald \u00e2\u0080\u0094 CB."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Thieneman (CHI trade up) â CHI jumps for S."
+            "text": "Reuter: Thieneman (CHI trade up) \u00e2\u0080\u0094 CHI jumps for S."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Thieneman â CHI trade."
+            "text": "Reuter 5rd: Thieneman \u00e2\u0080\u0094 CHI trade."
           }
         ]
       }
@@ -1952,7 +1952,7 @@
       "lb_room": 3,
       "cb_room": 4,
       "s_room": 3,
-      "notes": "Post-Diggs/Davis WR room still thin — Coleman unproven as #1. CB aging (Benford core) with Rasul Douglas departed. Deep need at CB2 and vertical WR.",
+      "notes": "Post-Diggs/Davis WR room still thin \u2014 Coleman unproven as #1. CB aging (Benford core) with Rasul Douglas departed. Deep need at CB2 and vertical WR.",
       "sources": [
         "https://overthecap.com/team/buffalo-bills",
         "https://www.spotrac.com/nfl/buffalo-bills/depth-chart/"
@@ -1965,7 +1965,7 @@
         "wr_archetype": "YAC-separator slot, vertical X, contested red-zone big body (post-Diggs restructure)",
         "ol_archetype": "athletic pass-pro OTs, power interior",
         "te_archetype": "move TE seam threat (Kincaid) + Y blocker (Knox)",
-        "qb_archetype": "Josh Allen — arm + legs. Backup needs mobility to run offense"
+        "qb_archetype": "Josh Allen \u2014 arm + legs. Backup needs mobility to run offense"
       },
       "dc": {
         "base_concept": "Bobby Babich (McDermott tree) Cover-2/Tampa-2 with disguise",
@@ -1979,7 +1979,7 @@
     "coach_gm_research": {
       "hc": "Sean McDermott",
       "gm": "Brandon Beane",
-      "oc_scheme": "Joe Brady (promoted HC per some 2026 reports — verify)",
+      "oc_scheme": "Joe Brady (promoted HC per some 2026 reports \u2014 verify)",
       "dc_scheme": "Bobby Babich / McDermott Tampa-2 derivative",
       "gm_historical_tendencies": [
         "Willing to trade UP in R1 (Kincaid, Elam)",
@@ -2351,7 +2351,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Dave Canales",
@@ -2409,7 +2409,7 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Thieneman â S for Evero defense."
+            "text": "Brugler: Thieneman \u00e2\u0080\u0094 S for Evero defense."
           },
           {
             "analyst": "Brugler 1st",
@@ -2421,19 +2421,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: McNeil-Warren â S alt."
+            "text": "Kiper: McNeil-Warren \u00e2\u0080\u0094 S alt."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Sadiq â TE for Bryce Young."
+            "text": "McShay: Sadiq \u00e2\u0080\u0094 TE for Bryce Young."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Freeling â OT protection."
+            "text": "Schrager: Freeling \u00e2\u0080\u0094 OT protection."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Sadiq â TE."
+            "text": "Reuter: Sadiq \u00e2\u0080\u0094 TE."
           },
           {
             "analyst": "Reuter 5rd",
@@ -2889,7 +2889,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Ben Johnson",
@@ -2949,11 +2949,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Parker â EDGE opposite Sweat."
+            "text": "Brugler: Parker \u00e2\u0080\u0094 EDGE opposite Sweat."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Parker."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Parker."
           },
           {
             "analyst": "ESPN Scouts",
@@ -2961,23 +2961,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Young (DT) â interior DL."
+            "text": "Kiper: Young (DT) \u00e2\u0080\u0094 interior DL."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Johnson DT (LAC trade) â LAC jumps for interior DL."
+            "text": "McShay: Johnson DT (LAC trade) \u00e2\u0080\u0094 LAC jumps for interior DL."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Proctor â OT for Williams."
+            "text": "Schrager: Proctor \u00e2\u0080\u0094 OT for Williams."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Concepcion (BUF trade up) â BUF jumps for WR."
+            "text": "Reuter: Concepcion (BUF trade up) \u00e2\u0080\u0094 BUF jumps for WR."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Concepcion â BUF trade."
+            "text": "Reuter 5rd: Concepcion \u00e2\u0080\u0094 BUF trade."
           }
         ]
       }
@@ -3005,10 +3005,10 @@
       "oc": {
         "base_concept": "Ben Johnson Lions-tree gap-scheme with pre-snap motion, condensed splits, RPO, heavy 12/13",
         "rb_archetype": "gap-scheme downhill back with juice, plus receiving 3rd-down back",
-        "wr_archetype": "Alpha X (Moore), deep Z, YAC slot — motion-friendly route runners",
+        "wr_archetype": "Alpha X (Moore), deep Z, YAC slot \u2014 motion-friendly route runners",
         "ol_archetype": "powerful gap-power OL, vertical drivers, athletic-enough for zone mix",
         "te_archetype": "dual Y who can move and block inline (Kmet + receiving TE)",
-        "qb_archetype": "Caleb Williams — creation ability + pre-snap processor"
+        "qb_archetype": "Caleb Williams \u2014 creation ability + pre-snap processor"
       },
       "dc": {
         "base_concept": "Dennis Allen 4-3 with Saints-lineage multiple front, simulated pressure",
@@ -3025,7 +3025,7 @@
       "oc_scheme": "Ben Johnson play-action / motion-heavy (Detroit-derived)",
       "dc_scheme": "Dennis Allen single-high pressure",
       "gm_historical_tendencies": [
-        "Protect Caleb Williams first — OL premium",
+        "Protect Caleb Williams first \u2014 OL premium",
         "Poles targets strong-safety/enforcer types to fill Brisker gap",
         "Willing to trade within top-10 (Fields trade 2024)"
       ],
@@ -3441,7 +3441,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Zac Taylor",
@@ -3493,31 +3493,31 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Delane â CIN secondary disaster; elite cover CB."
+            "text": "Brugler: Delane \u00e2\u0080\u0094 CIN secondary disaster; elite cover CB."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Delane â same."
+            "text": "Brugler 1st: Delane \u00e2\u0080\u0094 same."
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Delane â 'Bengals have to fix corner.'"
+            "text": "ESPN Scouts: Delane \u00e2\u0080\u0094 'Bengals have to fix corner.'"
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Delane â Cincy's worst unit."
+            "text": "Kiper: Delane \u00e2\u0080\u0094 Cincy's worst unit."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Downs (S) â alt DB, safety value higher."
+            "text": "McShay: Downs (S) \u00e2\u0080\u0094 alt DB, safety value higher."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Delane â 'sources say CIN locked in on CB.'"
+            "text": "Schrager: Delane \u00e2\u0080\u0094 'sources say CIN locked in on CB.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: McCoy (CB) â Tennessee CB same value tier."
+            "text": "Reuter: McCoy (CB) \u00e2\u0080\u0094 Tennessee CB same value tier."
           },
           {
             "analyst": "Reuter 5rd",
@@ -3539,7 +3539,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 4,
-      "notes": "Tee Higgins retained — WR2 solved but depth thin. IOL chronic (Volson/Karras/Cappa). Interior DL biggest need with BJ Hill aging and Reader gone.",
+      "notes": "Tee Higgins retained \u2014 WR2 solved but depth thin. IOL chronic (Volson/Karras/Cappa). Interior DL biggest need with BJ Hill aging and Reader gone.",
       "sources": [
         "https://overthecap.com/team/cincinnati-bengals",
         "https://www.spotrac.com/nfl/cincinnati-bengals/depth-chart/"
@@ -3552,11 +3552,11 @@
         "wr_archetype": "elite route-runner X (Chase), contested Z (Higgins departure creates need), slot separator",
         "ol_archetype": "pass-pro first OTs with upside (Amarius Mims), athletic interior",
         "te_archetype": "Y/H hybrid move TE with YAC",
-        "qb_archetype": "Burrow — quick-processor, pocket-based rhythm"
+        "qb_archetype": "Burrow \u2014 quick-processor, pocket-based rhythm"
       },
       "dc": {
         "base_concept": "Al Golden Lou Anarumo-successor multi-coverage disguise, Cover-2/quarters",
-        "edge_archetype": "Trey Hendrickson mold — bend + hand usage, 260 lb",
+        "edge_archetype": "Trey Hendrickson mold \u2014 bend + hand usage, 260 lb",
         "dt_archetype": "3-tech penetrator, interior rush priority",
         "lb_archetype": "coverage MIKE with sideline range",
         "cb_archetype": "zone-match outside, nickel matchup slot",
@@ -3567,10 +3567,10 @@
       "hc": "Zac Taylor",
       "gm": "Duke Tobin",
       "oc_scheme": "Dan Pitcher / McVay-tree",
-      "dc_scheme": "Al Golden multiple — pressure-heavy post-Lawrence-add",
+      "dc_scheme": "Al Golden multiple \u2014 pressure-heavy post-Lawrence-add",
       "gm_historical_tendencies": [
-        "Extremely low trade activity — 1.4 trades/draft, no R1 pick moves in 5 yrs (NFL IQ)",
-        "Now traded pick 10 to NYG for Dexter Lawrence (2026-04-18/19) — out of R1 entirely",
+        "Extremely low trade activity \u2014 1.4 trades/draft, no R1 pick moves in 5 yrs (NFL IQ)",
+        "Now traded pick 10 to NYG for Dexter Lawrence (2026-04-18/19) \u2014 out of R1 entirely",
         "Historically draft Day-3 contributors heavily"
       ],
       "recent_5yr_position_patterns": "WR + DL heavy.",
@@ -3627,7 +3627,7 @@
     "qb_situation": "watson_locked_ceiling_uncertain",
     "qb_urgency": 0.35,
     "roster_needs": {
-      "QB": 5.0,
+      "QB": 1.0,
       "RB": 2.5,
       "WR": 2.5,
       "OT": 2.5,
@@ -3676,7 +3676,7 @@
       "trade_down_rate": 0.7,
       "pdf_tier": {
         "trade_down_prob": 0.7,
-        "reason": "| 4/20: Berry presser — 'maximize the asset' at 6"
+        "reason": "| 4/20: Berry presser \u2014 'maximize the asset' at 6"
       }
     },
     "visit_signals": {
@@ -3826,7 +3826,7 @@
     "narrative": {
       "leadership": "GM Andrew Berry (7 drafts) | HC Todd Monken (NEW, from BAL OC) | OC Ken\nDorsey | DC Jim Schwartz",
       "context_2025": "5-12. Season lost to Watson uncertainty and injuries. Receivers caught 4 TDs all\nseason (dead last). QB room completely unsettled. Franchise in full rebuild despite recent win-\nnow attempts.",
-      "qb_situation": "Watson contract is cap-dead weight; starter long-term unsettled. Drew Allar at #6 is a real scenario per analyst mocks. Urgency is moderate â not 1.0 because Watson's cap hit blocks a clean reset.",
+      "qb_situation": "Watson contract is cap-dead weight; starter long-term unsettled. Drew Allar at #6 is a real scenario per analyst mocks. Urgency is moderate \u00e2\u0080\u0094 not 1.0 because Watson's cap hit blocks a clean reset.",
       "offseason_moves": "Added: Tytus Howard OT (from HOU), Zion Johnson G (from LAC), Elgton Jenkins G\n(from GB), Teven Jenkins OL (re-signed)\nLost: Multiple OL depth pieces, Morgan Moses retained but aging\nNet effect: Massive OL investment in FA, but WR and QB situations untouched.",
       "scheme_identity": "Monken's offense is aggressive vertical passing with heavy TE/WR usage\n(Ravens template updated). Premium positions: WR, TE, OT, CB. Schwartz defense still Wide-\n9, values elite edge rushers.",
       "roster_needs_tiered": "Urgent (4+): WR (dead last in receiving TDs - catastrophic), QB (situation genuinely\nunresolved)\nSecondary (2.5-3): OT (LT long-term despite FA additions - Howard is RT), CB (depth)\n\nModerate (2): EDGE depth, secondary help",
@@ -4043,31 +4043,31 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: DAL trades up (picks 12+2027 2nd+2027 4th) for Styles â Jerry Jones loves LBs, Styles is elite coverage LB."
+            "text": "Brugler: DAL trades up (picks 12+2027 2nd+2027 4th) for Styles \u00e2\u0080\u0094 Jerry Jones loves LBs, Styles is elite coverage LB."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same DALâCLE trade; Styles pairs with Parsons."
+            "text": "Brugler 1st: Same DAL\u00e2\u0086\u0092CLE trade; Styles pairs with Parsons."
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Tate â CLE need WR1 badly; 'Tate is Chad Johnson-lite.'"
+            "text": "ESPN Scouts: Tate \u00e2\u0080\u0094 CLE need WR1 badly; 'Tate is Chad Johnson-lite.'"
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: DALâCLE trade for Styles â 'most obvious trade of Round 1.'"
+            "text": "Kiper: DAL\u00e2\u0086\u0092CLE trade for Styles \u00e2\u0080\u0094 'most obvious trade of Round 1.'"
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: DALâCLE trade for Styles; CLE gets Parker-era haul."
+            "text": "McShay: DAL\u00e2\u0086\u0092CLE trade for Styles; CLE gets Parker-era haul."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Fano â CLE stays put, OT to protect future QB."
+            "text": "Schrager: Fano \u00e2\u0080\u0094 CLE stays put, OT to protect future QB."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Freeling (OT) â CLE goes OL."
+            "text": "Reuter: Freeling (OT) \u00e2\u0080\u0094 CLE goes OL."
           },
           {
             "analyst": "Reuter 5rd",
@@ -4119,7 +4119,7 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: McNeil-Warren â S depth."
+            "text": "Brugler: McNeil-Warren \u00e2\u0080\u0094 S depth."
           },
           {
             "analyst": "Brugler 1st",
@@ -4131,23 +4131,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: McCoy â CB."
+            "text": "Kiper: McCoy \u00e2\u0080\u0094 CB."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Concepcion â WR (via DAL trade)."
+            "text": "McShay: Concepcion \u00e2\u0080\u0094 WR (via DAL trade)."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Concepcion â WR."
+            "text": "Schrager: Concepcion \u00e2\u0080\u0094 WR."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Tyson (LAC trade up) â LAC jumps for WR."
+            "text": "Reuter: Tyson (LAC trade up) \u00e2\u0080\u0094 LAC jumps for WR."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Howell â CB."
+            "text": "Reuter 5rd: Howell \u00e2\u0080\u0094 CB."
           }
         ]
       }
@@ -4182,7 +4182,7 @@
       },
       "dc": {
         "base_concept": "Jim Schwartz wide-9 4-3 attack front",
-        "edge_archetype": "wide-9 DE — speed-first, 245-260 lb, pure rusher (Garrett mold)",
+        "edge_archetype": "wide-9 DE \u2014 speed-first, 245-260 lb, pure rusher (Garrett mold)",
         "dt_archetype": "1-gap penetrator 3-tech, plus space-eater 1-tech",
         "lb_archetype": "two-gap clean-up LBs, speed WILL priority",
         "cb_archetype": "Cover-3 boundary / zone-match, Ward-type ball-skill",
@@ -4196,8 +4196,8 @@
       "dc_scheme": "Jim Schwartz Wide-9",
       "gm_historical_tendencies": [
         "High trade frequency: 5.2 picks/draft (NFL IQ)",
-        "Openly 'maximizing the asset' at No. 6 — Schefter confirms taking calls",
-        "9 total picks in 2026 — flexibility to accept trade-down package",
+        "Openly 'maximizing the asset' at No. 6 \u2014 Schefter confirms taking calls",
+        "9 total picks in 2026 \u2014 flexibility to accept trade-down package",
         "Willing to move R1 equity (Watson precedent)"
       ],
       "recent_5yr_position_patterns": "DL premium + WR swings.",
@@ -4237,7 +4237,7 @@
       ]
     },
     "_4_21_news": [
-      "Berry presser 4/20: 'maximize the asset' — trade-up branch new",
+      "Berry presser 4/20: 'maximize the asset' \u2014 trade-up branch new",
       "Berry 4/20: trade-down also live"
     ]
   },
@@ -4530,7 +4530,7 @@
         "12": "DAL native R1 (7-10 record, 2025)",
         "20": "Acquired from GB in Micah Parsons trade (Sept 2025)"
       },
-      "defense_identity": "DC Christian Parker (NEW 2026 â from PHI) after Eberflus was fired Jan 2026 (his unit finished 30th in yards, 32nd in points allowed). Eberflus took 49ers asst-HC job. Parker brings Fangio-influenced shell."
+      "defense_identity": "DC Christian Parker (NEW 2026 \u00e2\u0080\u0094 from PHI) after Eberflus was fired Jan 2026 (his unit finished 30th in yards, 32nd in points allowed). Eberflus took 49ers asst-HC job. Parker brings Fangio-influenced shell."
     },
     "roster_context": {
       "age_cliffs": [
@@ -4605,7 +4605,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Brian Schottenheimer",
@@ -4659,11 +4659,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Fano (via CLE trade) â DAL trades DOWN #6â#12, takes OT."
+            "text": "Brugler: Fano (via CLE trade) \u00e2\u0080\u0094 DAL trades DOWN #6\u00e2\u0086\u0092#12, takes OT."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Fano via CLE trade."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Fano via CLE trade."
           },
           {
             "analyst": "ESPN Scouts",
@@ -4671,19 +4671,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Proctor (via CLE trade) â DAL traded up from here."
+            "text": "Kiper: Proctor (via CLE trade) \u00e2\u0080\u0094 DAL traded up from here."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Proctor â CLE trade makes OT pick cleaner."
+            "text": "McShay: Proctor \u00e2\u0080\u0094 CLE trade makes OT pick cleaner."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Downs â BPA safety."
+            "text": "Schrager: Downs \u00e2\u0080\u0094 BPA safety."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Styles â LB fit."
+            "text": "Reuter: Styles \u00e2\u0080\u0094 LB fit."
           },
           {
             "analyst": "Reuter 5rd",
@@ -4739,11 +4739,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Concepcion (CLE trade) â DAL trades for CLE's #24 + 4th to jump 4 spots for WR."
+            "text": "Brugler: Concepcion (CLE trade) \u00e2\u0080\u0094 DAL trades for CLE's #24 + 4th to jump 4 spots for WR."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Concepcion via CLE trade."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Concepcion via CLE trade."
           },
           {
             "analyst": "ESPN Scouts",
@@ -4751,19 +4751,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Boston (CLE trade) â same trade structure, different WR target."
+            "text": "Kiper: Boston (CLE trade) \u00e2\u0080\u0094 same trade structure, different WR target."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: McCoy â CB stay pick."
+            "text": "McShay: McCoy \u00e2\u0080\u0094 CB stay pick."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Mesidor â EDGE."
+            "text": "Schrager: Mesidor \u00e2\u0080\u0094 EDGE."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Proctor (KC trade up) â KC jumps for OT."
+            "text": "Reuter: Proctor (KC trade up) \u00e2\u0080\u0094 KC jumps for OT."
           },
           {
             "analyst": "Reuter 5rd",
@@ -4798,7 +4798,7 @@
         "wr_archetype": "CeeDee Lamb #1 + vertical Z (Pickens), possession slot",
         "ol_archetype": "gap-power interior (Booker), athletic OT",
         "te_archetype": "Y inline blocker + seam threat",
-        "qb_archetype": "Dak — rhythm pocket passer with RPO IQ"
+        "qb_archetype": "Dak \u2014 rhythm pocket passer with RPO IQ"
       },
       "dc": {
         "base_concept": "Matt Eberflus 4-3 Cover-2/Tampa-2 with one-gap penetration",
@@ -5226,7 +5226,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Sean Payton",
@@ -5251,7 +5251,7 @@
       "lb_room": 4,
       "cb_room": 1,
       "s_room": 2,
-      "notes": "Surtain/Moss/McMillian loaded secondary. RB room post-Williams thin — biggest skill need. WR1 post-Sutton question. LB after Greenlaw injury.",
+      "notes": "Surtain/Moss/McMillian loaded secondary. RB room post-Williams thin \u2014 biggest skill need. WR1 post-Sutton question. LB after Greenlaw injury.",
       "sources": [
         "https://overthecap.com/team/denver-broncos",
         "https://www.spotrac.com/nfl/denver-broncos/depth-chart/"
@@ -5264,7 +5264,7 @@
         "wr_archetype": "route-technician X + Z, slot over-the-middle receiver",
         "ol_archetype": "gap-power + pass-pro, Bolles lineage LT",
         "te_archetype": "Y inline blocker + move TE flex",
-        "qb_archetype": "Bo Nix — anticipation thrower with mobility"
+        "qb_archetype": "Bo Nix \u2014 anticipation thrower with mobility"
       },
       "dc": {
         "base_concept": "Vance Joseph 3-4 hybrid with heavy blitz, aggressive 1-gap front",
@@ -5281,7 +5281,7 @@
       "oc_scheme": "Payton West-Coast / play-action",
       "dc_scheme": "Vance Joseph 3-4 pressure",
       "gm_historical_tendencies": [
-        "Payton-led org traded pick 30 for Jaylen Waddle (confirmed Schefter) — no R1 pick",
+        "Payton-led org traded pick 30 for Jaylen Waddle (confirmed Schefter) \u2014 no R1 pick",
         "Historical preference for high-floor veterans + upside trench players"
       ],
       "recent_5yr_position_patterns": "DL + DB.",
@@ -5336,7 +5336,7 @@
       "IDL": 2.5,
       "LB": 2.5,
       "CB": 2.5,
-      "QB": 1.2,
+      "QB": 0.0,
       "RB": 1.2,
       "WR": 1.2,
       "TE": 1.2,
@@ -5663,7 +5663,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Dan Campbell",
@@ -5717,11 +5717,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Freeling â DET OL future after Decker/Ragnow aging."
+            "text": "Brugler: Freeling \u00e2\u0080\u0094 DET OL future after Decker/Ragnow aging."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Freeling."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Freeling."
           },
           {
             "analyst": "ESPN Scouts",
@@ -5729,23 +5729,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Freeling â OT insurance."
+            "text": "Kiper: Freeling \u00e2\u0080\u0094 OT insurance."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Blake Miller (OT) â similar OL pick."
+            "text": "McShay: Blake Miller (OT) \u00e2\u0080\u0094 similar OL pick."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Ioane â OG alt."
+            "text": "Schrager: Ioane \u00e2\u0080\u0094 OG alt."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Cooper Jr. (LAR trade up) â LAR jumps for WR; DET trades DOWN."
+            "text": "Reuter: Cooper Jr. (LAR trade up) \u00e2\u0080\u0094 LAR jumps for WR; DET trades DOWN."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Same â Cooper Jr. via LAR trade up."
+            "text": "Reuter 5rd: Same \u00e2\u0080\u0094 Cooper Jr. via LAR trade up."
           }
         ]
       }
@@ -5772,11 +5772,11 @@
     "scheme_archetype_tags": {
       "oc": {
         "base_concept": "John Morton (post-Ben Johnson) continuing Lions gap-power + motion + play-action, condensed splits",
-        "rb_archetype": "1-2 punch — physical gap back (Gibbs/Montgomery template), receiving chops",
-        "wr_archetype": "Alpha X (St. Brown), vertical Z, YAC slot — motion-friendly",
+        "rb_archetype": "1-2 punch \u2014 physical gap back (Gibbs/Montgomery template), receiving chops",
+        "wr_archetype": "Alpha X (St. Brown), vertical Z, YAC slot \u2014 motion-friendly",
         "ol_archetype": "gap-power maulers, Sewell/Ragnow model, athletic enough for zone mix",
         "te_archetype": "Y inline blocker + receiving move-TE (Laporta)",
-        "qb_archetype": "Goff — rhythm pocket passer with pre-snap command"
+        "qb_archetype": "Goff \u2014 rhythm pocket passer with pre-snap command"
       },
       "dc": {
         "base_concept": "Kelvin Sheppard (post-Glenn) continuing AG-legacy aggressive 4-3 with 2-high shells",
@@ -5790,10 +5790,10 @@
     "coach_gm_research": {
       "hc": "Dan Campbell",
       "gm": "Brad Holmes",
-      "oc_scheme": "New OC post-Ben-Johnson (John Morton) — still Lions WCO",
+      "oc_scheme": "New OC post-Ben-Johnson (John Morton) \u2014 still Lions WCO",
       "dc_scheme": "Kelvin Sheppard / Glenn-tree multiple",
       "gm_historical_tendencies": [
-        "Traits + athletic testing — elite RAS scorers",
+        "Traits + athletic testing \u2014 elite RAS scorers",
         "Willing to trade-up (Gibbs, Arnold, Williams history)",
         "Owner ongoing 'grit and dawg' profile preference"
       ],
@@ -6083,7 +6083,7 @@
         "source": "default"
       },
       "hard_constraints": [],
-      "roster_depth_note": "Age-cliff table is sparse by design â GB has one of the youngest rosters in the NFL. Post-Parsons-trade (sent Micah Parsons + 2026 R1 to DAL for Rashan Gary + picks), the edge room is thinned; EDGE now a quiet priority."
+      "roster_depth_note": "Age-cliff table is sparse by design \u00e2\u0080\u0094 GB has one of the youngest rosters in the NFL. Post-Parsons-trade (sent Micah Parsons + 2026 R1 to DAL for Rashan Gary + picks), the edge room is thinned; EDGE now a quiet priority."
     },
     "roster_context": {
       "age_cliffs": [
@@ -6135,7 +6135,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Matt LaFleur (GB)",
@@ -6158,7 +6158,7 @@
       "lb_room": 3,
       "cb_room": 4,
       "s_room": 2,
-      "notes": "Alexander departed — CB biggest need behind Nixon/Hobbs. WR1 X still unresolved. Bakhtiari replacement at LT uncertain (Walker/Morgan).",
+      "notes": "Alexander departed \u2014 CB biggest need behind Nixon/Hobbs. WR1 X still unresolved. Bakhtiari replacement at LT uncertain (Walker/Morgan).",
       "sources": [
         "https://overthecap.com/team/green-bay-packers",
         "https://www.spotrac.com/nfl/green-bay-packers/depth-chart/"
@@ -6171,7 +6171,7 @@
         "wr_archetype": "separator Z + contested X, YAC-first personnel (young room Reed/Wicks/Watson)",
         "ol_archetype": "athletic zone OL, Bakhtiari-lineage pass-pro LT",
         "te_archetype": "Y move TE + inline blocker (Kraft/Musgrave)",
-        "qb_archetype": "Jordan Love — rhythm play-action passer with boot chops"
+        "qb_archetype": "Jordan Love \u2014 rhythm play-action passer with boot chops"
       },
       "dc": {
         "base_concept": "Jeff Hafley Fangio-tree 2-high quarters-match, multiple fronts",
@@ -6190,7 +6190,7 @@
       "gm_historical_tendencies": [
         "Almost never drafts a WR in R1 until Reed/Watson era shift",
         "Strong preference for Big Ten/ACC trench prospects",
-        "Age discipline — avoids older seniors at skill positions"
+        "Age discipline \u2014 avoids older seniors at skill positions"
       ],
       "recent_5yr_position_patterns": "OL/DL/LB heavy.",
       "sources": [
@@ -6479,7 +6479,7 @@
         "source": "default"
       },
       "hard_constraints": [],
-      "context_2026": "Will Anderson Jr. signed 3-yr/$150M extension (4/17/26) â highest-paid non-QB contract in NFL history ($134M gtd, through 2030). Combined with Danielle Hunter 1-yr/$40M, EDGE is fully addressed. Texans now cap-tight after WR/DE/CB deals."
+      "context_2026": "Will Anderson Jr. signed 3-yr/$150M extension (4/17/26) \u00e2\u0080\u0094 highest-paid non-QB contract in NFL history ($134M gtd, through 2030). Combined with Danielle Hunter 1-yr/$40M, EDGE is fully addressed. Texans now cap-tight after WR/DE/CB deals."
     },
     "roster_context": {
       "age_cliffs": [
@@ -6594,7 +6594,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "DeMeco Ryans",
@@ -6648,11 +6648,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Bisontis â OG for Stroud protection."
+            "text": "Brugler: Bisontis \u00e2\u0080\u0094 OG for Stroud protection."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Bisontis."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Bisontis."
           },
           {
             "analyst": "ESPN Scouts",
@@ -6660,19 +6660,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Christen Miller (DT) â interior DL."
+            "text": "Kiper: Christen Miller (DT) \u00e2\u0080\u0094 interior DL."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Iheanachor â OT."
+            "text": "McShay: Iheanachor \u00e2\u0080\u0094 OT."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Iheanachor â OT."
+            "text": "Schrager: Iheanachor \u00e2\u0080\u0094 OT."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Bisontis â OG."
+            "text": "Reuter: Bisontis \u00e2\u0080\u0094 OG."
           },
           {
             "analyst": "Reuter 5rd",
@@ -6694,7 +6694,7 @@
       "lb_room": 3,
       "cb_room": 2,
       "s_room": 3,
-      "notes": "OT is CRITICAL — Tunsil traded to WAS, Howard unproven at LT. IOL also rebuilt in FA (Scruggs/Robinson). Stroud protection is the entire draft narrative.",
+      "notes": "OT is CRITICAL \u2014 Tunsil traded to WAS, Howard unproven at LT. IOL also rebuilt in FA (Scruggs/Robinson). Stroud protection is the entire draft narrative.",
       "sources": [
         "https://overthecap.com/team/houston-texans",
         "https://www.spotrac.com/nfl/houston-texans/depth-chart/"
@@ -6702,12 +6702,12 @@
     },
     "scheme_archetype_tags": {
       "oc": {
-        "base_concept": "Nick Caley (post-Slowik) Rams/Patriots hybrid — play-action heavy, condensed splits, 12 personnel",
+        "base_concept": "Nick Caley (post-Slowik) Rams/Patriots hybrid \u2014 play-action heavy, condensed splits, 12 personnel",
         "rb_archetype": "one-cut zone back with receiving",
         "wr_archetype": "contested X (Diggs-lineage), vertical Z (Collins), YAC slot",
         "ol_archetype": "athletic pass-pro priority (major FA/draft investment)",
         "te_archetype": "Y move TE seam threat (Schultz)",
-        "qb_archetype": "C.J. Stroud — rhythm pocket passer, clean mechanics priority"
+        "qb_archetype": "C.J. Stroud \u2014 rhythm pocket passer, clean mechanics priority"
       },
       "dc": {
         "base_concept": "Matt Burke (post-Ryans) 4-3 wide-9 attack front with heavy two-high",
@@ -6726,7 +6726,7 @@
       "gm_historical_tendencies": [
         "Caserio aggressive trade-up history (Stroud, Anderson)",
         "Values scheme-specific edge prospects",
-        "Hosted A.J. Haulcy (LSU CB) — secondary need signal"
+        "Hosted A.J. Haulcy (LSU CB) \u2014 secondary need signal"
       ],
       "recent_5yr_position_patterns": "Weapons for Stroud + secondary.",
       "sources": [
@@ -6958,7 +6958,7 @@
     "narrative": {
       "leadership": "GM Chris Ballard (9 drafts) | HC Shane Steichen | OC Jim Bob Cooter | DC Lou\nAnarumo (acquired from CIN)",
       "context_2025": "8-9. Richardson struggled, Daniel Jones stabilized things late. Mediocre defense.",
-      "qb_situation": "Daniel Jones signed 2yr/$88M after career year pre-Achilles (3101 yds / 8.1 YPA / 68% / 63.5 QBR in 13 games). Re-ruptured Achilles during rehab (rare), but expects to be Week 1 2026 ready. Richardson granted permission to seek trade â 'soft' market, may stay. Leonard is 6th-round rookie. IND hosted visits with Altmyer, Payton, Nussmeier, Morton, King (Day 2/3 QB depth options â not R1 targets).",
+      "qb_situation": "Daniel Jones signed 2yr/$88M after career year pre-Achilles (3101 yds / 8.1 YPA / 68% / 63.5 QBR in 13 games). Re-ruptured Achilles during rehab (rare), but expects to be Week 1 2026 ready. Richardson granted permission to seek trade \u00e2\u0080\u0094 'soft' market, may stay. Leonard is 6th-round rookie. IND hosted visits with Altmyer, Payton, Nussmeier, Morton, King (Day 2/3 QB depth options \u00e2\u0080\u0094 not R1 targets).",
       "offseason_moves": "Added: Cam Taylor-Britt CB (from CIN), Akeem Davis-Gaither LB, Derrick Nnadi DT,\nNick Westbrook-Ikhine WR, Nasir Adderley S, Sauce Gardner CB (major trade - gave up\npick 16 from their previous pick 16 ownership, now gives Colts an elite CB1)\nLost: Michael Pittman WR (trade to PIT)\nNet effect: Sauce Gardner trade is enormous - transformed their CB room. But lost\nPittman as WR1.",
       "scheme_identity": "Steichen offense is pass-first spread. Anarumo defense is aggressive,\npressure-heavy, demands versatile DBs. Premium positions: EDGE, LB, S.",
       "roster_needs_tiered": "Urgent (4+): EDGE (aging Paye, no elite rusher), LB (no R1 pick means can't address this\nat top of draft)\n\nSecondary (3+): S (aging room), OL depth\nModerate: WR (Pittman replacement), CB depth behind Gardner",
@@ -7102,7 +7102,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Shane Steichen",
@@ -7155,9 +7155,9 @@
       "oc_scheme": "Steichen RPO / Eagles-tree",
       "dc_scheme": "Lou Anarumo single-high (new)",
       "gm_historical_tendencies": [
-        "Ballard trades DOWN more than up historically — accumulates picks",
+        "Ballard trades DOWN more than up historically \u2014 accumulates picks",
         "Prefers character/captain prospects",
-        "Hosted Drew Allar — Richardson trade rumor contingency plan"
+        "Hosted Drew Allar \u2014 Richardson trade rumor contingency plan"
       ],
       "recent_5yr_position_patterns": "Balanced; CB/LB emphasis recent.",
       "sources": [
@@ -7487,7 +7487,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Liam Coen",
@@ -7525,7 +7525,7 @@
         "wr_archetype": "separator Z (Thomas Jr.), contested X, YAC slot (Kirk role)",
         "ol_archetype": "athletic zone OL, light OT, mobile C",
         "te_archetype": "Y move TE + inline blocker (Engram)",
-        "qb_archetype": "Trevor Lawrence — boot/movement chops, quick-game processor"
+        "qb_archetype": "Trevor Lawrence \u2014 boot/movement chops, quick-game processor"
       },
       "dc": {
         "base_concept": "Anthony Campanile aggressive 4-3 multiple fronts, Vic Fangio 2-high shells",
@@ -7542,10 +7542,10 @@
       "oc_scheme": "Grant Udinski / Coen Shanahan-McVay",
       "dc_scheme": "Anthony Campanile multiple (Vrabel-tree)",
       "gm_historical_tendencies": [
-        "Gladstone (Rams-tree) first full cycle — expect Les Snead-style flexibility",
+        "Gladstone (Rams-tree) first full cycle \u2014 expect Les Snead-style flexibility",
         "Open to trade-downs"
       ],
-      "recent_5yr_position_patterns": "New regime — limited 5yr signal.",
+      "recent_5yr_position_patterns": "New regime \u2014 limited 5yr signal.",
       "sources": [
         "https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak"
       ]
@@ -7919,7 +7919,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Andy Reid",
@@ -7969,31 +7969,31 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Bain Jr. â Chris Jones needs pass-rush help, KC doubles down on DL."
+            "text": "Brugler: Bain Jr. \u00e2\u0080\u0094 Chris Jones needs pass-rush help, KC doubles down on DL."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Bain Jr."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Bain Jr."
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Tyson â 'Mahomes needs WR1 after Rice drama.'"
+            "text": "ESPN Scouts: Tyson \u00e2\u0080\u0094 'Mahomes needs WR1 after Rice drama.'"
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Tyson â Mahomes WR after trading Rashee."
+            "text": "Kiper: Tyson \u00e2\u0080\u0094 Mahomes WR after trading Rashee."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Tyson â WR priority, KC has EDGE capital."
+            "text": "McShay: Tyson \u00e2\u0080\u0094 WR priority, KC has EDGE capital."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Tyson â 'KC told me they want the WR here.'"
+            "text": "Schrager: Tyson \u00e2\u0080\u0094 'KC told me they want the WR here.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Bain Jr. â EDGE need."
+            "text": "Reuter: Bain Jr. \u00e2\u0080\u0094 EDGE need."
           },
           {
             "analyst": "Reuter 5rd",
@@ -8041,11 +8041,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Boston â WR for Mahomes."
+            "text": "Brugler: Boston \u00e2\u0080\u0094 WR for Mahomes."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Boston."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Boston."
           },
           {
             "analyst": "ESPN Scouts",
@@ -8053,23 +8053,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Hood â CB need."
+            "text": "Kiper: Hood \u00e2\u0080\u0094 CB need."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Hood â CB."
+            "text": "McShay: Hood \u00e2\u0080\u0094 CB."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Hood â CB."
+            "text": "Schrager: Hood \u00e2\u0080\u0094 CB."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Hood (DAL trade) â DAL jumps for CB."
+            "text": "Reuter: Hood (DAL trade) \u00e2\u0080\u0094 DAL jumps for CB."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Hood â DAL trade."
+            "text": "Reuter 5rd: Hood \u00e2\u0080\u0094 DAL trade."
           }
         ]
       }
@@ -8087,7 +8087,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 3,
-      "notes": "LT remains unsolved (Taylor/Suamataia) — multi-year hole. WR1 opposite Worthy/Rice unresolved (Hollywood Brown injury). Jones/Nnadi aging interior.",
+      "notes": "LT remains unsolved (Taylor/Suamataia) \u2014 multi-year hole. WR1 opposite Worthy/Rice unresolved (Hollywood Brown injury). Jones/Nnadi aging interior.",
       "sources": [
         "https://overthecap.com/team/kansas-city-chiefs",
         "https://www.spotrac.com/nfl/kansas-city-chiefs/depth-chart/"
@@ -8095,12 +8095,12 @@
     },
     "scheme_archetype_tags": {
       "oc": {
-        "base_concept": "Andy Reid WCO + spread + Mahomes-bespoke design — motion, mesh, dagger, heavy 11 personnel",
+        "base_concept": "Andy Reid WCO + spread + Mahomes-bespoke design \u2014 motion, mesh, dagger, heavy 11 personnel",
         "rb_archetype": "receiving-capable zone/gap back, pass-pro priority (Pacheco)",
         "wr_archetype": "elite YAC-separator + vertical field stretchers (Worthy/Brown), possession slot",
         "ol_archetype": "Thuney/Humphrey-model athletic interior + Taylor/Suamataia OT",
-        "te_archetype": "Kelce lineage — receiving Y move + blocking in-line",
-        "qb_archetype": "Mahomes unique — off-platform arm talent + mobility"
+        "te_archetype": "Kelce lineage \u2014 receiving Y move + blocking in-line",
+        "qb_archetype": "Mahomes unique \u2014 off-platform arm talent + mobility"
       },
       "dc": {
         "base_concept": "Steve Spagnuolo multiple front with heavy simulated pressure / Cover-2 and man blitz",
@@ -8118,8 +8118,8 @@
       "dc_scheme": "Steve Spagnuolo 4-3 pressure / high man-coverage rate (30.8% in 2025, 10th-highest)",
       "gm_historical_tendencies": [
         "All but one Veach R1 pick has been age 21 or younger",
-        "Trade frequency 5.8/draft — 15 trade-ups since 2017 (NFL IQ)",
-        "Publicly stated goal: 'edge rusher' — brought in ~12 draftable DEs this cycle",
+        "Trade frequency 5.8/draft \u2014 15 trade-ups since 2017 (NFL IQ)",
+        "Publicly stated goal: 'edge rusher' \u2014 brought in ~12 draftable DEs this cycle",
         "Values press-capable CBs for Spags man scheme",
         "Three top-40 picks (9, 29, 40)"
       ],
@@ -8524,7 +8524,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Jim Harbaugh (LAC)",
@@ -8585,7 +8585,7 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Mesidor â EDGE fit."
+            "text": "Brugler: Mesidor \u00e2\u0080\u0094 EDGE fit."
           },
           {
             "analyst": "Brugler 1st",
@@ -8597,23 +8597,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Woods â CB need."
+            "text": "Kiper: Woods \u00e2\u0080\u0094 CB need."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Thieneman (CHI trade up) â CHI trades for S."
+            "text": "McShay: Thieneman (CHI trade up) \u00e2\u0080\u0094 CHI trades for S."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Miller (OT) â protect Herbert."
+            "text": "Schrager: Miller (OT) \u00e2\u0080\u0094 protect Herbert."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Howell (CLE trade up) â CLE trades for CB."
+            "text": "Reuter: Howell (CLE trade up) \u00e2\u0080\u0094 CLE trades for CB."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Same â Howell."
+            "text": "Reuter 5rd: Same \u00e2\u0080\u0094 Howell."
           }
         ]
       }
@@ -8642,9 +8642,9 @@
         "base_concept": "Greg Roman gap/power + heavy play-action boot + 12/13 personnel (Harbaugh/Roman philosophy)",
         "rb_archetype": "physical downhill gap back (Dobbins/Edwards model), receiving 3rd-down back",
         "wr_archetype": "vertical X + contested Z (McConkey slot YAC)",
-        "ol_archetype": "gap-power maulers (Alt/Slater core) — people movers",
+        "ol_archetype": "gap-power maulers (Alt/Slater core) \u2014 people movers",
         "te_archetype": "blocking Y inline + move TE, multiple TE sets",
-        "qb_archetype": "Justin Herbert — play-action boot chops + arm talent"
+        "qb_archetype": "Justin Herbert \u2014 play-action boot chops + arm talent"
       },
       "dc": {
         "base_concept": "Jesse Minter Michigan-legacy multiple front with heavy 2-high quarters-match (Fangio adjacent)",
@@ -8661,9 +8661,9 @@
       "oc_scheme": "Greg Roman run-heavy / gap",
       "dc_scheme": "Jesse Minter hybrid (Michigan-tree)",
       "gm_historical_tendencies": [
-        "Lowest trade activity: 1.4 picks/draft (NFL IQ) — holds picks",
+        "Lowest trade activity: 1.4 picks/draft (NFL IQ) \u2014 holds picks",
         "Has not moved R1 in 5 yrs",
-        "Ravens-DNA (Hortiz from BAL) — BPA + trenches"
+        "Ravens-DNA (Hortiz from BAL) \u2014 BPA + trenches"
       ],
       "recent_5yr_position_patterns": "Trenches.",
       "sources": [
@@ -9066,11 +9066,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Tyson â local LA WR, McVay weapons."
+            "text": "Brugler: Tyson \u00e2\u0080\u0094 local LA WR, McVay weapons."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Tyson."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Tyson."
           },
           {
             "analyst": "ESPN Scouts",
@@ -9078,23 +9078,23 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Lemon â local USC WR, Stafford weapon."
+            "text": "Kiper: Lemon \u00e2\u0080\u0094 local USC WR, Stafford weapon."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Lemon â WR1 for Stafford's farewell tour."
+            "text": "McShay: Lemon \u00e2\u0080\u0094 WR1 for Stafford's farewell tour."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Lemon â 'LAR told me WR is priority.'"
+            "text": "Schrager: Lemon \u00e2\u0080\u0094 'LAR told me WR is priority.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Fano (DET trade up from #17) â OT value."
+            "text": "Reuter: Fano (DET trade up from #17) \u00e2\u0080\u0094 OT value."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Fano â stays."
+            "text": "Reuter 5rd: Fano \u00e2\u0080\u0094 stays."
           }
         ]
       }
@@ -9112,7 +9112,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 3,
-      "notes": "Stafford aging — post-Kupp WR need X. Verse/Young/Turner edge loaded. Interior OL (Jackson/Dotson) question. Stafford succession the hidden QB story.",
+      "notes": "Stafford aging \u2014 post-Kupp WR need X. Verse/Young/Turner edge loaded. Interior OL (Jackson/Dotson) question. Stafford succession the hidden QB story.",
       "sources": [
         "https://overthecap.com/team/los-angeles-rams",
         "https://www.spotrac.com/nfl/los-angeles-rams/depth-chart/"
@@ -9120,12 +9120,12 @@
     },
     "scheme_archetype_tags": {
       "oc": {
-        "base_concept": "Sean McVay wide-zone + play-action + condensed splits — the Shanahan-tree prototype",
+        "base_concept": "Sean McVay wide-zone + play-action + condensed splits \u2014 the Shanahan-tree prototype",
         "rb_archetype": "one-cut decisive zone back (Kyren Williams), 3rd-down back receiving",
         "wr_archetype": "separator Z (Nacua), contested X (Kupp departure creates X need), YAC slot",
         "ol_archetype": "athletic zone OL, light OTs, mobile C",
         "te_archetype": "Y move TE + inline blocker (Higbee)",
-        "qb_archetype": "Stafford — anticipation rhythm passer, boot chops"
+        "qb_archetype": "Stafford \u2014 anticipation rhythm passer, boot chops"
       },
       "dc": {
         "base_concept": "Chris Shula Vic Fangio-Raheem Morris 3-4 hybrid with 2-high shells",
@@ -9142,7 +9142,7 @@
       "oc_scheme": "McVay play-action bootleg",
       "dc_scheme": "Chris Shula 3-4 hybrid",
       "gm_historical_tendencies": [
-        "Trade frequency 5.8/draft — 25 trade-downs vs 15 trade-ups (NFL IQ)",
+        "Trade frequency 5.8/draft \u2014 25 trade-downs vs 15 trade-ups (NFL IQ)",
         "Extremely flexible mid-round",
         "2022-24: rebuilt via athletic testing + rookie contributors"
       ],
@@ -9505,7 +9505,7 @@
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Same as 7rd mock â Brugler views Mendoza as only true Day-1 starter QB available."
+            "text": "Same as 7rd mock \u00e2\u0080\u0094 Brugler views Mendoza as only true Day-1 starter QB available."
           },
           {
             "analyst": "ESPN Scouts",
@@ -9517,7 +9517,7 @@
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Locked since February â Geno is a bridge, Mendoza is the plan."
+            "text": "McShay: Locked since February \u00e2\u0080\u0094 Geno is a bridge, Mendoza is the plan."
           },
           {
             "analyst": "Schrager",
@@ -9529,7 +9529,7 @@
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Same â Reuter consistent across both mocks."
+            "text": "Same \u00e2\u0080\u0094 Reuter consistent across both mocks."
           }
         ]
       }
@@ -9577,7 +9577,7 @@
       "oc_scheme": "Chip Kelly / Carroll tempo",
       "dc_scheme": "Patrick Graham multiple",
       "gm_historical_tendencies": [
-        "Spytek (Bucs-tree under Licht) — BPA tendencies",
+        "Spytek (Bucs-tree under Licht) \u2014 BPA tendencies",
         "Carroll LEO/long-CB archetype bias"
       ],
       "recent_5yr_position_patterns": "DL + CB emphasis.",
@@ -9610,7 +9610,7 @@
       ]
     },
     "_4_21_news": [
-      "Spytek presser 4/20: 'teams know where they stand' — Mendoza effective lock"
+      "Spytek presser 4/20: 'teams know where they stand' \u2014 Mendoza effective lock"
     ],
     "_4_21_pressers": [
       "Spytek 4/21: re-affirmed willingness to stay at 1; P(Mendoza) ~= 0.97"
@@ -9829,7 +9829,7 @@
     "narrative": {
       "leadership": "GM Jon-Eric Sullivan (NEW, 0 drafts) | HC Jeff Haefley (NEW, from Green Bay DC)\n| OC Frank Smith | DC Anthony Weaver (retained)",
       "context_2025": "7-10, full rebuild mode. Tua benched, then traded. Tyreek Hill disaster season,\ntraded. Defense mediocre. Full identity reset.",
-      "qb_situation": "BRIDGE â REBUILDING. Malik Willis signed (3yr deal) as starter but\norganization is openly planning beyond him. QB at 11 or 30 is live but secondary - can wait.",
+      "qb_situation": "BRIDGE \u00e2\u0086\u0092 REBUILDING. Malik Willis signed (3yr deal) as starter but\norganization is openly planning beyond him. QB at 11 or 30 is live but secondary - can wait.",
       "offseason_moves": "Catastrophic losses: Tua Tagovailoa QB (to ATL), Jaylen Waddle WR (trade to DEN,\nnetted pick 30), Tyreek Hill WR (released), Minkah Fitzpatrick S (trade to NYJ), Bradley\n\nChubb EDGE\nAdded: Malik Willis QB (bridge), Achane retained\nNet effect: Roster gutted at every skill position and most of the secondary. 11 picks total, 7\nin first 3 rounds - maximum draft capital",
       "scheme_identity": "Haefley defense requires fast, rangy, athletic DBs and linebackers - Ohio\nState template. Premium positions: CB, S, EDGE. Smith offense is a tempo/spread system that\nmaximizes YAC and requires WR separation.",
       "roster_needs_tiered": "Urgent (4.5+): WR (Waddle AND Hill both gone - only Tyreek replacements), CB\n(Fitzpatrick gone plus multiple secondary)\nSecondary (3+): S, EDGE, OT (Austin Jackson missed 11 games)\nLatent: QB (Willis is placeholder - 2027 franchise QB plan real), OL depth",
@@ -10058,11 +10058,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Faulk â EDGE opposite Chop Robinson; MIA defense needs rush."
+            "text": "Brugler: Faulk \u00e2\u0080\u0094 EDGE opposite Chop Robinson; MIA defense needs rush."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Faulk."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Faulk."
           },
           {
             "analyst": "ESPN Scouts",
@@ -10070,19 +10070,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Mauigoa â Tua protection priority."
+            "text": "Kiper: Mauigoa \u00e2\u0080\u0094 Tua protection priority."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Delane â CB fit."
+            "text": "McShay: Delane \u00e2\u0080\u0094 CB fit."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Tate â WR depth."
+            "text": "Schrager: Tate \u00e2\u0080\u0094 WR depth."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Tate â WR."
+            "text": "Reuter: Tate \u00e2\u0080\u0094 WR."
           },
           {
             "analyst": "Reuter 5rd",
@@ -10134,11 +10134,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Johnson (CB, San Diego State) â CB need."
+            "text": "Brugler: Johnson (CB, San Diego State) \u00e2\u0080\u0094 CB need."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Johnson."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Johnson."
           },
           {
             "analyst": "ESPN Scouts",
@@ -10146,19 +10146,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Simpson (ARI trade up) â ARI jumps for QB; MIA gets capital."
+            "text": "Kiper: Simpson (ARI trade up) \u00e2\u0080\u0094 ARI jumps for QB; MIA gets capital."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Simpson (ARI trade up) â same logic."
+            "text": "McShay: Simpson (ARI trade up) \u00e2\u0080\u0094 same logic."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Thieneman â S."
+            "text": "Schrager: Thieneman \u00e2\u0080\u0094 S."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Faulk â EDGE."
+            "text": "Reuter: Faulk \u00e2\u0080\u0094 EDGE."
           },
           {
             "analyst": "Reuter 5rd",
@@ -10180,7 +10180,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 3,
-      "notes": "Wilkins/Davis/Hand departed — interior DL is CRITICAL. IOL remains chronic weakness. Tua injury history raises QB2 need. Hill aging at WR.",
+      "notes": "Wilkins/Davis/Hand departed \u2014 interior DL is CRITICAL. IOL remains chronic weakness. Tua injury history raises QB2 need. Hill aging at WR.",
       "sources": [
         "https://overthecap.com/team/miami-dolphins",
         "https://www.spotrac.com/nfl/miami-dolphins/depth-chart/"
@@ -10193,7 +10193,7 @@
         "wr_archetype": "vertical speed-first Z (Hill), contested X (Waddle), YAC slot",
         "ol_archetype": "athletic zone OL, light OTs, mobile C",
         "te_archetype": "Y move TE flex + inline blocker",
-        "qb_archetype": "Tua — quick-game rhythm passer with anticipation"
+        "qb_archetype": "Tua \u2014 quick-game rhythm passer with anticipation"
       },
       "dc": {
         "base_concept": "Anthony Weaver (Fangio-coached) 3-4 hybrid with 2-high quarters-match",
@@ -10208,10 +10208,10 @@
       "hc": "Mike McDaniel",
       "gm": "Jon-Eric Sullivan (new, post-Grier)",
       "oc_scheme": "McDaniel outside-zone",
-      "dc_scheme": "Anthony Weaver (retained?) — verify post-Hafley",
+      "dc_scheme": "Anthony Weaver (retained?) \u2014 verify post-Hafley",
       "gm_historical_tendencies": [
-        "New regime under HC Jeff Hafley per NFL IQ — note some sources have conflicting HC info, verify",
-        "Cap/dead-money constrained — formula: big athletic press CB in R1",
+        "New regime under HC Jeff Hafley per NFL IQ \u2014 note some sources have conflicting HC info, verify",
+        "Cap/dead-money constrained \u2014 formula: big athletic press CB in R1",
         "Just acquired pick 30 from DEN for Waddle"
       ],
       "recent_5yr_position_patterns": "Speed skill + CB.",
@@ -10652,11 +10652,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: McCoy â CB need, Flores defense."
+            "text": "Brugler: McCoy \u00e2\u0080\u0094 CB need, Flores defense."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â McCoy."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 McCoy."
           },
           {
             "analyst": "ESPN Scouts",
@@ -10664,19 +10664,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Thieneman â S for Flores."
+            "text": "Kiper: Thieneman \u00e2\u0080\u0094 S for Flores."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Boston (WR) â JJ's successor."
+            "text": "McShay: Boston (WR) \u00e2\u0080\u0094 JJ's successor."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Thieneman â S fit."
+            "text": "Schrager: Thieneman \u00e2\u0080\u0094 S fit."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Banks (OG) â OL."
+            "text": "Reuter: Banks (OG) \u00e2\u0080\u0094 OL."
           },
           {
             "analyst": "Reuter 5rd",
@@ -10711,7 +10711,7 @@
         "wr_archetype": "Alpha X (Jefferson), separator Z (Addison), YAC slot",
         "ol_archetype": "athletic zone OL, Darrisaw LT, Fries/Ingram interior",
         "te_archetype": "Y move TE (Hockenson receiving) + inline blocker",
-        "qb_archetype": "J.J. McCarthy — play-action boot, quick game, RPO chops"
+        "qb_archetype": "J.J. McCarthy \u2014 play-action boot, quick game, RPO chops"
       },
       "dc": {
         "base_concept": "Brian Flores Patriots-legacy multiple pressure, highest blitz rate in NFL, Cover-0",
@@ -10728,8 +10728,8 @@
       "oc_scheme": "O'Connell McVay-tree",
       "dc_scheme": "Brian Flores exotic pressure / simulated blitzes",
       "gm_historical_tendencies": [
-        "Interim GM — O'Connell + Flores likely dominant voices per Vikings beat reporting",
-        "Historically 5.8 trades/draft (NFL IQ) — flexibility persists",
+        "Interim GM \u2014 O'Connell + Flores likely dominant voices per Vikings beat reporting",
+        "Historically 5.8 trades/draft (NFL IQ) \u2014 flexibility persists",
         "Flores scheme demands versatile hybrid DBs and LBs"
       ],
       "recent_5yr_position_patterns": "QB + DB + LB.",
@@ -10760,7 +10760,7 @@
         "multi-year pattern of safety-in-first-round"
       ]
     },
-    "_4_21_news_edge": "Schefter 4/20: Greenard trade talks reignited — EDGE replacement contingent",
+    "_4_21_news_edge": "Schefter 4/20: Greenard trade talks reignited \u2014 EDGE replacement contingent",
     "_4_21_news": [
       "if PHI completes Greenard deal, MIN pivots draft"
     ]
@@ -11167,11 +11167,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Blake Miller â OT for Maye."
+            "text": "Brugler: Blake Miller \u00e2\u0080\u0094 OT for Maye."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Blake Miller."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Blake Miller."
           },
           {
             "analyst": "ESPN Scouts",
@@ -11179,19 +11179,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Mesidor â EDGE."
+            "text": "Kiper: Mesidor \u00e2\u0080\u0094 EDGE."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: McNeil-Warren â S."
+            "text": "McShay: McNeil-Warren \u00e2\u0080\u0094 S."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Stowers (EDGE) â pass rush."
+            "text": "Schrager: Stowers (EDGE) \u00e2\u0080\u0094 pass rush."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Allen (DT) â interior DL."
+            "text": "Reuter: Allen (DT) \u00e2\u0080\u0094 interior DL."
           },
           {
             "analyst": "Reuter 5rd",
@@ -11213,7 +11213,7 @@
       "lb_room": 3,
       "cb_room": 2,
       "s_room": 3,
-      "notes": "Diggs/Hollins/Henry FA fills skill. OT is existential — Campbell LT + RT black hole. IOL still thin. Maye protection drives entire draft.",
+      "notes": "Diggs/Hollins/Henry FA fills skill. OT is existential \u2014 Campbell LT + RT black hole. IOL still thin. Maye protection drives entire draft.",
       "sources": [
         "https://overthecap.com/team/new-england-patriots",
         "https://www.spotrac.com/nfl/new-england-patriots/depth-chart/"
@@ -11226,7 +11226,7 @@
         "wr_archetype": "separator Z (Diggs FA addition), contested X, possession slot",
         "ol_archetype": "gap-power + pass-pro priority (massive investment needed, Campbell LT)",
         "te_archetype": "Y inline blocker + move TE (Henry FA)",
-        "qb_archetype": "Drake Maye — rhythm pocket passer with mobility"
+        "qb_archetype": "Drake Maye \u2014 rhythm pocket passer with mobility"
       },
       "dc": {
         "base_concept": "Terrell Williams Belichick-successor multiple front 3-4/4-3 with heavy disguise",
@@ -11246,9 +11246,9 @@
         "Wolf publicly stated 2026 as BPA-cycle, not needs-based",
         "Prioritizes OL + DL + WR strengths of the class",
         "Wants edge-rusher SPEED specifically (stated: 'get faster')",
-        "'Open to anything' on trades — flexible",
+        "'Open to anything' on trades \u2014 flexible",
         "Tracking post-June-1 AJ Brown pursuit (Schefter)",
-        "Hosted Emmanuel Pregnon (Oregon G) on 2026-04-18 — interior OL interest"
+        "Hosted Emmanuel Pregnon (Oregon G) on 2026-04-18 \u2014 interior OL interest"
       ],
       "recent_5yr_position_patterns": "Trenches + skill under Wolf.",
       "sources": [
@@ -11311,7 +11311,7 @@
       "IDL": 2.5,
       "LB": 2.5,
       "CB": 2.5,
-      "QB": 1.5,
+      "QB": 0.0,
       "RB": 1.2
     },
     "latent_needs": {},
@@ -11685,31 +11685,31 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Tate â NO needs WR after Olave drama."
+            "text": "Brugler: Tate \u00e2\u0080\u0094 NO needs WR after Olave drama."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Tate."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Tate."
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Bain Jr. â 'best pure pass rusher available.'"
+            "text": "ESPN Scouts: Bain Jr. \u00e2\u0080\u0094 'best pure pass rusher available.'"
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Bain Jr. â EDGE need on aging defense."
+            "text": "Kiper: Bain Jr. \u00e2\u0080\u0094 EDGE need on aging defense."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Fano (OT) â ARI trades up here; scheme cascade."
+            "text": "McShay: Fano (OT) \u00e2\u0080\u0094 ARI trades up here; scheme cascade."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Bain Jr. â replaces Cam Jordan era."
+            "text": "Schrager: Bain Jr. \u00e2\u0080\u0094 replaces Cam Jordan era."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Downs â safety after Mathieu era."
+            "text": "Reuter: Downs \u00e2\u0080\u0094 safety after Mathieu era."
           },
           {
             "analyst": "Reuter 5rd",
@@ -11731,7 +11731,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 4,
-      "notes": "Carr aging/injury — Rattler/Haener unproven. Mathieu retired — safety critical. Jordan aging at edge. Full rebuild mode w/ Staley/Moore staff.",
+      "notes": "Carr aging/injury \u2014 Rattler/Haener unproven. Mathieu retired \u2014 safety critical. Jordan aging at edge. Full rebuild mode w/ Staley/Moore staff.",
       "sources": [
         "https://overthecap.com/team/new-orleans-saints",
         "https://www.spotrac.com/nfl/new-orleans-saints/depth-chart/"
@@ -11825,7 +11825,7 @@
       "OT": 2.5,
       "LB": 2.5,
       "CB": 2.5,
-      "QB": 1.5,
+      "QB": 0.0,
       "RB": 1.2,
       "WR": 1.2,
       "EDGE": 1.2
@@ -11867,7 +11867,7 @@
       "pdf_tier": {
         "trade_down_tier": "HIGH",
         "trade_down_prob": 0.7,
-        "reason": "two top-10 picks (5 + 10 via Lawrence trade) â capital-rich"
+        "reason": "two top-10 picks (5 + 10 via Lawrence trade) \u00e2\u0080\u0094 capital-rich"
       }
     },
     "visit_signals": {
@@ -12184,7 +12184,7 @@
       "cap_space_m": 18.4,
       "dead_cap_m": null,
       "constraint_tier": "flush",
-      "notes": "Post-Lawrence trade: +$12.8M recovered ($18.5M base â $5.7M pick-10 cap hit). OverTheCap shows $18.4M as of 4/19 AM ET. Likely pursues DT FA (Reader / Harris / Campbell) before or after draft."
+      "notes": "Post-Lawrence trade: +$12.8M recovered ($18.5M base \u00e2\u0088\u0092 $5.7M pick-10 cap hit). OverTheCap shows $18.4M as of 4/19 AM ET. Likely pursues DT FA (Reader / Harris / Campbell) before or after draft."
     },
     "coaching": {
       "hc": "John Harbaugh",
@@ -12240,7 +12240,7 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Downs â elite safety, plug-and-play Day 1 starter; NYG secondary in shambles."
+            "text": "Brugler: Downs \u00e2\u0080\u0094 elite safety, plug-and-play Day 1 starter; NYG secondary in shambles."
           },
           {
             "analyst": "Brugler 1st",
@@ -12248,27 +12248,27 @@
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Downs â 'no safety has graded this high since Minkah.'"
+            "text": "ESPN Scouts: Downs \u00e2\u0080\u0094 'no safety has graded this high since Minkah.'"
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Downs â best defensive player available; NYG love his versatility."
+            "text": "Kiper: Downs \u00e2\u0080\u0094 best defensive player available; NYG love his versatility."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Mauigoa â NYG can't pass on OT after protecting Russell."
+            "text": "McShay: Mauigoa \u00e2\u0080\u0094 NYG can't pass on OT after protecting Russell."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Styles â Giants pivot to LB after missing on EDGE."
+            "text": "Schrager: Styles \u00e2\u0080\u0094 Giants pivot to LB after missing on EDGE."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Love â NYG need offense; RB1 available."
+            "text": "Reuter: Love \u00e2\u0080\u0094 NYG need offense; RB1 available."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Reuter 5rd: Same â Love."
+            "text": "Reuter 5rd: Same \u00e2\u0080\u0094 Love."
           }
         ]
       }
@@ -12316,10 +12316,10 @@
       "oc_scheme": "Mike Kafka / Daboll hybrid RPO",
       "dc_scheme": "Shane Bowen multiple (Vrabel-tree)",
       "gm_historical_tendencies": [
-        "Just traded Dexter Lawrence to CIN for pick 10 — now holds picks 5 AND 10 (2026-04-18/19)",
+        "Just traded Dexter Lawrence to CIN for pick 10 \u2014 now holds picks 5 AND 10 (2026-04-18/19)",
         "Schoen trade-savvy; two top-10 picks opens trade-up or double-down",
         "Willing to move veterans for picks",
-        "Hosted Lee Hunter (Texas Tech DT) — interior DL signal post-Lawrence loss"
+        "Hosted Lee Hunter (Texas Tech DT) \u2014 interior DL signal post-Lawrence loss"
       ],
       "recent_5yr_position_patterns": "OL + skill + pass-rush.",
       "sources": [
@@ -12327,7 +12327,7 @@
         "https://walterfootball.com/ProspectMeetingsByTeam2026.php"
       ]
     },
-    "_4_20_news": "Thibodeaux less likely traded (Rapoport) — EDGE urgency drops",
+    "_4_20_news": "Thibodeaux less likely traded (Rapoport) \u2014 EDGE urgency drops",
     "analyst_reasoning": {
       "scheme_cited": [
         "John Harbaugh chess-piece defense / Ray Lewis LB tradition",
@@ -12357,7 +12357,7 @@
       ]
     },
     "_4_21_news": [
-      "Rapoport 4/19: Dexter Lawrence to CIN — NYG now holds 5 AND 10; IDL need spikes; Thibodeaux staying"
+      "Rapoport 4/19: Dexter Lawrence to CIN \u2014 NYG now holds 5 AND 10; IDL need spikes; Thibodeaux staying"
     ]
   },
   "NYJ": {
@@ -12389,7 +12389,7 @@
       "EDGE": 2.5,
       "LB": 2.5,
       "CB": 2.5,
-      "QB": 1.5,
+      "QB": 0.0,
       "RB": 1.2,
       "IDL": 1.2
     },
@@ -12747,7 +12747,7 @@
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Same logic â Brugler's two mocks align on Reese."
+            "text": "Same logic \u00e2\u0080\u0094 Brugler's two mocks align on Reese."
           },
           {
             "analyst": "ESPN Scouts",
@@ -12759,7 +12759,7 @@
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Bailey â best pure pass rusher; Jets pick for production over projection."
+            "text": "McShay: Bailey \u00e2\u0080\u0094 best pure pass rusher; Jets pick for production over projection."
           },
           {
             "analyst": "Schrager",
@@ -12767,11 +12767,11 @@
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Reese â higher ceiling, better fit in Glenn's 3-4 hybrid."
+            "text": "Reuter: Reese \u00e2\u0080\u0094 higher ceiling, better fit in Glenn's 3-4 hybrid."
           },
           {
             "analyst": "Reuter 5rd",
-            "text": "Same as 7rd â Reuter consistent on Reese."
+            "text": "Same as 7rd \u00e2\u0080\u0094 Reuter consistent on Reese."
           }
         ]
       },
@@ -12815,11 +12815,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Lemon â WR for Jets offense."
+            "text": "Brugler: Lemon \u00e2\u0080\u0094 WR for Jets offense."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Lemon."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Lemon."
           },
           {
             "analyst": "ESPN Scouts",
@@ -12827,19 +12827,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Cooper Jr. â WR1 fit."
+            "text": "Kiper: Cooper Jr. \u00e2\u0080\u0094 WR1 fit."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Cooper Jr. â WR for Fields/whoever."
+            "text": "McShay: Cooper Jr. \u00e2\u0080\u0094 WR for Fields/whoever."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Cooper Jr. â 'NYJ need WR2.'"
+            "text": "Schrager: Cooper Jr. \u00e2\u0080\u0094 'NYJ need WR2.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Simpson (QB) â NYJ takes dev QB."
+            "text": "Reuter: Simpson (QB) \u00e2\u0080\u0094 NYJ takes dev QB."
           },
           {
             "analyst": "Reuter 5rd",
@@ -12861,7 +12861,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 4,
-      "notes": "Fields/Taylor QB uncertainty. TE is critical (no starter-caliber). Adams traded, Davis aging — safety need. Wilson WR1 solid, Reynolds #2 bridge.",
+      "notes": "Fields/Taylor QB uncertainty. TE is critical (no starter-caliber). Adams traded, Davis aging \u2014 safety need. Wilson WR1 solid, Reynolds #2 bridge.",
       "sources": [
         "https://overthecap.com/team/new-york-jets",
         "https://www.spotrac.com/nfl/new-york-jets/depth-chart/"
@@ -12889,12 +12889,12 @@
       "hc": "Aaron Glenn",
       "gm": "Darren Mougey",
       "oc_scheme": "Frank Reich / Erhardt-Perkins",
-      "dc_scheme": "Glenn multiple — '70% nickel, elements of 4-3 AND 3-4' (Glenn quote)",
+      "dc_scheme": "Glenn multiple \u2014 '70% nickel, elements of 4-3 AND 3-4' (Glenn quote)",
       "gm_historical_tendencies": [
-        "4 picks in top 44 (2, 16, 33, 44) — heavy capital",
-        "Glenn stated: 'If he's best player on board, we draft him' — BPA",
+        "4 picks in top 44 (2, 16, 33, 44) \u2014 heavy capital",
+        "Glenn stated: 'If he's best player on board, we draft him' \u2014 BPA",
         "Worked out full QB board (Simpson, Allar, Beck, Nussmeier)",
-        "Mougey first cycle (Broncos-tree) — expect Paton-like discipline"
+        "Mougey first cycle (Broncos-tree) \u2014 expect Paton-like discipline"
       ],
       "recent_5yr_position_patterns": "New regime.",
       "sources": [
@@ -12930,9 +12930,9 @@
         "two first-rounders afford high-upside gambling"
       ]
     },
-    "_4_21_reese_dissent": "Schrager/McShay finals dissent on Reese at 2 — Bailey remains competitive alt",
+    "_4_21_reese_dissent": "Schrager/McShay finals dissent on Reese at 2 \u2014 Bailey remains competitive alt",
     "_4_21_pressers": [
-      "Signals Reese not 100% — alternate EDGE still live"
+      "Signals Reese not 100% \u2014 alternate EDGE still live"
     ]
   },
   "PHI": {
@@ -13342,7 +13342,7 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Proctor â PHI OL future."
+            "text": "Brugler: Proctor \u00e2\u0080\u0094 PHI OL future."
           },
           {
             "analyst": "Brugler 1st",
@@ -13354,19 +13354,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Blake Miller â OT alt."
+            "text": "Kiper: Blake Miller \u00e2\u0080\u0094 OT alt."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Freeling â OT."
+            "text": "McShay: Freeling \u00e2\u0080\u0094 OT."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Boston â WR weapon."
+            "text": "Schrager: Boston \u00e2\u0080\u0094 WR weapon."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Lemon â WR."
+            "text": "Reuter: Lemon \u00e2\u0080\u0094 WR."
           },
           {
             "analyst": "Reuter 5rd",
@@ -13401,7 +13401,7 @@
         "wr_archetype": "Alpha X (A.J. Brown), vertical Z (Smith), YAC slot",
         "ol_archetype": "gap-power maulers (Mailata/Johnson core, Dickerson/Jurgens)",
         "te_archetype": "Y inline blocker + move TE (Goedert)",
-        "qb_archetype": "Hurts — dual-threat, RPO processor, tush-push specific"
+        "qb_archetype": "Hurts \u2014 dual-threat, RPO processor, tush-push specific"
       },
       "dc": {
         "base_concept": "Vic Fangio 3-4 with 2-high quarters-match, disguise-first",
@@ -13416,15 +13416,15 @@
       "hc": "Nick Sirianni",
       "gm": "Howie Roseman",
       "oc_scheme": "Kevin Patullo (post-Moore) / Sirianni shot-play",
-      "dc_scheme": "Vic Fangio 2-high / now post-Fangio — verify 2026 DC",
+      "dc_scheme": "Vic Fangio 2-high / now post-Fangio \u2014 verify 2026 DC",
       "gm_historical_tendencies": [
         "Trades 5.6/draft (NFL IQ); among most active",
         "Roseman 'plotting a deal' per Schefter for this weekend",
         "Prefers future capital (2027-2028) over current year",
-        "Premium-positions-only in R1: QB, OT, EDGE, WR — almost never LB/S/RB in R1",
+        "Premium-positions-only in R1: QB, OT, EDGE, WR \u2014 almost never LB/S/RB in R1",
         "Trenches-first org philosophy; majority of pre-draft visits are OL",
         "SEC/Georgia pipeline is explicit",
-        "Jeff Stoutland departed — OL preferences may shift"
+        "Jeff Stoutland departed \u2014 OL preferences may shift"
       ],
       "recent_5yr_position_patterns": "Trenches-first near-exclusively.",
       "sources": [
@@ -13432,7 +13432,7 @@
         "https://www.nfl.com/news/nfl-iq-trade-trends-and-projected-moves-for-2026-nfl-draft"
       ]
     },
-    "_4_20_news": "Brown-to-NE deferred post-June 1 — no draft WR urgency",
+    "_4_20_news": "Brown-to-NE deferred post-June 1 \u2014 no draft WR urgency",
     "analyst_reasoning": {
       "scheme_cited": [
         "Vic Fangio defense",
@@ -13459,7 +13459,7 @@
       ]
     },
     "_4_21_news": [
-      "Schefter 4/20: Roseman 'plotting a deal' — WR urgency deferred post-Jun-1"
+      "Schefter 4/20: Roseman 'plotting a deal' \u2014 WR urgency deferred post-Jun-1"
     ]
   },
   "PIT": {
@@ -13669,7 +13669,7 @@
       "capital_abundance": "very_high"
     },
     "narrative": {
-      "leadership": "GM Omar Khan (3 drafts) | HC Mike McCarthy (NEW â hired 2026-01-24 after Tomlin stepped down 2026-01-13) | OC Arthur Smith | DC Teryl Austin",
+      "leadership": "GM Omar Khan (3 drafts) | HC Mike McCarthy (NEW \u00e2\u0080\u0094 hired 2026-01-24 after Tomlin stepped down 2026-01-13) | OC Arthur Smith | DC Teryl Austin",
       "context_2025": "10-7 (Rodgers era Year 1). Playoff team but flaws exposed. 47 sacks allowed (OL\nbreakdown). Defense transitioning from Watt-era dominance. Rodgers likely returning but\naging fast.",
       "qb_situation": "BRIDGE (Rodgers - 1 more year likely). QB succession is the long-term plan, not\nthe 2026 plan.",
       "offseason_moves": "Added: Rico Dowdle RB (FA), Michael Pittman WR (trade from IND), Cameron Heyward\n(extended), Jaquan Brisker S\nLost: Isaac Seumalo G (major interior OL loss)\nNet effect: Offensive skill upgrades (Pittman, Dowdle) but interior OL weaker, not better.",
@@ -13679,7 +13679,7 @@
         "21": "Two plausible archetypes: (1) a mauler-style interior OL or\nswing tackle who can anchor the line for a decade, or (2) a developmental QB with starter\nupside (low at 21, but draft is in Pittsburgh and Khan knows Rodgers is near the end). The OL\narchetype is cleaner; the QB archetype requires a specific profile to fall to 21, which most\nanalysts say is unlikely value-wise."
       },
       "gm_fingerprint": "(Khan):\nTrade tendency: Moderate, small sample (4 drafts)\nPositional affinity: Limited data - IDL emphasis emerging\nPattern: Khan has shown willingness to acquire veterans via trade (Pittman, Heyward\nextensions) - less of a \"stick and pick\" GM than most",
-      "uncertainty_flags": "New HC McCarthy brings West Coast pass-game principles â scheme fit for current personnel is uncertain. Rodgers decision on 2026 return (as of mid-April: 50-50, leaning yes) swings QB urgency materially.",
+      "uncertainty_flags": "New HC McCarthy brings West Coast pass-game principles \u00e2\u0080\u0094 scheme fit for current personnel is uncertain. Rodgers decision on 2026 return (as of mid-April: 50-50, leaning yes) swings QB urgency materially.",
       "predictability_tier": "MEDIUM. OL is the clear primary archetype, but QB at 21 would be the\nshock scenario.\nAFC SOUTH",
       "trade_up_scenario": "",
       "cascade_rule": "",
@@ -13733,7 +13733,7 @@
           "age_2026": 42,
           "threshold": 35,
           "severity": "high",
-          "note": "Return 2026 TBD â public reporting 'leaning yes' as of mid-April"
+          "note": "Return 2026 TBD \u00e2\u0080\u0094 public reporting 'leaning yes' as of mid-April"
         },
         {
           "player": "Cameron Heyward",
@@ -13835,7 +13835,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Mike McCarthy",
@@ -13889,11 +13889,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Cooper Jr. â Rodgers successor QB weapon."
+            "text": "Brugler: Cooper Jr. \u00e2\u0080\u0094 Rodgers successor QB weapon."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Cooper Jr."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Cooper Jr."
           },
           {
             "analyst": "ESPN Scouts",
@@ -13901,19 +13901,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Ioane â OG."
+            "text": "Kiper: Ioane \u00e2\u0080\u0094 OG."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Ioane â OG interior."
+            "text": "McShay: Ioane \u00e2\u0080\u0094 OG interior."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Parker (EDGE) â rush."
+            "text": "Schrager: Parker (EDGE) \u00e2\u0080\u0094 rush."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Blake Miller (OT) â OL."
+            "text": "Reuter: Blake Miller (OT) \u00e2\u0080\u0094 OL."
           },
           {
             "analyst": "Reuter 5rd",
@@ -13935,7 +13935,7 @@
       "lb_room": 3,
       "cb_room": 2,
       "s_room": 2,
-      "notes": "Rodgers 1-year bridge — QB of future need. WR post-Pickens trade thin (Metcalf FA added). Ramsey/Porter CB loaded. Watt/Highsmith edge elite.",
+      "notes": "Rodgers 1-year bridge \u2014 QB of future need. WR post-Pickens trade thin (Metcalf FA added). Ramsey/Porter CB loaded. Watt/Highsmith edge elite.",
       "sources": [
         "https://overthecap.com/team/pittsburgh-steelers",
         "https://www.spotrac.com/nfl/pittsburgh-steelers/depth-chart/"
@@ -13963,11 +13963,11 @@
       "hc": "Mike McCarthy (new 2026)",
       "gm": "Omar Khan",
       "oc_scheme": "McCarthy West-Coast (calling plays) / Brian Angelichio detail",
-      "dc_scheme": "Teryl Austin (retained?) fire-zone — verify",
+      "dc_scheme": "Teryl Austin (retained?) fire-zone \u2014 verify",
       "gm_historical_tendencies": [
-        "12 picks + 5 in top 100 — first time since 1999",
+        "12 picks + 5 in top 100 \u2014 first time since 1999",
         "Khan trade-active; likely aggressive this cycle per Steeler Nation",
-        "McCarthy QB-whisperer reputation — multiple QB visits (Beck, Allar reported at PIT-tier)",
+        "McCarthy QB-whisperer reputation \u2014 multiple QB visits (Beck, Allar reported at PIT-tier)",
         "Traditional PIT character-screen still applies (Rooney-rules org)"
       ],
       "recent_5yr_position_patterns": "OL + DL + CB.",
@@ -13976,7 +13976,7 @@
         "https://walterfootball.com/ProspectMeetingsByTeam2026.php"
       ]
     },
-    "_4_20_news": "Broderick Jones neck setback (Schefter) — OT R1/early D2 now likely",
+    "_4_20_news": "Broderick Jones neck setback (Schefter) \u2014 OT R1/early D2 now likely",
     "analyst_reasoning": {
       "scheme_cited": [
         "Arthur Smith offense / Rodgers protection",
@@ -14001,13 +14001,13 @@
         "ranked fourth from last in WR receiving yards"
       ]
     },
-    "_4_21_news_qb": "Rodgers silence + Broderick Jones neck setback — OT R1 lock contingent on QB path",
+    "_4_21_news_qb": "Rodgers silence + Broderick Jones neck setback \u2014 OT R1 lock contingent on QB path",
     "_4_21_news": [
       "Breer 4/20"
     ],
     "_4_21_presser_loosen_visit": true,
     "_4_21_pressers": [
-      "Khan 4/20: hinted R1 player not hosted on pre-draft visit — breaks visit-correlation prior"
+      "Khan 4/20: hinted R1 player not hosted on pre-draft visit \u2014 breaks visit-correlation prior"
     ]
   },
   "SEA": {
@@ -14038,7 +14038,7 @@
       "LB": 2.5,
       "CB": 2.5,
       "S": 2.5,
-      "QB": 1.2,
+      "QB": 0.0,
       "WR": 1.2,
       "IDL": 1.2
     },
@@ -14341,7 +14341,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Mike Macdonald",
@@ -14397,11 +14397,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Hood â CB value."
+            "text": "Brugler: Hood \u00e2\u0080\u0094 CB value."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Hood."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Hood."
           },
           {
             "analyst": "ESPN Scouts",
@@ -14409,19 +14409,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Price â RB for Seattle run game."
+            "text": "Kiper: Price \u00e2\u0080\u0094 RB for Seattle run game."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Parker â EDGE fall."
+            "text": "McShay: Parker \u00e2\u0080\u0094 EDGE fall."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Price â RB."
+            "text": "Schrager: Price \u00e2\u0080\u0094 RB."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Johnson (CB) â CB."
+            "text": "Reuter: Johnson (CB) \u00e2\u0080\u0094 CB."
           },
           {
             "analyst": "Reuter 5rd",
@@ -14456,7 +14456,7 @@
         "wr_archetype": "vertical Z (Metcalf departure, JSN), contested X, YAC slot",
         "ol_archetype": "athletic zone OL, light OTs, mobile C (massive OL investment needed)",
         "te_archetype": "Y move TE + inline blocker",
-        "qb_archetype": "Sam Darnold — rhythm pocket passer, boot chops"
+        "qb_archetype": "Sam Darnold \u2014 rhythm pocket passer, boot chops"
       },
       "dc": {
         "base_concept": "Mike Macdonald Baltimore-legacy disguised coverage, multiple front, Cover-6/quarters",
@@ -14470,10 +14470,10 @@
     "coach_gm_research": {
       "hc": "Mike Macdonald",
       "gm": "John Schneider",
-      "oc_scheme": "Klint Kubiak (2025) — verify 2026 OC",
+      "oc_scheme": "Klint Kubiak (2025) \u2014 verify 2026 OC",
       "dc_scheme": "Aden Durde / Macdonald BAL-tree hybrid",
       "gm_historical_tendencies": [
-        "Only 4 total picks in 2026 — incentivized to trade DOWN from 32 (Schefter)",
+        "Only 4 total picks in 2026 \u2014 incentivized to trade DOWN from 32 (Schefter)",
         "Historically aggressive on CBs and trenches",
         "Schneider length-thresholds on CBs (32+ arm)"
       ],
@@ -14510,7 +14510,7 @@
       ]
     },
     "_4_21_news": [
-      "4/20: SEA actively shopping 32 — RB top need"
+      "4/20: SEA actively shopping 32 \u2014 RB top need"
     ],
     "_4_21_pressers": [
       "Schneider 4/20: publicly declared trade-back intent at 32, willing to deal in NFC West"
@@ -14927,11 +14927,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Lomu â OT for Trent Williams successor."
+            "text": "Brugler: Lomu \u00e2\u0080\u0094 OT for Trent Williams successor."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Lomu."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Lomu."
           },
           {
             "analyst": "ESPN Scouts",
@@ -14939,19 +14939,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Iheanachor â OT alt."
+            "text": "Kiper: Iheanachor \u00e2\u0080\u0094 OT alt."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Lomu â same logic."
+            "text": "McShay: Lomu \u00e2\u0080\u0094 same logic."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Lomu â 'SF brass loves him.'"
+            "text": "Schrager: Lomu \u00e2\u0080\u0094 'SF brass loves him.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Iheanachor â OT."
+            "text": "Reuter: Iheanachor \u00e2\u0080\u0094 OT."
           },
           {
             "analyst": "Reuter 5rd",
@@ -14973,7 +14973,7 @@
       "lb_room": 3,
       "cb_room": 4,
       "s_room": 3,
-      "notes": "Aiyuk trade pending, Samuel traded to WAS — WR thin behind Pearsall/Jennings. Interior DL post-Hargrave/Armstead rebuild. CB after Ward departure critical. IOL question.",
+      "notes": "Aiyuk trade pending, Samuel traded to WAS \u2014 WR thin behind Pearsall/Jennings. Interior DL post-Hargrave/Armstead rebuild. CB after Ward departure critical. IOL question.",
       "sources": [
         "https://overthecap.com/team/san-francisco-49ers",
         "https://www.spotrac.com/nfl/san-francisco-49ers/depth-chart/"
@@ -14981,7 +14981,7 @@
     },
     "scheme_archetype_tags": {
       "oc": {
-        "base_concept": "Kyle Shanahan outside-zone wide-zone with play-action boot, condensed splits — archetype of the tree",
+        "base_concept": "Kyle Shanahan outside-zone wide-zone with play-action boot, condensed splits \u2014 archetype of the tree",
         "rb_archetype": "one-cut decisive back with lateral agility (McCaffrey lineage)",
         "wr_archetype": "YAC-first separator, quick separation, not contested-catch (Aiyuk/Deebo templates)",
         "ol_archetype": "athletic zone-blockers, lean OTs, mobile G/C (Williams/Brendel)",
@@ -15007,7 +15007,7 @@
         "Willing to trade premium capital for QB swings (Lance)",
         "Monitoring trade market on Aiyuk + Mac Jones (Schefter)"
       ],
-      "recent_5yr_position_patterns": "WR/OL/DL — scheme fit weighted higher than pure board.",
+      "recent_5yr_position_patterns": "WR/OL/DL \u2014 scheme fit weighted higher than pure board.",
       "sources": [
         "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"
       ]
@@ -15064,7 +15064,7 @@
       "IDL": 2.5,
       "CB": 2.5,
       "S": 2.5,
-      "QB": 1.2,
+      "QB": 0.0,
       "RB": 1.2,
       "WR": 1.2
     },
@@ -15370,7 +15370,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Todd Bowles",
@@ -15428,11 +15428,11 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Ioane â TB OL interior disaster."
+            "text": "Brugler: Ioane \u00e2\u0080\u0094 TB OL interior disaster."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Ioane."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Ioane."
           },
           {
             "analyst": "ESPN Scouts",
@@ -15440,19 +15440,19 @@
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Sadiq â TE for Mayfield."
+            "text": "Kiper: Sadiq \u00e2\u0080\u0094 TE for Mayfield."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Mesidor (EDGE) â pass rush."
+            "text": "McShay: Mesidor (EDGE) \u00e2\u0080\u0094 pass rush."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: McCoy â CB fit."
+            "text": "Schrager: McCoy \u00e2\u0080\u0094 CB fit."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Mesidor â EDGE."
+            "text": "Reuter: Mesidor \u00e2\u0080\u0094 EDGE."
           },
           {
             "analyst": "Reuter 5rd",
@@ -15487,7 +15487,7 @@
         "wr_archetype": "vertical Z (Godwin), contested X (Evans), YAC slot (McMillan)",
         "ol_archetype": "athletic zone OL (Wirfs LT), mobile interior",
         "te_archetype": "Y move TE + inline blocker (Otton)",
-        "qb_archetype": "Baker Mayfield — rhythm passer with mobility, off-platform arm"
+        "qb_archetype": "Baker Mayfield \u2014 rhythm passer with mobility, off-platform arm"
       },
       "dc": {
         "base_concept": "Todd Bowles 3-4 multiple pressure, Cover-1/0 blitz-heavy",
@@ -15504,7 +15504,7 @@
       "oc_scheme": "Josh Grizzard / Canales-tree play-action",
       "dc_scheme": "Bowles 3-4 Psycho / heavy simulated pressure",
       "gm_historical_tendencies": [
-        "Strong BPA — 'even if not biggest need on surface' (NFL IQ)",
+        "Strong BPA \u2014 'even if not biggest need on surface' (NFL IQ)",
         "SEC + Power 5 preference",
         "Stable R1 pick-holder"
       ],
@@ -15566,7 +15566,7 @@
       "LB": 2.5,
       "CB": 2.5,
       "S": 2.5,
-      "QB": 1.5,
+      "QB": 0.0,
       "RB": 1.2,
       "IOL": 1.2,
       "IDL": 1.2
@@ -15748,7 +15748,7 @@
       "context_2025": "3-14. Worst record in NFL. Cam Ward rookie year (59.8% completion, 15 TDs, 7\nINTs, 80.3 rating - promising but raw). Full coaching staff overhaul.",
       "qb_situation": "LOCKED (Cam Ward, Year 2)",
       "offseason_moves": "Added: John Franklin-Myers DL (FA), Wan'Dale Robinson WR, Jermaine Johnson II\nEDGE (trade), Cordell Volson G, Alontae Taylor CB (FA)\nLost: L'Jarius Sneed CB (released), T'Vondre Sweat IDL (trade to NYJ)\nNet effect: Some EDGE help arrived (JJ II), but roster remains thin everywhere.",
-      "scheme_identity": "Saleh runs aggressive 4-3 wide-9 (SF/Seattle Cover-3 tree). Top-10 defense 5x as DC. Priority: explosive EDGE + length on D-line. Drafted Jermaine Johnson (EDGE) #1 as NYJ HC in 2022 â pattern predicts EDGE at #4 if Bailey/Reese falls.",
+      "scheme_identity": "Saleh runs aggressive 4-3 wide-9 (SF/Seattle Cover-3 tree). Top-10 defense 5x as DC. Priority: explosive EDGE + length on D-line. Drafted Jermaine Johnson (EDGE) #1 as NYJ HC in 2022 \u00e2\u0080\u0094 pattern predicts EDGE at #4 if Bailey/Reese falls.",
       "roster_needs_tiered": "Urgent (3.5+): OL (multiple holes), EDGE (Bradley scheme demands leverage rushers;\nJohnson II alone insufficient), WR (Ward needs weapons beyond Ridley), RB (Love is the\nultimate weapon for a young QB)\nSecondary (2.5-3): CB (Sneed gone, need press-coverage types), S (centerfield specialist\nfor Cover-3)\nModerate (2): IDL",
       "player_archetypes": {
         "4": "Pick 4 faces genuine debate between three distinct archetypes:\n(1) an elite, explosive RB with pass-catching ability (Ward-weapon argument), (2) a blue-chip\nedge rusher or twitchy pass-rushing LB (Saleh/Bradley defensive priority), or (3) a bookend\ntackle (OL foundation). The strongest consensus across five analyst mocks favors the RB\narchetype, but that arguably reflects \"mock inertia\" - the newer reasoning pieces (NFL.com,\nCBS) explicitly argue for EDGE/OL at this slot because of positional value. The Bradley scheme\nspecifically suggests the EDGE or rangy LB archetype fits best ideologically; the RB archetype\nfits best from a Ward-development standpoint. Both are defensible."
@@ -15792,7 +15792,7 @@
         "source": "default"
       },
       "hard_constraints": [],
-      "saleh_philosophy_2026": "Saleh at NFL meetings: 'Edge rushers are playmakers too... when you're drafting that high, it's: who can change the game in one play? And edge rushers can change the game in one play.' Titans hosted David Bailey (TTU, 14.5 FCS-leading sacks) â confirms EDGE is alive alongside Love (RB) at #4."
+      "saleh_philosophy_2026": "Saleh at NFL meetings: 'Edge rushers are playmakers too... when you're drafting that high, it's: who can change the game in one play? And edge rushers can change the game in one play.' Titans hosted David Bailey (TTU, 14.5 FCS-leading sacks) \u00e2\u0080\u0094 confirms EDGE is alive alongside Love (RB) at #4."
     },
     "roster_context": {
       "age_cliffs": [
@@ -15939,7 +15939,7 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Bailey â EDGE need trumps RB luxury for rebuilding Titans."
+            "text": "Brugler: Bailey \u00e2\u0080\u0094 EDGE need trumps RB luxury for rebuilding Titans."
           },
           {
             "analyst": "Brugler 1st",
@@ -15947,23 +15947,23 @@
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Love â 'He's the best skill player, TEN needs weapons for Ward.'"
+            "text": "ESPN Scouts: Love \u00e2\u0080\u0094 'He's the best skill player, TEN needs weapons for Ward.'"
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Love â best playmaker for young QB Cam Ward."
+            "text": "Kiper: Love \u00e2\u0080\u0094 best playmaker for young QB Cam Ward."
           },
           {
             "analyst": "McShay 4.0",
-            "text": "McShay: Love â Titans want offensive identity around Ward."
+            "text": "McShay: Love \u00e2\u0080\u0094 Titans want offensive identity around Ward."
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Love â 'sources indicate TEN is RB-curious at 4.'"
+            "text": "Schrager: Love \u00e2\u0080\u0094 'sources indicate TEN is RB-curious at 4.'"
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Bailey â defensive priority."
+            "text": "Reuter: Bailey \u00e2\u0080\u0094 defensive priority."
           },
           {
             "analyst": "Reuter 5rd",
@@ -15985,7 +15985,7 @@
       "lb_room": 3,
       "cb_room": 3,
       "s_room": 3,
-      "notes": "QB is existential (#1 overall candidate) — Levis/Rudolph insufficient. Zeitler/Lloyd IOL overhaul. Sweat/Simmons DL anchors. WR thin behind Ridley.",
+      "notes": "QB is existential (#1 overall candidate) \u2014 Levis/Rudolph insufficient. Zeitler/Lloyd IOL overhaul. Sweat/Simmons DL anchors. WR thin behind Ridley.",
       "sources": [
         "https://overthecap.com/team/tennessee-titans",
         "https://www.spotrac.com/nfl/tennessee-titans/depth-chart/"
@@ -16013,12 +16013,12 @@
       "hc": "Brian Callahan",
       "gm": "Mike Borgonzi (new)",
       "oc_scheme": "Nick Holz / Callahan Shanahan-tree",
-      "dc_scheme": "Dennard Wilson / Flores-tree — verify",
+      "dc_scheme": "Dennard Wilson / Flores-tree \u2014 verify",
       "gm_historical_tendencies": [
-        "Borgonzi (KC-tree) first full cycle — expect Veach-like age discipline",
+        "Borgonzi (KC-tree) first full cycle \u2014 expect Veach-like age discipline",
         "Levis trade rumors active (Schefter list)"
       ],
-      "recent_5yr_position_patterns": "Regime change — discount old patterns.",
+      "recent_5yr_position_patterns": "Regime change \u2014 discount old patterns.",
       "sources": [
         "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"
       ]
@@ -16484,7 +16484,7 @@
       "cap_space_m": null,
       "dead_cap_m": null,
       "constraint_tier": "normal",
-      "notes": "no signal â assumed normal"
+      "notes": "no signal \u00e2\u0080\u0094 assumed normal"
     },
     "coaching": {
       "hc": "Dan Quinn",
@@ -16540,19 +16540,19 @@
         "reasoning": [
           {
             "analyst": "Brugler 7rd",
-            "text": "Brugler: Love â WAS backfield weak; pair with Jayden Daniels."
+            "text": "Brugler: Love \u00e2\u0080\u0094 WAS backfield weak; pair with Jayden Daniels."
           },
           {
             "analyst": "Brugler 1st",
-            "text": "Brugler 1st: Same â Love."
+            "text": "Brugler 1st: Same \u00e2\u0080\u0094 Love."
           },
           {
             "analyst": "ESPN Scouts",
-            "text": "ESPN Scouts: Tate â Daniels needs WR1."
+            "text": "ESPN Scouts: Tate \u00e2\u0080\u0094 Daniels needs WR1."
           },
           {
             "analyst": "Kiper Final",
-            "text": "Kiper: Tate â WR1 for Daniels, obvious fit."
+            "text": "Kiper: Tate \u00e2\u0080\u0094 WR1 for Daniels, obvious fit."
           },
           {
             "analyst": "McShay 4.0",
@@ -16560,11 +16560,11 @@
           },
           {
             "analyst": "Schrager",
-            "text": "Schrager: Styles â LB need on Dan Quinn defense."
+            "text": "Schrager: Styles \u00e2\u0080\u0094 LB need on Dan Quinn defense."
           },
           {
             "analyst": "Reuter 7rd",
-            "text": "Reuter: Delane â CB1 for depleted Washington secondary."
+            "text": "Reuter: Delane \u00e2\u0080\u0094 CB1 for depleted Washington secondary."
           },
           {
             "analyst": "Reuter 5rd",
@@ -16594,12 +16594,12 @@
     },
     "scheme_archetype_tags": {
       "oc": {
-        "base_concept": "Kliff Kingsbury Air Raid / Shanahan-hybrid — spread 11 personnel with designed QB movement",
+        "base_concept": "Kliff Kingsbury Air Raid / Shanahan-hybrid \u2014 spread 11 personnel with designed QB movement",
         "rb_archetype": "receiving-capable zone/gap back (Robinson/Ekeler)",
         "wr_archetype": "vertical Z (McLaurin), contested X, YAC slot (McCaffrey role?)",
         "ol_archetype": "pass-pro OT priority (Laremy Tunsil FA), athletic interior",
         "te_archetype": "move TE flex + inline Y (Ertz/Sinnott)",
-        "qb_archetype": "Jayden Daniels — dual-threat, RPO/designed-run specialist with arm talent"
+        "qb_archetype": "Jayden Daniels \u2014 dual-threat, RPO/designed-run specialist with arm talent"
       },
       "dc": {
         "base_concept": "Joe Whitt Jr. Packers/Cowboys-legacy 4-3 with Cover-2/Tampa-2 shells",
@@ -16621,7 +16621,7 @@
         "Jeremiyah Love floor is No. 7 WAS per Schefter intel",
         "Daronte Jones (Flores influence) adds exotic-pressure DB demand"
       ],
-      "recent_5yr_position_patterns": "DL + LB + OL under prior regime — Peters era will skew trait-weighted.",
+      "recent_5yr_position_patterns": "DL + LB + OL under prior regime \u2014 Peters era will skew trait-weighted.",
       "sources": [
         "https://www.espn.com/nfl/draft2026/story/_/id/48494162/2026-nfl-draft-32-teams-positions-picks-grades-predictions-needs-solak",
         "https://www.espn.com/nfl/draft2026/story/_/id/48507444/2026-nfl-draft-notes-intel-buzz-adam-schefter-first-round-picks-teams-trades"
@@ -16684,7 +16684,7 @@
       "PIT HC (listed Tomlin; actually McCarthy per user)"
     ],
     "contradictions_resolved": [
-      "NO qb_urgency was 0.7 but needs list had no QB entry and Excel confirms Shough is committed starter â internally inconsistent.",
+      "NO qb_urgency was 0.7 but needs list had no QB entry and Excel confirms Shough is committed starter \u00e2\u0080\u0094 internally inconsistent.",
       "NYG structural tension: roster_needs has IDL as top need (post-Lawrence void) BUT gm_affinity shows IDL -0.15 AND Harbaugh's 18-yr BAL record shows zero Rd1 DT selections. Net: model's IDL weighting will be self-dampened by affinity. Kept elevated to reflect real roster gap; Harbaugh-spine LB (Styles) is the more likely R1 outcome.",
       "NYJ had qb_urgency=0.3 + QB 1.5 in needs, but Excel confirms QB is paid/set (Rodgers era + Glenn plan). Both cleared.",
       "CLE had QB=3.5 in needs but qb_urgency=0.0. Watson is cap-dead but contractually tied; a QB taken at #6 is a live scenario (Allar). Raising urgency to 0.35 to reflect the real QB question."
@@ -16734,7 +16734,7 @@
     "Jermod McCoy": {
       "type": "acl_medical_file_reviewed",
       "severity": "medium",
-      "detail": "4/20: despite 4.39 pro day, teams flagging medical file — late-R1 / early-R2."
+      "detail": "4/20: despite 4.39 pro day, teams flagging medical file \u2014 late-R1 / early-R2."
     },
     "Drew Allar": {
       "type": "ankle",
@@ -17098,11 +17098,11 @@
     "applied_at": "2026-04-20T11:08:57",
     "source": "espn.com/nfl/draft2026/notes/intel/buzz Schefter 4/20",
     "updates": [
-      "BUF: acquired D.J. Moore  WR need reduced",
+      "BUF: acquired D.J. Moore \u0097 WR need reduced",
       "CHI: sent Moore, gained pick #60",
-      "LAR: acquired Trent McDuffie  CB need resolved",
+      "LAR: acquired Trent McDuffie \u0097 CB need resolved",
       "ARI: internal traction for Love (RB) at #3",
-      "PIT: Broderick Jones neck injury  OT need bumped to 4.5",
+      "PIT: Broderick Jones neck injury \u0097 OT need bumped to 4.5",
       "NYJ: Bailey #2, Simpson #16 intel",
       "DAL: keep #20, possible #12 trade-up",
       "LV: Cousins signed as starter",
@@ -17113,11 +17113,11 @@
     "applied_at": "2026-04-20T11:42:28",
     "teams_with_reasoning": 32,
     "prospects_updated_archetypes": 39,
-    "note": "Team archetype prefs derived from scheme + coaching + roster-context analyst REASONING — not from picks. Model will score each prospect against these preferences; picks converge toward consensus because the reasoning chain matches."
+    "note": "Team archetype prefs derived from scheme + coaching + roster-context analyst REASONING \u2014 not from picks. Model will score each prospect against these preferences; picks converge toward consensus because the reasoning chain matches."
   },
   "_meta_narrative_to_signals": {
     "applied_at": "2026-04-20T11:43:11",
     "fa_reductions_applied": 57,
-    "note": "fa_moves arrivals → need decrements; uncertainty_flags → per-team RNG temperature"
+    "note": "fa_moves arrivals \u2192 need decrements; uncertainty_flags \u2192 per-team RNG temperature"
   }
 }
