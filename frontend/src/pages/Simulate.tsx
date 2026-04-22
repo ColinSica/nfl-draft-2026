@@ -9,7 +9,7 @@ import { Star, Filter, X, Download } from 'lucide-react';
 import { api, type PickRow } from '../lib/api';
 import { downloadCsv } from '../lib/csvExport';
 import { useMode, MODE_META } from '../lib/mode';
-import { SectionHeader, HRule, SmallCaps, Dateline, Byline, Stamp } from '../components/editorial';
+import { HRule, SmallCaps, Dateline, Byline, Stamp } from '../components/editorial';
 import { Link } from 'react-router-dom';
 import { PickCard, type PickData } from '../components/PickCard';
 import { FreshnessPanel } from '../components/FreshnessPanel';
