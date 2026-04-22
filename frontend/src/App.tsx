@@ -43,7 +43,7 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
             cn(
               'px-3 py-2 caps-tight transition-all ease-editorial duration-150 border-b whitespace-nowrap inline-flex items-center gap-1.5',
               isActive
-                ? 'text-ink border-accent-salmon'
+                ? 'text-ink border-accent-brass'
                 : 'text-ink-muted hover:text-ink border-transparent',
             )
           }
@@ -52,7 +52,7 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
           {l.to === '/watchlist' && wl.count > 0 && (
             <span
               className="display-num text-[0.62rem] min-w-[18px] px-1 text-center"
-              style={{ background: '#1A1612', color: '#F7EFDF' }}
+              style={{ background: '#0B1F3A', color: '#F3ECD6' }}
             >
               {wl.count}
             </span>
@@ -178,7 +178,7 @@ function Header({ onAbout }: {
                   cn(
                     'px-4 py-3 caps-tight transition border-l-2',
                     isActive
-                      ? 'text-ink border-accent-salmon bg-paper-hover'
+                      ? 'text-ink border-accent-brass bg-paper-hover'
                       : 'text-ink-muted border-transparent hover:text-ink hover:bg-paper-hover',
                   )
                 }

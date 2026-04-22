@@ -56,7 +56,7 @@ export function Stat({
       <div className="mono-label">{label}</div>
       <div
         className={big ? 'stat-big' : 'display-num text-3xl'}
-        style={{ color: accent ?? '#1A1612' }}
+        style={{ color: accent ?? '#0B1F3A' }}
       >
         {value}
       </div>
@@ -170,26 +170,30 @@ export function Byline({
 }: { author?: string; role?: string }) {
   return (
     <p className="byline">
-      By <span className="not-italic font-medium" style={{ color: '#1A1612' }}>{author}</span>
+      By <span className="not-italic font-medium" style={{ color: '#0B1F3A' }}>{author}</span>
       {role && <> &nbsp;·&nbsp; {role}</>}
     </p>
   );
 }
 
 /**
- * Stamp — small kicker pill. Black fill by default, salmon/slate variants.
+ * Stamp — small kicker pill. Navy-ink fill by default. `brass` reverses to
+ * a warm gold pill (used for Lead / Interactive). `sage` for positive.
+ * `salmon` kept as an alias mapping to brass for back-compat with older
+ * calls that haven't been renamed.
  */
 export function Stamp({
   variant = 'ink',
   children,
 }: {
-  variant?: 'ink' | 'salmon' | 'slate' | 'sage';
+  variant?: 'ink' | 'navy' | 'brass' | 'salmon' | 'slate' | 'sage';
   children: ReactNode;
 }) {
-  const cls = variant === 'salmon' ? 'stamp stamp-salmon'
-           : variant === 'slate'  ? 'stamp stamp-slate'
-           : variant === 'sage'   ? 'stamp stamp-sage'
-           : 'stamp';
+  const cls =
+    variant === 'brass' || variant === 'slate' || variant === 'salmon'
+      ? 'stamp stamp-brass'
+      : variant === 'sage' ? 'stamp stamp-sage'
+      : 'stamp';
   return <span className={cls}>{children}</span>;
 }
 

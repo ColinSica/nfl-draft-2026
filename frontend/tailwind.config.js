@@ -5,10 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        // Fraunces for display (variable, optical-size aware — editorial serif with
-        // real character). Source Serif 4 for body reading type. IBM Plex Mono
-        // for ALL data — the canonical research/terminal mono. Plex Sans for
-        // navigation and incidental labels where mono would read too sterile.
+        // Fraunces for editorial display (variable, optical-size). Source Serif 4
+        // for reading body. IBM Plex Mono for all data. IBM Plex Sans for nav.
         display: ['Fraunces', 'GT Sectra', 'Times New Roman', 'serif'],
         serif:   ['"Source Serif 4"', 'Fraunces', 'Georgia', 'serif'],
         body:    ['"Source Serif 4"', 'Georgia', 'serif'],
@@ -20,114 +18,119 @@ export default {
         'caption':  ['0.78rem', { lineHeight: '1.35' }],
       },
       colors: {
-        // FT / WSJ / research-note palette. Warm cream paper, deep near-black ink,
-        // FT salmon as the editorial accent. Secondary colors are desaturated —
-        // muted sage for buy/long, deep burgundy for sell/flag, amber for warn.
+        /* ───────────────────────────────────────────────────────────
+         * NAVY-FORWARD INSTITUTIONAL — cream paper, deep navy ink.
+         * Palette inspired by Morgan Stanley research, The Economist
+         * masthead, and the NFL shield navy. Brass/gold is the single
+         * refined accent. Nothing bright, nothing saturated.
+         * ─────────────────────────────────────────────────────────── */
         paper: {
-          DEFAULT: '#F7EFDF',   // FT salmon-cream page base
-          surface: '#FBF5E8',   // slightly brighter for raised cards
-          raised:  '#FDF9ED',   // lightest — side columns
-          hover:   '#EEE3CA',   // subtle hover
-          muted:   '#7A6E58',
-          subtle:  '#9C8E76',
-          faint:   '#BDB09A',
-          edge:    '#E4D7B7',   // subtle border on paper
+          DEFAULT: '#F3ECD6',   // warm parchment — slightly cooler/cleaner
+          surface: '#F8F2DF',   // raised card surface
+          raised:  '#FAF6E6',   // side rails / lightest
+          hover:   '#E7DEC2',   // subtle hover
+          muted:   '#6E6650',
+          subtle:  '#8A8169',
+          faint:   '#AEA68D',
+          edge:    '#D9CDA9',   // soft border on paper
         },
         ink: {
-          DEFAULT: '#1A1612',   // near-black, warm undertone (not pure black)
-          soft:    '#3B342C',
-          muted:   '#6B6154',
-          edge:    '#C9B995',   // visible rule on paper
-          rule:    '#AA9872',   // stronger rule
-          // Dark surfaces for contrast sections (Bloomberg-style reversal)
-          deep:    '#15110D',
-          raised:  '#211C16',
-          card:    '#2B251D',
-          hover:   '#3A3226',
+          // Ink is now DEEP NAVY — the institutional voice. Used for body,
+          // headlines, rules. Warm near-black is gone.
+          DEFAULT: '#0B1F3A',   // institutional navy (NFL-shield-adjacent)
+          soft:    '#1F385F',
+          muted:   '#4D6893',
+          edge:    '#B6A57F',   // brass-tinted rule on paper
+          rule:    '#7F6D46',   // deeper rule
+          // Navy-deep surfaces for rare contrast blocks (footer, headers)
+          deep:    '#0A1A32',
+          raised:  '#122745',
+          card:    '#1C3359',
+          hover:   '#243F6C',
         },
         accent: {
-          // Salmon — FT pink on serious paper. Used sparingly: headers, kickers,
-          // active rules. NOT buttons or large blocks.
-          salmon:      '#C65A3E',
-          salmonSoft:  '#E08B6C',
-          salmonDeep:  '#8F3A20',
-          // Sell-side slate — for headers, data marks, institutional feel
-          slate:       '#1E3A5F',
-          slateDeep:   '#122B47',
-          // Parchment highlight — used as pale wash behind active rows
-          highlight:   'rgba(198, 90, 62, 0.10)',
+          // Brass / old-gold — single warm accent for emphasis. Used for
+          // kickers, section markers, active rules. NOT for fills.
+          brass:       '#B68A2F',
+          brassSoft:   '#D6A945',
+          brassDeep:   '#8A6620',
+          // Salmon-ish keys kept as aliases so existing components compile
+          salmon:      '#B68A2F',
+          salmonSoft:  '#D6A945',
+          salmonDeep:  '#8A6620',
+          // Deep navy slate for heavy emphasis (masthead, buttons)
+          slate:       '#0B1F3A',
+          slateDeep:   '#071528',
+          // Pale wash behind active rows
+          highlight:   'rgba(11, 31, 58, 0.07)',
         },
         // Signal colors — all muted, research-grade
         signal: {
-          pos:     '#4A6B3F',   // muted sage — positive signal
-          neg:     '#8C2E2A',   // deep burgundy — negative
-          warn:    '#B57328',   // warm amber — warning/flag
-          neutral: '#6B6154',
+          pos:     '#3A6B46',   // field green — positive / long
+          neg:     '#8C2E2A',   // deep burgundy — negative / sell
+          warn:    '#B68A2F',   // brass — flag
+          neutral: '#4D6893',
         },
         // LEGACY aliases so existing pages keep compiling
         bg: {
-          DEFAULT: '#F7EFDF',
-          raised:  '#FDF9ED',
-          card:    '#FBF5E8',
-          hover:   '#EEE3CA',
+          DEFAULT: '#F3ECD6',
+          raised:  '#FAF6E6',
+          card:    '#F8F2DF',
+          hover:   '#E7DEC2',
         },
         border: {
-          DEFAULT: '#C9B995',
-          strong:  '#AA9872',
+          DEFAULT: '#B6A57F',
+          strong:  '#7F6D46',
         },
         text: {
-          DEFAULT: '#1A1612',
-          muted:   '#6B6154',
-          subtle:  '#9C8E76',
+          DEFAULT: '#0B1F3A',
+          muted:   '#4D6893',
+          subtle:  '#6E6650',
         },
-        // Back-compat for old class names still referenced across pages.
-        // These forward to the new research palette without breaking builds.
         mode: {
-          indie:      '#C65A3E',    // formerly goldenrod — now salmon
-          indieDim:   '#8F3A20',
-          indiePop:   '#E08B6C',
-          bench:      '#1E3A5F',    // slate
-          benchDim:   '#122B47',
-          compare:    '#4A6B3F',    // sage
-          compareDim: '#2F4428',
+          indie:      '#0B1F3A',   // formerly salmon — now institutional navy
+          indieDim:   '#071528',
+          indiePop:   '#1F385F',
+          bench:      '#B68A2F',   // brass
+          benchDim:   '#8A6620',
+          compare:    '#3A6B46',   // field green
+          compareDim: '#234029',
         },
         live:      '#8C2E2A',
         liveDim:   '#5E1E1C',
         state: {
-          fresh:   '#4A6B3F',
-          stale:   '#B57328',
+          fresh:   '#3A6B46',
+          stale:   '#B68A2F',
           broken:  '#8C2E2A',
-          pending: '#9C8E76',
+          pending: '#8A8169',
         },
         tier: {
-          r1:   '#C65A3E',
-          r2:   '#1E3A5F',
-          r3:   '#4A6B3F',
-          r4:   '#6B6154',
-          udfa: '#9C8E76',
-          high:  '#4A6B3F',
-          midhi: '#1E3A5F',
-          mid:   '#B57328',
-          midlo: '#C65A3E',
+          r1:   '#B68A2F',        // brass — R1 is the premium tier
+          r2:   '#0B1F3A',        // navy
+          r3:   '#3A6B46',        // field green
+          r4:   '#6E6650',
+          udfa: '#AEA68D',
+          high:  '#3A6B46',
+          midhi: '#0B1F3A',
+          mid:   '#B68A2F',
+          midlo: '#B6763F',
           low:   '#8C2E2A',
         },
       },
       boxShadow: {
-        // Subtle paper-lift — research reports don't do drop shadows; use rules.
         card:          'none',
-        'card-raised': '0 1px 0 rgba(26, 22, 18, 0.04)',
+        'card-raised': '0 1px 0 rgba(11, 31, 58, 0.06)',
         chip:          'none',
-        rise:          '0 1px 0 rgba(26, 22, 18, 0.06)',
-        glow:          'inset 0 0 0 1px #C65A3E',
+        rise:          '0 1px 0 rgba(11, 31, 58, 0.08)',
+        glow:          'inset 0 0 0 1px #B68A2F',
       },
       backgroundImage: {
-        // Very faint paper-grain atmosphere; no radial gradients
         'stadium':  'none',
       },
       letterSpacing: {
         'caps':       '0.16em',
         'caps-tight': '0.08em',
-        'editorial': '0.02em',
+        'editorial':  '0.02em',
       },
       transitionTimingFunction: {
         'broadcast': 'cubic-bezier(0.2, 0.9, 0.1, 1)',

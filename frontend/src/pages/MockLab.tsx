@@ -60,7 +60,7 @@ export function MockLab() {
       <Dateline issue="Mock Lab Edition" />
 
       <header className="space-y-4">
-        <Stamp variant="salmon">Interactive</Stamp>
+        <Stamp variant="brass">Interactive</Stamp>
         <h1 className="display-jumbo text-ink"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 4.75rem)' }}>
           The <em>Mock Lab</em>.
@@ -93,7 +93,7 @@ export function MockLab() {
               {anyAdjusted && (
                 <button
                   onClick={resetKnobs}
-                  className="inline-flex items-center gap-1.5 caps-tight text-accent-salmon hover:text-accent-salmonDeep"
+                  className="inline-flex items-center gap-1.5 caps-tight text-accent-brass hover:text-accent-brassDeep"
                   title="Reset all knobs"
                 >
                   <RotateCcw size={12} /> Reset
@@ -126,7 +126,7 @@ export function MockLab() {
                     min="0.4" max="2.0" step="0.05"
                     value={v}
                     onChange={(e) => setDemand({ ...demand, [pos]: parseFloat(e.target.value) })}
-                    className="w-full accent-accent-salmon"
+                    className="w-full accent-accent-brass"
                     aria-label={`${pos} demand multiplier`}
                   />
                 </div>
@@ -141,7 +141,7 @@ export function MockLab() {
               <ul className="space-y-1">
                 {forced.map(f => (
                   <li key={f.slot} className="flex items-center justify-between gap-2 text-sm font-serif">
-                    <span className="font-mono text-xs text-accent-salmon">#{f.slot}</span>
+                    <span className="font-mono text-xs text-accent-brass">#{f.slot}</span>
                     <span className="flex-1 truncate">{f.player}</span>
                     <button
                       onClick={() => setForced(forced.filter(x => x.slot !== f.slot))}
@@ -200,7 +200,7 @@ export function MockLab() {
                         <td className="font-serif">
                           {pick.player}
                           {pick.wasChanged && (
-                            <span className="ml-2 inline-block w-2 h-2 bg-accent-salmon"
+                            <span className="ml-2 inline-block w-2 h-2 bg-accent-brass"
                                   title="Changed from baseline" />
                           )}
                         </td>
@@ -229,7 +229,7 @@ export function MockLab() {
                                            { slot: pick.slot, player: pick.player ?? '' }]);
                               }
                             }}
-                            className="p-1 text-ink-muted hover:text-accent-salmon"
+                            className="p-1 text-ink-muted hover:text-accent-brass"
                             title={locked ? 'Unlock this pick' : 'Lock this pick'}
                           >
                             {locked ? <Lock size={12} /> : <Unlock size={12} />}

@@ -51,7 +51,7 @@ export function Home() {
           {/* Lead column */}
           <div className="space-y-6">
             <div className="flex items-center gap-3 flex-wrap reveal reveal-1">
-              <Stamp variant="salmon">Lead Story</Stamp>
+              <Stamp variant="brass">Lead Story</Stamp>
               <span className="caps text-ink-muted">The 2026 First Round</span>
             </div>
 
@@ -166,7 +166,7 @@ export function Home() {
                       {p.most_likely_team ?? p.team ?? '—'}
                     </td>
                     <td className="font-serif" style={{ fontSize: '0.98rem', minWidth: 160 }}>
-                      <Link to="/simulate" className="hover:text-accent-salmon transition">
+                      <Link to="/simulate" className="hover:text-accent-brass transition">
                         {c0?.player ?? '—'}
                       </Link>
                     </td>
@@ -287,7 +287,7 @@ function Vital({ label, value, accent }: { label: string; value: string; accent?
   return (
     <div className="flex items-baseline justify-between gap-3 pb-2 border-b border-ink-edge last:border-b-0">
       <dt className="caps-tight text-ink-muted">{label}</dt>
-      <dd className="display-num text-base font-medium" style={{ color: accent ?? '#1A1612' }}>{value}</dd>
+      <dd className="display-num text-base font-medium" style={{ color: accent ?? '#0B1F3A' }}>{value}</dd>
     </div>
   );
 }
@@ -298,13 +298,13 @@ function TocEntry({
   return (
     <li className="group border-b border-ink-edge last:border-b-0 pb-2 last:pb-0">
       <Link to={to} className="flex items-baseline gap-3 hover:bg-accent-highlight transition-colors duration-150 py-1 px-1 -mx-1">
-        <span className="display-num text-xs text-accent-salmon">§ {num}</span>
+        <span className="display-num text-xs text-accent-brass">§ {num}</span>
         <span className="font-display font-medium text-ink" style={{ fontSize: '1.05rem' }}>
           {title}
         </span>
         <span className="flex-1 border-b border-dotted border-ink-edge mx-2 mb-1 hidden sm:block" />
         <span className="text-sm text-ink-muted italic hidden sm:inline">{deck}</span>
-        <ArrowUpRight size={12} className="text-ink-muted group-hover:text-accent-salmon group-hover:-translate-y-0.5 transition" />
+        <ArrowUpRight size={12} className="text-ink-muted group-hover:text-accent-brass group-hover:-translate-y-0.5 transition" />
       </Link>
     </li>
   );
@@ -315,7 +315,7 @@ function ProbBar({ p }: { p: number }) {
   return (
     <div className="flex items-center gap-2 justify-end">
       <div className="w-14 h-1.5 bg-paper-hover relative overflow-hidden">
-        <div className="absolute inset-y-0 left-0 bg-accent-salmon"
+        <div className="absolute inset-y-0 left-0 bg-accent-brass"
              style={{ width: `${Math.min(100, pct)}%` }} />
       </div>
       <span className="font-mono text-xs tabular-nums w-10 text-right">
@@ -337,7 +337,7 @@ function MethodBlock({
   return (
     <div className={`p-6 md:p-8 space-y-4 bg-paper-surface ${border ? 'md:border-l border-ink-edge' : ''}`}>
       <div className="flex items-baseline gap-3">
-        <span className="display-num text-3xl text-accent-salmon">{index}</span>
+        <span className="display-num text-3xl text-accent-brass">{index}</span>
         <SmallCaps tight>{label}</SmallCaps>
       </div>
       <h3 className="display-broadcast text-2xl md:text-3xl text-ink"

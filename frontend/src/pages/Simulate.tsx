@@ -158,7 +158,7 @@ export function Simulate() {
           posterior probability and analyst-sourced thesis per pick. Filter
           by team, position, or confidence. Want to stress-test a different
           round?{' '}
-          <Link to="/lab" className="text-accent-salmon underline underline-offset-2 hover:text-accent-salmonDeep">
+          <Link to="/lab" className="text-accent-brass underline underline-offset-2 hover:text-accent-brassDeep">
             Open the Mock Lab
           </Link>{' '}
           to adjust positional demand or lock specific picks.
