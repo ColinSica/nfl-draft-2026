@@ -56,7 +56,7 @@ export function Home() {
             </div>
 
             <h1 className="display-jumbo text-ink reveal reveal-2"
-                style={{ fontSize: 'clamp(2.75rem, 8.5vw, 6.5rem)' }}>
+                style={{ fontSize: 'clamp(2rem, 8.5vw, 6.5rem)' }}>
               Thirty-two agents, <em>one round</em>, simulated against live markets.
             </h1>
 

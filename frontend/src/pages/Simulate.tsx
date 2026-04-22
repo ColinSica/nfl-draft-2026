@@ -148,7 +148,7 @@ export function Simulate() {
       <header className="space-y-4">
         <Stamp variant="slate">Lead Table</Stamp>
         <h1 className="display-jumbo text-ink"
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 4.75rem)' }}>
+            style={{ fontSize: 'clamp(2rem, 6vw, 4.75rem)' }}>
           First round, <em>all thirty-two picks</em>.
         </h1>
         <Byline role="Market-blended probabilities · latest committed run" />

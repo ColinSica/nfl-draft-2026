@@ -18,7 +18,7 @@ export function Method() {
       <header className="space-y-4">
         <Stamp variant="ink">White Paper</Stamp>
         <h1 className="display-jumbo text-ink"
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
+            style={{ fontSize: 'clamp(2rem, 6vw, 4.5rem)' }}>
           How the <em>model</em> actually works.
         </h1>
         <Byline role="A quantitative framework for forecasting the 2026 NFL Draft" />

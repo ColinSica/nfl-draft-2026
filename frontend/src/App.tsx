@@ -133,8 +133,8 @@ function Header({ meta, onAbout }: {
 
         {/* Nameplate row */}
         <div className="flex items-center gap-4 sm:gap-8 py-3">
-          <Link to="/" className="flex items-baseline gap-3 group flex-none">
-            <span className="nameplate text-[1.9rem] sm:text-[2.4rem]">
+          <Link to="/" className="flex items-baseline gap-3 group flex-none min-w-0">
+            <span className="nameplate text-[1.5rem] sm:text-[2rem] md:text-[2.4rem] truncate">
               The Draft <em>Ledger</em>
             </span>
           </Link>
