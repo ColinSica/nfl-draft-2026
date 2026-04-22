@@ -182,14 +182,18 @@ def league_synthesis() -> dict:
 def meta() -> dict:
     data = _load_team_agents()
     m = data.get("_meta", {})
+    # Expose the freshest model-output timestamp (MC file) as generated_at.
+    # Frontend FreshnessPanel / Home vitals surface this.
+    generated_at = _file_mtime(MC_CSV) or _file_mtime(PREDICTIONS_CSV)
     return {
         **m,
+        "generated_at":  generated_at,
         "share_mode": {
             "read_only":      READ_ONLY,
             "token_required": bool(AUTH_TOKEN),
             "max_sims":       MAX_SIMS,
         },
-        "draft_mode": DRAFT_MODE,  # "benchmark" (default) or "independent"
+        "draft_mode": DRAFT_MODE,
         "files_present": {
             "team_agents":       TEAM_AGENTS_JSON.exists(),
             "analyst_aggregate": ANALYST_AGG_JSON.exists(),

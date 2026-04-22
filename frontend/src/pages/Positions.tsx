@@ -139,7 +139,7 @@ export function Positions() {
                   className="p-2 text-ink-soft hover:text-ink shrink-0"
                   title={starred ? 'Remove from watchlist' : 'Add to watchlist'}
                 >
-                  <Star size={14} style={{ color: starred ? '#D9A400' : undefined, fill: starred ? '#D9A400' : 'transparent' }} />
+                  <Star size={14} style={{ color: starred ? '#B68A2F' : undefined, fill: starred ? '#B68A2F' : 'transparent' }} />
                 </button>
               </div>
             );

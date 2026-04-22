@@ -17,14 +17,14 @@ export function TrustBox() {
                      flex items-center justify-center min-w-[160px]"
           style={{
             background: showIndieTrust
-              ? 'linear-gradient(135deg, rgba(217,164,0,0.18), rgba(217,164,0,0.02))'
+              ? 'linear-gradient(135deg, rgba(182,138,47,0.18), rgba(182,138,47,0.02))'
               : 'transparent',
           }}
         >
           <span
             className="display-num"
             style={{
-              color: showIndieTrust ? '#D9A400' : '#848B98',
+              color: showIndieTrust ? '#B68A2F' : '#6E6650',
               fontSize: 'clamp(3.5rem, 7vw, 5.5rem)',
               lineHeight: 1,
             }}
@@ -35,10 +35,10 @@ export function TrustBox() {
         <div className="px-6 md:px-8 py-6 space-y-3">
           <div className="flex items-center gap-2">
             <span className="live-dot" />
-            <h3 className="caps" style={{ color: '#D9A400' }}>The independence contract</h3>
+            <h3 className="caps" style={{ color: '#B68A2F' }}>The independence contract</h3>
           </div>
           <p className="text-ink leading-relaxed text-lg">
-            <span className="display-broadcast text-2xl tracking-tight" style={{ color: '#D9A400' }}>
+            <span className="display-broadcast text-2xl tracking-tight" style={{ color: '#B68A2F' }}>
               Analyst picks are not inputs to this model.
             </span>
           </p>

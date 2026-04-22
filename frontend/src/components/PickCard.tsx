@@ -41,7 +41,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
   expanded?: boolean;
 }) {
   const [expanded, setExpanded] = useState(initialExpanded);
-  const accent = data.accent ?? '#D9A400';
+  const accent = data.accent ?? '#B68A2F';
   const tc = teamColor(data.team);
   const wl = useWatchlist();
   const starred = wl.has(data.player);
@@ -151,7 +151,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
               >
                 <Star
                   size={18}
-                  style={{ color: starred ? '#D9A400' : undefined, fill: starred ? '#D9A400' : 'transparent' }}
+                  style={{ color: starred ? '#B68A2F' : undefined, fill: starred ? '#B68A2F' : 'transparent' }}
                 />
               </button>
             </div>
@@ -159,8 +159,8 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
               <span
                 className="px-1.5 py-0.5 font-bold"
                 style={{
-                  background: '#12151B',
-                  color: '#F5F2EA',
+                  background: '#0B1F3A',
+                  color: '#F3ECD6',
                 }}
               >
                 {data.position}

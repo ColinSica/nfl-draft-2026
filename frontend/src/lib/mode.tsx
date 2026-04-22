@@ -18,7 +18,7 @@ export const MODE_META: Record<Mode, {
     caption: 'Model prediction',
     description:
       'Analyst-independent prediction engine. Stage 1 builds the board from tape and traits. Stage 2 simulates the draft with 32 team agents. Analyst picks are not used as input.',
-    accent: '#D9A400',
+    accent: '#B68A2F',
     accentDim: '#7A5D00',
   },
   benchmark: {

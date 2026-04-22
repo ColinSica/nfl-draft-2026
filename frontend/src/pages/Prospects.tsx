@@ -84,7 +84,7 @@ export function Prospects() {
             onClick={() => setOnlyStarred(!onlyStarred)}
             className={`btn-ghost ${onlyStarred ? 'bg-mode-indie/15 border-mode-indie text-ink' : ''}`}
           >
-            <Star size={14} style={onlyStarred ? { color: '#D9A400', fill: '#D9A400' } : undefined} />
+            <Star size={14} style={onlyStarred ? { color: '#B68A2F', fill: '#B68A2F' } : undefined} />
             <span>Watchlist ({wl.count})</span>
           </button>
           <button
@@ -174,7 +174,7 @@ export function Prospects() {
                       className="p-3 text-ink-soft hover:text-ink transition shrink-0"
                       title={starred ? 'Remove from watchlist' : 'Add to watchlist'}
                     >
-                      <Star size={16} style={{ color: starred ? '#D9A400' : undefined, fill: starred ? '#D9A400' : 'transparent' }} />
+                      <Star size={16} style={{ color: starred ? '#B68A2F' : undefined, fill: starred ? '#B68A2F' : 'transparent' }} />
                     </button>
                   </div>
                 );

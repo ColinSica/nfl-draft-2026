@@ -77,7 +77,19 @@ function ModePill() {
   );
 }
 
-function Header({ onAbout }: {
+function formatRelative(iso: string | null | undefined): string | null {
+  if (!iso) return null;
+  const t = new Date(iso).getTime();
+  if (isNaN(t)) return null;
+  const mins = Math.max(1, Math.round((Date.now() - t) / 60000));
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  const days = Math.round(hrs / 24);
+  return `${days}d ago`;
+}
+
+function Header({ meta, onAbout }: {
   meta: MetaInfo | null;
   onAbout: () => void;
 }) {
@@ -108,6 +120,14 @@ function Header({ onAbout }: {
           <span className="hidden sm:inline">{todayStr}</span>
           <span className="text-ink-edge hidden sm:inline">·</span>
           <span className="hidden md:inline">Seattle</span>
+          {meta?.generated_at && (
+            <>
+              <span className="text-ink-edge hidden md:inline">·</span>
+              <span className="hidden md:inline" title={meta.generated_at}>
+                Model run <span className="text-accent-brass">{formatRelative(meta.generated_at)}</span>
+              </span>
+            </>
+          )}
           <span className="ml-auto hidden lg:inline">A Quantitative Study · Free Edition</span>
         </div>
 

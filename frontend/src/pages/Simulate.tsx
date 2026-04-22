@@ -210,7 +210,7 @@ export function Simulate() {
             onClick={() => setOnlyStarred(!onlyStarred)}
             className={`btn-ghost ${onlyStarred ? 'bg-mode-indie/15 border-mode-indie text-ink' : ''}`}
           >
-            <Star size={14} style={onlyStarred ? { color: '#D9A400', fill: '#D9A400' } : undefined} />
+            <Star size={14} style={onlyStarred ? { color: '#B68A2F', fill: '#B68A2F' } : undefined} />
             <span>Watchlist only</span>
           </button>
         </div>

@@ -124,7 +124,7 @@ export function getConfidence(prob: number | null | undefined): {
   if (p >= 0.25) return {
     label: 'MEDIUM_LOW',
     display: 'Moderate-low',
-    color: '#D9A400',
+    color: '#B68A2F',
     historicalHitRate: '~45% hits',
   };
   return {

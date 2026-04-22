@@ -48,7 +48,7 @@ export function Compare() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Stat label="Slot agreement" value={`${agreements}/32`} note="Exact player at slot" />
-        <Stat label="Independent accent" value="Yellow" note="Our model (no analyst inputs)" accent="#D9A400" />
+        <Stat label="Independent accent" value="Yellow" note="Our model (no analyst inputs)" accent="#B68A2F" />
         <Stat label="Benchmark accent" value="Blue" note="Analyst consensus baseline" accent="#1F6FEB" />
       </div>
 
@@ -58,7 +58,7 @@ export function Compare() {
         <div className="card">
           <header className="grid grid-cols-[60px_1fr_1fr_80px] gap-2 px-4 py-3 border-b-2 border-ink-edge">
             <SmallCaps tight className="text-ink-soft">Slot</SmallCaps>
-            <SmallCaps tight style={{ color: '#D9A400' }}>Independent</SmallCaps>
+            <SmallCaps tight style={{ color: '#B68A2F' }}>Independent</SmallCaps>
             <SmallCaps tight style={{ color: '#1F6FEB' }}>Benchmark</SmallCaps>
             <SmallCaps tight className="text-ink-soft text-right">Diff</SmallCaps>
           </header>
@@ -102,7 +102,7 @@ export function Compare() {
                       className="caps-tight px-2 py-0.5"
                       style={{
                         color: match ? '#17A870' : '#DC2F3D',
-                        background: match ? 'rgba(23,168,112,0.1)' : 'rgba(220,47,61,0.08)',
+                        background: match ? 'rgba(58,107,70,0.15)' : 'rgba(140,46,42,0.12)',
                       }}
                     >
                       {match ? 'Match' : 'Diff'}

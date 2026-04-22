@@ -101,7 +101,7 @@ export function Watchlist() {
                         className="p-2 text-ink-soft hover:text-live transition"
                         title="Remove from watchlist"
                       >
-                        <Star size={16} style={{ color: '#D9A400', fill: '#D9A400' }} />
+                        <Star size={16} style={{ color: '#B68A2F', fill: '#B68A2F' }} />
                       </button>
                     </div>
 

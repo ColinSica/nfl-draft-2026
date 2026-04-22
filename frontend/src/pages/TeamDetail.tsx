@@ -130,9 +130,9 @@ export function TeamDetail() {
           <SummaryTile label="Scheme" value={displayValue(scheme.type ?? scheme.base, 'Unclear')} />
         </div>
         {latestNews && (
-          <div className="mt-4 p-4 border border-ink-edge" style={{ background: 'rgba(217,164,0,0.08)' }}>
+          <div className="mt-4 p-4 border border-ink-edge" style={{ background: 'rgba(182,138,47,0.12)' }}>
             <div className="flex items-start gap-2">
-              <SmallCaps tight className="shrink-0 mt-0.5" style={{ color: '#D9A400' }}>Latest intel</SmallCaps>
+              <SmallCaps tight className="shrink-0 mt-0.5" style={{ color: '#B68A2F' }}>Latest intel</SmallCaps>
               <p className="text-sm text-ink leading-relaxed">{latestNews}</p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export function TeamDetail() {
                     className="absolute inset-y-0 left-0"
                     style={{
                       width: `${Math.min(100, (w / 5) * 100)}%`,
-                      background: w >= 4 ? tc.primary : w >= 2.5 ? '#D9A400' : '#848B98',
+                      background: w >= 4 ? tc.primary : w >= 2.5 ? '#B68A2F' : '#6E6650',
                     }}
                   />
                 </div>
@@ -279,7 +279,7 @@ export function TeamDetail() {
                         <span
                           className="font-mono text-xs font-bold"
                           style={{
-                            color: Number(raw) > 0 ? '#17A870' : Number(raw) < 0 ? '#DC2F3D' : '#848B98',
+                            color: Number(raw) > 0 ? '#17A870' : Number(raw) < 0 ? '#DC2F3D' : '#6E6650',
                           }}
                         >
                           {Number(raw) > 0 ? '+' : ''}{Number(raw).toFixed(2)}

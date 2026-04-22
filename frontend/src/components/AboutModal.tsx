@@ -29,7 +29,7 @@ export function AboutModal({
           <div className="flex items-center gap-3">
             <span
               className="display-num text-2xl leading-none px-2 py-1"
-              style={{ background: '#D9A400', color: '#12151B', fontStyle: 'italic' }}
+              style={{ background: '#B68A2F', color: '#0B1F3A', fontStyle: 'italic' }}
             >
               26
             </span>
@@ -64,7 +64,7 @@ export function AboutModal({
           <section>
             <h3 className="caps text-ink mb-2">The independence contract</h3>
             <p className="text-ink-soft">
-              <span className="display-broadcast" style={{ color: '#D9A400' }}>
+              <span className="display-broadcast" style={{ color: '#B68A2F' }}>
                 Analyst picks are not inputs to this model.
               </span>{' '}
               A pytest suite enforces this: any analyst-rank column touching the Independent
@@ -76,7 +76,7 @@ export function AboutModal({
             <h3 className="caps text-ink mb-2">Modes</h3>
             <ul className="space-y-1.5 text-ink-soft">
               <li>
-                <span className="caps-tight" style={{ color: '#D9A400' }}>Independent</span> — core
+                <span className="caps-tight" style={{ color: '#B68A2F' }}>Independent</span> — core
                 model output (default).
               </li>
               <li>
