@@ -10,7 +10,7 @@
  * the landing probabilities and rerun the greedy slot assignment.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { api, type ProspectRow } from '../lib/api';
+import { api, type ProspectRow, type PickRow } from '../lib/api';
 import {
   Dateline, Byline, SectionHeader, SmallCaps, HRule, Stamp, Footnote,
 } from '../components/editorial';
@@ -24,6 +24,12 @@ type ForcedPick = { slot: number; player: string };
 
 export function MockLab() {
   const [rows, setRows] = useState<ProspectRow[] | null>(null);
+  // Canonical baseline mock from /api/simulations/latest — this is the
+  // post-clamp truth the rest of the site displays. We use it as both the
+  // "Δ vs baseline" reference AND a fallback for any slot where the raw
+  // landing distribution (/api/simulations/prospects) is empty (can happen
+  // when odds_clamp substitutes a pick outside the MC's raw landings).
+  const [baseline, setBaseline] = useState<PickRow[] | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
   // Demand multipliers per position. 1.0 = baseline. 0.5 = half. 2.0 = double.
@@ -40,10 +46,15 @@ export function MockLab() {
     api.prospectLandings()
       .then(r => setRows(r.prospects))
       .catch(e => setErr(String(e)));
+    api.latestSim()
+      .then(r => setBaseline(r.picks))
+      .catch(() => setBaseline([]));
   }, []);
 
-  const adjustedR1 = useMemo(() => recomputeR1(rows ?? [], demand, forced),
-                             [rows, demand, forced]);
+  const adjustedR1 = useMemo(
+    () => recomputeR1(rows ?? [], baseline ?? [], demand, forced),
+    [rows, baseline, demand, forced],
+  );
 
   const resetKnobs = () => {
     const o: Record<string, number> = {};
@@ -296,11 +307,11 @@ type AdjustedPick = {
 
 function recomputeR1(
   rows: ProspectRow[],
+  baseline: PickRow[],
   demand: Record<string, number>,
   forced: ForcedPick[],
 ): AdjustedPick[] {
-  // Flatten: per (player, slot) → weighted probability.
-  // Apply positional demand to each player's weights.
+  // Flatten: per (player, slot) → weighted probability from MC landings.
   type Entry = { slot: number; team: string | null; player: string; position: string | null; college: string | null; w: number };
   const entries: Entry[] = [];
   for (const p of rows) {
@@ -321,18 +332,38 @@ function recomputeR1(
     }
   }
 
-  // Baseline per-slot top player (for Δ reporting) — with demand=1 and no locks.
+  // Canonical baseline: the post-clamp 32-pick mock from /api/simulations/latest.
+  // Used both for Δ vs baseline comparisons and as a fallback for any slot
+  // with no MC-landing coverage (odds_clamp can substitute a pick that
+  // never shows up in raw landings).
+  const canonicalBySlot = new Map<number, { slot: number; team: string | null; player: string | null; position: string | null; college: string | null; probability: number }>();
+  for (const p of baseline ?? []) {
+    if (!p || p.pick_number > 32) continue;
+    const c0 = p.candidates?.[0];
+    if (!c0) continue;
+    canonicalBySlot.set(p.pick_number, {
+      slot: p.pick_number,
+      team: p.most_likely_team ?? p.team ?? c0.team ?? null,
+      player: c0.player ?? null,
+      position: c0.position ?? null,
+      college: (c0 as any).college ?? null,
+      probability: c0.probability ?? 0,
+    });
+  }
+
+  // Baseline (demand=1, no locks) for Δ reporting.
   const base = greedyAssign(
     entries.map(e => ({
       ...e,
-      w: e.w / (demand[normalizePos(e.position ?? '') as Pos] ?? 1.0),  // unscale
+      w: e.w / (demand[normalizePos(e.position ?? '') as Pos] ?? 1.0),
     })),
     [],
+    canonicalBySlot,
   );
   const baseMap = new Map(base.map(b => [b.slot, b]));
 
-  // With adjustments + forced picks
-  const adjusted = greedyAssign(entries, forced);
+  // With adjustments + forced picks.
+  const adjusted = greedyAssign(entries, forced, canonicalBySlot);
 
   return adjusted.map(a => {
     const b = baseMap.get(a.slot);
@@ -352,7 +383,11 @@ function recomputeR1(
   });
 }
 
-function greedyAssign(entries: any[], forced: ForcedPick[]): Array<{
+function greedyAssign(
+  entries: any[],
+  forced: ForcedPick[],
+  canonicalBySlot: Map<number, { slot: number; team: string | null; player: string | null; position: string | null; college: string | null; probability: number }>,
+): Array<{
   slot: number; team: string | null; player: string | null;
   position: string | null; college: string | null; probability: number;
 }> {
@@ -362,7 +397,6 @@ function greedyAssign(entries: any[], forced: ForcedPick[]): Array<{
     if (!bySlot.has(e.slot)) bySlot.set(e.slot, []);
     bySlot.get(e.slot)!.push(e);
   }
-  // Normalize within slot so probabilities sum to 1 (after demand shifts).
   for (const [slot, arr] of bySlot) {
     const total = arr.reduce((s, x) => s + x.w, 0);
     if (total > 0) arr.forEach(x => { x.p = x.w / total; });
@@ -372,7 +406,6 @@ function greedyAssign(entries: any[], forced: ForcedPick[]): Array<{
   }
 
   const claimed = new Set<string>();
-  // Apply forced picks first — claim player at that slot regardless of prob.
   const forcedMap = new Map(forced.map(f => [f.slot, f.player]));
   for (const f of forced) claimed.add(f.player);
 
@@ -380,22 +413,41 @@ function greedyAssign(entries: any[], forced: ForcedPick[]): Array<{
   for (let slot = 1; slot <= 32; slot++) {
     const arr = bySlot.get(slot) ?? [];
     const forcedPlayer = forcedMap.get(slot);
+    const canonical = canonicalBySlot.get(slot);
 
     if (forcedPlayer) {
       const hit = arr.find(x => x.player === forcedPlayer);
       out.push({
         slot,
-        team: hit?.team ?? null,
+        team: hit?.team ?? canonical?.team ?? null,
         player: forcedPlayer,
-        position: hit?.position ?? null,
-        college: hit?.college ?? null,
-        probability: 1.0,  // locked
+        position: hit?.position ?? canonical?.position ?? null,
+        college: hit?.college ?? canonical?.college ?? null,
+        probability: 1.0,
       });
       continue;
     }
 
+    // Prefer the canonical baseline pick if it exists and isn't claimed —
+    // this is what the site shows by default, so the Mock Lab shouldn't
+    // silently diverge from it when no user adjustments have been made.
+    // Apply positional demand as a multiplicative nudge only if the MC
+    // landing for this canonical pick is competitive; otherwise keep it.
     const top = arr.find(x => !claimed.has(x.player));
+
+    // If we have a canonical pick AND no MC landing disagrees AND no
+    // adjustment has moved a stronger candidate here, use canonical.
+    if (canonical?.player && !claimed.has(canonical.player)) {
+      const topOverrides = top && (top.p ?? 0) > 0.55 && top.player !== canonical.player;
+      if (!topOverrides) {
+        claimed.add(canonical.player);
+        out.push({ ...canonical });
+        continue;
+      }
+    }
+
     if (!top) {
+      // No MC landing AND no canonical — genuine empty slot (shouldn't happen).
       out.push({ slot, team: null, player: null, position: null, college: null, probability: 0 });
       continue;
     }
