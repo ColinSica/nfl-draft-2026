@@ -9,7 +9,8 @@ import { Star, Filter, X, Download } from 'lucide-react';
 import { api, type PickRow } from '../lib/api';
 import { downloadCsv } from '../lib/csvExport';
 import { useMode, MODE_META } from '../lib/mode';
-import { SectionHeader, HRule, SmallCaps } from '../components/editorial';
+import { SectionHeader, HRule, SmallCaps, Dateline, Byline, Stamp } from '../components/editorial';
+import { Link } from 'react-router-dom';
 import { PickCard, type PickData } from '../components/PickCard';
 import { FreshnessPanel } from '../components/FreshnessPanel';
 import { useWatchlist } from '../lib/watchlist';
@@ -142,25 +143,32 @@ export function Simulate() {
 
   return (
     <div className="space-y-10 pb-16">
-      <SectionHeader kicker="Full first round" title="All 32 picks." />
+      <Dateline issue="First Round Edition" />
 
-      <div className="flex flex-wrap items-center gap-4">
-        <div className="flex items-baseline gap-5">
-          <div>
-            <div className="caps-tight text-ink-soft">Simulations</div>
-            <div className="display-num text-3xl text-ink">{simMeta?.n_sims ?? '—'}</div>
-          </div>
-          <div>
-            <div className="caps-tight text-ink-soft">Showing</div>
-            <div className="display-num text-3xl text-ink">
-              {filtered.length}<span className="text-ink-soft/60">/{all32.length}</span>
-            </div>
-          </div>
-          <div>
-            <div className="caps-tight text-ink-soft">Watchlist</div>
-            <div className="display-num text-3xl text-ink">{wl.count}</div>
-          </div>
-        </div>
+      <header className="space-y-4">
+        <Stamp variant="slate">Lead Table</Stamp>
+        <h1 className="display-jumbo text-ink"
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 4.75rem)' }}>
+          First round, <em>all thirty-two picks</em>.
+        </h1>
+        <Byline role="Market-blended probabilities · latest committed run" />
+        <HRule thick />
+        <p className="body-serif-lead text-ink-soft max-w-3xl">
+          Every first-round slot in the 2026 NFL Draft, with the model's
+          posterior probability and analyst-sourced thesis per pick. Filter
+          by team, position, or confidence. Want to stress-test a different
+          round?{' '}
+          <Link to="/lab" className="text-accent-salmon underline underline-offset-2 hover:text-accent-salmonDeep">
+            Open the Mock Lab
+          </Link>{' '}
+          to adjust positional demand or lock specific picks.
+        </p>
+      </header>
+
+      <div className="flex flex-wrap items-baseline gap-8 border-y border-ink py-4">
+        <Metric label="Simulations" value={simMeta?.n_sims != null ? String(simMeta.n_sims) : '—'} />
+        <Metric label="Picks shown" value={`${filtered.length} / ${all32.length}`} />
+        <Metric label="Watchlist" value={String(wl.count)} />
         <button
           onClick={() => downloadCsv('2026-r1-predictions.csv', all32.map(p => ({
             slot: p.slot, team: p.team, player: p.player,
@@ -260,5 +268,14 @@ function FilterSelect({
         ))}
       </select>
     </label>
+  );
+}
+
+function Metric({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <div className="mono-label">{label}</div>
+      <div className="display-num text-2xl md:text-3xl text-ink mt-1">{value}</div>
+    </div>
   );
 }

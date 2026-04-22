@@ -16,18 +16,17 @@ import { ModeProvider, useMode, MODE_META } from './lib/mode';
 import { api, type MetaInfo } from './lib/api';
 import { cn } from './lib/format';
 
-// Primary navigation — trimmed to the 5 user-facing jobs only.
-// /build, /league, /settings remain routable but hidden from nav
-// (they're internal tools, not part of the public product surface).
+// Primary navigation — "sections" of the broadsheet.
 const NAV_LINKS = [
-  { to: '/',          label: 'Home',        end: true },
-  { to: '/teams',     label: 'Teams',       end: true },
-  { to: '/prospects', label: 'Prospects',   end: true },
-  { to: '/positions', label: 'Positions',   end: true },
-  { to: '/simulate',  label: 'First round', end: true },
-  { to: '/compare',   label: 'Compare',     end: true },
-  { to: '/method',    label: 'Method',      end: true },
-  { to: '/watchlist', label: 'Watchlist',   end: true },
+  { to: '/',          label: 'Front Page',   end: true },
+  { to: '/simulate',  label: 'First Round',  end: true },
+  { to: '/lab',       label: 'Mock Lab',     end: true },
+  { to: '/teams',     label: 'Teams',        end: true },
+  { to: '/prospects', label: 'Prospects',    end: true },
+  { to: '/positions', label: 'Positions',    end: true },
+  { to: '/compare',   label: 'Markets',      end: true },
+  { to: '/method',    label: 'Methodology',  end: true },
+  { to: '/watchlist', label: 'Watchlist',    end: true },
 ];
 
 function Nav({ onNavigate }: { onNavigate?: () => void }) {
@@ -42,18 +41,18 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
           onClick={onNavigate}
           className={({ isActive }) =>
             cn(
-              'px-4 py-2 caps-tight transition-all ease-broadcast duration-150 border-b-2 whitespace-nowrap inline-flex items-center gap-1.5',
+              'px-3 py-2 caps-tight transition-all ease-editorial duration-150 border-b whitespace-nowrap inline-flex items-center gap-1.5',
               isActive
-                ? 'text-ink border-mode-indie'
-                : 'text-ink-soft hover:text-ink border-transparent',
+                ? 'text-ink border-accent-salmon'
+                : 'text-ink-muted hover:text-ink border-transparent',
             )
           }
         >
           {l.label}
           {l.to === '/watchlist' && wl.count > 0 && (
             <span
-              className="display-num text-[0.6rem] min-w-[18px] px-1 text-center"
-              style={{ background: '#D9A400', color: '#12151B' }}
+              className="display-num text-[0.62rem] min-w-[18px] px-1 text-center"
+              style={{ background: '#1A1612', color: '#F7EFDF' }}
             >
               {wl.count}
             </span>
@@ -92,68 +91,83 @@ function Header({ onAbout }: {
     catch { window.location.href = window.location.href; }
   };
 
-  return (
-    <header className="sticky top-0 z-30 backdrop-blur-md bg-paper/85 border-b border-ink-edge">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 h-16 flex items-center gap-4 sm:gap-8">
-        <Link to="/" className="flex items-center gap-2.5 group flex-none">
-          <span
-            className="display-num text-2xl leading-none px-2 py-1"
-            style={{
-              background: '#D9A400',
-              color: '#12151B',
-              fontStyle: 'italic',
-            }}
-          >
-            26
-          </span>
-          <span className="display-broadcast text-xl leading-none hidden sm:inline text-ink">
-            Draft<span className="text-ink-soft/60">/</span><span style={{ color: '#D9A400' }}>Intel</span>
-          </span>
-        </Link>
+  const todayStr = new Date().toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+  });
 
-        <div className="hidden lg:block flex-1">
-          <Nav />
+  return (
+    <header className="sticky top-0 z-30 bg-paper/95 backdrop-blur-md border-b-2 border-ink">
+      {/* Masthead top rule */}
+      <div className="masthead-rule" />
+
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+        {/* Dateline strip */}
+        <div className="dateline flex items-center gap-3 py-1.5 text-ink-muted border-b border-ink-edge">
+          <span>Vol. I · No. 26</span>
+          <span className="text-ink-edge">·</span>
+          <span className="hidden sm:inline">{todayStr}</span>
+          <span className="text-ink-edge hidden sm:inline">·</span>
+          <span className="hidden md:inline">Seattle</span>
+          <span className="ml-auto hidden lg:inline">A Quantitative Study · Free Edition</span>
         </div>
 
-        <div className="ml-auto flex items-center gap-3">
-          <ModePill />
-
-          <div className="hidden md:flex items-center gap-1 pl-3 border-l border-ink-edge">
-            <span className="text-[0.65rem] text-ink-soft/70 font-mono mr-2 hidden lg:inline" title="Keyboard: / to search · ? for About">
-              / to search
+        {/* Nameplate row */}
+        <div className="flex items-center gap-4 sm:gap-8 py-3">
+          <Link to="/" className="flex items-baseline gap-3 group flex-none">
+            <span className="nameplate text-[1.9rem] sm:text-[2.4rem]">
+              The Draft <em>Ledger</em>
             </span>
-            <button
-              onClick={onAbout}
-              className="p-2 hover:bg-paper-hover transition text-ink-soft hover:text-ink"
-              title="About this model (?)"
-              aria-label="About this model"
-            >
-              <Info size={16} />
-            </button>
-            <button
-              onClick={hardReload}
-              className="p-2 hover:bg-paper-hover transition text-ink-soft hover:text-ink"
-              title="Hard refresh"
-              aria-label="Refresh page"
-            >
-              <RefreshCw size={16} />
-            </button>
+          </Link>
+
+          <div className="hidden xl:block flex-1">
+            <Nav />
           </div>
 
-          <button
-            onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden p-2 hover:bg-paper-hover transition"
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="ml-auto flex items-center gap-3">
+            <ModePill />
+
+            <div className="hidden md:flex items-center gap-1 pl-3 border-l border-ink-edge">
+              <span className="text-[0.62rem] text-ink-muted font-mono mr-2 hidden lg:inline">
+                / to search
+              </span>
+              <button
+                onClick={onAbout}
+                className="p-2 hover:bg-paper-hover transition text-ink-muted hover:text-ink"
+                title="About this model (?)"
+                aria-label="About this model"
+              >
+                <Info size={16} />
+              </button>
+              <button
+                onClick={hardReload}
+                className="p-2 hover:bg-paper-hover transition text-ink-muted hover:text-ink"
+                title="Hard refresh"
+                aria-label="Refresh page"
+              >
+                <RefreshCw size={16} />
+              </button>
+            </div>
+
+            <button
+              onClick={() => setMobileOpen((v) => !v)}
+              className="xl:hidden p-2 hover:bg-paper-hover transition"
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Navigation row, own line (below nameplate) for better density */}
+        <div className="hidden lg:block xl:hidden border-t border-ink-edge py-1">
+          <Nav />
         </div>
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden border-t border-ink-edge bg-paper/95 backdrop-blur">
-          <div className="max-w-[1280px] mx-auto px-4 py-3 flex flex-col">
+        <div className="xl:hidden border-t border-ink bg-paper/98 backdrop-blur">
+          <div className="max-w-[1280px] mx-auto px-4 py-2 flex flex-col">
             {NAV_LINKS.map((l) => (
               <NavLink
                 key={l.to}
@@ -164,8 +178,8 @@ function Header({ onAbout }: {
                   cn(
                     'px-4 py-3 caps-tight transition border-l-2',
                     isActive
-                      ? 'text-ink border-mode-indie bg-paper-hover'
-                      : 'text-ink-soft border-transparent hover:text-ink hover:bg-paper-hover',
+                      ? 'text-ink border-accent-salmon bg-paper-hover'
+                      : 'text-ink-muted border-transparent hover:text-ink hover:bg-paper-hover',
                   )
                 }
               >
@@ -244,24 +258,36 @@ function AppInner() {
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/team-compare" element={<TeamCompare />} />
           <Route path="/positions" element={<Positions />} />
+          <Route path="/lab" element={<MockLab />} />
         </Routes>
       </main>
-      <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t border-ink-edge">
-        <div className="chevron-stripe mb-5 opacity-70" />
-        <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-ink-soft/80">
-          <div className="flex items-center gap-3">
-            <span className="display-broadcast text-ink">2026 Draft Intel</span>
-            <span className="text-ink-edge">·</span>
-            <span>Built by <span className="text-ink-soft">Colin Sica</span></span>
+      <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t-2 border-ink">
+        <div className="hrule mb-4" />
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-baseline">
+          <div className="space-y-1">
+            <p className="nameplate text-2xl">The Draft <em>Ledger</em></p>
+            <p className="byline">
+              A quantitative study by <span className="not-italic font-medium text-ink">Colin Sica</span>,
+              finance · University of Washington
+            </p>
+            <p className="footnote">
+              Monte Carlo team-agent simulation integrated with live Kalshi prediction-market pricing.
+              Source data: public tape grades (PFF), athletic testing (RAS), team-visit reporting, and
+              market prices at api.elections.kalshi.com.
+            </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5 text-xs text-ink-muted">
             <button
               onClick={() => setAboutOpen(true)}
               className="caps-tight hover:text-ink transition"
             >
-              About the model
+              About
             </button>
-            <span>© {new Date().getFullYear()}</span>
+            <a href="https://github.com/ColinSica/nfl-draft-2026" target="_blank" rel="noopener"
+               className="caps-tight hover:text-ink transition">
+              Source
+            </a>
+            <span className="caps-tight">© {new Date().getFullYear()}</span>
           </div>
         </div>
       </footer>
@@ -280,3 +306,4 @@ export default function App() {
 
 import { Compare } from './pages/Compare';
 import { Method } from './pages/Method';
+import { MockLab } from './pages/MockLab';

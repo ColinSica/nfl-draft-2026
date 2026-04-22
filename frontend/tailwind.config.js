@@ -1,111 +1,133 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
-  // Light-first theme — the product is a LIGHT sports-media product now.
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Barlow Condensed"', 'Oswald', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        sans: ['"Barlow"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        // Fraunces for display (variable, optical-size aware — editorial serif with
+        // real character). Source Serif 4 for body reading type. IBM Plex Mono
+        // for ALL data — the canonical research/terminal mono. Plex Sans for
+        // navigation and incidental labels where mono would read too sterile.
+        display: ['Fraunces', 'GT Sectra', 'Times New Roman', 'serif'],
+        serif:   ['"Source Serif 4"', 'Fraunces', 'Georgia', 'serif'],
+        body:    ['"Source Serif 4"', 'Georgia', 'serif'],
+        mono:    ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        sans:    ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'display-xl': ['clamp(3.5rem, 11vw, 9rem)', { lineHeight: '0.85', letterSpacing: '-0.02em' }],
-        'display-lg': ['clamp(2.5rem, 7vw, 5.5rem)', { lineHeight: '0.9', letterSpacing: '-0.015em' }],
-        'display-md': ['clamp(1.875rem, 4vw, 3rem)', { lineHeight: '0.95', letterSpacing: '-0.01em' }],
+        'dateline': ['0.68rem', { lineHeight: '1', letterSpacing: '0.18em' }],
+        'caption':  ['0.78rem', { lineHeight: '1.35' }],
       },
       colors: {
-        // LIGHT THEME — warm newsprint base, crisp white cards, ink text.
-        // Reverse of the prior dark: paper is now the surface, ink is text.
+        // FT / WSJ / research-note palette. Warm cream paper, deep near-black ink,
+        // FT salmon as the editorial accent. Secondary colors are desaturated —
+        // muted sage for buy/long, deep burgundy for sell/flag, amber for warn.
         paper: {
-          DEFAULT: '#F5F2EA',   // warm newsprint
-          surface: '#FFFFFF',   // card surface
-          raised:  '#FBFAF5',   // very subtle raise
-          hover:   '#EBE7DB',   // hover
-          muted:   '#5B6370',   // muted text
-          subtle:  '#848B98',   // subtle text
-          faint:   '#B4B9C2',   // placeholders
+          DEFAULT: '#F7EFDF',   // FT salmon-cream page base
+          surface: '#FBF5E8',   // slightly brighter for raised cards
+          raised:  '#FDF9ED',   // lightest — side columns
+          hover:   '#EEE3CA',   // subtle hover
+          muted:   '#7A6E58',
+          subtle:  '#9C8E76',
+          faint:   '#BDB09A',
+          edge:    '#E4D7B7',   // subtle border on paper
         },
         ink: {
-          DEFAULT: '#12151B',   // near-black text
-          soft:    '#2A2E37',   // softer text
-          edge:    '#D9D4C7',   // borders on light bg
-          rule:    '#C3BDAE',   // stronger rules
-          // dark-ink surfaces for select hero/contrast sections
-          deep:    '#0F1218',
-          raised:  '#1B1F27',
-          card:    '#232832',
-          hover:   '#2E3440',
-        },
-        // MODE ACCENTS — saturated for light-bg contrast
-        mode: {
-          indie:      '#D9A400',  // darkened broadcast yellow for readability on white
-          indieDim:   '#7A5D00',
-          indiePop:   '#FFD23F',  // bright variant for dark contexts
-          bench:      '#1F6FEB',  // bright broadcast blue
-          benchDim:   '#104399',
-          compare:    '#17A870',  // deeper field green on light
-          compareDim: '#0E6945',
-        },
-        // Urgent / LIVE
-        live:      '#DC2F3D',
-        liveDim:   '#7A1820',
-        state: {
-          fresh:   '#17A870',
-          stale:   '#D9A400',
-          broken:  '#DC2F3D',
-          pending: '#848B98',
-        },
-        tier: {
-          r1:   '#D9A400',
-          r2:   '#1F6FEB',
-          r3:   '#17A870',
-          r4:   '#848B98',
-          udfa: '#B4B9C2',
-          high:  '#17A870',
-          midhi: '#1F6FEB',
-          mid:   '#D9A400',
-          midlo: '#E68A6A',
-          low:   '#DC2F3D',
-        },
-        // LEGACY aliases (light defaults)
-        bg: {
-          DEFAULT: '#F5F2EA',
-          raised:  '#FBFAF5',
-          card:    '#FFFFFF',
-          hover:   '#EBE7DB',
-        },
-        border: {
-          DEFAULT: '#D9D4C7',
-          strong:  '#C3BDAE',
-        },
-        text: {
-          DEFAULT: '#12151B',
-          muted:   '#5B6370',
-          subtle:  '#848B98',
+          DEFAULT: '#1A1612',   // near-black, warm undertone (not pure black)
+          soft:    '#3B342C',
+          muted:   '#6B6154',
+          edge:    '#C9B995',   // visible rule on paper
+          rule:    '#AA9872',   // stronger rule
+          // Dark surfaces for contrast sections (Bloomberg-style reversal)
+          deep:    '#15110D',
+          raised:  '#211C16',
+          card:    '#2B251D',
+          hover:   '#3A3226',
         },
         accent: {
-          DEFAULT: '#D9A400',
-          hover:   '#B88A00',
+          // Salmon — FT pink on serious paper. Used sparingly: headers, kickers,
+          // active rules. NOT buttons or large blocks.
+          salmon:      '#C65A3E',
+          salmonSoft:  '#E08B6C',
+          salmonDeep:  '#8F3A20',
+          // Sell-side slate — for headers, data marks, institutional feel
+          slate:       '#1E3A5F',
+          slateDeep:   '#122B47',
+          // Parchment highlight — used as pale wash behind active rows
+          highlight:   'rgba(198, 90, 62, 0.10)',
+        },
+        // Signal colors — all muted, research-grade
+        signal: {
+          pos:     '#4A6B3F',   // muted sage — positive signal
+          neg:     '#8C2E2A',   // deep burgundy — negative
+          warn:    '#B57328',   // warm amber — warning/flag
+          neutral: '#6B6154',
+        },
+        // LEGACY aliases so existing pages keep compiling
+        bg: {
+          DEFAULT: '#F7EFDF',
+          raised:  '#FDF9ED',
+          card:    '#FBF5E8',
+          hover:   '#EEE3CA',
+        },
+        border: {
+          DEFAULT: '#C9B995',
+          strong:  '#AA9872',
+        },
+        text: {
+          DEFAULT: '#1A1612',
+          muted:   '#6B6154',
+          subtle:  '#9C8E76',
+        },
+        // Back-compat for old class names still referenced across pages.
+        // These forward to the new research palette without breaking builds.
+        mode: {
+          indie:      '#C65A3E',    // formerly goldenrod — now salmon
+          indieDim:   '#8F3A20',
+          indiePop:   '#E08B6C',
+          bench:      '#1E3A5F',    // slate
+          benchDim:   '#122B47',
+          compare:    '#4A6B3F',    // sage
+          compareDim: '#2F4428',
+        },
+        live:      '#8C2E2A',
+        liveDim:   '#5E1E1C',
+        state: {
+          fresh:   '#4A6B3F',
+          stale:   '#B57328',
+          broken:  '#8C2E2A',
+          pending: '#9C8E76',
+        },
+        tier: {
+          r1:   '#C65A3E',
+          r2:   '#1E3A5F',
+          r3:   '#4A6B3F',
+          r4:   '#6B6154',
+          udfa: '#9C8E76',
+          high:  '#4A6B3F',
+          midhi: '#1E3A5F',
+          mid:   '#B57328',
+          midlo: '#C65A3E',
+          low:   '#8C2E2A',
         },
       },
       boxShadow: {
-        card:   '0 1px 2px rgba(18,21,27,0.04), 0 4px 14px -2px rgba(18,21,27,0.05)',
-        'card-raised': '0 1px 2px rgba(18,21,27,0.05), 0 10px 28px -6px rgba(18,21,27,0.10)',
-        chip:   '0 1px 3px rgba(18,21,27,0.08)',
-        rise:   '0 20px 50px -12px rgba(18,21,27,0.18)',
-        glow:   '0 0 0 3px rgba(217,164,0,0.18), 0 6px 20px rgba(217,164,0,0.15)',
+        // Subtle paper-lift — research reports don't do drop shadows; use rules.
+        card:          'none',
+        'card-raised': '0 1px 0 rgba(26, 22, 18, 0.04)',
+        chip:          'none',
+        rise:          '0 1px 0 rgba(26, 22, 18, 0.06)',
+        glow:          'inset 0 0 0 1px #C65A3E',
       },
       backgroundImage: {
-        // Subtle paper-texture atmosphere on light bg
-        'stadium':
-          'radial-gradient(at 10% -8%, rgba(31,111,235,0.05) 0, transparent 48%), ' +
-          'radial-gradient(at 90% 105%, rgba(217,164,0,0.05) 0, transparent 42%)',
+        // Very faint paper-grain atmosphere; no radial gradients
+        'stadium':  'none',
       },
       letterSpacing: {
-        'caps': '0.14em',
+        'caps':       '0.16em',
         'caps-tight': '0.08em',
+        'editorial': '0.02em',
       },
       transitionTimingFunction: {
         'broadcast': 'cubic-bezier(0.2, 0.9, 0.1, 1)',

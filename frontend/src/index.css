@@ -2,38 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/*  ──────────────────────────────────────────────────────────────────
+ *  THE DRAFT LEDGER — Typography & Motion
+ *  Inspired by Financial Times print editions, sell-side research
+ *  notes, and Bloomberg Terminal data density. Warm cream paper with
+ *  near-black ink. All numbers in IBM Plex Mono. Body copy in Source
+ *  Serif 4. Display headlines in Fraunces with optical sizing.
+ *  ────────────────────────────────────────────────────────────── */
+
 html, body, #root { height: 100%; }
 
 html {
-  background: #F5F2EA;
+  background: #F7EFDF;
   color-scheme: light;
 }
 
 body {
-  font-family: 'Barlow', ui-sans-serif, system-ui, sans-serif;
-  background: #F5F2EA;
-  color: #12151B;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  background: #F7EFDF;
+  color: #1A1612;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Soft newsprint atmosphere — warm, inviting, not dark/cold */
+  /* Very faint paper grain — layered noise + warm wash */
   background-image:
-    radial-gradient(at 8% -5%, rgba(31, 111, 235, 0.05) 0, transparent 45%),
-    radial-gradient(at 92% 110%, rgba(217, 164, 0, 0.06) 0, transparent 40%);
+    repeating-linear-gradient(
+      45deg,
+      rgba(169, 152, 114, 0.025) 0px,
+      rgba(169, 152, 114, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(at 25% -5%, rgba(198, 90, 62, 0.04) 0, transparent 50%),
+    radial-gradient(at 95% 100%, rgba(30, 58, 95, 0.03) 0, transparent 45%);
   background-attachment: fixed;
 }
 
-::selection {
-  background: rgba(217, 164, 0, 0.35);
-  color: #12151B;
+/* Numbers always tabular for alignment */
+.font-mono,
+[class*="font-mono"] {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1, 'zero' 1;
 }
 
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #F5F2EA; }
-::-webkit-scrollbar-thumb { background: #C3BDAE; border-radius: 0; }
-::-webkit-scrollbar-thumb:hover { background: #A39B88; }
+::selection {
+  background: rgba(198, 90, 62, 0.30);
+  color: #1A1612;
+}
+
+::-webkit-scrollbar       { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: #F7EFDF; }
+::-webkit-scrollbar-thumb { background: #AA9872; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #6B6154; }
 
 :where(button, a, input, select, textarea):focus-visible {
-  outline: 2px solid #D9A400;
+  outline: 1.5px solid #C65A3E;
   outline-offset: 3px;
   border-radius: 0;
 }
@@ -45,214 +68,432 @@ body {
   }
 }
 
-/* ─── Typography primitives ─── */
+/* ══════════════════════════════════════════════════════════════════
+ * TYPOGRAPHY PRIMITIVES
+ * ══════════════════════════════════════════════════════════════════ */
+
+/* Display headlines — Fraunces with high optical-size for drama */
 .display-broadcast {
-  font-family: 'Barlow Condensed', Oswald, ui-sans-serif, sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  font-family: 'Fraunces', 'GT Sectra', Georgia, serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-weight: 450;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  line-height: 0.96;
+  text-transform: none;
+}
+
+/* Jumbo editorial (cover-page / masthead headlines) */
+.display-jumbo {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 80;
+  font-weight: 400;
+  letter-spacing: -0.035em;
   line-height: 0.9;
 }
 
-.display-num {
-  font-family: 'Barlow Condensed', Oswald, ui-sans-serif, sans-serif;
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
-  line-height: 0.85;
-  letter-spacing: -0.02em;
+.display-jumbo em,
+.display-jumbo .em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-weight: 400;
 }
 
+/* Data numerals — Plex Mono tabular */
+.display-num {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+/* Small-caps labels for section dividers / kickers */
 .caps {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.75rem;
-  font-weight: 700;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #6B6154;
 }
 
 .caps-tight {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.75rem;
-  font-weight: 700;
+  letter-spacing: 0.10em;
+  font-size: 0.72rem;
+  font-weight: 500;
 }
 
-/* ─── Rules ─── */
-.hrule        { border: 0; border-top: 1px solid #D9D4C7; margin: 0; }
-.hrule-thick  { border: 0; border-top: 2px solid #12151B; margin: 0; }
-.hrule-live   { border: 0; border-top: 2px solid #DC2F3D; margin: 0; }
-.hrule-accent { border: 0; border-top: 2px solid #D9A400; margin: 0; }
-
-/* End-zone chevron stripe */
-.chevron-stripe {
-  background:
-    repeating-linear-gradient(135deg, #D9A400 0 4px, transparent 4px 12px);
-  height: 4px;
+/* Dateline strip — the newspaper-top metadata */
+.dateline {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #6B6154;
 }
 
-/* ─── Motion ─── */
+/* Bylines — "By X · Institution" in serif italic */
+.byline {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #3B342C;
+  letter-spacing: 0.01em;
+}
+
+/* Editorial body copy — serif reading face */
+.body-serif {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #1A1612;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+.body-serif-lead {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: #1A1612;
+  letter-spacing: -0.005em;
+}
+
+/* Drop-cap for lead paragraph (first letter) */
+.lede::first-letter {
+  font-family: 'Fraunces', Georgia, serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 80;
+  font-weight: 500;
+  font-size: 4.8rem;
+  float: left;
+  line-height: 0.82;
+  padding: 0.35rem 0.6rem 0 0;
+  color: #C65A3E;
+  margin-bottom: -0.35rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * RULES — the research-note workhorse
+ * ══════════════════════════════════════════════════════════════════ */
+.hrule        { border: 0; border-top: 1px solid #C9B995; margin: 0; }
+.hrule-thin   { border: 0; border-top: 0.5px solid #C9B995; margin: 0; }
+.hrule-thick  { border: 0; border-top: 2.5px solid #1A1612; margin: 0; }
+.hrule-double { border: 0; border-top: 3px double #1A1612; margin: 0; }
+.hrule-live   { border: 0; border-top: 2px solid #8C2E2A; margin: 0; }
+.hrule-accent { border: 0; border-top: 1.5px solid #C65A3E; margin: 0; }
+
+/* Vertical column rule */
+.vrule        { border-left: 1px solid #C9B995; }
+.vrule-thick  { border-left: 2.5px solid #1A1612; }
+
+/* Masthead top rule — heavy */
+.masthead-rule {
+  border: 0;
+  height: 6px;
+  background: #1A1612;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+ * MOTION
+ * ══════════════════════════════════════════════════════════════════ */
 @keyframes draw-rule {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
 .rule-draw {
   transform-origin: left;
-  animation: draw-rule 0.7s cubic-bezier(0.2, 0.9, 0.1, 1) both;
+  animation: draw-rule 0.85s cubic-bezier(0.2, 0.9, 0.1, 1) both;
 }
 
 @keyframes reveal-up {
-  from { opacity: 0; transform: translateY(14px); }
+  from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.reveal { animation: reveal-up 0.55s cubic-bezier(0.2, 0.9, 0.1, 1) both; }
+.reveal   { animation: reveal-up 0.6s cubic-bezier(0.2, 0.9, 0.1, 1) both; }
 .reveal-1 { animation-delay: 0.04s; }
-.reveal-2 { animation-delay: 0.12s; }
-.reveal-3 { animation-delay: 0.22s; }
-.reveal-4 { animation-delay: 0.32s; }
-.reveal-5 { animation-delay: 0.42s; }
+.reveal-2 { animation-delay: 0.14s; }
+.reveal-3 { animation-delay: 0.26s; }
+.reveal-4 { animation-delay: 0.38s; }
+.reveal-5 { animation-delay: 0.50s; }
 
-/* LIVE pulse */
+/* Ticker — horizontal scrolling data strip */
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker-scroll 90s linear infinite;
+  display: inline-flex;
+  gap: 3rem;
+  white-space: nowrap;
+  padding-right: 3rem;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* LIVE pulse — subtle */
 @keyframes live-pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(220, 47, 61, 0.55); }
-  50%      { opacity: 0.75; box-shadow: 0 0 0 6px rgba(220, 47, 61, 0); }
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
 }
 .live-dot {
   display: inline-block;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-radius: 9999px;
-  background: #DC2F3D;
-  animation: live-pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0;
+  background: #8C2E2A;
+  animation: live-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+ * COMPONENTS
+ * ══════════════════════════════════════════════════════════════════ */
 @layer components {
-  /* ─── Cards ─── */
+  /* Cards — research-note style. No rounded corners, hairline borders. */
   .card {
-    @apply bg-paper-surface border border-ink-edge shadow-card;
+    @apply bg-paper-surface;
+    border: 1px solid #C9B995;
     border-radius: 0;
+    box-shadow: none;
   }
   .card-raised {
-    @apply bg-paper-raised border border-ink-edge shadow-card-raised;
+    @apply bg-paper-raised;
+    border: 1px solid #C9B995;
     border-radius: 0;
+    box-shadow: 0 1px 0 rgba(26, 22, 18, 0.04);
   }
 
-  /* ─── Buttons (larger, friendlier hit targets) ─── */
+  /* Buttons — thin ink rules over paper. No fills except primary ink. */
   .btn {
-    @apply inline-flex items-center gap-2 px-5 py-3 text-sm font-bold
-           transition-all ease-broadcast duration-200 caps-tight;
+    @apply inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium
+           transition-all ease-editorial duration-150;
     border-radius: 0;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: 500;
   }
   .btn-primary {
-    @apply btn bg-ink text-paper;
+    @apply btn bg-ink text-paper border border-ink;
   }
-  .btn-primary:hover { background: #2A2E37; }
+  .btn-primary:hover { background: #3B342C; border-color: #3B342C; }
+
   .btn-ghost {
-    @apply btn bg-transparent border border-ink text-ink hover:bg-ink hover:text-paper;
+    @apply btn bg-transparent border border-ink text-ink;
   }
+  .btn-ghost:hover { background: #1A1612; color: #FDF9ED; }
+
   .btn-solid {
-    @apply btn bg-mode-indie text-ink;
+    @apply btn bg-accent-salmon text-paper;
+    border: 1px solid #C65A3E;
   }
-  .btn-solid:hover { background: #B88A00; color: #FFFFFF; }
+  .btn-solid:hover { background: #8F3A20; border-color: #8F3A20; }
+
   .btn-live {
-    @apply btn bg-live text-paper;
+    @apply btn bg-live text-paper border border-live;
   }
 
-  /* ─── Badges ─── */
+  /* Badges — research-grade: all-caps mono, hairline border */
   .badge {
-    @apply inline-flex items-center gap-1.5 px-2 py-1 caps-tight border border-ink-edge text-ink-soft;
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 caps-tight;
+    border: 1px solid #C9B995;
     border-radius: 0;
+    color: #3B342C;
+    background: transparent;
   }
-  .badge-indie {
+  .badge-indie,
+  .badge-salmon {
     @apply badge;
-    color: #7A5D00;
-    border-color: #D9A400;
-    background: rgba(217, 164, 0, 0.12);
+    color: #8F3A20;
+    border-color: #C65A3E;
   }
-  .badge-bench {
+  .badge-bench,
+  .badge-slate {
     @apply badge;
-    color: #104399;
-    border-color: #1F6FEB;
-    background: rgba(31, 111, 235, 0.08);
+    color: #122B47;
+    border-color: #1E3A5F;
   }
-  .badge-compare {
+  .badge-compare,
+  .badge-sage {
     @apply badge;
-    color: #0E6945;
-    border-color: #17A870;
-    background: rgba(23, 168, 112, 0.08);
+    color: #2F4428;
+    border-color: #4A6B3F;
   }
   .badge-live {
     @apply badge;
-    color: #DC2F3D;
-    border-color: #DC2F3D;
-    background: rgba(220, 47, 61, 0.08);
+    color: #8C2E2A;
+    border-color: #8C2E2A;
   }
 
   .kbd {
-    @apply font-mono text-xs px-1.5 py-0.5 border border-ink-edge bg-paper-raised text-ink-soft;
+    @apply font-mono text-xs px-1.5 py-0.5 text-ink-soft;
+    border: 1px solid #C9B995;
+    background: #FDF9ED;
     border-radius: 0;
   }
 
-  /* ─── Mode chip ─── */
+  /* Mode chip — salmon salmon-bordered */
   .mode-chip {
     @apply inline-flex items-center gap-2 px-3 py-1.5 caps-tight
-           transition-all ease-broadcast duration-200;
+           transition-all duration-150;
     border-radius: 0;
+    background: transparent;
   }
   .mode-chip[data-mode="independent"] {
-    background: rgba(217, 164, 0, 0.14);
-    color: #7A5D00;
-    border: 1px solid #D9A400;
+    color: #8F3A20;
+    border: 1px solid #C65A3E;
   }
   .mode-chip[data-mode="benchmark"] {
-    background: rgba(31, 111, 235, 0.1);
-    color: #104399;
-    border: 1px solid #1F6FEB;
+    color: #122B47;
+    border: 1px solid #1E3A5F;
   }
   .mode-chip[data-mode="compare"] {
-    background: rgba(23, 168, 112, 0.1);
-    color: #0E6945;
-    border: 1px solid #17A870;
+    color: #2F4428;
+    border: 1px solid #4A6B3F;
   }
-
   .mode-dot {
-    @apply w-1.5 h-1.5 rounded-full;
-    animation: mode-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    @apply w-1.5 h-1.5;
+    border-radius: 0;
+    animation: live-pulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
-  .mode-dot[data-mode="independent"] { background: #D9A400; box-shadow: 0 0 10px rgba(217,164,0,0.5); }
-  .mode-dot[data-mode="benchmark"]   { background: #1F6FEB; box-shadow: 0 0 10px rgba(31,111,235,0.5); }
-  .mode-dot[data-mode="compare"]     { background: #17A870; box-shadow: 0 0 10px rgba(23,168,112,0.5); }
+  .mode-dot[data-mode="independent"] { background: #C65A3E; }
+  .mode-dot[data-mode="benchmark"]   { background: #1E3A5F; }
+  .mode-dot[data-mode="compare"]     { background: #4A6B3F; }
 
-  @keyframes mode-pulse {
-    0%, 100% { opacity: 1; }
-    50%      { opacity: 0.4; }
-  }
-
-  /* ─── Data rows ─── */
+  /* Data rows — research table rows, hairline dividers, monos for nums */
   .data-row {
-    @apply flex items-baseline gap-4 py-3 border-b border-ink-edge;
+    @apply flex items-baseline gap-4 py-2.5;
+    border-bottom: 1px solid #E4D7B7;
   }
   .data-row:last-child { border-bottom: 0; }
+  .data-row:hover { background: rgba(198, 90, 62, 0.05); }
 
   .stat-big {
     @apply display-num;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    color: #12151B;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    color: #1A1612;
+    font-weight: 400;
   }
 
   .mono-label {
-    @apply font-mono text-[0.68rem] uppercase tracking-wider text-ink-soft/70;
+    @apply font-mono uppercase;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    color: #7A6E58;
+    font-weight: 400;
   }
 
-  /* Team edge variables (set inline per card) */
+  /* Team edge — thin salmon bar, not the old thick colored block */
   .team-edge {
-    width: 6px;
-    flex: none;
-    background: var(--team-primary, #C3BDAE);
-  }
-  .team-edge-secondary {
     width: 3px;
     flex: none;
+    background: var(--team-primary, #C9B995);
+  }
+  .team-edge-secondary {
+    width: 1.5px;
+    flex: none;
     background: var(--team-secondary, transparent);
+  }
+
+  /* Research tables — dense, rules-only, tabular-nums */
+  .research-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .research-table thead th {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.64rem;
+    font-weight: 500;
+    color: #6B6154;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid #1A1612;
+    background: transparent;
+    white-space: nowrap;
+  }
+  .research-table tbody td {
+    padding: 0.7rem 0.75rem;
+    border-bottom: 1px solid #E4D7B7;
+    vertical-align: baseline;
+  }
+  .research-table tbody tr:last-child td {
+    border-bottom: 1.5px solid #1A1612;
+  }
+  .research-table tbody tr:hover {
+    background: rgba(198, 90, 62, 0.055);
+  }
+  .research-table td.num,
+  .research-table th.num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+  .research-table td.center,
+  .research-table th.center { text-align: center; }
+
+  /* Masthead nameplate — absolutely sets the editorial tone */
+  .nameplate {
+    font-family: 'Fraunces', Georgia, serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 50;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 0.88;
+    color: #1A1612;
+  }
+  .nameplate em {
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    color: #C65A3E;
+    font-weight: 400;
+  }
+
+  /* Stamp — the kicker pill used for "ABSTRACT", "LEAD STORY", etc. */
+  .stamp {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #F7EFDF;
+    background: #1A1612;
+    font-weight: 500;
+  }
+  .stamp-salmon { background: #C65A3E; color: #FDF9ED; }
+  .stamp-slate  { background: #1E3A5F; color: #FDF9ED; }
+  .stamp-sage   { background: #4A6B3F; color: #FDF9ED; }
+
+  /* Figure caption */
+  .figure-caption {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: #6B6154;
+    letter-spacing: 0.01em;
+  }
+
+  /* Footnote */
+  .footnote {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    color: #6B6154;
+  }
+  .footnote-mark {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68em;
+    vertical-align: super;
+    color: #C65A3E;
+    padding: 0 0.1em;
   }
 }
