@@ -67,10 +67,10 @@ function ModePill() {
   const { mode } = useMode();
   const meta = MODE_META[mode];
   return (
-    <div className="mode-chip" data-mode={mode} title={meta.description}>
+    <div className="mode-chip" data-mode={mode} title={meta.description + ' · ' + meta.caption}>
       <span className="mode-dot" data-mode={mode} />
-      <span className="hidden sm:inline">{meta.label}</span>
-      <span className="hidden md:inline text-ink-soft/70 font-normal normal-case tracking-normal text-[0.7rem] ml-1">
+      <span className="hidden md:inline">{meta.label}</span>
+      <span className="hidden 2xl:inline text-ink-soft/70 font-normal normal-case tracking-normal text-[0.7rem] ml-1">
         · {meta.caption}
       </span>
     </div>
@@ -108,7 +108,7 @@ function Header({ meta, onAbout }: {
   });
 
   return (
-    <header className="sticky top-0 z-30 bg-paper/95 backdrop-blur-md border-b-2 border-ink">
+    <header className="sticky top-0 z-30 bg-paper/95 backdrop-blur-md border-b-2 border-ink overflow-hidden">
       {/* Masthead top rule */}
       <div className="masthead-rule" />
 
@@ -132,7 +132,7 @@ function Header({ meta, onAbout }: {
         </div>
 
         {/* Nameplate row */}
-        <div className="flex items-center gap-4 sm:gap-8 py-3">
+        <div className="flex items-center gap-3 sm:gap-6 py-3 min-w-0">
           <Link to="/" className="flex items-baseline gap-3 group flex-none min-w-0">
             <span className="nameplate text-[1.5rem] sm:text-[2rem] md:text-[2.4rem] truncate">
               The Draft <em>Ledger</em>
@@ -143,11 +143,11 @@ function Header({ meta, onAbout }: {
             <Nav />
           </div>
 
-          <div className="ml-auto flex items-center gap-3">
+          <div className="ml-auto flex items-center gap-2 sm:gap-3 shrink-0">
             <ModePill />
 
-            <div className="hidden md:flex items-center gap-1 pl-3 border-l border-ink-edge">
-              <span className="text-[0.62rem] text-ink-muted font-mono mr-2 hidden lg:inline">
+            <div className="hidden xl:flex items-center gap-1 pl-3 border-l border-ink-edge">
+              <span className="text-[0.62rem] text-ink-muted font-mono mr-2 hidden 2xl:inline">
                 / to search
               </span>
               <button
