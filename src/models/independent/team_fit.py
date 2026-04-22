@@ -372,25 +372,32 @@ def compute_team_fit(prospects: pd.DataFrame,
             + visit_bonus + narr_bonus)
 
     # Kalshi team-landing bonus. Gated at 3% above uniform noise floor.
-    # Weight calibrated so the best market-implied team wins marginal calls
-    # but doesn't single-handedly determine picks (which would collapse
-    # probabilities to 100%).
+    # Weight raised so a clear market favourite (e.g. Tate-WAS at 15%)
+    # beats the team's own need/coaching-tree bias for a different player.
     team_code = team_profile.get("team") or ""
     if team_code and _TEAM_LANDING_PRIORS and "player" in prospects.columns:
         def _landing(player_name: str) -> float:
             probs = _TEAM_LANDING_PRIORS.get(player_name, {}) or {}
             return max(0.0, probs.get(team_code, 0.0) - 0.03)
         landing_raw = prospects["player"].map(_landing).fillna(0.0)
-        # Weight 3.0 → 30% market landing = +0.81 fit bonus.
-        market_landing_bonus = landing_raw * 3.0
+        # Weight 5.0 → 15% market landing (Tate-WAS) = +0.60 fit bonus;
+        #               30% landing = +1.35.
+        market_landing_bonus = landing_raw * 5.0
     else:
         market_landing_bonus = pd.Series(0.0, index=prospects.index)
 
-    # Kalshi pick-slot band bonus. Players get a FLAT bonus across their
-    # P10-P90 band (not a spike at P50) so the sim preserves the market's
-    # implied uncertainty rather than snapping every pick to the exact P50.
-    # Small penalty outside the band. Total magnitude kept modest so
-    # team-fit / need / scheme can still swing close calls.
+    # Kalshi pick-slot bonus — PEAKS at P50, not flat across P10-P90.
+    #
+    # Previous behaviour (flat band) let a prospect whose P50 is 21 and
+    # P10 is 7 get the full bonus at slot 7 — equal to a prospect whose
+    # P50 *is* 7. That's how Faulk (P50≈21) was stealing WAS's #7 pick
+    # from Tate (P50=7, Tate-WAS market landing 15%).
+    #
+    # New curve:
+    #   - Triangular peak at P50 with asymmetric falloff toward P10/P90.
+    #   - Bonus at P10/P90 edge ≈ 0.2; bonus at P50 ≈ 1.0. Scales by conf.
+    #   - Outside the band: stronger penalty than before so the model
+    #     doesn't let prospects "reach" far from their market.
     slot = team_profile.get("_slot") or 0
     if slot and _PICK_ANCHORS and "player" in prospects.columns:
         def _slot_match(player_name: str) -> float:
@@ -401,27 +408,42 @@ def compute_team_fit(prospects: pd.DataFrame,
             if p50 <= 0:
                 return 0.0
             conf = max(0.2, a.get("conf", 0.5))
-            # Flat across P10-P90 band, small peak near P50
+
             if p10 <= slot <= p90:
-                dist_from_center = abs(slot - p50)
-                band_width = max(1.0, (p90 - p10) / 2.0)
-                # Flat baseline 0.50 + small P50 peak up to 0.30
-                return conf * (0.50 + 0.30 * max(0.0, 1.0 - dist_from_center / band_width))
-            # Adjacent to band (within 2 picks): smaller positive
-            if p10 - 2 <= slot <= p90 + 2:
-                return conf * 0.20
-            # Outside band: soft penalty proportional to distance
-            out_by = (slot - p90) if slot > p90 else (p10 - slot)
-            return -conf * min(0.60, out_by / 15.0)
+                # Asymmetric triangle peaking at P50.
+                if slot <= p50:
+                    half_w = max(1.0, p50 - p10)
+                    dist_ratio = (p50 - slot) / half_w
+                else:
+                    half_w = max(1.0, p90 - p50)
+                    dist_ratio = (slot - p50) / half_w
+                # Falls from 1.0 at P50 to 0.2 at band edges.
+                return conf * (0.20 + 0.80 * max(0.0, 1.0 - dist_ratio))
+
+            # Outside band — real mismatch. Scale penalty by how far out.
+            if slot < p10:
+                out_by = p10 - slot
+            else:
+                out_by = slot - p90
+            # 1 pick out = -0.25*conf; 5 picks out = -0.80*conf; capped.
+            return -conf * min(1.0, 0.25 + out_by * 0.12)
         slot_bonus_raw = prospects["player"].map(_slot_match).fillna(0.0)
-        # Weight 1.5 → conf=1.0 peak bonus ≈ +1.2, penalty ≈ -0.9.
-        # Enough to nudge but not override need/fit at close calls.
-        market_slot_bonus = slot_bonus_raw * 1.5
+        # Weight 2.2 → conf=1.0 P50-exact match gives +2.2 fit;
+        #               band-edge match gives +0.44; out-of-band up to -2.2.
+        # Strong enough that a clear P50-match beats a P10-edge-reach even
+        # when the reach candidate has strong need/coaching-tree bonuses.
+        market_slot_bonus = slot_bonus_raw * 2.2
     else:
         market_slot_bonus = pd.Series(0.0, index=prospects.index)
 
-    base = base + market_landing_bonus + market_slot_bonus
-    return base * gm_mult * coach_mult * inj_mult
+    # Apply multiplicative team-specific biases (gm_mult, coach_mult,
+    # inj_mult) to the TEAM-FIT base ONLY — not to market bonuses. This
+    # prevents a team's scheme/coach premium for one position from scaling
+    # the market bonus for another position (which was letting WAS's CB-
+    # coaching-tree multiplier suppress Tate's market-implied advantage at
+    # slot 7). Market signals remain absolute, and additive.
+    needy_scaled = base * gm_mult * coach_mult * inj_mult
+    return needy_scaled + market_landing_bonus + market_slot_bonus
 
 
 _NARRATIVE_NAME_CACHE: dict = {}
