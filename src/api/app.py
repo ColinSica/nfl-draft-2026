@@ -601,7 +601,17 @@ def prospect_landings() -> dict:
                 "most_likely_slot": 0,
                 "most_likely_team": None,
             }
-        row["kiper_rank"] = int(entry.get("rank")) if entry.get("rank") else None
+        rk = int(entry.get("rank")) if entry.get("rank") else None
+        row["kiper_rank"] = rk
+        # Deterministic "most likely" projection: anchor to Kiper rank so the
+        # board stays self-consistent. Prior behavior surfaced MC modal slots
+        # (e.g. Pregnon at #22 from 23/50 sims clustering) that contradicted
+        # Kiper #34. User pref: realistic single scenario, not MC modes.
+        if rk is not None:
+            row["most_likely_slot"] = rk
+            if rk > 32:
+                # Past R1 — no "most likely team" claim on the board view.
+                row["most_likely_team"] = None
         out.append(row)
 
     # Append any MC prospects not on Kiper's board (keeps sliders visible).
