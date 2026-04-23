@@ -4317,8 +4317,8 @@
       "G": -0.01
     },
     "trade_behavior": {
-      "trade_up_rate": 0.4,
-      "trade_down_rate": 0.45,
+      "trade_up_rate": 0.3,
+      "trade_down_rate": 0.55,
       "pdf_tier": {
         "trade_up_tier": "HIGH",
         "trade_up_prob": 0.7
@@ -4870,6 +4870,9 @@
     ],
     "_4_22_news": [
       "Jerry Jones presser 4/22: 'We have trades... Picks or players, you could imagine that.' Stephen Jones: not required to keep both R1s."
+    ],
+    "_4_23_news": [
+      "CBS rumors 4/23: Cowboys prefer trade-down from #20 over trade-up from #12. Jerry: 'trades are open.' Mock markets price DAL@12 staying, DAL@20 active."
     ]
   },
   "DEN": {
@@ -11851,14 +11854,14 @@
       "IOL": 4.0,
       "S": 4.0,
       "IDL": 4.0,
+      "WR": 3.0,
       "TE": 2.5,
       "OT": 2.5,
       "LB": 2.5,
       "CB": 2.5,
-      "QB": 0.0,
       "RB": 1.2,
-      "WR": 1.2,
-      "EDGE": 1.2
+      "EDGE": 1.2,
+      "QB": 0.0
     },
     "latent_needs": {
       "WR": 2.0,
@@ -12391,6 +12394,10 @@
     ],
     "_4_22_news": [
       "ESPN beat 4/22: Giants at 5 most likely Jeremiyah Love (if there) or Caleb Downs. At 10: Styles, Downs, Tate, Love + post-Lawrence IDL."
+    ],
+    "_4_23_news": [
+      "Draft-morning 4/23 (NFL.com final): Giants 'love' Jordyn Tyson at #5. Combined with Schefter's Love-to-ARI call, NYG-Tyson at 5 is now a market and insider consensus lean.",
+      "NFL.com buzz 4/23: Giants 'less likely to deal Thibodeaux' post-Lawrence. EDGE not a forced trade chip — roster stays intact."
     ]
   },
   "NYJ": {
@@ -13497,6 +13504,9 @@
     },
     "_4_21_news": [
       "Schefter 4/20: Roseman 'plotting a deal' — WR urgency deferred post-Jun-1"
+    ],
+    "_4_23_news": [
+      "CBS Sports 4/23: AJ Brown trade to Patriots 'still tracking' for on/after June 1 (Eagles clear $7M cap that date). Brown not attending workouts. WR urgency at 23 deferred — Roseman still plotting trade-up for OL/EDGE."
     ]
   },
   "PIT": {
@@ -17184,8 +17194,8 @@
     "note": "fa_moves arrivals → need decrements; uncertainty_flags → per-team RNG temperature"
   },
   "_meta": {
-    "latest_intel_date": "2026-04-22",
-    "latest_intel_scraped_at": "2026-04-23T05:06:18+00:00",
+    "latest_intel_date": "2026-04-23",
+    "latest_intel_scraped_at": "2026-04-23T14:10:52+00:00",
     "analyst_intel_meta": {
       "sources": {
         "2026-04-22": [
@@ -17198,9 +17208,28 @@
           "CBS Sports red-flag tracker",
           "PrizePicks live tracker",
           "Team-beat pressers (DAL, SEA, NO, WAS)"
+        ],
+        "2026-04-23": [
+          "NFL.com draft-morning final buzz",
+          "CBS Sports draft rumors",
+          "SI NFL draft trade tracker",
+          "Bleeding Green Nation (Roseman intel)",
+          "Kiper/Jeremiah/McShay final top 150s"
         ]
       },
-      "latest_intel_date": "2026-04-22"
+      "latest_intel_date": "2026-04-23"
     }
+  },
+  "_meta_top5_consensus_2026": {
+    "date": "2026-04-23",
+    "top5": [
+      "Fernando Mendoza",
+      "Jeremiyah Love",
+      "Arvell Reese",
+      "Sonny Styles",
+      "David Bailey"
+    ],
+    "agreement": "Kiper, Jeremiah, McShay all list these five in some order",
+    "note": "Order varies but set is stable — treat top-5 as the consensus cluster."
   }
 }

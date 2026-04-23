@@ -301,6 +301,21 @@ def _aggregate(all_sims: list[list[dict]], n_sims: int) -> dict:
     }
 
 
+def _load_canonical_pick_owners() -> dict[int, str]:
+    """Map pick_number -> canonical pre-trade team owner, per pick_order_2026.json.
+    Used to override the sim's post-trade team when writing predictions + reasoning
+    so the displayed mock respects the real draft order. Trades are surfaced
+    separately in the Simulate page via original_team / most_likely_team."""
+    p = ROOT / "data/features/pick_order_2026.json"
+    if not p.exists():
+        return {}
+    try:
+        obj = json.loads(p.read_text(encoding="utf-8"))
+        return {int(e["pick"]): e["team"] for e in obj.get("picks", [])}
+    except Exception:
+        return {}
+
+
 def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
                    cfg: dict) -> None:
     # monte_carlo_independent — landing probabilities per player (all rounds)
@@ -343,9 +358,34 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
     pred_rows = []
     reasoning = {"meta": {"n_sims": n_sims}, "picks": {}}
     assigned_players: set[str] = set()
+    canonical_owners = _load_canonical_pick_owners()
+
+    # Re-aggregate slot_counts filtered to the canonical-team's picks only,
+    # so the modal pick at each slot represents what the real pick-holder
+    # selected (not what a trade-up/down team selected after swapping into
+    # this slot). Trade scenarios are surfaced separately on the Simulate
+    # page; the canonical mock display should reflect the real draft order.
+    from collections import Counter as _C
+    canonical_slot_counts: dict[int, _C] = defaultdict(_C)
+    for sim in all_sims:
+        for p in sim:
+            slot_n = p.get("slot")
+            if slot_n is None:
+                continue
+            canon = canonical_owners.get(slot_n)
+            # Keep only picks where the picking team matches the canonical
+            # owner (no trades) OR where we don't know the canonical owner.
+            if canon is None or p.get("team") == canon:
+                canonical_slot_counts[slot_n][p["player"]] += 1
+
     for slot in sorted(agg["slot_counts"].keys()):
-        pc = agg["slot_counts"][slot]
-        # Find the most common unassigned player
+        # Prefer canonical-team-filtered counts; fall back to raw if the
+        # canonical team never picked at this slot in any sim (happens when
+        # trades always fired away from this slot — rare).
+        pc = canonical_slot_counts.get(slot) or agg["slot_counts"][slot]
+        canonical_team = canonical_owners.get(slot)
+
+        # Find the most common unassigned player at this slot
         player, ct = None, 0
         for cand_player, cand_ct in pc.most_common():
             if cand_player not in assigned_players:
@@ -354,39 +394,60 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
         if player is None:
             continue  # no unassigned candidate (extremely rare)
         assigned_players.add(player)
+        # Normalize by n_sims (not the canonical-only subset) so probabilities
+        # stay calibrated. If 46/50 sims had canon team picking player X, that's
+        # a 92% outcome — not 96% (which would be 46/48 if 2 sims saw a trade).
         prob = round(ct / n_sims, 3)
-        # use the first sim that chose this player at this slot for components
+
+        # Find a sim where the canonical team picked this player at this slot
+        # (so reasoning factors match); fall back to any sim.
+        chosen_p = None
         for sim in all_sims:
             for p in sim:
-                if p["slot"] == slot and p["player"] == player:
-                    pred_rows.append({
-                        "pick": slot,
-                        "round": _round_for_slot(slot),
-                        "team": p["team"],
-                        "player": player,
-                        "position": p["position"],
-                        "school": p["school"],
-                        "probability": prob,
-                        "independent_grade": round(p["independent_grade"], 2),
-                        "fit_score": round(p["fit_score"], 3),
-                        "trade_down_p_structural": p["trade_down_p_structural"],
-                    })
-                    rs, top_factors = _build_reasoning(p, prob)
-                    reasoning["picks"][str(slot)] = {
-                        "team": p["team"],
-                        "player": player,
-                        "position": p["position"],
-                        "fit_score": round(p["fit_score"], 3),
-                        "independent_grade": round(p["independent_grade"], 2),
-                        "probability": prob,
-                        "trade_down_p_structural": p["trade_down_p_structural"],
-                        "reasoning_summary": rs,
-                        "top_factors": top_factors,
-                    }
+                if (p["slot"] == slot and p["player"] == player
+                    and (canonical_team is None or p.get("team") == canonical_team)):
+                    chosen_p = p
                     break
-            else:
-                continue
-            break
+            if chosen_p:
+                break
+        if not chosen_p:
+            # Fallback: any sim where this player landed here
+            for sim in all_sims:
+                for p in sim:
+                    if p["slot"] == slot and p["player"] == player:
+                        chosen_p = p
+                        break
+                if chosen_p:
+                    break
+        if not chosen_p:
+            continue
+
+        team_for_display = canonical_team or chosen_p["team"]
+        p_for_reasoning = {**chosen_p, "team": team_for_display}
+        pred_rows.append({
+            "pick": slot,
+            "round": _round_for_slot(slot),
+            "team": team_for_display,
+            "player": player,
+            "position": chosen_p["position"],
+            "school": chosen_p["school"],
+            "probability": prob,
+            "independent_grade": round(chosen_p["independent_grade"], 2),
+            "fit_score": round(chosen_p["fit_score"], 3),
+            "trade_down_p_structural": chosen_p["trade_down_p_structural"],
+        })
+        rs, top_factors = _build_reasoning(p_for_reasoning, prob)
+        reasoning["picks"][str(slot)] = {
+            "team": team_for_display,
+            "player": player,
+            "position": chosen_p["position"],
+            "fit_score": round(chosen_p["fit_score"], 3),
+            "independent_grade": round(chosen_p["independent_grade"], 2),
+            "probability": prob,
+            "trade_down_p_structural": chosen_p["trade_down_p_structural"],
+            "reasoning_summary": rs,
+            "top_factors": top_factors,
+        }
     pred_df = pd.DataFrame(pred_rows)
     pred_path = ROOT / cfg["outputs"]["predictions_csv"]
     # Write mock picks to a separate file so the player board CSV stays clean
