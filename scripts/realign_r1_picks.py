@@ -58,10 +58,13 @@ def _load_analyst_hits() -> dict[str, dict[int, int]]:
 
 
 def _hits_for(player_name: str, table: dict[str, dict[int, int]]) -> dict[int, int]:
+    """Merge all matching analyst-key variants (analysts index the same
+    player under multiple keys, e.g. "Delane" AND "Mansoor Delane")."""
+    merged: dict[int, int] = {}
     for k in _key_variants(player_name):
-        if k in table:
-            return table[k]
-    return {}
+        for slot, cnt in (table.get(k) or {}).items():
+            merged[slot] = max(merged.get(slot, 0), int(cnt))
+    return merged
 
 
 def main() -> None:

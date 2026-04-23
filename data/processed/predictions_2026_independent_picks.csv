@@ -5,28 +5,28 @@ pick,round,team,player,position,school,probability,independent_grade,fit_score,t
 4,1,TEN,Jeremiyah Love,RB,Notre Dame,0.367,-28.0,5.01,0.33
 5,1,NYG,Sonny Styles,LB,Ohio State,0.633,-26.0,5.0,0.425
 6,1,CLE,Carnell Tate,WR,Ohio State,0.567,-22.0,4.485,0.281
-7,1,WAS,Caleb Downs,S,Ohio State,0.833,-24.0,4.497,0.15
+7,1,WAS,Mansoor Delane,CB,LSU,0.833,-16.0,4.497,0.15
 8,1,NO,Rueben Bain,EDGE,Miami (FL),0.333,-14.0,4.727,0.425
 9,1,KC,Jordyn Tyson,WR,Arizona State,0.367,-23.0,4.006,0.182
-10,1,NYG,Makai Lemon,WR,USC,0.6,-19.0,4.657,0.425
+10,1,NYG,Caleb Downs,S,Ohio State,0.6,-24.0,4.657,0.425
 11,1,MIA,Francis Mauigoa,OT,Miami (FL),0.267,-21.0,4.258,0.552
-12,1,DAL,Spencer Fano,OT,Utah,0.367,-20.0,2.686,0.468
-13,1,LAR,Olaivavega Ioane,IOL,Penn State,0.5,-18.0,4.129,0.595
-14,1,BAL,Kenyon Sadiq,TE,Oregon,0.467,-15.0,4.013,0.288
-15,1,TB,Monroe Freeling,OT,Georgia,0.367,-17.0,3.022,0.225
-16,1,NYJ,Omar Cooper Jr.,WR,Indiana,0.2,5.0,3.201,0.198
+12,1,DAL,Makai Lemon,WR,USC,0.367,-19.0,2.686,0.468
+13,1,LAR,Spencer Fano,OT,Utah,0.5,-20.0,4.129,0.595
+14,1,BAL,Olaivavega Ioane,IOL,Penn State,0.467,-18.0,4.013,0.288
+15,1,TB,Kenyon Sadiq,TE,Oregon,0.367,-15.0,3.022,0.225
+16,1,NYJ,Monroe Freeling,OT,Georgia,0.2,-17.0,3.201,0.198
 17,1,DET,Dillon Thieneman,S,Oregon,0.6,-12.0,4.616,0.468
 18,1,MIN,Jermod McCoy,CB,Tennessee,0.15,-1.0,2.519,0.096
 19,1,CAR,Blake Miller,OT,Clemson,0.9,-10.0,2.362,0.242
 20,1,DAL,Akheem Mesidor,EDGE,Miami (FL),0.5,-7.0,4.061,0.468
-21,1,PIT,Kadyn Proctor,OT,Alabama,0.867,-13.0,2.463,0.203
-22,1,LAC,Emmanuel McNeil-Warren,S,Toledo,1.0,3.0,2.485,0.284
-23,1,PHI,Keldric Faulk,EDGE,Auburn,0.033,-4.0,2.474,0.09
+21,1,PIT,Omar Cooper Jr.,WR,Indiana,0.867,5.0,2.463,0.203
+22,1,LAC,Kadyn Proctor,OT,Alabama,1.0,-13.0,2.485,0.284
+23,1,PHI,Emmanuel McNeil-Warren,S,Toledo,0.033,3.0,2.474,0.09
 24,1,CLE,KC Concepcion,WR,Texas A&M,0.633,14.0,2.865,0.127
-25,1,CHI,Caleb Lomu,OT,Utah,0.033,-5.0,2.3,0.071
-26,1,BUF,Max Iheanachor,OT,Arizona State,0.033,-11.0,3.477,0.147
-27,1,SF,Colton Hood,CB,Tennessee,0.033,13.0,2.331,0.157
-28,1,HOU,Chase Bisontis,IOL,Texas A&M,0.033,30.0,2.906,0.157
+25,1,CHI,Keldric Faulk,EDGE,Auburn,0.033,-4.0,2.3,0.071
+26,1,BUF,Caleb Lomu,OT,Utah,0.033,-5.0,3.477,0.147
+27,1,SF,Max Iheanachor,OT,Arizona State,0.033,-11.0,2.331,0.157
+28,1,HOU,Colton Hood,CB,Tennessee,0.033,13.0,2.906,0.157
 29,1,KC,Denzel Boston,WR,Washington,0.15,-9.0,3.099,0.4
 30,1,MIA,Ty Simpson,QB,Alabama,0.033,-6.0,2.14,0.09
 31,1,NE,C.J. Allen,LB,Georgia,0.15,72.0,3.61,0.595
