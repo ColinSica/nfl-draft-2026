@@ -293,9 +293,11 @@ function AppInner() {
               finance · University of Washington
             </p>
             <p className="footnote">
-              Monte Carlo team-agent simulation integrated with live Kalshi prediction-market pricing.
-              Source data: public tape grades (PFF), athletic testing (RAS), team-visit reporting, and
-              market prices at api.elections.kalshi.com.
+              Quantitative 32-agent Monte Carlo. Each front office is a discrete
+              decision function driven by roster need, scheme premium, coaching-
+              tree priors, cap posture, and a GM positional-affinity fingerprint.
+              Simulated over a 727-prospect board built from tape grades,
+              athletic testing, medicals, and documented team visits.
             </p>
           </div>
           <div className="flex items-center gap-5 text-xs text-ink-muted">

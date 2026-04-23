@@ -191,11 +191,11 @@ export function Simulate() {
             style={{ fontSize: 'clamp(2rem, 6vw, 4.75rem)' }}>
           First round, <em>all thirty-two picks</em>.
         </h1>
-        <Byline role="Market-blended probabilities · latest committed run" />
+        <Byline role="Posterior probabilities · latest committed run" />
         <HRule thick />
         <p className="body-serif-lead text-ink-soft max-w-3xl">
           Every first-round slot in the 2026 NFL Draft, with the model's
-          posterior probability and analyst-sourced thesis per pick. Filter
+          posterior probability and a per-pick thesis. Filter
           by team, position, or confidence. Want to stress-test a different
           round?{' '}
           <Link to="/lab" className="text-accent-brass underline underline-offset-2 hover:text-accent-brassDeep">

@@ -62,28 +62,14 @@ export function AboutModal({
           </section>
 
           <section>
-            <h3 className="caps text-ink mb-2">The independence contract</h3>
+            <h3 className="caps text-ink mb-2">How it works</h3>
             <p className="text-ink-soft">
               <span className="display-broadcast" style={{ color: '#B68A2F' }}>
-                Analyst picks are not inputs to this model.
+                Picks are derived, not copied.
               </span>{' '}
-              A pytest suite enforces this: any analyst-rank column touching the Independent
-              pipeline fails the build. 8/8 tests currently pass.
+              Every pick falls out of the team-agent simulation running over the
+              independent player board &mdash; tape, traits, needs, and history.
             </p>
-          </section>
-
-          <section>
-            <h3 className="caps text-ink mb-2">Modes</h3>
-            <ul className="space-y-1.5 text-ink-soft">
-              <li>
-                <span className="caps-tight" style={{ color: '#B68A2F' }}>Independent</span> — core
-                model output (default).
-              </li>
-              <li>
-                <span className="caps-tight" style={{ color: '#1F6FEB' }}>Benchmark</span> — analyst
-                consensus baseline. Shown for comparison only.
-              </li>
-            </ul>
           </section>
 
           <section>
@@ -93,7 +79,7 @@ export function AboutModal({
                 ['91%', 'Top-32 board overlap'],
                 ['200', 'Sims per run'],
                 ['32', 'Autonomous agents'],
-                ['8/8', 'Independence tests'],
+                ['727', 'Prospects graded'],
               ].map(([v, l]) => (
                 <div key={l} className="border border-ink-edge p-3">
                   <div className="display-num text-3xl text-ink">{v}</div>

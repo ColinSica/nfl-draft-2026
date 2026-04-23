@@ -35,21 +35,22 @@ export function TrustBox() {
         <div className="px-6 md:px-8 py-6 space-y-3">
           <div className="flex items-center gap-2">
             <span className="live-dot" />
-            <h3 className="caps" style={{ color: '#B68A2F' }}>The independence contract</h3>
+            <h3 className="caps" style={{ color: '#B68A2F' }}>How the engine works</h3>
           </div>
           <p className="text-ink leading-relaxed text-lg">
             <span className="display-broadcast text-2xl tracking-tight" style={{ color: '#B68A2F' }}>
-              Analyst picks are not inputs to this model.
+              32 team agents. One board. 200+ simulations.
             </span>
           </p>
           <p className="text-ink-soft leading-relaxed">
-            Every prediction is derived from tape grades, athletic testing, medicals, visit coverage,
-            team-agent profiles, and Monte Carlo simulation. A test suite enforces the contract — any
-            analyst rank column touching the independent pipeline fails the build.
+            Every prediction is derived: PFF tape grades, athletic testing,
+            medicals, and documented team visits build the 727-prospect board.
+            Each front office then decides for itself using its own needs,
+            scheme, coaching tree, cap posture, and GM draft-history fingerprint.
           </p>
           <p className="text-ink-soft/80 text-sm">
-            Public analyst mocks appear only in <span className="caps-tight text-mode-bench">Benchmark</span> mode,
-            and only ever as a comparison baseline.
+            Outputs are probability distributions per slot, not point predictions
+            copied from somewhere else.
           </p>
         </div>
       </div>

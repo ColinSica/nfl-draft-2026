@@ -177,7 +177,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
             )}
             {cons !== null && (
               <span className="text-ink-soft">
-                <span className="caps-tight mr-1.5 text-ink-soft/70">Consensus</span>
+                <span className="caps-tight mr-1.5 text-ink-soft/70">Board</span>
                 <span className="text-ink font-bold">#{cons}</span>
               </span>
             )}

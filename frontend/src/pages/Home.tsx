@@ -78,12 +78,9 @@ export function Home() {
               Every NFL front office is modelled as an autonomous agent with
               its own roster need, scheme premium, coaching-tree DNA, cap
               posture, and GM draft-history fingerprint. A Monte Carlo drives
-              them through the 2026 board a thousand times. The resulting
-              probabilities are cross-referenced against insider reporting,
-              team-visit logs, and live market pricing &mdash; signals that
-              keep the simulation grounded in reality rather than override it.
-              The model remains the product; the external data is fuel, not
-              a forecast copied from elsewhere.
+              them through the 2026 board a thousand times. The output is a
+              probability distribution per slot, not a single prediction
+              copied from somewhere else.
             </p>
           </div>
 
@@ -102,14 +99,6 @@ export function Home() {
                   : '—'}
               </p>
             </div>
-            <HRule />
-            <div className="space-y-2">
-              <SmallCaps tight>External sanity checks</SmallCaps>
-              <p className="body-serif text-sm">
-                Insider news sweep (T-1), Kalshi market pricing, team-visit
-                logs. Reconciliation inputs — not the primary signal.
-              </p>
-            </div>
           </aside>
         </div>
       </section>
@@ -126,7 +115,7 @@ export function Home() {
           <ul className="space-y-2 body-serif">
             <TocEntry num="01" to="/simulate" title="First round." deck="Full 32 picks with calibrated probabilities and reasoning." />
             <TocEntry num="02" to="/lab"      title="Mock Lab."    deck="Adjust positional demand, lock picks, re-allocate the board." />
-            <TocEntry num="03" to="/prospects" title="Prospects."  deck="Landing distributions per player, consensus rank, college." />
+            <TocEntry num="03" to="/prospects" title="Prospects."  deck="Landing distributions per player, board rank, college." />
             <TocEntry num="04" to="/teams"    title="Teams."       deck="Front-office dossiers: needs, cap, scheme, coaching tree." />
             <TocEntry num="05" to="/full-mock" title="Full Mock." deck="Every pick, all seven rounds — 257 assignments end-to-end." />
             <TocEntry num="06" to="/method"   title="Methodology." deck="Stages, inputs, independence contract, calibration." />
@@ -142,7 +131,7 @@ export function Home() {
           number={1}
           kicker="Lead Story"
           title="Top of the board."
-          deck="Ten picks, with market-blended probabilities and per-pick reasoning drawn from analyst sources and team profiles."
+          deck="Ten picks, with model probabilities and per-pick reasoning from the team-agent profiles."
         />
 
         <div className="mt-6 overflow-x-auto">
@@ -230,7 +219,7 @@ export function Home() {
             title="Player value from tape, traits, and context."
             body={[
               'PFF 3-year tape grades, athletic composite (RAS), team-visit coverage, age, injury history, and conference tier combine into an independent grade per prospect.',
-              'Insider news, pre-draft pressers, and documented team visits feed in as structured signals. Market prices (Kalshi) are used as a thin calibration anchor for prospects with meaningful market volume — not as the grade itself.',
+              'Pre-draft pressers and documented team visits feed in as structured factual signals. Tape, traits, measurables, and reporting — never somebody else\'s ranking.',
             ]}
           />
           <MethodBlock
@@ -239,7 +228,7 @@ export function Home() {
             title="32 front offices, Monte Carlo."
             body={[
               'Each team is modelled as an autonomous agent with its own scoring function: roster need (post-FA), scheme premium, coaching-tree tendencies, GM positional affinity (from their 2019-2025 picks), cap posture, and confirmed pre-draft visits.',
-              'Picks converge via softmax over a top-K candidate pool. The sim runs 200+ times; the output is a probability distribution per slot, not a single point prediction. Markets show up only as a post-processing reality check to keep outliers honest.',
+              'Picks converge via softmax over a top-K candidate pool. The sim runs 200+ times; the output is a probability distribution per slot, not a single point prediction.',
             ]}
             border
           />
@@ -264,14 +253,9 @@ export function Home() {
           unknowns (late trades, medical news, private intel).
         </Footnote>
         <Footnote mark="†">
-          For teams with multiple R1 picks, the team-landing market is
-          allocated across slots weighted by player market P50. Single-slot
-          teams receive full allocation at their one pick.
-        </Footnote>
-        <Footnote mark="‡">
-          Reasoning citations pull from a team-tagged analyst-quote cache
-          sourced from ESPN, CBS Sports, The Ringer, Pro Football Network,
-          NFL.com, Bleacher Report, and Sports Illustrated.
+          Reasoning citations pull from a team-tagged reporting cache
+          (ESPN, CBS Sports, The Ringer, Pro Football Network, NFL.com,
+          Bleacher Report, Sports Illustrated).
         </Footnote>
       </section>
     </div>
@@ -292,11 +276,9 @@ function VitalsGrid({ stats }: { stats: any; simMeta: any; meta: any }) {
   return (
     <dl className="space-y-3">
       <Vital label="R1 picks modelled" value="32" />
-      <Vital label="Market-sanity checks" value={fmt(stats?.n_kalshi_markets)} />
       <Vital label="Team agents" value={fmt(stats?.n_agents)} />
       <Vital label="Prospects graded" value={fmt(stats?.n_prospects)} />
       <Vital label="Simulations" value={fmt(stats?.n_sims)} />
-      <Vital label="Analyst picks as input" value="0" accent="#4A6B3F" />
     </dl>
   );
 }

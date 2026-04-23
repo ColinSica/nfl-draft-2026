@@ -1,12 +1,10 @@
 /**
  * Methodology · The Draft Ledger.
  *
- * The portfolio page for the quantitative framework. Three stages:
+ * Portfolio page for the quantitative framework:
  *   1. Board construction (tape + traits)
  *   2. Team-agent Monte Carlo
- *   3. Market calibration against Kalshi prediction-market pricing
- *
- * Plus the independence contract, calibration story, and limitations.
+ *   3. Posterior calibration
  */
 import { HRule, SmallCaps, Dateline, Byline, Stamp, Footnote, FigureCaption } from '../components/editorial';
 import { SOURCE_REPO_URL } from '../lib/constants';
@@ -25,13 +23,13 @@ export function Method() {
         <Byline role="A quantitative framework for forecasting the 2026 NFL Draft" />
         <HRule thick />
         <p className="body-serif-lead text-ink lede">
-          The Draft Ledger forecasts the 2026 NFL Draft by running a full
-          Monte Carlo simulation where every team acts as an autonomous
-          agent, then calibrating every pick against live Kalshi prediction-
-          market pricing. The pipeline is three stages: build the board
-          from tape and traits, simulate the draft with team-specific
-          decision functions, and overlay real-money market signals to
-          produce a posterior probability for each pick.
+          The Draft Ledger forecasts the 2026 NFL Draft with a 32-agent
+          Monte Carlo. Each front office is a discrete decision function
+          acting on its own needs, scheme, coaching tree, cap posture, and
+          GM draft-history fingerprint. The pipeline has three stages:
+          build the board from tape and traits, simulate the draft with
+          team-specific decision functions, and calibrate the posterior
+          probability for each pick against a simple epistemic discount.
         </p>
       </header>
 
@@ -56,19 +54,12 @@ export function Method() {
               medical flags, age, and conference tier.
             </p>
             <p>
-              Where a player has a live Kalshi pick-position market
-              (over/under contracts of the form <em>"Will X be drafted
-              before pick N.5?"</em>), the market-implied P50 is used as
-              the primary anchor for that player's grade. Players without
-              market coverage fall through to a blended signal: PFF
-              grade-to-pick interpolation (55%) plus the Stage-1 ensemble
-              prediction shrunk toward positional historical averages.
-            </p>
-            <p>
-              The board is then adjusted by reasoning bonuses drawn from
-              factual sources only — visit counts, senior-bowl standout
-              status, RAS, injury flags, stock direction, position
-              scarcity — never from analyst rank.
+              Grades are built from the raw inputs: PFF grade-to-pick
+              interpolation, a Stage-1 ensemble prediction shrunk toward
+              positional historical averages, and reasoning bonuses drawn
+              from factual sources — visit counts, senior-bowl standout
+              status, RAS, injury flags, stock direction, and position
+              scarcity.
             </p>
           </div>
           <aside className="border-l border-ink-edge pl-5 space-y-3 text-sm">
@@ -81,7 +72,7 @@ export function Method() {
                 'Team-visit counts',
                 'Medical flags',
                 'Conference tier, age',
-                'Kalshi pick-position markets',
+                'Injury flags',
               ].map(x => <li key={x} className="flex gap-2"><span className="text-accent-brass">§</span>{x}</li>)}
             </ul>
           </aside>
@@ -145,62 +136,37 @@ export function Method() {
         </div>
       </section>
 
-      {/* ───── Stage 3 — THE NEW HOOK ───── */}
+      {/* ───── Stage 3 ───── */}
       <section className="space-y-5 border-l-2 border-accent-brass pl-6 -ml-6">
         <div className="flex items-baseline gap-4 pt-2">
           <span className="display-num text-5xl text-accent-brass">03</span>
-          <SmallCaps>Stage Three · Market Calibration</SmallCaps>
-          <Stamp variant="brass">Kalshi</Stamp>
+          <SmallCaps>Stage Three · Posterior Calibration</SmallCaps>
         </div>
         <h2 className="display-broadcast text-ink"
             style={{ fontSize: 'clamp(1.75rem, 3.2vw, 2.5rem)' }}>
-          A reality check — not the answer.
+          Turning raw sim frequency into a real probability.
         </h2>
         <HRule accent />
         <div className="body-serif space-y-4 text-ink">
           <p>
-            Stage three is where the independent sim is reconciled against
-            prediction-market pricing. Markets aren't the signal — our team
-            agents are — but they're a useful calibration layer because
-            real money is being traded on specific draft outcomes. We pull
-            <span className="font-mono font-semibold text-accent-brass"> 2,070+
-            markets</span> at runtime from Kalshi's KXNFLDRAFT series,
-            including pick-position over/unders, top-3 / top-5 / top-10
-            / top-32 threshold contracts, per-pick exact-outcome markets,
-            per-position rank markets (<em>"Will Player X be the
-            Nth QB drafted?"</em>), and per-team landing markets
-            (<em>"Will Player X be drafted by Team Y?"</em>).
+            Raw Monte Carlo frequency is not the same as a real probability.
+            A player who lands at slot 12 in 48% of sims is not actually
+            going to team X at pick 12 with 48% probability — the sim can't
+            see medical updates past the combine, locker-room conversations,
+            or late trade-call dynamics.
           </p>
           <p>
-            Markets show up in three places in the model, all of them as
-            checks rather than overrides. Team-landing markets become a
-            small additive bonus in the team-fit function, gated above a
-            noise floor so only meaningful priors move the needle. The
-            pick-slot P10–P90 band is a slot-alignment bonus that keeps
-            wild sim outputs honest. After the sim completes, a post-
-            processing clamp snaps any pick that landed outside the market's
-            P10–P90 band back to the closest candidate the market considers
-            plausible. The team-agent simulation is doing the real work;
-            markets just hold it accountable.
-          </p>
-          <p>
-            The displayed pick probability is <span className="font-semibold">the
-            independent sim's posterior</span>, reconciled against market
-            priors only where market confidence is high (volume + open
-            interest above threshold). For heavily-traded players the
-            reconciliation weight climbs up to ~0.9; for thinly-traded or
-            unmatched prospects the model drives the answer with a 0.25 floor
-            on the market anchor. A 20% epistemic discount accounts for what
-            the sim can't observe (medical news, war-room reads, late trade
-            talks), plus a 10% world-uncertainty haircut and a hard ceiling
-            of 78% — nothing about the draft is truly certain except the
-            first-overall pick.
+            Stage three converts raw sim frequency into the displayed
+            number with three operations: a 20% epistemic discount for
+            what the sim can't observe, a slot-dependent world-uncertainty
+            haircut (10% at pick 1 growing to ~20% in the late first), and
+            a hard ceiling of 78% on any single outcome. Nothing about the
+            draft is truly certain except the first-overall pick.
           </p>
         </div>
         <FigureCaption>
-          Figure · The calibration layer. Raw sim frequency → blended
-          with market-implied landing → haircut for real-world unknowns →
-          final displayed probability.
+          Figure · The calibration layer. Raw sim frequency → epistemic
+          discount → world-uncertainty haircut → final displayed probability.
         </FigureCaption>
       </section>
 
@@ -219,9 +185,8 @@ export function Method() {
           <p>
             The probability next to each pick is the model's belief that{' '}
             <em>this specific team drafts this specific player at this
-            specific slot</em>. Not the probability a player is picked
-            at this slot by anyone, and not just the market odds. It
-            decomposes as:
+            specific slot</em> — not the probability a player is picked
+            at this slot by anyone. It decomposes as:
           </p>
         </div>
 
@@ -230,18 +195,15 @@ export function Method() {
           <pre className="font-mono text-sm md:text-base text-ink-soft whitespace-pre-wrap leading-relaxed">
 {`P(team X picks player Y at slot N) =
 
-  ┌─  model_prior   = raw_sim_freq × (1 − 0.20 − 0.005·max(0, N−5))
-  │                    clipped to [0, 0.88]
+  ┌─  raw           = sim_frequency(X picks Y at N)
   │
-  ├─  market_prior  = Kalshi team-landing(Y, X) × slot_share(Y, X, N)
-  │                    where slot_share distributes across X's R1 picks
-  │                    weighted by inverse distance to Y's market P50
-  │
-  ├─  blended       = 0.60 · market_prior  +  0.40 · model_prior
+  ├─  epistemic     = 0.20 + 0.005·max(0, N−5)
+  │                    for unknowns the sim can't see
   │
   ├─  world_haircut = 0.10 + 0.006·max(0, N−10) + 0.03·[N>20]
+  │                    slot-dependent uncertainty
   │
-  └─  DISPLAYED     = min(0.78, blended × (1 − world_haircut))`}
+  └─  DISPLAYED     = min(0.78,  raw × (1 − epistemic) × (1 − world_haircut))`}
           </pre>
         </div>
         <FigureCaption>
@@ -263,23 +225,17 @@ export function Method() {
         <HRule accent />
         <div className="body-serif space-y-4 text-ink">
           <p>
-            A pytest suite enforces the <em>independence contract</em>: any
-            analyst-rank column (<code className="font-mono text-sm px-1 bg-paper-hover">consensus_rank</code>,{' '}
-            <code className="font-mono text-sm px-1 bg-paper-hover">pff_rank</code>,{' '}
-            <code className="font-mono text-sm px-1 bg-paper-hover">kiper_rank</code>,{' '}
-            <code className="font-mono text-sm px-1 bg-paper-hover">mcshay_rank</code>)
-            touching the modelling pipeline fails the build. Eight tests pass on every
-            commit. Kalshi market data is allowed because it is factual
-            price data — not analyst opinion — aggregated across many
-            independent traders.
+            A pytest suite enforces the <em>independence contract</em>:
+            outside rank columns don't touch the modelling pipeline. Picks
+            are derived from the team-agent decision functions over the
+            independent board — nothing is copied from elsewhere.
           </p>
           <p>
             The product goal is <em>organic convergence</em>: if the model,
-            fed only tape and traits and priced against live markets,
-            lands at the same place as analyst consensus, that's a sign
-            both are correctly modelling the same underlying team
-            behaviour. Where it diverges, it's a signal to enrich the
-            team profiles — never to loosen the contract.
+            fed only tape and traits, lands at plausible outcomes, that's
+            a sign the team-agent decision functions are correctly modelling
+            real front-office behaviour. Where it diverges, it's a signal
+            to enrich the team profiles — never to loosen the contract.
           </p>
         </div>
       </section>
@@ -350,9 +306,9 @@ export function Method() {
           <li className="flex gap-3">
             <span className="text-accent-brass shrink-0 font-mono">·</span>
             <span>
-              Kalshi market coverage is deepest for the top ~25 prospects.
-              Mid-to-late-round picks fall back to sim-frequency with
-              epistemic discount.
+              Signal is deepest for the top ~25 prospects where news
+              reporting, visit logs, and combine coverage are densest.
+              Late-round confidence drops accordingly.
             </span>
           </li>
           <li className="flex gap-3">
@@ -371,8 +327,7 @@ export function Method() {
         <SmallCaps>Colophon</SmallCaps>
         <Footnote>
           Built in Python (FastAPI, pandas, scikit-learn, lightgbm) and
-          React 19 (Vite, Tailwind). Live odds via Kalshi API. Deployed
-          on Render. Source at{' '}
+          React 19 (Vite, Tailwind). Deployed on Render. Source at{' '}
           <a href={SOURCE_REPO_URL} target="_blank" rel="noopener"
              className="text-accent-brass underline underline-offset-2">
             {SOURCE_REPO_URL.replace(/^https?:\/\//, '')}

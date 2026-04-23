@@ -231,7 +231,7 @@ export function MockLab() {
             <SmallCaps tight>Scenarios</SmallCaps>
             <div className="grid grid-cols-2 gap-1.5">
               {([
-                ['chalk', 'Chalk', 'Market-heavy, low noise, few trades'],
+                ['chalk', 'Chalk', 'Consensus-aligned, low noise, few trades'],
                 ['shock', 'Shock', 'Surprises, high noise, more trades'],
                 ['trade_frenzy', 'Trade Frenzy', '2× trade aggression'],
                 ['qb_run', 'QB Run', 'QBs go earlier'],
@@ -254,12 +254,12 @@ export function MockLab() {
             </div>
           </div>
 
-          {/* Market vs Model blend */}
+          {/* Consensus anchor weight */}
           <div className="space-y-2 pt-2">
             <div className="flex items-baseline justify-between">
-              <SmallCaps tight>Market vs Model blend</SmallCaps>
+              <SmallCaps tight>Consensus anchor</SmallCaps>
               <span className="font-mono text-xs text-accent-brass">
-                {Math.round(marketWeight * 100)}% market
+                {Math.round(marketWeight * 100)}% anchor
               </span>
             </div>
             <input
@@ -269,9 +269,9 @@ export function MockLab() {
               className="w-full accent-accent-brass"
             />
             <div className="flex justify-between text-[0.62rem] text-ink-muted font-mono">
-              <span>Pure model</span>
+              <span>Pure sim</span>
               <span>Default 60%</span>
-              <span>Pure market</span>
+              <span>Hard anchor</span>
             </div>
           </div>
 
