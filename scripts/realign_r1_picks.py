@@ -136,6 +136,9 @@ def main() -> None:
     #   Pittsburgh's QB need is well-documented; Simpson at 21 fits their
     #   board (market P50=13, Kiper #24 — 3-slot reach back).
     EXTRA_PINS: dict[int, str] = {
+        6:  "Francis Mauigoa",   # CLE: user "Browns take an OT at 6".
+                                 # Mauigoa is Kiper #9 — top OT on the board,
+                                 # 3-slot reach but CLE's #1 need is OT.
         12: "Spencer Fano",
         21: "Ty Simpson",
     }
