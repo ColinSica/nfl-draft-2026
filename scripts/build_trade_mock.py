@@ -64,20 +64,48 @@ TRADE_DEFS: list[dict] = [
     {
         "id": "PHI_up_DET_back",
         "description": "PHI trades #23 + PHI's R2 pick to DET for #17. "
-                       "PHI takes OT.",
+                       "PHI takes OT/S.",
         "participants": ["PHI", "DET"],
         "slot_reassignments": {
-            17: {"team": "PHI", "player": None, "reason": "PHI traded up for OT (Barnwell, Jeremiah)"},
+            17: {"team": "PHI", "player": None, "reason": "PHI traded up for OT/S (Barnwell, Jeremiah)"},
             23: {"team": "DET", "player": None, "reason": "DET traded back to recoup capital (Barnwell)"},
         },
     },
     {
+        "id": "CHI_up_NYJ_back",
+        "description": "CHI trades #25 + CHI's #60 to NYJ for #16. "
+                       "CHI takes EDGE/DL.",
+        "participants": ["CHI", "NYJ"],
+        "slot_reassignments": {
+            16: {"team": "CHI", "player": None, "reason": "CHI traded up for DL (Barnwell: pair #25 + Buffalo #60 to reach #16)"},
+            25: {"team": "NYJ", "player": None, "reason": "NYJ traded back, adds to their R1 capital stockpile"},
+        },
+    },
+    {
+        "id": "DAL_back_IND_up",
+        "description": "DAL trades #20 to IND (no-R1 team) for IND's R2 + R3. "
+                       "IND re-enters R1.",
+        "participants": ["DAL", "IND"],
+        "slot_reassignments": {
+            20: {"team": "IND", "player": None, "reason": "IND jumped back into R1 (DAL down per Barnwell: Cowboys need extra day-2 capital)"},
+        },
+    },
+    {
+        "id": "NE_back_GB_up",
+        "description": "NE trades #31 to GB (no-R1 team) for GB's R2 + future pick. "
+                       "GB re-enters R1 for a 5th-year-option CB.",
+        "participants": ["NE", "GB"],
+        "slot_reassignments": {
+            31: {"team": "GB", "player": None, "reason": "GB re-entered R1 (NE down per Pelissero: NE has received calls)"},
+        },
+    },
+    {
         "id": "SEA_back_out_of_R1",
-        "description": "SEA trades #32 to CIN (or similar team without R1) "
-                       "for R2/R3 capital. SEA drops out of R1.",
+        "description": "SEA trades #32 to CIN (no-R1 team) for R2/R3 capital. "
+                       "SEA drops out of R1.",
         "participants": ["SEA", "CIN"],
         "slot_reassignments": {
-            32: {"team": "CIN", "player": None, "reason": "SEA traded #32 for R2+R3 capital (Pelissero, Barnwell)"},
+            32: {"team": "CIN", "player": None, "reason": "CIN re-entered R1 (SEA down per Pelissero, Barnwell: Schneider pattern)"},
         },
     },
 ]
@@ -160,17 +188,18 @@ def main() -> None:
                                   "player": target.get("player")})
 
     # After trades, re-choose players for slots whose team changed but
-    # where the original player doesn't fit (KC took Reese at #3 — Reese
-    # was originally at #3 ARI in our no-trade mock? Actually no, Reese
-    # was at #3 ARI already. Good.) For the other slots (9 now ARI, 17
-    # now PHI, 23 now DET), pick best for new team.
+    # where the original player doesn't fit the new team's top-5 needs.
     used = {p.get("player") for p in picks if p.get("player")}
-    for slot, reassign in (
-        {9: {"team": "ARI"}, 17: {"team": "PHI"}, 23: {"team": "DET"}}.items()
-    ):
+    # Collect every slot whose team changed but has no forced player.
+    reassigned_slots: dict[int, str] = {}
+    for td in TRADE_DEFS:
+        for slot, rs in td["slot_reassignments"].items():
+            if rs.get("player"):
+                continue  # already explicitly set (e.g. KC->Reese at #3)
+            reassigned_slots[slot] = rs["team"]
+    for slot, team in reassigned_slots.items():
         target = pick_by_slot[slot]
         current_player = target.get("player")
-        team = reassign["team"]
         # The player currently at this slot (from no-trade mock) might
         # still be the best choice. Keep them if the original team that
         # drafted them also needed that position AND the new team's top

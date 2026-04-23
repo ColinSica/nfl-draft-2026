@@ -724,7 +724,7 @@
     {
       "pick": 16,
       "round": 1,
-      "team": "NYJ",
+      "team": "CHI",
       "player": "Monroe Freeling",
       "position": "OT",
       "college": "Georgia",
@@ -766,7 +766,13 @@
           "rank": 21,
           "score": 1.721
         }
-      ]
+      ],
+      "_trade": {
+        "id": "CHI_up_NYJ_back",
+        "from": "NYJ",
+        "to": "CHI",
+        "reason": "CHI traded up for DL (Barnwell: pair #25 + Buffalo #60 to reach #16)"
+      }
     },
     {
       "pick": 17,
@@ -818,7 +824,7 @@
         "id": "PHI_up_DET_back",
         "from": "DET",
         "to": "PHI",
-        "reason": "PHI traded up for OT (Barnwell, Jeremiah)"
+        "reason": "PHI traded up for OT/S (Barnwell, Jeremiah)"
       }
     },
     {
@@ -918,7 +924,7 @@
     {
       "pick": 20,
       "round": 1,
-      "team": "DAL",
+      "team": "IND",
       "player": "Akheem Mesidor",
       "position": "EDGE",
       "college": "Miami (FL)",
@@ -960,7 +966,13 @@
           "rank": 109,
           "score": 1.547
         }
-      ]
+      ],
+      "_trade": {
+        "id": "DAL_back_IND_up",
+        "from": "DAL",
+        "to": "IND",
+        "reason": "IND jumped back into R1 (DAL down per Barnwell: Cowboys need extra day-2 capital)"
+      }
     },
     {
       "pick": 21,
@@ -1159,13 +1171,13 @@
     {
       "pick": 25,
       "round": 1,
-      "team": "CHI",
+      "team": "NYJ",
       "player": "Keldric Faulk",
       "position": "EDGE",
       "college": "Auburn",
-      "rank": 27,
+      "rank": 26,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] CHI has a critical IDL need  -  free agency didn't close it, and Domonique Orange is the cleanest on-board solution at 25. Fits the default scheme profile the staff has built around; had a documented p",
+      "reasoning": "[TRADE] NYJ selected BPA after trade \u2014 EDGE Keldric Faulk",
       "score": 2.915,
       "factors": {
         "grade": 0.719,
@@ -1201,7 +1213,13 @@
           "rank": 84,
           "score": 2.312
         }
-      ]
+      ],
+      "_trade": {
+        "id": "CHI_up_NYJ_back",
+        "from": "CHI",
+        "to": "NYJ",
+        "reason": "NYJ traded back, adds to their R1 capital stockpile"
+      }
     },
     {
       "pick": 26,
@@ -1351,9 +1369,9 @@
       "player": "Denzel Boston",
       "position": "WR",
       "college": "Washington",
-      "rank": 63,
+      "rank": 21,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] KC has a critical EDGE need  -  free agency didn't close it, and Keldric Faulk is the cleanest on-board solution at 29. Fits the reid_spread scheme profile the staff has built around; had a documented pre-draft visit with KC. At this ",
+      "reasoning": "[TRADE] ARI selected BPA after trade \u2014 WR Denzel Boston",
       "score": 2.51,
       "factors": {
         "grade": 0.518,
@@ -1447,7 +1465,7 @@
     {
       "pick": 31,
       "round": 1,
-      "team": "NE",
+      "team": "GB",
       "player": "C.J. Allen",
       "position": "LB",
       "college": "Georgia",
@@ -1489,7 +1507,13 @@
           "rank": 38,
           "score": 2.397
         }
-      ]
+      ],
+      "_trade": {
+        "id": "NE_back_GB_up",
+        "from": "NE",
+        "to": "GB",
+        "reason": "GB re-entered R1 (NE down per Pelissero: NE has received calls)"
+      }
     },
     {
       "pick": 32,
@@ -1498,9 +1522,9 @@
       "player": "Jadarian Price",
       "position": "RB",
       "college": "Notre Dame",
-      "rank": 2,
+      "rank": 27,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] SEA has a critical RB need  -  free agency didn't close it, and Jeremiyah Love is the cleanest on-board solution at 32. This was a close call over Nick Singleton (RB, ranked #16); the model picked Jeremiyah Love on marginal fit advant",
+      "reasoning": "[TRADE] CIN selected BPA after trade \u2014 RB Jadarian Price",
       "score": 1.986,
       "factors": {
         "grade": 0.985,
@@ -1541,7 +1565,7 @@
         "id": "SEA_back_out_of_R1",
         "from": "SEA",
         "to": "CIN",
-        "reason": "SEA traded #32 for R2+R3 capital (Pelissero, Barnwell)"
+        "reason": "CIN re-entered R1 (SEA down per Pelissero, Barnwell: Schneider pattern)"
       }
     },
     {
@@ -12127,11 +12151,23 @@
     },
     {
       "id": "PHI_up_DET_back",
-      "description": "PHI trades #23 + PHI's R2 pick to DET for #17. PHI takes OT."
+      "description": "PHI trades #23 + PHI's R2 pick to DET for #17. PHI takes OT/S."
+    },
+    {
+      "id": "CHI_up_NYJ_back",
+      "description": "CHI trades #25 + CHI's #60 to NYJ for #16. CHI takes EDGE/DL."
+    },
+    {
+      "id": "DAL_back_IND_up",
+      "description": "DAL trades #20 to IND (no-R1 team) for IND's R2 + R3. IND re-enters R1."
+    },
+    {
+      "id": "NE_back_GB_up",
+      "description": "NE trades #31 to GB (no-R1 team) for GB's R2 + future pick. GB re-enters R1 for a 5th-year-option CB."
     },
     {
       "id": "SEA_back_out_of_R1",
-      "description": "SEA trades #32 to CIN (or similar team without R1) for R2/R3 capital. SEA drops out of R1."
+      "description": "SEA trades #32 to CIN (no-R1 team) for R2/R3 capital. SEA drops out of R1."
     }
   ],
   "variant": "with_trades"

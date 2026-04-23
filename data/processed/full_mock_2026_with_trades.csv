@@ -14,23 +14,23 @@ pick,round,team,player,position,college,rank,trade_from,trade_to
 13,1,LAR,Makai Lemon,WR,USC,19,,
 14,1,BAL,Olaivavega Ioane,IOL,Penn State,49,,
 15,1,TB,Kenyon Sadiq,TE,Oregon,20,,
-16,1,NYJ,Monroe Freeling,OT,Georgia,72,,
+16,1,CHI,Monroe Freeling,OT,Georgia,72,NYJ,CHI
 17,1,PHI,Dillon Thieneman,S,Oregon,41,DET,PHI
 18,1,MIN,Jermod McCoy,CB,Tennessee,23,,
 19,1,CAR,Blake Miller,OT,Clemson,30,,
-20,1,DAL,Akheem Mesidor,EDGE,Miami (FL),64,,
+20,1,IND,Akheem Mesidor,EDGE,Miami (FL),64,DAL,IND
 21,1,PIT,Omar Cooper Jr.,WR,Indiana,34,,
 22,1,LAC,Kadyn Proctor,OT,Alabama,13,,
 23,1,DET,Emmanuel McNeil-Warren,S,Toledo,33,PHI,DET
 24,1,CLE,KC Concepcion,WR,Texas A&M,17,,
-25,1,CHI,Keldric Faulk,EDGE,Auburn,27,,
+25,1,NYJ,Keldric Faulk,EDGE,Auburn,26,CHI,NYJ
 26,1,BUF,Caleb Lomu,OT,Utah,67,,
 27,1,SF,Max Iheanachor,OT,Arizona State,47,,
 28,1,HOU,Colton Hood,CB,Tennessee,36,,
-29,1,ARI,Denzel Boston,WR,Washington,63,KC,ARI
+29,1,ARI,Denzel Boston,WR,Washington,21,KC,ARI
 30,1,MIA,Ty Simpson,QB,Alabama,54,,
-31,1,NE,C.J. Allen,LB,Georgia,9,,
-32,1,CIN,Jadarian Price,RB,Notre Dame,2,SEA,CIN
+31,1,GB,C.J. Allen,LB,Georgia,9,NE,GB
+32,1,CIN,Jadarian Price,RB,Notre Dame,27,SEA,CIN
 33,2,NYJ,TJ Hall,CB,Iowa,82,,
 34,2,ARI,Malachi Lawrence,EDGE,UCF,30,,
 35,2,TEN,Kayden McDonald,DL,Ohio State,105,,
