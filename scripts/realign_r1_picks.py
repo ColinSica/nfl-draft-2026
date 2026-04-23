@@ -139,6 +139,10 @@ def main() -> None:
         6:  "Francis Mauigoa",   # CLE: user "Browns take an OT at 6".
                                  # Mauigoa is Kiper #9 — top OT on the board,
                                  # 3-slot reach but CLE's #1 need is OT.
+        11: "Jordyn Tyson",      # MIA: user "Tyson is the 2nd WR off the
+                                 # board". Tate @ #7 WAS is WR1; Tyson @ #11
+                                 # MIA makes him WR2. Market P50=7 (4-slot
+                                 # fall, within band).
         12: "Spencer Fano",
         21: "Ty Simpson",
     }

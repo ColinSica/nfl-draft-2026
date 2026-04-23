@@ -9,11 +9,11 @@ pick,round,team,player,position,school,probability,independent_grade,fit_score,t
 8,1,NO,Rueben Bain,EDGE,Miami (FL),0.333,-14.0,4.727,0.425
 9,1,KC,Mansoor Delane,CB,LSU,0.367,-16.0,4.006,0.182
 10,1,NYG,Caleb Downs,S,Ohio State,0.6,-24.0,4.657,0.425
-11,1,MIA,Makai Lemon,WR,USC,0.267,-19.0,4.258,0.552
+11,1,MIA,Jordyn Tyson,WR,Arizona State,0.267,-23.0,4.258,0.552
 12,1,DAL,Spencer Fano,OT,Utah,0.367,-20.0,2.686,0.468
-13,1,LAR,Olaivavega Ioane,IOL,Penn State,0.5,-18.0,4.129,0.595
-14,1,BAL,Kenyon Sadiq,TE,Oregon,0.467,-15.0,4.013,0.288
-15,1,TB,Jordyn Tyson,WR,Arizona State,0.367,-23.0,3.022,0.225
+13,1,LAR,Makai Lemon,WR,USC,0.5,-19.0,4.129,0.595
+14,1,BAL,Olaivavega Ioane,IOL,Penn State,0.467,-18.0,4.013,0.288
+15,1,TB,Kenyon Sadiq,TE,Oregon,0.367,-15.0,3.022,0.225
 16,1,NYJ,Monroe Freeling,OT,Georgia,0.2,-17.0,3.201,0.198
 17,1,DET,Dillon Thieneman,S,Oregon,0.6,-12.0,4.616,0.468
 18,1,MIN,Jermod McCoy,CB,Tennessee,0.15,-1.0,2.519,0.096
