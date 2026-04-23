@@ -494,6 +494,78 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
             for player, ct in pc.items():
                 _any_r1_landings[player] += ct
 
+    # Kiper's final big board — used as a consensus R1 eligibility filter.
+    # Real NFL drafts almost never surface a player ranked >45 by Kiper into
+    # R1. If our model tries to pick a rank-70+ Kiper player in R1 (like
+    # Jalon Kilgore #86 or Zakee Wheatley #91), it's a model artifact that
+    # needs to be corrected by swapping in a Kiper top-45 player who actually
+    # fits the team.
+    _kiper_rank: dict[str, int] = {}
+    _kiper_path = ROOT / "data/features/kiper_big_board_2026.json"
+    if _kiper_path.exists():
+        try:
+            kd = json.loads(_kiper_path.read_text(encoding="utf-8"))
+            for entry in kd.get("top100", []):
+                # Normalize name (drop Jr./Sr./III suffixes for matching)
+                nm = entry["player"]
+                nm_clean = nm.replace(" Jr.", "").replace(" Jr", "").replace(" Sr.", "").replace(" III", "").replace(" II", "").strip()
+                _kiper_rank[nm] = entry["rank"]
+                _kiper_rank[nm_clean] = entry["rank"]
+        except Exception as exc:
+            print(f"[run] Kiper board load failed: {exc}")
+
+    def _kiper_r1_eligible(player: str) -> bool:
+        """True if Kiper has this player in R1-realistic range (top 45).
+        We allow a cushion past his top 32 because Kiper's board and
+        consensus disagree in the 30-45 zone."""
+        # Try exact match, then suffix-stripped match
+        rk = _kiper_rank.get(player)
+        if rk is None:
+            nm_clean = player.replace(" Jr.", "").replace(" Jr", "").replace(" Sr.", "").replace(" III", "").replace(" II", "").strip()
+            rk = _kiper_rank.get(nm_clean)
+        if rk is None:
+            return False  # not on Kiper's top-100 at all
+        return rk <= 45
+
+    def _enforce_kiper_r1_eligibility(candidate: str, slot: int,
+                                       canon_team: str | None) -> str:
+        """If candidate isn't Kiper-R1-eligible, swap in the best-ranked
+        Kiper top-45 player who is unassigned and fits the team."""
+        if slot > 32:
+            return candidate
+        if _kiper_r1_eligible(candidate):
+            return candidate
+        # Find the best unassigned Kiper top-45 player who fits this team
+        team_profile = (_AGENTS_CACHE or {}).get(canon_team or "", {}) or {}
+        team_needs = team_profile.get("roster_needs", {}) or {}
+        team_scheme_premium = set((team_profile.get("scheme") or {}).get("premium", []) or [])
+        qb_sit = (team_profile.get("qb_situation") or "").lower()
+        qb_urg = float(team_profile.get("qb_urgency", 0.0) or 0.0)
+
+        # Kiper's rank-sorted list (player, rank)
+        ranked = sorted(_kiper_rank.items(), key=lambda kv: kv[1])
+        for player, rk in ranked:
+            if rk > 45:
+                break
+            if player in assigned_players:
+                continue
+            # Must not already be in pred_rows (avoid dupes via suffix variants)
+            if any(pr["player"] == player or
+                   pr["player"].replace(" Jr.","").replace(" Jr","") == player.replace(" Jr.","").replace(" Jr","")
+                   for pr in pred_rows):
+                continue
+            pos = _pos_lookup.get(player, "")
+            # Kiper's pos labels don't always match ours; skip pos check if unknown
+            # Respect QB-lock
+            if pos == "QB" and qb_sit == "locked" and qb_urg < 0.1:
+                continue
+            # Skip if team has no real need AND player isn't a scheme premium
+            need_w = float(team_needs.get(pos, 0.0) or 0.0)
+            if need_w < 1.0 and pos not in team_scheme_premium and pos != "":
+                continue
+            return player
+        return candidate
+
     for slot in sorted(agg["slot_counts"].keys()):
         # Use the full slot_counts (all sims, all picking teams) so a player
         # who's popular at this slot — even if always taken via trade-up — is
@@ -527,6 +599,15 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
         if rescued != player:
             ct = pc.get(rescued, _any_r1_landings.get(rescued, 1))
             player = rescued
+        # Kiper R1 eligibility: if the pick isn't in Kiper's top 45, swap
+        # for the best available Kiper top-45 that fits this team. This
+        # catches cases where our model picks a Day-3 prospect (rank 70+
+        # per Kiper) like Jalon Kilgore or Zakee Wheatley and elevates
+        # them above a realistic R1 consensus player.
+        kiper_swap = _enforce_kiper_r1_eligibility(player, slot, canonical_team)
+        if kiper_swap != player:
+            ct = pc.get(kiper_swap, _any_r1_landings.get(kiper_swap, 1))
+            player = kiper_swap
         assigned_players.add(player)
         prob = round(ct / n_sims, 3)
 
@@ -590,6 +671,318 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
             "reasoning_summary": rs,
             "top_factors": top_factors,
         }
+    # ─── POST-PASS 0: fill any skipped R1 slots ──────────────────────
+    # Sometimes chosen_p lookup fails and a slot gets skipped entirely
+    # (happens when a Kiper-swap references a player never in any sim).
+    # For missing R1 slots, insert the best unassigned Kiper top-45 that
+    # fits the canonical team.
+    existing_picks = {r["pick"] for r in pred_rows}
+    for slot in range(1, 33):
+        if slot in existing_picks:
+            continue
+        canon_team = canonical_owners.get(slot) or ""
+        team_profile = (_AGENTS_CACHE or {}).get(canon_team, {}) or {}
+        team_needs = team_profile.get("roster_needs", {}) or {}
+        team_scheme_premium = set((team_profile.get("scheme") or {}).get("premium", []) or [])
+        qb_sit = (team_profile.get("qb_situation") or "").lower()
+        qb_urg = float(team_profile.get("qb_urgency", 0.0) or 0.0)
+        already_picked = {r["player"] for r in pred_rows}
+        for p, rk in sorted(_kiper_rank.items(), key=lambda kv: kv[1]):
+            if rk > 45: break
+            if p in already_picked: continue
+            pos = _pos_lookup.get(p, "")
+            if pos == "QB" and qb_sit == "locked" and qb_urg < 0.1: continue
+            need_w = float(team_needs.get(pos, 0.0) or 0.0)
+            if need_w < 1.0 and pos not in team_scheme_premium: continue
+            # Pull stats from any sim
+            rep_p = None
+            for sim in all_sims:
+                for pp in sim:
+                    if pp["player"] == p:
+                        rep_p = pp; break
+                if rep_p: break
+            if not rep_p: continue
+            pred_rows.append({
+                "pick": slot, "round": _round_for_slot(slot),
+                "team": canon_team, "player": p, "position": rep_p["position"],
+                "school": rep_p["school"], "probability": 0.15,
+                "independent_grade": round(rep_p["independent_grade"], 2),
+                "fit_score": round(rep_p["fit_score"], 3),
+                "trade_down_p_structural": rep_p.get("trade_down_p_structural", 0.1),
+            })
+            rs, top_factors = _build_reasoning({**rep_p, "team": canon_team}, 0.15)
+            reasoning["picks"][str(slot)] = {
+                "team": canon_team, "player": p, "position": rep_p["position"],
+                "fit_score": round(rep_p["fit_score"], 3),
+                "independent_grade": round(rep_p["independent_grade"], 2),
+                "probability": 0.15,
+                "trade_down_p_structural": rep_p.get("trade_down_p_structural", 0.1),
+                "reasoning_summary": rs, "top_factors": top_factors,
+            }
+            print(f"[post-pass fill] slot {slot} ({canon_team}): {p} (K#{rk})")
+            break
+    pred_rows.sort(key=lambda r: r["pick"])
+
+    # ─── POST-PASS 1: positional rank order ────────────────────────────
+    # Enforce that players come off the board in Kiper's rank order within
+    # a position. If the 2nd-ranked safety is picked before the 1st-ranked
+    # safety (and the 1st is still unassigned with R1 sim support), swap.
+    # Applies to all positions — no reason to take OT2 before OT1.
+    def _kiper_rk(name: str) -> int:
+        r = _kiper_rank.get(name)
+        if r is None:
+            nm_clean = name.replace(" Jr.", "").replace(" Jr", "").replace(" III", "").replace(" II", "").strip()
+            r = _kiper_rank.get(nm_clean)
+        return r or 999
+
+    # R1-internal positional swaps: find pairs of R1 picks at same position
+    # where later pick has better Kiper rank than earlier. Swap their players
+    # so the higher-ranked one goes earlier.
+    r1_rows_wip = [r for r in pred_rows if r["pick"] <= 32]
+    by_pos_r1: dict[str, list] = defaultdict(list)
+    for r in r1_rows_wip:
+        pos = r["position"]
+        bucket = pos
+        if pos in ("OL",): bucket = "OT"
+        if pos in ("DT", "NT"): bucket = "DL"
+        by_pos_r1[bucket].append(r)
+    for bucket, rows in by_pos_r1.items():
+        # Sort by pick (earliest first)
+        rows.sort(key=lambda r: r["pick"])
+        # Check pairs (i, j) where i < j — if rows[j] has better Kiper rank
+        # than rows[i], swap their player fields (keep team assignments).
+        changed = True
+        iterations = 0
+        while changed and iterations < 10:
+            changed = False
+            iterations += 1
+            for i in range(len(rows)):
+                for j in range(i + 1, len(rows)):
+                    ri = rows[i]; rj = rows[j]
+                    rk_i = _kiper_rk(ri["player"])
+                    rk_j = _kiper_rk(rj["player"])
+                    if rk_j < rk_i:  # j has better rank, should be earlier
+                        # Swap player/position/school/grade between ri and rj
+                        ri_p = ri["player"]; rj_p = rj["player"]
+                        for pr in pred_rows:
+                            if pr["pick"] == ri["pick"]:
+                                # Find rj's stats
+                                rp = None
+                                for sim in all_sims:
+                                    for pp in sim:
+                                        if pp["player"] == rj_p:
+                                            rp = pp; break
+                                    if rp: break
+                                if rp:
+                                    pr["player"] = rj_p
+                                    pr["independent_grade"] = round(rp["independent_grade"], 2)
+                                    pr["fit_score"] = round(rp["fit_score"], 3)
+                            elif pr["pick"] == rj["pick"]:
+                                ri_stats = None
+                                for sim in all_sims:
+                                    for pp in sim:
+                                        if pp["player"] == ri_p:
+                                            ri_stats = pp; break
+                                    if ri_stats: break
+                                if ri_stats:
+                                    pr["player"] = ri_p
+                                    pr["independent_grade"] = round(ri_stats["independent_grade"], 2)
+                                    pr["fit_score"] = round(ri_stats["fit_score"], 3)
+                        # Update reasoning entries too (swap the player strings)
+                        if str(ri["pick"]) in reasoning["picks"]:
+                            r_i = reasoning["picks"][str(ri["pick"])]
+                            r_j = reasoning["picks"][str(rj["pick"])]
+                            r_i["player"], r_j["player"] = r_j["player"], r_i["player"]
+                            r_i["independent_grade"], r_j["independent_grade"] = r_j["independent_grade"], r_i["independent_grade"]
+                        print(f"[post-pass pos-swap] {bucket}: slot {ri['pick']} {ri_p}(K#{rk_i}) <-> slot {rj['pick']} {rj_p}(K#{rk_j})")
+                        # Update rows for next pass
+                        ri["player"] = rj_p
+                        rj["player"] = ri_p
+                        changed = True
+                        break
+                if changed:
+                    break
+
+    # Group pred_rows R1 entries by position, sort by pick#
+    r1_rows = [r for r in pred_rows if r["pick"] <= 32]
+    by_pos: dict[str, list] = defaultdict(list)
+    for r in r1_rows:
+        pos = r["position"]
+        # Collapse OT/OL → OT, DL/DT/NT → DL, etc.
+        bucket = pos
+        if pos in ("OL",): bucket = "OT"
+        if pos in ("DT", "NT"): bucket = "DL"
+        by_pos[bucket].append(r)
+
+    # For each position bucket: sort by pick (earliest-picked first),
+    # then check that they're in Kiper rank order. If out-of-order and a
+    # higher-ranked same-position player exists in Kiper top-45 and is
+    # unassigned with R1 sim support, do the swap.
+    all_picked_players = {r["player"] for r in r1_rows}
+    for bucket, rows in by_pos.items():
+        rows.sort(key=lambda r: r["pick"])
+        # Build unassigned Kiper top-45 same-position list
+        kiper_candidates_at_pos = []
+        for player, rk in sorted(_kiper_rank.items(), key=lambda kv: kv[1]):
+            if rk > 45: break
+            if player in all_picked_players: continue
+            p_pos = _pos_lookup.get(player, "")
+            # Match bucket
+            p_bucket = p_pos
+            if p_pos in ("OL",): p_bucket = "OT"
+            if p_pos in ("DT", "NT"): p_bucket = "DL"
+            if p_bucket != bucket: continue
+            if _any_r1_landings.get(player, 0) == 0: continue
+            kiper_candidates_at_pos.append((player, rk))
+
+        # Walk picks earliest-first. For each pick, if a higher-Kiper-rank
+        # same-position candidate exists, swap.
+        for pick_row in rows:
+            picked_rank = _kiper_rk(pick_row["player"])
+            # Find best same-position alternative with Kiper rank < picked_rank
+            best = None
+            for cand_player, cand_rk in kiper_candidates_at_pos:
+                if cand_rk < picked_rank:
+                    best = (cand_player, cand_rk)
+                    break  # first one is best (sorted by rank)
+            if best:
+                # Check team fit
+                team = pick_row["team"]
+                team_profile = (_AGENTS_CACHE or {}).get(team, {}) or {}
+                qb_sit = (team_profile.get("qb_situation") or "").lower()
+                qb_urg = float(team_profile.get("qb_urgency", 0.0) or 0.0)
+                pos = _pos_lookup.get(best[0], "")
+                if pos == "QB" and qb_sit == "locked" and qb_urg < 0.1:
+                    continue
+                # Perform swap
+                old_name = pick_row["player"]
+                rep_p = None
+                for sim in all_sims:
+                    for p in sim:
+                        if p["player"] == best[0]:
+                            rep_p = p
+                            break
+                    if rep_p: break
+                if not rep_p: continue
+                for pr in pred_rows:
+                    if pr["pick"] == pick_row["pick"]:
+                        pr["player"] = best[0]
+                        pr["position"] = rep_p["position"]
+                        pr["school"] = rep_p["school"]
+                        pr["independent_grade"] = round(rep_p["independent_grade"], 2)
+                        pr["fit_score"] = round(rep_p["fit_score"], 3)
+                        pr["probability"] = max(0.15, pr["probability"] * 0.8)
+                        break
+                rs, top_factors = _build_reasoning({**rep_p, "team": team}, pr["probability"])
+                reasoning["picks"][str(pick_row["pick"])] = {
+                    "team": team, "player": best[0], "position": rep_p["position"],
+                    "fit_score": round(rep_p["fit_score"], 3),
+                    "independent_grade": round(rep_p["independent_grade"], 2),
+                    "probability": pr["probability"],
+                    "trade_down_p_structural": rep_p["trade_down_p_structural"],
+                    "reasoning_summary": rs, "top_factors": top_factors,
+                }
+                print(f"[post-pass pos-order] slot {pick_row['pick']} ({team}): "
+                      f"{old_name} (K#{picked_rank}) -> {best[0]} (K#{best[1]})")
+                # Update tracking
+                all_picked_players.discard(old_name)
+                all_picked_players.add(best[0])
+                kiper_candidates_at_pos = [(p, r) for p, r in kiper_candidates_at_pos
+                                            if p != best[0]]
+                # Add the old player to candidates if eligible
+                old_rk = _kiper_rk(old_name)
+                if old_rk <= 45:
+                    kiper_candidates_at_pos.append((old_name, old_rk))
+                    kiper_candidates_at_pos.sort(key=lambda kv: kv[1])
+                pick_row["player"] = best[0]  # update local too
+
+    # ─── POST-PASS 2: guarantee Kiper top-15 appear in R1 ──────────────
+    # Real drafts virtually always have Kiper's top-15 prospects in R1.
+    # If the greedy missed one (happens when two top-5 players share a
+    # modal slot and one loses the head-to-head), swap them in for the
+    # weakest R1 pick they could plausibly replace.
+    r1_rows = [r for r in pred_rows if r["pick"] <= 32]
+    missing_top15 = []
+    for player, rk in sorted(_kiper_rank.items(), key=lambda kv: kv[1]):
+        if rk > 15:
+            break
+        # Match against pred_rows with suffix tolerance
+        nm_clean = player.replace(" Jr.", "").replace(" Jr", "").strip()
+        in_r1 = any(r["player"] == player or
+                    r["player"].replace(" Jr.", "").replace(" Jr", "").strip() == nm_clean
+                    for r in r1_rows)
+        if not in_r1:
+            missing_top15.append((player, rk))
+
+    if missing_top15:
+        print(f"[post-pass] Kiper top-15 missing from R1: {[p for p,_ in missing_top15]}")
+        # Sort R1 rows by Kiper rank descending (worst first)
+        r1_sorted_worst_first = sorted(r1_rows, key=lambda r: -_kiper_rk(r["player"]))
+        for missing_player, missing_rk in missing_top15:
+            # Find a weakest pick whose team has a reasonable fit for missing_player
+            # (matches position need, not QB-locked if missing is QB, etc.)
+            missing_pos = _pos_lookup.get(missing_player, "")
+            replaced = False
+            for weak in r1_sorted_worst_first:
+                weak_kiper = _kiper_rk(weak["player"])
+                if weak_kiper <= 15:
+                    continue  # can't replace a top-15 pick
+                if weak_kiper <= missing_rk:
+                    continue  # weak pick is actually better than what we'd insert
+                team = weak["team"]
+                team_profile = (_AGENTS_CACHE or {}).get(team, {}) or {}
+                team_needs = team_profile.get("roster_needs", {}) or {}
+                team_scheme_premium = set((team_profile.get("scheme") or {}).get("premium", []) or [])
+                qb_sit = (team_profile.get("qb_situation") or "").lower()
+                qb_urg = float(team_profile.get("qb_urgency", 0.0) or 0.0)
+                if missing_pos == "QB" and qb_sit == "locked" and qb_urg < 0.1:
+                    continue
+                need_w = float(team_needs.get(missing_pos, 0.0) or 0.0)
+                if need_w < 1.0 and missing_pos not in team_scheme_premium:
+                    continue
+                # Perform swap in pred_rows + reasoning
+                old_player = weak["player"]
+                # Find this prospect's row in any sim to pull grade/fit
+                rep_p = None
+                for sim in all_sims:
+                    for p in sim:
+                        if p["player"] == missing_player:
+                            rep_p = p
+                            break
+                    if rep_p: break
+                if not rep_p:
+                    continue
+                # Update pred_rows entry
+                for pr in pred_rows:
+                    if pr["pick"] == weak["pick"]:
+                        pr["player"] = missing_player
+                        pr["position"] = rep_p["position"]
+                        pr["school"] = rep_p["school"]
+                        pr["independent_grade"] = round(rep_p["independent_grade"], 2)
+                        pr["fit_score"] = round(rep_p["fit_score"], 3)
+                        pr["probability"] = max(0.10, pr["probability"] * 0.7)
+                        break
+                # Update reasoning
+                rs, top_factors = _build_reasoning({**rep_p, "team": team}, pr["probability"])
+                reasoning["picks"][str(weak["pick"])] = {
+                    "team": team,
+                    "player": missing_player,
+                    "position": rep_p["position"],
+                    "fit_score": round(rep_p["fit_score"], 3),
+                    "independent_grade": round(rep_p["independent_grade"], 2),
+                    "probability": pr["probability"],
+                    "trade_down_p_structural": rep_p["trade_down_p_structural"],
+                    "reasoning_summary": rs,
+                    "top_factors": top_factors,
+                }
+                print(f"[post-pass] swapped slot {weak['pick']} ({team}): "
+                      f"{old_player} (Kiper #{weak_kiper}) → {missing_player} (Kiper #{missing_rk})")
+                r1_sorted_worst_first.remove(weak)
+                replaced = True
+                break
+            if not replaced:
+                print(f"[post-pass] could not place Kiper #{missing_rk} {missing_player} (no team fit)")
+
     pred_df = pd.DataFrame(pred_rows)
     pred_path = ROOT / cfg["outputs"]["predictions_csv"]
     # Write mock picks to a separate file so the player board CSV stays clean

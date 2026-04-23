@@ -15,6 +15,7 @@ type Prospect = {
   position: string;
   college: string | null;
   consensus_rank: number | null;
+  kiper_rank: number | null;
   landings: { slot: number; team: string | null; probability: number }[];
   mean_landing: number;
   variance_landing: number;
@@ -78,11 +79,12 @@ export function Prospects() {
           </label>
           <button
             onClick={() => downloadCsv('2026-big-board.csv', filtered.map(p => ({
-              most_likely_slot: p.most_likely_slot,
-              most_likely_team: p.most_likely_team ?? '',
+              kiper_rank: p.kiper_rank ?? '',
               player: p.player,
               position: p.position,
               college: p.college ?? '',
+              most_likely_slot: p.most_likely_slot,
+              most_likely_team: p.most_likely_team ?? '',
               consensus_rank: p.consensus_rank ?? '',
               mean_landing: p.mean_landing,
               variance_landing: p.variance_landing,
@@ -137,8 +139,8 @@ export function Prospects() {
                       onClick={() => setSelected(p.player)}
                       className="flex-1 text-left flex items-baseline gap-4 px-4 py-3 min-w-0"
                     >
-                      <span className="display-num text-xl text-ink-soft w-8 shrink-0 text-right">
-                        {p.most_likely_slot || '·'}
+                      <span className="display-num text-xl text-ink w-10 shrink-0 text-right">
+                        {p.kiper_rank ?? '·'}
                       </span>
                       <span className="flex-1 min-w-0">
                         <div className="display-broadcast text-lg leading-none text-ink truncate">
@@ -149,11 +151,19 @@ export function Prospects() {
                         </div>
                       </span>
                       <span className="text-right shrink-0 text-xs font-mono">
-                        {p.most_likely_team && (
+                        {p.most_likely_slot ? (
                           <>
-                            <span className="caps-tight text-ink-soft">to</span>{' '}
-                            <span className="text-ink font-bold">{p.most_likely_team}</span>
+                            <span className="caps-tight text-ink-soft">proj</span>{' '}
+                            <span className="text-ink font-bold">#{p.most_likely_slot}</span>
+                            {p.most_likely_team && (
+                              <>
+                                <span className="text-ink-soft"> · </span>
+                                <span className="text-ink font-bold">{p.most_likely_team}</span>
+                              </>
+                            )}
                           </>
+                        ) : (
+                          <span className="text-ink-soft italic">off board</span>
                         )}
                       </span>
                     </button>
@@ -200,6 +210,9 @@ function ProspectDetail({ p }: { p: Prospect }) {
             <div className="mt-2 text-xs font-mono text-ink-soft">
               <span className="px-1.5 py-0.5 bg-ink text-paper font-bold mr-2">{p.position}</span>
               {displayValue(p.college, '—')}
+              {p.kiper_rank && (
+                <span className="ml-2">· Kiper #{p.kiper_rank}</span>
+              )}
               {p.consensus_rank && (
                 <span className="ml-2">· Consensus #{p.consensus_rank}</span>
               )}

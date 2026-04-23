@@ -725,6 +725,41 @@ def build_independent_board(config: dict) -> pd.DataFrame:
     # ---- 5b. Reasoning bonuses (factual only) ----
     scored = _apply_reasoning(read)
 
+    # ---- 5c. Kiper board anchor ----
+    # Force our board to mirror Kiper's final top-100. This is the strongest
+    # consensus big board published pre-draft. Per user 4/23: "the big board
+    # should look the same if not very very similar to Kiper." Implementation:
+    # for any prospect in Kiper's top-100, set their independent_grade such
+    # that their final_rank will equal Kiper's rank. For prospects not in
+    # Kiper's top-100, keep their relative order but shift them past #100.
+    kiper_path = ROOT / "data/features/kiper_big_board_2026.json"
+    if kiper_path.exists():
+        kiper_data = _json.loads(kiper_path.read_text(encoding="utf-8"))
+        kiper_map: dict[str, int] = {}
+        for entry in kiper_data.get("top100", []):
+            nm = entry["player"]
+            kiper_map[nm] = entry["rank"]
+            nm_clean = nm.replace(" Jr.", "").replace(" Jr", "").replace(" Sr.", "").replace(" III", "").replace(" II", "").strip()
+            kiper_map[nm_clean] = entry["rank"]
+        # Compute a target grade for each prospect that mirrors Kiper's rank.
+        # Grade scale: target = -30 + rank (so rank 1 = -29, rank 100 = +70).
+        # For non-Kiper players, keep their existing grade but ensure it's
+        # above all Kiper-ranked players (shifted past rank 100).
+        def _kiper_target(player: str, fallback_grade: float) -> float:
+            rk = kiper_map.get(player)
+            if rk is None:
+                nm = str(player).replace(" Jr.", "").replace(" Jr", "").replace(" Sr.", "").replace(" III", "").replace(" II", "").strip()
+                rk = kiper_map.get(nm)
+            if rk is not None:
+                return -30.0 + float(rk)  # rank 1 -> -29, rank 100 -> +70
+            # Non-Kiper prospect: keep grade but bump past +72 (past rank 102)
+            return max(72.0, float(fallback_grade))
+        scored["independent_grade"] = scored.apply(
+            lambda r: _kiper_target(r["player"], r.get("independent_grade", 999)),
+            axis=1
+        )
+        print(f"[player_value] anchored {len(kiper_map)//2} prospects to Kiper big board")
+
     # ---- 6. Rank + tier + confidence ----
     scored = scored.sort_values("independent_grade").reset_index(drop=True)
     scored["final_rank"] = np.arange(1, len(scored) + 1)

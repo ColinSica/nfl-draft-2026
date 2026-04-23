@@ -81,6 +81,7 @@ def _original_pick_owners() -> dict[int, str]:
     r1 = df[df["round"] == 1][["pick_number", "team"]]
     return {int(r.pick_number): r.team for _, r in r1.iterrows()}
 PROSPECTS_CSV = PROCESSED / "prospects_2026_enriched.csv"
+KIPER_BOARD_JSON = FEATURES / "kiper_big_board_2026.json"
 
 app = FastAPI(title="NFL Draft Predictor 2026", version="2.0")
 
@@ -517,58 +518,106 @@ def _merge_consensus_rank(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def _kiper_key(name: str) -> str:
+    """Normalize a player name for Kiper-board lookup (case/punct insensitive)."""
+    return "".join(ch for ch in (name or "").lower() if ch.isalnum())
+
+
+def _load_kiper_board() -> list[dict]:
+    if not KIPER_BOARD_JSON.exists():
+        return []
+    try:
+        data = json.loads(KIPER_BOARD_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    return list(data.get("top100") or [])
+
+
 @app.get("/api/simulations/prospects")
 def prospect_landings() -> dict:
-    """Per-prospect landing distribution from the latest Monte Carlo CSV.
-    Returns one row per (player, slot) with probability, plus aggregate
-    mean/variance/total_prob. Used by the Simulate page's 'By prospect' view
-    so sliders (Styles, Tate, etc. that don't win any single slot) are
-    visible via their aggregate distribution."""
-    if not MC_CSV.exists():
-        return {"prospects": [], "meta": {"file_present": False}}
-    df = pd.read_csv(MC_CSV)
-    df = _merge_consensus_rank(df)
-    slot_col = "pick_slot" if "pick_slot" in df.columns else "pick_number"
-    team_col = "most_likely_team" if "most_likely_team" in df.columns else "team"
-
-    out: list[dict] = []
-    # Group by player; CSV has one row per (player, slot) already.
-    for player, grp in df.groupby("player"):
-        grp = grp.sort_values("probability", ascending=False)
-        first = grp.iloc[0]
-        landings = [
-            {
-                "slot":        int(r[slot_col]),
-                "team":        r.get(team_col),
-                "probability": _displayed_probability(
-                    float(r["probability"] or 0),
-                    player=player, team=r.get(team_col),
-                    slot=int(r[slot_col])),
+    """Per-prospect big board. Ordering follows Mel Kiper's published ESPN
+    big board; Monte Carlo landing distributions are merged in for any
+    player we can match. Non-Kiper MC players are appended after the
+    Kiper-ranked entries so the simulator view still shows them."""
+    mc_by_player: dict[str, dict] = {}
+    mc_meta: dict = {"file_present": MC_CSV.exists()}
+    if MC_CSV.exists():
+        df = pd.read_csv(MC_CSV)
+        df = _merge_consensus_rank(df)
+        slot_col = "pick_slot" if "pick_slot" in df.columns else "pick_number"
+        team_col = "most_likely_team" if "most_likely_team" in df.columns else "team"
+        for player, grp in df.groupby("player"):
+            grp = grp.sort_values("probability", ascending=False)
+            first = grp.iloc[0]
+            landings = [
+                {
+                    "slot":        int(r[slot_col]),
+                    "team":        r.get(team_col),
+                    "probability": _displayed_probability(
+                        float(r["probability"] or 0),
+                        player=player, team=r.get(team_col),
+                        slot=int(r[slot_col])),
+                }
+                for _, r in grp.iterrows()
+            ]
+            mean_landing = float(first.get("mean_landing_pick") or 0)
+            var_landing = float(first.get("variance_landing_pick") or 0)
+            total_prob = sum(l["probability"] for l in landings)
+            mc_by_player[_kiper_key(player)] = {
+                "player":           player,
+                "position":         first.get("position"),
+                "college":          first.get("college"),
+                "consensus_rank":   (int(first["consensus_rank"])
+                                     if pd.notna(first.get("consensus_rank")) else None),
+                "landings":         landings,
+                "mean_landing":     round(mean_landing, 2),
+                "variance_landing": round(var_landing, 2),
+                "total_prob":       round(total_prob, 3),
+                "most_likely_slot": int(first[slot_col]),
+                "most_likely_team": first.get(team_col),
             }
-            for _, r in grp.iterrows()
-        ]
-        mean_landing = float(first.get("mean_landing_pick") or 0)
-        var_landing = float(first.get("variance_landing_pick") or 0)
-        total_prob = sum(l["probability"] for l in landings)
-        out.append({
-            "player":           player,
-            "position":         first.get("position"),
-            "college":          first.get("college"),
-            "consensus_rank":   (int(first["consensus_rank"])
-                                 if pd.notna(first.get("consensus_rank")) else None),
-            "landings":         landings,
-            "mean_landing":     round(mean_landing, 2),
-            "variance_landing": round(var_landing, 2),
-            "total_prob":       round(total_prob, 3),
-            "most_likely_slot": int(first[slot_col]),
-            "most_likely_team": first.get(team_col),
-        })
-    # Sort by mean landing (earliest first)
-    out.sort(key=lambda r: (r["mean_landing"] or 99))
+        mc_meta.update({"mtime": _file_mtime(MC_CSV), "source": MC_CSV.name})
+
+    kiper_board = _load_kiper_board()
+    used_keys: set[str] = set()
+    out: list[dict] = []
+
+    for entry in kiper_board:
+        k = _kiper_key(entry.get("player", ""))
+        used_keys.add(k)
+        mc = mc_by_player.get(k)
+        if mc:
+            row = dict(mc)
+        else:
+            row = {
+                "player":           entry.get("player"),
+                "position":         entry.get("pos"),
+                "college":          entry.get("college"),
+                "consensus_rank":   None,
+                "landings":         [],
+                "mean_landing":     0.0,
+                "variance_landing": 0.0,
+                "total_prob":       0.0,
+                "most_likely_slot": 0,
+                "most_likely_team": None,
+            }
+        row["kiper_rank"] = int(entry.get("rank")) if entry.get("rank") else None
+        out.append(row)
+
+    # Append any MC prospects not on Kiper's board (keeps sliders visible).
+    leftovers = [v for k, v in mc_by_player.items() if k not in used_keys]
+    leftovers.sort(key=lambda r: (r.get("mean_landing") or 99))
+    for row in leftovers:
+        row = dict(row)
+        row["kiper_rank"] = None
+        out.append(row)
+
     return {
         "prospects": out,
-        "meta": {"file_present": True, "mtime": _file_mtime(MC_CSV),
-                 "source": MC_CSV.name, "n_prospects": len(out)},
+        "meta": {**mc_meta,
+                 "kiper_board_present": KIPER_BOARD_JSON.exists(),
+                 "kiper_count": len(kiper_board),
+                 "n_prospects": len(out)},
     }
 
 
