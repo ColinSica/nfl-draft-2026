@@ -771,12 +771,28 @@ def latest_simulation() -> dict:
             "most_likely_team": modal_team,
             "candidates":       candidates,
         })
+    # Expose model / intel refresh timestamps so the Data-freshness panel
+    # can render concrete values instead of "[Missing] not yet computed".
+    intel_refresh = None
+    if TEAM_AGENTS_JSON.exists():
+        try:
+            ta = json.loads(TEAM_AGENTS_JSON.read_text(encoding="utf-8"))
+            meta_blob = ta.get("_meta") or {}
+            intel_refresh = (meta_blob.get("latest_intel_scraped_at")
+                             or meta_blob.get("latest_intel_date"))
+        except Exception:
+            intel_refresh = None
+    mc_iso = _file_mtime(MC_CSV)
+    picks_iso = _file_mtime(PICKS_CSV) if PICKS_CSV.exists() else mc_iso
     return {
         "picks": out_picks,
         "meta": {
-            "file_present": True,
-            "mtime": _file_mtime(MC_CSV),
-            "source": MC_CSV.name,
+            "file_present":  True,
+            "mtime":         mc_iso,
+            "source":        MC_CSV.name,
+            "generated_at":  picks_iso or mc_iso,
+            "finished_at":   mc_iso,
+            "intel_refresh": intel_refresh,
         },
     }
 

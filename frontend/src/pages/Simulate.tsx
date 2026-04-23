@@ -333,9 +333,9 @@ export function Simulate() {
 
       <FreshnessPanel
         data={{
-          modelRefresh: simMeta?.generated_at ?? null,
-          intelRefresh: null,
-          simRun: simMeta?.finished_at ?? simMeta?.generated_at ?? null,
+          modelRefresh: simMeta?.generated_at ?? simMeta?.mtime ?? null,
+          intelRefresh: simMeta?.intel_refresh ?? null,
+          simRun: simMeta?.finished_at ?? simMeta?.generated_at ?? simMeta?.mtime ?? null,
         }}
       />
     </div>

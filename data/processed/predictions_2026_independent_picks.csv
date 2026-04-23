@@ -19,7 +19,7 @@ pick,round,team,player,position,school,probability,independent_grade,fit_score,t
 18,1,MIN,Jermod McCoy,CB,Tennessee,0.15,-1.0,2.519,0.096
 19,1,CAR,Blake Miller,OT,Clemson,0.9,-10.0,2.362,0.242
 20,1,DAL,Akheem Mesidor,EDGE,Miami (FL),0.5,-7.0,4.061,0.468
-21,1,PIT,Omar Cooper Jr.,WR,Indiana,0.867,5.0,2.463,0.203
+21,1,PIT,Ty Simpson,QB,Alabama,0.867,-6.0,2.463,0.203
 22,1,LAC,Kadyn Proctor,OT,Alabama,1.0,-13.0,2.485,0.284
 23,1,PHI,Emmanuel McNeil-Warren,S,Toledo,0.033,3.0,2.474,0.09
 24,1,CLE,KC Concepcion,WR,Texas A&M,0.633,14.0,2.865,0.127
@@ -28,7 +28,7 @@ pick,round,team,player,position,school,probability,independent_grade,fit_score,t
 27,1,SF,Max Iheanachor,OT,Arizona State,0.033,-11.0,2.331,0.157
 28,1,HOU,Colton Hood,CB,Tennessee,0.033,13.0,2.906,0.157
 29,1,KC,Denzel Boston,WR,Washington,0.15,-9.0,3.099,0.4
-30,1,MIA,Ty Simpson,QB,Alabama,0.033,-6.0,2.14,0.09
+30,1,MIA,Chris Johnson,CB,San Diego State,0.033,1.0,2.14,0.09
 31,1,NE,C.J. Allen,LB,Georgia,0.15,72.0,3.61,0.595
 32,1,SEA,Jadarian Price,RB,Notre Dame,0.033,-3.0,2.055,0.289
 33,2,NYJ,Eli Raridon,TE,Georgia,0.15,72.0,2.423,0.284

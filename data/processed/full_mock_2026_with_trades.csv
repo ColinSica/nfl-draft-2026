@@ -19,7 +19,7 @@ pick,round,team,player,position,college,rank,trade_from,trade_to
 18,1,MIN,Jermod McCoy,CB,Tennessee,29,,
 19,1,CAR,Blake Miller,OT,Clemson,20,,
 20,1,IND,Akheem Mesidor,EDGE,Miami (FL),23,DAL,IND
-21,1,PIT,Omar Cooper Jr.,WR,Indiana,35,,
+21,1,PIT,Ty Simpson,QB,Alabama,24,,
 22,1,LAC,Kadyn Proctor,OT,Alabama,17,,
 23,1,DET,Emmanuel McNeil-Warren,S,Toledo,33,PHI,DET
 24,1,CLE,KC Concepcion,WR,Texas A&M,44,,
@@ -28,7 +28,7 @@ pick,round,team,player,position,college,rank,trade_from,trade_to
 27,1,SF,Max Iheanachor,OT,Arizona State,19,,
 28,1,HOU,Colton Hood,CB,Tennessee,43,,
 29,1,ARI,Denzel Boston,WR,Washington,21,KC,ARI
-30,1,MIA,Ty Simpson,QB,Alabama,24,,
+30,1,MIA,Chris Johnson,CB,San Diego State,31,,
 31,1,GB,C.J. Allen,LB,Georgia,28,NE,GB
 32,1,CIN,Jadarian Price,RB,Notre Dame,27,SEA,CIN
 33,2,NYJ,TJ Hall,CB,Iowa,188,,
@@ -121,7 +121,7 @@ pick,round,team,player,position,college,rank,trade_from,trade_to
 120,4,GB,Michael Heldman,EDGE,Central Michigan,265,,
 121,4,PIT,Jeff Caldwell,WR,Cincinnati,172,,
 122,4,ATL,Brenen Thompson,WR,Mississippi State,74,,
-123,4,LAC,Chris Johnson,CB,San Diego State,31,,
+123,4,LAC,Omar Cooper Jr.,WR,Indiana,35,,
 124,4,JAX,Parker Brailsford,IOL,Alabama,187,,
 125,4,NE,Mason Reiger,EDGE,Wisconsin,140,,
 126,4,BUF,Malik Benson,WR,Oregon,227,,

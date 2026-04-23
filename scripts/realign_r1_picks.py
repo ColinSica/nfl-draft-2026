@@ -132,7 +132,13 @@ def main() -> None:
     # - DAL #12: user "Dallas is more likely to take best value rather than
     #   reach". BPA at #12 after the top-11 come off the board is Spencer
     #   Fano (OT, Utah, Kiper #10). A +2 value pick — not a reach.
-    EXTRA_PINS: dict[int, str] = {12: "Spencer Fano"}
+    # - PIT #21: user "have Ty Simpson going to PIT at 21 instead of MIA".
+    #   Pittsburgh's QB need is well-documented; Simpson at 21 fits their
+    #   board (market P50=13, Kiper #24 — 3-slot reach back).
+    EXTRA_PINS: dict[int, str] = {
+        12: "Spencer Fano",
+        21: "Ty Simpson",
+    }
     pinned: dict[int, str] = {}
     for slot, name in enumerate(TOP5_PINS, start=1):
         # Tolerate small name variation between our board and the pin.
