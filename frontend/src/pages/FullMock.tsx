@@ -294,10 +294,13 @@ function Section({
   );
 }
 
+type MockVariant = 'no_trades' | 'with_trades';
+
 export function FullMock() {
   const [data, setData] = useState<FullMockResp | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
+  const [variant, setVariant] = useState<MockVariant>('no_trades');
 
   const [sortMode, setSortMode] = useState<SortMode>('pick');
   const [posFilter, setPosFilter] = useState('All');
@@ -309,14 +312,14 @@ export function FullMock() {
   useEffect(() => {
     setErr(null);
     setData(null);
-    fetch('/api/full-mock')
+    fetch(`/api/full-mock?variant=${variant}`)
       .then(r => {
         if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
         return r.json();
       })
       .then(d => setData(d))
       .catch(e => setErr(String(e?.message ?? e)));
-  }, [reloadKey]);
+  }, [reloadKey, variant]);
 
   const allPicks = data?.picks ?? [];
 
@@ -459,6 +462,26 @@ export function FullMock() {
         <>
           {/* Controls bar */}
           <div className="space-y-2 bg-paper-surface border border-ink-edge p-3">
+            {/* Variant toggle — which mock to display */}
+            <div className="flex flex-wrap items-center gap-2">
+              <SmallCaps tight className="text-ink-muted mr-1">Mock</SmallCaps>
+              {([
+                ['no_trades',   'No trades'],
+                ['with_trades', 'With trades (R1 intel 4/23)'],
+              ] as const).map(([v, label]) => (
+                <button
+                  key={v}
+                  onClick={() => { setVariant(v); setSelectedPick(null); }}
+                  className={`px-2 py-0.5 caps-tight text-[0.62rem] border transition ${
+                    variant === v
+                      ? 'bg-ink text-paper border-ink'
+                      : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
             {/* Sort selector */}
             <div className="flex flex-wrap items-center gap-2">
               <SmallCaps tight className="text-ink-muted mr-1">Sort</SmallCaps>
