@@ -1,31 +1,113 @@
 """Odds-to-anchor conversion.
 
-Given a list of Kalshi markets for a player (mix of exact-pick YES/NOs,
-top-N YES/NOs, and over-under lines), build a pick CDF and extract:
+Given market data from multiple exchanges (Kalshi + Polymarket), builds a
+per-player pick CDF and extracts:
 
   - pick_p10, pick_p50, pick_p90    (order statistics)
   - expected_pick                   (CDF mean)
-  - market_confidence               (total YES volume / open interest)
+  - market_confidence               (combined volume / open interest)
 
 The CDF is constructed by sorting threshold points {(pick_bound, P(pick <= bound))}
 and interpolating. Exact-pick markets contribute point masses; top-N markets
 contribute CDF values; over-under lines contribute 1 - YES = P(pick <= N).
+
+Market sources are merged at the market-list level: if Kalshi and Polymarket
+both price Mendoza-at-1, both price points enter the CDF construction, and
+market_confidence naturally scales with combined liquidity.
 
 Handles noise by clamping to monotone and smoothing tiny inversions.
 """
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
-CACHE_PATH = ROOT / "data/features/betting_odds_2026.json"
+CACHE_PATH = ROOT / "data/features/betting_odds_2026.json"                # Kalshi
+POLYMARKET_CACHE_PATH = ROOT / "data/features/betting_odds_polymarket_2026.json"
 
 # Pick grid for CDF interpolation (1..257).
 _PICK_GRID = np.arange(1, 258)
+
+
+# ---------- Name normalization for Polymarket matching ----------
+# Polymarket's groupItemTitle is clean ("Fernando Mendoza") but may differ
+# slightly from our prospects CSV. Use the same fuzzy logic as Kalshi.
+
+_SUFFIX_RE = re.compile(r"\s+(jr|sr|ii|iii|iv|v)\.?$", re.IGNORECASE)
+_PUNCT_RE = re.compile(r"[.,']")
+
+
+def _stripped_key(name: str) -> str:
+    n = re.sub(r"[^\w\s'\-.]", "", name or "").strip().lower()
+    n = _SUFFIX_RE.sub("", n)
+    n = _PUNCT_RE.sub("", n)
+    return re.sub(r"\s+", " ", n).strip()
+
+
+def _match_polymarket_to_prospect(raw: str, prospect_names: set[str],
+                                   key_map: dict[str, str]) -> str | None:
+    if not raw:
+        return None
+    low = raw.strip().lower()
+    # Fast path: exact name match
+    for p in prospect_names:
+        if p.lower() == low:
+            return p
+    # Stripped-key match
+    k = _stripped_key(raw)
+    if k in key_map:
+        return key_map[k]
+    return None
+
+
+def _load_polymarket_normalized() -> list[dict]:
+    """Load Polymarket markets and attach `player` (matched to prospects CSV)
+    + `matched_to_prospect` flag so they flow through the same filter as
+    Kalshi markets."""
+    if not POLYMARKET_CACHE_PATH.exists():
+        return []
+    try:
+        data = json.loads(POLYMARKET_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+    # Load prospects CSV for matching
+    import pandas as pd
+    pros_path = ROOT / "data/processed/prospects_2026_enriched.csv"
+    prospect_names: set[str] = set()
+    key_map: dict[str, str] = {}
+    if pros_path.exists():
+        names = pd.read_csv(pros_path, usecols=["player"])["player"].dropna().astype(str).tolist()
+        prospect_names = set(names)
+        for n in names:
+            key_map.setdefault(_stripped_key(n), n)
+
+    out: list[dict] = []
+    for m in data.get("markets", []) or []:
+        raw = m.get("player_raw")
+        matched = _match_polymarket_to_prospect(raw, prospect_names, key_map) if raw else None
+        m2 = {**m, "player": matched or raw, "matched_to_prospect": bool(matched),
+              "_source": "polymarket"}
+        out.append(m2)
+    return out
+
+
+def _load_all_markets(cache: dict | None = None) -> list[dict]:
+    """Merge Kalshi + Polymarket markets into one list. Each market carries a
+    `_source` tag so downstream can weight by exchange if needed."""
+    if cache is None:
+        if CACHE_PATH.exists():
+            cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
+        else:
+            cache = {"markets": []}
+    kalshi_markets = [{**m, "_source": "kalshi"} for m in (cache.get("markets") or [])]
+    poly_markets = _load_polymarket_normalized()
+    return kalshi_markets + poly_markets
 
 
 def _build_cdf_points(markets: list[dict]) -> list[tuple[float, float]]:
@@ -112,15 +194,13 @@ def build_player_anchors(cache: dict | None = None) -> dict[str, dict]:
     """Return {player_name -> {pick_p10, pick_p50, pick_p90, expected_pick,
     cdf, n_markets, market_confidence}}.
 
-    Only includes players whose markets produced a non-trivial CDF.
+    Markets are loaded from BOTH Kalshi and Polymarket and merged into a
+    combined CDF per player. Only includes players whose combined markets
+    produced a non-trivial CDF.
     """
-    if cache is None:
-        if not CACHE_PATH.exists():
-            return {}
-        cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
-
+    all_markets = _load_all_markets(cache)
     by_player: dict[str, list[dict]] = {}
-    for m in cache.get("markets", []) or []:
+    for m in all_markets:
         if not m.get("matched_to_prospect"):
             continue
         p = m.get("player")
@@ -128,16 +208,27 @@ def build_player_anchors(cache: dict | None = None) -> dict[str, dict]:
             continue
         by_player.setdefault(p, []).append(m)
 
-    # Liquidity reliability filter — require per-market OI threshold so we
-    # only trust market signals with real trading interest behind them.
+    # Liquidity reliability filter — require per-market OI+volume threshold
+    # so we only trust market signals with real trading interest behind them.
     # Markets below the floor are excluded from CDF construction; if a player
     # has NO markets meeting the floor, the player is dropped entirely.
-    MIN_MARKET_OI = 50  # dollars of open interest + volume
+    #
+    # Per-exchange thresholds: Polymarket lists every player on pick-exact
+    # events as a placeholder market, most with <$100 in volume. These stale
+    # seed prices (bestAsk/lastTrade on never-traded YES tokens) distort the
+    # CDF. Kalshi's markets are more uniformly thick.
+    MIN_KALSHI = 50       # dollars OI + volume
+    MIN_POLYMARKET = 300  # stricter — skip placeholder/seed markets
+
+    def _passes_liquidity(m: dict) -> bool:
+        total = float(m.get("open_interest") or 0) + float(m.get("volume") or 0)
+        floor = MIN_POLYMARKET if m.get("_source") == "polymarket" else MIN_KALSHI
+        return total >= floor
+
     out: dict[str, dict] = {}
     for player, mkts in by_player.items():
-        # Filter to markets with enough liquidity
-        liquid = [m for m in mkts
-                  if (float(m.get("open_interest") or 0) + float(m.get("volume") or 0)) >= MIN_MARKET_OI]
+        # Filter to markets with enough liquidity (per-exchange floor)
+        liquid = [m for m in mkts if _passes_liquidity(m)]
         if not liquid:
             continue
         # Drop dust — players with only 1-cent quotes and no threshold coverage.
@@ -159,12 +250,16 @@ def build_player_anchors(cache: dict | None = None) -> dict[str, dict]:
         mkts = liquid  # use only liquid markets for volume aggregates
         volume = sum(float(m.get("volume") or 0) for m in mkts)
         oi = sum(float(m.get("open_interest") or 0) for m in mkts)
+        n_kalshi = sum(1 for m in mkts if m.get("_source") == "kalshi")
+        n_poly = sum(1 for m in mkts if m.get("_source") == "polymarket")
         out[player] = {
             "pick_p10": _quantile(cdf, 0.10),
             "pick_p50": _quantile(cdf, 0.50),
             "pick_p90": _quantile(cdf, 0.90),
             "expected_pick": _expected_pick(cdf),
             "n_markets": len(mkts),
+            "n_kalshi_markets": n_kalshi,
+            "n_polymarket_markets": n_poly,
             "market_confidence": min(1.0, (volume + oi) / 5000.0),
             "cdf_sample": {int(k): float(cdf[k - 1]) for k in (1, 5, 10, 20, 32, 64, 100)},
             "source": "pick_cdf",
@@ -235,13 +330,10 @@ def build_team_landing_priors(cache: dict | None = None,
     is usually 0.7-1.1 (depending on overround and player-is-drafted probability).
     We normalize so probs sum to 1 (conditional on being drafted).
     """
-    if cache is None:
-        if not CACHE_PATH.exists():
-            return {}
-        cache = json.loads(CACHE_PATH.read_text(encoding="utf-8"))
-
+    # Merge Kalshi + Polymarket team-landing markets
+    all_markets = _load_all_markets(cache)
     by_player: dict[str, list[dict]] = {}
-    for m in cache.get("markets", []) or []:
+    for m in all_markets:
         if m.get("bound_type") != "team":
             continue
         if not m.get("matched_to_prospect"):
