@@ -213,9 +213,6 @@ function ProspectDetail({ p }: { p: Prospect }) {
               {p.kiper_rank && (
                 <span className="ml-2">· Kiper #{p.kiper_rank}</span>
               )}
-              {p.consensus_rank && (
-                <span className="ml-2">· Consensus #{p.consensus_rank}</span>
-              )}
             </div>
           </div>
           <HRule />
