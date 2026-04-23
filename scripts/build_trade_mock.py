@@ -57,13 +57,13 @@ TRADE_DEFS: list[dict] = [
         "package": {
             "KC": {
                 "role": "Trades up",
-                "gives": ["2026 1st (#9)", "2026 1st (#29)", "2027 3rd"],
+                "gives": ["2026 1st (#9)", "2026 1st (#29)", "2027 2nd"],
                 "gets":  ["2026 1st (#3)"],
             },
             "ARI": {
                 "role": "Trades back",
                 "gives": ["2026 1st (#3)"],
-                "gets":  ["2026 1st (#9)", "2026 1st (#29)", "2027 3rd"],
+                "gets":  ["2026 1st (#9)", "2026 1st (#29)", "2027 2nd"],
             },
         },
         "slot_reassignments": {
@@ -79,13 +79,13 @@ TRADE_DEFS: list[dict] = [
         "package": {
             "PHI": {
                 "role": "Trades up",
-                "gives": ["2026 1st (#23)", "2026 2nd"],
+                "gives": ["2026 1st (#23)", "2026 2nd", "2027 3rd"],
                 "gets":  ["2026 1st (#17)"],
             },
             "DET": {
                 "role": "Trades back",
                 "gives": ["2026 1st (#17)"],
-                "gets":  ["2026 1st (#23)", "2026 2nd"],
+                "gets":  ["2026 1st (#23)", "2026 2nd", "2027 3rd"],
             },
         },
         "slot_reassignments": {
@@ -100,13 +100,13 @@ TRADE_DEFS: list[dict] = [
         "package": {
             "CHI": {
                 "role": "Trades up",
-                "gives": ["2026 1st (#25)", "2026 2nd (#60)"],
+                "gives": ["2026 1st (#25)", "2026 2nd (#60)", "2027 3rd"],
                 "gets":  ["2026 1st (#16)"],
             },
             "NYJ": {
                 "role": "Trades back",
                 "gives": ["2026 1st (#16)"],
-                "gets":  ["2026 1st (#25)", "2026 2nd (#60)"],
+                "gets":  ["2026 1st (#25)", "2026 2nd (#60)", "2027 3rd"],
             },
         },
         "slot_reassignments": {
@@ -121,13 +121,13 @@ TRADE_DEFS: list[dict] = [
         "package": {
             "IND": {
                 "role": "Trades up (re-enters R1)",
-                "gives": ["2026 2nd", "2026 3rd"],
+                "gives": ["2026 2nd", "2026 3rd", "2027 2nd"],
                 "gets":  ["2026 1st (#20)"],
             },
             "DAL": {
                 "role": "Trades back",
                 "gives": ["2026 1st (#20)"],
-                "gets":  ["2026 2nd", "2026 3rd"],
+                "gets":  ["2026 2nd", "2026 3rd", "2027 2nd"],
             },
         },
         "slot_reassignments": {
@@ -161,13 +161,13 @@ TRADE_DEFS: list[dict] = [
         "package": {
             "CIN": {
                 "role": "Trades up (re-enters R1)",
-                "gives": ["2026 2nd", "2026 3rd"],
+                "gives": ["2026 2nd", "2026 3rd", "2027 3rd"],
                 "gets":  ["2026 1st (#32)"],
             },
             "SEA": {
                 "role": "Trades back",
                 "gives": ["2026 1st (#32)"],
-                "gets":  ["2026 2nd", "2026 3rd"],
+                "gets":  ["2026 2nd", "2026 3rd", "2027 3rd"],
             },
         },
         "slot_reassignments": {
