@@ -32,14 +32,14 @@ pick,round,team,player,position,college,rank
 31,1,NE,C.J. Allen,LB,Georgia,9
 32,1,SEA,Jadarian Price,RB,Notre Dame,2
 33,2,NYJ,Malachi Fields,WR,Notre Dame,82
-34,2,ARI,Ty Simpson,QB,Alabama,18
+34,2,ARI,Malachi Lawrence,EDGE,UCF,30
 35,2,TEN,Zion Young,EDGE,Missouri,105
 36,2,LV,Zachariah Branch,WR,Georgia,71
 37,2,NYG,Josiah Trotter,LB,Missouri,83
 38,2,HOU,Kayden McDonald,DL,Ohio State,84
-39,2,CLE,Blake Miller,OT,Clemson,32
+39,2,CLE,Emmanuel Pregnon,IOL,Oregon,34
 40,2,KC,Chris Johnson,CB,San Diego State,73
-41,2,CIN,Jermod McCoy,CB,Tennessee,70
+41,2,CIN,Christen Miller,DL,Georgia,39
 42,2,NO,Elijah Sarratt,WR,Indiana,68
 43,2,MIA,Hezekiah Masses,CB,California,59
 44,2,NYJ,Bryce Boettcher,LB,Oregon,44
@@ -54,13 +54,13 @@ pick,round,team,player,position,college,rank
 53,2,PIT,Carson Beck,QB,Miami (FL),113
 54,2,PHI,Romello Height,EDGE,Texas Tech,125
 55,2,LAC,Chase Bisontis,IOL,Texas A&M,106
-56,2,JAX,KC Concepcion,WR,Texas A&M,48
+56,2,JAX,Derrick Moore,EDGE,Michigan,54
 57,2,CHI,Zakee Wheatley,S,Penn State,55
 58,2,SF,Antonio Williams,WR,Clemson,65
 59,2,HOU,Justin Jefferson,LB,Alabama,46
 60,2,CHI,R Mason Thomas,EDGE,Oklahoma,122
 61,2,LAR,Trey Zuhn III,OT,Texas A&M,38
-62,2,DEN,Kenyon Sadiq,TE,Oregon,28
+62,2,DEN,Jaishawn Barham,LB,Michigan,56
 63,2,NE,Kage Casey,OT,Boise State,37
 64,2,SEA,Keyron Crawford,EDGE,Auburn,118
 65,3,ARI,Austin Barber,OT,Florida,153
@@ -70,7 +70,7 @@ pick,round,team,player,position,college,rank
 69,3,HOU,Peter Woods,DL,Clemson,74
 70,3,CLE,Joe Royer,TE,Cincinnati,86
 71,3,WAS,TJ Hall,CB,Iowa,61
-72,3,CIN,Emmanuel McNeil-Warren,S,Toledo,108
+72,3,CIN,D'angelo Ponds,CB,Indiana,57
 73,3,NO,Keith Abney II,CB,Arizona State,52
 74,3,KC,Chandler Rivers,CB,Duke,128
 75,3,MIA,Dani Dennis-Sutton,EDGE,Penn State,107
@@ -106,7 +106,7 @@ pick,round,team,player,position,college,rank
 105,4,NYG,Febechi Nwaiwu,IOL,Oklahoma,209
 106,4,HOU,Charles Demmings,CB,Stephen F. Austin,189
 107,4,CLE,Will Kacmarek,TE,Ohio State,88
-108,4,DEN,Jadarian Price,RB,Notre Dame,156
+108,4,DEN,Anthony Hill Jr.,LB,Texas,58
 109,4,KC,Brandon Cisse,CB,South Carolina,164
 110,4,CIN,Avieon Terrell,CB,Clemson,142
 111,4,DEN,Eli Stowers,TE,Vanderbilt,138

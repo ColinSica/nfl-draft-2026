@@ -194,10 +194,14 @@ def main() -> None:
 
     pd.DataFrame(new_rows).to_csv(PICKS_CSV, index=False)
 
-    # Full-mock sync
+    # Full-mock sync + dedupe. A player now in R1 may still be listed in a
+    # later round from a previous run; we must (a) push the R1 assignment
+    # into the mock, (b) replace the stale later-round duplicate with the
+    # next-best board player who isn't already picked somewhere in the mock.
     if MOCK_JSON.exists():
         mock = json.loads(MOCK_JSON.read_text(encoding="utf-8"))
         r1_by_slot = {int(r["pick"]): r for r in new_rows if int(r["round"]) == 1}
+        # Step 1: overwrite R1 rows in the mock.
         for p in mock.get("picks", []):
             slot = int(p.get("pick", 0))
             if slot in r1_by_slot:
@@ -208,7 +212,58 @@ def main() -> None:
                     p["college"] = src.get("school", p.get("college"))
                     p["reasoning"] = ("[realigned to analyst consensus] "
                                       + (p.get("reasoning") or "")[:300])
+
+        # Step 2: dedupe. For each duplicate player, keep the EARLIEST
+        # placement and replace the later one with the best unused board
+        # player whose final_rank is reasonable for that slot.
+        used: dict[str, int] = {}
+        dup_slots: list[int] = []
+        for i, p in enumerate(mock.get("picks", [])):
+            pl = str(p.get("player") or "")
+            if not pl:
+                continue
+            if pl in used:
+                dup_slots.append(i)  # this is the LATER placement (by iter order)
+            else:
+                used[pl] = i
+
+        board_sorted = board.sort_values("final_rank")
+        picked_names = set(used.keys())
+        # For each duplicate, choose a replacement.
+        replacements: list[dict] = []
+        for i in dup_slots:
+            p = mock["picks"][i]
+            slot = int(p.get("pick", 0))
+            # Prefer board candidates within +/-30 of slot, else nearest.
+            cand = None
+            for _, row in board_sorted.iterrows():
+                nm = str(row["player"])
+                if nm in picked_names:
+                    continue
+                cand = row
+                break
+            if cand is None:
+                continue
+            picked_names.add(str(cand["player"]))
+            replacements.append({
+                "slot": slot, "team": p.get("team"),
+                "removed": p.get("player"),
+                "installed": str(cand["player"]),
+                "board_rank": int(cand["final_rank"]),
+            })
+            p["player"] = str(cand["player"])
+            p["position"] = cand.get("position")
+            p["college"] = cand.get("school")
+            p["rank"] = int(cand["final_rank"])
+            p["reasoning"] = "[deduplicated: replaced with next-best board candidate]"
+
         MOCK_JSON.write_text(json.dumps(mock, indent=2), encoding="utf-8")
+        if replacements:
+            print(f"[realign_r1] deduplicated {len(replacements)} full-mock rows:")
+            for r in replacements[:15]:
+                print(f"  #{r['slot']:>3} {r['team']}: "
+                      f"{r['removed']} -> {r['installed']} "
+                      f"(board rank {r['board_rank']})")
 
     print(f"[realign_r1] MAX_DELTA={MAX_DELTA} — final R1:")
     for _, row in pd.DataFrame(new_rows).query("round == 1").sort_values("pick").iterrows():
