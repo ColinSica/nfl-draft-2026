@@ -1,12 +1,17 @@
-"""Realign R1 picks to analyst consensus.
+"""Realign R1 picks so every pick is within MAX_DELTA of analyst consensus.
 
-Reads data/features/analyst_consensus_2026.json (20 analyst mocks) and
-ensures every pick in predictions_2026_independent_picks.csv has at
-least ONE analyst with that player inside pick +/- window. If not, swap
-with the best-ranked Kiper/consensus-anchored player whose analyst
-appearances cover this slot and who isn't already placed.
+For each R1 slot:
+  1. Build the eligible pool: any player at least one analyst placed
+     within slot +/- MAX_DELTA slots.
+  2. Weight each candidate by (a) summed analyst-appearances near this
+     slot (closer = higher weight) and (b) board rank (earlier = better).
+  3. Greedy-assign slot by slot, preserving team (team column in picks
+     CSV is not changed; only player/position/school are overwritten).
 
-Also rewrites full_mock_2026.json's R1 picks for display consistency.
+If a slot has no eligible pool (unlikely inside R1), leave the original
+occupant. The script is idempotent and re-runnable.
+
+Also rewrites full_mock_2026.json R1 rows so the Full Mock page matches.
 """
 from __future__ import annotations
 
@@ -23,7 +28,7 @@ MOCK_JSON = ROOT / "data/processed/full_mock_2026.json"
 ANALYST_JSON = ROOT / "data/features/analyst_consensus_2026.json"
 KIPER_JSON = ROOT / "data/features/kiper_big_board_2026.json"
 
-SLOT_WINDOW = 8
+MAX_DELTA = 3  # every pick must be within this many slots of an analyst slot
 
 
 def _norm(s: str) -> str:
@@ -31,183 +36,188 @@ def _norm(s: str) -> str:
 
 
 def _key_variants(full: str) -> list[str]:
+    """Possible keys under which analyst_consensus indexes this player."""
     f = full
-    no_suffix = re.sub(r"\s+(Jr\.?|Sr\.?|II|III|IV)$", "", f, flags=re.IGNORECASE).strip()
-    tokens = no_suffix.split()
+    no_suf = re.sub(r"\s+(Jr\.?|Sr\.?|II|III|IV)$", "", f, flags=re.IGNORECASE).strip()
+    tokens = no_suf.split()
     last = tokens[-1] if tokens else f
-    return [f, no_suffix, last, last + " Jr.", last + " Jr"]
+    return [f, no_suf, last, last + " Jr.", last + " Jr"]
 
 
-def _load_analyst_slots() -> dict[str, list[int]]:
-    """Return {player_key_variant -> [slots where any analyst placed them]}."""
+def _load_analyst_hits() -> dict[str, dict[int, int]]:
+    """Return {analyst_key -> {slot -> appearance_count}}."""
     d = json.loads(ANALYST_JSON.read_text(encoding="utf-8"))
-    out: dict[str, list[int]] = {}
+    out: dict[str, dict[int, int]] = {}
     for slot_s, rec in (d.get("per_pick") or {}).items():
         slot = int(slot_s)
         if slot > 32:
             continue
-        for player in (rec.get("picks_all") or {}).keys():
-            out.setdefault(player, []).append(slot)
+        for player, n in (rec.get("picks_all") or {}).items():
+            out.setdefault(player, {})[slot] = int(n)
     return out
 
 
-def _slots_for(full_name: str, table: dict[str, list[int]]) -> list[int]:
-    for k in _key_variants(full_name):
+def _hits_for(player_name: str, table: dict[str, dict[int, int]]) -> dict[int, int]:
+    for k in _key_variants(player_name):
         if k in table:
             return table[k]
-    return []
+    return {}
 
 
 def main() -> None:
     picks = pd.read_csv(PICKS_CSV)
-    board = pd.read_csv(BOARD_CSV)
-    analyst_slots = _load_analyst_slots()
+    board = pd.read_csv(BOARD_CSV).sort_values("final_rank").reset_index(drop=True)
+    board_rank: dict[str, int] = {_norm(str(p)): int(r)
+                                   for p, r in zip(board["player"], board["final_rank"])}
+    analyst_hits = _load_analyst_hits()
 
-    # Map player -> final_rank on the realigned board
-    rank_of = {_norm(p): int(r) for p, r in zip(board["player"], board["final_rank"])}
-    board_by_rank = board.set_index("final_rank")
+    # Build player pool with pre-computed analyst slot sets (for our own
+    # player names as they appear on the board).
+    player_hits: dict[str, dict[int, int]] = {}
+    for p in board["player"]:
+        hits = _hits_for(str(p), analyst_hits)
+        if hits:
+            player_hits[str(p)] = hits
 
+    # Kiper top-15 must land in R1. Their market + analyst data reliably
+    # pin them to R1 even if analyst_hits keys are spotty.
     kiper = json.loads(KIPER_JSON.read_text(encoding="utf-8"))
-    kiper_set = {_norm(e["player"]) for e in kiper.get("top100", [])}
+    kiper_top15: list[str] = []
+    for e in kiper.get("top100", []):
+        if int(e["rank"]) > 15:
+            break
+        # Find the board-side name matching this Kiper entry.
+        mk = _norm(e["player"])
+        match = next((str(p) for p in board["player"] if _norm(str(p)) == mk), None)
+        if match:
+            kiper_top15.append(match)
 
-    def _needs_swap(slot: int, player: str) -> bool:
-        slots = _slots_for(player, analyst_slots)
-        if not slots:
-            return True
-        return not any(abs(s - slot) <= SLOT_WINDOW for s in slots)
+    def _score(player: str, slot: int) -> float:
+        """Higher is better. Weight = analyst appearances near slot
+        (decaying by distance) + Kiper-top-15 bonus + board-rank bonus."""
+        hits = player_hits.get(player, {})
+        # Only eligible if at least one analyst slot is within MAX_DELTA
+        eligible_hits = {s: c for s, c in hits.items() if abs(s - slot) <= MAX_DELTA}
+        if not eligible_hits:
+            # Kiper top-15 fallback: eligible for any R1 slot if their Kiper
+            # rank is within 12 of the slot (so Styles Kiper #4 can fit 1-16).
+            if player in kiper_top15:
+                kr = next((int(e["rank"]) for e in kiper["top100"]
+                           if _norm(e["player"]) == _norm(player)), None)
+                if kr is not None and abs(kr - slot) <= 12:
+                    return 0.5  # soft-eligible
+            return -1.0
+        # Weighted analyst appearance score
+        total = 0.0
+        for s, c in eligible_hits.items():
+            total += c * (1.0 / (1.0 + abs(s - slot)))
+        # Small bonus for better board rank (earlier rank = higher score)
+        rank = board_rank.get(_norm(player), 300)
+        total += max(0.0, 100 - rank) * 0.02
+        # Kiper top-15 bonus
+        if player in kiper_top15:
+            total += 2.5
+        return total
 
-    # Build candidate pool: Kiper top-45 players not already picked
-    picked = {_norm(p) for p in picks[picks["round"] == 1]["player"]}
+    # Hard-pin top 5 per user directive (2026-04-23):
+    # "top 5 should be mendoza, bailey, reese, love, then either downs or
+    # styles at 5". Pick Styles at 5 (Kiper #4 > Downs #6; market gives
+    # Styles P50=5 exactly) unless a name doesn't match the board.
+    TOP5_PINS = ["Fernando Mendoza", "David Bailey", "Arvell Reese",
+                 "Jeremiyah Love", "Sonny Styles"]
+    pinned: dict[int, str] = {}
+    for slot, name in enumerate(TOP5_PINS, start=1):
+        # Tolerate small name variation between our board and the pin.
+        match = next((str(p) for p in board["player"] if _norm(str(p)) == _norm(name)),
+                     None)
+        if match:
+            pinned[slot] = match
 
-    def _eligible_for_slot(slot: int) -> list[dict]:
-        """Players whose analyst coverage contains slot +/- window AND whose
-        board rank is within a realistic band of the slot. A rank-4 player
-        doesn't fall to pick 17 in any universe."""
-        RANK_BAND = 12  # board rank must be within this of slot
-        cands: list[dict] = []
-        for _, row in board.head(80).iterrows():
-            if _norm(row["player"]) in picked:
-                continue
-            fr = int(row["final_rank"])
-            if abs(fr - slot) > RANK_BAND:
-                continue
-            slots = _slots_for(row["player"], analyst_slots)
-            if not slots:
-                continue
-            if any(abs(s - slot) <= SLOT_WINDOW for s in slots):
-                cands.append({
-                    "player": row["player"],
-                    "position": row["position"],
-                    "school": row["school"],
-                    "final_rank": fr,
-                    "in_kiper": _norm(row["player"]) in kiper_set,
-                })
-        # Prefer candidates whose rank is >= slot (falling value picks) and
-        # closer to slot; penalize reaches (rank > slot is OK, rank < slot
-        # is a "reach" which shouldn't happen if we picked right earlier).
-        cands.sort(key=lambda r: (abs(r["final_rank"] - slot), r["final_rank"]))
-        return cands
+    r1_rows = picks[picks["round"] == 1].sort_values("pick")
+    assignments: dict[int, str] = {}  # slot -> chosen player
+    used: set[str] = set()
+    # Apply pins first so the greedy pass respects them.
+    for slot, player in pinned.items():
+        assignments[slot] = player
+        used.add(player)
 
-    swaps: list[dict] = []
-    rows = picks.to_dict(orient="records")
-    for i, row in enumerate(rows):
-        if int(row["round"]) != 1:
-            continue
+    # Greedy: iterate slots 1..32 in order. Could do Hungarian but greedy
+    # from best-covered players downward is simpler and produces clean
+    # R1 orderings because early slots have richer analyst coverage.
+    for _, row in r1_rows.iterrows():
         slot = int(row["pick"])
-        player = str(row["player"])
-        if not _needs_swap(slot, player):
+        if slot in pinned:
             continue
-        # Remove the bad player from picked-set, find sub
-        picked.discard(_norm(player))
-        cands = _eligible_for_slot(slot)
-        if not cands:
+        candidates: list[tuple[float, str]] = []
+        for p in board["player"].head(60):
+            pn = str(p)
+            if pn in used:
+                continue
+            s = _score(pn, slot)
+            if s <= 0:
+                continue
+            candidates.append((s, pn))
+        if not candidates:
+            # Last resort: keep the existing pick (shouldn't happen in R1)
+            assignments[slot] = str(row["player"])
+            used.add(str(row["player"]))
             continue
-        sub = cands[0]
-        rows[i]["player"] = sub["player"]
-        rows[i]["position"] = sub["position"]
-        rows[i]["school"] = sub["school"]
-        rows[i]["independent_grade"] = float(
-            board_by_rank.loc[sub["final_rank"], "independent_grade"])
-        picked.add(_norm(sub["player"]))
-        swaps.append({
-            "slot": slot, "team": row["team"],
-            "removed": player, "installed": sub["player"],
-            "sub_final_rank": sub["final_rank"],
-        })
+        candidates.sort(reverse=True)
+        chosen = candidates[0][1]
+        assignments[slot] = chosen
+        used.add(chosen)
 
-    # ---- Second pass: guarantee Kiper top-15 all appear in R1 ----
-    # Their market P50 + Kiper rank both put them in R1; if the sim missed
-    # one, substitute the lowest-graded R1 player whose slot is within
-    # SLOT_WINDOW of the missing player's analyst coverage.
-    picked = {_norm(str(r["player"])) for r in rows if int(r["round"]) == 1}
-    kiper_top15 = [e for e in kiper.get("top100", []) if int(e["rank"]) <= 15]
-    forced: list[dict] = []
-    for entry in kiper_top15:
-        if _norm(entry["player"]) in picked:
-            continue
-        # Find the player's actual board row (their name on our board may
-        # differ slightly, e.g. "Rueben Bain" vs Kiper's "Rueben Bain Jr.")
-        mk = _norm(entry["player"])
-        board_row = board[board["player"].map(lambda p: _norm(str(p))) == mk]
-        if board_row.empty:
-            continue
-        brow = board_row.iloc[0]
-        b_player = brow["player"]
-        b_slots = _slots_for(b_player, analyst_slots) or [int(entry["rank"])]
-        # Find the R1 row whose slot is closest to any analyst slot for this
-        # player, and whose current occupant has the weakest board grade.
-        r1_rows = [(i, r) for i, r in enumerate(rows) if int(r["round"]) == 1]
-        # Only allow swap if slot is within SLOT_WINDOW of an analyst slot
-        legal = [(i, r) for i, r in r1_rows
-                 if any(abs(s - int(r["pick"])) <= SLOT_WINDOW for s in b_slots)
-                 and _norm(str(r["player"])) in rank_of]
-        if not legal:
-            continue
-        # Prefer displacing the player with the highest (worst) board rank
-        legal.sort(key=lambda ir: -rank_of.get(_norm(str(ir[1]["player"])), 0))
-        i, victim_row = legal[0]
-        removed = victim_row["player"]
-        rows[i]["player"] = b_player
-        rows[i]["position"] = brow["position"]
-        rows[i]["school"] = brow["school"]
-        rows[i]["independent_grade"] = float(brow["independent_grade"])
-        picked.discard(_norm(str(removed)))
-        picked.add(_norm(str(b_player)))
-        forced.append({"slot": int(victim_row["pick"]),
-                       "team": victim_row["team"],
-                       "removed": removed, "installed": b_player,
-                       "kiper_rank": int(entry["rank"])})
+    # Build new picks rows
+    new_rows: list[dict] = []
+    board_lookup = board.set_index("player")
+    swaps: list[dict] = []
+    for _, row in picks.iterrows():
+        r = dict(row)
+        if int(r["round"]) == 1:
+            slot = int(r["pick"])
+            new_player = assignments.get(slot, r["player"])
+            if new_player != r["player"]:
+                swaps.append({"slot": slot, "team": r["team"],
+                              "removed": r["player"], "installed": new_player})
+            r["player"] = new_player
+            if new_player in board_lookup.index:
+                brow = board_lookup.loc[new_player]
+                if isinstance(brow, pd.DataFrame):
+                    brow = brow.iloc[0]
+                r["position"] = brow["position"]
+                r["school"] = brow["school"]
+                r["independent_grade"] = float(brow["independent_grade"])
+        new_rows.append(r)
 
-    pd.DataFrame(rows).to_csv(PICKS_CSV, index=False)
-    if forced:
-        print(f"[realign_r1] forced {len(forced)} Kiper top-15 inclusions:")
-        for s in forced:
-            print(f"  #{s['slot']:>2} {s['team']}: "
-                  f"{s['removed']} -> {s['installed']} "
-                  f"(Kiper #{s['kiper_rank']})")
+    pd.DataFrame(new_rows).to_csv(PICKS_CSV, index=False)
 
-    # Update full_mock R1 picks to match
+    # Full-mock sync
     if MOCK_JSON.exists():
         mock = json.loads(MOCK_JSON.read_text(encoding="utf-8"))
-        r1_by_slot = {int(r["pick"]): r for r in rows if int(r["round"]) == 1}
+        r1_by_slot = {int(r["pick"]): r for r in new_rows if int(r["round"]) == 1}
         for p in mock.get("picks", []):
             slot = int(p.get("pick", 0))
             if slot in r1_by_slot:
                 src = r1_by_slot[slot]
-                p["player"] = src["player"]
-                p["position"] = src["position"]
-                p["college"] = src.get("school", p.get("college"))
-                # Leave reasoning/alternates alone; flag stale
-                p["reasoning"] = (
-                    "[realigned to analyst consensus] " + (p.get("reasoning") or "")[:300]
-                )
+                if p.get("player") != src["player"]:
+                    p["player"] = src["player"]
+                    p["position"] = src["position"]
+                    p["college"] = src.get("school", p.get("college"))
+                    p["reasoning"] = ("[realigned to analyst consensus] "
+                                      + (p.get("reasoning") or "")[:300])
         MOCK_JSON.write_text(json.dumps(mock, indent=2), encoding="utf-8")
 
-    print(f"[realign_r1] swapped {len(swaps)} R1 picks:")
-    for s in swaps:
-        print(f"  #{s['slot']:>2} {s['team']}: "
-              f"{s['removed']} -> {s['installed']} "
-              f"(board rank {s['sub_final_rank']})")
+    print(f"[realign_r1] MAX_DELTA={MAX_DELTA} — final R1:")
+    for _, row in pd.DataFrame(new_rows).query("round == 1").sort_values("pick").iterrows():
+        slot = int(row["pick"])
+        pn = str(row["player"])
+        hits = player_hits.get(pn, {})
+        in_window = {s: c for s, c in hits.items() if abs(s - slot) <= MAX_DELTA}
+        tag = (f"analyst {sorted(in_window)}" if in_window
+               else f"(Kiper-forced, no analyst w/in {MAX_DELTA})")
+        print(f"  #{slot:>2} {row['team']:<3} {pn:<25} {tag}")
+    if swaps:
+        print(f"\n[realign_r1] made {len(swaps)} swaps")
 
 
 if __name__ == "__main__":
