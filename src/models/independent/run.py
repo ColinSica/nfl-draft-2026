@@ -416,6 +416,84 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
                 return p
         return candidate
 
+    # Top-prospect rescue: any R1-tier player (board rank <= 32) should be
+    # somewhere in our displayed R1 as long as they had any sim support.
+    # Pre-compute remaining-top-32 at each slot so when the greedy modal
+    # pick is a rank-40+ outlier we can swap in the top-32 player who was
+    # unfairly out-competed at their modal slot.
+    _rank_lookup: dict[str, int] = {}
+    if _board_df is not None:
+        for _, r in _board_df.iterrows():
+            _rank_lookup[r["player"]] = int(r["final_rank"])
+
+    # Build a position lookup so the rescue can respect team constraints
+    # (no QB rescue to QB-locked teams, no reach at a position the team
+    # doesn't need).
+    _pos_lookup: dict[str, str] = {}
+    if _board_df is not None:
+        for _, r in _board_df.iterrows():
+            _pos_lookup[r["player"]] = r["position"]
+
+    def _rescue_top_prospect(candidate: str, slot_pc,
+                              any_slot_counts: dict, slot: int,
+                              canon_team: str | None) -> str:
+        """If `candidate` is ranked >32 but a top-32 prospect is unassigned
+        AND had ANY R1 landing in the sims (any slot 1-32), prefer the
+        top-32 prospect. Only trigger late in R1 (slot >= 16) so we don't
+        overrule early-round team-specific picks.
+
+        Constraints applied:
+          - Don't rescue a QB to a qb_situation='locked' team (DAL, BAL,
+            NYG, etc.). These teams virtually never take a QB in R1.
+          - Don't rescue a prospect at a position the team has actively
+            de-emphasized (need weight < 1.0 AND not in scheme premium).
+        """
+        if slot < 16:
+            return candidate
+        cand_rank = _rank_lookup.get(candidate, 999)
+        if cand_rank <= 32:
+            return candidate  # candidate already is R1-tier
+
+        team_profile = (_AGENTS_CACHE or {}).get(canon_team or "", {}) or {}
+        team_needs = team_profile.get("roster_needs", {}) or {}
+        team_scheme_premium = set((team_profile.get("scheme") or {}).get("premium", []) or [])
+        qb_sit = (team_profile.get("qb_situation") or "").lower()
+        qb_urg = float(team_profile.get("qb_urgency", 0.0) or 0.0)
+
+        # Find unassigned R1-tier (rank <= 32) prospect with any sim
+        # support at slot 1-32. Prefer the highest-ranked WITH team fit.
+        best = None
+        best_rank = cand_rank
+        for player, rk in _rank_lookup.items():
+            if rk > 32 or rk >= best_rank:
+                continue
+            if player in assigned_players:
+                continue
+            if any_slot_counts.get(player, 0) <= 0:
+                continue
+            pos = _pos_lookup.get(player, "")
+            # Skip QBs for locked teams
+            if pos == "QB" and qb_sit == "locked" and qb_urg < 0.1:
+                continue
+            # Skip if team has no need at this position (need < 1.0 and
+            # not scheme-premium). Allows real BPA swings but prevents
+            # absurd need-mismatch rescues (e.g. WR for a WR-deep team).
+            need_w = float(team_needs.get(pos, 0.0) or 0.0)
+            if need_w < 1.0 and pos not in team_scheme_premium:
+                continue
+            best = player
+            best_rank = rk
+        return best or candidate
+
+    # Pre-compute per-player total R1 landings across all sims (any slot
+    # 1-32) so we can detect "this player was picked in R1 sometimes but
+    # not modal at any single slot."
+    _any_r1_landings: dict[str, int] = defaultdict(int)
+    for slot_n, pc in agg["slot_counts"].items():
+        if slot_n and slot_n <= 32:
+            for player, ct in pc.items():
+                _any_r1_landings[player] += ct
+
     for slot in sorted(agg["slot_counts"].keys()):
         # Use the full slot_counts (all sims, all picking teams) so a player
         # who's popular at this slot — even if always taken via trade-up — is
@@ -440,6 +518,15 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
         if new_player != player:
             ct = pc.get(new_player, ct)
             player = new_player
+        # Top-prospect rescue: in late R1 (pick 16+), if we're about to
+        # take a rank-40+ outlier while a consensus top-32 player with any
+        # R1 landings is on the board, prefer the top-32 prospect — but
+        # only if they actually fit the team (not a QB to a locked team,
+        # not a position the team has no need for).
+        rescued = _rescue_top_prospect(player, pc, _any_r1_landings, slot, canonical_team)
+        if rescued != player:
+            ct = pc.get(rescued, _any_r1_landings.get(rescued, 1))
+            player = rescued
         assigned_players.add(player)
         prob = round(ct / n_sims, 3)
 
@@ -459,6 +546,17 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
             for sim in all_sims:
                 for p in sim:
                     if p["slot"] == slot and p["player"] == player:
+                        chosen_p = p
+                        break
+                if chosen_p:
+                    break
+        if not chosen_p:
+            # Rescued player may have only landed at other slots in sims.
+            # Find them in ANY sim to get their grade/fit stats, then use
+            # for reasoning at this slot.
+            for sim in all_sims:
+                for p in sim:
+                    if p["player"] == player:
                         chosen_p = p
                         break
                 if chosen_p:

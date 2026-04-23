@@ -1,18 +1,21 @@
 /**
  * Full Mock — every pick, all seven rounds (257 picks).
  *
- * Layout matches how real draft sites (ESPN/NFL.com/PFF) present multi-round
- * mocks: Round 1 gets full prose per pick; Rounds 2-7 are compact tables.
- * Filters available for position and team.
+ * Sleeper-style draft board: single compact row per pick (team color edge,
+ * pick number, team chip, player, position, college, board rank). Click a
+ * row to expand the detailed scoring breakdown, scouting line, and close
+ * alternates. Collapsed by default so the board scrolls like a real draft
+ * tracker.
  *
  * Data comes from scripts/build_full_mock.py — a greedy team-fit walk over
- * the independent model's 727-prospect board. No fabricated info: reasoning
- * is generated from real team roster_needs, documented GM draft history,
- * confirmed pre-draft visits, and PFF-anchored prospect grades.
+ * the independent model's 727-prospect board. Reasoning is built from real
+ * team roster_needs, documented GM draft history, confirmed pre-draft
+ * visits, and PFF-anchored prospect grades. No fabricated info.
  */
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SectionHeader, SmallCaps, MissingText, Footnote, HRule } from '../components/editorial';
+import { ChevronDown, ChevronRight } from 'lucide-react';
+import { SectionHeader, SmallCaps, MissingText, Footnote } from '../components/editorial';
 import { teamColor } from '../lib/teamColors';
 
 type FullPick = {
@@ -54,136 +57,120 @@ const ROUND_LABELS: Record<number, string> = {
 const POS_FILTERS = ['All', 'QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE',
                      'DL', 'IDL', 'LB', 'CB', 'S'];
 
-// ─── Round One card — full prose, alternates, factor chips ────────────
-function Round1Card({ pick }: { pick: FullPick }) {
+// ─── Single pick row — Sleeper-style, click to expand ──────────────
+function PickRow({ pick }: { pick: FullPick }) {
+  const [open, setOpen] = useState(false);
   const tc = teamColor(pick.team);
+  const rankDelta = pick.rank - pick.pick;
+  const rankStatus: 'value' | 'reach' | 'even' =
+    rankDelta <= -5 ? 'value' : rankDelta >= 10 ? 'reach' : 'even';
+
   return (
-    <article className="card">
-      <div className="h-0.5" style={{ background: tc.primary }} />
-      <div className="p-4 sm:p-5">
-        <div className="flex items-start gap-4 flex-wrap">
-          <div className="flex flex-col items-center justify-center shrink-0 min-w-[72px]">
-            <span className="caps-tight text-ink-muted text-[0.6rem]">Pick</span>
-            <span className="display-num text-4xl leading-none" style={{ color: tc.primary }}>
-              {String(pick.pick).padStart(2, '0')}
-            </span>
-          </div>
+    <div className="border-b border-ink-edge last:border-b-0">
+      {/* Row — always visible */}
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="w-full text-left flex items-stretch hover:bg-paper-hover transition group"
+      >
+        {/* Team color edge */}
+        <div className="w-1 shrink-0" style={{ background: tc.primary }} />
+        <div className="flex items-center gap-3 py-2 px-3 flex-1 min-w-0">
+          <span className="display-num text-base w-10 tabular-nums text-ink-muted shrink-0">
+            {String(pick.pick).padStart(2, '0')}
+          </span>
           <Link
             to={`/team/${pick.team}`}
-            className="display-broadcast text-sm px-2 py-1 shrink-0"
+            onClick={e => e.stopPropagation()}
+            className="display-broadcast text-[0.65rem] px-1.5 py-0.5 shrink-0"
             style={{ background: tc.primary,
                      color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary }}
             title={tc.name}
           >
             {pick.team}
           </Link>
-          <div className="flex-1 min-w-[180px]">
-            <h3 className="display-broadcast text-xl sm:text-2xl text-ink leading-tight">
+          <div className="flex-1 min-w-0 flex items-baseline gap-2 flex-wrap">
+            <span className="body-serif text-sm font-medium text-ink truncate">
               {pick.player}
-            </h3>
-            <div className="font-mono text-xs text-ink-muted mt-1 flex flex-wrap gap-x-2 gap-y-0.5 items-baseline">
-              <span>{pick.position}</span>
-              <span className="text-ink-edge">·</span>
-              <span>{pick.college ?? ''}</span>
-              <span className="text-ink-edge">·</span>
-              <span>board #{pick.rank}</span>
-              {pick.tier && (
-                <>
-                  <span className="text-ink-edge">·</span>
-                  <span>{pick.tier}</span>
-                </>
-              )}
-            </div>
+            </span>
+            <span className="font-mono text-[0.6rem] px-1 bg-paper-surface text-ink-muted shrink-0">
+              {pick.position}
+            </span>
+            <span className="font-mono text-[0.62rem] text-ink-soft italic truncate hidden sm:inline">
+              {pick.college ?? ''}
+            </span>
           </div>
+          <span className="font-mono text-[0.62rem] text-ink-muted w-14 text-right shrink-0 hidden sm:inline">
+            rank #{pick.rank}
+          </span>
+          {rankStatus === 'value' && (
+            <span className="caps-tight text-[0.6rem] text-accent-brass shrink-0 hidden md:inline">VALUE</span>
+          )}
+          {rankStatus === 'reach' && (
+            <span className="caps-tight text-[0.6rem] text-live shrink-0 hidden md:inline">REACH</span>
+          )}
+          <span className="text-ink-muted shrink-0 group-hover:text-ink transition">
+            {open ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+          </span>
         </div>
+      </button>
 
-        <HRule className="my-3" />
+      {/* Expanded detail */}
+      {open && (
+        <div className="ml-1 pl-4 pr-4 pb-4 pt-1 bg-paper-raised border-t border-ink-edge/50 space-y-3">
+          {/* Reasoning prose */}
+          <p className="body-serif text-sm text-ink leading-relaxed">
+            {pick.reasoning}
+          </p>
 
-        <p className="body-serif text-sm sm:text-base text-ink leading-relaxed">
-          {pick.reasoning}
-        </p>
-
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <SmallCaps tight className="text-ink-muted block mb-1.5">
-              Model factors
-            </SmallCaps>
-            <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-[0.65rem] text-ink-muted">
-              <span>grade <span className="text-ink">{pick.factors.grade.toFixed(2)}</span></span>
-              <span>need <span className="text-ink">{pick.factors.need >= 0 ? '+' : ''}{pick.factors.need.toFixed(2)}</span></span>
-              {pick.factors.scheme > 0 && (
-                <span>scheme <span className="text-accent-brass">+{pick.factors.scheme.toFixed(2)}</span></span>
-              )}
-              {pick.factors.visit > 0 && (
-                <span>visit <span className="text-accent-brass">+{pick.factors.visit.toFixed(2)}</span></span>
-              )}
-              {pick.factors.aff !== 0 && (
-                <span>GM-history <span className="text-ink">{pick.factors.aff >= 0 ? '+' : ''}{pick.factors.aff.toFixed(2)}</span></span>
-              )}
-              {pick.factors.reach < 0 && (
-                <span>reach <span className="text-live">{pick.factors.reach.toFixed(2)}</span></span>
-              )}
-            </div>
-          </div>
-          {pick.alternates && pick.alternates.length > 0 && (
+          {/* Factor chips + alternates in a split layout */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
             <div>
               <SmallCaps tight className="text-ink-muted block mb-1.5">
-                Close alternates
+                Model scoring
               </SmallCaps>
-              <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-[0.7rem] font-mono text-ink-soft">
-                {pick.alternates.slice(0, 3).map(a => (
-                  <span key={a.player}>
-                    <span className="text-ink">{a.player}</span>
-                    <span className="text-ink-edge mx-1">·</span>
-                    {a.position}
-                    <span className="text-ink-edge mx-1">·</span>
-                    #{a.rank}
-                  </span>
-                ))}
+              <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-[0.65rem]">
+                <span className="text-ink-muted">grade <span className="text-ink">{pick.factors.grade.toFixed(2)}</span></span>
+                <span className="text-ink-muted">need <span className="text-ink">{pick.factors.need >= 0 ? '+' : ''}{pick.factors.need.toFixed(2)}</span></span>
+                {pick.factors.scheme > 0 && (
+                  <span className="text-ink-muted">scheme <span className="text-accent-brass">+{pick.factors.scheme.toFixed(2)}</span></span>
+                )}
+                {pick.factors.visit > 0 && (
+                  <span className="text-ink-muted">visit <span className="text-accent-brass">+{pick.factors.visit.toFixed(2)}</span></span>
+                )}
+                {pick.factors.aff !== 0 && (
+                  <span className="text-ink-muted">GM-history <span className="text-ink">{pick.factors.aff >= 0 ? '+' : ''}{pick.factors.aff.toFixed(2)}</span></span>
+                )}
+                {pick.factors.reach < 0 && (
+                  <span className="text-ink-muted">reach <span className="text-live">{pick.factors.reach.toFixed(2)}</span></span>
+                )}
               </div>
             </div>
-          )}
+            {pick.alternates && pick.alternates.length > 0 && (
+              <div>
+                <SmallCaps tight className="text-ink-muted block mb-1.5">
+                  Close alternates
+                </SmallCaps>
+                <div className="flex flex-col gap-0.5 text-[0.7rem] font-mono text-ink-soft">
+                  {pick.alternates.slice(0, 3).map(a => (
+                    <span key={a.player} className="truncate">
+                      <span className="text-ink">{a.player}</span>
+                      <span className="text-ink-edge mx-1">·</span>
+                      {a.position}
+                      <span className="text-ink-edge mx-1">·</span>
+                      #{a.rank}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </article>
+      )}
+    </div>
   );
 }
 
-// ─── Rounds 2-7 compact table row ────────────────────────────────────
-function CompactRow({ pick }: { pick: FullPick }) {
-  const tc = teamColor(pick.team);
-  return (
-    <tr className="hover:bg-paper-hover transition">
-      <td className="num text-ink-muted font-mono text-xs w-12">
-        {pick.pick}
-      </td>
-      <td className="w-14">
-        <Link
-          to={`/team/${pick.team}`}
-          className="inline-block display-broadcast text-[0.7rem] px-1.5 py-0.5"
-          style={{ background: tc.primary,
-                   color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary }}
-        >
-          {pick.team}
-        </Link>
-      </td>
-      <td className="body-serif text-sm font-medium text-ink">
-        {pick.player}
-      </td>
-      <td className="font-mono text-xs text-ink-muted w-12">
-        {pick.position}
-      </td>
-      <td className="font-serif italic text-xs text-ink-soft hidden md:table-cell">
-        {pick.college ?? ''}
-      </td>
-      <td className="font-mono text-[0.65rem] text-ink-muted w-12 text-right">
-        #{pick.rank}
-      </td>
-    </tr>
-  );
-}
-
-function CompactRound({
+function RoundBlock({
   round, picks, posFilter, teamFilter,
 }: {
   round: number;
@@ -200,62 +187,23 @@ function CompactRound({
   list.forEach(p => { byPos[p.position] = (byPos[p.position] ?? 0) + 1; });
   const posSummary = Object.entries(byPos)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
+    .slice(0, 6)
     .map(([p, c]) => `${c}${p}`)
     .join(' · ');
+
   return (
-    <section className="space-y-2">
-      <div className="flex items-baseline justify-between border-b-2 border-ink pb-1.5 flex-wrap gap-2">
+    <section className="border border-ink-edge bg-paper">
+      <div className="flex items-baseline justify-between border-b-2 border-ink px-3 py-2 flex-wrap gap-2 bg-paper-surface">
         <div className="flex items-baseline gap-3 flex-wrap">
-          <h2 className="display-broadcast text-xl">{ROUND_LABELS[round]}</h2>
-          <span className="font-mono text-[0.65rem] text-ink-muted">{posSummary}</span>
+          <h2 className="display-broadcast text-lg">{ROUND_LABELS[round]}</h2>
+          <span className="font-mono text-[0.62rem] text-ink-muted">{posSummary}</span>
         </div>
-        <span className="caps-tight text-ink-muted text-xs">
+        <span className="caps-tight text-ink-muted text-[0.62rem]">
           {list.length} pick{list.length === 1 ? '' : 's'}
         </span>
       </div>
-      <div className="overflow-x-auto">
-        <table className="w-full">
-          <tbody className="divide-y divide-ink-edge">
-            {list.map(p => <CompactRow key={p.pick} pick={p} />)}
-          </tbody>
-        </table>
-      </div>
-    </section>
-  );
-}
-
-function Round1Block({
-  picks, posFilter, teamFilter,
-}: {
-  picks: FullPick[];
-  posFilter: string;
-  teamFilter: string;
-}) {
-  const list = picks.filter(p =>
-    (posFilter === 'All' || p.position === posFilter) &&
-    (!teamFilter || p.team === teamFilter)
-  );
-  if (list.length === 0) return null;
-  const byPos: Record<string, number> = {};
-  list.forEach(p => { byPos[p.position] = (byPos[p.position] ?? 0) + 1; });
-  const posSummary = Object.entries(byPos)
-    .sort((a, b) => b[1] - a[1])
-    .map(([p, c]) => `${c}${p}`)
-    .join(' · ');
-  return (
-    <section className="space-y-4">
-      <div className="flex items-baseline justify-between border-b-2 border-ink pb-1.5 flex-wrap gap-2">
-        <div className="flex items-baseline gap-3 flex-wrap">
-          <h2 className="display-broadcast text-3xl">Round One</h2>
-          <span className="font-mono text-xs text-ink-muted">{posSummary}</span>
-        </div>
-        <span className="caps-tight text-ink-muted text-xs">
-          {list.length} picks · full prose per selection
-        </span>
-      </div>
-      <div className="grid grid-cols-1 gap-3">
-        {list.map(p => <Round1Card key={p.pick} pick={p} />)}
+      <div>
+        {list.map(p => <PickRow key={p.pick} pick={p} />)}
       </div>
     </section>
   );
@@ -266,6 +214,7 @@ export function FullMock() {
   const [err, setErr] = useState<string | null>(null);
   const [posFilter, setPosFilter] = useState('All');
   const [teamFilter, setTeamFilter] = useState('');
+  const [activeRound, setActiveRound] = useState<number>(1);
 
   useEffect(() => {
     fetch('/api/full-mock')
@@ -290,11 +239,11 @@ export function FullMock() {
   }, [data]);
 
   return (
-    <div className="space-y-8 pb-16">
+    <div className="space-y-6 pb-16">
       <SectionHeader
         kicker="The full mock"
         title="All seven rounds, 257 picks."
-        deck="A greedy team-fit walk through the independent model's prospect board. Reasoning is built from real team roster needs (post-free-agency), documented GM draft history 2019–2025, confirmed pre-draft visits, and PFF-anchored tape grades — no fabricated scouting prose. Round One gets full treatment; Rounds Two through Seven are compact for scannability, as most drafts already are."
+        deck="One row per pick, like a draft tracker. Click any pick to see the team-specific reasoning, model factors, and the close alternates the team considered. Data comes from the independent team-agent model — no fabricated scouting prose."
       />
 
       {err && <MissingText>Full mock unavailable: {err}</MissingText>}
@@ -310,74 +259,84 @@ export function FullMock() {
 
       {data && data.picks.length > 0 && (
         <>
-          {/* Filters */}
-          <div className="card p-4 flex flex-wrap items-center gap-3">
-            <div className="flex items-center gap-1.5">
-              <SmallCaps tight className="text-ink-muted">Position</SmallCaps>
-              <div className="flex flex-wrap gap-1">
-                {POS_FILTERS.map(p => (
+          {/* Filters + round tabs */}
+          <div className="space-y-2">
+            <div className="flex flex-wrap items-center gap-3 bg-paper-surface p-3 border border-ink-edge">
+              {/* Round tabs */}
+              <div className="flex items-center gap-1">
+                <SmallCaps tight className="text-ink-muted mr-1">Round</SmallCaps>
+                {[1,2,3,4,5,6,7].map(r => (
                   <button
-                    key={p}
-                    onClick={() => setPosFilter(p)}
-                    className={`px-2 py-1 caps-tight text-[0.65rem] border transition ${
-                      posFilter === p
+                    key={r}
+                    onClick={() => setActiveRound(r)}
+                    className={`w-7 h-7 text-xs font-mono border transition ${
+                      activeRound === r
                         ? 'bg-ink text-paper border-ink'
                         : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
                     }`}
                   >
-                    {p}
+                    {r}
                   </button>
                 ))}
               </div>
-            </div>
-            <div className="flex items-center gap-1.5 ml-auto">
-              <SmallCaps tight className="text-ink-muted">Team</SmallCaps>
-              <select
-                value={teamFilter}
-                onChange={e => setTeamFilter(e.target.value)}
-                className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper-surface hover:border-ink"
-              >
-                <option value="">All teams</option>
-                {teams.map(t => <option key={t} value={t}>{t}</option>)}
-              </select>
-              {(posFilter !== 'All' || teamFilter) && (
-                <button
-                  onClick={() => { setPosFilter('All'); setTeamFilter(''); }}
-                  className="caps-tight text-[0.65rem] text-ink-muted hover:text-ink"
+              <div className="flex items-center gap-1.5">
+                <SmallCaps tight className="text-ink-muted">Pos</SmallCaps>
+                <div className="flex flex-wrap gap-1">
+                  {POS_FILTERS.map(p => (
+                    <button
+                      key={p}
+                      onClick={() => setPosFilter(p)}
+                      className={`px-1.5 py-0.5 caps-tight text-[0.62rem] border transition ${
+                        posFilter === p
+                          ? 'bg-ink text-paper border-ink'
+                          : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
+                      }`}
+                    >
+                      {p}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5 ml-auto">
+                <SmallCaps tight className="text-ink-muted">Team</SmallCaps>
+                <select
+                  value={teamFilter}
+                  onChange={e => setTeamFilter(e.target.value)}
+                  className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper hover:border-ink"
                 >
-                  Clear
-                </button>
-              )}
+                  <option value="">All</option>
+                  {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                </select>
+                {(posFilter !== 'All' || teamFilter) && (
+                  <button
+                    onClick={() => { setPosFilter('All'); setTeamFilter(''); }}
+                    className="caps-tight text-[0.62rem] text-ink-muted hover:text-ink"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
             </div>
+            <p className="font-mono text-[0.62rem] text-ink-soft italic">
+              Click any pick to expand the per-pick analysis.
+            </p>
           </div>
 
-          {/* Round 1: full prose cards */}
-          <Round1Block
-            picks={byRound.get(1) ?? []}
+          {/* Single active round, Sleeper-style */}
+          <RoundBlock
+            round={activeRound}
+            picks={byRound.get(activeRound) ?? []}
             posFilter={posFilter}
             teamFilter={teamFilter}
           />
 
-          {/* Rounds 2-7: compact tables */}
-          <div className="space-y-8">
-            {[2,3,4,5,6,7].map(rnd => (
-              <CompactRound
-                key={rnd}
-                round={rnd}
-                picks={byRound.get(rnd) ?? []}
-                posFilter={posFilter}
-                teamFilter={teamFilter}
-              />
-            ))}
-          </div>
-
-          <section className="border-t-2 border-ink pt-5">
+          <section className="border-t-2 border-ink pt-4">
             <Footnote>
               {data.methodology ?? ''}
               {data.generated_at && (
                 <>
                   {' '}Generated{' '}
-                  <span className="font-mono text-[0.65rem]">
+                  <span className="font-mono text-[0.62rem]">
                     {new Date(data.generated_at).toLocaleString()}
                   </span>.
                 </>

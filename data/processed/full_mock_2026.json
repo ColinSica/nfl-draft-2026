@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-23T17:31:23+00:00",
+  "generated_at": "2026-04-23T19:20:25+00:00",
   "n_picks": 257,
-  "source_board_mtime": "2026-04-23T17:31:00+00:00",
+  "source_board_mtime": "2026-04-23T19:18:16+00:00",
   "methodology": "Greedy per-pick assignment using the independent model's 727-prospect board (kalshi-anchored + PFF tape) × each team's roster_needs, gm_affinity, scheme premium, and documented pre-draft visits. Diminishing-returns: each additional pick at the same position halves the need weight. Reach + over-value penalties applied per round band.",
   "picks": [
     {
