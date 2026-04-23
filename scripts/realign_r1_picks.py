@@ -135,7 +135,56 @@ def main() -> None:
             "sub_final_rank": sub["final_rank"],
         })
 
+    # ---- Second pass: guarantee Kiper top-15 all appear in R1 ----
+    # Their market P50 + Kiper rank both put them in R1; if the sim missed
+    # one, substitute the lowest-graded R1 player whose slot is within
+    # SLOT_WINDOW of the missing player's analyst coverage.
+    picked = {_norm(str(r["player"])) for r in rows if int(r["round"]) == 1}
+    kiper_top15 = [e for e in kiper.get("top100", []) if int(e["rank"]) <= 15]
+    forced: list[dict] = []
+    for entry in kiper_top15:
+        if _norm(entry["player"]) in picked:
+            continue
+        # Find the player's actual board row (their name on our board may
+        # differ slightly, e.g. "Rueben Bain" vs Kiper's "Rueben Bain Jr.")
+        mk = _norm(entry["player"])
+        board_row = board[board["player"].map(lambda p: _norm(str(p))) == mk]
+        if board_row.empty:
+            continue
+        brow = board_row.iloc[0]
+        b_player = brow["player"]
+        b_slots = _slots_for(b_player, analyst_slots) or [int(entry["rank"])]
+        # Find the R1 row whose slot is closest to any analyst slot for this
+        # player, and whose current occupant has the weakest board grade.
+        r1_rows = [(i, r) for i, r in enumerate(rows) if int(r["round"]) == 1]
+        # Only allow swap if slot is within SLOT_WINDOW of an analyst slot
+        legal = [(i, r) for i, r in r1_rows
+                 if any(abs(s - int(r["pick"])) <= SLOT_WINDOW for s in b_slots)
+                 and _norm(str(r["player"])) in rank_of]
+        if not legal:
+            continue
+        # Prefer displacing the player with the highest (worst) board rank
+        legal.sort(key=lambda ir: -rank_of.get(_norm(str(ir[1]["player"])), 0))
+        i, victim_row = legal[0]
+        removed = victim_row["player"]
+        rows[i]["player"] = b_player
+        rows[i]["position"] = brow["position"]
+        rows[i]["school"] = brow["school"]
+        rows[i]["independent_grade"] = float(brow["independent_grade"])
+        picked.discard(_norm(str(removed)))
+        picked.add(_norm(str(b_player)))
+        forced.append({"slot": int(victim_row["pick"]),
+                       "team": victim_row["team"],
+                       "removed": removed, "installed": b_player,
+                       "kiper_rank": int(entry["rank"])})
+
     pd.DataFrame(rows).to_csv(PICKS_CSV, index=False)
+    if forced:
+        print(f"[realign_r1] forced {len(forced)} Kiper top-15 inclusions:")
+        for s in forced:
+            print(f"  #{s['slot']:>2} {s['team']}: "
+                  f"{s['removed']} -> {s['installed']} "
+                  f"(Kiper #{s['kiper_rank']})")
 
     # Update full_mock R1 picks to match
     if MOCK_JSON.exists():
