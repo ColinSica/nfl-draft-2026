@@ -85,11 +85,18 @@ def _need_score(pos: str, team_profile: dict) -> float:
     #   urgency < 0.5 -> need dampened proportionally
     if pos == "QB":
         urg = float(team_profile.get("qb_urgency", 0.0) or 0.0)
+        qb_sit = (team_profile.get("qb_situation") or "").lower()
         # Dampen: base = base * (0.25 + 0.75 * urg) so urg=1 -> full, urg=0 -> 0.25x
         base = base * (0.25 + 0.75 * urg)
         # Still allow additive boost for explicit high-urgency teams
         if urg >= 0.6:
             base += 0.4 * urg
+        # Hard penalty for teams with locked QB rooms (Dak, Dart, Lamar, etc.).
+        # These teams virtually never take a QB in R1. Prior calibration
+        # allowed a large-enough BPA weight to surface QBs for DAL/NYG/BAL
+        # even with qb_urgency=0, which is unrealistic.
+        if qb_sit == "locked" and urg < 0.1:
+            base -= 2.5
     return base
 
 
@@ -330,22 +337,34 @@ def compute_team_fit(prospects: pd.DataFrame,
     else:
         archetype_bonus = pd.Series(0.0, index=prospects.index)
 
-    # Tiered medical (Section F) — differentiate short-term vs chronic.
-    # has_injury_flag is the catch-all; acl/shoulder/spine flags escalate.
-    med_tol = float(team_profile.get("medical_tolerance", 0.95))
-    med_tol = max(0.75, min(1.05, med_tol))
+    # Tiered medical (Section F — recalibrated 4/23):
+    #
+    # The `has_injury_flag` column is ON for ~80% of top prospects (any college
+    # injury history counts), so penalizing it uniformly hands a baseline
+    # advantage to the one or two prospects with perfectly clean records.
+    # Prior calibration had inj_mult=0.95 for has_injury_flag=1, which was
+    # enough to flip first-OT from Mauigoa (flag=1, rank 5) to Fano (flag=0,
+    # rank 21) — even though every analyst has Mauigoa as OT1.
+    #
+    # New calibration:
+    #   - Generic has_injury_flag: 0.99 (barely a signal; most top prospects have it)
+    #   - Specific severe flags (ACL/spine/shoulder): meaningful penalty
+    #   - News-flagged concerns (via _meta_medical_flags_2026 with severity set):
+    #     applied in player_value.py as a grade delta, not here
+    med_tol = float(team_profile.get("medical_tolerance", 0.99))
+    med_tol = max(0.85, min(1.05, med_tol))
     inj_generic = pd.to_numeric(prospects.get("has_injury_flag", 0),
                                 errors="coerce").fillna(0)
     acl = pd.to_numeric(prospects.get("acl_flag", 0), errors="coerce").fillna(0)
     spine = pd.to_numeric(prospects.get("spine_flag", 0), errors="coerce").fillna(0)
     shoulder = pd.to_numeric(prospects.get("shoulder_flag", 0),
                              errors="coerce").fillna(0)
-    # Start at 1.0, apply descending multipliers per severity.
+    # Start at 1.0. Generic flag: near-neutral. Specific severe injury: real penalty.
     inj_mult = pd.Series(1.0, index=prospects.index)
-    inj_mult = inj_mult.where(inj_generic == 0, med_tol)
-    inj_mult = inj_mult.where(acl == 0, med_tol - 0.05)
-    inj_mult = inj_mult.where(spine == 0, med_tol - 0.10)
-    inj_mult = inj_mult.where(shoulder == 0, inj_mult - 0.02)
+    inj_mult = inj_mult.where(inj_generic == 0, med_tol)          # 0.99 — tiny
+    inj_mult = inj_mult.where(acl == 0, 0.88)                      # ACL: -12%
+    inj_mult = inj_mult.where(spine == 0, 0.82)                    # spine: -18%
+    inj_mult = inj_mult.where(shoulder == 0, inj_mult * 0.96)      # shoulder: -4%
     inj_mult = inj_mult.clip(lower=0.60, upper=1.05)
 
     # Round-specific need/BPA weighting:

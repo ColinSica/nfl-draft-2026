@@ -360,6 +360,62 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
     assigned_players: set[str] = set()
     canonical_owners = _load_canonical_pick_owners()
 
+    # Position-order constraint (per user directive 4/23):
+    # Trench/premium positions — OT and DL — come off the board in big-board
+    # rank order. A team that "needs an OT" takes the best remaining OT,
+    # not a lower-graded one, absent exceptional fit. Enforced by preferring
+    # the highest-ranked unassigned prospect at the same position when the
+    # modal pick at a slot belongs to one of these positions.
+    STRICT_ORDER_POSITIONS = {"OT", "DL", "IDL", "DT"}
+
+    # Build an ordered list of top prospects by position (board rank ascending)
+    # from the canonical board, for lookups during slot-by-slot greedy.
+    _board_path = ROOT / "data/processed/predictions_2026_independent.csv"
+    _pos_order: dict[str, list[str]] = {}
+    _board_df = None
+    if _board_path.exists():
+        _board_df = pd.read_csv(_board_path)
+        for pos in STRICT_ORDER_POSITIONS:
+            # Include canonical name + aliases (OT/OL, IDL/DL/DT)
+            if pos == "OT":
+                mask = _board_df["position"].isin(["OT", "OL"])
+            elif pos in ("DL", "IDL", "DT"):
+                mask = _board_df["position"].isin(["DL", "IDL", "DT", "NT"])
+            else:
+                mask = _board_df["position"] == pos
+            _pos_order[pos] = (_board_df.loc[mask].sort_values("final_rank")
+                               ["player"].tolist())
+
+    def _enforce_position_order(candidate: str, slot_pc) -> str:
+        """If `candidate` is a trench position, prefer the highest-ranked
+        unassigned prospect at the same position with non-zero sim support
+        at this slot. Prevents lower-graded OT/DL from leapfrogging higher-
+        graded ones in the displayed mock."""
+        if _board_df is None:
+            return candidate
+        row = _board_df[_board_df["player"] == candidate]
+        if row.empty:
+            return candidate
+        cand_pos = row.iloc[0]["position"]
+        # Map raw position to bucket
+        if cand_pos in ("OT", "OL"):
+            bucket = "OT"
+        elif cand_pos in ("DL", "IDL", "DT", "NT"):
+            bucket = "DL"
+        else:
+            return candidate
+        ranked = _pos_order.get(bucket, [])
+        cand_idx = ranked.index(candidate) if candidate in ranked else 10**6
+        for p in ranked[:cand_idx]:
+            if p in assigned_players:
+                continue
+            # Require the better-ranked prospect has any sim support at this
+            # slot (don't force a player the MC never considered for this
+            # slot). Even a single sim is enough.
+            if slot_pc.get(p, 0) > 0:
+                return p
+        return candidate
+
     for slot in sorted(agg["slot_counts"].keys()):
         # Use the full slot_counts (all sims, all picking teams) so a player
         # who's popular at this slot — even if always taken via trade-up — is
@@ -377,6 +433,13 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
                 break
         if player is None:
             continue  # no unassigned candidate (extremely rare)
+        # Enforce trench-position order (OT/DL): if the modal pick is a
+        # trench player but a higher-ranked one is still on the board with
+        # any sim support at this slot, swap to the higher-ranked prospect.
+        new_player = _enforce_position_order(player, pc)
+        if new_player != player:
+            ct = pc.get(new_player, ct)
+            player = new_player
         assigned_players.add(player)
         prob = round(ct / n_sims, 3)
 
