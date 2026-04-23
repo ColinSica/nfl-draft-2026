@@ -1,15 +1,20 @@
 /**
- * Full Mock — pick-order list of team-color cards.
+ * Full Mock — 257 picks, sortable and filterable.
  *
- * Chronological: pick 1 through 257, grouped by round. Each pick is
- * a card with a team-color header strip (pick #, round, team, pos)
- * over a cream body with dark ink for the player name — readable on
- * every team's palette. Round tabs switch the active round. Click
- * any card to surface the team-specific reasoning, model factors,
- * and close alternates beneath the grid.
+ * Each pick is a team-color-header + cream-body card (readable on
+ * any team's palette). A Sort selector groups the board by one of:
+ *   • Pick order  — round tabs switch the active round, chronological
+ *   • By Round    — one section per round, all 7 stacked
+ *   • By Position — one section per position, pick-ascending inside
+ *   • By Team     — one section per team, ordered by earliest pick
  *
- * Data comes from scripts/build_full_mock.py — a greedy team-fit walk
- * over the independent model's 727-prospect board.
+ * The Pos, Team, and Round filters *remove* non-matching picks so
+ * the counts in each section header stay honest.
+ *
+ * Click any card to surface the team-specific reasoning, model
+ * factors, and close alternates beneath the board. Data comes from
+ * scripts/build_full_mock.py — a greedy team-fit walk over the
+ * independent model's 727-prospect board.
  */
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -57,6 +62,8 @@ type FullMockResp = {
   picks: FullPick[];
 };
 
+type SortMode = 'pick' | 'round' | 'position' | 'team';
+
 const ROUND_LABELS: Record<number, string> = {
   1: 'Round One', 2: 'Round Two', 3: 'Round Three', 4: 'Round Four',
   5: 'Round Five', 6: 'Round Six', 7: 'Round Seven',
@@ -65,13 +72,15 @@ const ROUND_LABELS: Record<number, string> = {
 const POS_FILTERS = ['All', 'QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE',
                      'DL', 'IDL', 'LB', 'CB', 'S'];
 
-// ─── Pick card — team header strip + cream body ─────────────────────
+const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE', 'DL', 'IDL',
+                   'LB', 'CB', 'S', 'K', 'P', 'LS'];
+
+// ─── Pick card ──────────────────────────────────────────────────────
 function PickCard({
-  pick, selected, dimmed, onClick,
+  pick, selected, onClick,
 }: {
   pick: FullPick;
   selected: boolean;
-  dimmed: boolean;
   onClick: () => void;
 }) {
   const tc = teamColor(pick.team);
@@ -89,11 +98,9 @@ function PickCard({
                   transition focus:outline-none
                   ${selected
                     ? 'ring-2 ring-accent-brass ring-offset-1 ring-offset-paper border-accent-brass z-10 scale-[1.02]'
-                    : 'border-ink/15 hover:z-10 hover:scale-[1.02] hover:shadow-card-raised'}
-                  ${dimmed ? 'opacity-25 grayscale' : ''}`}
+                    : 'border-ink/15 hover:z-10 hover:scale-[1.02] hover:shadow-card-raised'}`}
       title={`#${pick.pick} · ${pick.player} · ${pick.position} · ${pick.college ?? ''}`}
     >
-      {/* Team-color header strip */}
       <div
         className="flex items-center justify-between gap-1 px-2 py-1"
         style={{ background: tc.primary, color: headerInk }}
@@ -111,8 +118,6 @@ function PickCard({
           {pick.position}
         </span>
       </div>
-
-      {/* Body */}
       <div className="px-2 pt-1.5 pb-2 flex flex-col gap-0.5">
         <div className="body-serif text-[0.88rem] font-semibold leading-[1.15] text-ink line-clamp-2 min-h-[2.05rem]">
           {pick.player}
@@ -122,7 +127,7 @@ function PickCard({
         </div>
         <div className="flex items-center justify-between gap-1 pt-0.5">
           <span className="font-mono text-[0.56rem] text-ink-soft tabular-nums">
-            rank {pick.rank}
+            rd {pick.round} · rank {pick.rank}
           </span>
           {value && (
             <span className="caps-tight text-[0.52rem] font-bold px-1 leading-tight"
@@ -234,11 +239,56 @@ function PickDetailPanel({ pick, onClose }: { pick: FullPick; onClose: () => voi
   );
 }
 
+// ─── Section — one group header + card grid ─────────────────────────
+function Section({
+  title, subtitle, accentColor, picks, selectedPick, onSelect,
+}: {
+  title: string;
+  subtitle?: string;
+  accentColor?: string;
+  picks: FullPick[];
+  selectedPick: number | null;
+  onSelect: (pk: number) => void;
+}) {
+  if (picks.length === 0) return null;
+  return (
+    <section className="border border-ink-edge bg-paper">
+      <div
+        className="flex items-baseline justify-between border-b-2 border-ink px-3 py-2 flex-wrap gap-2 bg-paper-surface"
+        style={accentColor ? { borderBottomColor: accentColor } : undefined}
+      >
+        <div className="flex items-baseline gap-3 flex-wrap">
+          <h2 className="display-broadcast text-lg">{title}</h2>
+          {subtitle && (
+            <span className="font-mono text-[0.62rem] text-ink-muted">{subtitle}</span>
+          )}
+        </div>
+        <span className="caps-tight text-ink-muted text-[0.62rem]">
+          {picks.length} pick{picks.length === 1 ? '' : 's'}
+        </span>
+      </div>
+      <div className="p-2 sm:p-3 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+        {picks.map(p => (
+          <PickCard
+            key={p.pick}
+            pick={p}
+            selected={selectedPick === p.pick}
+            onClick={() => onSelect(p.pick)}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function FullMock() {
   const [data, setData] = useState<FullMockResp | null>(null);
   const [err, setErr] = useState<string | null>(null);
+
+  const [sortMode, setSortMode] = useState<SortMode>('pick');
   const [posFilter, setPosFilter] = useState('All');
   const [teamFilter, setTeamFilter] = useState('');
+  const [roundFilter, setRoundFilter] = useState<number | 'All'>('All');
   const [activeRound, setActiveRound] = useState<number>(1);
   const [selectedPick, setSelectedPick] = useState<number | null>(null);
 
@@ -249,42 +299,128 @@ export function FullMock() {
       .catch(e => setErr(String(e)));
   }, []);
 
-  const byRound = useMemo(() => {
-    const map = new Map<number, FullPick[]>();
-    (data?.picks ?? []).forEach(p => {
-      if (!map.has(p.round)) map.set(p.round, []);
-      map.get(p.round)!.push(p);
-    });
-    map.forEach(arr => arr.sort((a, b) => a.pick - b.pick));
-    return map;
-  }, [data]);
+  const allPicks = data?.picks ?? [];
 
   const teams = useMemo(() => {
     const s = new Set<string>();
-    (data?.picks ?? []).forEach(p => s.add(p.team));
+    allPicks.forEach(p => s.add(p.team));
     return Array.from(s).sort();
-  }, [data]);
+  }, [allPicks]);
+
+  // Derived: filtered + sort-ordered picks.
+  const filtered = useMemo(() => {
+    return allPicks.filter(p =>
+      (posFilter === 'All' || p.position === posFilter) &&
+      (!teamFilter || p.team === teamFilter) &&
+      (roundFilter === 'All' || p.round === roundFilter)
+    ).sort((a, b) => a.pick - b.pick);
+  }, [allPicks, posFilter, teamFilter, roundFilter]);
 
   const selected = useMemo(
-    () => (data?.picks ?? []).find(p => p.pick === selectedPick) ?? null,
-    [data, selectedPick],
+    () => allPicks.find(p => p.pick === selectedPick) ?? null,
+    [allPicks, selectedPick],
   );
 
-  const activePicks = byRound.get(activeRound) ?? [];
-  const posCount: Record<string, number> = {};
-  activePicks.forEach(p => { posCount[p.position] = (posCount[p.position] ?? 0) + 1; });
-  const posSummary = Object.entries(posCount)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 6)
-    .map(([p, c]) => `${c}${p}`)
-    .join(' · ');
+  // Build the section list based on sort mode.
+  type GroupedSection = {
+    key: string;
+    title: string;
+    subtitle?: string;
+    accentColor?: string;
+    picks: FullPick[];
+  };
+
+  const sections: GroupedSection[] = useMemo(() => {
+    if (sortMode === 'pick') {
+      // Chronological: active round only.
+      const picks = filtered.filter(p => p.round === activeRound);
+      const posCount: Record<string, number> = {};
+      picks.forEach(p => { posCount[p.position] = (posCount[p.position] ?? 0) + 1; });
+      const posSummary = Object.entries(posCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 6)
+        .map(([p, c]) => `${c}${p}`)
+        .join(' · ');
+      return [{
+        key: `r${activeRound}`,
+        title: ROUND_LABELS[activeRound],
+        subtitle: posSummary,
+        picks,
+      }];
+    }
+
+    if (sortMode === 'round') {
+      // All rounds, each in its own section, pick-ascending.
+      return [1,2,3,4,5,6,7].map(r => {
+        const picks = filtered.filter(p => p.round === r);
+        return {
+          key: `r${r}`,
+          title: ROUND_LABELS[r],
+          subtitle: undefined,
+          picks,
+        };
+      });
+    }
+
+    if (sortMode === 'position') {
+      // Groups in POS_ORDER (unknown positions tacked on at end).
+      const byPos = new Map<string, FullPick[]>();
+      filtered.forEach(p => {
+        const arr = byPos.get(p.position) ?? [];
+        arr.push(p);
+        byPos.set(p.position, arr);
+      });
+      const seen = new Set<string>();
+      const out: GroupedSection[] = [];
+      POS_ORDER.forEach(pos => {
+        const picks = byPos.get(pos);
+        if (picks && picks.length) {
+          seen.add(pos);
+          out.push({ key: `p${pos}`, title: pos, picks });
+        }
+      });
+      // Any positions outside our canonical order, alphabetical.
+      Array.from(byPos.keys())
+        .filter(p => !seen.has(p))
+        .sort()
+        .forEach(pos => out.push({
+          key: `p${pos}`, title: pos, picks: byPos.get(pos)!,
+        }));
+      return out;
+    }
+
+    // sortMode === 'team': sections per team, ordered by earliest pick.
+    const byTeam = new Map<string, FullPick[]>();
+    filtered.forEach(p => {
+      const arr = byTeam.get(p.team) ?? [];
+      arr.push(p);
+      byTeam.set(p.team, arr);
+    });
+    return Array.from(byTeam.entries())
+      .map(([team, picks]) => ({ team, picks }))
+      .sort((a, b) => a.picks[0].pick - b.picks[0].pick)
+      .map(({ team, picks }) => {
+        const tc = teamColor(team);
+        return {
+          key: `t${team}`,
+          title: `${team} · ${tc.name}`,
+          accentColor: tc.primary,
+          picks,
+        };
+      });
+  }, [sortMode, filtered, activeRound]);
+
+  const visiblePickCount = sections.reduce((n, s) => n + s.picks.length, 0);
+
+  const hasFilter =
+    posFilter !== 'All' || teamFilter !== '' || roundFilter !== 'All';
 
   return (
     <div className="space-y-6 pb-16">
       <SectionHeader
         kicker="The full mock"
         title="All seven rounds, 257 picks."
-        deck="Chronological draft board — every pick in order, rendered in team colors with a readable cream-body card. Click any card for the team-specific reasoning, model factors, and close alternates. Data comes from the independent team-agent model — no fabricated scouting prose."
+        deck="Sortable, filterable draft board. Each pick is a team-color card. Sort by pick order, round, position, or team; filter by any combination. Click a card for the per-pick reasoning and close alternates. Data comes from the independent team-agent model — no fabricated scouting prose."
       />
 
       {err && <MissingText>Full mock unavailable: {err}</MissingText>}
@@ -300,93 +436,140 @@ export function FullMock() {
 
       {data && data.picks.length > 0 && (
         <>
-          {/* Filters */}
-          <div className="flex flex-wrap items-center gap-3 bg-paper-surface p-3 border border-ink-edge">
-            <div className="flex items-center gap-1">
-              <SmallCaps tight className="text-ink-muted mr-1">Round</SmallCaps>
-              {[1,2,3,4,5,6,7].map(r => (
+          {/* Controls bar */}
+          <div className="space-y-2 bg-paper-surface border border-ink-edge p-3">
+            {/* Sort selector */}
+            <div className="flex flex-wrap items-center gap-2">
+              <SmallCaps tight className="text-ink-muted mr-1">Sort</SmallCaps>
+              {([
+                ['pick',     'Pick order'],
+                ['round',    'By round'],
+                ['position', 'By position'],
+                ['team',     'By team'],
+              ] as const).map(([m, label]) => (
                 <button
-                  key={r}
-                  onClick={() => setActiveRound(r)}
-                  className={`w-7 h-7 text-xs font-mono border transition ${
-                    activeRound === r
+                  key={m}
+                  onClick={() => setSortMode(m)}
+                  className={`px-2 py-0.5 caps-tight text-[0.62rem] border transition ${
+                    sortMode === m
                       ? 'bg-ink text-paper border-ink'
                       : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
                   }`}
                 >
-                  {r}
+                  {label}
                 </button>
               ))}
             </div>
-            <div className="flex items-center gap-1.5">
-              <SmallCaps tight className="text-ink-muted">Pos</SmallCaps>
-              <div className="flex flex-wrap gap-1">
-                {POS_FILTERS.map(p => (
-                  <button
-                    key={p}
-                    onClick={() => setPosFilter(p)}
-                    className={`px-1.5 py-0.5 caps-tight text-[0.62rem] border transition ${
-                      posFilter === p
-                        ? 'bg-ink text-paper border-ink'
-                        : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
-                    }`}
+
+            {/* Filters — round tabs in pick mode, round dropdown otherwise */}
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              {sortMode === 'pick' ? (
+                <div className="flex items-center gap-1">
+                  <SmallCaps tight className="text-ink-muted mr-1">Round</SmallCaps>
+                  {[1,2,3,4,5,6,7].map(r => (
+                    <button
+                      key={r}
+                      onClick={() => setActiveRound(r)}
+                      className={`w-7 h-7 text-xs font-mono border transition ${
+                        activeRound === r
+                          ? 'bg-ink text-paper border-ink'
+                          : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
+                      }`}
+                    >
+                      {r}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex items-center gap-1.5">
+                  <SmallCaps tight className="text-ink-muted">Round</SmallCaps>
+                  <select
+                    value={String(roundFilter)}
+                    onChange={e => setRoundFilter(e.target.value === 'All' ? 'All' : Number(e.target.value))}
+                    className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper hover:border-ink"
                   >
-                    {p}
+                    <option value="All">All</option>
+                    {[1,2,3,4,5,6,7].map(r => (
+                      <option key={r} value={r}>Round {r}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+
+              <div className="flex items-center gap-1.5">
+                <SmallCaps tight className="text-ink-muted">Pos</SmallCaps>
+                <div className="flex flex-wrap gap-1">
+                  {POS_FILTERS.map(p => (
+                    <button
+                      key={p}
+                      onClick={() => setPosFilter(p)}
+                      className={`px-1.5 py-0.5 caps-tight text-[0.62rem] border transition ${
+                        posFilter === p
+                          ? 'bg-ink text-paper border-ink'
+                          : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
+                      }`}
+                    >
+                      {p}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 ml-auto">
+                <SmallCaps tight className="text-ink-muted">Team</SmallCaps>
+                <select
+                  value={teamFilter}
+                  onChange={e => setTeamFilter(e.target.value)}
+                  className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper hover:border-ink"
+                >
+                  <option value="">All</option>
+                  {teams.map(t => <option key={t} value={t}>{t}</option>)}
+                </select>
+                {hasFilter && (
+                  <button
+                    onClick={() => {
+                      setPosFilter('All');
+                      setTeamFilter('');
+                      setRoundFilter('All');
+                    }}
+                    className="caps-tight text-[0.62rem] text-ink-muted hover:text-ink"
+                  >
+                    Clear
                   </button>
-                ))}
+                )}
               </div>
             </div>
-            <div className="flex items-center gap-1.5 ml-auto">
-              <SmallCaps tight className="text-ink-muted">Team</SmallCaps>
-              <select
-                value={teamFilter}
-                onChange={e => setTeamFilter(e.target.value)}
-                className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper hover:border-ink"
-              >
-                <option value="">All</option>
-                {teams.map(t => <option key={t} value={t}>{t}</option>)}
-              </select>
-              {(posFilter !== 'All' || teamFilter) && (
-                <button
-                  onClick={() => { setPosFilter('All'); setTeamFilter(''); }}
-                  className="caps-tight text-[0.62rem] text-ink-muted hover:text-ink"
-                >
-                  Clear
-                </button>
-              )}
+
+            <div className="flex items-center justify-between pt-1 text-[0.62rem] font-mono text-ink-soft italic">
+              <span>
+                {visiblePickCount} of {allPicks.length} picks visible
+              </span>
+              <span className="not-italic text-ink-muted">
+                Tap any card for reasoning & alternates
+              </span>
             </div>
           </div>
 
-          {/* Round header + grid */}
-          <section className="border border-ink-edge bg-paper">
-            <div className="flex items-baseline justify-between border-b-2 border-ink px-3 py-2 flex-wrap gap-2 bg-paper-surface">
-              <div className="flex items-baseline gap-3 flex-wrap">
-                <h2 className="display-broadcast text-lg">{ROUND_LABELS[activeRound]}</h2>
-                <span className="font-mono text-[0.62rem] text-ink-muted">{posSummary}</span>
-              </div>
-              <span className="caps-tight text-ink-muted text-[0.62rem]">
-                {activePicks.length} pick{activePicks.length === 1 ? '' : 's'}
-              </span>
+          {/* Sections */}
+          {visiblePickCount === 0 ? (
+            <MissingText>No picks match the current filters.</MissingText>
+          ) : (
+            <div className="space-y-4">
+              {sections.map(s => (
+                <Section
+                  key={s.key}
+                  title={s.title}
+                  subtitle={s.subtitle}
+                  accentColor={s.accentColor}
+                  picks={s.picks}
+                  selectedPick={selectedPick}
+                  onSelect={(pk) =>
+                    setSelectedPick(prev => (prev === pk ? null : pk))
+                  }
+                />
+              ))}
             </div>
-
-            <div className="p-2 sm:p-3 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
-              {activePicks.map(p => {
-                const posHit = posFilter === 'All' || p.position === posFilter;
-                const teamHit = !teamFilter || p.team === teamFilter;
-                return (
-                  <PickCard
-                    key={p.pick}
-                    pick={p}
-                    selected={selected?.pick === p.pick}
-                    dimmed={!posHit || !teamHit}
-                    onClick={() =>
-                      setSelectedPick(prev => (prev === p.pick ? null : p.pick))
-                    }
-                  />
-                );
-              })}
-            </div>
-          </section>
+          )}
 
           {/* Detail */}
           {selected && (
