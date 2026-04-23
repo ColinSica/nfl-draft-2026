@@ -75,8 +75,8 @@ const POS_FILTERS = ['All', 'QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE',
 const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE', 'DL', 'IDL',
                    'LB', 'CB', 'S', 'K', 'P', 'LS'];
 
-// ─── Pick card ──────────────────────────────────────────────────────
-function PickCard({
+// ─── Pick row — compact single-line list entry ──────────────────────
+function PickRow({
   pick, selected, onClick,
 }: {
   pick: FullPick;
@@ -84,7 +84,7 @@ function PickCard({
   onClick: () => void;
 }) {
   const tc = teamColor(pick.team);
-  const headerInk = contrastInk(tc.primary);
+  const chipInk = contrastInk(tc.primary);
   const secInk = contrastInk(tc.secondary);
   const rankDelta = pick.rank - pick.pick;
   const value = rankDelta <= -5;
@@ -94,54 +94,73 @@ function PickCard({
     <button
       type="button"
       onClick={onClick}
-      className={`relative w-full text-left overflow-hidden border bg-paper-raised
-                  transition focus:outline-none
+      className={`w-full text-left flex items-stretch group transition
+                  border-b border-ink-edge/60 last:border-b-0
                   ${selected
-                    ? 'ring-2 ring-accent-brass ring-offset-1 ring-offset-paper border-accent-brass z-10 scale-[1.02]'
-                    : 'border-ink/15 hover:z-10 hover:scale-[1.02] hover:shadow-card-raised'}`}
+                    ? 'bg-accent-highlight'
+                    : 'odd:bg-paper even:bg-paper-raised hover:bg-paper-hover'}`}
       title={`#${pick.pick} · ${pick.player} · ${pick.position} · ${pick.college ?? ''}`}
     >
-      <div
-        className="flex items-center justify-between gap-1 px-2 py-1"
-        style={{ background: tc.primary, color: headerInk }}
-      >
-        <span className="display-num text-[0.65rem] tabular-nums tracking-wider font-semibold">
-          #{pick.pick}
+      {/* Team color edge */}
+      <div className="w-1 shrink-0" style={{ background: tc.primary }} />
+
+      <div className="flex items-center gap-3 py-2 px-3 flex-1 min-w-0 text-[0.82rem]">
+        {/* Pick number */}
+        <span className="display-num text-sm w-10 tabular-nums text-ink-muted shrink-0">
+          {String(pick.pick).padStart(3, '0')}
         </span>
-        <span className="display-broadcast text-[0.6rem] opacity-95">
+
+        {/* Team chip */}
+        <span
+          className="display-broadcast text-[0.62rem] px-1.5 py-0.5 shrink-0 w-12 text-center"
+          style={{ background: tc.primary, color: chipInk }}
+        >
           {pick.team}
         </span>
+
+        {/* Player name */}
+        <span className="body-serif font-semibold text-ink truncate flex-1 min-w-0">
+          {pick.player}
+        </span>
+
+        {/* Position chip */}
         <span
-          className="font-mono text-[0.56rem] font-bold px-1.5 py-[1px] leading-none rounded-sm"
+          className="font-mono text-[0.6rem] font-bold px-1.5 py-[1px] shrink-0 w-12 text-center leading-tight rounded-sm"
           style={{ background: tc.secondary, color: secInk }}
         >
           {pick.position}
         </span>
-      </div>
-      <div className="px-2 pt-1.5 pb-2 flex flex-col gap-0.5">
-        <div className="body-serif text-[0.88rem] font-semibold leading-[1.15] text-ink line-clamp-2 min-h-[2.05rem]">
-          {pick.player}
-        </div>
-        <div className="font-mono text-[0.6rem] italic text-ink-muted truncate">
-          {pick.college ?? '—'}
-        </div>
-        <div className="flex items-center justify-between gap-1 pt-0.5">
-          <span className="font-mono text-[0.56rem] text-ink-soft tabular-nums">
-            rd {pick.round} · rank {pick.rank}
-          </span>
+
+        {/* College */}
+        <span className="font-mono text-[0.66rem] text-ink-soft italic truncate shrink-0 hidden sm:inline w-40">
+          {pick.college ?? ''}
+        </span>
+
+        {/* Round */}
+        <span className="font-mono text-[0.62rem] text-ink-muted tabular-nums shrink-0 hidden md:inline w-10 text-right">
+          R{pick.round}
+        </span>
+
+        {/* Rank */}
+        <span className="font-mono text-[0.62rem] text-ink-muted tabular-nums shrink-0 w-14 text-right">
+          rk {pick.rank}
+        </span>
+
+        {/* Value / Reach flag */}
+        <span className="shrink-0 w-10 text-right">
           {value && (
-            <span className="caps-tight text-[0.52rem] font-bold px-1 leading-tight"
+            <span className="caps-tight text-[0.56rem] font-bold px-1 leading-tight"
                   style={{ background: '#B68A2F', color: '#0B1F3A' }}>
               VAL
             </span>
           )}
           {reach && (
-            <span className="caps-tight text-[0.52rem] font-bold px-1 leading-tight"
+            <span className="caps-tight text-[0.56rem] font-bold px-1 leading-tight"
                   style={{ background: '#8C2E2A', color: '#FAF6E6' }}>
               RCH
             </span>
           )}
-        </div>
+        </span>
       </div>
     </button>
   );
@@ -267,9 +286,9 @@ function Section({
           {picks.length} pick{picks.length === 1 ? '' : 's'}
         </span>
       </div>
-      <div className="p-2 sm:p-3 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+      <div>
         {picks.map(p => (
-          <PickCard
+          <PickRow
             key={p.pick}
             pick={p}
             selected={selectedPick === p.pick}
@@ -420,7 +439,7 @@ export function FullMock() {
       <SectionHeader
         kicker="The full mock"
         title="All seven rounds, 257 picks."
-        deck="Sortable, filterable draft board. Each pick is a team-color card. Sort by pick order, round, position, or team; filter by any combination. Click a card for the per-pick reasoning and close alternates. Data comes from the independent team-agent model — no fabricated scouting prose."
+        deck="Sortable, filterable draft list. One row per pick, team-color edge, player and position at a glance. Sort by pick order, round, position, or team; filter by any combination. Click a row for the per-pick reasoning and close alternates. Data comes from the independent team-agent model — no fabricated scouting prose."
       />
 
       {err && <MissingText>Full mock unavailable: {err}</MissingText>}
@@ -545,7 +564,7 @@ export function FullMock() {
                 {visiblePickCount} of {allPicks.length} picks visible
               </span>
               <span className="not-italic text-ink-muted">
-                Tap any card for reasoning & alternates
+                Tap any row for reasoning & alternates
               </span>
             </div>
           </div>
