@@ -16,20 +16,13 @@
  * scripts/build_full_mock.py — a greedy team-fit walk over the
  * independent model's 727-prospect board.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { memo, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { SectionHeader, SmallCaps, MissingText, Footnote } from '../components/editorial';
+import { ErrorBlock } from '../components/LoadState';
 import { teamColor } from '../lib/teamColors';
-
-function contrastInk(hex: string): string {
-  const h = hex.replace('#', '');
-  const r = parseInt(h.slice(0, 2), 16);
-  const g = parseInt(h.slice(2, 4), 16);
-  const b = parseInt(h.slice(4, 6), 16);
-  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  return lum > 0.6 ? '#0B1F3A' : '#FAF6E6';
-}
+import { contrastInk, secondaryInk } from '../lib/color';
 
 type FullPick = {
   pick: number;
@@ -76,7 +69,7 @@ const POS_ORDER = ['QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE', 'DL', 'IDL',
                    'LB', 'CB', 'S', 'K', 'P', 'LS'];
 
 // ─── Pick row — compact single-line list entry ──────────────────────
-function PickRow({
+const PickRow = memo(function PickRow({
   pick, selected, onClick,
 }: {
   pick: FullPick;
@@ -149,14 +142,16 @@ function PickRow({
         {/* Value / Reach flag */}
         <span className="shrink-0 w-10 text-right">
           {value && (
-            <span className="caps-tight text-[0.56rem] font-bold px-1 leading-tight"
-                  style={{ background: '#B68A2F', color: '#0B1F3A' }}>
+            <span className="caps-tight text-[0.56rem] font-bold px-1 leading-tight cursor-help"
+                  style={{ background: '#B68A2F', color: '#0B1F3A' }}
+                  title={`Value — board rank ${pick.rank} taken ${-rankDelta} slots later than expected (threshold: ≥5 slots).`}>
               VAL
             </span>
           )}
           {reach && (
-            <span className="caps-tight text-[0.56rem] font-bold px-1 leading-tight"
-                  style={{ background: '#8C2E2A', color: '#FAF6E6' }}>
+            <span className="caps-tight text-[0.56rem] font-bold px-1 leading-tight cursor-help"
+                  style={{ background: '#8C2E2A', color: '#FAF6E6' }}
+                  title={`Reach — board rank ${pick.rank} taken ${rankDelta} slots earlier than expected (threshold: ≥10 slots).`}>
               RCH
             </span>
           )}
@@ -164,7 +159,7 @@ function PickRow({
       </div>
     </button>
   );
-}
+});
 
 // ─── Detail panel ───────────────────────────────────────────────────
 function PickDetailPanel({ pick, onClose }: { pick: FullPick; onClose: () => void }) {
@@ -180,8 +175,7 @@ function PickDetailPanel({ pick, onClose }: { pick: FullPick; onClose: () => voi
             <Link
               to={`/team/${pick.team}`}
               className="display-broadcast text-[0.65rem] px-1.5 py-0.5 shrink-0"
-              style={{ background: tc.primary,
-                       color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary }}
+              style={{ background: tc.primary, color: secondaryInk(tc.secondary) }}
               title={tc.name}
             >
               {pick.team}
@@ -303,6 +297,7 @@ function Section({
 export function FullMock() {
   const [data, setData] = useState<FullMockResp | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   const [sortMode, setSortMode] = useState<SortMode>('pick');
   const [posFilter, setPosFilter] = useState('All');
@@ -312,11 +307,16 @@ export function FullMock() {
   const [selectedPick, setSelectedPick] = useState<number | null>(null);
 
   useEffect(() => {
+    setErr(null);
+    setData(null);
     fetch('/api/full-mock')
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        return r.json();
+      })
       .then(d => setData(d))
-      .catch(e => setErr(String(e)));
-  }, []);
+      .catch(e => setErr(String(e?.message ?? e)));
+  }, [reloadKey]);
 
   const allPicks = data?.picks ?? [];
 
@@ -444,7 +444,7 @@ export function FullMock() {
         deck="Sortable, filterable draft list. One row per pick, team-color edge, player and position at a glance. Sort by pick order, round, position, or team; filter by any combination. Click a row for the per-pick reasoning and close alternates. Data comes from the independent team-agent model — no fabricated scouting prose."
       />
 
-      {err && <MissingText>Full mock unavailable: {err}</MissingText>}
+      {err && <ErrorBlock message={err} onRetry={() => setReloadKey(k => k + 1)} />}
       {!data && !err && <MissingText>Loading 257 picks…</MissingText>}
 
       {data && data.picks.length === 0 && (
@@ -548,8 +548,9 @@ export function FullMock() {
               </div>
 
               <div className="flex items-center gap-1.5 ml-auto">
-                <SmallCaps tight className="text-ink-muted">Team</SmallCaps>
+                <label htmlFor="fullmock-team" className="caps-tight text-[0.62rem] text-ink-muted font-medium">Team</label>
                 <select
+                  id="fullmock-team"
                   value={teamFilter}
                   onChange={e => setTeamFilter(e.target.value)}
                   className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper hover:border-ink"

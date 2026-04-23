@@ -19,33 +19,33 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { api } from '../lib/api';
 import { teamColor } from '../lib/teamColors';
+import { secondaryInk } from '../lib/color';
 import { HRule, SectionHeader, SmallCaps, MissingText, Stamp, Footnote } from '../components/editorial';
 import {
   displayValue, displayQbUrgency, displayQbSituation, displayCapTier,
   displayPredictability,
 } from '../lib/display';
+import { ErrorBlock, LoadingBlock } from '../components/LoadState';
 
 export function TeamDetail() {
   const { abbr } = useParams<{ abbr: string }>();
   const [data, setData] = useState<any>(null);
   const [reasoning, setReasoning] = useState<any>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
     if (!abbr) return;
-    api.team(abbr).then(setData).catch((e) => setErr(String(e)));
-    fetch('/api/simulations/reasoning').then(r => r.json()).then(setReasoning).catch(() => {});
-  }, [abbr]);
+    setErr(null);
+    setData(null);
+    api.team(abbr).then(setData).catch((e) => setErr(String(e?.message ?? e)));
+    api.simulationReasoning().then(setReasoning).catch(() => {});
+  }, [abbr, reloadKey]);
 
   if (err) {
-    return (
-      <div className="card p-8 text-center">
-        <p className="text-live">Couldn't load team data.</p>
-        <p className="text-ink-muted text-sm mt-2">{err}</p>
-      </div>
-    );
+    return <ErrorBlock message={err} onRetry={() => setReloadKey(k => k + 1)} />;
   }
-  if (!data) return <div className="text-ink-muted italic">Loading {abbr}…</div>;
+  if (!data) return <LoadingBlock label={`Loading ${abbr ?? 'team'}…`} />;
 
   const tc = teamColor(data.team);
   const needs: [string, number][] = Object.entries(data.roster_needs ?? {})
@@ -65,18 +65,12 @@ export function TeamDetail() {
   const faArrivals = (data.fa_moves?.arrivals ?? []) as any[];
   const faDepartures = (data.fa_moves?.departures ?? []) as any[];
 
-  // Gather all dated news/pressers arrays, find the freshest.
-  const allDatedEntries = Object.entries(data as any)
-    .filter(([k]) => /^_\d+_\d+_(news|pressers)$/.test(k))
-    .sort(([a], [b]) => (a as string).localeCompare(b as string));
-  const latestNews = (() => {
-    const newsEntry = [...allDatedEntries].reverse().find(([k]) => (k as string).endsWith('_news'));
-    return newsEntry ? (newsEntry[1] as any) : null;
-  })();
-  const latestPressers = (() => {
-    const p = [...allDatedEntries].reverse().find(([k]) => (k as string).endsWith('_pressers'));
-    return p ? (p[1] as any) : null;
-  })();
+  // Gather all dated news/pressers arrays and pick the freshest of each kind.
+  // Keys look like `_4_22_news` or `_4_21_pressers`; lexical sort is monotonic
+  // within a single draft year because the leading month/day are zero-padded
+  // numerically by date.
+  const latestNews = pickFreshestDated(data, 'news');
+  const latestPressers = pickFreshestDated(data, 'pressers');
 
   const firstPick = data.r1_picks?.[0] ?? data.pick;
   const modelPick = firstPick && reasoning?.picks?.[String(firstPick)];
@@ -107,7 +101,7 @@ export function TeamDetail() {
                 className="display-broadcast text-3xl w-16 h-16 flex items-center justify-center shrink-0"
                 style={{
                   background: tc.primary,
-                  color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary,
+                  color: secondaryInk(tc.secondary),
                 }}
               >
                 {data.team}
@@ -645,6 +639,24 @@ function renderArrayOrString(val: any): string {
   if (!val) return '';
   if (Array.isArray(val)) return val.join(' · ');
   return String(val);
+}
+
+// Scan team payload for keys like `_4_22_news` or `_4_21_pressers` and return
+// the value attached to the latest one by lexical sort. Returns null when the
+// team payload has no dated entries of that kind.
+function pickFreshestDated(data: any, kind: 'news' | 'pressers'): any {
+  const suffix = `_${kind}`;
+  const re = /^_\d+_\d+_(news|pressers)$/;
+  let bestKey: string | null = null;
+  let bestVal: any = null;
+  for (const key of Object.keys(data ?? {})) {
+    if (!key.endsWith(suffix) || !re.test(key)) continue;
+    if (bestKey === null || key > bestKey) {
+      bestKey = key;
+      bestVal = (data as any)[key];
+    }
+  }
+  return bestVal;
 }
 
 function SummaryTile({

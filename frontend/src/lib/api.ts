@@ -79,16 +79,47 @@ export type ProspectRow = {
 };
 
 async function getJson<T>(url: string): Promise<T> {
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`${r.status} ${r.statusText}: ${url}`);
-  return r.json();
+  let r: Response;
+  try {
+    r = await fetch(url);
+  } catch (netErr: any) {
+    throw new Error(`Network unreachable (${url}): ${netErr?.message ?? netErr}`);
+  }
+  if (!r.ok) {
+    // Pull the body so server-side error detail survives into the UI.
+    let body = '';
+    try { body = (await r.text()).slice(0, 400); } catch { /* noop */ }
+    const detail = body ? ` — ${body.replace(/\s+/g, ' ').trim()}` : '';
+    throw new Error(`${r.status} ${r.statusText} at ${url}${detail}`);
+  }
+  try {
+    return (await r.json()) as T;
+  } catch {
+    throw new Error(`Invalid JSON from ${url}`);
+  }
+}
+
+// One-shot promise cache for endpoints that are safe to share across
+// components mounted in the same session. Meta is the obvious case — the
+// app header and Home both ask for it on mount.
+const cache = new Map<string, Promise<any>>();
+function cachedJson<T>(url: string): Promise<T> {
+  const hit = cache.get(url);
+  if (hit) return hit as Promise<T>;
+  const p = getJson<T>(url).catch(err => {
+    // Don't poison the cache on failure — let the next caller retry.
+    cache.delete(url);
+    throw err;
+  });
+  cache.set(url, p);
+  return p;
 }
 
 export const api = {
   teams: () => getJson<{ teams: TeamSummary[] }>('/api/teams'),
   team: (abbr: string) => getJson<any>(`/api/teams/${abbr}`),
   league: () => getJson<any>('/api/league'),
-  meta: () => getJson<MetaInfo>('/api/meta'),
+  meta: () => cachedJson<MetaInfo>('/api/meta'),
   prospects: (limit = 64) =>
     getJson<{ prospects: any[]; count: number }>(
       `/api/prospects?limit=${limit}`,

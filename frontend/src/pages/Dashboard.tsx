@@ -7,19 +7,27 @@ import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { api, type TeamSummary } from '../lib/api';
 import { teamColor } from '../lib/teamColors';
+import { secondaryInk } from '../lib/color';
 import { SectionHeader, SmallCaps, MissingText } from '../components/editorial';
+import { LoadingBlock, ErrorBlock } from '../components/LoadState';
 import { displayValue, displayQbUrgency, displayCapTier } from '../lib/display';
 
 type SortKey = 'pick' | 'team' | 'needs';
 
 export function Dashboard() {
   const [teams, setTeams] = useState<TeamSummary[] | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<SortKey>('pick');
 
   useEffect(() => {
-    api.teams().then((r) => setTeams(r.teams)).catch(() => setTeams([]));
-  }, []);
+    setErr(null);
+    setTeams(null);
+    api.teams()
+      .then((r) => setTeams(r.teams))
+      .catch((e) => { setErr(String(e?.message ?? e)); setTeams([]); });
+  }, [reloadKey]);
 
   const filtered = useMemo(() => {
     if (!teams) return [];
@@ -51,9 +59,14 @@ export function Dashboard() {
       <SectionHeader kicker="Directory" title="All 32 teams." />
 
       <div className="flex flex-wrap items-center gap-3">
-        <label className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md">
-          <Search size={16} className="text-ink-soft" />
+        <label
+          htmlFor="teams-search"
+          className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md"
+        >
+          <Search size={16} className="text-ink-soft" aria-hidden="true" />
+          <span className="sr-only">Search teams</span>
           <input
+            id="teams-search"
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -79,8 +92,10 @@ export function Dashboard() {
         </span>
       </div>
 
-      {!teams ? (
-        <div className="card p-10 text-center text-ink-soft italic">Loading teams…</div>
+      {err && (!teams || teams.length === 0) ? (
+        <ErrorBlock message={err} onRetry={() => setReloadKey(k => k + 1)} />
+      ) : !teams ? (
+        <LoadingBlock label="Loading teams…" />
       ) : filtered.length === 0 ? (
         <div className="card p-10 text-center text-ink-soft italic">No teams match.</div>
       ) : (
@@ -112,7 +127,7 @@ function TeamCard({ t }: { t: TeamSummary }) {
                 className="w-8 h-8 flex items-center justify-center text-xs font-bold shrink-0"
                 style={{
                   background: tc.primary,
-                  color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary,
+                  color: secondaryInk(tc.secondary),
                 }}
               >
                 {t.team}

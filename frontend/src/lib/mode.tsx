@@ -1,10 +1,9 @@
 // Persistent mode context — the product's organizing principle.
 // Independent: analyst-independent model output (the core)
 // Benchmark:   analyst consensus view (comparison-only)
-// Compare:     side-by-side of Independent vs Benchmark
 import { createContext, useContext, useEffect, useState } from 'react';
 
-export type Mode = 'independent' | 'benchmark' | 'compare';
+export type Mode = 'independent' | 'benchmark';
 
 export const MODE_META: Record<Mode, {
   label: string;
@@ -29,14 +28,6 @@ export const MODE_META: Record<Mode, {
     accent: '#1F6FEB',
     accentDim: '#104399',
   },
-  compare: {
-    label: 'Compare',
-    caption: 'Side-by-side',
-    description:
-      'Compare the Independent model to the analyst Benchmark. See where they agree, where they diverge, and why.',
-    accent: '#17A870',
-    accentDim: '#0E6945',
-  },
 };
 
 type Ctx = {
@@ -54,10 +45,10 @@ const STORAGE_KEY = 'draft-predictor-mode';
 export function ModeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setModeState] = useState<Mode>(() => {
     if (typeof window === 'undefined') return 'independent';
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved === 'independent' || saved === 'benchmark' || saved === 'compare') {
-      return saved;
-    }
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'independent' || saved === 'benchmark') return saved;
+    } catch { /* private-browsing, fine */ }
     return 'independent';
   });
 

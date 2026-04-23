@@ -9,6 +9,7 @@
  * Plus the independence contract, calibration story, and limitations.
  */
 import { HRule, SmallCaps, Dateline, Byline, Stamp, Footnote, FigureCaption } from '../components/editorial';
+import { SOURCE_REPO_URL } from '../lib/constants';
 
 export function Method() {
   return (
@@ -372,9 +373,9 @@ export function Method() {
           Built in Python (FastAPI, pandas, scikit-learn, lightgbm) and
           React 19 (Vite, Tailwind). Live odds via Kalshi API. Deployed
           on Render. Source at{' '}
-          <a href="https://github.com/ColinSica/nfl-draft-2026" target="_blank" rel="noopener"
+          <a href={SOURCE_REPO_URL} target="_blank" rel="noopener"
              className="text-accent-brass underline underline-offset-2">
-            github.com/ColinSica/nfl-draft-2026
+            {SOURCE_REPO_URL.replace(/^https?:\/\//, '')}
           </a>.
         </Footnote>
       </section>

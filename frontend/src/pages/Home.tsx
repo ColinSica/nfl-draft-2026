@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { api, type MetaInfo, type PickRow } from '../lib/api';
 import { DraftCountdown } from '../components/DraftCountdown';
+import { ErrorBlock } from '../components/LoadState';
 import {
   HRule, SmallCaps, SectionHeader, Dateline, Byline, Stamp, Footnote, FigureCaption,
 } from '../components/editorial';
@@ -25,17 +26,22 @@ export function Home() {
   const [simMeta, setSimMeta] = useState<any>(null);
   const [reasoning, setReasoning] = useState<any>(null);
   const [stats, setStats] = useState<any>(null);
+  const [simErr, setSimErr] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
+    setSimErr(null);
+    setLatestPicks(null);
     api.meta().then(setMeta).catch(() => {});
     api.latestSim()
       .then((r) => { setLatestPicks(r.picks); setSimMeta(r.meta); })
-      .catch(() => {});
-    fetch('/api/simulations/reasoning')
-      .then(r => r.json()).then(setReasoning).catch(() => {});
+      .catch((e) => { setSimErr(String(e?.message ?? e)); setLatestPicks([]); });
+    api.simulationReasoning().then(setReasoning).catch(() => {});
     fetch('/api/independent-stats')
-      .then(r => r.json()).then(setStats).catch(() => {});
-  }, []);
+      .then(r => r.ok ? r.json() : null)
+      .then(setStats)
+      .catch(() => {});
+  }, [reloadKey]);
 
   const top10 = (latestPicks ?? []).filter(p => p.pick_number <= 10);
 
@@ -153,8 +159,12 @@ export function Home() {
               </tr>
             </thead>
             <tbody>
-              {top10.length === 0 ? (
-                <tr><td colSpan={7} className="text-center py-10 italic text-ink-muted">Loading simulation…</td></tr>
+              {simErr && top10.length === 0 ? (
+                <tr><td colSpan={7} className="py-6">
+                  <ErrorBlock message={simErr} onRetry={() => setReloadKey(k => k + 1)} />
+                </td></tr>
+              ) : top10.length === 0 ? (
+                <tr><td colSpan={7} className="text-center py-10 italic text-ink-muted">Loading first round…</td></tr>
               ) : top10.map(p => {
                 const c0 = p.candidates?.[0];
                 const r = reasoning?.picks?.[String(p.pick_number)];
@@ -273,13 +283,19 @@ export function Home() {
 // ─────────────────────────────────────────────────────────────────────
 
 function VitalsGrid({ stats }: { stats: any; simMeta: any; meta: any }) {
+  // Show '—' rather than lying with a plausible default; the endpoint is
+  // authoritative and defaults drift every time the model re-runs.
+  const fmt = (v: any): string => {
+    if (v === null || v === undefined) return '—';
+    return String(v);
+  };
   return (
     <dl className="space-y-3">
       <Vital label="R1 picks modelled" value="32" />
-      <Vital label="Market-sanity checks" value={stats?.n_kalshi_markets ?? '2,070+'} />
-      <Vital label="Team agents" value={String(stats?.n_agents ?? 32)} />
-      <Vital label="Prospects graded" value={String(stats?.n_prospects ?? 727)} />
-      <Vital label="Simulations" value={stats?.n_sims ? String(stats.n_sims) : '100'} />
+      <Vital label="Market-sanity checks" value={fmt(stats?.n_kalshi_markets)} />
+      <Vital label="Team agents" value={fmt(stats?.n_agents)} />
+      <Vital label="Prospects graded" value={fmt(stats?.n_prospects)} />
+      <Vital label="Simulations" value={fmt(stats?.n_sims)} />
       <Vital label="Analyst picks as input" value="0" accent="#4A6B3F" />
     </dl>
   );

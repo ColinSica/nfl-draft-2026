@@ -1,10 +1,9 @@
 /**
- * Draft countdown — live ticker to the 2026 NFL Draft start time.
- * Draft: April 23, 2026, 8:00 PM ET (Pittsburgh).
+ * Draft countdown — live ticker to the NFL Draft start time.
+ * Constant lives in lib/constants.ts so year-over-year reuse is a one-file edit.
  */
 import { useEffect, useState } from 'react';
-
-const DRAFT_START_ISO = '2026-04-23T20:00:00-04:00';
+import { DRAFT_START_ISO, DRAFT_DATES_DISPLAY, DRAFT_VENUE } from '../lib/constants';
 
 type TimeLeft = {
   days: number;
@@ -58,7 +57,7 @@ export function DraftCountdown({ compact = false }: { compact?: boolean }) {
         <div>
           <div className="display-broadcast text-2xl text-live">Draft is live.</div>
           <div className="text-xs text-ink-soft">
-            April 23–25, 2026 · Pittsburgh
+            {DRAFT_DATES_DISPLAY} · {DRAFT_VENUE}
           </div>
         </div>
       </div>
@@ -81,7 +80,10 @@ export function DraftCountdown({ compact = false }: { compact?: boolean }) {
         <Unit val={t.seconds} label="sec" />
       </div>
       <div className="mt-3 text-xs text-ink-soft">
-        Draft begins April 23, 8:00 PM ET · Pittsburgh
+        Draft begins {new Date(DRAFT_START_ISO).toLocaleString('en-US', {
+          month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit',
+          timeZoneName: 'short',
+        })} · {DRAFT_VENUE}
       </div>
     </div>
   );

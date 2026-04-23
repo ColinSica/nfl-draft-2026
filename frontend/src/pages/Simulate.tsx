@@ -13,6 +13,7 @@ import { HRule, SmallCaps, Dateline, Byline, Stamp } from '../components/editori
 import { Link } from 'react-router-dom';
 import { PickCard, type PickData } from '../components/PickCard';
 import { FreshnessPanel } from '../components/FreshnessPanel';
+import { LoadingBlock, ErrorBlock } from '../components/LoadState';
 import { getConfidence } from '../lib/display';
 
 type ConfBucket = 'ALL' | 'HIGH' | 'MEDIUM_HIGH' | 'MEDIUM_LOW' | 'LOW';
@@ -24,6 +25,8 @@ export function Simulate() {
   const [reasoning, setReasoning] = useState<any>(null);
   const [simMeta, setSimMeta] = useState<any>(null);
   const [trades, setTrades] = useState<any>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [filterTeam, setFilterTeam] = useState<string>('ALL');
   const [filterPos, setFilterPos] = useState<string>('ALL');
   const [filterConf, setFilterConf] = useState<ConfBucket>('ALL');
@@ -31,15 +34,19 @@ export function Simulate() {
   const [showTrades, setShowTrades] = useState<boolean>(true);
 
   useEffect(() => {
+    // Reset state on retry so stale partial data doesn't linger.
+    setErr(null);
+    setPicks(null);
     api.latestSim().then(r => {
       setPicks(r.picks);
       setSimMeta(r.meta);
-    }).catch(() => setPicks([]));
-    fetch('/api/simulations/reasoning')
-      .then(r => r.json()).then(setReasoning).catch(() => {});
-    api.simulationTrades()
-      .then(setTrades).catch(() => {});
-  }, []);
+    }).catch(e => {
+      setErr(String(e?.message ?? e));
+      setPicks([]);
+    });
+    api.simulationReasoning().then(setReasoning).catch(() => {});
+    api.simulationTrades().then(setTrades).catch(() => {});
+  }, [reloadKey]);
 
   // Top 3-5 most-likely trades, filtered for realism (prob >= 30%).
   // Rank by execution frequency in the Monte Carlo.
@@ -78,7 +85,7 @@ export function Simulate() {
           probability: pri?.probability ?? null,
           consensusRank: pri?.consensus_rank ?? null,
           confidence: null,
-          alternates: (p.candidates ?? []).slice(1, 4).map(c => ({
+          alternates: (p.candidates ?? []).slice(1, 6).map(c => ({
             player: c.player,
             position: c.position,
             college: c.college,
@@ -304,8 +311,10 @@ export function Simulate() {
         </div>
       </div>
 
-      {!picks ? (
-        <div className="card p-10 text-center text-ink-soft italic">Loading first round…</div>
+      {err && (!picks || picks.length === 0) ? (
+        <ErrorBlock message={err} onRetry={() => setReloadKey(k => k + 1)} />
+      ) : !picks ? (
+        <LoadingBlock label="Loading first round…" />
       ) : filtered.length === 0 ? (
         <div className="card p-10 text-center text-ink-soft italic">
           No picks match. {hasFilters && <button onClick={clearFilters} className="underline">Clear filters</button>}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { displayNum, displayValue, getConfidence, type ConfLabel } from '../lib/display';
 import { teamColor } from '../lib/teamColors';
+import { secondaryInk } from '../lib/color';
 
 export type PickAlternate = {
   player: string;
@@ -30,10 +31,31 @@ export type PickData = {
 
 // Legacy aliases kept for back-compat with any call sites still passing old labels
 const LEGACY_TO_NEW: Record<string, ConfLabel> = {
-  HIGH:   'HIGH',
-  MEDIUM: 'MEDIUM_HIGH',
-  LOW:    'LOW',
+  HIGH:        'HIGH',
+  MEDIUM:      'MEDIUM_HIGH',
+  MEDIUM_HIGH: 'MEDIUM_HIGH',
+  MEDIUM_LOW:  'MEDIUM_LOW',
+  LOW:         'LOW',
 };
+
+// Representative probability per confidence bucket — used when a caller
+// passes an explicit confidence label instead of a raw probability.
+const LABEL_TO_PROB: Record<ConfLabel, number> = {
+  HIGH: 0.70,
+  MEDIUM_HIGH: 0.45,
+  MEDIUM_LOW: 0.30,
+  LOW: 0.15,
+};
+
+function resolveConfidence(
+  prob: number | null,
+  label: PickData['confidence'],
+) {
+  if (prob !== null) return getConfidence(prob);
+  if (!label) return null;
+  const key = LEGACY_TO_NEW[label as string] ?? (label as ConfLabel);
+  return getConfidence(LABEL_TO_PROB[key] ?? 0.15);
+}
 
 export function PickCard({ data, expanded: initialExpanded = false }: {
   data: PickData;
@@ -45,16 +67,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
   const prob = data.probability ?? null;
   const cons = data.consensusRank ?? null;
   // Prefer prob-based calibrated label. Fall back to explicit confidence prop (mapped via legacy).
-  const c = prob !== null
-    ? getConfidence(prob)
-    : (data.confidence
-        ? (() => {
-            const key = LEGACY_TO_NEW[data.confidence as string] ?? (data.confidence as ConfLabel);
-            return getConfidence(
-              key === 'HIGH' ? 0.7 : key === 'MEDIUM_HIGH' ? 0.45 : key === 'MEDIUM_LOW' ? 0.3 : 0.15
-            );
-          })()
-        : null);
+  const c = resolveConfidence(prob, data.confidence);
 
   const style: React.CSSProperties = {
     ['--team-primary' as any]: tc.primary,
@@ -100,7 +113,7 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
                 className="w-8 h-8 flex items-center justify-center font-bold text-xs"
                 style={{
                   background: tc.primary,
-                  color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary,
+                  color: secondaryInk(tc.secondary),
                   border: `1px solid ${tc.secondary}40`,
                 }}
               >
@@ -189,10 +202,17 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
           <>
             <hr className="hrule" />
             <div className="px-5 py-3">
-              <div className="caps-tight text-ink-soft mb-2">Also in play</div>
+              <div className="caps-tight text-ink-soft mb-2">
+                Also in play
+                {data.alternates.length > 5 && (
+                  <span className="ml-1 normal-case tracking-normal text-[0.62rem] text-ink-soft/70">
+                    (top 5 of {data.alternates.length})
+                  </span>
+                )}
+              </div>
               <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-                {data.alternates.slice(0, 3).map((alt, i) => (
-                  <span key={i} className="inline-flex items-baseline gap-2">
+                {data.alternates.slice(0, 5).map((alt, i) => (
+                  <span key={`${alt.player}-${i}`} className="inline-flex items-baseline gap-2">
                     <span className="font-mono text-xs text-ink-soft/80 shrink-0">
                       {alt.probability ? `${Math.round(alt.probability * 100)}%` : '—'}
                     </span>

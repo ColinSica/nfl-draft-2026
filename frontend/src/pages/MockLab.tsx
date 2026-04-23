@@ -55,6 +55,10 @@ export function MockLab() {
   const [noise, setNoise] = useState<number>(0.0);
   const [scenario, setScenario] = useState<Scenario>('custom');
 
+  // Warn the user once when localStorage reads/writes are rejected
+  // (private browsing, sandboxed iframes, or quota-exceeded scenarios).
+  const [storageWarning, setStorageWarning] = useState<string | null>(null);
+
   // Load saved state on mount (localStorage persistence).
   useEffect(() => {
     try {
@@ -68,24 +72,30 @@ export function MockLab() {
         if (typeof s.tradeAggression === 'number') setTradeAggression(s.tradeAggression);
         if (typeof s.noise === 'number') setNoise(s.noise);
       }
-    } catch { /* ignore */ }
+    } catch {
+      setStorageWarning('Your browser is blocking local storage (private mode?). Scenario tweaks will not survive a refresh.');
+    }
 
     api.prospectLandings()
       .then(r => setRows(r.prospects))
-      .catch(e => setErr(String(e)));
+      .catch(e => setErr(String(e?.message ?? e)));
     api.latestSim()
       .then(r => setBaseline(r.picks))
       .catch(() => setBaseline([]));
   }, []);
 
-  // Persist on every change.
+  // Persist on every change — surface the first write failure so the user
+  // isn't misled into thinking their tuning was saved.
   useEffect(() => {
     try {
       localStorage.setItem(LAB_KEY, JSON.stringify({
         demand, forced, skipped: [...skipped],
         marketWeight, tradeAggression, noise,
       }));
-    } catch { /* ignore */ }
+    } catch {
+      setStorageWarning(prev => prev
+        ?? 'Couldn\'t save your Mock Lab adjustments to local storage — they\'ll be lost on refresh.');
+    }
   }, [demand, forced, skipped, marketWeight, tradeAggression, noise]);
 
   const adjustedR1 = useMemo(
@@ -110,6 +120,9 @@ export function MockLab() {
   const applyScenario = (s: Scenario) => {
     const d: Record<string, number> = {};
     POSITIONS.forEach(p => { d[p] = 1.0; });
+    // Every non-custom scenario fully resets all knobs so switching between
+    // presets gives clean, reproducible results. Previously `custom` left
+    // trade-aggression sticky from an earlier manual tweak.
     switch (s) {
       case 'chalk':
         setMarketWeight(0.90); setNoise(0.0); setTradeAggression(0.5);
@@ -172,6 +185,20 @@ export function MockLab() {
       {err && (
         <div className="border border-live bg-paper-surface p-4">
           <p className="text-sm text-live font-mono">{err}</p>
+        </div>
+      )}
+
+      {storageWarning && (
+        <div className="border-l-4 border-signal-warn bg-paper-surface px-4 py-3 flex items-start gap-3">
+          <AlertTriangle size={14} className="text-signal-warn shrink-0 mt-0.5" />
+          <p className="text-sm text-ink">{storageWarning}</p>
+          <button
+            onClick={() => setStorageWarning(null)}
+            className="ml-auto caps-tight text-xs text-ink-muted hover:text-ink shrink-0"
+            aria-label="Dismiss"
+          >
+            Dismiss
+          </button>
         </div>
       )}
 

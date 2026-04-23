@@ -6,11 +6,16 @@ import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
+import { FullMock } from './pages/FullMock';
+import { Method } from './pages/Method';
+import { MockLab } from './pages/MockLab';
 import { AboutModal } from './components/AboutModal';
 import { MobileModeBar } from './components/MobileModeBar';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { ModeProvider, useMode, MODE_META } from './lib/mode';
 import { api, type MetaInfo } from './lib/api';
 import { cn } from './lib/format';
+import { SOURCE_REPO_URL } from './lib/constants';
 
 // Primary navigation — six sections, the ones fans actually scan on draft day.
 // Prospects, Teams, First Round are the load-bearing pages. Mock Lab and
@@ -87,10 +92,9 @@ function Header({ meta, onAbout }: {
 
   useEffect(() => { setMobileOpen(false); }, [location.pathname]);
 
-  const hardReload = () => {
-    try { (window as any).location.reload(true); }
-    catch { window.location.href = window.location.href; }
-  };
+  // `location.reload(true)` is legacy Firefox — modern browsers ignore the
+  // argument. Plain reload is universally supported.
+  const hardReload = () => window.location.reload();
 
   const todayStr = new Date().toLocaleDateString('en-US', {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
@@ -250,22 +254,34 @@ function AppInner() {
 
   return (
     <div className="min-h-full flex flex-col">
+      {/* Screen-reader + keyboard skip link — appears on focus only. */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-ink focus:text-paper focus:px-3 focus:py-2 focus:caps-tight"
+      >
+        Skip to main content
+      </a>
       <Header
         meta={meta}
         onAbout={() => setAboutOpen(true)}
       />
       <MobileModeBar />
-      <main className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 sm:py-10 flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/teams" element={<Dashboard />} />
-          <Route path="/team/:abbr" element={<TeamDetail />} />
-          <Route path="/simulate" element={<Simulate />} />
-          <Route path="/prospects" element={<Prospects />} />
-          <Route path="/full-mock" element={<FullMock />} />
-          <Route path="/lab" element={<MockLab />} />
-          <Route path="/method" element={<Method />} />
-        </Routes>
+      <main
+        id="main-content"
+        className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 sm:py-10 flex-1"
+      >
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/teams" element={<Dashboard />} />
+            <Route path="/team/:abbr" element={<TeamDetail />} />
+            <Route path="/simulate" element={<Simulate />} />
+            <Route path="/prospects" element={<Prospects />} />
+            <Route path="/full-mock" element={<FullMock />} />
+            <Route path="/lab" element={<MockLab />} />
+            <Route path="/method" element={<Method />} />
+          </Routes>
+        </ErrorBoundary>
       </main>
       <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t-2 border-ink">
         <div className="hrule mb-4" />
@@ -289,7 +305,7 @@ function AppInner() {
             >
               About
             </button>
-            <a href="https://github.com/ColinSica/nfl-draft-2026" target="_blank" rel="noopener"
+            <a href={SOURCE_REPO_URL} target="_blank" rel="noopener"
                className="caps-tight hover:text-ink transition">
               Source
             </a>
@@ -309,7 +325,3 @@ export default function App() {
     </ModeProvider>
   );
 }
-
-import { FullMock } from './pages/FullMock';
-import { Method } from './pages/Method';
-import { MockLab } from './pages/MockLab';

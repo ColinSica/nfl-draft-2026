@@ -83,10 +83,6 @@ export function AboutModal({
                 <span className="caps-tight" style={{ color: '#1F6FEB' }}>Benchmark</span> — analyst
                 consensus baseline. Shown for comparison only.
               </li>
-              <li>
-                <span className="caps-tight" style={{ color: '#17A870' }}>Compare</span> — slot-by-slot
-                Independent vs. Benchmark.
-              </li>
             </ul>
           </section>
 
