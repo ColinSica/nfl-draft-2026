@@ -1,19 +1,17 @@
 /**
- * Full Mock — team-row draft board.
+ * Full Mock — pick-order list of team-color cards.
  *
- * One row per team (32 total), ordered by each team's earliest pick.
- * Left side of each row is a team-colored header (abbr, name, pick
- * count). The right side is a wrap-friendly strip of that team's
- * picks in pick-ascending order, with subtle round dividers so you
- * can read the class like a draft report card.
- *
- * Click any pick card to surface the team-specific reasoning, model
- * factors, and close alternates below the board.
+ * Chronological: pick 1 through 257, grouped by round. Each pick is
+ * a card with a team-color header strip (pick #, round, team, pos)
+ * over a cream body with dark ink for the player name — readable on
+ * every team's palette. Round tabs switch the active round. Click
+ * any card to surface the team-specific reasoning, model factors,
+ * and close alternates beneath the grid.
  *
  * Data comes from scripts/build_full_mock.py — a greedy team-fit walk
  * over the independent model's 727-prospect board.
  */
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { SectionHeader, SmallCaps, MissingText, Footnote } from '../components/editorial';
@@ -59,12 +57,15 @@ type FullMockResp = {
   picks: FullPick[];
 };
 
+const ROUND_LABELS: Record<number, string> = {
+  1: 'Round One', 2: 'Round Two', 3: 'Round Three', 4: 'Round Four',
+  5: 'Round Five', 6: 'Round Six', 7: 'Round Seven',
+};
+
 const POS_FILTERS = ['All', 'QB', 'RB', 'WR', 'TE', 'OT', 'IOL', 'EDGE',
                      'DL', 'IDL', 'LB', 'CB', 'S'];
 
-// ─── One pick card inside a team's draft strip ──────────────────────
-// Team-color header strip + cream body with dark ink — readable on
-// any team's palette, unlike all-dark-on-dark.
+// ─── Pick card — team header strip + cream body ─────────────────────
 function PickCard({
   pick, selected, dimmed, onClick,
 }: {
@@ -84,7 +85,7 @@ function PickCard({
     <button
       type="button"
       onClick={onClick}
-      className={`relative w-[160px] shrink-0 text-left overflow-hidden border bg-paper-raised
+      className={`relative w-full text-left overflow-hidden border bg-paper-raised
                   transition focus:outline-none
                   ${selected
                     ? 'ring-2 ring-accent-brass ring-offset-1 ring-offset-paper border-accent-brass z-10 scale-[1.02]'
@@ -92,16 +93,16 @@ function PickCard({
                   ${dimmed ? 'opacity-25 grayscale' : ''}`}
       title={`#${pick.pick} · ${pick.player} · ${pick.position} · ${pick.college ?? ''}`}
     >
-      {/* Header strip — team colors carry the identity */}
+      {/* Team-color header strip */}
       <div
         className="flex items-center justify-between gap-1 px-2 py-1"
         style={{ background: tc.primary, color: headerInk }}
       >
-        <span className="display-num text-[0.62rem] tabular-nums tracking-wider font-semibold">
+        <span className="display-num text-[0.65rem] tabular-nums tracking-wider font-semibold">
           #{pick.pick}
         </span>
-        <span className="font-mono text-[0.55rem] opacity-80">
-          R{pick.round}
+        <span className="display-broadcast text-[0.6rem] opacity-95">
+          {pick.team}
         </span>
         <span
           className="font-mono text-[0.56rem] font-bold px-1.5 py-[1px] leading-none rounded-sm"
@@ -113,7 +114,7 @@ function PickCard({
 
       {/* Body */}
       <div className="px-2 pt-1.5 pb-2 flex flex-col gap-0.5">
-        <div className="body-serif text-[0.85rem] font-semibold leading-[1.15] text-ink line-clamp-2 min-h-[2.05rem]">
+        <div className="body-serif text-[0.88rem] font-semibold leading-[1.15] text-ink line-clamp-2 min-h-[2.05rem]">
           {pick.player}
         </div>
         <div className="font-mono text-[0.6rem] italic text-ink-muted truncate">
@@ -138,94 +139,6 @@ function PickCard({
         </div>
       </div>
     </button>
-  );
-}
-
-// ─── Team row — header + pick strip ─────────────────────────────────
-function TeamRow({
-  team, picks, posFilter, selectedPick, onSelect, scrollTargetRef,
-}: {
-  team: string;
-  picks: FullPick[];
-  posFilter: string;
-  selectedPick: number | null;
-  onSelect: (pick: number) => void;
-  scrollTargetRef?: (el: HTMLDivElement | null) => void;
-}) {
-  const tc = teamColor(team);
-  const ink = contrastInk(tc.primary);
-  const secInk = contrastInk(tc.secondary);
-
-  // Intersperse subtle round dividers between picks from different rounds.
-  const items: Array<{ kind: 'pick'; p: FullPick } | { kind: 'rd'; round: number }> = [];
-  let lastRound = -1;
-  picks.forEach(p => {
-    if (p.round !== lastRound) {
-      items.push({ kind: 'rd', round: p.round });
-      lastRound = p.round;
-    }
-    items.push({ kind: 'pick', p });
-  });
-
-  return (
-    <div
-      ref={scrollTargetRef}
-      className="flex items-stretch border-b border-ink-edge/60 last:border-b-0"
-    >
-      {/* Team header — sticky to the left edge of the scroll container */}
-      <Link
-        to={`/team/${team}`}
-        className="sticky left-0 z-10 w-[108px] shrink-0 flex flex-col justify-center px-3 py-3
-                   hover:brightness-110 transition relative"
-        style={{ background: tc.primary, color: ink }}
-        title={tc.name}
-      >
-        <div
-          className="absolute top-0 bottom-0 right-0 w-[3px]"
-          style={{ background: tc.secondary }}
-        />
-        <span className="display-broadcast text-xl leading-none">{team}</span>
-        <span className="font-sans text-[0.62rem] font-medium opacity-85 mt-0.5 leading-tight">
-          {tc.name}
-        </span>
-        <span
-          className="caps-tight text-[0.55rem] tabular-nums mt-1 inline-block px-1.5 py-[1px] self-start leading-tight"
-          style={{ background: tc.secondary, color: secInk }}
-        >
-          {picks.length} PICKS
-        </span>
-      </Link>
-
-      {/* Pick strip — wraps onto multiple lines if a team has a large haul */}
-      <div className="flex-1 bg-paper-surface p-2 flex flex-wrap items-start gap-2">
-        {items.map((it, i) => {
-          if (it.kind === 'rd') {
-            return (
-              <div
-                key={`rd-${it.round}-${i}`}
-                className="flex items-center self-stretch px-0.5"
-                title={`Round ${it.round}`}
-              >
-                <span className="display-broadcast text-[0.62rem] text-ink-muted rotate-0 tracking-wider">
-                  R{it.round}
-                </span>
-              </div>
-            );
-          }
-          const p = it.p;
-          const posHit = posFilter === 'All' || p.position === posFilter;
-          return (
-            <PickCard
-              key={p.pick}
-              pick={p}
-              selected={selectedPick === p.pick}
-              dimmed={!posHit}
-              onClick={() => onSelect(p.pick)}
-            />
-          );
-        })}
-      </div>
-    </div>
   );
 }
 
@@ -326,8 +239,8 @@ export function FullMock() {
   const [err, setErr] = useState<string | null>(null);
   const [posFilter, setPosFilter] = useState('All');
   const [teamFilter, setTeamFilter] = useState('');
+  const [activeRound, setActiveRound] = useState<number>(1);
   const [selectedPick, setSelectedPick] = useState<number | null>(null);
-  const teamRowRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     fetch('/api/full-mock')
@@ -336,46 +249,42 @@ export function FullMock() {
       .catch(e => setErr(String(e)));
   }, []);
 
-  // Group picks by team, sort by earliest pick (TEN first → MR. IRRELEVANT last).
-  const teamRows = useMemo(() => {
-    const byTeam = new Map<string, FullPick[]>();
+  const byRound = useMemo(() => {
+    const map = new Map<number, FullPick[]>();
     (data?.picks ?? []).forEach(p => {
-      const arr = byTeam.get(p.team) ?? [];
-      arr.push(p);
-      byTeam.set(p.team, arr);
+      if (!map.has(p.round)) map.set(p.round, []);
+      map.get(p.round)!.push(p);
     });
-    const rows = Array.from(byTeam.entries()).map(([team, picks]) => ({
-      team,
-      picks: picks.slice().sort((a, b) => a.pick - b.pick),
-    }));
-    rows.sort((a, b) => a.picks[0].pick - b.picks[0].pick);
-    return rows;
+    map.forEach(arr => arr.sort((a, b) => a.pick - b.pick));
+    return map;
   }, [data]);
 
-  const teams = useMemo(() => teamRows.map(r => r.team), [teamRows]);
-
-  const visibleRows = useMemo(
-    () => (teamFilter ? teamRows.filter(r => r.team === teamFilter) : teamRows),
-    [teamRows, teamFilter],
-  );
+  const teams = useMemo(() => {
+    const s = new Set<string>();
+    (data?.picks ?? []).forEach(p => s.add(p.team));
+    return Array.from(s).sort();
+  }, [data]);
 
   const selected = useMemo(
     () => (data?.picks ?? []).find(p => p.pick === selectedPick) ?? null,
     [data, selectedPick],
   );
 
-  useEffect(() => {
-    if (!teamFilter) return;
-    const el = teamRowRefs.current[teamFilter];
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, [teamFilter]);
+  const activePicks = byRound.get(activeRound) ?? [];
+  const posCount: Record<string, number> = {};
+  activePicks.forEach(p => { posCount[p.position] = (posCount[p.position] ?? 0) + 1; });
+  const posSummary = Object.entries(posCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([p, c]) => `${c}${p}`)
+    .join(' · ');
 
   return (
     <div className="space-y-6 pb-16">
       <SectionHeader
         kicker="The full mock"
         title="All seven rounds, 257 picks."
-        deck="Team-by-team draft report cards. Every team's class laid out on its own row, in pick order, colored in team paint. Tap a card for the per-pick reasoning and the close alternates the team considered. Data comes from the independent team-agent model — no fabricated scouting prose."
+        deck="Chronological draft board — every pick in order, rendered in team colors with a readable cream-body card. Click any card for the team-specific reasoning, model factors, and close alternates. Data comes from the independent team-agent model — no fabricated scouting prose."
       />
 
       {err && <MissingText>Full mock unavailable: {err}</MissingText>}
@@ -393,6 +302,22 @@ export function FullMock() {
         <>
           {/* Filters */}
           <div className="flex flex-wrap items-center gap-3 bg-paper-surface p-3 border border-ink-edge">
+            <div className="flex items-center gap-1">
+              <SmallCaps tight className="text-ink-muted mr-1">Round</SmallCaps>
+              {[1,2,3,4,5,6,7].map(r => (
+                <button
+                  key={r}
+                  onClick={() => setActiveRound(r)}
+                  className={`w-7 h-7 text-xs font-mono border transition ${
+                    activeRound === r
+                      ? 'bg-ink text-paper border-ink'
+                      : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
+                  }`}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
             <div className="flex items-center gap-1.5">
               <SmallCaps tight className="text-ink-muted">Pos</SmallCaps>
               <div className="flex flex-wrap gap-1">
@@ -418,10 +343,8 @@ export function FullMock() {
                 onChange={e => setTeamFilter(e.target.value)}
                 className="font-mono text-xs border border-ink-edge px-2 py-1 bg-paper hover:border-ink"
               >
-                <option value="">All 32</option>
-                {teams.map(t => (
-                  <option key={t} value={t}>{t}</option>
-                ))}
+                <option value="">All</option>
+                {teams.map(t => <option key={t} value={t}>{t}</option>)}
               </select>
               {(posFilter !== 'All' || teamFilter) && (
                 <button
@@ -434,20 +357,36 @@ export function FullMock() {
             </div>
           </div>
 
-          {/* Board */}
-          <div className="border border-ink bg-paper">
-            {visibleRows.map(row => (
-              <TeamRow
-                key={row.team}
-                team={row.team}
-                picks={row.picks}
-                posFilter={posFilter}
-                selectedPick={selectedPick}
-                onSelect={(pk) => setSelectedPick(prev => (prev === pk ? null : pk))}
-                scrollTargetRef={el => { teamRowRefs.current[row.team] = el; }}
-              />
-            ))}
-          </div>
+          {/* Round header + grid */}
+          <section className="border border-ink-edge bg-paper">
+            <div className="flex items-baseline justify-between border-b-2 border-ink px-3 py-2 flex-wrap gap-2 bg-paper-surface">
+              <div className="flex items-baseline gap-3 flex-wrap">
+                <h2 className="display-broadcast text-lg">{ROUND_LABELS[activeRound]}</h2>
+                <span className="font-mono text-[0.62rem] text-ink-muted">{posSummary}</span>
+              </div>
+              <span className="caps-tight text-ink-muted text-[0.62rem]">
+                {activePicks.length} pick{activePicks.length === 1 ? '' : 's'}
+              </span>
+            </div>
+
+            <div className="p-2 sm:p-3 grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+              {activePicks.map(p => {
+                const posHit = posFilter === 'All' || p.position === posFilter;
+                const teamHit = !teamFilter || p.team === teamFilter;
+                return (
+                  <PickCard
+                    key={p.pick}
+                    pick={p}
+                    selected={selected?.pick === p.pick}
+                    dimmed={!posHit || !teamHit}
+                    onClick={() =>
+                      setSelectedPick(prev => (prev === p.pick ? null : p.pick))
+                    }
+                  />
+                );
+              })}
+            </div>
+          </section>
 
           {/* Detail */}
           {selected && (
