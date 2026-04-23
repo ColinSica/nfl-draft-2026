@@ -295,16 +295,40 @@ def _apply_structural_anchor(pros: pd.DataFrame) -> pd.DataFrame:
     if odds:
         market_p50 = out["player"].map(
             lambda p: odds.get(p, {}).get("pick_p50")).astype(float)
+        market_p10 = out["player"].map(
+            lambda p: odds.get(p, {}).get("pick_p10")).astype(float)
+        market_p90 = out["player"].map(
+            lambda p: odds.get(p, {}).get("pick_p90")).astype(float)
+        market_exp = out["player"].map(
+            lambda p: odds.get(p, {}).get("expected_pick")).astype(float)
         market_conf = out["player"].map(
             lambda p: odds.get(p, {}).get("market_confidence", 0.0)).astype(float).fillna(0.0)
         has_market = market_p50.notna()
+
+        # Pick the market anchor value thoughtfully for each player:
+        #   - Symmetric CDFs (P50 centered between P10/P90): use P50
+        #   - Right-tail heavy (P90-P50 >> P50-P10, common for QBs with
+        #     bimodal "top-10 or slide" distributions like Ty Simpson):
+        #     use expected_pick instead. P50 in a bimodal CDF is misleading
+        #     because it's the median of a distribution that has real mass
+        #     both very early and very late. The MC's posterior should anchor
+        #     to the mean, not the median, for these.
+        left_width = (market_p50 - market_p10).fillna(0)
+        right_width = (market_p90 - market_p50).fillna(0)
+        right_heavy = right_width > (2.0 * left_width + 20)  # threshold: tail >> head
+        # Where right_heavy is True, anchor uses expected_pick.
+        market_anchor = market_p50.where(~right_heavy, market_exp)
+
         # w_market ranges 0.25 (conf=0) to 0.90 (conf=1)
         w_market = (0.25 + 0.65 * market_conf).clip(lower=0.25, upper=0.90)
-        override = w_market * market_p50 + (1.0 - w_market) * blended
+        override = w_market * market_anchor + (1.0 - w_market) * blended
         blended = blended.where(~has_market, override)
         n_market = int(has_market.sum())
-        print(f"[player_value] market anchor applied to {n_market} prospects")
+        n_right_heavy = int(right_heavy.sum())
+        print(f"[player_value] market anchor applied to {n_market} prospects "
+              f"({n_right_heavy} using expected_pick due to right-tail CDF)")
         out["_market_p50"] = market_p50
+        out["_market_anchor_used"] = market_anchor
         out["_market_confidence"] = market_conf
 
     out["_model_pred"] = blended

@@ -421,31 +421,26 @@ def compute_team_fit(prospects: pd.DataFrame,
     if slot and _PICK_ANCHORS and "player" in prospects.columns:
         def _slot_match(player_name: str) -> float:
             a = _PICK_ANCHORS.get(player_name)
-            if not a or not a.get("p50"):
+            if not a or not a.get("anchor"):
                 return 0.0
-            p10, p50, p90 = a["p10"], a["p50"], a["p90"]
-            if p50 <= 0:
+            anchor = a["anchor"]  # expected_pick for bimodal; P50 for symmetric
+            p10, p90 = a["p10"], a["p90"]
+            if anchor <= 0:
                 return 0.0
             conf = max(0.2, a.get("conf", 0.5))
 
-            if p10 <= slot <= p90:
-                # Asymmetric triangle peaking at P50.
-                if slot <= p50:
-                    half_w = max(1.0, p50 - p10)
-                    dist_ratio = (p50 - slot) / half_w
-                else:
-                    half_w = max(1.0, p90 - p50)
-                    dist_ratio = (slot - p50) / half_w
-                # Falls from 1.0 at P50 to 0.2 at band edges.
-                return conf * (0.20 + 0.80 * max(0.0, 1.0 - dist_ratio))
-
-            # Outside band — real mismatch. Scale penalty by how far out.
-            if slot < p10:
-                out_by = p10 - slot
-            else:
-                out_by = slot - p90
-            # 1 pick out = -0.25*conf; 5 picks out = -0.80*conf; capped.
-            return -conf * min(1.0, 0.25 + out_by * 0.12)
+            # Fixed tolerance band around anchor: bonus peaks at anchor,
+            # falls to 0 at ±15 slots, penalizes beyond. This replaces the
+            # old P10-P90 band logic which was meaningless for right-tail
+            # prospects (P90=150+ allowed any pick without penalty).
+            dist = abs(slot - anchor)
+            if dist <= 15:
+                # Triangular bonus: 1.0 at anchor, 0 at ±15.
+                return conf * (1.0 - dist / 15.0) * 0.8
+            # Beyond 15 slots from anchor: real penalty, scaled by distance.
+            # 20 slots off = -0.5*conf; 40 off = -1.2*conf; capped at -1.5.
+            excess = dist - 15
+            return -conf * min(1.5, 0.3 + excess * 0.04)
         slot_bonus_raw = prospects["player"].map(_slot_match).fillna(0.0)
         # Weight 2.2 → conf=1.0 P50-exact match gives +2.2 fit;
         #               band-edge match gives +0.44; out-of-band up to -2.2.
@@ -532,19 +527,28 @@ def _load_team_landing_priors() -> dict:
 
 
 def _load_pick_anchors() -> dict:
-    """{player: {p10, p50, p90}} — market-implied pick-position CDF per player.
-    Used to reward slot-aligned picks in team_fit."""
+    """{player: {p10, p50, p90, expected_pick, anchor}} — market-implied pick-position
+    CDF per player. `anchor` = expected_pick for right-tail bimodal CDFs (Simpson,
+    Beck, etc.) or P50 for symmetric ones. Used to reward slot-aligned picks."""
     try:
         from src.models.independent.odds_anchor import load_anchors
         raw = load_anchors()
     except Exception as exc:
         print(f"[team_fit] pick anchors load failed: {exc}")
         return {}
-    return {p: {"p10": float(d.get("pick_p10") or 0),
-                "p50": float(d.get("pick_p50") or 0),
-                "p90": float(d.get("pick_p90") or 0),
-                "conf": float(d.get("market_confidence") or 0)}
-            for p, d in raw.items()}
+    out = {}
+    for p, d in raw.items():
+        p10 = float(d.get("pick_p10") or 0)
+        p50 = float(d.get("pick_p50") or 0)
+        p90 = float(d.get("pick_p90") or 0)
+        ep = float(d.get("expected_pick") or p50)
+        # Right-tail heavy → use expected_pick as the anchor; else P50.
+        right_heavy = (p90 - p50) > 2 * (p50 - p10) + 20
+        anchor = ep if right_heavy else p50
+        out[p] = {"p10": p10, "p50": p50, "p90": p90,
+                  "expected_pick": ep, "anchor": anchor,
+                  "conf": float(d.get("market_confidence") or 0)}
+    return out
 
 
 _TEAM_LANDING_PRIORS = _load_team_landing_priors()

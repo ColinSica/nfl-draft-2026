@@ -1,9 +1,8 @@
 import { useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Star } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { displayNum, displayValue, getConfidence, type ConfLabel } from '../lib/display';
 import { teamColor } from '../lib/teamColors';
-import { useWatchlist } from '../lib/watchlist';
 
 export type PickAlternate = {
   player: string;
@@ -43,8 +42,6 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
   const [expanded, setExpanded] = useState(initialExpanded);
   const accent = data.accent ?? '#B68A2F';
   const tc = teamColor(data.team);
-  const wl = useWatchlist();
-  const starred = wl.has(data.player);
   const prob = data.probability ?? null;
   const cons = data.consensusRank ?? null;
   // Prefer prob-based calibrated label. Fall back to explicit confidence prop (mapped via legacy).
@@ -143,17 +140,6 @@ export function PickCard({ data, expanded: initialExpanded = false }: {
               <h3 className="display-broadcast text-2xl md:text-3xl leading-none text-ink">
                 {displayValue(data.player).toUpperCase()}
               </h3>
-              <button
-                onClick={() => wl.toggle(data.player, { slot: data.slot, team: data.team })}
-                className="p-1 -m-1 transition text-ink-soft hover:text-ink"
-                title={starred ? 'Remove from watchlist' : 'Add to watchlist'}
-                aria-label={starred ? 'Remove from watchlist' : 'Add to watchlist'}
-              >
-                <Star
-                  size={18}
-                  style={{ color: starred ? '#B68A2F' : undefined, fill: starred ? '#B68A2F' : 'transparent' }}
-                />
-              </button>
             </div>
             <div className="flex items-center gap-2.5 text-xs text-ink-soft font-mono">
               <span

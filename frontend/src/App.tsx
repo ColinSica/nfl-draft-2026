@@ -6,9 +6,6 @@ import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
 import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
-import { Positions } from './pages/Positions';
-import { Watchlist } from './pages/Watchlist';
-import { TeamCompare } from './pages/TeamCompare';
 import { AboutModal } from './components/AboutModal';
 import { MobileModeBar } from './components/MobileModeBar';
 import { ModeProvider, useMode, MODE_META } from './lib/mode';
@@ -266,11 +263,8 @@ function AppInner() {
           <Route path="/simulate" element={<Simulate />} />
           <Route path="/prospects" element={<Prospects />} />
           <Route path="/full-mock" element={<FullMock />} />
-          <Route path="/method" element={<Method />} />
-          <Route path="/watchlist" element={<Watchlist />} />
-          <Route path="/team-compare" element={<TeamCompare />} />
-          <Route path="/positions" element={<Positions />} />
           <Route path="/lab" element={<MockLab />} />
+          <Route path="/method" element={<Method />} />
         </Routes>
       </main>
       <footer className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-6 mt-10 border-t-2 border-ink">

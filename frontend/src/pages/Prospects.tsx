@@ -4,11 +4,10 @@
  * Rebuilt for light theme.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { Search, Star, Download } from 'lucide-react';
+import { Search, Download } from 'lucide-react';
 import { teamColor } from '../lib/teamColors';
 import { SectionHeader, SmallCaps, MissingText, HRule } from '../components/editorial';
 import { displayValue } from '../lib/display';
-import { useWatchlist } from '../lib/watchlist';
 import { downloadCsv } from '../lib/csvExport';
 
 type Prospect = {
@@ -28,8 +27,6 @@ export function Prospects() {
   const [query, setQuery] = useState('');
   const [posFilter, setPosFilter] = useState<string>('ALL');
   const [selected, setSelected] = useState<string | null>(null);
-  const [onlyStarred, setOnlyStarred] = useState(false);
-  const wl = useWatchlist();
 
   useEffect(() => {
     fetch('/api/simulations/prospects')
@@ -48,7 +45,6 @@ export function Prospects() {
     if (!prospects) return [];
     const q = query.trim().toLowerCase();
     return prospects.filter(p => {
-      if (onlyStarred && !wl.has(p.player)) return false;
       if (posFilter !== 'ALL' && p.position !== posFilter) return false;
       if (!q) return true;
       return (
@@ -57,7 +53,7 @@ export function Prospects() {
         (p.position ?? '').toLowerCase().includes(q)
       );
     });
-  }, [prospects, query, posFilter, onlyStarred, wl]);
+  }, [prospects, query, posFilter]);
 
   const selectedProspect = filtered.find(p => p.player === selected) ?? null;
 
@@ -80,13 +76,6 @@ export function Prospects() {
               className="flex-1 bg-transparent outline-none text-sm text-ink placeholder:text-ink-soft/60"
             />
           </label>
-          <button
-            onClick={() => setOnlyStarred(!onlyStarred)}
-            className={`btn-ghost ${onlyStarred ? 'bg-mode-indie/15 border-mode-indie text-ink' : ''}`}
-          >
-            <Star size={14} style={onlyStarred ? { color: '#B68A2F', fill: '#B68A2F' } : undefined} />
-            <span>Watchlist ({wl.count})</span>
-          </button>
           <button
             onClick={() => downloadCsv('2026-big-board.csv', filtered.map(p => ({
               most_likely_slot: p.most_likely_slot,
@@ -137,7 +126,6 @@ export function Prospects() {
           ) : (
             <div className="border border-ink-edge bg-paper-surface">
               {filtered.slice(0, 120).map((p, i) => {
-                const starred = wl.has(p.player);
                 return (
                   <div
                     key={p.player + i}
@@ -168,13 +156,6 @@ export function Prospects() {
                           </>
                         )}
                       </span>
-                    </button>
-                    <button
-                      onClick={(e) => { e.stopPropagation(); wl.toggle(p.player, { slot: p.most_likely_slot, team: p.most_likely_team ?? undefined }); }}
-                      className="p-3 text-ink-soft hover:text-ink transition shrink-0"
-                      title={starred ? 'Remove from watchlist' : 'Add to watchlist'}
-                    >
-                      <Star size={16} style={{ color: starred ? '#B68A2F' : undefined, fill: starred ? '#B68A2F' : 'transparent' }} />
                     </button>
                   </div>
                 );

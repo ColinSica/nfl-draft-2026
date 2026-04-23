@@ -5,7 +5,7 @@
  * position, or confidence tier and star picks to a watchlist.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { Star, Filter, X, Download } from 'lucide-react';
+import { Filter, X, Download } from 'lucide-react';
 import { api, type PickRow } from '../lib/api';
 import { downloadCsv } from '../lib/csvExport';
 import { useMode, MODE_META } from '../lib/mode';
@@ -13,7 +13,6 @@ import { HRule, SmallCaps, Dateline, Byline, Stamp } from '../components/editori
 import { Link } from 'react-router-dom';
 import { PickCard, type PickData } from '../components/PickCard';
 import { FreshnessPanel } from '../components/FreshnessPanel';
-import { useWatchlist } from '../lib/watchlist';
 import { getConfidence } from '../lib/display';
 
 type ConfBucket = 'ALL' | 'HIGH' | 'MEDIUM_HIGH' | 'MEDIUM_LOW' | 'LOW';
@@ -28,10 +27,8 @@ export function Simulate() {
   const [filterTeam, setFilterTeam] = useState<string>('ALL');
   const [filterPos, setFilterPos] = useState<string>('ALL');
   const [filterConf, setFilterConf] = useState<ConfBucket>('ALL');
-  const [onlyStarred, setOnlyStarred] = useState(false);
   // Show original draft order (no trades) vs post-trade order.
   const [showTrades, setShowTrades] = useState<boolean>(true);
-  const wl = useWatchlist();
 
   useEffect(() => {
     api.latestSim().then(r => {
@@ -146,7 +143,6 @@ export function Simulate() {
   // Apply filters
   const filtered = useMemo(() => {
     return all32.filter(p => {
-      if (onlyStarred && !wl.has(p.player)) return false;
       if (filterTeam !== 'ALL' && p.team !== filterTeam) return false;
       if (filterPos !== 'ALL' && p.position !== filterPos) return false;
       if (filterConf !== 'ALL') {
@@ -155,7 +151,7 @@ export function Simulate() {
       }
       return true;
     });
-  }, [all32, filterTeam, filterPos, filterConf, onlyStarred, wl]);
+  }, [all32, filterTeam, filterPos, filterConf]);
 
   // Map slot -> whether the displayed team is different from the original owner
   // (i.e., a trade happened at that slot in the MC)
@@ -174,10 +170,9 @@ export function Simulate() {
     setFilterTeam('ALL');
     setFilterPos('ALL');
     setFilterConf('ALL');
-    setOnlyStarred(false);
   };
 
-  const hasFilters = filterTeam !== 'ALL' || filterPos !== 'ALL' || filterConf !== 'ALL' || onlyStarred;
+  const hasFilters = filterTeam !== 'ALL' || filterPos !== 'ALL' || filterConf !== 'ALL';
 
   return (
     <div className="space-y-10 pb-16">
@@ -207,7 +202,6 @@ export function Simulate() {
         <Metric label="Simulations" value={simMeta?.n_sims != null ? String(simMeta.n_sims) : '—'} />
         <Metric label="Picks shown" value={`${filtered.length} / ${all32.length}`} />
         <Metric label="Trades modelled" value={String(tradedSlots.size)} />
-        <Metric label="Watchlist" value={String(wl.count)} />
 
         {/* Trades ON/OFF toggle */}
         <div className="ml-auto flex items-center gap-2">
@@ -307,13 +301,6 @@ export function Simulate() {
             options={['ALL', 'HIGH', 'MEDIUM_HIGH', 'MEDIUM_LOW', 'LOW']}
             onChange={(v) => setFilterConf(v as ConfBucket)}
           />
-          <button
-            onClick={() => setOnlyStarred(!onlyStarred)}
-            className={`btn-ghost ${onlyStarred ? 'bg-mode-indie/15 border-mode-indie text-ink' : ''}`}
-          >
-            <Star size={14} style={onlyStarred ? { color: '#B68A2F', fill: '#B68A2F' } : undefined} />
-            <span>Watchlist only</span>
-          </button>
         </div>
       </div>
 
