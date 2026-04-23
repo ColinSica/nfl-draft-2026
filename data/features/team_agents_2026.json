@@ -19,15 +19,15 @@
     "qb_situation": "rebuilding",
     "qb_urgency": 0.8,
     "roster_needs": {
-      "QB": 5.5,
-      "EDGE": 4.0,
-      "RB": 3.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "QB": 5.0,
+      "OT": 4.0,
+      "EDGE": 3.0,
+      "RB": 2.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
+      "S": 2.0,
       "WR": 1.2
     },
     "latent_needs": {
@@ -518,7 +518,8 @@
     ],
     "_4_22_news": [
       "Schefter 4/22: Cardinals shopped #3 with no takers. If they hold, Jeremiyah Love (ND RB) is the 'logical' pick."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: QB/OT/EDGE"
   },
   "ATL": {
     "team": "ATL",
@@ -538,13 +539,13 @@
     "qb_situation": "competition_with_medical_risk",
     "qb_urgency": 0.25,
     "roster_needs": {
-      "EDGE": 5.0,
-      "IDL": 4.0,
-      "WR": 2.5,
-      "IOL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "IDL": 5.0,
+      "WR": 4.0,
+      "LB": 3.0,
+      "EDGE": 2.0,
+      "IOL": 2.0,
+      "CB": 2.0,
+      "S": 2.0,
       "QB": 1.2,
       "TE": 1.2,
       "OT": 1.2
@@ -937,7 +938,8 @@
         "Terry Fontenot values upside swings",
         "willing to trade down for capital"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: DT/WR/LB"
   },
   "BAL": {
     "team": "BAL",
@@ -959,16 +961,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "CB": 4.0,
-      "WR": 2.5,
-      "OT": 2.5,
-      "EDGE": 2.5,
-      "TE": 2.0999999999999996,
+      "CB": 5.0,
+      "S": 4.0,
+      "IDL": 3.0,
+      "WR": 2.0,
+      "OT": 2.0,
+      "EDGE": 2.0,
+      "TE": 2.0,
       "RB": 1.2,
       "IOL": 1.2,
-      "IDL": 1.2,
-      "LB": 1.2,
-      "S": 1.2
+      "LB": 1.2
     },
     "latent_needs": {
       "IOL": 2.0
@@ -1466,7 +1468,8 @@
         "character/leadership preference",
         "multi-purpose approach"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: CB/S/DT"
   },
   "BUF": {
     "team": "BUF",
@@ -1488,14 +1491,14 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "WR": 4.0,
-      "CB": 4.0,
-      "RB": 2.5,
-      "OT": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "WR": 5.0,
+      "EDGE": 4.0,
+      "LB": 3.0,
+      "CB": 2.0,
+      "RB": 2.0,
+      "OT": 2.0,
+      "IDL": 2.0,
+      "S": 2.0,
       "TE": 1.2,
       "IOL": 1.2
     },
@@ -2019,7 +2022,8 @@
         "scheme-versatile selections",
         "edge position investment despite free-agency approach"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: WR/EDGE/LB"
   },
   "CAR": {
     "team": "CAR",
@@ -2041,16 +2045,16 @@
     "qb_situation": "unknown",
     "qb_urgency": 0.4,
     "roster_needs": {
-      "EDGE": 4.0,
-      "IDL": 4.0,
-      "CB": 4.0,
-      "S": 4.0,
-      "WR": 2.5,
-      "TE": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "LB": 2.5,
-      "QB": 2.5,
+      "S": 5.0,
+      "WR": 4.0,
+      "EDGE": 3.0,
+      "IDL": 2.0,
+      "CB": 2.0,
+      "TE": 2.0,
+      "OT": 2.0,
+      "IOL": 2.0,
+      "LB": 2.0,
+      "QB": 2.0,
       "RB": 1.2
     },
     "latent_needs": {
@@ -2521,7 +2525,8 @@
         "home-state prospect recruitment preference",
         "depth building at multiple secondary spots"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: S/WR/EDGE"
   },
   "CHI": {
     "team": "CHI",
@@ -2543,15 +2548,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 4.0,
-      "RB": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "S": 5.0,
+      "IDL": 4.0,
+      "EDGE": 3.0,
+      "OT": 2.0,
+      "RB": 2.0,
+      "LB": 2.0,
       "WR": 1.2,
       "TE": 1.2,
       "IOL": 1.2,
-      "IDL": 1.2,
       "CB": 1.2
     },
     "latent_needs": {},
@@ -3064,7 +3069,8 @@
     },
     "_4_22_news": [
       "Mock chatter 4/22: Bears could nab Keldric Faulk at 21 (from Steelers) per multiple finals. EDGE group still the clearest gap."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: S/DT/EDGE"
   },
   "CIN": {
     "team": "CIN",
@@ -3084,14 +3090,14 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IOL": 4.0,
-      "IDL": 4.0,
-      "S": 4.0,
-      "RB": 2.5,
-      "WR": 2.5,
-      "OT": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
+      "CB": 5.0,
+      "OT": 4.0,
+      "WR": 3.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "S": 2.0,
+      "RB": 2.0,
+      "LB": 2.0,
       "TE": 1.2,
       "EDGE": 1.2
     },
@@ -3613,7 +3619,8 @@
     ],
     "_4_22_news": [
       "No R1 pick after Dexter Lawrence trade. Schefter 4/22: Cincy's veteran market activity during draft likely — watch for picks 32-65."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: CB/OT/WR"
   },
   "CLE": {
     "team": "CLE",
@@ -3636,14 +3643,14 @@
     "qb_situation": "watson_locked_ceiling_uncertain",
     "qb_urgency": 0.35,
     "roster_needs": {
-      "QB": 1.0,
-      "RB": 2.5,
-      "WR": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "QB": 5.0,
+      "WR": 4.0,
+      "OT": 3.0,
+      "RB": 2.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "TE": 1.2,
       "EDGE": 1.2,
       "CB": 1.2
@@ -4251,7 +4258,8 @@
     ],
     "_4_22_news": [
       "Graziano 4/22: Browns open to trading down from 6. Named up-partners: KC, NYG, MIA, LAR, WAS. Berry front office has circulated the offer."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: QB/WR/OT"
   },
   "DAL": {
     "team": "DAL",
@@ -4274,16 +4282,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IDL": 5.0,
-      "IOL": 4.0,
-      "LB": 4.0,
-      "RB": 2.5,
-      "OT": 2.5,
-      "S": 2.5,
+      "CB": 5.0,
+      "S": 4.0,
+      "LB": 3.0,
+      "IDL": 2.0,
+      "IOL": 2.0,
+      "RB": 2.0,
+      "OT": 2.0,
       "WR": 1.2,
       "TE": 1.2,
-      "EDGE": 1.2,
-      "CB": 1.2
+      "EDGE": 1.2
     },
     "latent_needs": {},
     "needs_source": "nfl_com_top5_verified_2026-04-20",
@@ -4873,7 +4881,8 @@
     ],
     "_4_23_news": [
       "CBS rumors 4/23: Cowboys prefer trade-down from #20 over trade-up from #12. Jerry: 'trades are open.' Mock markets price DAL@12 staying, DAL@20 active."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: CB/S/LB"
   },
   "DEN": {
     "team": "DEN",
@@ -4893,12 +4902,12 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "RB": 4.0,
-      "WR": 4.0,
+      "IDL": 5.0,
       "LB": 4.0,
-      "TE": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
+      "TE": 3.0,
+      "RB": 2.0,
+      "WR": 2.0,
+      "IOL": 2.0,
       "CB": 1.75,
       "OT": 1.2,
       "EDGE": 1.2,
@@ -5327,7 +5336,8 @@
         "George Paton asset trading for veteran acquisition (Waddle)",
         "value-focused"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: DT/LB/TE"
   },
   "DET": {
     "team": "DET",
@@ -5349,12 +5359,12 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 4.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
+      "EDGE": 5.0,
+      "IDL": 4.0,
+      "OT": 3.0,
+      "IOL": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
       "RB": 1.2,
       "WR": 1.2,
       "TE": 1.2,
@@ -5847,7 +5857,8 @@
     },
     "_4_22_news": [
       "Rapoport 4/22: teams could try to trade up to 15-16 to jump Lions for an OT. Named: CAR, PHI, SF. DET OT need urgent."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: EDGE/DT/OT"
   },
   "GB": {
     "team": "GB",
@@ -5867,13 +5878,13 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "CB": 4.0,
-      "WR": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
+      "CB": 5.0,
+      "OT": 4.0,
+      "EDGE": 3.0,
+      "WR": 2.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
       "RB": 1.2,
       "TE": 1.2,
       "S": 1.2
@@ -6242,7 +6253,8 @@
     "_4_21_presser_note": "Low-key pre-draft presser; no major shifts",
     "_4_21_pressers": [
       "Standard board-driven"
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: CB/OT/EDGE"
   },
   "HOU": {
     "team": "HOU",
@@ -6264,13 +6276,13 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 5.0,
-      "IOL": 4.0,
-      "RB": 2.5,
-      "TE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "IOL": 5.0,
+      "IDL": 3.0,
+      "OT": 2.0,
+      "RB": 2.0,
+      "TE": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "WR": 1.2,
       "EDGE": 1.2,
       "CB": 1.2
@@ -6779,7 +6791,8 @@
         "build on defensive strength",
         "no OL earned grade above 75.0 last season"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: OG/C/DT"
   },
   "IND": {
     "team": "IND",
@@ -6799,13 +6812,13 @@
     "qb_situation": "jones_starter_recovering",
     "qb_urgency": 0.3,
     "roster_needs": {
-      "S": 4.0,
-      "QB": 2.5,
-      "WR": 2.5,
-      "OT": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
+      "EDGE": 5.0,
+      "WR": 4.0,
+      "LB": 3.0,
+      "S": 2.0,
+      "QB": 2.0,
+      "OT": 2.0,
+      "CB": 2.0,
       "RB": 1.2,
       "TE": 1.2,
       "IOL": 1.2,
@@ -7206,7 +7219,8 @@
         "Chris Ballard Day 2 building",
         "willing to trade down"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: EDGE/WR/LB"
   },
   "JAX": {
     "team": "JAX",
@@ -7226,15 +7240,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IDL": 4.0,
-      "CB": 4.0,
-      "RB": 2.5,
-      "WR": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "IDL": 5.0,
+      "EDGE": 4.0,
+      "LB": 3.0,
+      "CB": 2.0,
+      "RB": 2.0,
+      "WR": 2.0,
+      "OT": 2.0,
+      "IOL": 2.0,
+      "S": 2.0,
       "TE": 1.2
     },
     "latent_needs": {},
@@ -7592,7 +7606,8 @@
         "James Gladstone aggressive 'window wide open' approach",
         "11 total picks / capital accumulation"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: DT/EDGE/LB"
   },
   "KC": {
     "team": "KC",
@@ -7615,15 +7630,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 4.0,
-      "RB": 2.5,
-      "WR": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "WR": 5.0,
+      "EDGE": 4.0,
+      "IDL": 3.0,
+      "OT": 2.0,
+      "RB": 2.0,
+      "IOL": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
+      "S": 2.0,
       "TE": 1.2
     },
     "latent_needs": {},
@@ -8183,7 +8198,8 @@
     ],
     "_4_22_news": [
       "NFL Net 4/22: Chiefs at 9 — Rueben Bain (EDGE) if there, else Jordyn Tyson (WR). Veach trade-up to 3-4 for a top EDGE also live."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: WR/EDGE/DT"
   },
   "LAC": {
     "team": "LAC",
@@ -8205,16 +8221,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "WR": 4.0,
-      "TE": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "IOL": 5.0,
+      "IDL": 4.0,
+      "EDGE": 3.0,
+      "WR": 2.0,
+      "TE": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
+      "S": 2.0,
       "RB": 1.2,
-      "OT": 1.2,
-      "EDGE": 1.2
+      "OT": 1.2
     },
     "latent_needs": {
       "EDGE": 2.0,
@@ -8718,7 +8734,8 @@
         "age considerations for defensive line",
         "Penning/Strange redemption approach"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: OG/DT/EDGE"
   },
   "LAR": {
     "team": "LAR",
@@ -8740,14 +8757,14 @@
     "qb_situation": "bridge",
     "qb_urgency": 0.3,
     "roster_needs": {
-      "QB": 2.5,
-      "WR": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "WR": 5.0,
+      "OT": 4.0,
+      "CB": 3.0,
+      "QB": 2.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "RB": 1.2,
       "TE": 1.2,
       "EDGE": 1.2
@@ -9197,7 +9214,8 @@
         "long-term solution building",
         "best-player-available strategy"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: WR/OT/CB"
   },
   "LV": {
     "team": "LV",
@@ -9219,15 +9237,15 @@
     "qb_situation": "bridge",
     "qb_urgency": 1.0,
     "roster_needs": {
-      "QB": 5.5,
-      "RB": 4.0,
-      "CB": 4.0,
-      "WR": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "QB": 5.0,
+      "WR": 4.0,
+      "IDL": 3.0,
+      "RB": 2.0,
+      "CB": 2.0,
+      "OT": 2.0,
+      "IOL": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "EDGE": 1.2
     },
     "latent_needs": {},
@@ -9638,7 +9656,8 @@
     ],
     "_4_21_pressers": [
       "Spytek 4/21: re-affirmed willingness to stay at 1; P(Mendoza) ~= 0.97"
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: QB/WR/DT"
   },
   "MIA": {
     "team": "MIA",
@@ -9661,16 +9680,16 @@
     "qb_situation": "rebuilding",
     "qb_urgency": 0.8,
     "roster_needs": {
-      "QB": 5.5,
-      "IDL": 5.0,
-      "IOL": 4.0,
-      "WR": 2.5,
-      "TE": 2.5,
-      "OT": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "WR": 5.0,
+      "CB": 4.0,
+      "EDGE": 3.0,
+      "QB": 2.0,
+      "IDL": 2.0,
+      "IOL": 2.0,
+      "TE": 2.0,
+      "OT": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "RB": 1.2
     },
     "latent_needs": {
@@ -10277,7 +10296,8 @@
     ],
     "_4_22_news": [
       "NFL.com 4/22: Dolphins still in the QB market. Packaging 11 + 30 for a veteran QB, or grabbing a passer at 11, both live scenarios."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: WR/CB/EDGE"
   },
   "MIN": {
     "team": "MIN",
@@ -10299,14 +10319,14 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "CB": 4.0,
-      "S": 3.5,
-      "EDGE": 3.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
+      "S": 5.0,
+      "IOL": 4.0,
+      "WR": 3.0,
+      "CB": 2.0,
+      "EDGE": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
       "RB": 1.2,
-      "WR": 1.2,
       "TE": 1.2,
       "OT": 1.2
     },
@@ -10793,7 +10813,8 @@
     ],
     "_4_22_news": [
       "Schefter 4/22: Vikings 'will draft a defensive player.' Aligns with Flores scheme premium — DB/front-seven dominant."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: S/C/WR"
   },
   "NE": {
     "team": "NE",
@@ -10816,14 +10837,14 @@
     "qb_urgency": 0.0,
     "roster_needs": {
       "OT": 5.0,
-      "IOL": 4.0,
-      "RB": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "IDL": 4.0,
+      "TE": 3.0,
+      "IOL": 2.0,
+      "RB": 2.0,
+      "EDGE": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "WR": 1.2,
-      "TE": 1.2,
       "CB": 1.2
     },
     "latent_needs": {
@@ -11310,7 +11331,8 @@
         "visit pool track record",
         "asset accumulation via trade-backs"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: OT/DT/TE"
   },
   "NO": {
     "team": "NO",
@@ -11332,17 +11354,17 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "S": 4.0,
-      "WR": 2.5,
-      "TE": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "QB": 0.0,
-      "RB": 1.2
+      "EDGE": 5.0,
+      "WR": 4.0,
+      "CB": 3.0,
+      "S": 2.0,
+      "TE": 2.0,
+      "OT": 2.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
+      "RB": 1.2,
+      "QB": 0.0
     },
     "latent_needs": {},
     "needs_source": "nfl_com_top5_verified_2026-04-20",
@@ -11828,7 +11850,8 @@
     },
     "_4_22_news": [
       "Schefter 4/22: Saints open to BPA at 8. Would take Carnell Tate quickly if on board (Ohio State reunion w/ Chris Olave). OC Nussmeier excused from draft duties — son in draft. Kamara/Cameron Jordan futures pivot on draft outcome."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: EDGE/WR/CB"
   },
   "NYG": {
     "team": "NYG",
@@ -11851,14 +11874,14 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
+      "WR": 5.0,
       "IOL": 4.0,
-      "S": 4.0,
-      "IDL": 4.0,
-      "WR": 3.0,
-      "TE": 2.5,
-      "OT": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
+      "CB": 3.0,
+      "S": 2.0,
+      "IDL": 2.0,
+      "TE": 2.0,
+      "OT": 2.0,
+      "LB": 2.0,
       "RB": 1.2,
       "EDGE": 1.2,
       "QB": 0.0
@@ -12398,7 +12421,8 @@
     "_4_23_news": [
       "Draft-morning 4/23 (NFL.com final): Giants 'love' Jordyn Tyson at #5. Combined with Schefter's Love-to-ARI call, NYG-Tyson at 5 is now a market and insider consensus lean.",
       "NFL.com buzz 4/23: Giants 'less likely to deal Thibodeaux' post-Lawrence. EDGE not a forced trade chip — roster stays intact."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: WR/OG/CB"
   },
   "NYJ": {
     "team": "NYJ",
@@ -12421,15 +12445,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "TE": 4.0,
-      "S": 4.0,
-      "WR": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "QB": 0.0,
+      "QB": 5.0,
+      "WR": 4.0,
+      "EDGE": 3.0,
+      "TE": 2.0,
+      "S": 2.0,
+      "OT": 2.0,
+      "IOL": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
       "RB": 1.2,
       "IDL": 1.2
     },
@@ -12977,7 +13001,8 @@
     "_4_22_news": [
       "Rapoport 4/22: #2 pick narrowed to two EDGE — David Bailey (TTU) and Arvell Reese (OSU). Books within ~2 bps.",
       "NFL.com 4/22: Jets cancelled David Bailey top-30 visit this week. Ambiguous: 'decision made' signal either direction."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: QB/WR/EDGE"
   },
   "PHI": {
     "team": "PHI",
@@ -12999,15 +13024,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
+      "EDGE": 5.0,
+      "TE": 4.0,
+      "OT": 3.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
       "RB": 1.2,
       "WR": 1.2,
-      "TE": 1.2,
       "S": 1.2
     },
     "latent_needs": {
@@ -13507,7 +13532,8 @@
     ],
     "_4_23_news": [
       "CBS Sports 4/23: AJ Brown trade to Patriots 'still tracking' for on/after June 1 (Eagles clear $7M cap that date). Brown not attending workouts. WR urgency at 23 deferred — Roseman still plotting trade-up for OL/EDGE."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: EDGE/TE/OT"
   },
   "PIT": {
     "team": "PIT",
@@ -13529,12 +13555,12 @@
     "qb_situation": "bridge",
     "qb_urgency": 0.65,
     "roster_needs": {
-      "OT": 5.0,
-      "QB": 4.0,
-      "WR": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "LB": 2.5,
+      "QB": 5.0,
+      "IOL": 4.0,
+      "OT": 3.0,
+      "WR": 2.0,
+      "IDL": 2.0,
+      "LB": 2.0,
       "RB": 1.2,
       "TE": 1.2,
       "EDGE": 1.2,
@@ -14058,7 +14084,8 @@
     ],
     "_4_22_news": [
       "CBS/books 4/22: PIT +330 second-favorite for Carson Beck (Miami QB). Beat writers: 'not in R1.' OT R1 lock unless Beck slides further."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: QB/OG/OT"
   },
   "SEA": {
     "team": "SEA",
@@ -14080,17 +14107,17 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IOL": 5.0,
-      "RB": 4.5,
-      "OT": 4.0,
-      "TE": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
-      "QB": 0.0,
+      "RB": 5.0,
+      "EDGE": 4.0,
+      "CB": 3.0,
+      "IOL": 2.0,
+      "OT": 2.0,
+      "TE": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "WR": 1.2,
-      "IDL": 1.2
+      "IDL": 1.2,
+      "QB": 0.0
     },
     "latent_needs": {},
     "needs_source": "nfl_com_top5_verified_2026-04-20",
@@ -14567,7 +14594,8 @@
     ],
     "_4_22_news": [
       "John Schneider presser 4/22: 'We have four picks. We'll be looking to trade back.' Seattle very likely ships 32."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: RB/EDGE/CB"
   },
   "SF": {
     "team": "SF",
@@ -14589,15 +14617,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IOL": 4.0,
-      "IDL": 4.0,
-      "CB": 4.0,
-      "RB": 2.5,
-      "WR": 2.5,
-      "OT": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "OT": 5.0,
+      "EDGE": 4.0,
+      "WR": 3.0,
+      "IOL": 2.0,
+      "IDL": 2.0,
+      "CB": 2.0,
+      "RB": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "TE": 1.2
     },
     "latent_needs": {
@@ -15087,7 +15115,8 @@
         "aging QB consideration",
         "targets schematic similarities to prior acquisitions"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: OT/EDGE/WR"
   },
   "TB": {
     "team": "TB",
@@ -15109,17 +15138,17 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "EDGE": 4.0,
-      "LB": 4.0,
-      "TE": 2.5,
-      "OT": 2.5,
-      "IOL": 2.5,
-      "IDL": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
-      "QB": 0.0,
+      "EDGE": 5.0,
+      "CB": 4.0,
+      "IDL": 3.0,
+      "LB": 2.0,
+      "TE": 2.0,
+      "OT": 2.0,
+      "IOL": 2.0,
+      "S": 2.0,
       "RB": 1.2,
-      "WR": 1.2
+      "WR": 1.2,
+      "QB": 0.0
     },
     "latent_needs": {
       "WR": 1.5
@@ -15590,7 +15619,8 @@
         "elite linebacker tradition maintenance",
         "addresses glaring need despite mock resistance"
       ]
-    }
+    },
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: EDGE/CB/DT"
   },
   "TEN": {
     "team": "TEN",
@@ -15612,15 +15642,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 4.0,
-      "WR": 3.0,
-      "TE": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "CB": 2.5,
-      "S": 2.5,
+      "EDGE": 5.0,
+      "WR": 4.0,
+      "IOL": 3.0,
+      "OT": 2.0,
+      "TE": 2.0,
+      "LB": 2.0,
+      "CB": 2.0,
+      "S": 2.0,
       "RB": 1.2,
-      "IOL": 1.2,
       "IDL": 1.2,
       "QB": 0.0
     },
@@ -16112,7 +16142,8 @@
     ],
     "_4_22_news": [
       "ESPN beat 4/22: Titans want to trade down from 4. If they hold and Bailey is there, Bailey is the pick. Otherwise highest-graded WR (Carnell Tate or Jordyn Tyson)."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: EDGE/WR/OG"
   },
   "WAS": {
     "team": "WAS",
@@ -16134,16 +16165,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IDL": 4.0,
-      "WR": 2.5,
-      "TE": 2.5,
-      "IOL": 2.5,
-      "EDGE": 2.5,
-      "LB": 2.5,
-      "S": 2.5,
+      "WR": 5.0,
+      "CB": 4.0,
+      "IOL": 3.0,
+      "IDL": 2.0,
+      "TE": 2.0,
+      "EDGE": 2.0,
+      "LB": 2.0,
+      "S": 2.0,
       "RB": 1.2,
-      "OT": 1.2,
-      "CB": 1.2
+      "OT": 1.2
     },
     "latent_needs": {
       "WR": 2.0,
@@ -16715,7 +16746,8 @@
     ],
     "_4_22_news": [
       "ESPN beat 4/22: Commanders narrowed #7 targets to Sonny Styles, Caleb Downs, Carnell Tate, Jeremiyah Love."
-    ]
+    ],
+    "_4_23_espn_needs": "ESPN cheat-sheet 4/23: WR/CB/C"
   },
   "_meta_corrections": {
     "applied_at": "2026-04-20T03:46:57Z",
@@ -17214,11 +17246,13 @@
           "CBS Sports draft rumors",
           "SI NFL draft trade tracker",
           "Bleeding Green Nation (Roseman intel)",
-          "Kiper/Jeremiah/McShay final top 150s"
+          "Kiper/Jeremiah/McShay final top 150s",
+          "ESPN 2026 Draft cheat-sheet — official team needs"
         ]
       },
       "latest_intel_date": "2026-04-23"
-    }
+    },
+    "needs_source": "espn_cheat_sheet_2026_04_23"
   },
   "_meta_top5_consensus_2026": {
     "date": "2026-04-23",

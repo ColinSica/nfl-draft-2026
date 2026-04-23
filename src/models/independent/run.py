@@ -360,29 +360,13 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
     assigned_players: set[str] = set()
     canonical_owners = _load_canonical_pick_owners()
 
-    # Re-aggregate slot_counts filtered to the canonical-team's picks only,
-    # so the modal pick at each slot represents what the real pick-holder
-    # selected (not what a trade-up/down team selected after swapping into
-    # this slot). Trade scenarios are surfaced separately on the Simulate
-    # page; the canonical mock display should reflect the real draft order.
-    from collections import Counter as _C
-    canonical_slot_counts: dict[int, _C] = defaultdict(_C)
-    for sim in all_sims:
-        for p in sim:
-            slot_n = p.get("slot")
-            if slot_n is None:
-                continue
-            canon = canonical_owners.get(slot_n)
-            # Keep only picks where the picking team matches the canonical
-            # owner (no trades) OR where we don't know the canonical owner.
-            if canon is None or p.get("team") == canon:
-                canonical_slot_counts[slot_n][p["player"]] += 1
-
     for slot in sorted(agg["slot_counts"].keys()):
-        # Prefer canonical-team-filtered counts; fall back to raw if the
-        # canonical team never picked at this slot in any sim (happens when
-        # trades always fired away from this slot — rare).
-        pc = canonical_slot_counts.get(slot) or agg["slot_counts"][slot]
+        # Use the full slot_counts (all sims, all picking teams) so a player
+        # who's popular at this slot — even if always taken via trade-up — is
+        # still surfaced. Then override the team display to the canonical
+        # owner so the mock respects the real draft order. Trades are
+        # surfaced separately via the Simulate page's trades toggle.
+        pc = agg["slot_counts"][slot]
         canonical_team = canonical_owners.get(slot)
 
         # Find the most common unassigned player at this slot
@@ -394,13 +378,11 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
         if player is None:
             continue  # no unassigned candidate (extremely rare)
         assigned_players.add(player)
-        # Normalize by n_sims (not the canonical-only subset) so probabilities
-        # stay calibrated. If 46/50 sims had canon team picking player X, that's
-        # a 92% outcome — not 96% (which would be 46/48 if 2 sims saw a trade).
         prob = round(ct / n_sims, 3)
 
-        # Find a sim where the canonical team picked this player at this slot
-        # (so reasoning factors match); fall back to any sim.
+        # Find any sim where this player landed at this slot, for components.
+        # Prefer a sim where the canonical team was the picker, to keep
+        # fit_score / scheme match consistent with the displayed team.
         chosen_p = None
         for sim in all_sims:
             for p in sim:
@@ -411,7 +393,6 @@ def _write_outputs(agg: dict, all_sims: list[list[dict]], n_sims: int,
             if chosen_p:
                 break
         if not chosen_p:
-            # Fallback: any sim where this player landed here
             for sim in all_sims:
                 for p in sim:
                     if p["slot"] == slot and p["player"] == player:
