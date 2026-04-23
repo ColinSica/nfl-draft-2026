@@ -3,12 +3,16 @@
  * Per user brief: Summary / Landing spots / Team fits / Intel / Reasoning.
  * Rebuilt for light theme.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, Download } from 'lucide-react';
 import { teamColor } from '../lib/teamColors';
 import { SectionHeader, SmallCaps, MissingText, HRule } from '../components/editorial';
+import { LoadingBlock, ErrorBlock } from '../components/LoadState';
+import { secondaryInk } from '../lib/color';
 import { displayValue } from '../lib/display';
 import { downloadCsv } from '../lib/csvExport';
+
+const PAGE_SIZE = 60;
 
 type Prospect = {
   player: string;
@@ -25,16 +29,29 @@ type Prospect = {
 
 export function Prospects() {
   const [prospects, setProspects] = useState<Prospect[] | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [query, setQuery] = useState('');
   const [posFilter, setPosFilter] = useState<string>('ALL');
   const [selected, setSelected] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
+  // Ref strip of position-filter buttons — we arrow-key between them.
+  const posBtnRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   useEffect(() => {
+    setErr(null);
+    setProspects(null);
     fetch('/api/simulations/prospects')
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        return r.json();
+      })
       .then(d => setProspects(d.prospects ?? []))
-      .catch(() => setProspects([]));
-  }, []);
+      .catch(e => { setErr(String(e?.message ?? e)); setProspects([]); });
+  }, [reloadKey]);
+
+  // Reset page size when filter/search narrows — otherwise the count is a lie.
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [query, posFilter]);
 
   const positions = useMemo(() => {
     const s = new Set<string>();
@@ -67,9 +84,14 @@ export function Prospects() {
 
       <div className="space-y-3">
         <div className="flex flex-wrap items-center gap-3">
-          <label className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md">
-            <Search size={16} className="text-ink-soft" />
+          <label
+            htmlFor="prospect-search"
+            className="flex items-center gap-2 bg-paper-surface border border-ink-edge px-3 py-2 min-w-[240px] flex-1 max-w-md"
+          >
+            <Search size={16} className="text-ink-soft" aria-hidden="true" />
+            <span className="sr-only">Search prospects</span>
             <input
+              id="prospect-search"
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -101,36 +123,62 @@ export function Prospects() {
         </div>
 
         {/* Position tab strip */}
-        <div className="flex flex-wrap gap-0 border border-ink-edge bg-paper-surface overflow-x-auto">
-          {positions.map(p => (
-            <button
-              key={p}
-              onClick={() => setPosFilter(p)}
-              className={`px-3 py-2 caps-tight border-r border-ink-edge last:border-r-0 transition whitespace-nowrap ${
-                posFilter === p
-                  ? 'bg-ink text-paper'
-                  : 'text-ink-soft hover:text-ink hover:bg-paper-hover'
-              }`}
-            >
-              {p === 'ALL' ? 'All' : p}
-            </button>
-          ))}
+        <div
+          role="tablist"
+          aria-label="Filter by position"
+          className="flex flex-wrap gap-0 border border-ink-edge bg-paper-surface overflow-x-auto"
+        >
+          {positions.map((p, i) => {
+            const active = posFilter === p;
+            return (
+              <button
+                key={p}
+                ref={(el) => { posBtnRefs.current[i] = el; }}
+                role="tab"
+                aria-selected={active}
+                tabIndex={active ? 0 : -1}
+                onClick={() => setPosFilter(p)}
+                onKeyDown={(e) => {
+                  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight'
+                      && e.key !== 'Home' && e.key !== 'End') return;
+                  e.preventDefault();
+                  const last = positions.length - 1;
+                  let next = i;
+                  if (e.key === 'ArrowLeft')  next = i <= 0 ? last : i - 1;
+                  if (e.key === 'ArrowRight') next = i >= last ? 0 : i + 1;
+                  if (e.key === 'Home')       next = 0;
+                  if (e.key === 'End')        next = last;
+                  setPosFilter(positions[next]);
+                  posBtnRefs.current[next]?.focus();
+                }}
+                className={`px-3 py-2 caps-tight border-r border-ink-edge last:border-r-0 transition whitespace-nowrap ${
+                  active
+                    ? 'bg-ink text-paper'
+                    : 'text-ink-soft hover:text-ink hover:bg-paper-hover'
+                }`}
+              >
+                {p === 'ALL' ? 'All' : p}
+              </button>
+            );
+          })}
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-6">
         {/* Left: prospect list */}
         <div>
-          {!prospects ? (
-            <div className="card p-10 text-center text-ink-soft italic">Loading big board…</div>
+          {err && (!prospects || prospects.length === 0) ? (
+            <ErrorBlock message={err} onRetry={() => setReloadKey(k => k + 1)} />
+          ) : !prospects ? (
+            <LoadingBlock label="Loading big board…" />
           ) : filtered.length === 0 ? (
             <div className="card p-10 text-center text-ink-soft italic">No prospects match.</div>
           ) : (
             <div className="border border-ink-edge bg-paper-surface">
-              {filtered.slice(0, 120).map((p, i) => {
+              {filtered.slice(0, visibleCount).map((p) => {
                 return (
                   <div
-                    key={p.player + i}
+                    key={p.player}
                     className={`flex items-center gap-2 border-b border-ink-edge last:border-b-0 transition ${
                       selected === p.player ? 'bg-mode-indie/12' : 'hover:bg-paper-hover'
                     }`}
@@ -163,7 +211,12 @@ export function Prospects() {
                             )}
                           </>
                         ) : (
-                          <span className="text-ink-soft italic">off board</span>
+                          <span
+                            className="text-ink-soft italic cursor-help"
+                            title="Projected outside the simulated window — no meaningful landing probability in the Monte Carlo runs."
+                          >
+                            off board
+                          </span>
                         )}
                       </span>
                     </button>
@@ -172,10 +225,24 @@ export function Prospects() {
               })}
             </div>
           )}
-          {filtered.length > 120 && (
-            <p className="mt-4 text-xs text-ink-soft text-center">
-              Showing first 120 of {filtered.length}. Refine search to see others.
-            </p>
+          {prospects && filtered.length > visibleCount && (
+            <div className="mt-4 flex items-center justify-center gap-3 flex-wrap">
+              <button
+                onClick={() => setVisibleCount(n => Math.min(filtered.length, n + PAGE_SIZE))}
+                className="btn-ghost"
+              >
+                Show {Math.min(PAGE_SIZE, filtered.length - visibleCount)} more
+              </button>
+              <button
+                onClick={() => setVisibleCount(filtered.length)}
+                className="caps-tight text-xs text-ink-muted hover:text-ink"
+              >
+                Show all {filtered.length}
+              </button>
+              <span className="caps-tight text-[0.65rem] text-ink-soft">
+                {visibleCount} of {filtered.length} shown
+              </span>
+            </div>
           )}
         </div>
 
@@ -255,7 +322,7 @@ function ProspectDetail({ p }: { p: Prospect }) {
                         className="w-7 h-7 flex items-center justify-center text-[0.65rem] font-bold shrink-0"
                         style={{
                           background: tc.primary,
-                          color: tc.secondary === '#000000' ? '#FFFFFF' : tc.secondary,
+                          color: secondaryInk(tc.secondary),
                         }}
                       >
                         {l.team}

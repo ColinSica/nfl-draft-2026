@@ -536,21 +536,17 @@
     "qb_situation": "competition_with_medical_risk",
     "qb_urgency": 0.25,
     "roster_needs": {
-      "IDL": 5.0,
+      "EDGE": 5.0,
       "WR": 4.0,
-      "LB": 3.0,
-      "EDGE": 2.0,
-      "IOL": 2.0,
-      "CB": 2.0,
-      "S": 2.0,
-      "QB": 1.2,
-      "TE": 1.2,
-      "OT": 1.2
+      "CB": 3.0,
+      "LB": 2.0,
+      "IDL": 2.0,
+      "RB": 2.0
     },
     "latent_needs": {
       "QB": 1.5
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Tua Tagovailoa QB",
@@ -1485,22 +1481,19 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "WR": 5.0,
+      "IOL": 5.0,
       "EDGE": 4.0,
-      "LB": 3.0,
+      "S": 3.0,
+      "LB": 2.0,
       "CB": 2.0,
-      "RB": 2.0,
-      "OT": 2.0,
-      "IDL": 2.0,
-      "S": 2.0,
-      "TE": 1.2,
-      "IOL": 1.2
+      "WR": 2.0,
+      "OT": 2.0
     },
     "latent_needs": {
       "EDGE": 2.0,
       "CB": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Bradley Chubb EDGE (3yr deal, replacement for Bosa)",
@@ -2039,22 +2032,18 @@
     "qb_situation": "unknown",
     "qb_urgency": 0.4,
     "roster_needs": {
-      "S": 5.0,
-      "WR": 4.0,
-      "EDGE": 3.0,
-      "IDL": 2.0,
+      "LB": 5.0,
+      "S": 4.0,
+      "IDL": 3.0,
       "CB": 2.0,
-      "TE": 2.0,
-      "OT": 2.0,
-      "IOL": 2.0,
-      "LB": 2.0,
-      "QB": 2.0,
-      "RB": 1.2
+      "WR": 2.0,
+      "RB": 2.0,
+      "IOL": 2.0
     },
     "latent_needs": {
       "QB": 1.5
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Jaelan Phillips EDGE (from MIA)",
@@ -2542,19 +2531,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "S": 5.0,
-      "IDL": 4.0,
-      "EDGE": 3.0,
-      "OT": 2.0,
-      "RB": 2.0,
-      "LB": 2.0,
-      "WR": 1.2,
-      "TE": 1.2,
-      "IOL": 1.2,
-      "CB": 1.2
+      "IDL": 5.0,
+      "S": 4.0,
+      "OT": 3.0,
+      "CB": 2.0,
+      "EDGE": 2.0,
+      "IOL": 2.0,
+      "WR": 2.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Garrett Bradbury C (FA)",
@@ -3085,18 +3071,16 @@
     "qb_urgency": 0.0,
     "roster_needs": {
       "CB": 5.0,
-      "OT": 4.0,
-      "WR": 3.0,
-      "IOL": 2.0,
-      "IDL": 2.0,
+      "IDL": 4.0,
+      "EDGE": 3.0,
       "S": 2.0,
-      "RB": 2.0,
       "LB": 2.0,
-      "TE": 1.2,
-      "EDGE": 1.2
+      "IOL": 2.0,
+      "RB": 2.0,
+      "TE": 2.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Boye Mafe EDGE",
@@ -4891,22 +4875,19 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IDL": 5.0,
+      "TE": 5.0,
       "LB": 4.0,
-      "TE": 3.0,
-      "RB": 2.0,
-      "WR": 2.0,
+      "IDL": 3.0,
       "IOL": 2.0,
-      "CB": 1.75,
-      "OT": 1.2,
-      "EDGE": 1.2,
-      "S": 1.2
+      "OT": 2.0,
+      "CB": 2.0,
+      "S": 2.0
     },
     "latent_needs": {
       "RB": 2.0,
       "TE": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Jaylen Waddle WR (trade from MIA - massive addition for Nix)",
@@ -5348,20 +5329,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "EDGE": 5.0,
-      "IDL": 4.0,
-      "OT": 3.0,
-      "IOL": 2.0,
+      "OT": 5.0,
+      "IOL": 4.0,
+      "EDGE": 3.0,
+      "IDL": 2.0,
       "LB": 2.0,
       "CB": 2.0,
-      "RB": 1.2,
-      "WR": 1.2,
-      "TE": 1.2,
-      "S": 1.2,
       "QB": 0.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Juice Scruggs C (trade from HOU)",
@@ -5868,18 +5845,14 @@
     "qb_urgency": 0.0,
     "roster_needs": {
       "CB": 5.0,
-      "OT": 4.0,
-      "EDGE": 3.0,
-      "WR": 2.0,
-      "IOL": 2.0,
-      "IDL": 2.0,
+      "IDL": 4.0,
+      "IOL": 3.0,
+      "OT": 2.0,
       "LB": 2.0,
-      "RB": 1.2,
-      "TE": 1.2,
-      "S": 1.2
+      "EDGE": 2.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Micah Parsons EDGE (trade from DAL - returned pick 20)",
@@ -6265,19 +6238,15 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IOL": 5.0,
+      "OT": 5.0,
+      "IOL": 4.0,
       "IDL": 3.0,
-      "OT": 2.0,
       "RB": 2.0,
       "TE": 2.0,
-      "LB": 2.0,
-      "S": 2.0,
-      "WR": 1.2,
-      "EDGE": 1.2,
-      "CB": 1.2
+      "LB": 2.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Danielle Hunter EDGE (extended - kept elite pass rusher)",
@@ -6801,20 +6770,15 @@
     "qb_situation": "jones_starter_recovering",
     "qb_urgency": 0.3,
     "roster_needs": {
-      "EDGE": 5.0,
-      "WR": 4.0,
-      "LB": 3.0,
+      "LB": 5.0,
+      "IDL": 4.0,
+      "EDGE": 3.0,
       "S": 2.0,
-      "QB": 2.0,
       "OT": 2.0,
-      "CB": 2.0,
-      "RB": 1.2,
-      "TE": 1.2,
-      "IOL": 1.2,
-      "IDL": 1.2
+      "WR": 2.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Cam Taylor-Britt CB (from CIN)",
@@ -7229,19 +7193,16 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "IDL": 5.0,
-      "EDGE": 4.0,
-      "LB": 3.0,
-      "CB": 2.0,
-      "RB": 2.0,
-      "WR": 2.0,
+      "CB": 5.0,
+      "S": 4.0,
+      "IDL": 3.0,
       "OT": 2.0,
       "IOL": 2.0,
-      "S": 2.0,
-      "TE": 1.2
+      "LB": 2.0,
+      "EDGE": 2.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Travis Hunter CB/WR (from 2025 draft, now entering Year 2)"
@@ -8211,19 +8172,16 @@
       "IOL": 5.0,
       "IDL": 4.0,
       "EDGE": 3.0,
-      "WR": 2.0,
-      "TE": 2.0,
       "LB": 2.0,
       "CB": 2.0,
       "S": 2.0,
-      "RB": 1.2,
-      "OT": 1.2
+      "WR": 2.0
     },
     "latent_needs": {
       "EDGE": 2.0,
       "OL": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Tyler Biadasz C (FA)",
@@ -10296,21 +10254,19 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "S": 5.0,
-      "IOL": 4.0,
-      "WR": 3.0,
-      "CB": 2.0,
-      "EDGE": 2.0,
+      "LB": 5.0,
+      "CB": 4.0,
+      "S": 3.0,
       "IDL": 2.0,
-      "LB": 2.0,
-      "RB": 1.2,
-      "TE": 1.2,
-      "OT": 1.2
+      "WR": 2.0,
+      "QB": 2.0,
+      "EDGE": 2.0,
+      "TE": 2.0
     },
     "latent_needs": {
       "S": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Kyler Murray QB (from ARI)",
@@ -10813,21 +10769,18 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 5.0,
-      "IDL": 4.0,
+      "IOL": 5.0,
+      "OT": 4.0,
       "TE": 3.0,
-      "IOL": 2.0,
-      "RB": 2.0,
       "EDGE": 2.0,
       "LB": 2.0,
-      "S": 2.0,
-      "WR": 1.2,
-      "CB": 1.2
+      "IDL": 2.0,
+      "CB": 2.0
     },
     "latent_needs": {
       "TE": 1.5
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Romeo Doubs WR (FA)",
@@ -12992,23 +12945,19 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "EDGE": 5.0,
-      "TE": 4.0,
-      "OT": 3.0,
-      "IOL": 2.0,
-      "IDL": 2.0,
-      "LB": 2.0,
+      "S": 5.0,
+      "EDGE": 4.0,
+      "TE": 3.0,
       "CB": 2.0,
-      "RB": 1.2,
-      "WR": 1.2,
-      "S": 1.2
+      "WR": 2.0,
+      "IOL": 2.0
     },
     "latent_needs": {
       "OT": 1.5,
       "WR": 1.5,
       "TE": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Riq Woolen CB (FA)",
@@ -13524,22 +13473,18 @@
     "qb_urgency": 0.65,
     "roster_needs": {
       "QB": 5.0,
-      "IOL": 4.0,
-      "OT": 3.0,
+      "S": 4.0,
+      "LB": 3.0,
+      "CB": 2.0,
       "WR": 2.0,
-      "IDL": 2.0,
-      "LB": 2.0,
-      "RB": 1.2,
-      "TE": 1.2,
-      "EDGE": 1.2,
-      "CB": 1.2,
-      "S": 1.2
+      "RB": 2.0,
+      "OT": 2.0
     },
     "latent_needs": {
       "QB": 2.0,
       "OT": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Rico Dowdle RB (FA)",
@@ -14075,20 +14020,17 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "RB": 5.0,
-      "EDGE": 4.0,
-      "CB": 3.0,
-      "IOL": 2.0,
-      "OT": 2.0,
-      "TE": 2.0,
-      "LB": 2.0,
+      "CB": 5.0,
+      "IOL": 4.0,
+      "RB": 3.0,
+      "EDGE": 2.0,
+      "IDL": 2.0,
       "S": 2.0,
-      "WR": 1.2,
-      "IDL": 1.2,
+      "LB": 2.0,
       "QB": 0.0
     },
     "latent_needs": {},
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Emanuel Wilson RB (depth)",
@@ -14585,22 +14527,20 @@
     "qb_situation": "locked",
     "qb_urgency": 0.0,
     "roster_needs": {
-      "OT": 5.0,
-      "EDGE": 4.0,
+      "EDGE": 5.0,
+      "IDL": 4.0,
       "WR": 3.0,
       "IOL": 2.0,
-      "IDL": 2.0,
-      "CB": 2.0,
-      "RB": 2.0,
+      "OT": 2.0,
       "LB": 2.0,
-      "S": 2.0,
-      "TE": 1.2
+      "CB": 2.0,
+      "TE": 2.0
     },
     "latent_needs": {
       "OT": 4.0,
       "EDGE": 2.0
     },
-    "needs_source": "nfl_com_top5_verified_2026-04-20",
+    "needs_source": "cbs_sports_2026_cheat_sheet_2026-04-23",
     "fa_moves": {
       "arrivals": [
         "Osa Odighizuwa IDL (trade)",

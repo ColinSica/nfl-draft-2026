@@ -29,7 +29,8 @@ POS_MAP = {
     "CB": "CB", "S": "S", "DB": "CB", "FS": "S", "SS": "S",
 }
 
-# CBS picks 1-16 (parsed from article content 2026-04-23)
+# CBS Sports 2026 cheat-sheet needs, all 32 teams + 6 no-R1 teams
+# Parsed from user-supplied full article content 2026-04-23
 CBS_NEEDS: dict[str, list[str]] = {
     "LV":  ["QB", "WR", "CB", "S", "DL", "IOL", "RB", "OT"],
     "NYJ": ["QB", "CB", "S", "LB", "IOL", "WR", "DL", "EDGE"],
@@ -45,6 +46,25 @@ CBS_NEEDS: dict[str, list[str]] = {
     "LAR": ["OT", "WR", "DL", "LB", "CB", "S"],
     "BAL": ["DL", "IOL", "WR", "LB", "CB", "EDGE", "RB"],
     "TB":  ["IOL", "EDGE", "LB", "DL", "TE", "WR", "CB"],
+    "DET": ["OT", "IOL", "EDGE", "DL", "LB", "CB"],
+    "MIN": ["LB", "CB", "S", "DL", "WR", "QB", "EDGE", "TE"],
+    "CAR": ["LB", "S", "DL", "CB", "WR", "RB", "IOL"],
+    "PIT": ["QB", "S", "LB", "CB", "WR", "RB", "OT"],
+    "LAC": ["IOL", "DL", "EDGE", "LB", "CB", "S", "WR"],
+    "PHI": ["S", "EDGE", "TE", "CB", "WR", "IOL"],
+    "CHI": ["DL", "S", "OT", "CB", "EDGE", "IOL", "WR"],
+    "BUF": ["IOL", "EDGE", "S", "LB", "CB", "WR", "OT"],
+    "SF":  ["EDGE", "DL", "WR", "IOL", "OT", "LB", "CB", "TE"],
+    "HOU": ["OT", "IOL", "DL", "RB", "TE", "LB"],
+    "NE":  ["IOL", "OT", "TE", "EDGE", "LB", "DL", "CB"],
+    "SEA": ["CB", "IOL", "RB", "EDGE", "DL", "S", "LB"],
+    # No-R1 teams (still have needs published by CBS)
+    "ATL": ["EDGE", "WR", "CB", "LB", "DL", "RB"],
+    "CIN": ["CB", "DL", "EDGE", "S", "LB", "IOL", "RB", "TE"],
+    "DEN": ["TE", "LB", "DL", "IOL", "OT", "CB", "S"],
+    "GB":  ["CB", "DL", "IOL", "OT", "LB", "EDGE"],
+    "IND": ["LB", "DL", "EDGE", "S", "OT", "WR"],
+    "JAX": ["CB", "S", "DL", "OT", "IOL", "LB", "EDGE"],
 }
 
 WEIGHTS = [5.0, 4.0, 3.0]  # positions 1-3
@@ -87,9 +107,8 @@ def main() -> None:
         changed.append(team)
 
     TEAM_JSON.write_text(json.dumps(data, indent=2), encoding="utf-8")
-    print(f"Updated roster_needs for {len(changed)} teams: {', '.join(changed)}")
-    print("Picks 17-32: CBS article content not fetchable via WebFetch; "
-          "those teams keep their prior needs_source unchanged.")
+    print(f"Updated roster_needs for {len(changed)}/32 teams")
+    print(f"Teams updated: {', '.join(changed)}")
 
 
 if __name__ == "__main__":
