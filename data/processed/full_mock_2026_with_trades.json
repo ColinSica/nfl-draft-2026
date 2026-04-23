@@ -107,7 +107,7 @@
       "college": "Ohio State",
       "rank": 3,
       "tier": "R1",
-      "reasoning": "[TRADE] KC traded up for elite pass rusher (Pelissero, Barnwell)",
+      "reasoning": "[TRADE] KC moves up for elite pass rusher",
       "score": 2.875,
       "factors": {
         "grade": 0.704,
@@ -148,7 +148,37 @@
         "id": "KC_up_ARI_back",
         "from": "ARI",
         "to": "KC",
-        "reason": "KC traded up for elite pass rusher (Pelissero, Barnwell)"
+        "reason": "KC moves up for elite pass rusher",
+        "headline": "Chiefs trade UP for Arvell Reese",
+        "description": null,
+        "sources": [
+          "Pelissero (NFL Network)",
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "KC": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#9)",
+              "2026 1st (#29)",
+              "2027 3rd"
+            ],
+            "gets": [
+              "2026 1st (#3)"
+            ]
+          },
+          "ARI": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#3)"
+            ],
+            "gets": [
+              "2026 1st (#9)",
+              "2026 1st (#29)",
+              "2027 3rd"
+            ]
+          }
+        }
       }
     },
     {
@@ -436,7 +466,37 @@
         "id": "KC_up_ARI_back",
         "from": "KC",
         "to": "ARI",
-        "reason": "ARI traded back, takes BPA"
+        "reason": "ARI selects BPA after trade-back",
+        "headline": "Chiefs trade UP for Arvell Reese",
+        "description": null,
+        "sources": [
+          "Pelissero (NFL Network)",
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "KC": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#9)",
+              "2026 1st (#29)",
+              "2027 3rd"
+            ],
+            "gets": [
+              "2026 1st (#3)"
+            ]
+          },
+          "ARI": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#3)"
+            ],
+            "gets": [
+              "2026 1st (#9)",
+              "2026 1st (#29)",
+              "2027 3rd"
+            ]
+          }
+        }
       }
     },
     {
@@ -771,7 +831,34 @@
         "id": "CHI_up_NYJ_back",
         "from": "NYJ",
         "to": "CHI",
-        "reason": "CHI traded up for DL (Barnwell: pair #25 + Buffalo #60 to reach #16)"
+        "reason": "CHI pairs #25 + Buffalo #60 to jump Lions at #17",
+        "headline": "Bears trade UP for DL, jump Lions",
+        "description": null,
+        "sources": [
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "CHI": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#25)",
+              "2026 2nd (#60)"
+            ],
+            "gets": [
+              "2026 1st (#16)"
+            ]
+          },
+          "NYJ": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#16)"
+            ],
+            "gets": [
+              "2026 1st (#25)",
+              "2026 2nd (#60)"
+            ]
+          }
+        }
       }
     },
     {
@@ -824,7 +911,35 @@
         "id": "PHI_up_DET_back",
         "from": "DET",
         "to": "PHI",
-        "reason": "PHI traded up for OT/S (Barnwell, Jeremiah)"
+        "reason": "PHI moves up for top safety",
+        "headline": "Eagles trade UP for Thieneman (S)",
+        "description": null,
+        "sources": [
+          "Barnwell (ESPN)",
+          "Jeremiah (NFL.com)"
+        ],
+        "package": {
+          "PHI": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#23)",
+              "2026 2nd"
+            ],
+            "gets": [
+              "2026 1st (#17)"
+            ]
+          },
+          "DET": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#17)"
+            ],
+            "gets": [
+              "2026 1st (#23)",
+              "2026 2nd"
+            ]
+          }
+        }
       }
     },
     {
@@ -971,7 +1086,34 @@
         "id": "DAL_back_IND_up",
         "from": "DAL",
         "to": "IND",
-        "reason": "IND jumped back into R1 (DAL down per Barnwell: Cowboys need extra day-2 capital)"
+        "reason": "IND jumps into R1; DAL needs day-2 capital",
+        "headline": "Colts trade UP (back into R1)",
+        "description": null,
+        "sources": [
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "IND": {
+            "role": "Trades up (re-enters R1)",
+            "gives": [
+              "2026 2nd",
+              "2026 3rd"
+            ],
+            "gets": [
+              "2026 1st (#20)"
+            ]
+          },
+          "DAL": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#20)"
+            ],
+            "gets": [
+              "2026 2nd",
+              "2026 3rd"
+            ]
+          }
+        }
       }
     },
     {
@@ -1118,7 +1260,35 @@
         "id": "PHI_up_DET_back",
         "from": "PHI",
         "to": "DET",
-        "reason": "DET traded back to recoup capital (Barnwell)"
+        "reason": "DET trades back to recoup day-2 capital",
+        "headline": "Eagles trade UP for Thieneman (S)",
+        "description": null,
+        "sources": [
+          "Barnwell (ESPN)",
+          "Jeremiah (NFL.com)"
+        ],
+        "package": {
+          "PHI": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#23)",
+              "2026 2nd"
+            ],
+            "gets": [
+              "2026 1st (#17)"
+            ]
+          },
+          "DET": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#17)"
+            ],
+            "gets": [
+              "2026 1st (#23)",
+              "2026 2nd"
+            ]
+          }
+        }
       }
     },
     {
@@ -1218,7 +1388,34 @@
         "id": "CHI_up_NYJ_back",
         "from": "CHI",
         "to": "NYJ",
-        "reason": "NYJ traded back, adds to their R1 capital stockpile"
+        "reason": "NYJ adds to R1 stockpile (5 R1 picks in 2 years)",
+        "headline": "Bears trade UP for DL, jump Lions",
+        "description": null,
+        "sources": [
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "CHI": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#25)",
+              "2026 2nd (#60)"
+            ],
+            "gets": [
+              "2026 1st (#16)"
+            ]
+          },
+          "NYJ": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#16)"
+            ],
+            "gets": [
+              "2026 1st (#25)",
+              "2026 2nd (#60)"
+            ]
+          }
+        }
       }
     },
     {
@@ -1412,7 +1609,37 @@
         "id": "KC_up_ARI_back",
         "from": "KC",
         "to": "ARI",
-        "reason": "Compensation pick KC -> ARI"
+        "reason": "Compensation pick received from KC",
+        "headline": "Chiefs trade UP for Arvell Reese",
+        "description": null,
+        "sources": [
+          "Pelissero (NFL Network)",
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "KC": {
+            "role": "Trades up",
+            "gives": [
+              "2026 1st (#9)",
+              "2026 1st (#29)",
+              "2027 3rd"
+            ],
+            "gets": [
+              "2026 1st (#3)"
+            ]
+          },
+          "ARI": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#3)"
+            ],
+            "gets": [
+              "2026 1st (#9)",
+              "2026 1st (#29)",
+              "2027 3rd"
+            ]
+          }
+        }
       }
     },
     {
@@ -1512,7 +1739,34 @@
         "id": "NE_back_GB_up",
         "from": "NE",
         "to": "GB",
-        "reason": "GB re-entered R1 (NE down per Pelissero: NE has received calls)"
+        "reason": "GB re-enters R1 for 5th-year-option eligibility",
+        "headline": "Packers trade UP (back into R1)",
+        "description": null,
+        "sources": [
+          "Pelissero (NFL Network)"
+        ],
+        "package": {
+          "GB": {
+            "role": "Trades up (re-enters R1)",
+            "gives": [
+              "2026 2nd",
+              "2027 3rd"
+            ],
+            "gets": [
+              "2026 1st (#31)"
+            ]
+          },
+          "NE": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#31)"
+            ],
+            "gets": [
+              "2026 2nd",
+              "2027 3rd"
+            ]
+          }
+        }
       }
     },
     {
@@ -1565,7 +1819,35 @@
         "id": "SEA_back_out_of_R1",
         "from": "SEA",
         "to": "CIN",
-        "reason": "CIN re-entered R1 (SEA down per Pelissero, Barnwell: Schneider pattern)"
+        "reason": "CIN re-enters R1; Schneider's historical trade-down pattern",
+        "headline": "Bengals trade UP (back into R1)",
+        "description": null,
+        "sources": [
+          "Pelissero (NFL Network)",
+          "Barnwell (ESPN)"
+        ],
+        "package": {
+          "CIN": {
+            "role": "Trades up (re-enters R1)",
+            "gives": [
+              "2026 2nd",
+              "2026 3rd"
+            ],
+            "gets": [
+              "2026 1st (#32)"
+            ]
+          },
+          "SEA": {
+            "role": "Trades back",
+            "gives": [
+              "2026 1st (#32)"
+            ],
+            "gets": [
+              "2026 2nd",
+              "2026 3rd"
+            ]
+          }
+        }
       }
     },
     {
@@ -12147,27 +12429,27 @@
   "trades_applied": [
     {
       "id": "KC_up_ARI_back",
-      "description": "KC trades #9 + KC's #29 + 2027 3rd to ARI for #3. KC takes Arvell Reese."
+      "description": "Chiefs trade UP for Arvell Reese"
     },
     {
       "id": "PHI_up_DET_back",
-      "description": "PHI trades #23 + PHI's R2 pick to DET for #17. PHI takes OT/S."
+      "description": "Eagles trade UP for Thieneman (S)"
     },
     {
       "id": "CHI_up_NYJ_back",
-      "description": "CHI trades #25 + CHI's #60 to NYJ for #16. CHI takes EDGE/DL."
+      "description": "Bears trade UP for DL, jump Lions"
     },
     {
       "id": "DAL_back_IND_up",
-      "description": "DAL trades #20 to IND (no-R1 team) for IND's R2 + R3. IND re-enters R1."
+      "description": "Colts trade UP (back into R1)"
     },
     {
       "id": "NE_back_GB_up",
-      "description": "NE trades #31 to GB (no-R1 team) for GB's R2 + future pick. GB re-enters R1 for a 5th-year-option CB."
+      "description": "Packers trade UP (back into R1)"
     },
     {
       "id": "SEA_back_out_of_R1",
-      "description": "SEA trades #32 to CIN (no-R1 team) for R2/R3 capital. SEA drops out of R1."
+      "description": "Bengals trade UP (back into R1)"
     }
   ],
   "variant": "with_trades"

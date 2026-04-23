@@ -24,6 +24,23 @@ import { ErrorBlock } from '../components/LoadState';
 import { teamColor } from '../lib/teamColors';
 import { contrastInk, secondaryInk } from '../lib/color';
 
+type TradePackageSide = {
+  role: string;
+  gives: string[];
+  gets: string[];
+};
+
+type TradeMeta = {
+  id: string;
+  from: string;  // original team before trade
+  to: string;    // new team after trade
+  reason: string;
+  headline?: string;
+  description?: string;
+  sources?: string[];
+  package?: Record<string, TradePackageSide>;
+};
+
 type FullPick = {
   pick: number;
   round: number;
@@ -45,6 +62,7 @@ type FullPick = {
     late: number;
   };
   alternates: { player: string; position: string; rank: number; score: number }[];
+  _trade?: TradeMeta;
 };
 
 type FullMockResp = {
@@ -139,6 +157,17 @@ const PickRow = memo(function PickRow({
           rk {pick.rank}
         </span>
 
+        {/* Trade badge */}
+        {pick._trade && (
+          <span
+            className="caps-tight text-[0.56rem] font-bold px-1.5 py-[1px] leading-tight shrink-0 rounded-sm"
+            style={{ background: '#1F5B3A', color: '#FAF6E6' }}
+            title={pick._trade.headline ?? 'Trade'}
+          >
+            TRADE
+          </span>
+        )}
+
         {/* Value / Reach flag */}
         <span className="shrink-0 w-10 text-right">
           {value && (
@@ -160,6 +189,85 @@ const PickRow = memo(function PickRow({
     </button>
   );
 });
+
+// ─── Trade package panel ───────────────────────────────────────────
+function TradePackagePanel({ trade }: { trade: TradeMeta }) {
+  const pkg = trade.package ?? {};
+  const teams = Object.keys(pkg);
+  return (
+    <div className="mb-3 border border-accent-brass/60 bg-accent-brass/10 p-3">
+      <div className="flex items-center gap-2 flex-wrap mb-2">
+        <span className="caps-tight text-[0.56rem] font-bold px-1.5 py-[1px]"
+              style={{ background: '#1F5B3A', color: '#FAF6E6' }}>
+          TRADE
+        </span>
+        <span className="display-broadcast text-sm text-ink">
+          {trade.headline ?? trade.id}
+        </span>
+        {trade.sources && trade.sources.length > 0 && (
+          <span className="font-mono text-[0.6rem] text-ink-muted ml-auto">
+            via {trade.sources.join(' · ')}
+          </span>
+        )}
+      </div>
+      {trade.description && (
+        <p className="body-serif text-[0.78rem] text-ink-soft italic mb-2">
+          {trade.description}
+        </p>
+      )}
+      {teams.length > 0 && (
+        <div className={`grid gap-3 ${teams.length >= 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'}`}>
+          {teams.map(t => {
+            const side = pkg[t];
+            const tc = teamColor(t);
+            return (
+              <div key={t} className="border border-ink-edge bg-paper p-2">
+                <div className="flex items-center gap-2 mb-1">
+                  <span
+                    className="display-broadcast text-[0.62rem] px-1.5 py-0.5"
+                    style={{ background: tc.primary, color: contrastInk(tc.primary) }}
+                  >
+                    {t}
+                  </span>
+                  <span className="caps-tight text-[0.6rem] text-ink-muted">{side.role}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 text-[0.7rem]">
+                  <div>
+                    <div className="caps-tight text-[0.55rem] text-ink-muted mb-0.5">Gives</div>
+                    <ul className="font-mono text-ink space-y-0.5">
+                      {side.gives.map((g, i) => (
+                        <li key={i} className="flex gap-1">
+                          <span className="text-live">−</span>
+                          <span>{g}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="caps-tight text-[0.55rem] text-ink-muted mb-0.5">Gets</div>
+                    <ul className="font-mono text-ink space-y-0.5">
+                      {side.gets.map((g, i) => (
+                        <li key={i} className="flex gap-1">
+                          <span className="text-accent-brass">+</span>
+                          <span>{g}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+      {trade.reason && (
+        <p className="mt-2 text-[0.7rem] text-ink-muted italic">
+          Why this slot: {trade.reason}
+        </p>
+      )}
+    </div>
+  );
+}
 
 // ─── Detail panel ───────────────────────────────────────────────────
 function PickDetailPanel({ pick, onClose }: { pick: FullPick; onClose: () => void }) {
@@ -209,6 +317,7 @@ function PickDetailPanel({ pick, onClose }: { pick: FullPick; onClose: () => voi
         </button>
       </header>
       <div className="px-4 py-3 space-y-3">
+        {pick._trade && <TradePackagePanel trade={pick._trade} />}
         <p className="body-serif text-sm text-ink leading-relaxed">{pick.reasoning}</p>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-4">
           <div>
@@ -282,12 +391,18 @@ function Section({
       </div>
       <div>
         {picks.map(p => (
-          <PickRow
-            key={p.pick}
-            pick={p}
-            selected={selectedPick === p.pick}
-            onClick={() => onSelect(p.pick)}
-          />
+          <div key={p.pick}>
+            <PickRow
+              pick={p}
+              selected={selectedPick === p.pick}
+              onClick={() => onSelect(p.pick)}
+            />
+            {selectedPick === p.pick && (
+              <div className="border-b border-ink-edge px-3 py-3 bg-paper-raised">
+                <PickDetailPanel pick={p} onClose={() => onSelect(p.pick)} />
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </section>
@@ -338,10 +453,7 @@ export function FullMock() {
     ).sort((a, b) => a.pick - b.pick);
   }, [allPicks, posFilter, teamFilter, roundFilter]);
 
-  const selected = useMemo(
-    () => allPicks.find(p => p.pick === selectedPick) ?? null,
-    [allPicks, selectedPick],
-  );
+  // Selected pick is rendered inline by Section; no top-level detail ref needed.
 
   // Build the section list based on sort mode.
   type GroupedSection = {
@@ -627,10 +739,8 @@ export function FullMock() {
             </div>
           )}
 
-          {/* Detail */}
-          {selected && (
-            <PickDetailPanel pick={selected} onClose={() => setSelectedPick(null)} />
-          )}
+          {/* Detail is now rendered inline in each Section right after
+              the selected pick. Bottom methodology footer follows. */}
 
           <section className="border-t-2 border-ink pt-4">
             <Footnote>

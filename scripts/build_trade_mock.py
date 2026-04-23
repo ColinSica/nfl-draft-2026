@@ -52,60 +52,126 @@ BOARD_CSV = ROOT / "data/processed/predictions_2026_independent.csv"
 TRADE_DEFS: list[dict] = [
     {
         "id": "KC_up_ARI_back",
-        "description": "KC trades #9 + KC's #29 + 2027 3rd to ARI for #3. "
-                       "KC takes Arvell Reese.",
-        "participants": ["KC", "ARI"],
+        "headline": "Chiefs trade UP for Arvell Reese",
+        "sources": ["Pelissero (NFL Network)", "Barnwell (ESPN)"],
+        "package": {
+            "KC": {
+                "role": "Trades up",
+                "gives": ["2026 1st (#9)", "2026 1st (#29)", "2027 3rd"],
+                "gets":  ["2026 1st (#3)"],
+            },
+            "ARI": {
+                "role": "Trades back",
+                "gives": ["2026 1st (#3)"],
+                "gets":  ["2026 1st (#9)", "2026 1st (#29)", "2027 3rd"],
+            },
+        },
         "slot_reassignments": {
-            3: {"team": "KC", "player": "Arvell Reese", "reason": "KC traded up for elite pass rusher (Pelissero, Barnwell)"},
-            9: {"team": "ARI", "player": None, "reason": "ARI traded back, takes BPA"},
-            29: {"team": "ARI", "player": None, "reason": "Compensation pick KC -> ARI"},
+            3:  {"team": "KC",  "player": "Arvell Reese", "reason": "KC moves up for elite pass rusher"},
+            9:  {"team": "ARI", "player": None, "reason": "ARI selects BPA after trade-back"},
+            29: {"team": "ARI", "player": None, "reason": "Compensation pick received from KC"},
         },
     },
     {
         "id": "PHI_up_DET_back",
-        "description": "PHI trades #23 + PHI's R2 pick to DET for #17. "
-                       "PHI takes OT/S.",
-        "participants": ["PHI", "DET"],
+        "headline": "Eagles trade UP for Thieneman (S)",
+        "sources": ["Barnwell (ESPN)", "Jeremiah (NFL.com)"],
+        "package": {
+            "PHI": {
+                "role": "Trades up",
+                "gives": ["2026 1st (#23)", "2026 2nd"],
+                "gets":  ["2026 1st (#17)"],
+            },
+            "DET": {
+                "role": "Trades back",
+                "gives": ["2026 1st (#17)"],
+                "gets":  ["2026 1st (#23)", "2026 2nd"],
+            },
+        },
         "slot_reassignments": {
-            17: {"team": "PHI", "player": None, "reason": "PHI traded up for OT/S (Barnwell, Jeremiah)"},
-            23: {"team": "DET", "player": None, "reason": "DET traded back to recoup capital (Barnwell)"},
+            17: {"team": "PHI", "player": None, "reason": "PHI moves up for top safety"},
+            23: {"team": "DET", "player": None, "reason": "DET trades back to recoup day-2 capital"},
         },
     },
     {
         "id": "CHI_up_NYJ_back",
-        "description": "CHI trades #25 + CHI's #60 to NYJ for #16. "
-                       "CHI takes EDGE/DL.",
-        "participants": ["CHI", "NYJ"],
+        "headline": "Bears trade UP for DL, jump Lions",
+        "sources": ["Barnwell (ESPN)"],
+        "package": {
+            "CHI": {
+                "role": "Trades up",
+                "gives": ["2026 1st (#25)", "2026 2nd (#60)"],
+                "gets":  ["2026 1st (#16)"],
+            },
+            "NYJ": {
+                "role": "Trades back",
+                "gives": ["2026 1st (#16)"],
+                "gets":  ["2026 1st (#25)", "2026 2nd (#60)"],
+            },
+        },
         "slot_reassignments": {
-            16: {"team": "CHI", "player": None, "reason": "CHI traded up for DL (Barnwell: pair #25 + Buffalo #60 to reach #16)"},
-            25: {"team": "NYJ", "player": None, "reason": "NYJ traded back, adds to their R1 capital stockpile"},
+            16: {"team": "CHI", "player": None, "reason": "CHI pairs #25 + Buffalo #60 to jump Lions at #17"},
+            25: {"team": "NYJ", "player": None, "reason": "NYJ adds to R1 stockpile (5 R1 picks in 2 years)"},
         },
     },
     {
         "id": "DAL_back_IND_up",
-        "description": "DAL trades #20 to IND (no-R1 team) for IND's R2 + R3. "
-                       "IND re-enters R1.",
-        "participants": ["DAL", "IND"],
+        "headline": "Colts trade UP (back into R1)",
+        "sources": ["Barnwell (ESPN)"],
+        "package": {
+            "IND": {
+                "role": "Trades up (re-enters R1)",
+                "gives": ["2026 2nd", "2026 3rd"],
+                "gets":  ["2026 1st (#20)"],
+            },
+            "DAL": {
+                "role": "Trades back",
+                "gives": ["2026 1st (#20)"],
+                "gets":  ["2026 2nd", "2026 3rd"],
+            },
+        },
         "slot_reassignments": {
-            20: {"team": "IND", "player": None, "reason": "IND jumped back into R1 (DAL down per Barnwell: Cowboys need extra day-2 capital)"},
+            20: {"team": "IND", "player": None, "reason": "IND jumps into R1; DAL needs day-2 capital"},
         },
     },
     {
         "id": "NE_back_GB_up",
-        "description": "NE trades #31 to GB (no-R1 team) for GB's R2 + future pick. "
-                       "GB re-enters R1 for a 5th-year-option CB.",
-        "participants": ["NE", "GB"],
+        "headline": "Packers trade UP (back into R1)",
+        "sources": ["Pelissero (NFL Network)"],
+        "package": {
+            "GB": {
+                "role": "Trades up (re-enters R1)",
+                "gives": ["2026 2nd", "2027 3rd"],
+                "gets":  ["2026 1st (#31)"],
+            },
+            "NE": {
+                "role": "Trades back",
+                "gives": ["2026 1st (#31)"],
+                "gets":  ["2026 2nd", "2027 3rd"],
+            },
+        },
         "slot_reassignments": {
-            31: {"team": "GB", "player": None, "reason": "GB re-entered R1 (NE down per Pelissero: NE has received calls)"},
+            31: {"team": "GB", "player": None, "reason": "GB re-enters R1 for 5th-year-option eligibility"},
         },
     },
     {
         "id": "SEA_back_out_of_R1",
-        "description": "SEA trades #32 to CIN (no-R1 team) for R2/R3 capital. "
-                       "SEA drops out of R1.",
-        "participants": ["SEA", "CIN"],
+        "headline": "Bengals trade UP (back into R1)",
+        "sources": ["Pelissero (NFL Network)", "Barnwell (ESPN)"],
+        "package": {
+            "CIN": {
+                "role": "Trades up (re-enters R1)",
+                "gives": ["2026 2nd", "2026 3rd"],
+                "gets":  ["2026 1st (#32)"],
+            },
+            "SEA": {
+                "role": "Trades back",
+                "gives": ["2026 1st (#32)"],
+                "gets":  ["2026 2nd", "2026 3rd"],
+            },
+        },
         "slot_reassignments": {
-            32: {"team": "CIN", "player": None, "reason": "CIN re-entered R1 (SEA down per Pelissero, Barnwell: Schneider pattern)"},
+            32: {"team": "CIN", "player": None, "reason": "CIN re-enters R1; Schneider's historical trade-down pattern"},
         },
     },
 ]
@@ -165,12 +231,17 @@ def main() -> None:
             old_team = target.get("team")
             new_team = reassign["team"]
             target["team"] = new_team
-            # Flag trade metadata
+            # Flag trade metadata — include enough so the frontend can
+            # render a clear "TRADE" badge + package detail.
             target["_trade"] = {
                 "id": td["id"],
                 "from": old_team,
                 "to": new_team,
                 "reason": reassign["reason"],
+                "headline": td.get("headline", td["id"]),
+                "description": td.get("description"),
+                "sources": td.get("sources", []),
+                "package": td.get("package", {}),
             }
             # Player override
             if reassign.get("player"):
@@ -227,7 +298,7 @@ def main() -> None:
     mock_out = dict(mock)
     mock_out["picks"] = picks
     mock_out["trades_applied"] = [
-        {"id": td["id"], "description": td["description"]}
+        {"id": td["id"], "description": td.get("headline", td["id"])}
         for td in TRADE_DEFS
     ]
     mock_out["variant"] = "with_trades"
@@ -256,7 +327,7 @@ def main() -> None:
     print(f"Wrote {OUT_JSON.name} + {OUT_CSV.name}")
     print(f"Trades applied:")
     for td in TRADE_DEFS:
-        print(f"  - {td['description']}")
+        print(f"  - {td.get('headline', td['id'])}")
     print(f"Slot changes: {len(applied_notes)}")
     for note in applied_notes:
         print(f"  #{note['slot']:>2}: {note['from']} -> {note['to']} "
