@@ -308,7 +308,7 @@ export function FullMock() {
   const [posFilter, setPosFilter] = useState('All');
   const [teamFilter, setTeamFilter] = useState('');
   const [roundFilter, setRoundFilter] = useState<number | 'All'>('All');
-  const [activeRound, setActiveRound] = useState<number>(1);
+  const [activeRound, setActiveRound] = useState<number | 'all'>(1);
   const [selectedPick, setSelectedPick] = useState<number | null>(null);
 
   useEffect(() => {
@@ -351,8 +351,10 @@ export function FullMock() {
 
   const sections: GroupedSection[] = useMemo(() => {
     if (sortMode === 'pick') {
-      // Chronological: active round only.
-      const picks = filtered.filter(p => p.round === activeRound);
+      // Chronological: active round, or every pick when activeRound === 'all'.
+      const picks = activeRound === 'all'
+        ? filtered
+        : filtered.filter(p => p.round === activeRound);
       const posCount: Record<string, number> = {};
       picks.forEach(p => { posCount[p.position] = (posCount[p.position] ?? 0) + 1; });
       const posSummary = Object.entries(posCount)
@@ -361,8 +363,8 @@ export function FullMock() {
         .map(([p, c]) => `${c}${p}`)
         .join(' · ');
       return [{
-        key: `r${activeRound}`,
-        title: ROUND_LABELS[activeRound],
+        key: activeRound === 'all' ? 'all' : `r${activeRound}`,
+        title: activeRound === 'all' ? 'All 257 picks' : ROUND_LABELS[activeRound],
         subtitle: posSummary,
         picks,
       }];
@@ -498,6 +500,17 @@ export function FullMock() {
                       {r}
                     </button>
                   ))}
+                  <button
+                    onClick={() => setActiveRound('all')}
+                    className={`h-7 px-2 caps-tight text-[0.62rem] font-mono border transition ml-1 ${
+                      activeRound === 'all'
+                        ? 'bg-ink text-paper border-ink'
+                        : 'bg-paper text-ink-muted border-ink-edge hover:border-ink hover:text-ink'
+                    }`}
+                    title="Show every pick, all seven rounds"
+                  >
+                    All 257
+                  </button>
                 </div>
               ) : (
                 <div className="flex items-center gap-1.5">
