@@ -17,7 +17,7 @@ Algorithm (greedy, per-pick, with lookahead-lite):
   - Soft diminishing returns: each additional pick at the same position
     halves the need_bonus.
 
-Output: data/processed/full_mock_2026.json — list of {pick, round, team,
+Output: data/processed/full_mock_2026.json  -  list of {pick, round, team,
         player, position, college, reasoning, alternates}.
 """
 from __future__ import annotations
@@ -197,7 +197,7 @@ def build_mock():
                 qb_need = float(state["needs"].get("QB", 0.0))
                 prior_qb = state["drafted"].get("QB", 0)
                 if qb_need < 1.0 and prior_qb == 0:
-                    total -= 0.8  # not a massive cut — can still take a developmental QB
+                    total -= 0.8  # not a massive cut  -  can still take a developmental QB
 
             breakdown = {
                 "grade": round(grade, 3),
@@ -227,19 +227,108 @@ def build_mock():
         # Update team state
         state["drafted"][top_prow["need_pos"]] += 1
 
-        # Reasoning — 1-line, data-cited
-        reasons = []
-        if top_breakdown["need"] > 0.05:
-            reasons.append(f"{top_prow['need_pos']} tier-{state['needs'].get(top_prow['need_pos'], 0):.1f} need")
+        # Reasoning  -  multi-sentence, data-cited prose. Never say "near-lock"
+        # for anything beyond pick 1 (Mendoza)  -  everything else is uncertain.
+        need_pos = top_prow["need_pos"]
+        need_tier = state["needs"].get(need_pos, 0.0)
+        scheme_type = state.get("scheme_type") or "scheme"
+        tier_tag = top_prow.get("tier") or ""
+        prior_at_pos = state["drafted"].get(need_pos, 0) - 1  # -1 since we just drafted this one
+        # Alternates grade gap  -  how close was pick #2 to the selection?
+        gap_to_alt = 0.0
+        if alternates:
+            gap_to_alt = float(top_score) - float(alternates[0]["score"])
+
+        sentences: list[str] = []
+
+        # Sentence 1: slot-level strategic framing
+        if pick_num == 1:
+            sentences.append(
+                f"{team} opens the draft with {top_prow['player']}  -  the only "
+                f"pick in the 2026 class with near-unanimous consensus and market "
+                f"pricing. Everything after this gets murkier."
+            )
+        elif rnd == 1 and need_tier >= 4:
+            sentences.append(
+                f"{team} has a critical {need_pos} need  -  free agency didn't close "
+                f"it, and {top_prow['player']} is the cleanest on-board solution "
+                f"at {pick_num}."
+            )
+        elif rnd == 1 and need_tier >= 2.5:
+            sentences.append(
+                f"With a real {need_pos} hole on the roster, {team} grabs "
+                f"{top_prow['player']}  -  a fit that doesn't force the board."
+            )
+        elif rnd == 1:
+            sentences.append(
+                f"{team} takes {top_prow['player']} on value  -  no premium "
+                f"{need_pos} need, but the grade gap at this slot made the "
+                f"call straightforward."
+            )
+        elif rnd == 2:
+            sentences.append(
+                f"Day 2 opens with {top_prow['player']} off the board to {team}. "
+                f"The model grades him around pick {top_prow['rank']}, so the value "
+                f"is {'clean' if top_prow['rank'] <= pick_num else 'on-slot'}."
+            )
+        elif rnd <= 4:
+            sentences.append(
+                f"{team} uses {pick_num} on {top_prow['player']}, a "
+                f"round-{rnd}-graded player ({top_prow['rank']}th overall) at "
+                f"a position of {'real' if need_tier >= 2.5 else 'secondary'} need."
+            )
+        else:
+            sentences.append(
+                f"{team} continues its Day 3 build at {pick_num} with "
+                f"{top_prow['player']}  -  a developmental/depth add at "
+                f"{need_pos}."
+            )
+
+        # Sentence 2: why the player fits (scheme / need / visit / GM affinity)
+        fit_reasons = []
         if top_breakdown["scheme"] > 0:
-            reasons.append(f"fits {state.get('scheme_type') or 'scheme'} premium")
+            fit_reasons.append(f"fits the {scheme_type} scheme profile the staff has built around")
         if top_breakdown["visit"] > 0:
-            reasons.append("confirmed pre-draft visit")
+            fit_reasons.append(f"had a documented pre-draft visit with {team}")
         if top_breakdown["aff"] > 0.02:
-            reasons.append("GM-history affinity")
-        if top_prow["rank"] <= 32 and rnd == 1:
-            reasons.append(f"consensus top-32 ({top_prow['tier']})")
-        reasoning = "; ".join(reasons) or f"best available ({top_prow['tier'] or 'BPA'})"
+            fit_reasons.append(f"aligns with the GM's documented positional preferences")
+        if prior_at_pos >= 1:
+            fit_reasons.append(f"extends a multi-pick investment in {need_pos}")
+        if fit_reasons:
+            # Capitalize first letter of first fragment only
+            joined = "; ".join(fit_reasons)
+            sentences.append(joined[0].upper() + joined[1:] + ".")
+
+        # Sentence 3: alternatives / grade-gap context
+        if alternates and rnd <= 4:
+            alt = alternates[0]
+            if gap_to_alt < 0.08:
+                sentences.append(
+                    f"This was a close call over {alt['player']} ({alt['position']}, "
+                    f"ranked #{alt['rank']}); the model picked {top_prow['player']} "
+                    f"on marginal fit advantage, not grade separation."
+                )
+            elif gap_to_alt < 0.2 and rnd <= 2:
+                sentences.append(
+                    f"{alt['player']} (#{alt['rank']}, {alt['position']}) was the "
+                    f"live alternate  -  credible enough that a re-sim could flip this slot."
+                )
+
+        # Sentence 4: round-appropriate confidence framing (never "near-lock")
+        if pick_num == 1:
+            pass  # already handled
+        elif rnd == 1:
+            sentences.append(
+                "At this slot, this is a lean, not a certainty  -  every pick after "
+                f"#{1} has credible alternates inside the same grade band."
+            )
+        elif rnd == 2 and gap_to_alt < 0.05:
+            sentences.append(
+                "Day 2 rooms swing on team-specific boards; treat the selection as "
+                "a plausible outcome rather than a forecast."
+            )
+
+        reasoning = " ".join(sentences)
 
         picks_out.append({
             "pick":     pick_num,

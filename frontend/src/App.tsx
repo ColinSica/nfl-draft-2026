@@ -11,26 +11,26 @@ import { Watchlist } from './pages/Watchlist';
 import { TeamCompare } from './pages/TeamCompare';
 import { AboutModal } from './components/AboutModal';
 import { MobileModeBar } from './components/MobileModeBar';
-import { useWatchlist } from './lib/watchlist';
 import { ModeProvider, useMode, MODE_META } from './lib/mode';
 import { api, type MetaInfo } from './lib/api';
 import { cn } from './lib/format';
 
-// Primary navigation — "sections" of the broadsheet.
+// Primary navigation — six sections, the ones fans actually scan on draft day.
+// Prospects, Teams, First Round are the load-bearing pages. Mock Lab and
+// Method are secondary. Watchlist/Positions/TeamCompare are kept as live
+// routes (star icons, position filter on Prospects, dashboard compare button
+// all link to them) but are cut from the top nav to reduce noise.
 const NAV_LINKS = [
   { to: '/',          label: 'Front Page',   end: true },
   { to: '/simulate',  label: 'First Round',  end: true },
-  { to: '/lab',       label: 'Mock Lab',     end: true },
+  { to: '/full-mock', label: 'Full Mock',    end: true },
   { to: '/teams',     label: 'Teams',        end: true },
   { to: '/prospects', label: 'Prospects',    end: true },
-  { to: '/positions', label: 'Positions',    end: true },
-  { to: '/full-mock', label: 'Full Mock',    end: true },
+  { to: '/lab',       label: 'Mock Lab',     end: true },
   { to: '/method',    label: 'Methodology',  end: true },
-  { to: '/watchlist', label: 'Watchlist',    end: true },
 ];
 
 function Nav({ onNavigate }: { onNavigate?: () => void }) {
-  const wl = useWatchlist();
   return (
     <nav className="flex items-center gap-0 flex-wrap lg:flex-nowrap">
       {NAV_LINKS.map((l) => (
@@ -49,14 +49,6 @@ function Nav({ onNavigate }: { onNavigate?: () => void }) {
           }
         >
           {l.label}
-          {l.to === '/watchlist' && wl.count > 0 && (
-            <span
-              className="display-num text-[0.62rem] min-w-[18px] px-1 text-center"
-              style={{ background: '#0B1F3A', color: '#F3ECD6' }}
-            >
-              {wl.count}
-            </span>
-          )}
         </NavLink>
       ))}
     </nav>

@@ -57,7 +57,7 @@ export function Home() {
 
             <h1 className="display-jumbo text-ink reveal reveal-2"
                 style={{ fontSize: 'clamp(2rem, 8.5vw, 6.5rem)' }}>
-              Thirty-two agents, <em>one round</em>, simulated against live markets.
+              Thirty-two front offices, <em>simulated independently</em>.
             </h1>
 
             <div className="reveal reveal-3">
@@ -69,14 +69,15 @@ export function Home() {
             </div>
 
             <p className="body-serif-lead text-ink reveal reveal-4 lede">
-              A Monte Carlo simulator runs the 2026 NFL Draft thousands of times,
-              modelling every front office as an autonomous agent with its own
-              roster need, scheme premium, coaching-tree DNA, and cap posture.
-              The simulated picks are then priced against live Kalshi prediction
-              markets &mdash; real money on specific team-player outcomes &mdash;
-              to produce a calibrated probability for every slot. Pick
-              probabilities below reflect the model's posterior belief, blending
-              our team-fit signal (40%) with market-implied odds (60%).
+              Every NFL front office is modelled as an autonomous agent with
+              its own roster need, scheme premium, coaching-tree DNA, cap
+              posture, and GM draft-history fingerprint. A Monte Carlo drives
+              them through the 2026 board a thousand times. The resulting
+              probabilities are cross-referenced against insider reporting,
+              team-visit logs, and live market pricing &mdash; signals that
+              keep the simulation grounded in reality rather than override it.
+              The model remains the product; the external data is fuel, not
+              a forecast copied from elsewhere.
             </p>
           </div>
 
@@ -97,9 +98,10 @@ export function Home() {
             </div>
             <HRule />
             <div className="space-y-2">
-              <SmallCaps tight>Odds source</SmallCaps>
+              <SmallCaps tight>External sanity checks</SmallCaps>
               <p className="body-serif text-sm">
-                Live via Kalshi · KXNFLDRAFT series · 1,909+ markets parsed
+                Insider news sweep (T-1), Kalshi market pricing, team-visit
+                logs. Reconciliation inputs — not the primary signal.
               </p>
             </div>
           </aside>
@@ -215,10 +217,10 @@ export function Home() {
           <MethodBlock
             index="01"
             label="Stage 1 · Board construction"
-            title="Player value from tape, traits, and markets."
+            title="Player value from tape, traits, and context."
             body={[
-              'Stage 1 converts tape grades (PFF 3-year), athletic composite (RAS), team-visit coverage, age, injury history, and conference tier into an independent grade per prospect.',
-              'Market prices from Kalshi pick-position O/U contracts serve as an anchor &mdash; where the market says a player goes, the model\'s grade is pulled toward that slot, weighted by market confidence.',
+              'PFF 3-year tape grades, athletic composite (RAS), team-visit coverage, age, injury history, and conference tier combine into an independent grade per prospect.',
+              'Insider news, pre-draft pressers, and documented team visits feed in as structured signals. Market prices (Kalshi) are used as a thin calibration anchor for prospects with meaningful market volume — not as the grade itself.',
             ]}
           />
           <MethodBlock
@@ -226,8 +228,8 @@ export function Home() {
             label="Stage 2 · Team-agent simulation"
             title="32 front offices, Monte Carlo."
             body={[
-              'Each team is modelled as an autonomous agent with its own scoring function: need, best-player-available, scheme premium, coaching-tree bias, visit signal, and GM positional affinity.',
-              'Picks converge via softmax over a top-K candidate pool. Market team-landing priors contribute a large additive bonus, so Kalshi-endorsed (team, player) pairs win close calls.',
+              'Each team is modelled as an autonomous agent with its own scoring function: roster need (post-FA), scheme premium, coaching-tree tendencies, GM positional affinity (from their 2019-2025 picks), cap posture, and confirmed pre-draft visits.',
+              'Picks converge via softmax over a top-K candidate pool. The sim runs 200+ times; the output is a probability distribution per slot, not a single point prediction. Markets show up only as a post-processing reality check to keep outliers honest.',
             ]}
             border
           />
@@ -274,7 +276,7 @@ function VitalsGrid({ stats }: { stats: any; simMeta: any; meta: any }) {
   return (
     <dl className="space-y-3">
       <Vital label="R1 picks modelled" value="32" />
-      <Vital label="Kalshi markets" value={stats?.n_kalshi_markets ?? '1,909'} />
+      <Vital label="Market-sanity checks" value={stats?.n_kalshi_markets ?? '2,070+'} />
       <Vital label="Team agents" value={String(stats?.n_agents ?? 32)} />
       <Vital label="Prospects graded" value={String(stats?.n_prospects ?? 727)} />
       <Vital label="Simulations" value={stats?.n_sims ? String(stats.n_sims) : '100'} />

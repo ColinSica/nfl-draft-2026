@@ -589,44 +589,151 @@ def _build_reasoning(pick: dict, prob: float) -> tuple[str, list[dict]]:
                 rec.setdefault("_last_cited", {})
                 rec["_last_cited"][team_code] = q0.get("text")
 
-    # ---- Sim-probability context ----
-    if prob >= 0.8:
-        factors.append({"label": f"Dominant pick across sims ({int(prob*100)}%)",
+    # ---- Sim-probability context (calibrated language — no "lock" claims) ----
+    # Only pick 1 can genuinely be called a lock in the 2026 class; everything
+    # else has credible alternates we enumerate below.
+    if slot == 1 and prob >= 0.9:
+        factors.append({"label": f"Consensus 1st-overall lock ({int(prob*100)}% of sims)",
                         "weight": prob, "source": "model"})
-    elif prob < 0.4:
-        factors.append({"label": f"Close call ({int(prob*100)}% modal vs alternates)",
-                        "weight": 0.3, "source": "model"})
-
-    # ---- Build summary ----
-    parts: list[str] = []
-    if need_weight >= 4:
-        parts.append(f"{team_code} has a critical {position} need")
-    elif need_weight >= 2.5:
-        parts.append(f"{team_code} has a real {position} need")
-    elif indep_grade < 20:
-        parts.append(f"{team_code} takes the board's top {position} on value")
+    elif prob >= 0.7:
+        factors.append({"label": f"Heavy modal outcome — {int(prob*100)}% of sims",
+                        "weight": prob, "source": "model"})
+    elif prob >= 0.45:
+        factors.append({"label": f"Plurality pick — {int(prob*100)}% of sims",
+                        "weight": prob, "source": "model"})
     else:
-        parts.append(f"{team_code} addresses {position} at this slot")
+        factors.append({"label": f"Open slot — {int(prob*100)}% modal, "
+                                 f"live alternates inside 10 pts",
+                        "weight": 0.35, "source": "model"})
 
-    if scheme or hc_tree:
-        parts.append(f"{player} fits the {scheme or hc_tree+' tree'} scheme")
+    # ---- Build multi-sentence summary ----
+    # Structure:
+    #   1. Strategic context — why this slot, not just "need"
+    #   2. Fit — player × scheme × coaching + GM signal
+    #   3. Scouting anchor — analyst or team-profile citation (if any)
+    #   4. Confidence framing — calibrated, never "near-lock" unless slot 1
+    sentences: list[str] = []
 
-    if player_note:
-        parts.append(f"scouting: \"{player_note[:140]}\"")
+    # --- Sentence 1: slot context ---
+    if need_weight >= 4:
+        lead = (f"{team_code} has been telegraphing {position} at this slot "
+                f"since free agency; {player} is the best-graded option left on the board.")
+    elif need_weight >= 2.5:
+        lead = (f"With a real {position} hole on the roster, {team_code} leans "
+                f"into the biggest gap and takes {player}.")
+    elif indep_grade < 20:
+        lead = (f"The board tilts {team_code}'s hand — {player} is the highest-graded "
+                f"player remaining and slots in as a value play rather than a need reach.")
+    elif indep_grade < 50:
+        lead = (f"{team_code} takes the long view at {slot}: {player} is a top-50-graded "
+                f"prospect the model has slipping further than tape warrants.")
+    else:
+        lead = (f"{team_code} uses pick {slot} on {player}, addressing {position} "
+                f"without reaching far outside the grade band for this slot.")
+    sentences.append(lead)
 
-    if prob >= 0.8:
-        parts.append(f"near-lock in {int(prob*100)}% of sims")
-    elif prob >= 0.5:
-        parts.append(f"{int(prob*100)}% modal outcome")
+    # --- Sentence 2: scheme / coaching fit + GM fingerprint ---
+    fit_parts: list[str] = []
+    if scheme:
+        fit_parts.append(f"the {scheme} scheme")
+    if hc_tree and hc_tree not in ("None", ""):
+        fit_parts.append(f"{hc_tree}-tree coaching tendencies")
+    if fit_parts:
+        fit_txt = " and ".join(fit_parts)
+        if fit_score >= 2.5:
+            sentences.append(f"The fit grade is elite ({fit_score:.2f}) — {player} "
+                            f"profiles cleanly for {fit_txt}.")
+        elif fit_score >= 1.8:
+            sentences.append(f"He fits {fit_txt} (team-fit {fit_score:.2f}), which "
+                            f"smooths over any grade-vs-slot tension at {slot}.")
+        else:
+            sentences.append(f"Fit-wise, the profile tracks with {fit_txt}.")
+    # GM fingerprint as an add-on — skip if text is structured (key: value lines)
+    # since those read poorly as prose. Require at least 4 words and no colons
+    # typical of structured blocks.
+    if isinstance(gm_fp, str) and gm_fp.strip():
+        # Split on sentence-ish delimiters and newlines
+        chunks = re.split(r"[.!?]\s+|\n+", gm_fp)
+        for sent in chunks:
+            s = sent.strip()
+            if not s or len(s) > 180:
+                continue
+            # Skip structured lines (field: value) and bullet-style
+            if s.count(":") > 1 or s.startswith("-") or s.startswith("•"):
+                continue
+            words = s.split()
+            if len(words) < 5:
+                continue
+            if (position.lower() in s.lower() or "premium" in s.lower()
+                or "trench" in s.lower() or any(k in s.lower() for k in ("build", "prefer", "tendency", "pattern"))):
+                sentences.append(f"GM history lines up: {s.rstrip('.')}.")
+                break
 
-    summary = "; ".join(parts)
-    if summary:
-        summary = summary[0].upper() + summary[1:]
-    summary = summary.rstrip(".") + "."
-    if cap_tier:
-        summary += f" Cap: {cap_tier}."
-    if predictability and predictability.lower() != "medium":
-        summary += f" Predictability: {predictability.lower()}."
+    # --- Sentence 3: scouting citation (prefer team-tagged) ---
+    cited = False
+    if isinstance(_RESEARCH_CACHE, dict):
+        rec = _RESEARCH_CACHE.get(player) or {}
+        if isinstance(rec, dict):
+            tq = rec.get("team_quotes") or {}
+            team_specific = tq.get(team_code) or []
+            general = rec.get("general_quotes") or []
+            q_text = None
+            q_src = None
+            if team_specific:
+                q = team_specific[0]
+                if isinstance(q, dict) and q.get("text"):
+                    q_text = str(q["text"]).rstrip(".")[:220]
+                    q_src = q.get("source") or "beat reporting"
+            elif general:
+                q = general[0]
+                if isinstance(q, dict) and q.get("text"):
+                    q_text = str(q["text"]).rstrip(".")[:220]
+                    q_src = q.get("source") or "scouts"
+            if q_text:
+                sentences.append(f"{q_src.capitalize()} on the player: \"{q_text}.\"")
+                cited = True
+
+    # If no external citation, fall back to internal player_note
+    if not cited and player_note:
+        sentences.append(f"Team profile scouting: \"{player_note[:200].rstrip('.')}. \"")
+
+    # --- Sentence 4: confidence framing ---
+    if slot == 1 and prob >= 0.9:
+        sentences.append(f"This is the only pick in the class with near-unanimous "
+                        f"market consensus — {int(prob*100)}% of sims and every "
+                        f"insider's final board.")
+    elif prob >= 0.7:
+        sentences.append(f"The model picks him here in {int(prob*100)}% of "
+                        f"simulations; alternates exist but the grade gap "
+                        f"pushes him clear.")
+    elif prob >= 0.45:
+        sentences.append(f"At {int(prob*100)}% modal, this is the plurality outcome "
+                        f"— but a second credible target sits within a few points "
+                        f"on the fit curve.")
+    else:
+        sentences.append(f"This slot is genuinely open: {int(prob*100)}% modal with "
+                        f"two or three realistic targets separated by noise-level "
+                        f"grade differences. Treat the pick as a lean, not a prediction.")
+
+    # --- Sentence 5 (conditional): QB-specific context ---
+    if position == "QB" and qb_urg >= 0.8:
+        qs = narrative.get("qb_situation")
+        if isinstance(qs, str) and qs.strip():
+            qs_short = qs.strip().split(".")[0][:160].rstrip(".")
+            sentences.append(f"QB urgency is the swing variable: {qs_short}.")
+
+    # --- Sentence 6 (conditional): cap + predictability coloring ---
+    color_parts = []
+    if cap_tier and cap_tier.lower() in ("tight", "constrained", "very_tight"):
+        color_parts.append(f"cap posture is {cap_tier.lower()}, which discourages "
+                          f"veteran workarounds")
+    if predictability and predictability.lower() in ("low", "chaotic", "unpredictable"):
+        color_parts.append(f"{team_code}'s pre-draft footprint has been "
+                          f"{predictability.lower()}, so the variance here is real")
+    if color_parts:
+        sentences.append(". ".join(p[0].upper() + p[1:] for p in color_parts) + ".")
+
+    summary = " ".join(s.strip() for s in sentences if s.strip())
 
     factors.sort(key=lambda f: -float(f.get("weight", 0)))
     return summary, factors[:8]

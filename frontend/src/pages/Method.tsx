@@ -153,16 +153,17 @@ export function Method() {
         </div>
         <h2 className="display-broadcast text-ink"
             style={{ fontSize: 'clamp(1.75rem, 3.2vw, 2.5rem)' }}>
-          Real money, aggregated, as the honesty check.
+          A reality check — not the answer.
         </h2>
         <HRule accent />
         <div className="body-serif space-y-4 text-ink">
           <p>
-            The third stage is the differentiator. Every simulated pick
-            is calibrated against Kalshi — a CFTC-regulated event-contract
-            exchange where traders buy YES or NO on specific draft
-            outcomes. We pull <span className="font-mono font-semibold text-accent-brass">1,909
-            markets</span> across the 2026 draft series at runtime,
+            Stage three is where the independent sim is reconciled against
+            prediction-market pricing. Markets aren't the signal — our team
+            agents are — but they're a useful calibration layer because
+            real money is being traded on specific draft outcomes. We pull
+            <span className="font-mono font-semibold text-accent-brass"> 2,070+
+            markets</span> at runtime from Kalshi's KXNFLDRAFT series,
             including pick-position over/unders, top-3 / top-5 / top-10
             / top-32 threshold contracts, per-pick exact-outcome markets,
             per-position rank markets (<em>"Will Player X be the
@@ -170,23 +171,29 @@ export function Method() {
             (<em>"Will Player X be drafted by Team Y?"</em>).
           </p>
           <p>
-            Each Kalshi market type is parsed into the model's posterior.
-            The team-landing signal becomes a <span className="font-mono font-semibold">+5× additive fit
-            bonus</span> during the Monte Carlo, gated at 3% above uniform
-            noise floor so only meaningful market priors contribute. The
-            pick-slot P10–P90 band contributes a slot-alignment bonus so
-            the sim places prospects within their market-implied range.
-            After the sim, the <span className="font-mono font-semibold">odds_clamp</span> post-
-            processor snaps any pick outside its P10–P90 band back to the
-            market-compatible candidate closest to the slot.
+            Markets show up in three places in the model, all of them as
+            checks rather than overrides. Team-landing markets become a
+            small additive bonus in the team-fit function, gated above a
+            noise floor so only meaningful priors move the needle. The
+            pick-slot P10–P90 band is a slot-alignment bonus that keeps
+            wild sim outputs honest. After the sim completes, a post-
+            processing clamp snaps any pick that landed outside the market's
+            P10–P90 band back to the closest candidate the market considers
+            plausible. The team-agent simulation is doing the real work;
+            markets just hold it accountable.
           </p>
           <p>
-            The displayed pick probability is a <span className="font-semibold">60% market / 40%
-            model</span> Bayesian blend, with a 20% epistemic discount on
-            the model side (our sim can't observe medical news, war-room
-            reads, or late trade talks), a further 10% world-uncertainty
-            haircut applied after blending, and a hard ceiling of 78% —
-            nothing about the draft is truly certain.
+            The displayed pick probability is <span className="font-semibold">the
+            independent sim's posterior</span>, reconciled against market
+            priors only where market confidence is high (volume + open
+            interest above threshold). For heavily-traded players the
+            reconciliation weight climbs up to ~0.9; for thinly-traded or
+            unmatched prospects the model drives the answer with a 0.25 floor
+            on the market anchor. A 20% epistemic discount accounts for what
+            the sim can't observe (medical news, war-room reads, late trade
+            talks), plus a 10% world-uncertainty haircut and a hard ceiling
+            of 78% — nothing about the draft is truly certain except the
+            first-overall pick.
           </p>
         </div>
         <FigureCaption>

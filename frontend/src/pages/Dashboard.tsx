@@ -4,7 +4,7 @@
  */
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, GitCompare } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { api, type TeamSummary } from '../lib/api';
 import { teamColor } from '../lib/teamColors';
 import { SectionHeader, SmallCaps, MissingText } from '../components/editorial';
@@ -74,10 +74,6 @@ export function Dashboard() {
             </button>
           ))}
         </div>
-        <Link to="/team-compare" className="btn-ghost">
-          <GitCompare size={14} />
-          <span>Compare teams</span>
-        </Link>
         <span className="ml-auto text-sm text-ink-soft">
           {filtered.length} {filtered.length === 1 ? 'team' : 'teams'}
         </span>
