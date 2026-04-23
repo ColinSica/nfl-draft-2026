@@ -10,8 +10,8 @@ pick,round,team,player,position,school,probability,independent_grade,fit_score,t
 9,1,KC,Jordyn Tyson,WR,Arizona State,0.367,-23.0,4.006,0.182
 10,1,NYG,Caleb Downs,S,Ohio State,0.6,-24.0,4.657,0.425
 11,1,MIA,Francis Mauigoa,OT,Miami (FL),0.267,-21.0,4.258,0.552
-12,1,DAL,Makai Lemon,WR,USC,0.367,-19.0,2.686,0.468
-13,1,LAR,Spencer Fano,OT,Utah,0.5,-20.0,4.129,0.595
+12,1,DAL,Spencer Fano,OT,Utah,0.367,-20.0,2.686,0.468
+13,1,LAR,Makai Lemon,WR,USC,0.5,-19.0,4.129,0.595
 14,1,BAL,Olaivavega Ioane,IOL,Penn State,0.467,-18.0,4.013,0.288
 15,1,TB,Kenyon Sadiq,TE,Oregon,0.367,-15.0,3.022,0.225
 16,1,NYJ,Monroe Freeling,OT,Georgia,0.2,-17.0,3.201,0.198

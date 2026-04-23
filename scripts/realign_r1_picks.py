@@ -128,9 +128,22 @@ def main() -> None:
     # Styles P50=5 exactly) unless a name doesn't match the board.
     TOP5_PINS = ["Fernando Mendoza", "David Bailey", "Arvell Reese",
                  "Jeremiyah Love", "Sonny Styles"]
+    # Additional slot pins per user feedback:
+    # - DAL #12: user "Dallas is more likely to take best value rather than
+    #   reach". BPA at #12 after the top-11 come off the board is Spencer
+    #   Fano (OT, Utah, Kiper #10). A +2 value pick — not a reach.
+    EXTRA_PINS: dict[int, str] = {12: "Spencer Fano"}
     pinned: dict[int, str] = {}
     for slot, name in enumerate(TOP5_PINS, start=1):
         # Tolerate small name variation between our board and the pin.
+        match = next((str(p) for p in board["player"] if _norm(str(p)) == _norm(name)),
+                     None)
+        if match:
+            pinned[slot] = match
+
+    # Extra pins (like DAL #12 Thieneman) respect the same name-match
+    # tolerance as the top-5 pins.
+    for slot, name in EXTRA_PINS.items():
         match = next((str(p) for p in board["player"] if _norm(str(p)) == _norm(name)),
                      None)
         if match:
