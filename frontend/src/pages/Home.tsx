@@ -120,7 +120,7 @@ export function Home() {
             <TocEntry num="02" to="/lab"      title="Mock Lab."    deck="Adjust positional demand, lock picks, re-allocate the board." />
             <TocEntry num="03" to="/prospects" title="Prospects."  deck="Landing distributions per player, consensus rank, college." />
             <TocEntry num="04" to="/teams"    title="Teams."       deck="Front-office dossiers: needs, cap, scheme, coaching tree." />
-            <TocEntry num="05" to="/compare"  title="Markets."     deck="Model vs consensus, slot-by-slot divergence." />
+            <TocEntry num="05" to="/full-mock" title="Full Mock." deck="Every pick, all seven rounds — 257 assignments end-to-end." />
             <TocEntry num="06" to="/method"   title="Methodology." deck="Stages, inputs, independence contract, calibration." />
           </ul>
         </div>

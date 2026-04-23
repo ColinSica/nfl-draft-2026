@@ -1,0 +1,253 @@
+{
+  "date": "2026-04-22",
+  "scraped_at": "2026-04-22T17:30:00-07:00",
+  "window": "2026-04-22 Wednesday (T-1, last day before draft)",
+  "methodology": "Insider sweep (Schefter/Rapoport/Pelissero/Breer/Graziano/Schrager/Schneider) + team-beat writers + PrizePicks live tracker. Strict date filter: reports filed 4/22. The draft begins 2026-04-23 8pm ET in Pittsburgh.",
+  "tier_counts": {
+    "tier1": 16,
+    "tier2": 5,
+    "smoke": 3
+  },
+  "insider_reports": [
+    {
+      "source": "Schefter (ESPN)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "ARI",
+      "player": "Jeremiyah Love",
+      "summary": "Cardinals have shopped No. 3 with no takers. If they hold, Schefter believes Notre Dame RB Jeremiyah Love is the 'logical' pick. Trade-down odds lower than 4/20 because buyers never materialized.",
+      "credibility": "tier1",
+      "impact_on_model": "Raise ARI P(Love @ 3) further; cut trade_down_rate to 0.18."
+    },
+    {
+      "source": "Rapoport (NFL Network)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "NYJ",
+      "player": null,
+      "summary": "Jets narrowed No. 2 to two edge rushers: Texas Tech EDGE David Bailey and Ohio State EDGE/LB Arvell Reese. Vegas books price them within 2 bps.",
+      "credibility": "tier1",
+      "impact_on_model": "Lock NYJ @ 2 to Bailey/Reese binary; other positions ~0%."
+    },
+    {
+      "source": "NFL.com buzz (Wyche)",
+      "date": "2026-04-22",
+      "topic": "visit_cancelled",
+      "team": "NYJ",
+      "player": "David Bailey",
+      "summary": "Jets cancelled top-30 visit with David Bailey this week. Ambiguous signal — may mean decision already made, either direction.",
+      "credibility": "tier2",
+      "impact_on_model": "Do not move Bailey-to-NYJ probability on this alone; flag volatility."
+    },
+    {
+      "source": "Graziano (ESPN)",
+      "date": "2026-04-22",
+      "topic": "trade_rumor",
+      "team": "CLE",
+      "player": null,
+      "summary": "Browns open to trading down from 6. Named trade-up partners: KC, NYG, MIA, LAR, WAS. Berry's analytics front office has circulated the offer across the league.",
+      "credibility": "tier1",
+      "impact_on_model": "Hold CLE trade_down_rate at 0.70; surface the named partner list in Mock Lab trade scenarios."
+    },
+    {
+      "source": "Schneider presser",
+      "date": "2026-04-22",
+      "topic": "trade_intent",
+      "team": "SEA",
+      "player": null,
+      "summary": "John Schneider: 'We have four picks. We'll be looking to trade back.' Confirms 4/20 chatter — Seattle very likely to ship 32.",
+      "credibility": "tier1",
+      "impact_on_model": "Push SEA trade_down_rate to 0.75."
+    },
+    {
+      "source": "Jerry Jones presser",
+      "date": "2026-04-22",
+      "topic": "trade_intent",
+      "team": "DAL",
+      "player": null,
+      "summary": "Jerry Jones: 'We have trades... Picks or players, you could imagine that.' Stephen Jones: not required to keep both first-round picks (12, 20). Cowboys fielding up- and down-calls.",
+      "credibility": "tier1",
+      "impact_on_model": "Keep DAL trade_up 0.40 / trade_down 0.45; add player-trade branch."
+    },
+    {
+      "source": "Rapoport (NFL Network)",
+      "date": "2026-04-22",
+      "topic": "trade_threat",
+      "team": "DET",
+      "player": null,
+      "summary": "Teams 'could try to trade up to 15 or 16' to jump Lions at 17 for an OT. Named: CAR, PHI, SF, plus others. Lions have significant OT need and a top tackle may not last to 17.",
+      "credibility": "tier1",
+      "impact_on_model": "Raise DET trade_up_rate to 0.50; flag OT-run scenario for picks 13-16."
+    },
+    {
+      "source": "Pelissero (NFL Network)",
+      "date": "2026-04-22",
+      "topic": "player_slide",
+      "team": null,
+      "player": "Carson Beck",
+      "summary": "Pelissero: 'Would be surprised if Beck is not off the board in round two.' A team could trade up into bottom of R1 for Beck. Miami QB, consensus QB3.",
+      "credibility": "tier1",
+      "impact_on_model": "Cap Beck R1 probability ~20%; late-R1 trade-up branch live (MIA, PIT, CLE partners)."
+    },
+    {
+      "source": "CBS Sports / betting markets",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "PIT",
+      "player": "Carson Beck",
+      "summary": "Steelers priced +330 favorite to draft Beck (second to Dolphins). Rodgers silence continues; PIT still QB-market though beat writers say 'not in Round 1.' OT first-round lock unless Beck falls further than expected.",
+      "credibility": "tier2",
+      "impact_on_model": "Keep PIT OT R1 primary branch; Beck R2/R3 branch."
+    },
+    {
+      "source": "Breer (The Ringer)",
+      "date": "2026-04-22",
+      "topic": "player_slide",
+      "team": null,
+      "player": "Jermod McCoy",
+      "summary": "Tennessee CB Jermod McCoy's draft range has widened considerably post-ACL. 'Wide range of outcomes' — slide to Round 2 now materially likely.",
+      "credibility": "tier1",
+      "impact_on_model": "Move McCoy R1 probability <0.35."
+    },
+    {
+      "source": "Rapoport (NFL Network)",
+      "date": "2026-04-22",
+      "topic": "medical_update",
+      "team": null,
+      "player": "Chris Bell",
+      "summary": "Louisville WR Chris Bell ahead of schedule on ACL rehab, running 18+ mph per his agent. Pre-injury first-round grade; now back on Day 2 radar.",
+      "credibility": "tier1",
+      "impact_on_model": "Bump Bell R2 probability; add late-R1 dart for OL/WR-desperate teams."
+    },
+    {
+      "source": "NFL.com (Caleb Banks medical letter)",
+      "date": "2026-04-22",
+      "topic": "medical_update",
+      "team": null,
+      "player": "Caleb Banks",
+      "summary": "Teams received letter Wednesday confirming Banks (Florida IDL) had CT scan revealing foot healing; full football clearance expected early June. Jeremiah 51st overall.",
+      "credibility": "tier1",
+      "impact_on_model": "Banks Day 2 lock; IDL-needy teams can trust the clearance."
+    },
+    {
+      "source": "CBS Sports red-flag tracker",
+      "date": "2026-04-22",
+      "topic": "medical_red_flag",
+      "team": null,
+      "player": "Francis Mauigoa",
+      "summary": "Miami OT Francis Mauigoa diagnosed with herniated disc; asymptomatic but some teams think surgery is 'when, not if.' Could cause slide.",
+      "credibility": "tier1",
+      "impact_on_model": "Increase Mauigoa variance; OT-need teams at 13-16 may take cleaner tackle instead."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "date": "2026-04-22",
+      "topic": "trade_candidates",
+      "team": null,
+      "player": null,
+      "summary": "Schefter listed 8 players who could be traded for picks during draft: QBs Anthony Richardson (IND), Will Levis (TEN), Spencer Rattler (NO), plus Alvin Kamara (NO), Cameron Jordan (FA), Dexter Lawrence (already done to CIN, noted), and others. Draft-day veteran-trade branch is live.",
+      "credibility": "tier1",
+      "impact_on_model": "Flag IND/TEN/NO as potential late-R1/early-R2 capital gainers via veteran trades."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "NO",
+      "player": null,
+      "summary": "Saints open to BPA at 8. Would take Carnell Tate quickly if on the board (Ohio State reunion with Chris Olave). Kamara/Cameron Jordan futures could pivot on draft outcome. OC Doug Nussmeier excused from draft duties (son in draft).",
+      "credibility": "tier1",
+      "impact_on_model": "Keep NO BPA-heavy at 8; raise Tate P(NO @ 8) if on board."
+    },
+    {
+      "source": "ESPN beat (Giants)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "NYG",
+      "player": null,
+      "summary": "Giants at 5: most likely Jeremiyah Love (if there) or Caleb Downs. At 10: Styles, Downs, Tate, or Love all in play, plus post-Lawrence IDL.",
+      "credibility": "tier1",
+      "impact_on_model": "Keep NYG 5/10 dual-pick logic; IDL need at 10 confirmed."
+    },
+    {
+      "source": "ESPN beat (Titans)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "TEN",
+      "player": null,
+      "summary": "Titans want to trade down from 4. If they hold and Bailey is there, strong Bailey candidate. Otherwise highest-graded WR between Carnell Tate and Jordyn Tyson.",
+      "credibility": "tier1",
+      "impact_on_model": "Raise TEN trade_down_rate to 0.45; add WR branch (Tate/Tyson) as secondary."
+    },
+    {
+      "source": "ESPN beat (Commanders)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "WAS",
+      "player": null,
+      "summary": "Commanders focused on Sonny Styles, Caleb Downs, Carnell Tate, and Jeremiyah Love at 7.",
+      "credibility": "tier1",
+      "impact_on_model": "Narrow WAS @ 7 candidate set; downweight other positions."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "MIN",
+      "player": null,
+      "summary": "Vikings 'will draft a defensive player' per Schefter. Aligns with Brian Flores scheme premium on DBs / front seven.",
+      "credibility": "tier1",
+      "impact_on_model": "Push MIN offense probability near 0 at 24; DB/EDGE dominant."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "date": "2026-04-22",
+      "topic": "player_rising",
+      "team": null,
+      "player": "Jordyn Tyson",
+      "summary": "Schefter: 'hard to imagine' Tyson falling past top 10. KC, NO, NYG named as landing spots.",
+      "credibility": "tier1",
+      "impact_on_model": "Raise Tyson P(top 10)."
+    },
+    {
+      "source": "Schefter (ESPN)",
+      "date": "2026-04-22",
+      "topic": "player_rising",
+      "team": null,
+      "player": "Treydan Stukes",
+      "summary": "Anonymous GM: 'one of the best safeties I've seen' and said he'd take Stukes ahead of Caleb Downs. Arizona safety now a first-round lock.",
+      "credibility": "tier2",
+      "impact_on_model": "Elevate Stukes R1 probability; variance bump relative to Downs."
+    },
+    {
+      "source": "NFL Network Insiders",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "KC",
+      "player": null,
+      "summary": "Chiefs targets at 9 narrowed: Rueben Bain (EDGE) if there, else Jordyn Tyson (WR). Trade-up to 3-4 for a top EDGE also live per Veach chatter.",
+      "credibility": "tier2",
+      "impact_on_model": "Keep KC trade_up at 0.25; add Bain/Tyson primary target set at 9."
+    },
+    {
+      "source": "Schrager (ESPN) final mock",
+      "date": "2026-04-22",
+      "topic": "trade_scenario",
+      "team": null,
+      "player": null,
+      "summary": "Schrager's final mock projects 4 major trades dominating R1. Eagles and Saints among teams trading up. Cowboys mentioned as potential trade-up partner.",
+      "credibility": "tier2",
+      "impact_on_model": "Cross-reference with our trade scenarios; cap overall R1-trades at 3-5 simulated."
+    },
+    {
+      "source": "NFL.com buzz",
+      "date": "2026-04-22",
+      "topic": "team_intent",
+      "team": "MIA",
+      "player": null,
+      "summary": "Dolphins 'in the QB market.' Have picks 11 and 30 — could package for a QB or take one at 11 if Mendoza doesn't go 1.",
+      "credibility": "tier2",
+      "impact_on_model": "Keep MIA QB need R1-tier; Beck late-R1 trade-up branch points to MIA."
+    }
+  ]
+}

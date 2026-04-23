@@ -4,7 +4,7 @@
  * Structure:
  *   1. Masthead (name, brass stripe, GM/HC, R1 picks)
  *   2. At-a-glance tiles (predictability, QB, cap, scheme)
- *   3. Latest intel + 4/21 pressers
+ *   3. Latest intel + 4/21 pressers + 4/22 day-of news
  *   4. Model's pick reasoning
  *   5. Narrative dossier (gm fingerprint, context, scheme identity)
  *   6. Need stack + tiered needs narrative
@@ -630,7 +630,7 @@ export function TeamDetail() {
         <Footnote>
           Team profile compiled from: roster rooms (post-FA), public team-visit reporting,
           GM draft history 2019–2025, scheme / coaching-tree taxonomy, cap-space model,
-          and PDF-parsed team briefings (4/21/26 refresh).
+          and PDF-parsed team briefings (4/22/26 refresh — final pre-draft intel sweep).
         </Footnote>
       </section>
     </div>

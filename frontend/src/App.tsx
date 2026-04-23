@@ -24,7 +24,7 @@ const NAV_LINKS = [
   { to: '/teams',     label: 'Teams',        end: true },
   { to: '/prospects', label: 'Prospects',    end: true },
   { to: '/positions', label: 'Positions',    end: true },
-  { to: '/compare',   label: 'Markets',      end: true },
+  { to: '/full-mock', label: 'Full Mock',    end: true },
   { to: '/method',    label: 'Methodology',  end: true },
   { to: '/watchlist', label: 'Watchlist',    end: true },
 ];
@@ -273,7 +273,7 @@ function AppInner() {
           <Route path="/team/:abbr" element={<TeamDetail />} />
           <Route path="/simulate" element={<Simulate />} />
           <Route path="/prospects" element={<Prospects />} />
-          <Route path="/compare" element={<Compare />} />
+          <Route path="/full-mock" element={<FullMock />} />
           <Route path="/method" element={<Method />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/team-compare" element={<TeamCompare />} />
@@ -324,6 +324,6 @@ export default function App() {
   );
 }
 
-import { Compare } from './pages/Compare';
+import { FullMock } from './pages/FullMock';
 import { Method } from './pages/Method';
 import { MockLab } from './pages/MockLab';
