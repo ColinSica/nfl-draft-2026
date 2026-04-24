@@ -59,14 +59,14 @@ export function AtAGlanceStats() {
       <div className="border border-ink-edge bg-paper-surface">
         <div className="px-4 py-4 border-b border-ink-edge">
           <p className="body-serif text-sm text-ink leading-snug">
-            Colin's mock ranks{' '}
+            The Ledger mock ranks{' '}
             <span className="display-num text-2xl text-accent-brass mx-0.5">
               #{colin.rank}
             </span>{' '}
-            of {data.total_analysts} published mocks —
-            beating{' '}
+            of {data.total_analysts} published 2026 mocks —
+            ahead of{' '}
             <span className="font-bold text-ink">{behindClamped}</span>{' '}
-            out of {totalOthers} other analysts.
+            of {totalOthers} other analysts.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export function AtAGlanceStats() {
               />
             ) : (
               <p className="text-[0.68rem] text-ink-muted italic">
-                Hover any dot to see that analyst; click to pin.
+                Hover any dot to inspect an analyst; click to pin.
               </p>
             )}
           </div>
@@ -140,7 +140,7 @@ function ActiveLine({
   isPinned: boolean;
   onClear: () => void;
 }) {
-  const isYou = active.name === 'Colin';
+  const isLedger = active.name === 'Colin';
   const delta = active.exact - colin.exact;
   return (
     <div className="flex items-baseline gap-2 text-xs flex-wrap">
@@ -150,14 +150,14 @@ function ActiveLine({
           pinned
         </span>
       )}
-      <span className={`font-mono ${isYou ? 'text-accent-brass font-bold' : 'text-ink'}`}>
-        #{active.rank} {active.name}
+      <span className={`font-mono ${isLedger ? 'text-accent-brass font-bold' : 'text-ink'}`}>
+        #{active.rank} {isLedger ? 'Colin (Ledger)' : active.name}
       </span>
       <span className="font-mono text-ink-muted">·</span>
       <span className="font-mono text-ink">{active.exact}/{scored}</span>
-      {!isYou && (
+      {!isLedger && (
         <span className={`font-mono ${delta === 0 ? 'text-ink-muted' : delta > 0 ? 'text-live' : 'text-accent-brass'}`}>
-          {delta > 0 ? `+${delta} vs you` : delta < 0 ? `${delta} vs you` : 'tied'}
+          {delta > 0 ? `+${delta} vs Ledger` : delta < 0 ? `${delta} vs Ledger` : 'tied w/ Ledger'}
         </span>
       )}
       {isPinned && (
@@ -271,7 +271,7 @@ function DotPlot({
                       className="font-mono" fontSize={9}
                       fill="#B68A2F" fontWeight={700}
                       pointerEvents="none">
-                  YOU
+                  LEDGER
                 </text>
               )}
             </g>

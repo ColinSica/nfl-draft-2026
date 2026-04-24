@@ -92,7 +92,7 @@ export function AccuracyDashboard({ compact = false }: { compact?: boolean }) {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-ink">
         <Tile
           icon={<Trophy size={18} />}
-          label="Your rank"
+          label="Ledger rank"
           value={colin?.rank ? `#${colin.rank}` : '—'}
           sub={colin ? `of ${data.total_analysts} analysts` : ''}
           accent
@@ -150,7 +150,7 @@ export function AccuracyDashboard({ compact = false }: { compact?: boolean }) {
           <div className="flex items-baseline justify-between border-b-2 border-ink px-1 pb-2 mb-3">
             <h2 className="display-broadcast text-xl text-ink">Pick-by-pick</h2>
             <SmallCaps tight className="text-ink-muted">
-              your mock vs the board
+              The Ledger vs the board
             </SmallCaps>
           </div>
           <div className="overflow-x-auto border border-ink-edge bg-paper-surface">
@@ -160,7 +160,7 @@ export function AccuracyDashboard({ compact = false }: { compact?: boolean }) {
                   <th className="num w-12">Pick</th>
                   <th className="w-24">Team</th>
                   <th>Actual</th>
-                  <th>Your mock</th>
+                  <th>Ledger mock</th>
                   <th>With trades</th>
                   <th className="num w-24">Hit</th>
                 </tr>
@@ -316,7 +316,7 @@ function HitBadge({ colin, trade }: { colin: boolean; trade: boolean }) {
     <span
       className="caps-tight text-[0.58rem] font-bold px-1.5 py-[1px]"
       style={{ background: '#3A6B4633', color: '#3A6B46' }}
-      title={colin && trade ? 'Both mocks hit' : colin ? 'Main mock hit' : 'Trade mock hit'}
+      title={colin && trade ? 'Both Ledger mocks hit' : colin ? 'Main mock hit' : 'Trade mock hit'}
     >
       {colin && trade ? 'hit ×2' : colin ? 'hit' : 'trade hit'}
     </span>

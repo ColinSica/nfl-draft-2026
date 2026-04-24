@@ -13,7 +13,7 @@ export function Accuracy() {
       <SectionHeader
         kicker="Live accuracy"
         title="Scoreboard."
-        deck="How every published 2026 mock stacks up against the actual R1 board. One point per exact player match at the correct slot."
+        deck="How The Draft Ledger and ~30 published 2026 analyst mocks stack up against the actual R1 board. One point per exact player match at the correct slot."
       />
       <LockBadge />
       <AccuracyDashboard compact={false} />
