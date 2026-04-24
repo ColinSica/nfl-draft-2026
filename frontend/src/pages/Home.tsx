@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { api, type MetaInfo } from '../lib/api';
 import { DraftCountdown } from '../components/DraftCountdown';
 import { AccuracyDashboard } from '../components/AccuracyDashboard';
+import { AccuracyGraphs } from '../components/AccuracyGraphs';
 import {
   HRule, SmallCaps, SectionHeader, Dateline, Byline, Stamp, Footnote,
 } from '../components/editorial';
@@ -115,7 +116,13 @@ export function Home() {
         <div className="mt-4">
           <AccuracyDashboard compact />
         </div>
-        <div className="mt-4 flex justify-end">
+
+        {/* Graphs — histogram + pick-strip */}
+        <div className="mt-8">
+          <AccuracyGraphs />
+        </div>
+
+        <div className="mt-6 flex justify-end">
           <Link to="/accuracy" className="btn-primary">
             <span>Full scoreboard</span>
             <ArrowUpRight size={14} />

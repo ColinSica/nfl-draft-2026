@@ -4,6 +4,7 @@
  */
 import { SectionHeader } from '../components/editorial';
 import { AccuracyDashboard } from '../components/AccuracyDashboard';
+import { AccuracyGraphs } from '../components/AccuracyGraphs';
 import { LockBadge } from './Home';
 
 export function Accuracy() {
@@ -16,6 +17,7 @@ export function Accuracy() {
       />
       <LockBadge />
       <AccuracyDashboard compact={false} />
+      <AccuracyGraphs />
     </div>
   );
 }
