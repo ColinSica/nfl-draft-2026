@@ -4,7 +4,6 @@ import { RefreshCw, Info, Menu, X } from 'lucide-react';
 import { Home } from './pages/Home';
 import { Dashboard } from './pages/Dashboard';
 import { TeamDetail } from './pages/TeamDetail';
-import { Simulate } from './pages/Simulate';
 import { Prospects } from './pages/Prospects';
 import { FullMock } from './pages/FullMock';
 import { Method } from './pages/Method';
@@ -24,8 +23,7 @@ import { SOURCE_REPO_URL } from './lib/constants';
 // routes (star icons, position filter on Prospects, dashboard compare button
 // all link to them) but are cut from the top nav to reduce noise.
 const NAV_LINKS = [
-  { to: '/',          label: 'Front Page',   end: true },
-  { to: '/simulate',  label: 'First Round',  end: true },
+  { to: '/',          label: 'Home',         end: true },
   { to: '/full-mock', label: 'Full Mock',    end: true },
   { to: '/teams',     label: 'Teams',        end: true },
   { to: '/prospects', label: 'Prospects',    end: true },
@@ -277,7 +275,6 @@ function AppInner() {
             <Route path="/" element={<Home />} />
             <Route path="/teams" element={<Dashboard />} />
             <Route path="/team/:abbr" element={<TeamDetail />} />
-            <Route path="/simulate" element={<Simulate />} />
             <Route path="/prospects" element={<Prospects />} />
             <Route path="/full-mock" element={<FullMock />} />
             <Route path="/accuracy" element={<Accuracy />} />

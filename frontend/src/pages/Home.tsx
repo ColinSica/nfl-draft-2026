@@ -1,11 +1,11 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { api, type MetaInfo, type PickRow } from '../lib/api';
+import { api, type MetaInfo } from '../lib/api';
 import { DraftCountdown } from '../components/DraftCountdown';
-import { ErrorBlock } from '../components/LoadState';
+import { AccuracyDashboard } from '../components/AccuracyDashboard';
 import {
-  HRule, SmallCaps, SectionHeader, Dateline, Byline, Stamp, Footnote, FigureCaption,
+  HRule, SmallCaps, SectionHeader, Dateline, Byline, Stamp, Footnote,
 } from '../components/editorial';
 
 /**
@@ -22,28 +22,15 @@ import {
  */
 export function Home() {
   const [meta, setMeta] = useState<MetaInfo | null>(null);
-  const [latestPicks, setLatestPicks] = useState<PickRow[] | null>(null);
-  const [simMeta, setSimMeta] = useState<any>(null);
-  const [reasoning, setReasoning] = useState<any>(null);
   const [stats, setStats] = useState<any>(null);
-  const [simErr, setSimErr] = useState<string | null>(null);
-  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
-    setSimErr(null);
-    setLatestPicks(null);
     api.meta().then(setMeta).catch(() => {});
-    api.latestSim()
-      .then((r) => { setLatestPicks(r.picks); setSimMeta(r.meta); })
-      .catch((e) => { setSimErr(String(e?.message ?? e)); setLatestPicks([]); });
-    api.simulationReasoning().then(setReasoning).catch(() => {});
     fetch('/api/independent-stats')
       .then(r => r.ok ? r.json() : null)
       .then(setStats)
       .catch(() => {});
-  }, [reloadKey]);
-
-  const top10 = (latestPicks ?? []).filter(p => p.pick_number <= 10);
+  }, []);
 
   return (
     <div className="space-y-14 pb-20">
@@ -87,18 +74,7 @@ export function Home() {
           {/* Side rail — vitals */}
           <aside className="border-t-2 border-ink pt-5 lg:border-t-0 lg:border-l lg:border-ink-edge lg:pt-0 lg:pl-8 space-y-6 reveal reveal-4">
             <SmallCaps>At a glance</SmallCaps>
-            <VitalsGrid stats={stats} simMeta={simMeta} meta={meta} />
-            <HRule />
-            <div className="space-y-2">
-              <SmallCaps tight>Latest simulation</SmallCaps>
-              <p className="font-mono text-xs">
-                {simMeta?.mtime
-                  ? new Date(simMeta.mtime).toLocaleString('en-US', {
-                      month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
-                    })
-                  : '—'}
-              </p>
-            </div>
+            <VitalsGrid stats={stats} simMeta={null} meta={meta} />
           </aside>
         </div>
       </section>
@@ -113,89 +89,35 @@ export function Home() {
         <div className="p-6 lg:p-8 space-y-4">
           <SmallCaps>In This Issue</SmallCaps>
           <ul className="space-y-2 body-serif">
-            <TocEntry num="01" to="/simulate" title="First round." deck="Full 32 picks with calibrated probabilities and reasoning." />
-            <TocEntry num="02" to="/lab"      title="Mock Lab."    deck="Adjust positional demand, lock picks, re-allocate the board." />
-            <TocEntry num="03" to="/prospects" title="Prospects."  deck="Landing distributions per player, board rank, college." />
-            <TocEntry num="04" to="/teams"    title="Teams."       deck="Front-office dossiers: needs, cap, scheme, coaching tree." />
-            <TocEntry num="05" to="/full-mock" title="Full Mock." deck="Every pick, all seven rounds — 257 assignments end-to-end." />
-            <TocEntry num="06" to="/method"   title="Methodology." deck="Stages, inputs, independence contract, calibration." />
+            <TocEntry num="01" to="/accuracy"  title="Live accuracy." deck="Your rank vs the analyst field, updated as picks come off the board." />
+            <TocEntry num="02" to="/full-mock" title="Full Mock."    deck="Every pick, all seven rounds — 257 assignments end-to-end." />
+            <TocEntry num="03" to="/prospects" title="Prospects."    deck="Landing distributions per player, board rank, college." />
+            <TocEntry num="04" to="/teams"     title="Teams."        deck="Front-office dossiers: needs, cap, scheme, coaching tree." />
+            <TocEntry num="05" to="/lab"       title="Mock Lab."     deck="Adjust positional demand, lock picks, re-allocate the board." />
+            <TocEntry num="06" to="/method"    title="Methodology."  deck="Stages, inputs, calibration." />
           </ul>
         </div>
       </section>
 
       {/* ═════════════════════════════════════════════════════════════
-       * LEAD STORY — Top 10 picks as a research table
+       * LIVE ACCURACY DASHBOARD
        * ═════════════════════════════════════════════════════════════ */}
       <section>
         <SectionHeader
           number={1}
-          kicker="Lead Story"
-          title="Top of the board."
-          deck="Ten picks, with model probabilities and per-pick reasoning from the team-agent profiles."
+          kicker="Live scoreboard"
+          title="How the mock is doing."
+          deck="Real-time accuracy vs ~30 published analyst mocks. Updates as the R1 picks come off the board."
         />
-
-        <div className="mt-6 overflow-x-auto">
-          <table className="research-table">
-            <thead>
-              <tr>
-                <th className="num">Pk</th>
-                <th>Team</th>
-                <th>Player</th>
-                <th>Pos</th>
-                <th>School</th>
-                <th className="num">P<sub>(pick)</sub></th>
-                <th>Thesis</th>
-              </tr>
-            </thead>
-            <tbody>
-              {simErr && top10.length === 0 ? (
-                <tr><td colSpan={7} className="py-6">
-                  <ErrorBlock message={simErr} onRetry={() => setReloadKey(k => k + 1)} />
-                </td></tr>
-              ) : top10.length === 0 ? (
-                <tr><td colSpan={7} className="text-center py-10 italic text-ink-muted">Loading first round…</td></tr>
-              ) : top10.map(p => {
-                const c0 = p.candidates?.[0];
-                const r = reasoning?.picks?.[String(p.pick_number)];
-                const summary = (r?.reasoning_summary ?? '').replace(/\s+/g, ' ').trim();
-                return (
-                  <tr key={p.pick_number}>
-                    <td className="num text-ink-muted" style={{ width: 40 }}>
-                      {String(p.pick_number).padStart(2, '0')}
-                    </td>
-                    <td className="font-mono text-xs font-medium" style={{ width: 60 }}>
-                      {p.most_likely_team ?? p.team ?? '—'}
-                    </td>
-                    <td className="font-serif" style={{ fontSize: '0.98rem', minWidth: 160 }}>
-                      <Link to="/simulate" className="hover:text-accent-brass transition">
-                        {c0?.player ?? '—'}
-                      </Link>
-                    </td>
-                    <td className="font-mono text-xs">{c0?.position ?? '—'}</td>
-                    <td className="font-serif italic text-sm text-ink-muted" style={{ maxWidth: 140 }}>
-                      {c0?.college ?? '—'}
-                    </td>
-                    <td className="num">
-                      <ProbBar p={c0?.probability ?? 0} />
-                    </td>
-                    <td className="text-sm font-serif text-ink" style={{ maxWidth: 480 }}>
-                      {summary || <span className="italic text-ink-muted">—</span>}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        <div className="mt-4">
+          <LockBadge />
         </div>
-
-        <div className="mt-4 flex items-center justify-between gap-4 flex-wrap">
-          <FigureCaption>
-            Figure 1 · Modal pick per slot with model posterior probability.
-            See First Round for the full 32-pick table with alternates and
-            expanded thesis.
-          </FigureCaption>
-          <Link to="/simulate" className="btn-primary">
-            <span>Full first round</span>
+        <div className="mt-4">
+          <AccuracyDashboard compact />
+        </div>
+        <div className="mt-4 flex justify-end">
+          <Link to="/accuracy" className="btn-primary">
+            <span>Full scoreboard</span>
             <ArrowUpRight size={14} />
           </Link>
         </div>
@@ -236,11 +158,6 @@ export function Home() {
       </section>
 
       {/* ═════════════════════════════════════════════════════════════
-       * POSITION MIX
-       * ═════════════════════════════════════════════════════════════ */}
-      <PositionMix picks={latestPicks ?? []} />
-
-      {/* ═════════════════════════════════════════════════════════════
        * FOOTER NOTES
        * ═════════════════════════════════════════════════════════════ */}
       <section className="border-t-2 border-ink pt-6 space-y-3">
@@ -265,6 +182,31 @@ export function Home() {
 // ─────────────────────────────────────────────────────────────────────
 // Sub-components
 // ─────────────────────────────────────────────────────────────────────
+
+export function LockBadge() {
+  return (
+    <div
+      className="inline-flex items-center gap-3 px-4 py-2.5 border"
+      style={{
+        background: 'rgba(182,138,47,0.08)',
+        borderColor: 'rgba(182,138,47,0.4)',
+      }}
+      role="note"
+      aria-label="Mock draft lock timestamp"
+    >
+      <span className="w-1.5 h-1.5 rounded-full bg-accent-brass shrink-0" />
+      <span className="font-mono text-[0.7rem] caps-tight text-accent-brass tracking-wider">
+        Mock locked
+      </span>
+      <span className="font-mono text-xs text-ink">
+        4/23/2026 · 4:59pm PT
+      </span>
+      <span className="font-mono text-[0.68rem] text-ink-muted hidden sm:inline">
+        — before the draft started (5:00pm PT)
+      </span>
+    </div>
+  );
+}
 
 function VitalsGrid({ stats }: { stats: any; simMeta: any; meta: any }) {
   // Show '—' rather than lying with a plausible default; the endpoint is
@@ -310,21 +252,6 @@ function TocEntry({
   );
 }
 
-function ProbBar({ p }: { p: number }) {
-  const pct = Math.round(p * 100);
-  return (
-    <div className="flex items-center gap-2 justify-end">
-      <div className="w-14 h-1.5 bg-paper-hover relative overflow-hidden">
-        <div className="absolute inset-y-0 left-0 bg-accent-brass"
-             style={{ width: `${Math.min(100, pct)}%` }} />
-      </div>
-      <span className="font-mono text-xs tabular-nums w-10 text-right">
-        {pct}%
-      </span>
-    </div>
-  );
-}
-
 function MethodBlock({
   index, label, title, body, border = false,
 }: {
@@ -353,51 +280,3 @@ function MethodBlock({
   );
 }
 
-function PositionMix({ picks }: { picks: PickRow[] }) {
-  const counts = useMemo(() => {
-    const r1 = picks.filter(p => p.pick_number <= 32);
-    const byPos: Record<string, number> = {};
-    r1.forEach(p => {
-      const pos = p.candidates?.[0]?.position ?? '—';
-      byPos[pos] = (byPos[pos] ?? 0) + 1;
-    });
-    return Object.entries(byPos).sort((a, b) => b[1] - a[1]);
-  }, [picks]);
-
-  if (counts.length === 0) return null;
-  const max = Math.max(...counts.map(([, c]) => c));
-
-  return (
-    <section>
-      <SectionHeader
-        number={3}
-        kicker="R1 Position Mix"
-        title="Where the first round spent its capital."
-      />
-      <div className="mt-6 border border-ink-edge bg-paper-surface p-6">
-        <div className="space-y-2.5">
-          {counts.map(([pos, c]) => (
-            <div key={pos} className="flex items-center gap-4">
-              <span className="font-mono text-sm font-medium w-10 shrink-0 text-right text-ink">
-                {pos}
-              </span>
-              <div className="flex-1 h-4 bg-paper-hover relative overflow-hidden">
-                <div
-                  className="absolute inset-y-0 left-0 bg-ink"
-                  style={{ width: `${(c / max) * 100}%` }}
-                />
-              </div>
-              <span className="display-num text-sm w-7 shrink-0 text-right">{c}</span>
-              <span className="font-mono text-xs text-ink-muted w-12 shrink-0 text-right">
-                {Math.round((c / 32) * 100)}%
-              </span>
-            </div>
-          ))}
-        </div>
-        <FigureCaption>
-          Figure 2 · First-round position counts from the latest committed run.
-        </FigureCaption>
-      </div>
-    </section>
-  );
-}
