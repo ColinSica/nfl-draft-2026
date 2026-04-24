@@ -13,7 +13,7 @@
       "college": "Indiana",
       "rank": 1,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] LV opens the draft with Fernando Mendoza  -  the only pick in the 2026 class with near-unanimous consensus and market pricing. Everything after this gets murkier. Had a documented pre-draft visit with LV. Jordyn Tyson (#7, WR) was the live alternate  -  credible enou",
+      "reasoning": "LV takes Fernando Mendoza (QB, Indiana) at #1. Quarterback is the #1 need on the board for this roster; he's the quarterback the front office has been connected to throughout the pre-draft cycle. On schedule with the board (rank #1). Scheme fit: rhythm passer with mobility (geno smith).",
       "score": 2.588,
       "factors": {
         "grade": 1.0,
@@ -60,7 +60,7 @@
       "college": "Texas Tech",
       "rank": 5,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] NYJ takes Arvell Reese on value  -  no premium LB need, but the grade gap at this slot made the call straightforward. Fits the 3-4 multiple (Glenn) scheme profile the staff has built around; had a documented pre-draft visit with NYJ. This was a close call over Sonny ",
+      "reasoning": "NYJ stays on the trench/premium-position board with David Bailey (EDGE, Texas Tech). Covers a secondary need; modest reach (3 slots past board rank #5). Scheme fit: 4-3 de speed + power (gardner-era length).",
       "score": 2.668,
       "factors": {
         "grade": 0.971,
@@ -107,7 +107,7 @@
       "college": "Ohio State",
       "rank": 3,
       "tier": "R1",
-      "reasoning": "[TRADE] KC moves up for elite pass rusher",
+      "reasoning": "[TRADE: Chiefs trade UP for Arvell Reese] ARI -> KC. KC selects Arvell Reese (LB, Ohio State) at #3. Linebacker is a depth-chart addition; on schedule with the board (rank #3). Scheme fit: mike coverage + downhill sam (tranquill).",
       "score": 2.875,
       "factors": {
         "grade": 0.704,
@@ -148,7 +148,7 @@
         "id": "KC_up_ARI_back",
         "from": "ARI",
         "to": "KC",
-        "reason": "KC moves up for elite pass rusher",
+        "reason": "KC selects Arvell Reese (LB) \u2014 a depth-chart addition after the trade.",
         "headline": "Chiefs trade UP for Arvell Reese",
         "description": null,
         "sources": [
@@ -190,7 +190,7 @@
       "college": "Notre Dame",
       "rank": 2,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] TEN has a critical EDGE need  -  free agency didn't close it, and David Bailey is the cleanest on-board solution at 4. Fits the saleh_4-3_wide-9 scheme profile the staff has built around; had a documented pre-draft visit with TEN. At this slot, this is a lean, not a ",
+      "reasoning": "TEN selects Jeremiyah Love (RB, Notre Dame) at #4. Running back is a secondary need; on schedule with the board (rank #2). Scheme fit: three-down back (pollard/spears).",
       "score": 3.319,
       "factors": {
         "grade": 0.943,
@@ -237,7 +237,7 @@
       "college": "Ohio State",
       "rank": 4,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] NYG has a critical WR need  -  free agency didn't close it, and Carnell Tate is the cleanest on-board solution at 5. Had a documented pre-draft visit with NYG; aligns with the GM's documented positional preferences. This was a close c",
+      "reasoning": "NYG selects Sonny Styles (LB, Ohio State) at #5. Linebacker is a secondary need; on schedule with the board (rank #4). Scheme fit: coverage mike + downhill sam.",
       "score": 2.59,
       "factors": {
         "grade": 0.905,
@@ -284,7 +284,7 @@
       "college": "Miami (FL)",
       "rank": 9,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] CLE has a critical WR need  -  free agency didn't close it, and Jordyn Tyson is the cleanest on-board solution at 6. Fits the Monken offense scheme profile the staff has built around; had a documented ",
+      "reasoning": "CLE stays on the trench/premium-position board with Francis Mauigoa (OT, Miami (FL)). Covers the #1 need on the board; modest reach (3 slots past board rank #9). Scheme fit: athletic zone ol.",
       "score": 3.064,
       "factors": {
         "grade": 0.917,
@@ -331,7 +331,7 @@
       "college": "Ohio State",
       "rank": 8,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] WAS has a critical WR need  -  free agency didn't close it, and Makai Lemon is the cleanest on-board solution at 7. Had a documented pre-draft visit with WAS. At this s",
+      "reasoning": "WAS selects Carnell Tate (WR, Ohio State) at #7. Wide receiver is a top-2 need; on schedule with the board (rank #8). Scheme fit: vertical z (mclaurin).",
       "score": 2.511,
       "factors": {
         "grade": 0.858,
@@ -378,7 +378,7 @@
       "college": "Miami (FL)",
       "rank": 16,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] NO has a critical EDGE need  -  free agency didn't close it, and Rueben Bain is the cleanest on-board solution at 8. Fits the staley_3-4 scheme profile the staff has built around. This was a close call over Malachi Lawrence (EDGE, ran",
+      "reasoning": "NO stays on the trench/premium-position board with Rueben Bain (EDGE, Miami (FL)). Covers a top-2 need; reach for position \u2014 8 slots past board rank #16. Scheme fit: 3-4 olb length + bend (jordan legacy.",
       "score": 2.7,
       "factors": {
         "grade": 0.881,
@@ -425,7 +425,7 @@
       "college": "LSU",
       "rank": 14,
       "tier": "R2",
-      "reasoning": "[TRADE] ARI selected BPA after trade \u2014 CB Mansoor Delane",
+      "reasoning": "[TRADE: Chiefs trade UP for Arvell Reese] KC -> ARI. ARI stays on the trench/premium-position board with Mansoor Delane (CB, LSU). Covers a depth-chart addition; modest reach (5 slots past board rank #14). Also a position the GM has reached for historically. Scheme fit: zone-match long cbs.",
       "score": 2.975,
       "factors": {
         "grade": 0.631,
@@ -466,7 +466,7 @@
         "id": "KC_up_ARI_back",
         "from": "KC",
         "to": "ARI",
-        "reason": "ARI selects BPA after trade-back",
+        "reason": "ARI selects Mansoor Delane (CB) \u2014 a depth-chart addition after the trade.",
         "headline": "Chiefs trade UP for Arvell Reese",
         "description": null,
         "sources": [
@@ -508,7 +508,7 @@
       "college": "Ohio State",
       "rank": 6,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] NYG takes Sonny Styles on value  -  no premium LB need, but the grade gap at this slot made the call straightforward. Fits the Michigan / Harbaugh (physical) scheme profile the staff has built around. ",
+      "reasoning": "NYG selects Caleb Downs (S, Ohio State) at #10. Safety is a top-5 need; mild value pick (4 slots ahead of board rank #6). Scheme fit: two-high interchangeable.",
       "score": 2.051,
       "factors": {
         "grade": 0.957,
@@ -555,7 +555,7 @@
       "college": "Arizona State",
       "rank": 7,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] MIA has a critical CB need  -  free agency didn't close it, and Mansoor Delane is the cleanest on-board solution at 11. Fits the Hafley defense scheme profile the staff",
+      "reasoning": "MIA takes Jordyn Tyson (WR, Arizona State) at pick #11. Wide receiver addresses the #1 need on the board for this roster; mild value pick (4 slots ahead of board rank #7). Also a position the GM has reached for historically. Scheme fit: vertical speed-first z (hill).",
       "score": 2.96,
       "factors": {
         "grade": 0.76,
@@ -602,7 +602,7 @@
       "college": "Utah",
       "rank": 10,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] DAL has a critical S need  -  free agency didn't close it, and Caleb Downs is the cleanest on-board solution at 12. Had a documented pre-draft visit with DAL. At this s",
+      "reasoning": "DAL takes Spencer Fano (OT, Utah) at pick #12. Offensive tackle addresses a depth-chart addition for this roster; on schedule with the board (rank #10). Scheme fit: gap-power interior (booker).",
       "score": 2.342,
       "factors": {
         "grade": 0.93,
@@ -649,7 +649,7 @@
       "college": "USC",
       "rank": 11,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] LAR has a critical WR need  -  free agency didn't close it, and Omar Cooper Jr. is the cleanest on-boa",
+      "reasoning": "LAR takes Makai Lemon (WR, USC) at pick #13. Wide receiver addresses a top-2 need for this roster; on schedule with the board (rank #11). Scheme fit: separator z (nacua).",
       "score": 2.64,
       "factors": {
         "grade": 0.787,
@@ -696,7 +696,7 @@
       "college": "Penn State",
       "rank": 12,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] BAL has a critical CB need  -  free agency didn't close it, and Keionte Scott is the cleanest on-board solution at 14. Fits the defensi",
+      "reasoning": "BAL takes Olaivavega Ioane (IOL, Penn State) at pick #14. Interior o-line addresses a top-2 need for this roster; on schedule with the board (rank #12). Scheme fit: people-movers.",
       "score": 2.291,
       "factors": {
         "grade": 0.581,
@@ -743,7 +743,7 @@
       "college": "Oregon",
       "rank": 15,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] TB has a critical EDGE need  -  free agency didn't close it, and Derrick Moore is the cleanest on-board solution at 15. Fits the bowles_blitz scheme profile the staff h",
+      "reasoning": "TB takes Kenyon Sadiq (TE, Oregon) at pick #15. Tight end addresses a top-5 need for this roster; on schedule with the board (rank #15). Scheme fit: y move te + inline blocker (otton).",
       "score": 2.616,
       "factors": {
         "grade": 0.778,
@@ -790,7 +790,7 @@
       "college": "Georgia",
       "rank": 13,
       "tier": "R3",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] With a real EDGE hole on the roster, NYJ grabs Malachi Lawrence  -  a fit that doesn't force the board. Fits the 3-4 multiple (Glenn) scheme profile the staff has built around; had a documented pre-dra",
+      "reasoning": "[TRADE: Bears trade UP for DL, jump Lions] NYJ -> CHI. CHI takes Monroe Freeling (OT, Georgia) at pick #16. Offensive tackle addresses a top-3 need for this roster; mild value pick (3 slots ahead of board rank #13). Scheme fit: powerful gap-power ol.",
       "score": 2.197,
       "factors": {
         "grade": 0.484,
@@ -831,7 +831,7 @@
         "id": "CHI_up_NYJ_back",
         "from": "NYJ",
         "to": "CHI",
-        "reason": "CHI pairs #25 + Buffalo #60 to jump Lions at #17",
+        "reason": "CHI selects Monroe Freeling (OT) \u2014 a top-3 need after the trade.",
         "headline": "Bears trade UP for DL, jump Lions",
         "description": null,
         "sources": [
@@ -872,7 +872,7 @@
       "college": "Oregon",
       "rank": 18,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] DET has a critical EDGE need  -  free agency didn't close it, and Akheem Mesidor is the cleanest on-board solution at 17. Aligns with the GM's documented positional preferences. This was a close call over Zxavian Harris (DL, ranked #2",
+      "reasoning": "[TRADE: Eagles trade UP for Thieneman (S)] DET -> PHI. PHI takes Dillon Thieneman (S, Oregon) at pick #17. Safety addresses the #1 need on the board for this roster; on schedule with the board (rank #18). Scheme fit: two-high interchangeable (blankenship / mukuba).",
       "score": 1.634,
       "factors": {
         "grade": 0.625,
@@ -913,7 +913,7 @@
         "id": "PHI_up_DET_back",
         "from": "DET",
         "to": "PHI",
-        "reason": "PHI moves up for top safety",
+        "reason": "PHI selects Dillon Thieneman (S) \u2014 the #1 need on the board after the trade.",
         "headline": "Eagles trade UP for Thieneman (S)",
         "description": null,
         "sources": [
@@ -955,7 +955,7 @@
       "college": "Tennessee",
       "rank": 29,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] MIN takes Zxavian Harris on value  -  no premium IDL need, but the grade gap at this slot made the call straightforward. Fits the mcvay_spread scheme profile the staff has built around. This was a close call over DeMonte Capehart (DL,",
+      "reasoning": "MIN takes Jermod McCoy (CB, Tennessee) at pick #18. Cornerback addresses a top-2 need for this roster; reach for position \u2014 11 slots past board rank #29. Also a position the GM has reached for historically. Scheme fit: press-man + zone-match hybrid (murphy/rodgers).",
       "score": 1.895,
       "factors": {
         "grade": 0.752,
@@ -1002,7 +1002,7 @@
       "college": "Clemson",
       "rank": 20,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] CAR has a critical S need  -  free agency didn't close it, and Dillon Thieneman is the cleanest on-board solution at 19. Fits the canales_westcoast scheme profile the staff has built around; had a documented pre-draft visit with CAR. ",
+      "reasoning": "CAR takes Blake Miller (OT, Clemson) at pick #19. Offensive tackle addresses a depth-chart addition for this roster; on schedule with the board (rank #20). Scheme fit: athletic zone ol.",
       "score": 3.084,
       "factors": {
         "grade": 0.697,
@@ -1049,7 +1049,7 @@
       "college": "Miami (FL)",
       "rank": 23,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] DAL has a critical CB need  -  free agency didn't close it, and Colton Hood is the cleanest on-board solution at 20. Had a documented pre-draft visit with DAL. This was a close call over Jermod McCoy (CB, ranked #70); the model picked",
+      "reasoning": "[TRADE: Colts trade UP (back into R1)] DAL -> IND. IND takes Akheem Mesidor (EDGE, Miami (FL)) at pick #20. Edge rusher addresses a top-3 need for this roster; modest reach (3 slots past board rank #23). Scheme fit: bend + power 4-3/3-4 hybrid edge (paye).",
       "score": 1.975,
       "factors": {
         "grade": 0.514,
@@ -1090,7 +1090,7 @@
         "id": "DAL_back_IND_up",
         "from": "DAL",
         "to": "IND",
-        "reason": "IND jumps into R1; DAL needs day-2 capital",
+        "reason": "IND selects Akheem Mesidor (EDGE) \u2014 a top-3 need after the trade.",
         "headline": "Colts trade UP (back into R1)",
         "description": null,
         "sources": [
@@ -1131,7 +1131,7 @@
       "college": "Alabama",
       "rank": 24,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] PIT takes Denzel Boston on value  -  no premium WR need, but the grade gap at this slot made the call straightforward. Fits the mccarthy_west_coast scheme profile the s",
+      "reasoning": "PIT takes Ty Simpson (QB, Alabama) at pick #21. Quarterback addresses the #1 need on the board for this roster; modest reach (3 slots past board rank #24). Also a position the GM has reached for historically. Scheme fit: play-action boot passer with mobility (rodgers 2025).",
       "score": 2.382,
       "factors": {
         "grade": 0.669,
@@ -1178,7 +1178,7 @@
       "college": "Alabama",
       "rank": 17,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] LAC has a critical IOL need  -  free agency didn't close it, and Olaivavega Ioane is the cleanest on-board solution at 22. Fits the harbaugh_power scheme profile the staff has built around. This was a ",
+      "reasoning": "LAC takes Kadyn Proctor (OT, Alabama) at pick #22. Offensive tackle addresses a depth-chart addition for this roster; mild value pick (5 slots ahead of board rank #17). Scheme fit: gap-power maulers (alt/slater core) \u2014 people movers.",
       "score": 2.687,
       "factors": {
         "grade": 0.847,
@@ -1225,7 +1225,7 @@
       "college": "Toledo",
       "rank": 33,
       "tier": "R1",
-      "reasoning": "[TRADE] DET selected BPA after trade \u2014 S Emmanuel McNeil-Warren",
+      "reasoning": "[TRADE: Eagles trade UP for Thieneman (S)] PHI -> DET. DET takes Emmanuel McNeil-Warren (S, Toledo) at pick #23. Safety addresses a depth-chart addition for this roster; reach for position \u2014 10 slots past board rank #33. Scheme fit: box ss + deep-half fs.",
       "score": 2.631,
       "factors": {
         "grade": 0.69,
@@ -1266,7 +1266,7 @@
         "id": "PHI_up_DET_back",
         "from": "PHI",
         "to": "DET",
-        "reason": "DET trades back to recoup day-2 capital",
+        "reason": "DET selects Emmanuel McNeil-Warren (S) \u2014 a depth-chart addition after the trade.",
         "headline": "Eagles trade UP for Thieneman (S)",
         "description": null,
         "sources": [
@@ -1308,7 +1308,7 @@
       "college": "Texas A&M",
       "rank": 44,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] With a real OT hole on the roster, CLE grabs Monroe Freeling  -  a fit that doesn't force the board. Fits the Monken offense scheme profile the staff has built around; had a documented pre-draft visit with CLE. Blake Miller (#32, OT) ",
+      "reasoning": "CLE takes KC Concepcion (WR, Texas A&M) at pick #24. Wide receiver addresses a top-2 need for this roster; notable reach (board rank #44, slot 24). Scheme fit: separator-first z + contested x.",
       "score": 2.828,
       "factors": {
         "grade": 0.806,
@@ -1355,7 +1355,7 @@
       "college": "Auburn",
       "rank": 26,
       "tier": "R1",
-      "reasoning": "[TRADE] NYJ selected BPA after trade \u2014 EDGE Keldric Faulk",
+      "reasoning": "[TRADE: Bears trade UP for DL, jump Lions] CHI -> NYJ. NYJ takes Keldric Faulk (EDGE, Auburn) at pick #25. Edge rusher addresses a secondary need for this roster; on schedule with the board (rank #26). Scheme fit: 4-3 de speed + power (gardner-era length).",
       "score": 2.915,
       "factors": {
         "grade": 0.719,
@@ -1396,7 +1396,7 @@
         "id": "CHI_up_NYJ_back",
         "from": "CHI",
         "to": "NYJ",
-        "reason": "NYJ adds to R1 stockpile (5 R1 picks in 2 years)",
+        "reason": "NYJ selects Keldric Faulk (EDGE) \u2014 a secondary need after the trade.",
         "headline": "Bears trade UP for DL, jump Lions",
         "description": null,
         "sources": [
@@ -1437,7 +1437,7 @@
       "college": "Utah",
       "rank": 25,
       "tier": "R3",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] BUF has a critical WR need  -  free agency didn't close it, and Skyler Bell is the cleanest on-board solution at 26. Fits the Brady offense scheme profile the staff has built around; had a documented p",
+      "reasoning": "BUF takes Caleb Lomu (OT, Utah) at pick #26. Offensive tackle addresses a secondary need for this roster; on schedule with the board (rank #25). Scheme fit: athletic pass-pro ots.",
       "score": 2.674,
       "factors": {
         "grade": 0.503,
@@ -1484,7 +1484,7 @@
       "college": "Arizona State",
       "rank": 19,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] SF has a critical OT need  -  free agency didn't close it, and Caleb Lomu is the cleanest on-board solution at 27. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre",
+      "reasoning": "SF takes Max Iheanachor (OT, Arizona State) at pick #27. Offensive tackle addresses a top-5 need for this roster; strong value \u2014 8 slots ahead of the board (rank #19). Scheme fit: athletic zone-blockers.",
       "score": 2.897,
       "factors": {
         "grade": 0.592,
@@ -1531,7 +1531,7 @@
       "college": "Tennessee",
       "rank": 43,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] HOU has a critical IOL need  -  free agency didn't close it, and Connor Lew is the cleanest on-board solution at 28. Had a documented pre-draft visit with HOU. DeMonte Capehart (#24, DL) was the live a",
+      "reasoning": "HOU takes Colton Hood (CB, Tennessee) at pick #28. Cornerback addresses a depth-chart addition for this roster; notable reach (board rank #43, slot 28). Scheme fit: press-man boundary (stingley).",
       "score": 2.27,
       "factors": {
         "grade": 0.656,
@@ -1578,7 +1578,7 @@
       "college": "Washington",
       "rank": 21,
       "tier": "R2",
-      "reasoning": "[TRADE] ARI selected BPA after trade \u2014 WR Denzel Boston",
+      "reasoning": "[TRADE: Chiefs trade UP for Arvell Reese] KC -> ARI. ARI takes Denzel Boston (WR, Washington) at pick #29. Wide receiver addresses a depth-chart addition for this roster; strong value \u2014 8 slots ahead of the board (rank #21). Scheme fit: vertical x + separator z.",
       "score": 2.51,
       "factors": {
         "grade": 0.518,
@@ -1619,7 +1619,7 @@
         "id": "KC_up_ARI_back",
         "from": "KC",
         "to": "ARI",
-        "reason": "Compensation pick received from KC",
+        "reason": "ARI selects Denzel Boston (WR) \u2014 a depth-chart addition after the trade.",
         "headline": "Chiefs trade UP for Arvell Reese",
         "description": null,
         "sources": [
@@ -1661,7 +1661,7 @@
       "college": "San Diego State",
       "rank": 31,
       "tier": "R2",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] MIA takes A.J. Haulcy on value  -  no premium S need, but the grade gap at this slot made the call straightforward. Fits the Hafley defense scheme profile the staff has built around; had a documented p",
+      "reasoning": "MIA takes Chris Johnson (CB, San Diego State) at pick #30. Cornerback addresses a top-2 need for this roster; on schedule with the board (rank #31). Scheme fit: press-man boundary (ramsey/smith).",
       "score": 2.164,
       "factors": {
         "grade": 0.557,
@@ -1708,7 +1708,7 @@
       "college": "Georgia",
       "rank": 28,
       "tier": "R1",
-      "reasoning": "[realigned to analyst consensus] [realigned to analyst consensus] [realigned to analyst consensus] NE has a critical OT need  -  free agency didn't close it, and Francis Mauigoa is the cleanest on-board solution at 31. Fits the mcdaniels_pro scheme profile the staff has built around. This was a close call over Spencer Fano (OT, ran",
+      "reasoning": "[TRADE: Packers trade UP (back into R1)] NE -> GB. GB takes C.J. Allen (LB, Georgia) at pick #31. Linebacker addresses a top-5 need for this roster; mild value pick (3 slots ahead of board rank #28). Scheme fit: coverage stack lb.",
       "score": 2.707,
       "factors": {
         "grade": 0.893,
@@ -1749,7 +1749,7 @@
         "id": "NE_back_GB_up",
         "from": "NE",
         "to": "GB",
-        "reason": "GB re-enters R1 for 5th-year-option eligibility",
+        "reason": "GB selects C.J. Allen (LB) \u2014 a top-5 need after the trade.",
         "headline": "Packers trade UP (back into R1)",
         "description": null,
         "sources": [
@@ -1788,7 +1788,7 @@
       "college": "Notre Dame",
       "rank": 27,
       "tier": "R1",
-      "reasoning": "[TRADE] CIN selected BPA after trade \u2014 RB Jadarian Price",
+      "reasoning": "[TRADE: Bengals trade UP (back into R1)] SEA -> CIN. CIN takes Jadarian Price (RB, Notre Dame) at pick #32. Running back addresses a secondary need for this roster; mild value pick (5 slots ahead of board rank #27). Scheme fit: receiving-capable zone back (chase brown lineage).",
       "score": 1.986,
       "factors": {
         "grade": 0.985,
@@ -1829,7 +1829,7 @@
         "id": "SEA_back_out_of_R1",
         "from": "SEA",
         "to": "CIN",
-        "reason": "CIN re-enters R1; Schneider's historical trade-down pattern",
+        "reason": "CIN selects Jadarian Price (RB) \u2014 a secondary need after the trade.",
         "headline": "Bengals trade UP (back into R1)",
         "description": null,
         "sources": [
@@ -1871,7 +1871,7 @@
       "college": "Iowa",
       "rank": 188,
       "tier": "R3",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "Day 2 opens with TJ Hall (CB, Iowa) to NYJ at #33. Cornerback \u2014 a top-2 need \u2014 filled with a notable reach (board rank #188, slot 33). Also a position the GM has reached for historically. Scheme fit: press-man boundary (gardner).",
       "score": 1.767,
       "factors": {
         "grade": 0.451,
@@ -1918,7 +1918,7 @@
       "college": "UCF",
       "rank": 30,
       "tier": "R1",
-      "reasoning": "[deduplicated: replaced with next-best board candidate]",
+      "reasoning": "Day 2 opens with Malachi Lawrence (EDGE, UCF) to ARI at #34. Edge rusher \u2014 a depth-chart addition \u2014 filled with a mild value pick (4 slots ahead of board rank #30). Also a position the GM has reached for historically. Scheme fit: convertible 3-4 olb / 4-3 de.",
       "score": 2.167,
       "factors": {
         "grade": 0.797,
@@ -1965,7 +1965,7 @@
       "college": "Ohio State",
       "rank": 37,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "Day 2 opens with Kayden McDonald (DL, Ohio State) to TEN at #35. Defensive lineman \u2014 a depth-chart addition \u2014 filled with a on schedule with the board (rank #37).",
       "score": 1.987,
       "factors": {
         "grade": 0.391,
@@ -2012,7 +2012,7 @@
       "college": "Alabama",
       "rank": 125,
       "tier": "R3",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "Day 2 opens with Justin Jefferson (LB, Alabama) to LV at #36. Linebacker \u2014 a depth-chart addition \u2014 filled with a notable reach (board rank #125, slot 36). Scheme fit: coverage-capable mike.",
       "score": 2.617,
       "factors": {
         "grade": 0.488,
@@ -2059,7 +2059,7 @@
       "college": "Clemson",
       "rank": 32,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Peter Woods (DL, Clemson) to NYG at #37. Defensive lineman \u2014 the #1 need on the board \u2014 filled with a mild value pick (5 slots ahead of board rank #32).",
       "score": 1.836,
       "factors": {
         "grade": 0.448,
@@ -2106,7 +2106,7 @@
       "college": "Missouri",
       "rank": 22,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Zion Young (EDGE, Missouri) to HOU at #38. Edge rusher \u2014 a depth-chart addition \u2014 filled with a strong value \u2014 16 slots ahead of the board (rank #22). Scheme fit: speed-first wide-9 edge.",
       "score": 2.26,
       "factors": {
         "grade": 0.445,
@@ -2153,7 +2153,7 @@
       "college": "Clemson",
       "rank": 46,
       "tier": "R1",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Avieon Terrell (CB, Clemson) to CLE at #39. Cornerback \u2014 a top-5 need \u2014 filled with a reach for position \u2014 7 slots past board rank #46. Scheme fit: cover-3 boundary / zone-match.",
       "score": 2.252,
       "factors": {
         "grade": 0.683,
@@ -2200,7 +2200,7 @@
       "college": "Alabama",
       "rank": 42,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Germie Bernard (WR, Alabama) to KC at #40. Wide receiver \u2014 a secondary need \u2014 filled with a on schedule with the board (rank #42). Scheme fit: elite yac-separator + vertical field stretchers (worthy/brown).",
       "score": 2.159,
       "factors": {
         "grade": 0.481,
@@ -2247,7 +2247,7 @@
       "college": "USC",
       "rank": 210,
       "tier": "R3",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "Day 2 opens with Bishop Fitzgerald (S, USC) to CIN at #41. Safety \u2014 a top-5 need \u2014 filled with a notable reach (board rank #210, slot 41). Scheme fit: two-high interchangeable.",
       "score": 2.849,
       "factors": {
         "grade": 0.491,
@@ -2294,7 +2294,7 @@
       "college": "Illinois",
       "rank": 61,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Gabe Jacas (EDGE, Illinois) to NO at #42. Edge rusher \u2014 a top-2 need \u2014 filled with a notable reach (board rank #61, slot 42). Scheme fit: 3-4 olb length + bend (jordan legacy.",
       "score": 2.651,
       "factors": {
         "grade": 0.499,
@@ -2341,7 +2341,7 @@
       "college": "South Carolina",
       "rank": 47,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Brandon Cisse (CB, South Carolina) to MIA at #43. Cornerback \u2014 a top-2 need \u2014 filled with a modest reach (4 slots past board rank #47). Scheme fit: press-man boundary (ramsey/smith).",
       "score": 2.273,
       "factors": {
         "grade": 0.535,
@@ -2388,7 +2388,7 @@
       "college": "Georgia Tech",
       "rank": 41,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Keylan Rutledge (IOL, Georgia Tech) to NYJ at #44. Interior o-line \u2014 a top-5 need \u2014 filled with a mild value pick (3 slots ahead of board rank #41). Scheme fit: gap-power maulers priority.",
       "score": 1.56,
       "factors": {
         "grade": 0.608,
@@ -2435,7 +2435,7 @@
       "college": "Florida",
       "rank": 62,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Caleb Banks (DL, Florida) to BAL at #45. Defensive lineman \u2014 the #1 need on the board \u2014 filled with a notable reach (board rank #62, slot 45).",
       "score": 1.95,
       "factors": {
         "grade": 0.676,
@@ -2482,7 +2482,7 @@
       "college": "Oklahoma",
       "rank": 36,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with R Mason Thomas (EDGE, Oklahoma) to TB at #46. Edge rusher \u2014 a top-2 need \u2014 filled with a strong value \u2014 10 slots ahead of the board (rank #36). Scheme fit: length + bend 3-4 olb (nassib/ygm lineage).",
       "score": 2.382,
       "factors": {
         "grade": 0.602,
@@ -2529,7 +2529,7 @@
       "college": "Texas Tech",
       "rank": 38,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Jacob Rodriguez (LB, Texas Tech) to IND at #47. Linebacker \u2014 the #1 need on the board \u2014 filled with a strong value \u2014 9 slots ahead of the board (rank #38). Scheme fit: coverage mike.",
       "score": 1.986,
       "factors": {
         "grade": 0.613,
@@ -2576,7 +2576,7 @@
       "college": "Georgia State",
       "rank": 82,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Ted Hurst (WR, Georgia State) to ATL at #48. Wide receiver \u2014 a top-2 need \u2014 filled with a notable reach (board rank #82, slot 48). Scheme fit: route-tree separators.",
       "score": 2.8,
       "factors": {
         "grade": 0.637,
@@ -2623,7 +2623,7 @@
       "college": "Georgia",
       "rank": 39,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Christen Miller (DL, Georgia) to MIN at #49. Defensive lineman \u2014 a top-5 need \u2014 filled with a strong value \u2014 10 slots ahead of the board (rank #39).",
       "score": 1.638,
       "factors": {
         "grade": 0.562,
@@ -2670,7 +2670,7 @@
       "college": "Michigan",
       "rank": 54,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Derrick Moore (EDGE, Michigan) to DET at #50. Edge rusher \u2014 a top-3 need \u2014 filled with a modest reach (4 slots past board rank #54). Also a position the GM has reached for historically. Scheme fit: powerful 4-3 de.",
       "score": 1.511,
       "factors": {
         "grade": 0.531,
@@ -2717,7 +2717,7 @@
       "college": "Indiana",
       "rank": 57,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with D'angelo Ponds (CB, Indiana) to CAR at #51. Cornerback \u2014 a top-5 need \u2014 filled with a modest reach (6 slots past board rank #57). Scheme fit: zone-match cover-6 cb.",
       "score": 1.928,
       "factors": {
         "grade": 0.495,
@@ -2764,7 +2764,7 @@
       "college": "Penn State",
       "rank": 65,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Dani Dennis-Sutton (EDGE, Penn State) to GB at #52. Edge rusher \u2014 a secondary need \u2014 filled with a notable reach (board rank #65, slot 52). Scheme fit: 3-4/4-3 hybrid olb.",
       "score": 2.952,
       "factors": {
         "grade": 0.539,
@@ -2811,7 +2811,7 @@
       "college": "LSU",
       "rank": 88,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with A.J. Haulcy (S, LSU) to PIT at #53. Safety \u2014 a top-2 need \u2014 filled with a notable reach (board rank #88, slot 53). Scheme fit: two-high interchangeable.",
       "score": 1.74,
       "factors": {
         "grade": 0.373,
@@ -2858,7 +2858,7 @@
       "college": "Vanderbilt",
       "rank": 52,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Eli Stowers (TE, Vanderbilt) to PHI at #54. Tight end \u2014 a top-3 need \u2014 filled with a on schedule with the board (rank #52). Scheme fit: y inline blocker + move te (goedert).",
       "score": 2.353,
       "factors": {
         "grade": 0.35,
@@ -2905,7 +2905,7 @@
       "college": "Oregon",
       "rank": 34,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Emmanuel Pregnon (IOL, Oregon) to LAC at #55. Interior o-line \u2014 the #1 need on the board \u2014 filled with a strong value \u2014 21 slots ahead of the board (rank #34). Scheme fit: gap-power maulers (alt/slater core) \u2014 people movers.",
       "score": 1.982,
       "factors": {
         "grade": 0.388,
@@ -2952,7 +2952,7 @@
       "college": "Texas",
       "rank": 58,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Anthony Hill Jr. (LB, Texas) to JAX at #56. Linebacker \u2014 a secondary need \u2014 filled with a on schedule with the board (rank #58). Also a position the GM has reached for historically. Scheme fit: rangy will + coverage mike.",
       "score": 1.77,
       "factors": {
         "grade": 0.587,
@@ -2999,7 +2999,7 @@
       "college": "Arizona",
       "rank": 45,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Treydan Stukes (CB, Arizona) to CHI at #57. Cornerback \u2014 a top-5 need \u2014 filled with a strong value \u2014 12 slots ahead of the board (rank #45). Also a position the GM has reached for historically. Scheme fit: press-match boundary.",
       "score": 2.386,
       "factors": {
         "grade": 0.552,
@@ -3046,7 +3046,7 @@
       "college": "Iowa",
       "rank": 72,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Gennings Dunker (OT, Iowa) to SF at #58. Offensive tackle \u2014 a top-5 need \u2014 filled with a notable reach (board rank #72, slot 58). Scheme fit: athletic zone-blockers.",
       "score": 2.45,
       "factors": {
         "grade": 0.51,
@@ -3093,7 +3093,7 @@
       "college": "Missouri",
       "rank": 59,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Josiah Trotter (LB, Missouri) to HOU at #59. Linebacker \u2014 a secondary need \u2014 filled with a on schedule with the board (rank #59). Scheme fit: rangy will + thumper mike.",
       "score": 1.641,
       "factors": {
         "grade": 0.597,
@@ -3140,7 +3140,7 @@
       "college": "Oklahoma",
       "rank": 89,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Gracen Halton (DL, Oklahoma) to CHI at #60. Defensive lineman \u2014 the #1 need on the board \u2014 filled with a notable reach (board rank #89, slot 60). Also a position the GM has reached for historically.",
       "score": 1.954,
       "factors": {
         "grade": 0.355,
@@ -3187,7 +3187,7 @@
       "college": "Pittsburgh",
       "rank": 53,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Kyle Louis (LB, Pittsburgh) to LAR at #61. Linebacker \u2014 a top-5 need \u2014 filled with a strong value \u2014 8 slots ahead of the board (rank #53). Scheme fit: rangy coverage mike.",
       "score": 1.454,
       "factors": {
         "grade": 0.643,
@@ -3234,7 +3234,7 @@
       "college": "Cincinnati",
       "rank": 176,
       "tier": "R1",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "Day 2 opens with Joe Royer (TE, Cincinnati) to DEN at #62. Tight end \u2014 the #1 need on the board \u2014 filled with a notable reach (board rank #176, slot 62). Scheme fit: y inline blocker + move te flex.",
       "score": 2.54,
       "factors": {
         "grade": 0.712,
@@ -3281,7 +3281,7 @@
       "college": "Texas Tech",
       "rank": 55,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Lee Hunter (DL, Texas Tech) to NE at #63. Defensive lineman \u2014 a secondary need \u2014 filled with a strong value \u2014 8 slots ahead of the board (rank #55).",
       "score": 1.879,
       "factors": {
         "grade": 0.649,
@@ -3328,7 +3328,7 @@
       "college": "Arkansas",
       "rank": 67,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "Day 2 opens with Mike Washington Jr. (RB, Arkansas) to SEA at #64. Running back \u2014 a top-3 need \u2014 filled with a modest reach (3 slots past board rank #67). Scheme fit: one-cut zone back (walker/charbonnet).",
       "score": 1.462,
       "factors": {
         "grade": 0.363,
@@ -3375,7 +3375,7 @@
       "college": "Auburn",
       "rank": 75,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "ARI grabs Keyron Crawford (EDGE, Auburn) in the third round. Edge rusher coverage at a depth-chart addition; reach for position \u2014 10 slots past board rank #75. Also a position the GM has reached for historically. Scheme fit: convertible 3-4 olb / 4-3 de.",
       "score": 1.748,
       "factors": {
         "grade": 0.305,
@@ -3422,7 +3422,7 @@
       "college": "Northwestern",
       "rank": 50,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "TEN grabs Caleb Tiernan (OT, Northwestern) in the third round. Offensive tackle coverage at a depth-chart addition; strong value \u2014 16 slots ahead of the board (rank #50). Scheme fit: pass-pro ot priority (major need).",
       "score": 2.063,
       "factors": {
         "grade": 0.382,
@@ -3469,7 +3469,7 @@
       "college": "Louisville",
       "rank": 68,
       "tier": "R4-R7",
-      "reasoning": "LV uses 67 on Chris Bell, a round-3-graded player (166th overall) at a position of real need. Fits the Shanahan zone (Kubiak) scheme profile the staff has built around; had a documented pre-draft visit with LV; extends a multi-pick investment in WR. This was a close call over Germie Bernard (WR, ranked #171); the model picked Chris Bell on marginal fit advantage, not grade separation.",
+      "reasoning": "LV grabs Chris Bell (WR, Louisville) in the third round. Wide receiver coverage at a top-2 need; on schedule with the board (rank #68). Scheme fit: vertical x + yac slot.",
       "score": 1.663,
       "factors": {
         "grade": 0.288,
@@ -3516,7 +3516,7 @@
       "college": "Clemson",
       "rank": 48,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "PHI grabs Antonio Williams (WR, Clemson) in the third round. Wide receiver coverage at a top-5 need; strong value \u2014 20 slots ahead of the board (rank #48). Also a position the GM has reached for historically. Scheme fit: alpha x (a.j. brown).",
       "score": 1.906,
       "factors": {
         "grade": 0.442,
@@ -3563,7 +3563,7 @@
       "college": "Arizona State",
       "rank": 77,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "HOU grabs Keith Abney II (CB, Arizona State) in the third round. Cornerback coverage at a depth-chart addition; reach for position \u2014 8 slots past board rank #77. Scheme fit: press-man boundary (stingley).",
       "score": 1.498,
       "factors": {
         "grade": 0.477,
@@ -3610,7 +3610,7 @@
       "college": "Michigan",
       "rank": 56,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "CLE grabs Jaishawn Barham (LB, Michigan) in the third round. Linebacker coverage at a depth-chart addition; strong value \u2014 14 slots ahead of the board (rank #56). Also a position the GM has reached for historically. Scheme fit: two-gap clean-up lbs.",
       "score": 2.034,
       "factors": {
         "grade": 0.44,
@@ -3657,7 +3657,7 @@
       "college": "Notre Dame",
       "rank": 76,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "WAS grabs Malachi Fields (WR, Notre Dame) in the third round. Wide receiver coverage at a top-2 need; modest reach (5 slots past board rank #76). Scheme fit: vertical z (mclaurin).",
       "score": 1.274,
       "factors": {
         "grade": 0.526,
@@ -3704,7 +3704,7 @@
       "college": "Ohio State",
       "rank": 93,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "CIN grabs Max Klare (TE, Ohio State) in the third round. Tight end coverage at a secondary need; notable reach (board rank #93, slot 72). Scheme fit: y/h hybrid move te with yac.",
       "score": 2.065,
       "factors": {
         "grade": 0.384,
@@ -3751,7 +3751,7 @@
       "college": "Georgia",
       "rank": 40,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "NO grabs Zachariah Branch (WR, Georgia) in the third round. Wide receiver coverage at the #1 need on the board; strong value \u2014 33 slots ahead of the board (rank #40). Scheme fit: vertical z (olave).",
       "score": 1.707,
       "factors": {
         "grade": 0.567,
@@ -3798,7 +3798,7 @@
       "college": "Florida State",
       "rank": 147,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "KC grabs Darrell Jackson Jr. (DL, Florida State) in the third round. Defensive lineman coverage at a top-5 need; notable reach (board rank #147, slot 74).",
       "score": 1.713,
       "factors": {
         "grade": 0.344,
@@ -3845,7 +3845,7 @@
       "college": "North Dakota State",
       "rank": 90,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "MIA grabs Bryce Lance (WR, North Dakota State) in the third round. Wide receiver coverage at the #1 need on the board; notable reach (board rank #90, slot 75). Also a position the GM has reached for historically. Scheme fit: vertical speed-first z (hill).",
       "score": 1.693,
       "factors": {
         "grade": 0.386,
@@ -3892,7 +3892,7 @@
       "college": "Iowa State",
       "rank": 119,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "PIT grabs Domonique Orange (DL, Iowa State) in the third round. Defensive lineman coverage at a depth-chart addition; notable reach (board rank #119, slot 76). Also a position the GM has reached for historically.",
       "score": 1.602,
       "factors": {
         "grade": 0.339,
@@ -3939,7 +3939,7 @@
       "college": "Cincinnati",
       "rank": 63,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "TB grabs Jake Golday (LB, Cincinnati) in the third round. Linebacker coverage at a top-3 need; strong value \u2014 14 slots ahead of the board (rank #63). Scheme fit: blitzing mike (david) + coverage sam.",
       "score": 1.922,
       "factors": {
         "grade": 0.571,
@@ -3986,7 +3986,7 @@
       "college": "Mississippi",
       "rank": 73,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "IND grabs De'Zhaun Stribling (WR, Mississippi) in the third round. Wide receiver coverage at a secondary need; mild value pick (5 slots ahead of board rank #73). Also a position the GM has reached for historically. Scheme fit: vertical z + contested x.",
       "score": 1.998,
       "factors": {
         "grade": 0.346,
@@ -4033,7 +4033,7 @@
       "college": "Ohio State",
       "rank": 103,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "ATL grabs Davison Igbinosun (CB, Ohio State) in the third round. Cornerback coverage at a top-3 need; notable reach (board rank #103, slot 79). Scheme fit: press-man and cover-3 hybrid boundary cb.",
       "score": 1.645,
       "factors": {
         "grade": 0.302,
@@ -4080,7 +4080,7 @@
       "college": "UConn",
       "rank": 85,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "BAL grabs Skyler Bell (WR, UConn) in the third round. Wide receiver coverage at a top-3 need; modest reach (5 slots past board rank #85). Scheme fit: big-body x contested winner + vertical z.",
       "score": 1.945,
       "factors": {
         "grade": 0.318,
@@ -4127,7 +4127,7 @@
       "college": "Texas A&M",
       "rank": 109,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "JAX grabs Tyler Onyedim (DL, Texas A&M) in the third round. Defensive lineman coverage at a top-3 need; notable reach (board rank #109, slot 81).",
       "score": 1.281,
       "factors": {
         "grade": 0.395,
@@ -4174,7 +4174,7 @@
       "college": "Auburn",
       "rank": 78,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "MIN grabs Connor Lew (IOL, Auburn) in the third round. Interior o-line coverage at a depth-chart addition; mild value pick (4 slots ahead of board rank #78). Scheme fit: athletic zone ol.",
       "score": 1.324,
       "factors": {
         "grade": 0.326,
@@ -4221,7 +4221,7 @@
       "college": "Georgia",
       "rank": 66,
       "tier": "R3",
-      "reasoning": "CAR uses 83 on Oscar Delp, a round-3-graded player (100th overall) at a position of secondary need. Fits the canales_westcoast scheme profile the staff has built around; had a documented pre-draft visit with CAR.",
+      "reasoning": "CAR grabs Oscar Delp (TE, Georgia) in the third round. Tight end coverage at a depth-chart addition; strong value \u2014 17 slots ahead of the board (rank #66). Scheme fit: y move te.",
       "score": 2.119,
       "factors": {
         "grade": 0.402,
@@ -4268,7 +4268,7 @@
       "college": "Georgia",
       "rank": 114,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "GB grabs Daylen Everette (CB, Georgia) in the third round. Cornerback coverage at the #1 need on the board; notable reach (board rank #114, slot 84). Scheme fit: zone-match boundary.",
       "score": 1.806,
       "factors": {
         "grade": 0.315,
@@ -4315,7 +4315,7 @@
       "college": "Kentucky",
       "rank": 81,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "PIT grabs Jalen Farmer (IOL, Kentucky) in the third round. Interior o-line coverage at a depth-chart addition; mild value pick (4 slots ahead of board rank #81). Scheme fit: gap-power maulers.",
       "score": 1.406,
       "factors": {
         "grade": 0.282,
@@ -4362,7 +4362,7 @@
       "college": "Miami (FL)",
       "rank": 80,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "LAC grabs Keionte Scott (CB, Miami (FL)) in the third round. Cornerback coverage at a top-5 need; mild value pick (6 slots ahead of board rank #80). Scheme fit: zone-match boundary.",
       "score": 1.952,
       "factors": {
         "grade": 0.303,
@@ -4409,7 +4409,7 @@
       "college": "South Carolina",
       "rank": 86,
       "tier": "R2",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "MIA grabs Jalon Kilgore (S, South Carolina) in the third round. Safety coverage at a top-3 need; on schedule with the board (rank #86). Scheme fit: two-high interchangeable.",
       "score": 1.349,
       "factors": {
         "grade": 0.522,
@@ -4456,7 +4456,7 @@
       "college": "Tennessee",
       "rank": 104,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "JAX grabs Joshua Josephs (EDGE, Tennessee) in the third round. Edge rusher coverage at a secondary need; notable reach (board rank #104, slot 88). Scheme fit: length + bend edge (walker/hines-allen).",
       "score": 1.264,
       "factors": {
         "grade": 0.329,
@@ -4503,7 +4503,7 @@
       "college": "Kansas State",
       "rank": 97,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "CHI grabs Sam Hecht (IOL, Kansas State) in the third round. Interior o-line coverage at a secondary need; reach for position \u2014 8 slots past board rank #97. Scheme fit: powerful gap-power ol.",
       "score": 1.912,
       "factors": {
         "grade": 0.337,
@@ -4550,7 +4550,7 @@
       "college": "Texas Tech",
       "rank": 107,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "MIA grabs Romello Height (EDGE, Texas Tech) in the third round. Edge rusher coverage at a secondary need; notable reach (board rank #107, slot 90). Scheme fit: 3-4 olb length + bend (chubb/phillips injury risks).",
       "score": 1.323,
       "factors": {
         "grade": 0.464,
@@ -4597,7 +4597,7 @@
       "college": "Memphis",
       "rank": 102,
       "tier": "R4-R7",
-      "reasoning": "BUF uses 91 on Travis Burke, a round-3-graded player (173th overall) at a position of secondary need. Fits the Brady offense scheme profile the staff has built around; had a documented pre-draft visit with BUF.",
+      "reasoning": "BUF grabs Travis Burke (OT, Memphis) in the third round. Offensive tackle coverage at a secondary need; reach for position \u2014 11 slots past board rank #102. Scheme fit: athletic pass-pro ots.",
       "score": 1.605,
       "factors": {
         "grade": 0.279,
@@ -4644,7 +4644,7 @@
       "college": "TCU",
       "rank": 134,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "DAL grabs Kaleb Elarms-Orr (LB, TCU) in the third round. Linebacker coverage at a top-3 need; notable reach (board rank #134, slot 92). Scheme fit: tampa-2 mike with sideline-to-sideline range.",
       "score": 1.658,
       "factors": {
         "grade": 0.316,
@@ -4691,7 +4691,7 @@
       "college": "LSU",
       "rank": 113,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "LAR grabs Garrett Nussmeier (QB, LSU) in the third round. Quarterback coverage at a depth-chart addition; notable reach (board rank #113, slot 93). Scheme fit: stafford \u2014 anticipation rhythm passer.",
       "score": 1.517,
       "factors": {
         "grade": 0.361,
@@ -4738,7 +4738,7 @@
       "college": "Indiana",
       "rank": 92,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "MIA grabs Elijah Sarratt (WR, Indiana) in the third round. Wide receiver coverage at the #1 need on the board; on schedule with the board (rank #92). Also a position the GM has reached for historically. Scheme fit: vertical speed-first z (hill).",
       "score": 1.277,
       "factors": {
         "grade": 0.369,
@@ -4785,7 +4785,7 @@
       "college": "Miami (FL)",
       "rank": 99,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "NE grabs Markel Bell (OT, Miami (FL)) in the third round. Offensive tackle coverage at a top-2 need; modest reach (4 slots past board rank #99). Scheme fit: gap-power + pass-pro priority (massive investment needed.",
       "score": 1.489,
       "factors": {
         "grade": 0.467,
@@ -4832,7 +4832,7 @@
       "college": "Texas",
       "rank": 71,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "SEA grabs Malik Muhammad (CB, Texas) in the third round. Cornerback coverage at the #1 need on the board; strong value \u2014 25 slots ahead of the board (rank #71). Scheme fit: zone-match boundary.",
       "score": 1.407,
       "factors": {
         "grade": 0.375,
@@ -4879,7 +4879,7 @@
       "college": "USC",
       "rank": 152,
       "tier": "R3",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "MIN grabs Kamari Ramsey (S, USC) in the third round. Safety coverage at a top-3 need; notable reach (board rank #152, slot 97). Scheme fit: box safety/nickel blitzer (cine/bynum).",
       "score": 1.306,
       "factors": {
         "grade": 0.455,
@@ -4926,7 +4926,7 @@
       "college": "Penn State",
       "rank": 91,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "PHI grabs Zakee Wheatley (S, Penn State) in the third round. Safety coverage at the #1 need on the board; mild value pick (7 slots ahead of board rank #91). Scheme fit: two-high interchangeable (blankenship / mukuba).",
       "score": 1.73,
       "factors": {
         "grade": 0.324,
@@ -4973,7 +4973,7 @@
       "college": "Miami (FL)",
       "rank": 111,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "PIT grabs Carson Beck (QB, Miami (FL)) in the third round. Quarterback coverage at the #1 need on the board; reach for position \u2014 12 slots past board rank #111. Also a position the GM has reached for historically. Scheme fit: play-action boot passer with mobility (rodgers 2025).",
       "score": 1.367,
       "factors": {
         "grade": 0.359,
@@ -5020,7 +5020,7 @@
       "college": "Stanford",
       "rank": 141,
       "tier": "R1",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "JAX grabs Sam Roush (TE, Stanford) in the third round. Tight end coverage at a depth-chart addition; notable reach (board rank #141, slot 100). Scheme fit: y move te + inline blocker (engram).",
       "score": 1.148,
       "factors": {
         "grade": 0.727,
@@ -5067,7 +5067,7 @@
       "college": "Arkansas",
       "rank": 121,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "TEN adds Julian Neal (CB, Arkansas) in round 4. Cornerback \u2014 #4 need \u2014 notable reach (board rank #121, slot 101). Scheme fit: zone-match boundary (sneed/ransom).",
       "score": 1.872,
       "factors": {
         "grade": 0.251,
@@ -5114,7 +5114,7 @@
       "college": "Arizona",
       "rank": 108,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal aligned]",
+      "reasoning": "LV adds Genesis Smith (S, Arizona) in round 4. Safety \u2014 #4 need \u2014 modest reach (6 slots past board rank #108). Scheme fit: two-high interchangeable.",
       "score": 1.795,
       "factors": {
         "grade": 0.225,
@@ -5161,7 +5161,7 @@
       "college": "Penn State",
       "rank": 115,
       "tier": "R4-R7",
-      "reasoning": "NYJ uses 103 on Drew Allar, a round-4-graded player (177th overall) at a position of real need. Had a documented pre-draft visit with NYJ. This was a close call over Joe Fagnano (QB, ranked #264); the model picked Drew Allar on marginal fit advantage, not grade separation.",
+      "reasoning": "NYJ adds Drew Allar (QB, Penn State) in round 4. Quarterback \u2014 #1 need \u2014 reach for position \u2014 12 slots past board rank #115. Scheme fit: rhythm pocket passer with pre-snap command (justin fields mobility).",
       "score": 1.976,
       "factors": {
         "grade": 0.275,
@@ -5208,7 +5208,7 @@
       "college": "Texas Tech",
       "rank": 198,
       "tier": "R4-R7",
-      "reasoning": "ARI uses 104 on Reggie Virgil, a round-4-graded player (210th overall) at a position of secondary need. Fits the McVay tree (LaFleur) scheme profile the staff has built around; had a documented pre-draft visit with ARI. This was a close call over Caleb Tiernan (OT, ranked #179); the model picked Reggie Virgil on marginal fit advantage, not grade separation.",
+      "reasoning": "ARI adds Reggie Virgil (WR, Texas Tech) in round 4. Wide receiver \u2014 off-need \u2014 notable reach (board rank #198, slot 104). Scheme fit: vertical x + separator z.",
       "score": 1.854,
       "factors": {
         "grade": 0.242,
@@ -5255,7 +5255,7 @@
       "college": "Oklahoma",
       "rank": 116,
       "tier": "R4-R7",
-      "reasoning": "NYG uses 105 on Febechi Nwaiwu, a round-4-graded player (209th overall) at a position of real need. Had a documented pre-draft visit with NYG. This was a close call over Logan Taylor (IOL, ranked #241); the model picked Febechi Nwaiwu on marginal fit advantage, not grade separation.",
+      "reasoning": "NYG adds Febechi Nwaiwu (IOL, Oklahoma) in round 4. Interior o-line \u2014 #3 need \u2014 reach for position \u2014 11 slots past board rank #116. Scheme fit: pass-pro ot priority (thomas/neal injury history).",
       "score": 1.723,
       "factors": {
         "grade": 0.243,
@@ -5302,7 +5302,7 @@
       "college": "Stephen F. Austin",
       "rank": 174,
       "tier": "R4-R7",
-      "reasoning": "HOU uses 106 on Charles Demmings, a round-4-graded player (189th overall) at a position of secondary need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with HOU.",
+      "reasoning": "HOU adds Charles Demmings (CB, Stephen F. Austin) in round 4. Cornerback \u2014 off-need \u2014 notable reach (board rank #174, slot 106). Scheme fit: press-man boundary (stingley).",
       "score": 1.887,
       "factors": {
         "grade": 0.262,
@@ -5349,7 +5349,7 @@
       "college": "Ohio State",
       "rank": 124,
       "tier": "R3",
-      "reasoning": "CLE uses 107 on Will Kacmarek, a round-4-graded player (88th overall) at a position of secondary need. Fits the Monken offense scheme profile the staff has built around; had a documented pre-draft visit with CLE; extends a multi-pick investment in TE.",
+      "reasoning": "CLE adds Will Kacmarek (TE, Ohio State) in round 4. Tight end \u2014 #6 need \u2014 notable reach (board rank #124, slot 107). Scheme fit: y/h combo.",
       "score": 1.657,
       "factors": {
         "grade": 0.434,
@@ -5396,7 +5396,7 @@
       "college": "Oregon",
       "rank": 171,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "DEN adds Jadon Canady (CB, Oregon) in round 4. Cornerback \u2014 #6 need \u2014 notable reach (board rank #171, slot 108). Also a position the GM has reached for historically. Scheme fit: press-man boundary (surtain lineage).",
       "score": 2.13,
       "factors": {
         "grade": 0.301,
@@ -5443,7 +5443,7 @@
       "college": "California",
       "rank": 168,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "KC adds Hezekiah Masses (CB, California) in round 4. Cornerback \u2014 #1 need \u2014 notable reach (board rank #168, slot 109). Scheme fit: press-man boundary (mcduffie/watson).",
       "score": 1.75,
       "factors": {
         "grade": 0.29,
@@ -5490,7 +5490,7 @@
       "college": "Texas A&M",
       "rank": 60,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "CIN adds Chase Bisontis (IOL, Texas A&M) in round 4. Interior o-line \u2014 #6 need \u2014 strong value \u2014 50 slots ahead of the board (rank #60). Scheme fit: pass-pro first ots with upside (amarius mims).",
       "score": 2.224,
       "factors": {
         "grade": 0.321,
@@ -5537,7 +5537,7 @@
       "college": "Texas A&M",
       "rank": 206,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "DEN adds Le'Veon Moss (RB, Texas A&M) in round 4. Running back \u2014 off-need \u2014 notable reach (board rank #206, slot 111). Also a position the GM has reached for historically. Scheme fit: three-down back.",
       "score": 1.999,
       "factors": {
         "grade": 0.327,
@@ -5584,7 +5584,7 @@
       "college": "Duke",
       "rank": 95,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "DAL adds Brian Parker II (OT, Duke) in round 4. Offensive tackle \u2014 off-need \u2014 strong value \u2014 17 slots ahead of the board (rank #95). Scheme fit: gap-power interior (booker).",
       "score": 1.557,
       "factors": {
         "grade": 0.294,
@@ -5631,7 +5631,7 @@
       "college": "Miami (OH)",
       "rank": 324,
       "tier": "UDFA",
-      "reasoning": "IND uses 113 on Jackson Kuwatch, a round-4-graded player (324th overall) at a position of real need. Fits the anarumo_pressure scheme profile the staff has built around; had a documented pre-draft visit with IND; extends a multi-pick investment in EDGE.",
+      "reasoning": "IND adds Jackson Kuwatch (EDGE, Miami (OH)) in round 4. Edge rusher \u2014 #3 need \u2014 notable reach (board rank #324, slot 113). Scheme fit: bend + power 4-3/3-4 hybrid edge (paye).",
       "score": 2.07,
       "factors": {
         "grade": 0.171,
@@ -5678,7 +5678,7 @@
       "college": "Boston College",
       "rank": 157,
       "tier": "R4-R7",
-      "reasoning": "PHI uses 114 on Jude Bowry, a round-4-graded player (162th overall) at a position of real need. Fits the fangio_match scheme profile the staff has built around; had a documented pre-draft visit with PHI; extends a multi-pick investment in OT. This was a close call over Isaiah World (OT, ranked #184); the model picked Jude Bowry on marginal fit advantage, not grade separation.",
+      "reasoning": "PHI adds Jude Bowry (OT, Boston College) in round 4. Offensive tackle \u2014 off-need \u2014 notable reach (board rank #157, slot 114). Scheme fit: gap-power maulers (mailata/johnson core.",
       "score": 1.8,
       "factors": {
         "grade": 0.293,
@@ -5725,7 +5725,7 @@
       "college": "Texas A&M",
       "rank": 51,
       "tier": "R4-R7",
-      "reasoning": "BAL uses 115 on Cashius Howell, a round-4-graded player (141th overall) at a position of secondary need. Fits the defensive multiple (Minter) scheme profile the staff has built around. This was a close call over L.T. Overton (EDGE, ranked #152); the model picked Cashius Howell on marginal fit advantage, not grade separation.",
+      "reasoning": "BAL adds Cashius Howell (EDGE, Texas A&M) in round 4. Edge rusher \u2014 #6 need \u2014 strong value \u2014 64 slots ahead of the board (rank #51). Scheme fit: length + power 3-4 olb.",
       "score": 1.526,
       "factors": {
         "grade": 0.323,
@@ -5772,7 +5772,7 @@
       "college": "Texas A&M",
       "rank": 94,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "TB adds Trey Zuhn III (OT, Texas A&M) in round 4. Offensive tackle \u2014 off-need \u2014 strong value \u2014 22 slots ahead of the board (rank #94). Scheme fit: athletic zone ol (wirfs lt).",
       "score": 1.927,
       "factors": {
         "grade": 0.357,
@@ -5819,7 +5819,7 @@
       "college": "Tennessee",
       "rank": 64,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "LV adds Chris Brazzell (WR, Tennessee) in round 4. Wide receiver \u2014 #2 need \u2014 strong value \u2014 53 slots ahead of the board (rank #64). Scheme fit: vertical x + yac slot.",
       "score": 1.569,
       "factors": {
         "grade": 0.309,
@@ -5866,7 +5866,7 @@
       "college": "Auburn",
       "rank": 340,
       "tier": "UDFA",
-      "reasoning": "DET uses 118 on Bobby Jamison-Travis, a round-4-graded player (338th overall) at a position of real need. Had a documented pre-draft visit with DET.",
+      "reasoning": "DET adds Bobby Jamison-Travis (DL, Auburn) in round 4. Defensive lineman \u2014 #4 need \u2014 notable reach (board rank #340, slot 118). Also a position the GM has reached for historically.",
       "score": 1.66,
       "factors": {
         "grade": 0.165,
@@ -5913,7 +5913,7 @@
       "college": "NC State",
       "rank": 105,
       "tier": "R4-R7",
-      "reasoning": "CAR uses 119 on Justin Joly, a round-4-graded player (167th overall) at a position of secondary need. Fits the canales_westcoast scheme profile the staff has built around; had a documented pre-draft visit with CAR; extends a multi-pick investment in TE.",
+      "reasoning": "CAR adds Justin Joly (TE, NC State) in round 4. Tight end \u2014 off-need \u2014 strong value \u2014 14 slots ahead of the board (rank #105). Scheme fit: y move te.",
       "score": 1.848,
       "factors": {
         "grade": 0.287,
@@ -5960,7 +5960,7 @@
       "college": "Central Michigan",
       "rank": 265,
       "tier": "UDFA",
-      "reasoning": "GB uses 120 on Michael Heldman, a round-4-graded player (270th overall) at a position of real need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with GB. This was a close call over Nyjalik Kelly (EDGE, ranked #306); the model picked Michael Heldman on marginal fit advantage, not grade separation.",
+      "reasoning": "GB adds Michael Heldman (EDGE, Central Michigan) in round 4. Edge rusher \u2014 #6 need \u2014 notable reach (board rank #265, slot 120). Scheme fit: 3-4/4-3 hybrid olb.",
       "score": 2.209,
       "factors": {
         "grade": 0.199,
@@ -6007,7 +6007,7 @@
       "college": "Cincinnati",
       "rank": 172,
       "tier": "R4-R7",
-      "reasoning": "PIT uses 121 on Jeff Caldwell, a round-4-graded player (188th overall) at a position of secondary need. Fits the mccarthy_west_coast scheme profile the staff has built around; had a documented pre-draft visit with PIT; extends a multi-pick investment in WR. This was a close call over Kendrick Law (WR, ranked #205); the model picked Jeff Caldwell on marginal fit advantage, not grade separation.",
+      "reasoning": "PIT adds Jeff Caldwell (WR, Cincinnati) in round 4. Wide receiver \u2014 #5 need \u2014 notable reach (board rank #172, slot 121). Scheme fit: contested x + vertical z.",
       "score": 1.721,
       "factors": {
         "grade": 0.263,
@@ -6054,7 +6054,7 @@
       "college": "Mississippi State",
       "rank": 74,
       "tier": "R4-R7",
-      "reasoning": "ATL uses 122 on Brenen Thompson, a round-4-graded player (180th overall) at a position of real need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with ATL; extends a multi-pick investment in WR. This was a close call over Zavion Thomas (WR, ranked #262); the model picked Brenen Thompson on marginal fit advantage, not grade separation.",
+      "reasoning": "ATL adds Brenen Thompson (WR, Mississippi State) in round 4. Wide receiver \u2014 #2 need \u2014 strong value \u2014 48 slots ahead of the board (rank #74). Scheme fit: route-tree separators.",
       "score": 2.047,
       "factors": {
         "grade": 0.271,
@@ -6101,7 +6101,7 @@
       "college": "Indiana",
       "rank": 35,
       "tier": "R4-R7",
-      "reasoning": "[deduplicated: replaced with next-best board candidate]",
+      "reasoning": "LAC adds Omar Cooper Jr. (WR, Indiana) in round 4. Wide receiver \u2014 #7 need \u2014 strong value \u2014 88 slots ahead of the board (rank #35). Also a position the GM has reached for historically. Scheme fit: vertical x + contested z (mcconkey slot yac).",
       "score": 1.978,
       "factors": {
         "grade": 0.353,
@@ -6148,7 +6148,7 @@
       "college": "Alabama",
       "rank": 187,
       "tier": "R4-R7",
-      "reasoning": "JAX uses 124 on Parker Brailsford, a round-4-graded player (199th overall) at a position of secondary need. Had a documented pre-draft visit with JAX. This was a close call over Dametrious Crownover (OT, ranked #148); the model picked Parker Brailsford on marginal fit advantage, not grade separation.",
+      "reasoning": "JAX adds Parker Brailsford (IOL, Alabama) in round 4. Interior o-line \u2014 #5 need \u2014 notable reach (board rank #187, slot 124). Scheme fit: athletic zone ol.",
       "score": 1.292,
       "factors": {
         "grade": 0.252,
@@ -6195,7 +6195,7 @@
       "college": "Wisconsin",
       "rank": 140,
       "tier": "R4-R7",
-      "reasoning": "NE uses 125 on Mason Reiger, a round-4-graded player (207th overall) at a position of secondary need. Fits the mcdaniels_pro scheme profile the staff has built around; had a documented pre-draft visit with NE.",
+      "reasoning": "NE adds Mason Reiger (EDGE, Wisconsin) in round 4. Edge rusher \u2014 #4 need \u2014 notable reach (board rank #140, slot 125). Scheme fit: 2-gap 3-4 de + setter olb mix (gonzalez / chaisson).",
       "score": 2.034,
       "factors": {
         "grade": 0.244,
@@ -6242,7 +6242,7 @@
       "college": "Oregon",
       "rank": 227,
       "tier": "R4-R7",
-      "reasoning": "BUF uses 126 on Malik Benson, a round-4-graded player (235th overall) at a position of real need. Fits the Brady offense scheme profile the staff has built around; had a documented pre-draft visit with BUF; extends a multi-pick investment in WR.",
+      "reasoning": "BUF adds Malik Benson (WR, Oregon) in round 4. Wide receiver \u2014 #6 need \u2014 notable reach (board rank #227, slot 126). Scheme fit: yac-separator slot.",
       "score": 2.105,
       "factors": {
         "grade": 0.222,
@@ -6289,7 +6289,7 @@
       "college": "Indiana",
       "rank": 219,
       "tier": "R4-R7",
-      "reasoning": "SF uses 127 on Mikail Kamara, a round-4-graded player (228th overall) at a position of real need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with SF.",
+      "reasoning": "SF adds Mikail Kamara (EDGE, Indiana) in round 4. Edge rusher \u2014 #1 need \u2014 notable reach (board rank #219, slot 127). Scheme fit: hand-usage power 4-3 de.",
       "score": 2.457,
       "factors": {
         "grade": 0.227,
@@ -6336,7 +6336,7 @@
       "college": "Florida",
       "rank": 201,
       "tier": "R4-R7",
-      "reasoning": "DET uses 128 on Tyreak Sapp, a round-4-graded player (214th overall) at a position of real need. Had a documented pre-draft visit with DET; aligns with the GM's documented positional preferences; extends a multi-pick investment in EDGE. This was a close call over Tyre West (EDGE, ranked #327); the model picked Tyreak Sapp on marginal fit advantage, not grade separation.",
+      "reasoning": "DET adds Tyreak Sapp (EDGE, Florida) in round 4. Edge rusher \u2014 #3 need \u2014 notable reach (board rank #201, slot 128). Also a position the GM has reached for historically. Scheme fit: powerful 4-3 de.",
       "score": 1.409,
       "factors": {
         "grade": 0.238,
@@ -6383,7 +6383,7 @@
       "college": "Texas",
       "rank": 169,
       "tier": "R4-R7",
-      "reasoning": "CHI uses 129 on Michael Taaffe, a round-4-graded player (186th overall) at a position of real need. Fits the default scheme profile the staff has built around; had a documented pre-draft visit with CHI; extends a multi-pick investment in S. This was a close call over Robert Spears-Jennings (S, ranked #220); the model picked Michael Taaffe on marginal fit advantage, not grade separation.",
+      "reasoning": "CHI adds Michael Taaffe (S, Texas) in round 4. Safety \u2014 #2 need \u2014 notable reach (board rank #169, slot 129). Also a position the GM has reached for historically. Scheme fit: box safety/nickel hybrid plus deep-half centerfielder.",
       "score": 2.172,
       "factors": {
         "grade": 0.265,
@@ -6430,7 +6430,7 @@
       "college": "Cincinnati",
       "rank": 143,
       "tier": "R4-R7",
-      "reasoning": "MIA uses 130 on Cyrus Allen, a round-4-graded player (218th overall) at a position of real need. Had a documented pre-draft visit with MIA. This was a close call over Jordan Hudson (WR, ranked #307); the model picked Cyrus Allen on marginal fit advantage, not grade separation.",
+      "reasoning": "MIA adds Cyrus Allen (WR, Cincinnati) in round 4. Wide receiver \u2014 #1 need \u2014 notable reach (board rank #143, slot 130). Also a position the GM has reached for historically. Scheme fit: vertical speed-first z (hill).",
       "score": 1.941,
       "factors": {
         "grade": 0.235,
@@ -6477,7 +6477,7 @@
       "college": "Texas A&M",
       "rank": 144,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "NE adds Will Lee III (CB, Texas A&M) in round 4. Cornerback \u2014 #7 need \u2014 notable reach (board rank #144, slot 131). Scheme fit: press-man boundary (gonzalez).",
       "score": 1.35,
       "factors": {
         "grade": 0.336,
@@ -6524,7 +6524,7 @@
       "college": "Alabama",
       "rank": 110,
       "tier": "R4-R7",
-      "reasoning": "NO uses 132 on L.T. Overton, a round-4-graded player (152th overall) at a position of real need. Fits the staley_3-4 scheme profile the staff has built around; extends a multi-pick investment in EDGE. This was a close call over Anthony Lucas (EDGE, ranked #170); the model picked L.T. Overton on marginal fit advantage, not grade separation.",
+      "reasoning": "NO adds L.T. Overton (EDGE, Alabama) in round 4. Edge rusher \u2014 #2 need \u2014 strong value \u2014 22 slots ahead of the board (rank #110). Scheme fit: 3-4 olb length + bend (jordan legacy.",
       "score": 1.603,
       "factors": {
         "grade": 0.306,
@@ -6571,7 +6571,7 @@
       "college": "Washington",
       "rank": 208,
       "tier": "R4-R7",
-      "reasoning": "SF uses 133 on Carver Willis, a round-4-graded player (221th overall) at a position of real need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with SF; extends a multi-pick investment in OT. This was a close call over Alex Harkey (OT, ranked #253); the model picked Carver Willis on marginal fit advantage, not grade separation.",
+      "reasoning": "SF adds Carver Willis (OT, Washington) in round 4. Offensive tackle \u2014 #5 need \u2014 notable reach (board rank #208, slot 133). Scheme fit: athletic zone-blockers.",
       "score": 2.133,
       "factors": {
         "grade": 0.233,
@@ -6618,7 +6618,7 @@
       "college": "Texas A&M",
       "rank": 149,
       "tier": "R4-R7",
-      "reasoning": "LV uses 134 on Dametrious Crownover, a round-4-graded player (148th overall) at a position of secondary need. Fits the Shanahan zone (Kubiak) scheme profile the staff has built around. This was a close call over Gennings Dunker (OT, ranked #169); the model picked Dametrious Crownover on marginal fit advantage, not grade separation.",
+      "reasoning": "LV adds Dametrious Crownover (OT, Texas A&M) in round 4. Offensive tackle \u2014 #8 need \u2014 notable reach (board rank #149, slot 134). Scheme fit: gap-power maulers.",
       "score": 1.502,
       "factors": {
         "grade": 0.312,
@@ -6665,7 +6665,7 @@
       "college": "Kentucky",
       "rank": 195,
       "tier": "R4-R7",
-      "reasoning": "PIT uses 135 on Kendrick Law, a round-4-graded player (205th overall) at a position of secondary need. Fits the mccarthy_west_coast scheme profile the staff has built around; had a documented pre-draft visit with PIT; extends a multi-pick investment in WR. This was a close call over Kaden Wetjen (WR, ranked #225); the model picked Kendrick Law on marginal fit advantage, not grade separation.",
+      "reasoning": "PIT adds Kendrick Law (WR, Kentucky) in round 4. Wide receiver \u2014 #5 need \u2014 notable reach (board rank #195, slot 135). Scheme fit: contested x + vertical z.",
       "score": 1.65,
       "factors": {
         "grade": 0.246,
@@ -6712,7 +6712,7 @@
       "college": "Iowa",
       "rank": 216,
       "tier": "R4-R7",
-      "reasoning": "NO uses 136 on Kaden Wetjen, a round-4-graded player (225th overall) at a position of real need. Fits the staley_3-4 scheme profile the staff has built around; extends a multi-pick investment in WR. This was a close call over Eli Heidenreich (WR, ranked #226); the model picked Kaden Wetjen on marginal fit advantage, not grade separation.",
+      "reasoning": "NO adds Kaden Wetjen (WR, Iowa) in round 4. Wide receiver \u2014 #1 need \u2014 notable reach (board rank #216, slot 136). Scheme fit: vertical z (olave).",
       "score": 1.427,
       "factors": {
         "grade": 0.229,
@@ -6759,7 +6759,7 @@
       "college": "Oregon",
       "rank": 166,
       "tier": "R4-R7",
-      "reasoning": "PHI uses 137 on Isaiah World, a round-4-graded player (184th overall) at a position of real need. Fits the fangio_match scheme profile the staff has built around; had a documented pre-draft visit with PHI; extends a multi-pick investment in OT.",
+      "reasoning": "PHI adds Isaiah World (OT, Oregon) in round 4. Offensive tackle \u2014 off-need \u2014 notable reach (board rank #166, slot 137). Scheme fit: gap-power maulers (mailata/johnson core.",
       "score": 1.692,
       "factors": {
         "grade": 0.267,
@@ -6806,7 +6806,7 @@
       "college": "Georgia",
       "rank": 137,
       "tier": "R4-R7",
-      "reasoning": "SF uses 138 on Colbie Young, a round-4-graded player (244th overall) at a position of real need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with SF; extends a multi-pick investment in WR. This was a close call over Jordan Hudson (WR, ranked #307); the model picked Colbie Young on marginal fit advantage, not grade separation.",
+      "reasoning": "SF adds Colbie Young (WR, Georgia) in round 4. Wide receiver \u2014 #3 need \u2014 on schedule with the board (rank #137). Scheme fit: yac-first separator.",
       "score": 1.895,
       "factors": {
         "grade": 0.215,
@@ -6853,7 +6853,7 @@
       "college": "Oregon",
       "rank": 245,
       "tier": "R4-R7",
-      "reasoning": "SF uses 139 on Alex Harkey, a round-4-graded player (253th overall) at a position of real need. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with SF; extends a multi-pick investment in OT.",
+      "reasoning": "SF adds Alex Harkey (OT, Oregon) in round 4. Offensive tackle \u2014 #5 need \u2014 notable reach (board rank #245, slot 139). Scheme fit: athletic zone-blockers.",
       "score": 1.834,
       "factors": {
         "grade": 0.209,
@@ -6900,7 +6900,7 @@
       "college": "Tennessee",
       "rank": 327,
       "tier": "UDFA",
-      "reasoning": "NYJ uses 140 on Tyre West, a round-4-graded player (327th overall) at a position of real need. Fits the 3-4 multiple (Glenn) scheme profile the staff has built around; had a documented pre-draft visit with NYJ; extends a multi-pick investment in EDGE. This was a close call over Cian Slone (EDGE, ranked #361); the model picked Tyre West on marginal fit advantage, not grade separation.",
+      "reasoning": "NYJ adds Tyre West (EDGE, Tennessee) in round 4. Edge rusher \u2014 #8 need \u2014 notable reach (board rank #327, slot 140). Scheme fit: 4-3 de speed + power (gardner-era length).",
       "score": 1.846,
       "factors": {
         "grade": 0.17,
@@ -6947,7 +6947,7 @@
       "college": "Notre Dame",
       "rank": 158,
       "tier": "R4-R7",
-      "reasoning": "HOU continues its Day 3 build at 141 with Billy Schrauth  -  a developmental/depth add at IOL. Had a documented pre-draft visit with HOU; extends a multi-pick investment in IOL.",
+      "reasoning": "HOU adds Billy Schrauth (IOL, Notre Dame) in round 5. Interior o-line \u2014 #2 need \u2014 notable reach (board rank #158, slot 141). Scheme fit: athletic pass-pro priority (major fa/draft investment).",
       "score": 1.435,
       "factors": {
         "grade": 0.285,
@@ -6994,7 +6994,7 @@
       "college": "LSU",
       "rank": 710,
       "tier": "UDFA",
-      "reasoning": "TEN continues its Day 3 build at 142 with Chris Hilton  -  a developmental/depth add at WR. Had a documented pre-draft visit with TEN.",
+      "reasoning": "TEN adds Chris Hilton (WR, LSU) in round 5. Wide receiver \u2014 #6 need \u2014 notable reach (board rank #710, slot 142). Also a position the GM has reached for historically. Scheme fit: vertical z (ridley).",
       "score": 1.578,
       "factors": {
         "grade": 0.086,
@@ -7041,7 +7041,7 @@
       "college": "Clemson",
       "rank": 181,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "ARI adds Adam Randall (RB, Clemson) in round 5. Running back \u2014 #4 need \u2014 notable reach (board rank #181, slot 143). Scheme fit: one-cut zone back with power-gap flex.",
       "score": 1.834,
       "factors": {
         "grade": 0.272,
@@ -7088,7 +7088,7 @@
       "college": "Texas Tech",
       "rank": 148,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "TEN adds Caleb Douglas (WR, Texas Tech) in round 5. Wide receiver \u2014 #6 need \u2014 modest reach (4 slots past board rank #148). Also a position the GM has reached for historically. Scheme fit: vertical z (ridley).",
       "score": 1.461,
       "factors": {
         "grade": 0.308,
@@ -7135,7 +7135,7 @@
       "college": "Washington",
       "rank": 98,
       "tier": "R4-R7",
-      "reasoning": "NYG continues its Day 3 build at 145 with Tacario Davis  -  a developmental/depth add at CB. Had a documented pre-draft visit with NYG.",
+      "reasoning": "NYG adds Tacario Davis (CB, Washington) in round 5. Cornerback \u2014 #2 need \u2014 strong value \u2014 47 slots ahead of the board (rank #98). Scheme fit: zone-match boundary (banks).",
       "score": 1.542,
       "factors": {
         "grade": 0.295,
@@ -7182,7 +7182,7 @@
       "college": "Navy",
       "rank": 217,
       "tier": "R4-R7",
-      "reasoning": "CLE continues its Day 3 build at 146 with Eli Heidenreich  -  a developmental/depth add at WR. Fits the Monken offense scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "CLE adds Eli Heidenreich (WR, Navy) in round 5. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #217, slot 146). Scheme fit: separator-first z + contested x.",
       "score": 1.387,
       "factors": {
         "grade": 0.229,
@@ -7229,7 +7229,7 @@
       "college": "Maryland",
       "rank": 279,
       "tier": "UDFA",
-      "reasoning": "WAS continues its Day 3 build at 147 with Alan Herron  -  a developmental/depth add at IOL. Had a documented pre-draft visit with WAS.",
+      "reasoning": "WAS adds Alan Herron (IOL, Maryland) in round 5. Interior o-line \u2014 #3 need \u2014 notable reach (board rank #279, slot 147). Scheme fit: pass-pro ot priority (laremy tunsil fa).",
       "score": 1.451,
       "factors": {
         "grade": 0.191,
@@ -7276,7 +7276,7 @@
       "college": "Miami (FL)",
       "rank": 243,
       "tier": "R4-R7",
-      "reasoning": "KC continues its Day 3 build at 148 with C.J. Daniels  -  a developmental/depth add at WR. Fits the reid_spread scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "KC adds C.J. Daniels (WR, Miami (FL)) in round 5. Wide receiver \u2014 #7 need \u2014 notable reach (board rank #243, slot 148). Scheme fit: elite yac-separator + vertical field stretchers (worthy/brown).",
       "score": 1.511,
       "factors": {
         "grade": 0.211,
@@ -7323,7 +7323,7 @@
       "college": "BYU",
       "rank": 182,
       "tier": "R4-R7",
-      "reasoning": "CLE continues its Day 3 build at 149 with Jack Kelly  -  a developmental/depth add at LB. Had a documented pre-draft visit with CLE; aligns with the GM's documented positional preferences.",
+      "reasoning": "CLE adds Jack Kelly (LB, BYU) in round 5. Linebacker \u2014 #9 need \u2014 notable reach (board rank #182, slot 149). Also a position the GM has reached for historically. Scheme fit: two-gap clean-up lbs.",
       "score": 1.321,
       "factors": {
         "grade": 0.254,
@@ -7370,7 +7370,7 @@
       "college": "Washington",
       "rank": 161,
       "tier": "R4-R7",
-      "reasoning": "NO continues its Day 3 build at 150 with Ephesians Prysock  -  a developmental/depth add at CB. Fits the staley_3-4 scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "NO adds Ephesians Prysock (CB, Washington) in round 5. Cornerback \u2014 #5 need \u2014 reach for position \u2014 11 slots past board rank #161. Scheme fit: zone-match boundary (lattimore.",
       "score": 1.353,
       "factors": {
         "grade": 0.276,
@@ -7417,7 +7417,7 @@
       "college": "USC",
       "rank": 159,
       "tier": "R4-R7",
-      "reasoning": "MIA continues its Day 3 build at 151 with Anthony Lucas  -  a developmental/depth add at EDGE. Fits the Hafley defense scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "MIA adds Anthony Lucas (EDGE, USC) in round 5. Edge rusher \u2014 #6 need \u2014 reach for position \u2014 8 slots past board rank #159. Scheme fit: 3-4 olb length + bend (chubb/phillips injury risks).",
       "score": 1.356,
       "factors": {
         "grade": 0.283,
@@ -7464,7 +7464,7 @@
       "college": "Houston",
       "rank": 260,
       "tier": "UDFA",
-      "reasoning": "DAL continues its Day 3 build at 152 with Latrell McCutchin  -  a developmental/depth add at CB. Had a documented pre-draft visit with DAL; extends a multi-pick investment in CB.",
+      "reasoning": "DAL adds Latrell McCutchin (CB, Houston) in round 5. Cornerback \u2014 #1 need \u2014 notable reach (board rank #260, slot 152). Scheme fit: zone-match cover-2/3.",
       "score": 1.356,
       "factors": {
         "grade": 0.201,
@@ -7511,7 +7511,7 @@
       "college": "UCF",
       "rank": 304,
       "tier": "UDFA",
-      "reasoning": "GB continues its Day 3 build at 153 with Nyjalik Kelly  -  a developmental/depth add at EDGE. Fits the shanahan_zone scheme profile the staff has built around; had a documented pre-draft visit with GB; extends a multi-pick investment in EDGE.",
+      "reasoning": "GB adds Nyjalik Kelly (EDGE, UCF) in round 5. Edge rusher \u2014 #6 need \u2014 notable reach (board rank #304, slot 153). Scheme fit: 3-4/4-3 hybrid olb.",
       "score": 1.859,
       "factors": {
         "grade": 0.179,
@@ -7558,7 +7558,7 @@
       "college": "Missouri",
       "rank": 118,
       "tier": "R4-R7",
-      "reasoning": "BAL continues its Day 3 build at 154 with Chris McClellan  -  a developmental/depth add at IDL. Fits the defensive multiple (Minter) scheme profile the staff has built around; extends a multi-pick investment in IDL.",
+      "reasoning": "BAL adds Chris McClellan (DL, Missouri) in round 5. Defensive lineman \u2014 #1 need \u2014 strong value \u2014 36 slots ahead of the board (rank #118).",
       "score": 1.352,
       "factors": {
         "grade": 0.297,
@@ -7605,7 +7605,7 @@
       "college": "Ohio State",
       "rank": 135,
       "tier": "R4-R7",
-      "reasoning": "TB continues its Day 3 build at 155 with Caden Curry  -  a developmental/depth add at EDGE. Fits the bowles_blitz scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "TB adds Caden Curry (EDGE, Ohio State) in round 5. Edge rusher \u2014 #2 need \u2014 strong value \u2014 20 slots ahead of the board (rank #135). Scheme fit: length + bend 3-4 olb (nassib/ygm lineage).",
       "score": 1.569,
       "factors": {
         "grade": 0.269,
@@ -7652,7 +7652,7 @@
       "college": "Kansas State",
       "rank": 631,
       "tier": "UDFA",
-      "reasoning": "IND continues its Day 3 build at 156 with Jerand Bradley  -  a developmental/depth add at WR. Had a documented pre-draft visit with IND.",
+      "reasoning": "IND adds Jerand Bradley (WR, Kansas State) in round 5. Wide receiver \u2014 #6 need \u2014 notable reach (board rank #631, slot 156). Also a position the GM has reached for historically. Scheme fit: vertical z + contested x.",
       "score": 1.589,
       "factors": {
         "grade": 0.096,
@@ -7699,7 +7699,7 @@
       "college": "Houston",
       "rank": 193,
       "tier": "R4-R7",
-      "reasoning": "DET continues its Day 3 build at 157 with Tanner Koziol  -  a developmental/depth add at TE. Had a documented pre-draft visit with DET.",
+      "reasoning": "DET adds Tanner Koziol (TE, Houston) in round 5. Tight end \u2014 off-need \u2014 notable reach (board rank #193, slot 157). Also a position the GM has reached for historically. Scheme fit: y inline blocker + receiving move-te (laporta).",
       "score": 1.122,
       "factors": {
         "grade": 0.248,
@@ -7746,7 +7746,7 @@
       "college": "Miami (FL)",
       "rank": 178,
       "tier": "R4-R7",
-      "reasoning": "CAR continues its Day 3 build at 158 with Jakobe Thomas  -  a developmental/depth add at S. Fits the canales_westcoast scheme profile the staff has built around; extends a multi-pick investment in S.",
+      "reasoning": "CAR adds Jakobe Thomas (S, Miami (FL)) in round 5. Safety \u2014 #2 need \u2014 notable reach (board rank #178, slot 158). Scheme fit: interchangeable 2-high safeties.",
       "score": 1.548,
       "factors": {
         "grade": 0.256,
@@ -7793,7 +7793,7 @@
       "college": "Western Michigan",
       "rank": 189,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "CAR adds Nadame Tucker (EDGE, Western Michigan) in round 5. Edge rusher \u2014 off-need \u2014 notable reach (board rank #189, slot 159). Also a position the GM has reached for historically. Scheme fit: 3-4 olb convert.",
       "score": 1.275,
       "factors": {
         "grade": 0.313,
@@ -7840,7 +7840,7 @@
       "college": "Ohio State",
       "rank": 655,
       "tier": "UDFA",
-      "reasoning": "GB continues its Day 3 build at 160 with Ethan Onianwa  -  a developmental/depth add at OT. Had a documented pre-draft visit with GB.",
+      "reasoning": "GB adds Ethan Onianwa (OT, Ohio State) in round 5. Offensive tackle \u2014 #4 need \u2014 notable reach (board rank #655, slot 160). Scheme fit: athletic zone ol.",
       "score": 1.573,
       "factors": {
         "grade": 0.093,
@@ -7887,7 +7887,7 @@
       "college": "LSU",
       "rank": 128,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "PIT adds Harold Perkins (LB, LSU) in round 5. Linebacker \u2014 #3 need \u2014 strong value \u2014 33 slots ahead of the board (rank #128). Scheme fit: downhill mike (queen) + coverage ilb.",
       "score": 1.138,
       "factors": {
         "grade": 0.341,
@@ -7934,7 +7934,7 @@
       "college": "Duke",
       "rank": 84,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "BAL adds Chandler Rivers (CB, Duke) in round 5. Cornerback \u2014 #5 need \u2014 strong value \u2014 78 slots ahead of the board (rank #84). Also a position the GM has reached for historically. Scheme fit: long zone-match cbs.",
       "score": 1.3,
       "factors": {
         "grade": 0.311,
@@ -7981,7 +7981,7 @@
       "college": "Texas Tech",
       "rank": 230,
       "tier": "R4-R7",
-      "reasoning": "MIN continues its Day 3 build at 163 with Cole Wisniewski  -  a developmental/depth add at S. Had a documented pre-draft visit with MIN; extends a multi-pick investment in S.",
+      "reasoning": "MIN adds Cole Wisniewski (S, Texas Tech) in round 5. Safety \u2014 #3 need \u2014 notable reach (board rank #230, slot 163). Scheme fit: box safety/nickel blitzer (cine/bynum).",
       "score": 1.362,
       "factors": {
         "grade": 0.22,
@@ -8028,7 +8028,7 @@
       "college": "Indiana",
       "rank": 205,
       "tier": "R4-R7",
-      "reasoning": "JAX continues its Day 3 build at 164 with Louis Moore  -  a developmental/depth add at S. Had a documented pre-draft visit with JAX.",
+      "reasoning": "JAX adds Louis Moore (S, Indiana) in round 5. Safety \u2014 #2 need \u2014 notable reach (board rank #205, slot 164). Scheme fit: two-high interchangeable safeties.",
       "score": 1.274,
       "factors": {
         "grade": 0.234,
@@ -8075,7 +8075,7 @@
       "college": "Weber State",
       "rank": 698,
       "tier": "UDFA",
-      "reasoning": "BUF continues its Day 3 build at 165 with Gavin Ortega  -  a developmental/depth add at OT. Fits the Brady offense scheme profile the staff has built around; had a documented pre-draft visit with BUF; extends a multi-pick investment in OT.",
+      "reasoning": "BUF adds Gavin Ortega (OT, Weber State) in round 5. Offensive tackle \u2014 #7 need \u2014 notable reach (board rank #698, slot 165). Scheme fit: athletic pass-pro ots.",
       "score": 1.649,
       "factors": {
         "grade": 0.087,
@@ -8122,7 +8122,7 @@
       "college": "NC State",
       "rank": 218,
       "tier": "R4-R7",
-      "reasoning": "JAX continues its Day 3 build at 166 with Devon Marshall  -  a developmental/depth add at CB. Had a documented pre-draft visit with JAX.",
+      "reasoning": "JAX adds Devon Marshall (CB, NC State) in round 5. Cornerback \u2014 #1 need \u2014 notable reach (board rank #218, slot 166). Also a position the GM has reached for historically. Scheme fit: zone-match boundary.",
       "score": 1.271,
       "factors": {
         "grade": 0.228,
@@ -8169,7 +8169,7 @@
       "college": "Indiana",
       "rank": 202,
       "tier": "R4-R7",
-      "reasoning": "HOU continues its Day 3 build at 167 with Kaelon Black  -  a developmental/depth add at RB. Had a documented pre-draft visit with HOU.",
+      "reasoning": "HOU adds Kaelon Black (RB, Indiana) in round 5. Running back \u2014 #4 need \u2014 notable reach (board rank #202, slot 167). Scheme fit: one-cut zone back with receiving.",
       "score": 1.267,
       "factors": {
         "grade": 0.238,
@@ -8216,7 +8216,7 @@
       "college": "Arkansas",
       "rank": 286,
       "tier": "UDFA",
-      "reasoning": "BUF continues its Day 3 build at 168 with Xavian Sorey Jr.  -  a developmental/depth add at LB. Had a documented pre-draft visit with BUF.",
+      "reasoning": "BUF adds Xavian Sorey Jr. (LB, Arkansas) in round 5. Linebacker \u2014 #4 need \u2014 notable reach (board rank #286, slot 168). Scheme fit: rangy tampa-2 mike/will with hook-curl range.",
       "score": 1.432,
       "factors": {
         "grade": 0.187,
@@ -8263,7 +8263,7 @@
       "college": "Louisville",
       "rank": 224,
       "tier": "R4-R7",
-      "reasoning": "KC continues its Day 3 build at 169 with Rene Konga  -  a developmental/depth add at IDL. Had a documented pre-draft visit with KC.",
+      "reasoning": "KC adds Rene Konga (DL, Louisville) in round 5. Defensive lineman \u2014 #4 need \u2014 notable reach (board rank #224, slot 169).",
       "score": 1.483,
       "factors": {
         "grade": 0.223,
@@ -8310,7 +8310,7 @@
       "college": "South Carolina",
       "rank": 120,
       "tier": "R4-R7",
-      "reasoning": "DEN continues its Day 3 build at 170 with Nick Barrett  -  a developmental/depth add at IDL. Had a documented pre-draft visit with DEN.",
+      "reasoning": "DEN adds Nick Barrett (DL, South Carolina) in round 5. Defensive lineman \u2014 #3 need \u2014 strong value \u2014 50 slots ahead of the board (rank #120).",
       "score": 1.936,
       "factors": {
         "grade": 0.259,
@@ -8357,7 +8357,7 @@
       "college": "Texas",
       "rank": 165,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "NE adds Jack Endries (TE, Texas) in round 5. Tight end \u2014 #3 need \u2014 mild value pick (6 slots ahead of board rank #165). Scheme fit: y inline blocker + move te (henry fa).",
       "score": 1.309,
       "factors": {
         "grade": 0.284,
@@ -8404,7 +8404,7 @@
       "college": "Iowa",
       "rank": 163,
       "tier": "R4-R7",
-      "reasoning": "NO continues its Day 3 build at 172 with Max Llewellyn  -  a developmental/depth add at EDGE. Fits the staley_3-4 scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "NO adds Max Llewellyn (EDGE, Iowa) in round 5. Edge rusher \u2014 #2 need \u2014 strong value \u2014 9 slots ahead of the board (rank #163). Scheme fit: 3-4 olb length + bend (jordan legacy.",
       "score": 1.29,
       "factors": {
         "grade": 0.268,
@@ -8451,7 +8451,7 @@
       "college": "Florida",
       "rank": 192,
       "tier": "R4-R7",
-      "reasoning": "BAL continues its Day 3 build at 173 with George Gumbs Jr.  -  a developmental/depth add at EDGE. Fits the defensive multiple (Minter) scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "BAL adds George Gumbs Jr. (EDGE, Florida) in round 5. Edge rusher \u2014 #6 need \u2014 notable reach (board rank #192, slot 173). Scheme fit: length + power 3-4 olb.",
       "score": 1.233,
       "factors": {
         "grade": 0.249,
@@ -8498,7 +8498,7 @@
       "college": "Boise State",
       "rank": 106,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "BAL adds Kage Casey (OT, Boise State) in round 5. Offensive tackle \u2014 off-need \u2014 strong value \u2014 68 slots ahead of the board (rank #106). Scheme fit: people-movers.",
       "score": 1.184,
       "factors": {
         "grade": 0.299,
@@ -8545,7 +8545,7 @@
       "college": "Indiana",
       "rank": 204,
       "tier": "R4-R7",
-      "reasoning": "LV continues its Day 3 build at 175 with Pat Coogan  -  a developmental/depth add at IOL. Had a documented pre-draft visit with LV.",
+      "reasoning": "LV adds Pat Coogan (IOL, Indiana) in round 5. Interior o-line \u2014 #6 need \u2014 notable reach (board rank #204, slot 175). Scheme fit: gap-power maulers.",
       "score": 1.276,
       "factors": {
         "grade": 0.236,
@@ -8592,7 +8592,7 @@
       "college": "Texas",
       "rank": 214,
       "tier": "R4-R7",
-      "reasoning": "KC continues its Day 3 build at 176 with Trey Moore  -  a developmental/depth add at EDGE. Fits the reid_spread scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "KC adds Trey Moore (EDGE, Texas) in round 5. Edge rusher \u2014 #6 need \u2014 notable reach (board rank #214, slot 176). Scheme fit: versatile edge.",
       "score": 1.42,
       "factors": {
         "grade": 0.23,
@@ -8639,7 +8639,7 @@
       "college": "Michigan",
       "rank": 160,
       "tier": "R4-R7",
-      "reasoning": "DAL continues its Day 3 build at 177 with Rayshaun Benny  -  a developmental/depth add at IDL. Had a documented pre-draft visit with DAL.",
+      "reasoning": "DAL adds Rayshaun Benny (DL, Michigan) in round 5. Defensive lineman \u2014 #7 need \u2014 strong value \u2014 17 slots ahead of the board (rank #160). Also a position the GM has reached for historically.",
       "score": 1.335,
       "factors": {
         "grade": 0.281,
@@ -8686,7 +8686,7 @@
       "college": "Duke",
       "rank": 229,
       "tier": "R4-R7",
-      "reasoning": "PHI continues its Day 3 build at 178 with Vincent Anthony Jr.  -  a developmental/depth add at EDGE. Fits the fangio_match scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "PHI adds Vincent Anthony Jr. (EDGE, Duke) in round 5. Edge rusher \u2014 #2 need \u2014 notable reach (board rank #229, slot 178). Scheme fit: 3-4 olb length + bend (smith / ojulari).",
       "score": 1.504,
       "factors": {
         "grade": 0.22,
@@ -8733,7 +8733,7 @@
       "college": "NC State",
       "rank": 362,
       "tier": "UDFA",
-      "reasoning": "NYJ continues its Day 3 build at 179 with Cian Slone  -  a developmental/depth add at EDGE. Fits the 3-4 multiple (Glenn) scheme profile the staff has built around; had a documented pre-draft visit with NYJ; extends a multi-pick investment in EDGE.",
+      "reasoning": "NYJ adds Cian Slone (EDGE, NC State) in round 5. Edge rusher \u2014 #8 need \u2014 notable reach (board rank #362, slot 179). Scheme fit: 4-3 de speed + power (gardner-era length).",
       "score": 1.668,
       "factors": {
         "grade": 0.156,
@@ -8780,7 +8780,7 @@
       "college": "Iowa",
       "rank": 87,
       "tier": "R4-R7",
-      "reasoning": "DAL continues its Day 3 build at 180 with Beau Stephens  -  a developmental/depth add at IOL. Had a documented pre-draft visit with DAL.",
+      "reasoning": "DAL adds Beau Stephens (IOL, Iowa) in round 5. Interior o-line \u2014 off-need \u2014 strong value \u2014 93 slots ahead of the board (rank #87). Scheme fit: gap-power interior (booker).",
       "score": 1.31,
       "factors": {
         "grade": 0.27,
@@ -8827,7 +8827,7 @@
       "college": "Toledo",
       "rank": 228,
       "tier": "R4-R7",
-      "reasoning": "DET continues its Day 3 build at 181 with Andre Fuller  -  a developmental/depth add at CB. Had a documented pre-draft visit with DET; extends a multi-pick investment in CB.",
+      "reasoning": "DET adds Andre Fuller (CB, Toledo) in round 5. Cornerback \u2014 #6 need \u2014 notable reach (board rank #228, slot 181). Scheme fit: zone-match boundary.",
       "score": 1.027,
       "factors": {
         "grade": 0.221,
@@ -8874,7 +8874,7 @@
       "college": "Florida",
       "rank": 246,
       "tier": "R4-R7",
-      "reasoning": "BUF continues its Day 3 build at 182 with J.Michael Sturdivant  -  a developmental/depth add at WR. Fits the Brady offense scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "BUF adds J.Michael Sturdivant (WR, Florida) in round 6. Wide receiver \u2014 #6 need \u2014 notable reach (board rank #246, slot 182). Scheme fit: yac-separator slot.",
       "score": 1.217,
       "factors": {
         "grade": 0.209,
@@ -8921,7 +8921,7 @@
       "college": "LSU",
       "rank": 255,
       "tier": "UDFA",
-      "reasoning": "ARI continues its Day 3 build at 183 with Zavion Thomas  -  a developmental/depth add at WR. Fits the McVay tree (LaFleur) scheme profile the staff has built around; had a documented pre-draft visit with ARI; extends a multi-pick investment in WR.",
+      "reasoning": "ARI adds Zavion Thomas (WR, LSU) in round 6. Wide receiver \u2014 off-need \u2014 notable reach (board rank #255, slot 183). Scheme fit: vertical x + separator z.",
       "score": 1.684,
       "factors": {
         "grade": 0.203,
@@ -8968,7 +8968,7 @@
       "college": "Miami (FL)",
       "rank": 322,
       "tier": "UDFA",
-      "reasoning": "TEN continues its Day 3 build at 184 with James Brockermeyer  -  a developmental/depth add at IOL. Had a documented pre-draft visit with TEN.",
+      "reasoning": "TEN adds James Brockermeyer (IOL, Miami (FL)) in round 6. Interior o-line \u2014 #1 need \u2014 notable reach (board rank #322, slot 184). Scheme fit: pass-pro ot priority (major need).",
       "score": 1.429,
       "factors": {
         "grade": 0.172,
@@ -9015,7 +9015,7 @@
       "college": "Notre Dame",
       "rank": 213,
       "tier": "R4-R7",
-      "reasoning": "LV continues its Day 3 build at 185 with Aamil Wagner  -  a developmental/depth add at OT. Fits the Shanahan zone (Kubiak) scheme profile the staff has built around; extends a multi-pick investment in OT.",
+      "reasoning": "LV adds Aamil Wagner (OT, Notre Dame) in round 6. Offensive tackle \u2014 #8 need \u2014 notable reach (board rank #213, slot 185). Scheme fit: gap-power maulers.",
       "score": 1.201,
       "factors": {
         "grade": 0.231,
@@ -9062,7 +9062,7 @@
       "college": "Utah",
       "rank": 231,
       "tier": "R4-R7",
-      "reasoning": "NYG continues its Day 3 build at 186 with Logan Fano  -  a developmental/depth add at EDGE. Fits the Michigan / Harbaugh (physical) scheme profile the staff has built around; aligns with the GM's documented positional preferences.",
+      "reasoning": "NYG adds Logan Fano (EDGE, Utah) in round 6. Edge rusher \u2014 off-need \u2014 notable reach (board rank #231, slot 186). Also a position the GM has reached for historically. Scheme fit: 3-4 olb power + bend (thibodeaux / burns).",
       "score": 1.276,
       "factors": {
         "grade": 0.219,
@@ -9109,7 +9109,7 @@
       "college": "Georgia Tech",
       "rank": 268,
       "tier": "UDFA",
-      "reasoning": "WAS continues its Day 3 build at 187 with Eric Rivers  -  a developmental/depth add at WR. Had a documented pre-draft visit with WAS; extends a multi-pick investment in WR.",
+      "reasoning": "WAS adds Eric Rivers (WR, Georgia Tech) in round 6. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #268, slot 187). Scheme fit: vertical z (mclaurin).",
       "score": 1.316,
       "factors": {
         "grade": 0.197,
@@ -9156,7 +9156,7 @@
       "college": "New Mexico",
       "rank": 313,
       "tier": "UDFA",
-      "reasoning": "SEA continues its Day 3 build at 188 with Keyshawn James-Newby  -  a developmental/depth add at EDGE. Had a documented pre-draft visit with SEA; extends a multi-pick investment in EDGE.",
+      "reasoning": "SEA adds Keyshawn James-Newby (EDGE, New Mexico) in round 6. Edge rusher \u2014 #4 need \u2014 notable reach (board rank #313, slot 188). Also a position the GM has reached for historically. Scheme fit: versatile edge 3-4/4-3 hybrid (witherspoon as db hybrid).",
       "score": 1.219,
       "factors": {
         "grade": 0.176,
@@ -9203,7 +9203,7 @@
       "college": "Washington",
       "rank": 151,
       "tier": "R4-R7",
-      "reasoning": "[reid-signal swap: relocated]",
+      "reasoning": "CIN adds Jonah Coleman (RB, Washington) in round 6. Running back \u2014 #7 need \u2014 strong value \u2014 38 slots ahead of the board (rank #151). Scheme fit: receiving-capable zone back (chase brown lineage).",
       "score": 1.886,
       "factors": {
         "grade": 0.278,
@@ -9250,7 +9250,7 @@
       "college": "Oklahoma",
       "rank": 207,
       "tier": "R4-R7",
-      "reasoning": "NO continues its Day 3 build at 190 with Robert Spears-Jennings  -  a developmental/depth add at S. Had a documented pre-draft visit with NO.",
+      "reasoning": "NO adds Robert Spears-Jennings (S, Oklahoma) in round 6. Safety \u2014 #6 need \u2014 notable reach (board rank #207, slot 190). Scheme fit: two-high interchangeable (mathieu retired.",
       "score": 1.266,
       "factors": {
         "grade": 0.233,
@@ -9297,7 +9297,7 @@
       "college": "Boston College",
       "rank": 234,
       "tier": "R4-R7",
-      "reasoning": "NE continues its Day 3 build at 191 with Quintayvious Hutchins  -  a developmental/depth add at EDGE. Fits the mcdaniels_pro scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "NE adds Quintayvious Hutchins (EDGE, Boston College) in round 6. Edge rusher \u2014 #4 need \u2014 notable reach (board rank #234, slot 191). Scheme fit: 2-gap 3-4 de + setter olb mix (gonzalez / chaisson).",
       "score": 1.187,
       "factors": {
         "grade": 0.217,
@@ -9344,7 +9344,7 @@
       "college": "Boston College",
       "rank": 233,
       "tier": "R4-R7",
-      "reasoning": "NYG continues its Day 3 build at 192 with Logan Taylor  -  a developmental/depth add at IOL. Had a documented pre-draft visit with NYG; extends a multi-pick investment in IOL.",
+      "reasoning": "NYG adds Logan Taylor (IOL, Boston College) in round 6. Interior o-line \u2014 #3 need \u2014 notable reach (board rank #233, slot 192). Scheme fit: pass-pro ot priority (thomas/neal injury history).",
       "score": 1.257,
       "factors": {
         "grade": 0.217,
@@ -9391,7 +9391,7 @@
       "college": "Illinois",
       "rank": 175,
       "tier": "R4-R7",
-      "reasoning": "NYG continues its Day 3 build at 193 with J.C. Davis  -  a developmental/depth add at OT. Had a documented pre-draft visit with NYG.",
+      "reasoning": "NYG adds J.C. Davis (OT, Illinois) in round 6. Offensive tackle \u2014 off-need \u2014 strong value \u2014 18 slots ahead of the board (rank #175). Scheme fit: pass-pro ot priority (thomas/neal injury history).",
       "score": 1.249,
       "factors": {
         "grade": 0.261,
@@ -9438,7 +9438,7 @@
       "college": "Alabama",
       "rank": 197,
       "tier": "R4-R7",
-      "reasoning": "TEN continues its Day 3 build at 194 with Domani Jackson  -  a developmental/depth add at CB. Fits the saleh_4-3_wide-9 scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "TEN adds Domani Jackson (CB, Alabama) in round 6. Cornerback \u2014 #4 need \u2014 modest reach (3 slots past board rank #197). Scheme fit: zone-match boundary (sneed/ransom).",
       "score": 1.212,
       "factors": {
         "grade": 0.244,
@@ -9485,7 +9485,7 @@
       "college": "Maryland",
       "rank": 203,
       "tier": "R4-R7",
-      "reasoning": "TB continues its Day 3 build at 195 with Jalen Huskey  -  a developmental/depth add at CB. Fits the bowles_blitz scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "TB adds Jalen Huskey (CB, Maryland) in round 6. Cornerback \u2014 #7 need \u2014 reach for position \u2014 8 slots past board rank #203. Scheme fit: press-man + zone-match (davis/dean).",
       "score": 1.427,
       "factors": {
         "grade": 0.237,
@@ -9532,7 +9532,7 @@
       "college": "Duke",
       "rank": 146,
       "tier": "R4-R7",
-      "reasoning": "MIN continues its Day 3 build at 196 with Wesley Williams  -  a developmental/depth add at IDL. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in IDL.",
+      "reasoning": "MIN adds Wesley Williams (DL, Duke) in round 6. Defensive lineman \u2014 #4 need \u2014 strong value \u2014 50 slots ahead of the board (rank #146).",
       "score": 1.188,
       "factors": {
         "grade": 0.241,
@@ -9579,7 +9579,7 @@
       "college": "North Carolina",
       "rank": 211,
       "tier": "R4-R7",
-      "reasoning": "PHI continues its Day 3 build at 197 with Thaddeus Dixon  -  a developmental/depth add at CB. Fits the fangio_match scheme profile the staff has built around.",
+      "reasoning": "PHI adds Thaddeus Dixon (CB, North Carolina) in round 6. Cornerback \u2014 #4 need \u2014 notable reach (board rank #211, slot 197). Scheme fit: zone-match boundary (dejean/mitchell).",
       "score": 1.425,
       "factors": {
         "grade": 0.232,
@@ -9626,7 +9626,7 @@
       "college": "Michigan State",
       "rank": 661,
       "tier": "UDFA",
-      "reasoning": "NE continues its Day 3 build at 198 with Malik Spencer  -  a developmental/depth add at S. Had a documented pre-draft visit with NE.",
+      "reasoning": "NE adds Malik Spencer (S, Michigan State) in round 6. Safety \u2014 off-need \u2014 notable reach (board rank #661, slot 198). Scheme fit: deep-half + box hybrid.",
       "score": 1.132,
       "factors": {
         "grade": 0.092,
@@ -9673,7 +9673,7 @@
       "college": "Mississippi",
       "rank": 512,
       "tier": "UDFA",
-      "reasoning": "CIN continues its Day 3 build at 199 with Kapena Gushiken  -  a developmental/depth add at S. Fits the golden_hybrid scheme profile the staff has built around; had a documented pre-draft visit with CIN; extends a multi-pick investment in S.",
+      "reasoning": "CIN adds Kapena Gushiken (S, Mississippi) in round 6. Safety \u2014 #4 need \u2014 notable reach (board rank #512, slot 199). Scheme fit: two-high interchangeable.",
       "score": 1.678,
       "factors": {
         "grade": 0.116,
@@ -9720,7 +9720,7 @@
       "college": "Arizona",
       "rank": 220,
       "tier": "R4-R7",
-      "reasoning": "CAR continues its Day 3 build at 200 with Dalton Johnson  -  a developmental/depth add at S. Fits the canales_westcoast scheme profile the staff has built around; extends a multi-pick investment in S.",
+      "reasoning": "CAR adds Dalton Johnson (S, Arizona) in round 6. Safety \u2014 #2 need \u2014 notable reach (board rank #220, slot 200). Scheme fit: interchangeable 2-high safeties.",
       "score": 1.244,
       "factors": {
         "grade": 0.226,
@@ -9767,7 +9767,7 @@
       "college": "Ohio State",
       "rank": 225,
       "tier": "R4-R7",
-      "reasoning": "GB continues its Day 3 build at 201 with Lorenzo Styles Jr.  -  a developmental/depth add at CB. Fits the shanahan_zone scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "GB adds Lorenzo Styles Jr. (CB, Ohio State) in round 6. Cornerback \u2014 #1 need \u2014 notable reach (board rank #225, slot 201). Scheme fit: zone-match boundary.",
       "score": 1.522,
       "factors": {
         "grade": 0.222,
@@ -9814,7 +9814,7 @@
       "college": "Navy",
       "rank": 200,
       "tier": "R4-R7",
-      "reasoning": "NE continues its Day 3 build at 202 with Landon Robinson  -  a developmental/depth add at IDL.",
+      "reasoning": "NE adds Landon Robinson (DL, Navy) in round 6. Defensive lineman \u2014 #6 need \u2014 on schedule with the board (rank #200).",
       "score": 1.119,
       "factors": {
         "grade": 0.239,
@@ -9861,7 +9861,7 @@
       "college": "Penn State",
       "rank": 142,
       "tier": "R4-R7",
-      "reasoning": "JAX continues its Day 3 build at 203 with Drew Shelton  -  a developmental/depth add at OT. Fits the Coen offense scheme profile the staff has built around; extends a multi-pick investment in OT.",
+      "reasoning": "JAX adds Drew Shelton (OT, Penn State) in round 6. Offensive tackle \u2014 #4 need \u2014 strong value \u2014 61 slots ahead of the board (rank #142). Scheme fit: athletic zone ol.",
       "score": 1.187,
       "factors": {
         "grade": 0.26,
@@ -9908,7 +9908,7 @@
       "college": "LSU",
       "rank": 276,
       "tier": "UDFA",
-      "reasoning": "LAC continues its Day 3 build at 204 with Jack Pyburn  -  a developmental/depth add at EDGE. Fits the harbaugh_power scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "LAC adds Jack Pyburn (EDGE, LSU) in round 6. Edge rusher \u2014 #3 need \u2014 notable reach (board rank #276, slot 204). Scheme fit: length + bend hybrid edge (bosa/mack mold).",
       "score": 1.256,
       "factors": {
         "grade": 0.193,
@@ -9955,7 +9955,7 @@
       "college": "Wyoming",
       "rank": 235,
       "tier": "R4-R7",
-      "reasoning": "DET continues its Day 3 build at 205 with Caden Barnett  -  a developmental/depth add at OT.",
+      "reasoning": "DET adds Caden Barnett (OT, Wyoming) in round 6. Offensive tackle \u2014 #1 need \u2014 notable reach (board rank #235, slot 205). Scheme fit: gap-power maulers.",
       "score": 0.868,
       "factors": {
         "grade": 0.216,
@@ -10002,7 +10002,7 @@
       "college": "Vanderbilt",
       "rank": 298,
       "tier": "R4-R7",
-      "reasoning": "CLE continues its Day 3 build at 206 with Diego Pavia  -  a developmental/depth add at QB.",
+      "reasoning": "CLE adds Diego Pavia (QB, Vanderbilt) in round 6. Quarterback \u2014 #3 need \u2014 notable reach (board rank #298, slot 206). Scheme fit: play-action boot passer with mobility.",
       "score": 1.299,
       "factors": {
         "grade": 0.212,
@@ -10049,7 +10049,7 @@
       "college": "LSU",
       "rank": 251,
       "tier": "UDFA",
-      "reasoning": "LAR continues its Day 3 build at 207 with Barion Brown  -  a developmental/depth add at WR. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "LAR adds Barion Brown (WR, LSU) in round 6. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #251, slot 207). Scheme fit: separator z (nacua).",
       "score": 1.242,
       "factors": {
         "grade": 0.205,
@@ -10096,7 +10096,7 @@
       "college": "Penn State",
       "rank": 252,
       "tier": "UDFA",
-      "reasoning": "LV continues its Day 3 build at 208 with Nolan Rucci  -  a developmental/depth add at OT. Fits the Shanahan zone (Kubiak) scheme profile the staff has built around; extends a multi-pick investment in OT.",
+      "reasoning": "LV adds Nolan Rucci (OT, Penn State) in round 6. Offensive tackle \u2014 #8 need \u2014 notable reach (board rank #252, slot 208). Scheme fit: gap-power maulers.",
       "score": 1.065,
       "factors": {
         "grade": 0.205,
@@ -10143,7 +10143,7 @@
       "college": "Utah",
       "rank": 194,
       "tier": "R4-R7",
-      "reasoning": "WAS continues its Day 3 build at 209 with Dallen Bentley  -  a developmental/depth add at TE. Aligns with the GM's documented positional preferences.",
+      "reasoning": "WAS adds Dallen Bentley (TE, Utah) in round 6. Tight end \u2014 #4 need \u2014 strong value \u2014 15 slots ahead of the board (rank #194). Also a position the GM has reached for historically. Scheme fit: move te flex + inline y (ertz/sinnott).",
       "score": 0.716,
       "factors": {
         "grade": 0.247,
@@ -10190,7 +10190,7 @@
       "college": "Louisiana-Lafayette",
       "rank": 277,
       "tier": "UDFA",
-      "reasoning": "KC continues its Day 3 build at 210 with Jaden Dugger  -  a developmental/depth add at LB. Had a documented pre-draft visit with KC.",
+      "reasoning": "KC adds Jaden Dugger (LB, Louisiana-Lafayette) in round 6. Linebacker \u2014 off-need \u2014 notable reach (board rank #277, slot 210). Scheme fit: mike coverage + downhill sam (tranquill).",
       "score": 1.232,
       "factors": {
         "grade": 0.192,
@@ -10237,7 +10237,7 @@
       "college": "Stanford",
       "rank": 232,
       "tier": "R4-R7",
-      "reasoning": "BAL continues its Day 3 build at 211 with Collin Wright  -  a developmental/depth add at CB. Fits the defensive multiple (Minter) scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "BAL adds Collin Wright (CB, Stanford) in round 6. Cornerback \u2014 #5 need \u2014 notable reach (board rank #232, slot 211). Also a position the GM has reached for historically. Scheme fit: long zone-match cbs.",
       "score": 1.121,
       "factors": {
         "grade": 0.218,
@@ -10284,7 +10284,7 @@
       "college": "John Carroll",
       "rank": 253,
       "tier": "UDFA",
-      "reasoning": "NE continues its Day 3 build at 212 with Tyren Montgomery  -  a developmental/depth add at WR. Fits the mcdaniels_pro scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "NE adds Tyren Montgomery (WR, John Carroll) in round 6. Wide receiver \u2014 off-need \u2014 notable reach (board rank #253, slot 212). Scheme fit: separator z (diggs fa addition).",
       "score": 1.086,
       "factors": {
         "grade": 0.204,
@@ -10331,7 +10331,7 @@
       "college": "Michigan State",
       "rank": 190,
       "tier": "R4-R7",
-      "reasoning": "DET continues its Day 3 build at 213 with Matt Gulbin  -  a developmental/depth add at IOL.",
+      "reasoning": "DET adds Matt Gulbin (IOL, Michigan State) in round 6. Interior o-line \u2014 #2 need \u2014 strong value \u2014 23 slots ahead of the board (rank #190). Scheme fit: gap-power maulers.",
       "score": 0.69,
       "factors": {
         "grade": 0.25,
@@ -10378,7 +10378,7 @@
       "college": "Oklahoma",
       "rank": 244,
       "tier": "R4-R7",
-      "reasoning": "IND continues its Day 3 build at 214 with Kendal Daniels  -  a developmental/depth add at S. Fits the anarumo_pressure scheme profile the staff has built around.",
+      "reasoning": "IND adds Kendal Daniels (S, Oklahoma) in round 6. Safety \u2014 #4 need \u2014 notable reach (board rank #244, slot 214). Scheme fit: two-high + box hybrid.",
       "score": 1.392,
       "factors": {
         "grade": 0.21,
@@ -10425,7 +10425,7 @@
       "college": "Texas A&M",
       "rank": 282,
       "tier": "UDFA",
-      "reasoning": "ATL continues its Day 3 build at 215 with Jeremiah Williams  -  a developmental/depth add at EDGE. Fits the shanahan_zone scheme profile the staff has built around; aligns with the GM's documented positional preferences.",
+      "reasoning": "ATL adds Jeremiah Williams (EDGE, Texas A&M) in round 6. Edge rusher \u2014 #1 need \u2014 notable reach (board rank #282, slot 215). Also a position the GM has reached for historically. Scheme fit: speed-first edge rusher.",
       "score": 1.413,
       "factors": {
         "grade": 0.19,
@@ -10472,7 +10472,7 @@
       "college": "Michigan",
       "rank": 179,
       "tier": "R4-R7",
-      "reasoning": "PIT continues its Day 3 build at 216 with Marlin Klein  -  a developmental/depth add at TE. Had a documented pre-draft visit with PIT.",
+      "reasoning": "PIT adds Marlin Klein (TE, Michigan) in round 6. Tight end \u2014 off-need \u2014 strong value \u2014 37 slots ahead of the board (rank #179). Scheme fit: y inline blocker + move te (freiermuth).",
       "score": 1.099,
       "factors": {
         "grade": 0.255,
@@ -10519,7 +10519,7 @@
       "college": "Alabama",
       "rank": 262,
       "tier": "UDFA",
-      "reasoning": "ARI continues its Day 3 build at 217 with Jamarion Miller  -  a developmental/depth add at RB. Fits the McVay tree (LaFleur) scheme profile the staff has built around.",
+      "reasoning": "ARI adds Jamarion Miller (RB, Alabama) in round 7. Running back \u2014 #4 need \u2014 notable reach (board rank #262, slot 217). Scheme fit: one-cut zone back with power-gap flex.",
       "score": 1.38,
       "factors": {
         "grade": 0.2,
@@ -10566,7 +10566,7 @@
       "college": "Texas",
       "rank": 288,
       "tier": "UDFA",
-      "reasoning": "DAL continues its Day 3 build at 218 with Ethan Burke  -  a developmental/depth add at EDGE. Fits the schottenheimer_pro_style scheme profile the staff has built around; aligns with the GM's documented positional preferences; extends a multi-pick investment in EDGE.",
+      "reasoning": "DAL adds Ethan Burke (EDGE, Texas) in round 7. Edge rusher \u2014 #5 need \u2014 notable reach (board rank #288, slot 218). Also a position the GM has reached for historically. Scheme fit: 4-3 de wide-9 speed (parsons.",
       "score": 1.089,
       "factors": {
         "grade": 0.186,
@@ -10613,7 +10613,7 @@
       "college": "TCU",
       "rank": 270,
       "tier": "UDFA",
-      "reasoning": "LV continues its Day 3 build at 219 with Eric McAlister  -  a developmental/depth add at WR. Fits the Shanahan zone (Kubiak) scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "LV adds Eric McAlister (WR, TCU) in round 7. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #270, slot 219). Scheme fit: vertical x + yac slot.",
       "score": 1.056,
       "factors": {
         "grade": 0.196,
@@ -10660,7 +10660,7 @@
       "college": "South Carolina State",
       "rank": 602,
       "tier": "UDFA",
-      "reasoning": "BUF continues its Day 3 build at 220 with Jarod Washington  -  a developmental/depth add at CB. Had a documented pre-draft visit with BUF.",
+      "reasoning": "BUF adds Jarod Washington (CB, South Carolina State) in round 7. Cornerback \u2014 #5 need \u2014 notable reach (board rank #602, slot 220). Also a position the GM has reached for historically. Scheme fit: zone-match boundary.",
       "score": 1.156,
       "factors": {
         "grade": 0.1,
@@ -10707,7 +10707,7 @@
       "college": "Clemson",
       "rank": 651,
       "tier": "UDFA",
-      "reasoning": "CIN continues its Day 3 build at 221 with Tristan Leigh  -  a developmental/depth add at OT. Had a documented pre-draft visit with CIN.",
+      "reasoning": "CIN adds Tristan Leigh (OT, Clemson) in round 7. Offensive tackle \u2014 off-need \u2014 notable reach (board rank #651, slot 221). Also a position the GM has reached for historically. Scheme fit: pass-pro first ots with upside (amarius mims).",
       "score": 1.582,
       "factors": {
         "grade": 0.093,
@@ -10754,7 +10754,7 @@
       "college": "Texas Tech",
       "rank": 238,
       "tier": "R4-R7",
-      "reasoning": "DET continues its Day 3 build at 222 with Skyler Gill-Howard  -  a developmental/depth add at IDL. Extends a multi-pick investment in IDL.",
+      "reasoning": "DET adds Skyler Gill-Howard (DL, Texas Tech) in round 7. Defensive lineman \u2014 #4 need \u2014 notable reach (board rank #238, slot 222). Also a position the GM has reached for historically.",
       "score": 0.668,
       "factors": {
         "grade": 0.213,
@@ -10801,7 +10801,7 @@
       "college": "Georgia Tech",
       "rank": 240,
       "tier": "R4-R7",
-      "reasoning": "WAS continues its Day 3 build at 223 with Jordan van den Berg  -  a developmental/depth add at IDL.",
+      "reasoning": "WAS adds Jordan van den Berg (DL, Georgia Tech) in round 7. Defensive lineman \u2014 off-need \u2014 notable reach (board rank #240, slot 223).",
       "score": 0.667,
       "factors": {
         "grade": 0.213,
@@ -10848,7 +10848,7 @@
       "college": "Mississippi",
       "rank": 280,
       "tier": "UDFA",
-      "reasoning": "PIT continues its Day 3 build at 224 with Harrison Wallace III  -  a developmental/depth add at WR. Fits the mccarthy_west_coast scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "PIT adds Harrison Wallace III (WR, Mississippi) in round 7. Wide receiver \u2014 #5 need \u2014 notable reach (board rank #280, slot 224). Scheme fit: contested x + vertical z.",
       "score": 0.967,
       "factors": {
         "grade": 0.191,
@@ -10895,7 +10895,7 @@
       "college": "Nebraska",
       "rank": 264,
       "tier": "UDFA",
-      "reasoning": "TEN continues its Day 3 build at 225 with DeShon Singleton  -  a developmental/depth add at S. Fits the saleh_4-3_wide-9 scheme profile the staff has built around; extends a multi-pick investment in S.",
+      "reasoning": "TEN adds DeShon Singleton (S, Nebraska) in round 7. Safety \u2014 #5 need \u2014 notable reach (board rank #264, slot 225). Scheme fit: two-high interchangeable (byard departure.",
       "score": 1.17,
       "factors": {
         "grade": 0.199,
@@ -10942,7 +10942,7 @@
       "college": "Oregon State",
       "rank": 566,
       "tier": "UDFA",
-      "reasoning": "CIN continues its Day 3 build at 226 with Skyler Thomas  -  a developmental/depth add at S. Fits the golden_hybrid scheme profile the staff has built around; had a documented pre-draft visit with CIN; extends a multi-pick investment in S.",
+      "reasoning": "CIN adds Skyler Thomas (S, Oregon State) in round 7. Safety \u2014 #4 need \u2014 notable reach (board rank #566, slot 226). Scheme fit: two-high interchangeable.",
       "score": 1.558,
       "factors": {
         "grade": 0.106,
@@ -10989,7 +10989,7 @@
       "college": "SMU",
       "rank": 305,
       "tier": "UDFA",
-      "reasoning": "MIA continues its Day 3 build at 227 with Jordan Hudson  -  a developmental/depth add at WR. Had a documented pre-draft visit with MIA; extends a multi-pick investment in WR.",
+      "reasoning": "MIA adds Jordan Hudson (WR, SMU) in round 7. Wide receiver \u2014 #1 need \u2014 notable reach (board rank #305, slot 227). Also a position the GM has reached for historically. Scheme fit: vertical speed-first z (hill).",
       "score": 1.335,
       "factors": {
         "grade": 0.179,
@@ -11036,7 +11036,7 @@
       "college": "UConn",
       "rank": 258,
       "tier": "UDFA",
-      "reasoning": "NYJ continues its Day 3 build at 228 with Joe Fagnano  -  a developmental/depth add at QB. Had a documented pre-draft visit with NYJ; extends a multi-pick investment in QB.",
+      "reasoning": "NYJ adds Joe Fagnano (QB, UConn) in round 7. Quarterback \u2014 #1 need \u2014 notable reach (board rank #258, slot 228). Scheme fit: rhythm pocket passer with pre-snap command (justin fields mobility).",
       "score": 1.353,
       "factors": {
         "grade": 0.202,
@@ -11083,7 +11083,7 @@
       "college": "LSU",
       "rank": 314,
       "tier": "UDFA",
-      "reasoning": "TB continues its Day 3 build at 229 with Bauer Sharp  -  a developmental/depth add at TE. Had a documented pre-draft visit with TB.",
+      "reasoning": "TB adds Bauer Sharp (TE, LSU) in round 7. Tight end \u2014 #5 need \u2014 notable reach (board rank #314, slot 229). Scheme fit: y move te + inline blocker (otton).",
       "score": 1.215,
       "factors": {
         "grade": 0.175,
@@ -11130,7 +11130,7 @@
       "college": "BYU",
       "rank": 290,
       "tier": "UDFA",
-      "reasoning": "PIT continues its Day 3 build at 230 with Chase Roberts  -  a developmental/depth add at WR. Fits the mccarthy_west_coast scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "PIT adds Chase Roberts (WR, BYU) in round 7. Wide receiver \u2014 #5 need \u2014 notable reach (board rank #290, slot 230). Scheme fit: contested x + vertical z.",
       "score": 0.948,
       "factors": {
         "grade": 0.185,
@@ -11177,7 +11177,7 @@
       "college": "Toledo",
       "rank": 263,
       "tier": "UDFA",
-      "reasoning": "ATL continues its Day 3 build at 231 with Avery Smith  -  a developmental/depth add at CB. Had a documented pre-draft visit with ATL.",
+      "reasoning": "ATL adds Avery Smith (CB, Toledo) in round 7. Cornerback \u2014 #3 need \u2014 notable reach (board rank #263, slot 231). Scheme fit: press-man and cover-3 hybrid boundary cb.",
       "score": 1.226,
       "factors": {
         "grade": 0.2,
@@ -11224,7 +11224,7 @@
       "college": "Boston College",
       "rank": 293,
       "tier": "UDFA",
-      "reasoning": "LAR continues its Day 3 build at 232 with Lewis Bond  -  a developmental/depth add at WR. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "LAR adds Lewis Bond (WR, Boston College) in round 7. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #293, slot 232). Scheme fit: separator z (nacua).",
       "score": 1.083,
       "factors": {
         "grade": 0.184,
@@ -11271,7 +11271,7 @@
       "college": "Northwestern",
       "rank": 289,
       "tier": "UDFA",
-      "reasoning": "JAX continues its Day 3 build at 233 with Aidan Hubbard  -  a developmental/depth add at EDGE.",
+      "reasoning": "JAX adds Aidan Hubbard (EDGE, Northwestern) in round 7. Edge rusher \u2014 #7 need \u2014 notable reach (board rank #289, slot 233). Scheme fit: length + bend edge (walker/hines-allen).",
       "score": 1.064,
       "factors": {
         "grade": 0.186,
@@ -11318,7 +11318,7 @@
       "college": "Texas",
       "rank": 237,
       "tier": "R4-R7",
-      "reasoning": "MIN continues its Day 3 build at 234 with D.J. Campbell  -  a developmental/depth add at IOL.",
+      "reasoning": "MIN adds D.J. Campbell (IOL, Texas) in round 7. Interior o-line \u2014 off-need \u2014 modest reach (3 slots past board rank #237). Scheme fit: athletic zone ol.",
       "score": 1.094,
       "factors": {
         "grade": 0.214,
@@ -11365,7 +11365,7 @@
       "college": "Kentucky",
       "rank": 247,
       "tier": "R4-R7",
-      "reasoning": "MIN continues its Day 3 build at 235 with David Gusta  -  a developmental/depth add at IDL. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in IDL.",
+      "reasoning": "MIN adds David Gusta (DL, Kentucky) in round 7. Defensive lineman \u2014 #4 need \u2014 reach for position \u2014 12 slots past board rank #247.",
       "score": 1.045,
       "factors": {
         "grade": 0.208,
@@ -11412,7 +11412,7 @@
       "college": "Missouri",
       "rank": 256,
       "tier": "UDFA",
-      "reasoning": "GB continues its Day 3 build at 236 with Toriano Pride  -  a developmental/depth add at CB. Fits the shanahan_zone scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "GB adds Toriano Pride (CB, Missouri) in round 7. Cornerback \u2014 #1 need \u2014 notable reach (board rank #256, slot 236). Scheme fit: zone-match boundary.",
       "score": 1.228,
       "factors": {
         "grade": 0.203,
@@ -11459,7 +11459,7 @@
       "college": "Kansas",
       "rank": 301,
       "tier": "UDFA",
-      "reasoning": "PIT continues its Day 3 build at 237 with Emmanuel Henderson  -  a developmental/depth add at WR. Fits the mccarthy_west_coast scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "PIT adds Emmanuel Henderson (WR, Kansas) in round 7. Wide receiver \u2014 #5 need \u2014 notable reach (board rank #301, slot 237). Scheme fit: contested x + vertical z.",
       "score": 0.936,
       "factors": {
         "grade": 0.18,
@@ -11506,7 +11506,7 @@
       "college": "Georgia Tech",
       "rank": 281,
       "tier": "UDFA",
-      "reasoning": "MIA continues its Day 3 build at 238 with Ahmari Harvey  -  a developmental/depth add at CB. Fits the Hafley defense scheme profile the staff has built around; extends a multi-pick investment in CB.",
+      "reasoning": "MIA adds Ahmari Harvey (CB, Georgia Tech) in round 7. Cornerback \u2014 #2 need \u2014 notable reach (board rank #281, slot 238). Scheme fit: press-man boundary (ramsey/smith).",
       "score": 1.15,
       "factors": {
         "grade": 0.19,
@@ -11553,7 +11553,7 @@
       "college": "Washington",
       "rank": 326,
       "tier": "UDFA",
-      "reasoning": "CHI continues its Day 3 build at 239 with Anterio Thompson  -  a developmental/depth add at IDL. Fits the default scheme profile the staff has built around; had a documented pre-draft visit with CHI; extends a multi-pick investment in IDL.",
+      "reasoning": "CHI adds Anterio Thompson (DL, Washington) in round 7. Defensive lineman \u2014 #1 need \u2014 notable reach (board rank #326, slot 239). Also a position the GM has reached for historically.",
       "score": 1.747,
       "factors": {
         "grade": 0.17,
@@ -11600,7 +11600,7 @@
       "college": "Kansas",
       "rank": 266,
       "tier": "UDFA",
-      "reasoning": "JAX continues its Day 3 build at 240 with Enrique Cruz Jr.  -  a developmental/depth add at OT. Fits the Coen offense scheme profile the staff has built around; extends a multi-pick investment in OT.",
+      "reasoning": "JAX adds Enrique Cruz Jr. (OT, Kansas) in round 7. Offensive tackle \u2014 #4 need \u2014 notable reach (board rank #266, slot 240). Scheme fit: athletic zone ol.",
       "score": 1.052,
       "factors": {
         "grade": 0.198,
@@ -11647,7 +11647,7 @@
       "college": "LSU",
       "rank": 300,
       "tier": "UDFA",
-      "reasoning": "CHI continues its Day 3 build at 241 with Patrick Payton  -  a developmental/depth add at EDGE. Fits the default scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "CHI adds Patrick Payton (EDGE, LSU) in round 7. Edge rusher \u2014 #5 need \u2014 notable reach (board rank #300, slot 241). Scheme fit: 4-3 de with first-step quickness.",
       "score": 1.259,
       "factors": {
         "grade": 0.181,
@@ -11694,7 +11694,7 @@
       "college": "Penn State",
       "rank": 349,
       "tier": "UDFA",
-      "reasoning": "NYJ continues its Day 3 build at 242 with Nick Dawkins  -  a developmental/depth add at IOL. Had a documented pre-draft visit with NYJ.",
+      "reasoning": "NYJ adds Nick Dawkins (IOL, Penn State) in round 7. Interior o-line \u2014 #5 need \u2014 notable reach (board rank #349, slot 242). Scheme fit: gap-power maulers priority.",
       "score": 1.199,
       "factors": {
         "grade": 0.162,
@@ -11741,7 +11741,7 @@
       "college": "James Madison",
       "rank": 533,
       "tier": "UDFA",
-      "reasoning": "HOU continues its Day 3 build at 243 with Jacob Thomas  -  a developmental/depth add at S. Had a documented pre-draft visit with HOU.",
+      "reasoning": "HOU adds Jacob Thomas (S, James Madison) in round 7. Safety \u2014 off-need \u2014 notable reach (board rank #533, slot 243). Also a position the GM has reached for historically. Scheme fit: two-high interchangeable.",
       "score": 1.169,
       "factors": {
         "grade": 0.112,
@@ -11788,7 +11788,7 @@
       "college": "Tennessee",
       "rank": 248,
       "tier": "R4-R7",
-      "reasoning": "MIN continues its Day 3 build at 244 with Bryson Eason  -  a developmental/depth add at IDL. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in IDL.",
+      "reasoning": "MIN adds Bryson Eason (DL, Tennessee) in round 7. Defensive lineman \u2014 #4 need \u2014 modest reach (4 slots past board rank #248).",
       "score": 0.989,
       "factors": {
         "grade": 0.207,
@@ -11835,7 +11835,7 @@
       "college": "LSU",
       "rank": 312,
       "tier": "UDFA",
-      "reasoning": "JAX continues its Day 3 build at 245 with Aaron Anderson  -  a developmental/depth add at WR. Fits the Coen offense scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "JAX adds Aaron Anderson (WR, LSU) in round 7. Wide receiver \u2014 off-need \u2014 notable reach (board rank #312, slot 245). Scheme fit: separator z (thomas jr.).",
       "score": 1.03,
       "factors": {
         "grade": 0.176,
@@ -11882,7 +11882,7 @@
       "college": "Clemson",
       "rank": 284,
       "tier": "UDFA",
-      "reasoning": "DEN continues its Day 3 build at 246 with Wade Woodaz  -  a developmental/depth add at LB. Had a documented pre-draft visit with DEN.",
+      "reasoning": "DEN adds Wade Woodaz (LB, Clemson) in round 7. Linebacker \u2014 #2 need \u2014 notable reach (board rank #284, slot 246). Scheme fit: downhill mike.",
       "score": 1.678,
       "factors": {
         "grade": 0.189,
@@ -11929,7 +11929,7 @@
       "college": "Florida State",
       "rank": 287,
       "tier": "UDFA",
-      "reasoning": "NE continues its Day 3 build at 247 with Micah Pettus  -  a developmental/depth add at OT. Fits the mcdaniels_pro scheme profile the staff has built around; extends a multi-pick investment in OT.",
+      "reasoning": "NE adds Micah Pettus (OT, Florida State) in round 7. Offensive tackle \u2014 #2 need \u2014 notable reach (board rank #287, slot 247). Scheme fit: gap-power + pass-pro priority (massive investment needed.",
       "score": 1.074,
       "factors": {
         "grade": 0.187,
@@ -11976,7 +11976,7 @@
       "college": "Northwestern",
       "rank": 707,
       "tier": "UDFA",
-      "reasoning": "CLE continues its Day 3 build at 248 with Cam Porter  -  a developmental/depth add at RB. Had a documented pre-draft visit with CLE.",
+      "reasoning": "CLE adds Cam Porter (RB, Northwestern) in round 7. Running back \u2014 #7 need \u2014 notable reach (board rank #707, slot 248). Scheme fit: one-cut decisive back.",
       "score": 1.137,
       "factors": {
         "grade": 0.086,
@@ -12023,7 +12023,7 @@
       "college": "USC",
       "rank": 241,
       "tier": "R4-R7",
-      "reasoning": "IND continues its Day 3 build at 249 with Eric Gentry  -  a developmental/depth add at LB. Fits the anarumo_pressure scheme profile the staff has built around; extends a multi-pick investment in LB.",
+      "reasoning": "IND adds Eric Gentry (LB, USC) in round 7. Linebacker \u2014 #1 need \u2014 strong value \u2014 8 slots ahead of the board (rank #241). Scheme fit: coverage mike.",
       "score": 1.276,
       "factors": {
         "grade": 0.211,
@@ -12070,7 +12070,7 @@
       "college": "Iowa",
       "rank": 271,
       "tier": "UDFA",
-      "reasoning": "BAL continues its Day 3 build at 250 with Xavier Nwankpa  -  a developmental/depth add at S. Aligns with the GM's documented positional preferences.",
+      "reasoning": "BAL adds Xavier Nwankpa (S, Iowa) in round 7. Safety \u2014 off-need \u2014 notable reach (board rank #271, slot 250). Also a position the GM has reached for historically. Scheme fit: split-safety cover-2/quarters.",
       "score": 1.098,
       "factors": {
         "grade": 0.196,
@@ -12117,7 +12117,7 @@
       "college": "Georgia",
       "rank": 320,
       "tier": "UDFA",
-      "reasoning": "LAR continues its Day 3 build at 251 with Dillon Bell  -  a developmental/depth add at WR. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "LAR adds Dillon Bell (WR, Georgia) in round 7. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #320, slot 251). Scheme fit: separator z (nacua).",
       "score": 1.003,
       "factors": {
         "grade": 0.173,
@@ -12164,7 +12164,7 @@
       "college": "Wisconsin",
       "rank": 333,
       "tier": "UDFA",
-      "reasoning": "LAR continues its Day 3 build at 252 with Vinny Anthony II  -  a developmental/depth add at WR. Fits the mcvay_spread scheme profile the staff has built around; extends a multi-pick investment in WR.",
+      "reasoning": "LAR adds Vinny Anthony II (WR, Wisconsin) in round 7. Wide receiver \u2014 #2 need \u2014 notable reach (board rank #333, slot 252). Scheme fit: separator z (nacua).",
       "score": 0.963,
       "factors": {
         "grade": 0.167,
@@ -12211,7 +12211,7 @@
       "college": "South Carolina",
       "rank": 323,
       "tier": "UDFA",
-      "reasoning": "BAL continues its Day 3 build at 253 with Bryan Thomas Jr.  -  a developmental/depth add at EDGE. Fits the defensive multiple (Minter) scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "BAL adds Bryan Thomas Jr. (EDGE, South Carolina) in round 7. Edge rusher \u2014 #6 need \u2014 notable reach (board rank #323, slot 253). Scheme fit: length + power 3-4 olb.",
       "score": 1.045,
       "factors": {
         "grade": 0.172,
@@ -12258,7 +12258,7 @@
       "college": "Washington",
       "rank": 325,
       "tier": "UDFA",
-      "reasoning": "IND continues its Day 3 build at 254 with Zach Durfee  -  a developmental/depth add at EDGE. Fits the anarumo_pressure scheme profile the staff has built around; extends a multi-pick investment in EDGE.",
+      "reasoning": "IND adds Zach Durfee (EDGE, Washington) in round 7. Edge rusher \u2014 #3 need \u2014 notable reach (board rank #325, slot 254). Scheme fit: bend + power 4-3/3-4 hybrid edge (paye).",
       "score": 1.194,
       "factors": {
         "grade": 0.171,
@@ -12305,7 +12305,7 @@
       "college": "Arkansas",
       "rank": 249,
       "tier": "R4-R7",
-      "reasoning": "GB continues its Day 3 build at 255 with Cameron Ball  -  a developmental/depth add at IDL. Fits the shanahan_zone scheme profile the staff has built around; extends a multi-pick investment in IDL.",
+      "reasoning": "GB adds Cameron Ball (DL, Arkansas) in round 7. Defensive lineman \u2014 #2 need \u2014 mild value pick (6 slots ahead of board rank #249).",
       "score": 1.177,
       "factors": {
         "grade": 0.207,
@@ -12352,7 +12352,7 @@
       "college": "SMU",
       "rank": 422,
       "tier": "UDFA",
-      "reasoning": "DEN continues its Day 3 build at 256 with Romello Brinson  -  a developmental/depth add at WR. Fits the payton_westcoast scheme profile the staff has built around.",
+      "reasoning": "DEN adds Romello Brinson (WR, SMU) in round 7. Wide receiver \u2014 off-need \u2014 notable reach (board rank #422, slot 256). Scheme fit: route-technician x + z.",
       "score": 1.32,
       "factors": {
         "grade": 0.137,
@@ -12399,7 +12399,7 @@
       "college": "Georgia",
       "rank": 269,
       "tier": "UDFA",
-      "reasoning": "DEN continues its Day 3 build at 257 with Micah Morris  -  a developmental/depth add at IOL. Had a documented pre-draft visit with DEN.",
+      "reasoning": "DEN adds Micah Morris (IOL, Georgia) in round 7. Interior o-line \u2014 #4 need \u2014 reach for position \u2014 12 slots past board rank #269. Scheme fit: gap-power + pass-pro.",
       "score": 1.237,
       "factors": {
         "grade": 0.197,
