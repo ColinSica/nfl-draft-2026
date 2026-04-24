@@ -9,6 +9,7 @@ import { Prospects } from './pages/Prospects';
 import { FullMock } from './pages/FullMock';
 import { Method } from './pages/Method';
 import { MockLab } from './pages/MockLab';
+import { Accuracy } from './pages/Accuracy';
 import { AboutModal } from './components/AboutModal';
 import { MobileModeBar } from './components/MobileModeBar';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -28,6 +29,7 @@ const NAV_LINKS = [
   { to: '/full-mock', label: 'Full Mock',    end: true },
   { to: '/teams',     label: 'Teams',        end: true },
   { to: '/prospects', label: 'Prospects',    end: true },
+  { to: '/accuracy',  label: 'Accuracy',     end: true },
   { to: '/lab',       label: 'Mock Lab',     end: true },
   { to: '/method',    label: 'Methodology',  end: true },
 ];
@@ -278,6 +280,7 @@ function AppInner() {
             <Route path="/simulate" element={<Simulate />} />
             <Route path="/prospects" element={<Prospects />} />
             <Route path="/full-mock" element={<FullMock />} />
+            <Route path="/accuracy" element={<Accuracy />} />
             <Route path="/lab" element={<MockLab />} />
             <Route path="/method" element={<Method />} />
           </Routes>

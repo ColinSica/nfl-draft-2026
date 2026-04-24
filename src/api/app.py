@@ -295,6 +295,24 @@ def prospects_summary(limit: int = 64) -> dict:
 
 FULL_MOCK_JSON = PROCESSED / "full_mock_2026.json"
 FULL_MOCK_TRADES_JSON = PROCESSED / "full_mock_2026_with_trades.json"
+ACCURACY_JSON = PROCESSED / "accuracy_2026.json"
+
+
+@app.get("/api/accuracy")
+def accuracy() -> dict:
+    """Real-time accuracy dashboard: Colin's mock vs ~30 public analyst
+    mocks, scored against the actual R1 picks as they come off the board.
+    Source data is parsed from data/Updated 2026 Real Progress.xlsx by
+    scripts/build_accuracy_dashboard.py."""
+    if not ACCURACY_JSON.exists():
+        return {
+            "generated_at":     None,
+            "total_r1_picks":   32,
+            "r1_picks_drafted": 0,
+            "analysts":         [],
+            "picks":            [],
+        }
+    return json.loads(ACCURACY_JSON.read_text(encoding="utf-8"))
 
 
 @app.get("/api/full-mock")

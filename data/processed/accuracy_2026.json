@@ -1,0 +1,630 @@
+{
+  "generated_at": "2026-04-23T21:37:45.479027-07:00",
+  "total_r1_picks": 32,
+  "r1_picks_drafted": 32,
+  "colin_rank": 13,
+  "colin_rank_trade": 14,
+  "total_analysts": 33,
+  "analysts": [
+    {
+      "name": "Lance Zierlein",
+      "exact": 8,
+      "in_r1": 28,
+      "team_match": 8,
+      "exact_pct": 25.0,
+      "in_r1_pct": 87.5,
+      "team_pct": 25.0,
+      "rank": 1
+    },
+    {
+      "name": "Dan Parr",
+      "exact": 7,
+      "in_r1": 28,
+      "team_match": 7,
+      "exact_pct": 21.9,
+      "in_r1_pct": 87.5,
+      "team_pct": 21.9,
+      "rank": 2
+    },
+    {
+      "name": "Todd McShay",
+      "exact": 7,
+      "in_r1": 28,
+      "team_match": 7,
+      "exact_pct": 21.9,
+      "in_r1_pct": 87.5,
+      "team_pct": 21.9,
+      "rank": 3
+    },
+    {
+      "name": "Field Yates",
+      "exact": 7,
+      "in_r1": 27,
+      "team_match": 7,
+      "exact_pct": 21.9,
+      "in_r1_pct": 84.4,
+      "team_pct": 21.9,
+      "rank": 4
+    },
+    {
+      "name": "Pauline",
+      "exact": 7,
+      "in_r1": 24,
+      "team_match": 7,
+      "exact_pct": 21.9,
+      "in_r1_pct": 75.0,
+      "team_pct": 21.9,
+      "rank": 5
+    },
+    {
+      "name": "Ryan McCrystal",
+      "exact": 6,
+      "in_r1": 29,
+      "team_match": 6,
+      "exact_pct": 18.8,
+      "in_r1_pct": 90.6,
+      "team_pct": 18.8,
+      "rank": 6
+    },
+    {
+      "name": "Ryan Wilson",
+      "exact": 6,
+      "in_r1": 28,
+      "team_match": 7,
+      "exact_pct": 18.8,
+      "in_r1_pct": 87.5,
+      "team_pct": 21.9,
+      "rank": 7
+    },
+    {
+      "name": "Josh Edwards",
+      "exact": 6,
+      "in_r1": 27,
+      "team_match": 6,
+      "exact_pct": 18.8,
+      "in_r1_pct": 84.4,
+      "team_pct": 18.8,
+      "rank": 8
+    },
+    {
+      "name": "Rob Rang",
+      "exact": 6,
+      "in_r1": 27,
+      "team_match": 6,
+      "exact_pct": 18.8,
+      "in_r1_pct": 84.4,
+      "team_pct": 18.8,
+      "rank": 9
+    },
+    {
+      "name": "Luke Easterling",
+      "exact": 5,
+      "in_r1": 30,
+      "team_match": 7,
+      "exact_pct": 15.6,
+      "in_r1_pct": 93.8,
+      "team_pct": 21.9,
+      "rank": 10
+    },
+    {
+      "name": "Peter Schrager",
+      "exact": 5,
+      "in_r1": 28,
+      "team_match": 5,
+      "exact_pct": 15.6,
+      "in_r1_pct": 87.5,
+      "team_pct": 15.6,
+      "rank": 11
+    },
+    {
+      "name": "Pete Prisco",
+      "exact": 5,
+      "in_r1": 27,
+      "team_match": 6,
+      "exact_pct": 15.6,
+      "in_r1_pct": 84.4,
+      "team_pct": 18.8,
+      "rank": 12
+    },
+    {
+      "name": "Colin",
+      "exact": 5,
+      "in_r1": 27,
+      "team_match": 5,
+      "exact_pct": 15.6,
+      "in_r1_pct": 84.4,
+      "team_pct": 15.6,
+      "rank": 13
+    },
+    {
+      "name": "Colin w/Trade",
+      "exact": 5,
+      "in_r1": 27,
+      "team_match": 5,
+      "exact_pct": 15.6,
+      "in_r1_pct": 84.4,
+      "team_pct": 15.6,
+      "rank": 14
+    },
+    {
+      "name": "Jason Boris",
+      "exact": 5,
+      "in_r1": 27,
+      "team_match": 0,
+      "exact_pct": 15.6,
+      "in_r1_pct": 84.4,
+      "team_pct": 0.0,
+      "rank": 15
+    },
+    {
+      "name": "Mel Kiper Jr.",
+      "exact": 5,
+      "in_r1": 26,
+      "team_match": 6,
+      "exact_pct": 15.6,
+      "in_r1_pct": 81.2,
+      "team_pct": 18.8,
+      "rank": 16
+    },
+    {
+      "name": "Lou Pickney (DKDB)",
+      "exact": 5,
+      "in_r1": 25,
+      "team_match": 5,
+      "exact_pct": 15.6,
+      "in_r1_pct": 78.1,
+      "team_pct": 15.6,
+      "rank": 17
+    },
+    {
+      "name": "Matt Miller",
+      "exact": 4,
+      "in_r1": 28,
+      "team_match": 5,
+      "exact_pct": 12.5,
+      "in_r1_pct": 87.5,
+      "team_pct": 15.6,
+      "rank": 18
+    },
+    {
+      "name": "Charlie Campbell",
+      "exact": 4,
+      "in_r1": 27,
+      "team_match": 0,
+      "exact_pct": 12.5,
+      "in_r1_pct": 84.4,
+      "team_pct": 0.0,
+      "rank": 19
+    },
+    {
+      "name": "NFL Nation (ESPN)",
+      "exact": 4,
+      "in_r1": 26,
+      "team_match": 5,
+      "exact_pct": 12.5,
+      "in_r1_pct": 81.2,
+      "team_pct": 15.6,
+      "rank": 20
+    },
+    {
+      "name": "Bucky Brooks",
+      "exact": 4,
+      "in_r1": 23,
+      "team_match": 4,
+      "exact_pct": 12.5,
+      "in_r1_pct": 71.9,
+      "team_pct": 12.5,
+      "rank": 21
+    },
+    {
+      "name": "Daniel Jeremiah",
+      "exact": 3,
+      "in_r1": 29,
+      "team_match": 4,
+      "exact_pct": 9.4,
+      "in_r1_pct": 90.6,
+      "team_pct": 12.5,
+      "rank": 22
+    },
+    {
+      "name": "Walt Cherepinsky",
+      "exact": 3,
+      "in_r1": 29,
+      "team_match": 0,
+      "exact_pct": 9.4,
+      "in_r1_pct": 90.6,
+      "team_pct": 0.0,
+      "rank": 23
+    },
+    {
+      "name": "Vinnie Iyer",
+      "exact": 3,
+      "in_r1": 26,
+      "team_match": 5,
+      "exact_pct": 9.4,
+      "in_r1_pct": 81.2,
+      "team_pct": 15.6,
+      "rank": 24
+    },
+    {
+      "name": "Charles Davis",
+      "exact": 3,
+      "in_r1": 26,
+      "team_match": 3,
+      "exact_pct": 9.4,
+      "in_r1_pct": 81.2,
+      "team_pct": 9.4,
+      "rank": 25
+    },
+    {
+      "name": "Jordan Reid",
+      "exact": 3,
+      "in_r1": 26,
+      "team_match": 3,
+      "exact_pct": 9.4,
+      "in_r1_pct": 81.2,
+      "team_pct": 9.4,
+      "rank": 26
+    },
+    {
+      "name": "PFF ADP",
+      "exact": 3,
+      "in_r1": 24,
+      "team_match": 3,
+      "exact_pct": 9.4,
+      "in_r1_pct": 75.0,
+      "team_pct": 9.4,
+      "rank": 27
+    },
+    {
+      "name": "Eric Edholm",
+      "exact": 2,
+      "in_r1": 27,
+      "team_match": 2,
+      "exact_pct": 6.2,
+      "in_r1_pct": 84.4,
+      "team_pct": 6.2,
+      "rank": 28
+    },
+    {
+      "name": "Yahoo (Tice/McDonald)",
+      "exact": 2,
+      "in_r1": 25,
+      "team_match": 2,
+      "exact_pct": 6.2,
+      "in_r1_pct": 78.1,
+      "team_pct": 6.2,
+      "rank": 29
+    },
+    {
+      "name": "Brendan Donahue",
+      "exact": 1,
+      "in_r1": 27,
+      "team_match": 1,
+      "exact_pct": 3.1,
+      "in_r1_pct": 84.4,
+      "team_pct": 3.1,
+      "rank": 30
+    },
+    {
+      "name": "Chad Reuter",
+      "exact": 1,
+      "in_r1": 27,
+      "team_match": 0,
+      "exact_pct": 3.1,
+      "in_r1_pct": 84.4,
+      "team_pct": 0.0,
+      "rank": 31
+    },
+    {
+      "name": "Rob Paul (SBR)",
+      "exact": 1,
+      "in_r1": 26,
+      "team_match": 1,
+      "exact_pct": 3.1,
+      "in_r1_pct": 81.2,
+      "team_pct": 3.1,
+      "rank": 32
+    },
+    {
+      "name": "Brent Sobleski (B/R)",
+      "exact": 0,
+      "in_r1": 17,
+      "team_match": 1,
+      "exact_pct": 0.0,
+      "in_r1_pct": 53.1,
+      "team_pct": 3.1,
+      "rank": 33
+    }
+  ],
+  "picks": [
+    {
+      "pick": 1,
+      "actual_team": "Raiders",
+      "actual_player": "Fernando Mendoza",
+      "colin": "Fernando Mendoza",
+      "colin_trade": "Fernando Mendoza",
+      "colin_hit": true,
+      "trade_hit": true
+    },
+    {
+      "pick": 2,
+      "actual_team": "Jets",
+      "actual_player": "David Bailey",
+      "colin": "David Bailey",
+      "colin_trade": "David Bailey",
+      "colin_hit": true,
+      "trade_hit": true
+    },
+    {
+      "pick": 3,
+      "actual_team": "Cardinals",
+      "actual_player": "Jeremiyah Love",
+      "colin": "Arvell Reese",
+      "colin_trade": "Arvell Reese",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 4,
+      "actual_team": "Titans",
+      "actual_player": "Carnell Tate",
+      "colin": "Jeremiyah Love",
+      "colin_trade": "Jeremiyah Love",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 5,
+      "actual_team": "Giants",
+      "actual_player": "Arvell Reese",
+      "colin": "Sonny Styles",
+      "colin_trade": "Sonny Styles",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 6,
+      "actual_team": "Chiefs",
+      "actual_player": "Mansoor Delane",
+      "colin": "Francis Mauigoa",
+      "colin_trade": "Francis Mauigoa",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 7,
+      "actual_team": "Commanders",
+      "actual_player": "Sonny Styles",
+      "colin": "Carnell Tate",
+      "colin_trade": "Carnell Tate",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 8,
+      "actual_team": "Saints",
+      "actual_player": "Jordyn Tyson",
+      "colin": "Rueben Bain",
+      "colin_trade": "Rueben Bain",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 9,
+      "actual_team": "Browns",
+      "actual_player": "Spencer Fano",
+      "colin": "Mansoor Delane",
+      "colin_trade": "Mansoor Delane",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 10,
+      "actual_team": "Giants",
+      "actual_player": "Francis Mauigoa",
+      "colin": "Caleb Downs",
+      "colin_trade": "Caleb Downs",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 11,
+      "actual_team": "Cowboys",
+      "actual_player": "Caleb Downs",
+      "colin": "Jordyn Tyson",
+      "colin_trade": "Jordyn Tyson",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 12,
+      "actual_team": "Dolphins",
+      "actual_player": "Kadyn Proctor",
+      "colin": "Spencer Fano",
+      "colin_trade": "Spencer Fano",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 13,
+      "actual_team": "Rams",
+      "actual_player": "Ty Simpson",
+      "colin": "Makai Lemon",
+      "colin_trade": "Makai Lemon",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 14,
+      "actual_team": "Ravens",
+      "actual_player": "Olaivavega Ioane",
+      "colin": "Olaivavega Ioane",
+      "colin_trade": "Olaivavega Ioane",
+      "colin_hit": true,
+      "trade_hit": true
+    },
+    {
+      "pick": 15,
+      "actual_team": "Buccaneers",
+      "actual_player": "Rueben Bain Jr.",
+      "colin": "Kenyon Sadiq",
+      "colin_trade": "Kenyon Sadiq",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 16,
+      "actual_team": "Jets",
+      "actual_player": "Kenyon Sadiq",
+      "colin": "Monroe Freeling",
+      "colin_trade": "Monroe Freeling",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 17,
+      "actual_team": "Lions",
+      "actual_player": "Blake Miller",
+      "colin": "Dillon Thieneman",
+      "colin_trade": "Dillon Thieneman",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 18,
+      "actual_team": "Vikings",
+      "actual_player": "Caleb Banks",
+      "colin": "Jermod McCoy",
+      "colin_trade": "Jermod McCoy",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 19,
+      "actual_team": "Panthers",
+      "actual_player": "Monroe Freeling",
+      "colin": "Blake Miller",
+      "colin_trade": "Blake Miller",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 20,
+      "actual_team": "Eagles",
+      "actual_player": "Makai Lemon",
+      "colin": "Akheem Mesidor",
+      "colin_trade": "Akheem Mesidor",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 21,
+      "actual_team": "Steelers",
+      "actual_player": "Max Iheanachor",
+      "colin": "Ty Simpson",
+      "colin_trade": "Ty Simpson",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 22,
+      "actual_team": "Chargers",
+      "actual_player": "Akheem Mesidor",
+      "colin": "Kadyn Proctor",
+      "colin_trade": "Kadyn Proctor",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 23,
+      "actual_team": "Cowboys",
+      "actual_player": "Malachi Lawrence",
+      "colin": "Emmanuel McNeil-Warren",
+      "colin_trade": "Emmanuel McNeil-Warren",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 24,
+      "actual_team": "Browns",
+      "actual_player": "KC Concepcion",
+      "colin": "KC Concepcion",
+      "colin_trade": "KC Concepcion",
+      "colin_hit": true,
+      "trade_hit": true
+    },
+    {
+      "pick": 25,
+      "actual_team": "Bears",
+      "actual_player": "Dillon Thieneman",
+      "colin": "Keldric Faulk",
+      "colin_trade": "Keldric Faulk",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 26,
+      "actual_team": "Texans",
+      "actual_player": "Keylan Rutledge",
+      "colin": "Caleb Lomu",
+      "colin_trade": "Caleb Lomu",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 27,
+      "actual_team": "Dolphins",
+      "actual_player": "Chris Johnson",
+      "colin": "Max Iheanachor",
+      "colin_trade": "Max Iheanachor",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 28,
+      "actual_team": "Patriots",
+      "actual_player": "Caleb Lomu",
+      "colin": "Colton Hood",
+      "colin_trade": "Colton Hood",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 29,
+      "actual_team": "Chiefs",
+      "actual_player": "Peter Woods",
+      "colin": "Denzel Boston",
+      "colin_trade": "Denzel Boston",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 30,
+      "actual_team": "Jets",
+      "actual_player": "Omar Cooper Jr.",
+      "colin": "Chris Johnson",
+      "colin_trade": "Chris Johnson",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 31,
+      "actual_team": "Titans",
+      "actual_player": "Keldric Faulk",
+      "colin": "C.J. Allen",
+      "colin_trade": "C.J. Allen",
+      "colin_hit": false,
+      "trade_hit": false
+    },
+    {
+      "pick": 32,
+      "actual_team": "Seahawks",
+      "actual_player": "Jadarian Price",
+      "colin": "Jadarian Price",
+      "colin_trade": "Jadarian Price",
+      "colin_hit": true,
+      "trade_hit": true
+    }
+  ]
+}
