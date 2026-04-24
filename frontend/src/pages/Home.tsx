@@ -5,6 +5,7 @@ import { api, type MetaInfo } from '../lib/api';
 import { DraftCountdown } from '../components/DraftCountdown';
 import { AccuracyDashboard } from '../components/AccuracyDashboard';
 import { AccuracyGraphs } from '../components/AccuracyGraphs';
+import { AtAGlanceStats } from '../components/AtAGlanceStats';
 import {
   HRule, SmallCaps, SectionHeader, Dateline, Byline, Stamp, Footnote,
 } from '../components/editorial';
@@ -72,10 +73,14 @@ export function Home() {
             </p>
           </div>
 
-          {/* Side rail — vitals */}
+          {/* Side rail — vitals + live accuracy mini-widget */}
           <aside className="border-t-2 border-ink pt-5 lg:border-t-0 lg:border-l lg:border-ink-edge lg:pt-0 lg:pl-8 space-y-6 reveal reveal-4">
-            <SmallCaps>At a glance</SmallCaps>
-            <VitalsGrid stats={stats} simMeta={null} meta={meta} />
+            <div className="space-y-3">
+              <SmallCaps>At a glance</SmallCaps>
+              <VitalsGrid stats={stats} simMeta={null} meta={meta} />
+            </div>
+            <HRule />
+            <AtAGlanceStats />
           </aside>
         </div>
       </section>
