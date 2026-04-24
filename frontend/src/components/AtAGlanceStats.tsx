@@ -59,7 +59,7 @@ export function AtAGlanceStats() {
       <div className="border border-ink-edge bg-paper-surface">
         <div className="px-4 py-4 border-b border-ink-edge">
           <p className="body-serif text-sm text-ink leading-snug">
-            The Ledger mock ranks{' '}
+            The model ranks{' '}
             <span className="display-num text-2xl text-accent-brass mx-0.5">
               #{colin.rank}
             </span>{' '}
@@ -140,7 +140,7 @@ function ActiveLine({
   isPinned: boolean;
   onClear: () => void;
 }) {
-  const isLedger = active.name === 'Colin';
+  const isModel = active.name === 'Colin';
   const delta = active.exact - colin.exact;
   return (
     <div className="flex items-baseline gap-2 text-xs flex-wrap">
@@ -150,14 +150,14 @@ function ActiveLine({
           pinned
         </span>
       )}
-      <span className={`font-mono ${isLedger ? 'text-accent-brass font-bold' : 'text-ink'}`}>
-        #{active.rank} {isLedger ? 'Colin (Ledger)' : active.name}
+      <span className={`font-mono ${isModel ? 'text-accent-brass font-bold' : 'text-ink'}`}>
+        #{active.rank} {isModel ? 'The model' : active.name}
       </span>
       <span className="font-mono text-ink-muted">·</span>
       <span className="font-mono text-ink">{active.exact}/{scored}</span>
-      {!isLedger && (
+      {!isModel && (
         <span className={`font-mono ${delta === 0 ? 'text-ink-muted' : delta > 0 ? 'text-live' : 'text-accent-brass'}`}>
-          {delta > 0 ? `+${delta} vs Ledger` : delta < 0 ? `${delta} vs Ledger` : 'tied w/ Ledger'}
+          {delta > 0 ? `+${delta} vs model` : delta < 0 ? `${delta} vs model` : 'tied w/ model'}
         </span>
       )}
       {isPinned && (
@@ -188,18 +188,30 @@ function DotPlot({
 }) {
   const maxScore = Math.max(...analysts.map(a => a.exact), 1);
   const xMax = Math.max(maxScore, scored);
-  const W = 260, H = 74;
-  const PAD_L = 6, PAD_R = 6, PAD_T = 14, PAD_B = 22;
-  const innerW = W - PAD_L - PAD_R;
-  const innerH = H - PAD_T - PAD_B;
 
-  // Deterministic dot stacking per score
+  // Count max stack depth so we can size the chart so dots + label never clip.
+  const stackCounts: Record<number, number> = {};
+  analysts.forEach(a => { stackCounts[a.exact] = (stackCounts[a.exact] ?? 0) + 1; });
+  const maxStack = Math.max(...Object.values(stackCounts), 1);
+
+  // Deterministic dot stacking per score (order preserves analyst order).
   const byScore: Record<number, number> = {};
   const withPos = analysts.map(a => {
     const stackIdx = (byScore[a.exact] ?? 0);
     byScore[a.exact] = stackIdx + 1;
     return { ...a, stackIdx };
   });
+
+  const DOT_GAP = 7;
+  const BASE_PAD = 6;          // gap between baseline and first dot center
+  const LABEL_PAD = 14;        // headroom reserved for "MODEL" label above Colin
+  const stackHeight = BASE_PAD + (maxStack - 1) * DOT_GAP;
+  const innerH = stackHeight + LABEL_PAD + 4;
+
+  const W = 260;
+  const PAD_L = 6, PAD_R = 6, PAD_T = 10, PAD_B = 22;
+  const H = PAD_T + innerH + PAD_B;
+  const innerW = W - PAD_L - PAD_R;
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`}
@@ -271,7 +283,7 @@ function DotPlot({
                       className="font-mono" fontSize={9}
                       fill="#B68A2F" fontWeight={700}
                       pointerEvents="none">
-                  LEDGER
+                  MODEL
                 </text>
               )}
             </g>

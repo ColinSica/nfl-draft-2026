@@ -95,7 +95,7 @@ export function Home() {
         <div className="p-6 lg:p-8 space-y-4">
           <SmallCaps>In This Issue</SmallCaps>
           <ul className="space-y-2 body-serif">
-            <TocEntry num="01" to="/accuracy"  title="Live accuracy." deck="The Ledger's rank vs the analyst field, updated as picks come off the board." />
+            <TocEntry num="01" to="/accuracy"  title="Live accuracy." deck="The model's rank vs the analyst field, updated as picks come off the board." />
             <TocEntry num="02" to="/full-mock" title="Full Mock."    deck="Every pick, all seven rounds — 257 assignments end-to-end." />
             <TocEntry num="03" to="/prospects" title="Prospects."    deck="Landing distributions per player, board rank, college." />
             <TocEntry num="04" to="/teams"     title="Teams."        deck="Front-office dossiers: needs, cap, scheme, coaching tree." />
@@ -112,8 +112,8 @@ export function Home() {
         <SectionHeader
           number={1}
           kicker="Live scoreboard"
-          title="How the Ledger is doing."
-          deck="Real-time accuracy of The Draft Ledger's mock vs ~30 published 2026 analyst mocks. Updates as the R1 picks come off the board."
+          title="How the model is doing."
+          deck="Real-time accuracy of the model's mock vs ~30 published 2026 analyst mocks. Updates as the R1 picks come off the board."
         />
         <div className="mt-4">
           <LockBadge />

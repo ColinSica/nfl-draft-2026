@@ -90,7 +90,7 @@ function Histogram({ data }: { data: AccuracyResp }) {
       <div className="flex items-baseline justify-between mb-3">
         <SmallCaps className="text-ink">Exact-hit distribution</SmallCaps>
         <span className="font-mono text-xs text-ink-muted">
-          {data.total_analysts} analysts · Ledger{' '}
+          {data.total_analysts} analysts · model{' '}
           <span className="text-accent-brass font-bold">
             #{colin?.rank ?? '—'}
           </span>
@@ -177,7 +177,7 @@ function Histogram({ data }: { data: AccuracyResp }) {
                       className="font-mono" fontSize={8}
                       fill="#B68A2F" fontWeight={700}
                       pointerEvents="none">
-                  LEDGER
+                  MODEL
                 </text>
               )}
             </g>
@@ -237,11 +237,11 @@ function BucketDetail({
       </div>
       <div className="flex flex-wrap gap-x-3 gap-y-0.5">
         {rows.map(a => {
-          const isLedger = a.name === 'Colin';
+          const isModel = a.name === 'Colin';
           return (
             <span key={a.name}
-                  className={`font-mono text-[0.7rem] ${isLedger ? 'text-accent-brass font-bold' : 'text-ink'}`}>
-              #{a.rank} {isLedger ? 'Colin (Ledger)' : a.name}
+                  className={`font-mono text-[0.7rem] ${isModel ? 'text-accent-brass font-bold' : 'text-ink'}`}>
+              #{a.rank} {isModel ? 'The model' : a.name}
             </span>
           );
         })}
@@ -303,7 +303,7 @@ function PickRibbon({ data }: { data: AccuracyResp }) {
               }}
               aria-label={
                 draft
-                  ? `Pick ${slot}: ${p!.actual_team} selected ${p!.actual_player}. Ledger had ${p!.colin ?? 'no pick'}. ${hit ? 'Hit.' : 'Miss.'}`
+                  ? `Pick ${slot}: ${p!.actual_team} selected ${p!.actual_player}. Model had ${p!.colin ?? 'no pick'}. ${hit ? 'Hit.' : 'Miss.'}`
                   : `Pick ${slot}: pending`
               }
             >
@@ -359,7 +359,7 @@ function SlotCard({ pick }: { pick: PickRow }) {
             <div className="font-serif text-ink">{pick.actual_player}</div>
           </div>
           <div>
-            <SmallCaps tight className="text-ink-muted text-[0.55rem] block">Ledger pick</SmallCaps>
+            <SmallCaps tight className="text-ink-muted text-[0.55rem] block">Model pick</SmallCaps>
             <div className={`font-serif ${hit ? 'text-state-fresh' : 'text-ink-soft'}`}>
               {pick.colin ?? '—'}{' '}
               <span className="caps-tight text-[0.55rem] font-bold ml-1"
