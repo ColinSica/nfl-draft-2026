@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-23T21:37:45.479027-07:00",
+  "generated_at": "2026-04-23T21:52:50.481966-07:00",
   "total_r1_picks": 32,
   "r1_picks_drafted": 32,
-  "colin_rank": 13,
-  "colin_rank_trade": 14,
-  "total_analysts": 33,
+  "colin_rank": 12,
+  "colin_rank_trade": 13,
+  "total_analysts": 32,
   "analysts": [
     {
       "name": "Lance Zierlein",
@@ -47,16 +47,6 @@
       "rank": 4
     },
     {
-      "name": "Pauline",
-      "exact": 7,
-      "in_r1": 24,
-      "team_match": 7,
-      "exact_pct": 21.9,
-      "in_r1_pct": 75.0,
-      "team_pct": 21.9,
-      "rank": 5
-    },
-    {
       "name": "Ryan McCrystal",
       "exact": 6,
       "in_r1": 29,
@@ -64,7 +54,7 @@
       "exact_pct": 18.8,
       "in_r1_pct": 90.6,
       "team_pct": 18.8,
-      "rank": 6
+      "rank": 5
     },
     {
       "name": "Ryan Wilson",
@@ -74,7 +64,7 @@
       "exact_pct": 18.8,
       "in_r1_pct": 87.5,
       "team_pct": 21.9,
-      "rank": 7
+      "rank": 6
     },
     {
       "name": "Josh Edwards",
@@ -84,7 +74,7 @@
       "exact_pct": 18.8,
       "in_r1_pct": 84.4,
       "team_pct": 18.8,
-      "rank": 8
+      "rank": 7
     },
     {
       "name": "Rob Rang",
@@ -94,7 +84,7 @@
       "exact_pct": 18.8,
       "in_r1_pct": 84.4,
       "team_pct": 18.8,
-      "rank": 9
+      "rank": 8
     },
     {
       "name": "Luke Easterling",
@@ -104,7 +94,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 93.8,
       "team_pct": 21.9,
-      "rank": 10
+      "rank": 9
     },
     {
       "name": "Peter Schrager",
@@ -114,7 +104,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 87.5,
       "team_pct": 15.6,
-      "rank": 11
+      "rank": 10
     },
     {
       "name": "Pete Prisco",
@@ -124,7 +114,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 84.4,
       "team_pct": 18.8,
-      "rank": 12
+      "rank": 11
     },
     {
       "name": "Colin",
@@ -134,7 +124,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 84.4,
       "team_pct": 15.6,
-      "rank": 13
+      "rank": 12
     },
     {
       "name": "Colin w/Trade",
@@ -144,7 +134,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 84.4,
       "team_pct": 15.6,
-      "rank": 14
+      "rank": 13
     },
     {
       "name": "Jason Boris",
@@ -154,7 +144,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 84.4,
       "team_pct": 0.0,
-      "rank": 15
+      "rank": 14
     },
     {
       "name": "Mel Kiper Jr.",
@@ -164,7 +154,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 81.2,
       "team_pct": 18.8,
-      "rank": 16
+      "rank": 15
     },
     {
       "name": "Lou Pickney (DKDB)",
@@ -174,7 +164,7 @@
       "exact_pct": 15.6,
       "in_r1_pct": 78.1,
       "team_pct": 15.6,
-      "rank": 17
+      "rank": 16
     },
     {
       "name": "Matt Miller",
@@ -184,7 +174,7 @@
       "exact_pct": 12.5,
       "in_r1_pct": 87.5,
       "team_pct": 15.6,
-      "rank": 18
+      "rank": 17
     },
     {
       "name": "Charlie Campbell",
@@ -194,7 +184,7 @@
       "exact_pct": 12.5,
       "in_r1_pct": 84.4,
       "team_pct": 0.0,
-      "rank": 19
+      "rank": 18
     },
     {
       "name": "NFL Nation (ESPN)",
@@ -204,7 +194,7 @@
       "exact_pct": 12.5,
       "in_r1_pct": 81.2,
       "team_pct": 15.6,
-      "rank": 20
+      "rank": 19
     },
     {
       "name": "Bucky Brooks",
@@ -214,7 +204,7 @@
       "exact_pct": 12.5,
       "in_r1_pct": 71.9,
       "team_pct": 12.5,
-      "rank": 21
+      "rank": 20
     },
     {
       "name": "Daniel Jeremiah",
@@ -224,7 +214,7 @@
       "exact_pct": 9.4,
       "in_r1_pct": 90.6,
       "team_pct": 12.5,
-      "rank": 22
+      "rank": 21
     },
     {
       "name": "Walt Cherepinsky",
@@ -234,7 +224,7 @@
       "exact_pct": 9.4,
       "in_r1_pct": 90.6,
       "team_pct": 0.0,
-      "rank": 23
+      "rank": 22
     },
     {
       "name": "Vinnie Iyer",
@@ -244,7 +234,7 @@
       "exact_pct": 9.4,
       "in_r1_pct": 81.2,
       "team_pct": 15.6,
-      "rank": 24
+      "rank": 23
     },
     {
       "name": "Charles Davis",
@@ -254,7 +244,7 @@
       "exact_pct": 9.4,
       "in_r1_pct": 81.2,
       "team_pct": 9.4,
-      "rank": 25
+      "rank": 24
     },
     {
       "name": "Jordan Reid",
@@ -264,7 +254,7 @@
       "exact_pct": 9.4,
       "in_r1_pct": 81.2,
       "team_pct": 9.4,
-      "rank": 26
+      "rank": 25
     },
     {
       "name": "PFF ADP",
@@ -274,7 +264,7 @@
       "exact_pct": 9.4,
       "in_r1_pct": 75.0,
       "team_pct": 9.4,
-      "rank": 27
+      "rank": 26
     },
     {
       "name": "Eric Edholm",
@@ -284,7 +274,7 @@
       "exact_pct": 6.2,
       "in_r1_pct": 84.4,
       "team_pct": 6.2,
-      "rank": 28
+      "rank": 27
     },
     {
       "name": "Yahoo (Tice/McDonald)",
@@ -294,7 +284,7 @@
       "exact_pct": 6.2,
       "in_r1_pct": 78.1,
       "team_pct": 6.2,
-      "rank": 29
+      "rank": 28
     },
     {
       "name": "Brendan Donahue",
@@ -304,7 +294,7 @@
       "exact_pct": 3.1,
       "in_r1_pct": 84.4,
       "team_pct": 3.1,
-      "rank": 30
+      "rank": 29
     },
     {
       "name": "Chad Reuter",
@@ -314,7 +304,7 @@
       "exact_pct": 3.1,
       "in_r1_pct": 84.4,
       "team_pct": 0.0,
-      "rank": 31
+      "rank": 30
     },
     {
       "name": "Rob Paul (SBR)",
@@ -324,7 +314,7 @@
       "exact_pct": 3.1,
       "in_r1_pct": 81.2,
       "team_pct": 3.1,
-      "rank": 32
+      "rank": 31
     },
     {
       "name": "Brent Sobleski (B/R)",
@@ -334,7 +324,7 @@
       "exact_pct": 0.0,
       "in_r1_pct": 53.1,
       "team_pct": 3.1,
-      "rank": 33
+      "rank": 32
     }
   ],
   "picks": [

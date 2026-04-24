@@ -66,7 +66,7 @@ ANALYST_COLUMNS: list[tuple[str, str, str, str]] = [
     ("Rob Rang",          "Rob Exact",         "Rob in R1",         "Rob Team Match"),
     ("Pete Prisco",       "Pete Exact",        "Pete in R1",        "Pete Team Match"),
     ("Josh Edwards",      "Edwards Exact",     "Edwards in R1",     "Edwards Team Match"),
-    ("Pauline",           "Pauline Exact",     "Pauline in R1",     "Pauline Team Match"),
+    # Tony Pauline excluded per user directive
     ("Charles Davis",     "Davis Exact",       "Davis in R1",       "Davis Team Match"),
     ("Ryan McCrystal",    "McCrystal Exact",   "McCrystal in R1",   "McCrystal Team Match"),
     ("Luke Easterling",   "Easter Exact",      "Easter in R1",      "Easter Team Match"),
